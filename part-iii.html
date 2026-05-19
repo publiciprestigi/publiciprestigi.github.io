@@ -7,7 +7,7 @@
   <title>Part III — Anàlisi · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
 </head>
-<body>
+<body class="amb-sidebar">
 
   <header class="capcalera">
     <div class="capcalera-interior">
@@ -40,84 +40,80 @@
     </div>
   </nav>
 
-  <main class="contingut">
+  <div class="layout-sidebar">
 
-    <div class="part-capcalera">
-      <p class="part-etiqueta">Part III — Anàlisi</p>
-      <h1>Cruïlles, comparatives i interpretacions</h1>
-    </div>
-
-    <nav class="index-intern">
-      <a href="#doble-corona">La doble corona i el segon cercle</a>
-      <span class="index-sep">·</span>
-      <a href="#bretxa">Evolució de la bretxa</a>
-      <span class="index-sep">·</span>
-      <a href="#la-caza">La caza vs. Alcarràs</a>
-      <span class="index-sep">·</span>
-      <a href="#lleis-tecnologia">Cinema, lleis i tecnologia</a>
-      <span class="index-sep">·</span>
-      <a href="#dues-generacions">Dues generacions</a>
-      <span class="index-sep">·</span>
-      <a href="#autor-industrial">Cinema d'autor industrial</a>
-      <span class="index-sep">·</span>
-      <a href="#marc-interpretatiu">Marc interpretatiu</a>
-      <span class="index-sep">·</span>
-      <a href="#conclusions">Conclusions</a>
-    </nav>
-
-    <section id="doble-corona" class="seccio">
-      <h2>La doble corona i el segon cercle</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+    <aside class="sidebar">
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Cruïlles i comparatives</div>
+        <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona i el segon cercle</a>
+        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa</a>
+        <a href="#" class="sidebar-link" data-seccio="la-caza">La caza vs. Alcarràs</a>
+        <a href="#" class="sidebar-link" data-seccio="lleis">Cinema, lleis i tecnologia</a>
       </div>
-    </section>
-
-    <section id="bretxa" class="seccio">
-      <h2>Evolució de la bretxa públic vs. prestigi per dècada</h2>
-      <div class="taula-placeholder">Taula + gràfic interactiu de bretxa per dècada</div>
-    </section>
-
-    <section id="la-caza" class="seccio">
-      <h2>La caza vs. Alcarràs</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Interpretacions</div>
+        <a href="#" class="sidebar-link" data-seccio="generacions">Dues generacions</a>
+        <a href="#" class="sidebar-link" data-seccio="autor">Cinema d'autor industrial</a>
+        <a href="#" class="sidebar-link" data-seccio="marc">Marc interpretatiu</a>
+        <a href="#" class="sidebar-link" data-seccio="conclusions">Conclusions</a>
       </div>
-    </section>
+    </aside>
 
-    <section id="lleis-tecnologia" class="seccio">
-      <h2>Cinema, lleis i tecnologia</h2>
-      <div class="grafic-placeholder">Gràfic complex: cronologia lleis, tecnologia i mercat</div>
-    </section>
+    <main class="contingut-sidebar">
 
-    <section id="dues-generacions" class="seccio">
-      <h2>Dues generacions, dos mercats i un prestigi</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+      <div class="breadcrumb">
+        <span>Part III — Anàlisi</span>
+        <span class="breadcrumb-sep">›</span>
+        <span id="breadcrumb-grup"></span>
+        <span class="breadcrumb-sep" id="breadcrumb-sep2">›</span>
+        <span id="breadcrumb-actual"></span>
       </div>
-    </section>
 
-    <section id="autor-industrial" class="seccio">
-      <h2>Cinema d'autor industrial</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+      <div class="titol-sticky">
+        <p class="titol-sticky-sup" id="titol-sup"></p>
+        <h1 id="titol-principal"></h1>
       </div>
-    </section>
 
-    <section id="marc-interpretatiu" class="seccio">
-      <h2>Marc interpretatiu i idees clau</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+      <div class="seccio-contingut" id="seccio-doble-corona">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
       </div>
-    </section>
 
-    <section id="conclusions" class="seccio">
-      <h2>Conclusions</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+      <div class="seccio-contingut" id="seccio-bretxa">
+        <div class="taula-placeholder">Taula + gràfic interactiu de bretxa per dècada</div>
       </div>
-    </section>
 
-  </main>
+      <div class="seccio-contingut" id="seccio-la-caza">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-lleis">
+        <div class="grafic-placeholder">Gràfic complex: cronologia lleis, tecnologia i mercat</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-generacions">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-autor">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-marc">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-conclusions">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+      </div>
+
+      <div class="nav-seccions">
+        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+        <span class="nav-seccio-pos" id="nav-pos"></span>
+        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+      </div>
+
+    </main>
+  </div>
 
   <footer class="peu">
     <div class="peu-interior">
@@ -135,15 +131,61 @@
   </div>
 
   <script>
-    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
-      document.getElementById('versio-label').textContent = data.versio_label;
-    }).catch(()=>{});
-    function toggleBuscador(){
-      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
-      if(o.style.display==='none'){o.style.display='flex';i.focus();}
-      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    const seccions = [
+      { id: 'doble-corona', titol: 'La doble corona i el segon cercle',      sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
+      { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
+      { id: 'la-caza',      titol: 'La caza vs. Alcarràs',                   sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
+      { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',              sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
+      { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
+      { id: 'autor',        titol: 'Cinema d\'autor industrial',              sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
+      { id: 'marc',         titol: 'Marc interpretatiu i idees clau',         sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
+      { id: 'conclusions',  titol: 'Conclusions',                             sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
+    ];
+
+    let actual = 0;
+
+    function mostraSeccio(idx) {
+      actual = idx;
+      const s = seccions[idx];
+      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+      document.getElementById('seccio-' + s.id).style.display = 'block';
+      document.getElementById('breadcrumb-grup').textContent = s.grup;
+      const sep2 = document.getElementById('breadcrumb-sep2');
+      const bcActual = document.getElementById('breadcrumb-actual');
+      sep2.style.display = ''; bcActual.style.display = ''; bcActual.textContent = s.titol;
+      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-principal').textContent = s.titol;
+      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+      if (lnk) lnk.classList.add('actiu');
+      const prev = seccions[idx - 1];
+      const next = seccions[idx + 1];
+      const btnAnt = document.getElementById('btn-anterior');
+      const btnSeg = document.getElementById('btn-seguent');
+      btnAnt.textContent = prev ? '← ' + prev.titol : '';
+      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
+      btnSeg.textContent = next ? next.titol + ' →' : '';
+      btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
+      document.querySelector('.contingut-sidebar').scrollTop = 0;
     }
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
+
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.addEventListener('click', e => { e.preventDefault(); const idx = seccions.findIndex(s => s.id === a.dataset.seccio); if (idx >= 0) mostraSeccio(idx); });
+    });
+
+    fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
+    mostraSeccio(0);
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
   </script>
 
 </body>

@@ -7,7 +7,7 @@
   <title>Part II — Prestigi · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
 </head>
-<body>
+<body class="amb-sidebar">
 
   <header class="capcalera">
     <div class="capcalera-interior">
@@ -40,59 +40,78 @@
     </div>
   </nav>
 
-  <main class="contingut">
+  <div class="layout-sidebar">
 
-    <div class="part-capcalera">
-      <p class="part-etiqueta">Part II — Prestigi</p>
-      <h1>Presència i premis als festivals internacionals</h1>
-    </div>
-
-    <nav class="index-intern">
-      <a href="#premiades-decades">Pel·lícules premiades per dècada</a>
-      <span class="index-sep">·</span>
-      <a href="#seccions-oficials">Presència per festival</a>
-      <span class="index-sep">·</span>
-      <a href="#ranking-espectadors">Rànquing per espectadors</a>
-      <span class="index-sep">·</span>
-      <a href="#ranking-directors">Rànquing per directors</a>
-    </nav>
-
-    <section id="premiades-decades" class="seccio">
-      <h2>Relació de pel·lícules premiades a festivals per dècada</h2>
-      <div class="taula-placeholder">Taula: premis per dècada</div>
-    </section>
-
-    <section id="seccions-oficials" class="seccio">
-      <h2>Presència a les seccions oficials per festival</h2>
-      <div class="sub-subseccio" id="cannes">
-        <h3>Festival de Cannes — Compétition officielle</h3>
-        <div class="taula-placeholder">Taula Cannes</div>
+    <aside class="sidebar">
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Pel·lícules premiades</div>
+        <a href="#" class="sidebar-link" data-seccio="premiades">Per dècada</a>
       </div>
-      <div class="sub-subseccio" id="berlin">
-        <h3>Festival de Berlín — Wettbewerb</h3>
-        <div class="taula-placeholder">Taula Berlín</div>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Seccions oficials</div>
+        <a href="#" class="sidebar-link" data-seccio="cannes">Festival de Cannes</a>
+        <a href="#" class="sidebar-link" data-seccio="berlin">Festival de Berlín</a>
+        <a href="#" class="sidebar-link" data-seccio="venezia">Festival de Venècia</a>
+        <a href="#" class="sidebar-link" data-seccio="sansebastia">Festival de Sant Sebastià</a>
       </div>
-      <div class="sub-subseccio" id="venezia">
-        <h3>Festival de Venècia — Concorso</h3>
-        <div class="taula-placeholder">Taula Venècia</div>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Rànquings</div>
+        <a href="#" class="sidebar-link" data-seccio="ranking-espectadors">Per espectadors</a>
+        <a href="#" class="sidebar-link" data-seccio="ranking-directors">Per directors</a>
       </div>
-      <div class="sub-subseccio" id="sant-sebastia">
-        <h3>Festival de Sant Sebastià — Sección Oficial a concurso</h3>
-        <div class="taula-placeholder">Taula Sant Sebastià</div>
+    </aside>
+
+    <main class="contingut-sidebar">
+
+      <div class="breadcrumb">
+        <span>Part II — Prestigi</span>
+        <span class="breadcrumb-sep">›</span>
+        <span id="breadcrumb-grup"></span>
+        <span class="breadcrumb-sep" id="breadcrumb-sep2">›</span>
+        <span id="breadcrumb-actual"></span>
       </div>
-    </section>
 
-    <section id="ranking-espectadors" class="seccio">
-      <h2>Rànquing per espectadors de cada festival</h2>
-      <div class="taula-placeholder">Top 10 per festival → expandible</div>
-    </section>
+      <div class="titol-sticky">
+        <p class="titol-sticky-sup" id="titol-sup"></p>
+        <h1 id="titol-principal"></h1>
+      </div>
 
-    <section id="ranking-directors" class="seccio">
-      <h2>Rànquing per directors</h2>
-      <div class="taula-placeholder">Top 25 quatre festivals · Top 10 tres grans · Top 3 per festival</div>
-    </section>
+      <div class="seccio-contingut" id="seccio-premiades">
+        <div class="taula-placeholder">Taula: premis per dècada</div>
+      </div>
 
-  </main>
+      <div class="seccio-contingut" id="seccio-cannes">
+        <div class="taula-placeholder">Taula Cannes — Compétition officielle</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-berlin">
+        <div class="taula-placeholder">Taula Berlín — Wettbewerb</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-venezia">
+        <div class="taula-placeholder">Taula Venècia — Concorso</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-sansebastia">
+        <div class="taula-placeholder">Taula Sant Sebastià — Sección Oficial a concurso</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-ranking-espectadors">
+        <div class="taula-placeholder">Top 10 per espectadors de cada festival</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-ranking-directors">
+        <div class="taula-placeholder">Top 25 quatre festivals · Top 10 tres grans · Top 3 per festival</div>
+      </div>
+
+      <div class="nav-seccions">
+        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+        <span class="nav-seccio-pos" id="nav-pos"></span>
+        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+      </div>
+
+    </main>
+  </div>
 
   <footer class="peu">
     <div class="peu-interior">
@@ -110,15 +129,61 @@
   </div>
 
   <script>
-    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
-      document.getElementById('versio-label').textContent = data.versio_label;
-    }).catch(()=>{});
-    function toggleBuscador(){
-      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
-      if(o.style.display==='none'){o.style.display='flex';i.focus();}
-      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    const seccions = [
+      { id: 'premiades',           titol: 'Pel·lícules premiades per dècada',          sup: 'Presència i premis als festivals internacionals', grup: 'Pel·lícules premiades' },
+      { id: 'cannes',              titol: 'Festival de Cannes',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'berlin',              titol: 'Festival de Berlín',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'venezia',             titol: 'Festival de Venècia',                        sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'sansebastia',         titol: 'Festival de Sant Sebastià',                  sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'ranking-espectadors', titol: 'Rànquing per espectadors de cada festival',  sup: 'Rànquings', grup: 'Rànquings' },
+      { id: 'ranking-directors',   titol: 'Rànquing per directors',                     sup: 'Rànquings', grup: 'Rànquings' },
+    ];
+
+    let actual = 0;
+
+    function mostraSeccio(idx) {
+      actual = idx;
+      const s = seccions[idx];
+      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+      document.getElementById('seccio-' + s.id).style.display = 'block';
+      document.getElementById('breadcrumb-grup').textContent = s.grup;
+      const sep2 = document.getElementById('breadcrumb-sep2');
+      const bcActual = document.getElementById('breadcrumb-actual');
+      if (s.grup === s.titol) { sep2.style.display = 'none'; bcActual.style.display = 'none'; }
+      else { sep2.style.display = ''; bcActual.style.display = ''; bcActual.textContent = s.titol; }
+      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-principal').textContent = s.titol;
+      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+      if (lnk) lnk.classList.add('actiu');
+      const prev = seccions[idx - 1];
+      const next = seccions[idx + 1];
+      const btnAnt = document.getElementById('btn-anterior');
+      const btnSeg = document.getElementById('btn-seguent');
+      btnAnt.textContent = prev ? '← ' + prev.titol : '';
+      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
+      btnSeg.textContent = next ? next.titol + ' →' : '';
+      btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
+      document.querySelector('.contingut-sidebar').scrollTop = 0;
     }
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
+
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.addEventListener('click', e => { e.preventDefault(); const idx = seccions.findIndex(s => s.id === a.dataset.seccio); if (idx >= 0) mostraSeccio(idx); });
+    });
+
+    fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
+    mostraSeccio(0);
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
   </script>
 
 </body>
