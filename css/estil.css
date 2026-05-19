@@ -568,3 +568,36 @@ tbody tr:hover {
   margin-bottom: 16px;
   color: var(--color-text);
 }
+
+/* --- Pàgina de versions --- */
+.versio-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.versio-item:first-child {
+  border-top: 1px solid var(--color-linia);
+}
+
+.versio-cap {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.versio-num {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.versio-data {
+  font-size: var(--mida-petit);
+  color: var(--color-text-suau);
+}
+
+.versio-resum {
+  font-size: 0.9rem;
+  color: var(--color-text-suau);
+  margin-bottom: 0;
+}
