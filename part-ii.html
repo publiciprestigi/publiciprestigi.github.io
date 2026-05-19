@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part II — Prestigi. Presència i premis als festivals internacionals (1965–2025).">
+  <title>Part II — Prestigi · Públic i Prestigi</title>
+  <link rel="stylesheet" href="css/estil.css">
+</head>
+<body>
+
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <a href="index.html" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 · Edició 1965–2025</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#">ES</a>
+          <a href="#">EN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="index.html" class="nav-link">Inici</a>
+      <a href="part-i.html" class="nav-link">Part I — Públic</a>
+      <a href="part-ii.html" class="nav-link actiu">Part II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">Part III — Anàlisi</a>
+      <a href="notes.html" class="nav-link">Notes</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link extern" target="_blank" rel="noopener">Novetats ↗</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+
+    <div class="part-capcalera">
+      <p class="part-etiqueta">Part II — Prestigi</p>
+      <h1>Presència i premis als festivals internacionals</h1>
+    </div>
+
+    <nav class="index-intern">
+      <a href="#premiades-decades">Pel·lícules premiades per dècada</a>
+      <span class="index-sep">·</span>
+      <a href="#seccions-oficials">Presència per festival</a>
+      <span class="index-sep">·</span>
+      <a href="#ranking-espectadors">Rànquing per espectadors</a>
+      <span class="index-sep">·</span>
+      <a href="#ranking-directors">Rànquing per directors</a>
+    </nav>
+
+    <section id="premiades-decades" class="seccio">
+      <h2>Relació de pel·lícules premiades a festivals per dècada</h2>
+      <div class="taula-placeholder">Taula: premis per dècada</div>
+    </section>
+
+    <section id="seccions-oficials" class="seccio">
+      <h2>Presència a les seccions oficials per festival</h2>
+      <div class="sub-subseccio" id="cannes">
+        <h3>Festival de Cannes — Compétition officielle</h3>
+        <div class="taula-placeholder">Taula Cannes</div>
+      </div>
+      <div class="sub-subseccio" id="berlin">
+        <h3>Festival de Berlín — Wettbewerb</h3>
+        <div class="taula-placeholder">Taula Berlín</div>
+      </div>
+      <div class="sub-subseccio" id="venezia">
+        <h3>Festival de Venècia — Concorso</h3>
+        <div class="taula-placeholder">Taula Venècia</div>
+      </div>
+      <div class="sub-subseccio" id="sant-sebastia">
+        <h3>Festival de Sant Sebastià — Sección Oficial a concurso</h3>
+        <div class="taula-placeholder">Taula Sant Sebastià</div>
+      </div>
+    </section>
+
+    <section id="ranking-espectadors" class="seccio">
+      <h2>Rànquing per espectadors de cada festival</h2>
+      <div class="taula-placeholder">Top 10 per festival → expandible</div>
+    </section>
+
+    <section id="ranking-directors" class="seccio">
+      <h2>Rànquing per directors</h2>
+      <div class="taula-placeholder">Top 25 quatre festivals · Top 10 tres grans · Top 3 per festival</div>
+    </section>
+
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · Llicència CC BY-NC 4.0</span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com ↗</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  <script>
+    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
+      document.getElementById('versio-label').textContent = data.versio_label;
+    }).catch(()=>{});
+    function toggleBuscador(){
+      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
+      if(o.style.display==='none'){o.style.display='flex';i.focus();}
+      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+  </script>
+
+</body>
+</html>
