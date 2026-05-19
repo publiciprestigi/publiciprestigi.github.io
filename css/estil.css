@@ -319,3 +319,146 @@ tbody tr:hover {
     font-size: 13px;
   }
 }
+
+/* --- Portada (Inici) --- */
+.inici-portada {
+  max-width: var(--amplada-text);
+  margin: 0 auto;
+  padding-top: 16px;
+}
+
+.inici-titol {
+  margin-bottom: 32px;
+}
+
+.inici-titol h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.inici-subtitol {
+  font-size: 1rem;
+  color: var(--color-text-suau);
+  margin-bottom: 0;
+}
+
+.inici-intro {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.inici-intro p {
+  font-size: 1.05rem;
+  color: var(--color-text);
+}
+
+/* --- Botons d'accés a les Parts --- */
+.inici-acces {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background-color: var(--color-linia);
+  border: 1px solid var(--color-linia);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.boto-acces {
+  display: grid;
+  grid-template-columns: 60px 120px 1fr;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background-color: var(--color-fons);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: background-color 0.15s;
+}
+
+.boto-acces:hover {
+  background-color: #f5f5f5;
+  opacity: 1;
+}
+
+.boto-acces-part {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-suau);
+}
+
+.boto-acces-nom {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.boto-acces-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+}
+
+/* --- Buscador overlay --- */
+.buscador-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.97);
+  z-index: 200;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.buscador-interior {
+  width: 100%;
+  max-width: 640px;
+  padding: 0 24px;
+  position: relative;
+}
+
+#buscador-input {
+  width: 100%;
+  font-family: var(--font-principal);
+  font-size: 1.25rem;
+  border: none;
+  border-bottom: 2px solid var(--color-text);
+  padding: 12px 40px 12px 0;
+  outline: none;
+  color: var(--color-text);
+  background: transparent;
+}
+
+.buscador-tancar {
+  position: absolute;
+  right: 24px;
+  top: 12px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-text-suau);
+}
+
+#buscador-resultats {
+  margin-top: 24px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .boto-acces {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 16px;
+  }
+
+  .boto-acces-desc {
+    display: none;
+  }
+}
