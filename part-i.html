@@ -7,7 +7,7 @@
   <title>Part I — Públic · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
 </head>
-<body>
+<body class="amb-sidebar">
 
   <header class="capcalera">
     <div class="capcalera-interior">
@@ -40,103 +40,132 @@
     </div>
   </nav>
 
-  <main class="contingut">
+  <div class="layout-sidebar">
 
-    <div class="part-capcalera">
-      <p class="part-etiqueta">Part I — Públic</p>
-      <h1>Top 100 pel·lícules amb més espectadors a sales de cinema</h1>
-    </div>
-
-    <nav class="index-intern">
-      <a href="#dades-eines">Les dades i les eines</a>
-      <span class="index-sep">·</span>
-      <a href="#context-mercat">Mercat i població</a>
-      <span class="index-sep">·</span>
-      <a href="#decades">Distribució per dècades</a>
-      <span class="index-sep">·</span>
-      <a href="#top10-espectadors">Top 10 espectadors</a>
-      <span class="index-sep">·</span>
-      <a href="#top10-penetracio">Top 10 penetració</a>
-      <span class="index-sep">·</span>
-      <a href="#top10-quota">Top 10 quota</a>
-      <span class="index-sep">·</span>
-      <a href="#top10-iic">Top 10 IIC</a>
-      <span class="index-sep">·</span>
-      <a href="#top10-directors">Top 10 directors</a>
-    </nav>
-
-    <section id="dades-eines" class="seccio">
-      <h2>Les dades i les eines</h2>
-      <div class="contingut-text">
-        <p class="en-construccio">Contingut en construcció</p>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Top 100</div>
+        <a href="#" class="sidebar-link" data-seccio="dades">Les dades i les eines</a>
+        <a href="#" class="sidebar-link" data-seccio="mercat">Mercat i població</a>
+        <a href="#" class="sidebar-link" data-seccio="decades">Distribució per dècades</a>
+        <a href="#" class="sidebar-link sub" data-seccio="60s">Anys 1965–1969</a>
+        <a href="#" class="sidebar-link sub" data-seccio="70s">Anys 70</a>
+        <a href="#" class="sidebar-link sub" data-seccio="80s">Anys 80</a>
+        <a href="#" class="sidebar-link sub" data-seccio="90s">Anys 90</a>
+        <a href="#" class="sidebar-link sub" data-seccio="2000s">Anys 2000–2009</a>
+        <a href="#" class="sidebar-link sub" data-seccio="2010s">Anys 2010–2019</a>
+        <a href="#" class="sidebar-link sub" data-seccio="2020s">Anys 2020–2025</a>
       </div>
-    </section>
-
-    <section id="context-mercat" class="seccio">
-      <h2>Context: mercat d'entrades i població</h2>
-      <div class="grafic-placeholder">Gràfic: Entrades venudes i població 1965–2025</div>
-    </section>
-
-    <section id="decades" class="seccio">
-      <h2>Distribució per dècades</h2>
-      <div class="taula-placeholder">Taula resum: distribució per dècades</div>
-      <div class="sub-subseccio" id="decada-60s">
-        <h3>Anys 1965–1969</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Rànquings</div>
+        <a href="#" class="sidebar-link" data-seccio="espectadors">Top 10 per espectadors</a>
+        <a href="#" class="sidebar-link" data-seccio="penetracio">Top 10 per penetració</a>
+        <a href="#" class="sidebar-link" data-seccio="quota">Top 10 per quota</a>
+        <a href="#" class="sidebar-link" data-seccio="iic">Top 10 per IIC</a>
+        <a href="#" class="sidebar-link" data-seccio="directors">Top 10 per directors</a>
       </div>
-      <div class="sub-subseccio" id="decada-70s">
-        <h3>Anys 70</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+    </aside>
+
+    <!-- CONTINGUT PRINCIPAL -->
+    <main class="contingut-sidebar">
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <span>Part I — Públic</span>
+        <span class="breadcrumb-sep">›</span>
+        <span id="breadcrumb-grup"></span>
+        <span class="breadcrumb-sep" id="breadcrumb-sep2">›</span>
+        <span id="breadcrumb-actual"></span>
       </div>
-      <div class="sub-subseccio" id="decada-80s">
-        <h3>Anys 80</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+
+      <!-- Títol sticky -->
+      <div class="titol-sticky">
+        <p class="titol-sticky-sup" id="titol-sup"></p>
+        <h1 id="titol-principal"></h1>
       </div>
-      <div class="sub-subseccio" id="decada-90s">
-        <h3>Anys 90</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+
+      <!-- Seccions -->
+      <div class="seccio-contingut" id="seccio-dades">
+        <div class="contingut-text">
+          <p class="en-construccio">Contingut en construcció</p>
+        </div>
       </div>
-      <div class="sub-subseccio" id="decada-2000s">
-        <h3>Anys 2000–2009</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+
+      <div class="seccio-contingut" id="seccio-mercat">
+        <div class="grafic-placeholder">Gràfic: Entrades venudes i població 1965–2025</div>
       </div>
-      <div class="sub-subseccio" id="decada-2010s">
-        <h3>Anys 2010–2019</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+
+      <div class="seccio-contingut" id="seccio-decades">
+        <div class="taula-placeholder">Taula resum: distribució per dècades</div>
       </div>
-      <div class="sub-subseccio" id="decada-2020s">
-        <h3>Anys 2020–2025</h3>
-        <div class="taula-placeholder">Taula + text de context</div>
+
+      <div class="seccio-contingut" id="seccio-60s">
+        <div class="taula-placeholder">Taula de films 1965–1969</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
       </div>
-    </section>
 
-    <section id="top10-espectadors" class="seccio">
-      <h2>Top 10 per espectadors absoluts</h2>
-      <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
-    </section>
+      <div class="seccio-contingut" id="seccio-70s">
+        <div class="taula-placeholder">Taula de films dels anys 70</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
+      </div>
 
-    <section id="top10-penetracio" class="seccio">
-      <h2>Top 10 per penetració demogràfica</h2>
-      <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
-    </section>
+      <div class="seccio-contingut" id="seccio-80s">
+        <div class="taula-placeholder">Taula de films dels anys 80</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
+      </div>
 
-    <section id="top10-quota" class="seccio">
-      <h2>Top 10 per quota de mercat</h2>
-      <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
-    </section>
+      <div class="seccio-contingut" id="seccio-90s">
+        <div class="taula-placeholder">Taula de films dels anys 90</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
+      </div>
 
-    <section id="top10-iic" class="seccio">
-      <h2>Top 10 per Índex d'Impacte Cultural (IIC)</h2>
-      <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
-    </section>
+      <div class="seccio-contingut" id="seccio-2000s">
+        <div class="taula-placeholder">Taula de films dels anys 2000–2009</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
+      </div>
 
-    <section id="top10-directors" class="seccio">
-      <h2>Top 10 per directors</h2>
-      <div class="taula-placeholder">Top 10 films Top 100 · Top 10 films Top 100 + context</div>
-    </section>
+      <div class="seccio-contingut" id="seccio-2010s">
+        <div class="taula-placeholder">Taula de films dels anys 2010–2019</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
+      </div>
 
-  </main>
+      <div class="seccio-contingut" id="seccio-2020s">
+        <div class="taula-placeholder">Taula de films dels anys 2020–2025</div>
+        <div class="taula-placeholder" style="margin-top:16px;">Text de context de la dècada</div>
+      </div>
 
+      <div class="seccio-contingut" id="seccio-espectadors">
+        <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-penetracio">
+        <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-quota">
+        <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-iic">
+        <div class="taula-placeholder">Taula Top 10 → expandible a Top 100</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-directors">
+        <div class="taula-placeholder">Top 10 films Top 100 · Top 10 films Top 100 + context</div>
+      </div>
+
+      <!-- Navegació anterior / següent -->
+      <div class="nav-seccions">
+        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+        <span class="nav-seccio-pos" id="nav-pos"></span>
+        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- PEU DE PÀGINA -->
   <footer class="peu">
     <div class="peu-interior">
       <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · Llicència CC BY-NC 4.0</span>
@@ -144,6 +173,7 @@
     </div>
   </footer>
 
+  <!-- BUSCADOR -->
   <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
     <div class="buscador-interior">
       <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
@@ -153,15 +183,102 @@
   </div>
 
   <script>
-    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
-      document.getElementById('versio-label').textContent = data.versio_label;
-    }).catch(()=>{});
-    function toggleBuscador(){
-      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
-      if(o.style.display==='none'){o.style.display='flex';i.focus();}
-      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    const seccions = [
+      { id: 'dades',       titol: 'Les dades i les eines',               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', grup: 'Top 100' },
+      { id: 'mercat',      titol: 'Mercat i població',                   sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', grup: 'Top 100' },
+      { id: 'decades',     titol: 'Distribució per dècades',             sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', grup: 'Top 100' },
+      { id: '60s',         titol: 'Anys 1965–1969',                      sup: 'Distribució per dècades', grup: 'Top 100', pos: '1 de 7' },
+      { id: '70s',         titol: 'Anys 70',                             sup: 'Distribució per dècades', grup: 'Top 100', pos: '2 de 7' },
+      { id: '80s',         titol: 'Anys 80',                             sup: 'Distribució per dècades', grup: 'Top 100', pos: '3 de 7' },
+      { id: '90s',         titol: 'Anys 90',                             sup: 'Distribució per dècades', grup: 'Top 100', pos: '4 de 7' },
+      { id: '2000s',       titol: 'Anys 2000–2009',                      sup: 'Distribució per dècades', grup: 'Top 100', pos: '5 de 7' },
+      { id: '2010s',       titol: 'Anys 2010–2019',                      sup: 'Distribució per dècades', grup: 'Top 100', pos: '6 de 7' },
+      { id: '2020s',       titol: 'Anys 2020–2025',                      sup: 'Distribució per dècades', grup: 'Top 100', pos: '7 de 7' },
+      { id: 'espectadors', titol: 'Top 10 per espectadors absoluts',      sup: 'Rànquings', grup: 'Rànquings' },
+      { id: 'penetracio',  titol: 'Top 10 per penetració demogràfica',    sup: 'Rànquings', grup: 'Rànquings' },
+      { id: 'quota',       titol: 'Top 10 per quota de mercat',           sup: 'Rànquings', grup: 'Rànquings' },
+      { id: 'iic',         titol: 'Top 10 per Índex d\'Impacte Cultural', sup: 'Rànquings', grup: 'Rànquings' },
+      { id: 'directors',   titol: 'Top 10 per directors',                 sup: 'Rànquings', grup: 'Rànquings' },
+    ];
+
+    let actual = 0;
+
+    function mostraSeccio(idx) {
+      actual = idx;
+      const s = seccions[idx];
+
+      // Amaga totes les seccions
+      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+      document.getElementById('seccio-' + s.id).style.display = 'block';
+
+      // Actualitza breadcrumb
+      document.getElementById('breadcrumb-grup').textContent = s.grup;
+      const sep2 = document.getElementById('breadcrumb-sep2');
+      const bcActual = document.getElementById('breadcrumb-actual');
+      if (s.grup === s.titol || s.titol === 'Top 100' || !s.pos) {
+        sep2.style.display = 'none';
+        bcActual.style.display = 'none';
+      } else {
+        sep2.style.display = '';
+        bcActual.style.display = '';
+        bcActual.textContent = s.titol;
+      }
+
+      // Actualitza títol sticky
+      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-principal').textContent = s.titol;
+
+      // Actualitza sidebar
+      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+      if (lnk) lnk.classList.add('actiu');
+
+      // Navegació prev/next
+      const prev = seccions[idx - 1];
+      const next = seccions[idx + 1];
+      const btnAnt = document.getElementById('btn-anterior');
+      const btnSeg = document.getElementById('btn-seguent');
+      const pos = document.getElementById('nav-pos');
+
+      btnAnt.textContent = prev ? '← ' + prev.titol : '';
+      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
+      btnSeg.textContent = next ? next.titol + ' →' : '';
+      btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      pos.textContent = s.pos || ((idx + 1) + ' de ' + seccions.length);
+
+      // Scroll al top del contingut
+      document.querySelector('.contingut-sidebar').scrollTop = 0;
     }
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
+
+    // Sidebar clics
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const id = a.dataset.seccio;
+        const idx = seccions.findIndex(s => s.id === id);
+        if (idx >= 0) mostraSeccio(idx);
+      });
+    });
+
+    // Inicialitza
+    fetch('data/metadata.json').then(r => r.json()).then(data => {
+      document.getElementById('versio-label').textContent = data.versio_label;
+    }).catch(() => {});
+
+    mostraSeccio(0);
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay');
+      const i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
+    });
   </script>
 
 </body>
