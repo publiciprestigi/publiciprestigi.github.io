@@ -1,0 +1,321 @@
+/* ============================================================
+   Públic i Prestigi — Full d'estils global
+   Referència visual: publiciprestigi.substack.com
+   ============================================================ */
+
+/* --- Variables globals --- */
+:root {
+  --color-fons:       #ffffff;
+  --color-text:       #1a1a1a;
+  --color-text-suau:  #6b6b6b;
+  --color-linia:      #e5e5e5;
+  --color-accent:     #1a1a1a;
+  --color-enllaç:     #1a1a1a;
+
+  --font-principal: -apple-system, "SF Pro Text", "SF Pro Display",
+                    BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+
+  --amplada-max:    1200px;
+  --amplada-text:    720px;
+
+  --mida-cos:        18px;
+  --mida-petit:      14px;
+  --mida-nav:        15px;
+
+  --interlineat:     1.7;
+  --espai-seccio:    64px;
+}
+
+/* --- Reset base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--mida-cos);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-principal);
+  font-size: var(--mida-cos);
+  line-height: var(--interlineat);
+  color: var(--color-text);
+  background-color: var(--color-fons);
+}
+
+/* --- Tipografia --- */
+h1, h2, h3, h4 {
+  font-family: var(--font-principal);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  color: var(--color-enllaç);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  opacity: 0.65;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+/* --- Capçalera --- */
+.capcalera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-fons);
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.capcalera-interior {
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.capcalera-logo {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
+.capcalera-logo:hover {
+  opacity: 0.65;
+}
+
+.capcalera-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: var(--mida-petit);
+  color: var(--color-text-suau);
+}
+
+.capcalera-versio {
+  font-size: var(--mida-petit);
+  color: var(--color-text-suau);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.capcalera-versio:hover {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+.capcalera-idioma {
+  display: flex;
+  gap: 8px;
+  font-size: var(--mida-petit);
+}
+
+.capcalera-idioma a {
+  text-decoration: none;
+  color: var(--color-text-suau);
+}
+
+.capcalera-idioma a.actiu {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.capcalera-idioma a:hover {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+.capcalera-lupa {
+  cursor: pointer;
+  color: var(--color-text-suau);
+  display: flex;
+  align-items: center;
+}
+
+.capcalera-lupa:hover {
+  color: var(--color-text);
+}
+
+/* --- Navegació --- */
+.navegacio {
+  border-bottom: 1px solid var(--color-linia);
+  background-color: var(--color-fons);
+}
+
+.navegacio-interior {
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.navegacio-interior::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 14px 18px;
+  font-size: var(--mida-nav);
+  font-weight: 500;
+  color: var(--color-text-suau);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.nav-link:hover {
+  color: var(--color-text);
+  opacity: 1;
+}
+
+.nav-link.actiu {
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
+  font-weight: 600;
+}
+
+.nav-link.extern {
+  color: var(--color-text-suau);
+}
+
+/* --- Contingut principal --- */
+.contingut {
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  padding: 48px 24px var(--espai-seccio);
+}
+
+.contingut-text {
+  max-width: var(--amplada-text);
+}
+
+/* --- Taules --- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.5rem 0 2rem;
+}
+
+thead tr {
+  border-bottom: 2px solid var(--color-text);
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 8px 12px 8px 0;
+  color: var(--color-text-suau);
+}
+
+td {
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--color-linia);
+  vertical-align: top;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* --- Peu de pàgina --- */
+.peu {
+  border-top: 1px solid var(--color-linia);
+  padding: 32px 24px;
+  font-size: var(--mida-petit);
+  color: var(--color-text-suau);
+}
+
+.peu-interior {
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.peu a {
+  color: var(--color-text-suau);
+  text-decoration: none;
+}
+
+.peu a:hover {
+  color: var(--color-text);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  :root {
+    --mida-cos: 16px;
+    --espai-seccio: 40px;
+  }
+
+  .capcalera-interior {
+    padding: 0 16px;
+  }
+
+  .capcalera-versio {
+    display: none;
+  }
+
+  .contingut {
+    padding: 32px 16px var(--espai-seccio);
+  }
+
+  .peu-interior {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  .nav-link {
+    padding: 12px 12px;
+    font-size: 13px;
+  }
+}
