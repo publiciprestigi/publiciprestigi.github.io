@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Historial de versions — Públic i Prestigi.">
+  <title>Versions · Públic i Prestigi</title>
+  <link rel="stylesheet" href="css/estil.css">
+</head>
+<body>
+
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <a href="index.html" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1 · Edició 1965–2025</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#">ES</a>
+          <a href="#">EN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="index.html" class="nav-link">Inici</a>
+      <a href="part-i.html" class="nav-link">Part I — Públic</a>
+      <a href="part-ii.html" class="nav-link">Part II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">Part III — Anàlisi</a>
+      <a href="notes.html" class="nav-link">Notes</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link extern" target="_blank" rel="noopener">Novetats ↗</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+
+    <div class="part-capcalera">
+      <h1>Historial de versions</h1>
+      <p class="part-subtitol">Totes les versions publicades de l'estudi, amb el detall dels canvis de cada una. Qualsevol versió anterior és accessible i comparable.</p>
+    </div>
+
+    <section class="seccio" id="llista-versions">
+      <!-- Les versions es carreguen des de metadata.json -->
+    </section>
+
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · Llicència CC BY-NC 4.0</span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com ↗</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  <script>
+    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
+      document.getElementById('versio-label').textContent = data.versio_label;
+      const contenidor = document.getElementById('llista-versions');
+      const versionsOrdenades = [...data.versions].reverse();
+      contenidor.innerHTML = versionsOrdenades.map(v => `
+        <div class="versio-item">
+          <div class="versio-cap">
+            <span class="versio-num">${v.label}</span>
+            <span class="versio-data">${v.publicat}</span>
+          </div>
+          <p class="versio-resum">${v.resum}</p>
+        </div>
+      `).join('');
+    }).catch(()=>{});
+
+    function toggleBuscador(){
+      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
+      if(o.style.display==='none'){o.style.display='flex';i.focus();}
+      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+  </script>
+
+</body>
+</html>

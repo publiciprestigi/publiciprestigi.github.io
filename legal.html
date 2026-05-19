@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Avís legal — Públic i Prestigi.">
+  <title>Avís legal · Públic i Prestigi</title>
+  <link rel="stylesheet" href="css/estil.css">
+</head>
+<body>
+
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <a href="index.html" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 · Edició 1965–2025</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#">ES</a>
+          <a href="#">EN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="index.html" class="nav-link">Inici</a>
+      <a href="part-i.html" class="nav-link">Part I — Públic</a>
+      <a href="part-ii.html" class="nav-link">Part II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">Part III — Anàlisi</a>
+      <a href="notes.html" class="nav-link">Notes</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link extern" target="_blank" rel="noopener">Novetats ↗</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+
+    <div class="part-capcalera">
+      <h1>Avís legal</h1>
+    </div>
+
+    <div class="contingut-text seccio">
+
+      <h2>Titularitat</h2>
+      <p>Aquest lloc web és titularitat de Marc Prades. Contacte: marc[arroba]publiciprestigi.com</p>
+
+      <h2 id="privacitat">Política de privacitat</h2>
+      <p>Aquest lloc web no recull dades personals dels usuaris ni utilitza cookies pròpies. Si en el futur s'incorporen eines d'analítica web de tercers, aquesta política s'actualitzarà en conseqüència.</p>
+
+      <h2>Propietat intel·lectual</h2>
+      <p>Els continguts d'aquest estudi —textos, metodologia, índexs i anàlisi— estan protegits sota llicència <strong>Creative Commons BY-NC 4.0</strong> (Reconeixement - No Comercial). Es permet la reproducció i difusió amb atribució a l'autor i sense finalitat comercial.</p>
+      <p>Les dades de l'ICAA i dels festivals són públiques i s'utilitzen amb atribució a la font. La metodologia pròpia (IAT, IIC i altres índexs) és creació original de l'autor.</p>
+
+      <h2>Exempció de responsabilitat</h2>
+      <p>L'autor ha posat la màxima diligència en la verificació de les dades incloses en aquest estudi. Tanmateix, no es pot garantir l'exactitud absoluta de tota la informació. Qualsevol error detectat pot comunicar-se a marc[arroba]publiciprestigi.com.</p>
+
+    </div>
+
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · Llicència CC BY-NC 4.0</span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com ↗</a></span>
+    </div>
+  </footer>
+
+  <script>
+    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
+      document.getElementById('versio-label').textContent = data.versio_label;
+    }).catch(()=>{});
+  </script>
+
+</body>
+</html>
