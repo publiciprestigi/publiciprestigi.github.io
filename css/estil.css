@@ -462,3 +462,87 @@ tbody tr:hover {
     display: none;
   }
 }
+
+/* --- Capçalera de Part --- */
+.part-capcalera {
+  max-width: var(--amplada-text);
+  margin: 0 auto 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.part-etiqueta {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-suau);
+  margin-bottom: 8px;
+}
+
+.part-subtitol {
+  font-size: 0.95rem;
+  color: var(--color-text-suau);
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* --- Índex intern --- */
+.index-intern {
+  max-width: var(--amplada-text);
+  margin: 0 auto 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.index-intern a {
+  font-size: 0.8rem;
+  color: var(--color-text-suau);
+  text-decoration: none;
+  padding: 4px 10px;
+  border: 1px solid var(--color-linia);
+  border-radius: 20px;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.index-intern a:hover {
+  color: var(--color-text);
+  border-color: var(--color-text);
+  opacity: 1;
+}
+
+/* --- Seccions --- */
+.seccio {
+  max-width: var(--amplada-text);
+  margin: 0 auto 64px;
+}
+
+.seccio h2 {
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.subseccio {
+  margin-top: 40px;
+}
+
+/* --- Placeholders (en construcció) --- */
+.grafic-placeholder,
+.taula-placeholder {
+  background-color: #f5f5f5;
+  border: 1px dashed var(--color-linia);
+  border-radius: 4px;
+  padding: 32px 24px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  margin: 16px 0;
+}
+
+.en-construccio {
+  color: var(--color-text-suau);
+  font-style: italic;
+}
