@@ -601,3 +601,185 @@ tbody tr:hover {
   color: var(--color-text-suau);
   margin-bottom: 0;
 }
+
+/* --- Layout amb sidebar --- */
+body.amb-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-sidebar {
+  display: flex;
+  flex: 1;
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-linia);
+  padding: 24px 0;
+  position: sticky;
+  top: 129px;
+  height: calc(100vh - 129px);
+  overflow-y: auto;
+}
+
+.sidebar-grup {
+  margin-bottom: 24px;
+}
+
+.sidebar-grup-titol {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-suau);
+  padding: 0 16px;
+  margin-bottom: 6px;
+}
+
+.sidebar-link {
+  display: block;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  color: var(--color-text-suau);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: all 0.12s;
+  line-height: 1.4;
+}
+
+.sidebar-link:hover {
+  color: var(--color-text);
+  background-color: #f5f5f5;
+  opacity: 1;
+}
+
+.sidebar-link.actiu {
+  color: var(--color-text);
+  border-left-color: var(--color-text);
+  font-weight: 600;
+  background-color: #f5f5f5;
+}
+
+.sidebar-link.sub {
+  padding-left: 28px;
+  font-size: 0.8rem;
+}
+
+/* --- Contingut principal amb sidebar --- */
+.contingut-sidebar {
+  flex: 1;
+  padding: 32px 48px;
+  min-width: 0;
+  overflow-y: auto;
+  height: calc(100vh - 129px);
+  position: sticky;
+  top: 129px;
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+  font-size: 0.8rem;
+  color: var(--color-text-suau);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb span {
+  color: var(--color-text-suau);
+}
+
+.breadcrumb-sep {
+  color: var(--color-linia);
+}
+
+/* --- Títol sticky dins contingut --- */
+.titol-sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-fons);
+  padding: 12px 0 16px;
+  border-bottom: 1px solid var(--color-linia);
+  margin-bottom: 32px;
+  z-index: 10;
+}
+
+.titol-sticky-sup {
+  font-size: 0.75rem;
+  color: var(--color-text-suau);
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.titol-sticky h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* --- Seccions de contingut --- */
+.seccio-contingut {
+  display: none;
+  max-width: var(--amplada-text);
+}
+
+/* --- Navegació anterior / següent --- */
+.nav-seccions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-linia);
+}
+
+.nav-seccio-btn {
+  font-family: var(--font-principal);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: none;
+  border: 1px solid var(--color-linia);
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.12s;
+  max-width: 240px;
+  text-align: left;
+}
+
+.nav-seccio-btn:last-child {
+  text-align: right;
+}
+
+.nav-seccio-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.nav-seccio-pos {
+  font-size: 0.75rem;
+  color: var(--color-text-suau);
+}
+
+/* --- Responsive sidebar --- */
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+  .contingut-sidebar {
+    padding: 24px 16px;
+    height: auto;
+    position: static;
+    overflow-y: visible;
+  }
+  .layout-sidebar {
+    flex-direction: column;
+  }
+}
