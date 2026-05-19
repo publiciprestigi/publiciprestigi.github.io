@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)">
+  <title>Públic i Prestigi — Estudi del cinema espanyol</title>
+  <link rel="stylesheet" href="css/estil.css">
+</head>
+<body>
+
+  <!-- CAPÇALERA -->
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <a href="index.html" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 · Edició 1965–2025</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#">ES</a>
+          <a href="#">EN</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVEGACIÓ -->
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="index.html" class="nav-link actiu">Inici</a>
+      <a href="part-i.html" class="nav-link">Part I — Públic</a>
+      <a href="part-ii.html" class="nav-link">Part II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">Part III — Anàlisi</a>
+      <a href="notes.html" class="nav-link">Notes</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link extern" target="_blank" rel="noopener">Novetats ↗</a>
+    </div>
+  </nav>
+
+  <!-- CONTINGUT PRINCIPAL -->
+  <main class="contingut">
+    <div class="inici-portada">
+
+      <div class="inici-titol">
+        <h1>Mètriques i paradoxes del cinema espanyol en dos circuits</h1>
+        <p class="inici-subtitol">1965–2025</p>
+      </div>
+
+      <div class="inici-intro contingut-text">
+        <p>
+          Hi ha films de festival dels anys 70 que van connectar amb el gran públic d'una manera que avui seria impossible. Hi ha directors que han guanyat els premis màxims i mai han entrat al Top 100. N'hi ha d'altres que han omplert sales durant dècades sense que la crítica els hagi dedicat gaire atenció. I hi ha directors que han aconseguit les dues coses alhora, el gran públic i el reconeixement crític, durant dècades.
+        </p>
+        <p>
+          L'anàlisi no pretén resoldre la tensió entre els dos mons. Perquè entendre per què no es creuen és tan interessant com veure quan, excepcionalment, ho fan.
+        </p>
+      </div>
+
+      <div class="inici-acces">
+        <a href="part-i.html" class="boto-acces">
+          <span class="boto-acces-part">Part I</span>
+          <span class="boto-acces-nom">Públic</span>
+          <span class="boto-acces-desc">Top 100 pel·lícules per espectadors, penetració, quota i IIC</span>
+        </a>
+        <a href="part-ii.html" class="boto-acces">
+          <span class="boto-acces-part">Part II</span>
+          <span class="boto-acces-nom">Prestigi</span>
+          <span class="boto-acces-desc">Presència i premis als festivals internacionals</span>
+        </a>
+        <a href="part-iii.html" class="boto-acces">
+          <span class="boto-acces-part">Part III</span>
+          <span class="boto-acces-nom">Anàlisi</span>
+          <span class="boto-acces-desc">Cruïlles, comparatives i conclusions</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- PEU DE PÀGINA -->
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · Llicència CC BY-NC 4.0</span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com ↗</a></span>
+    </div>
+  </footer>
+
+  <!-- BUSCADOR (overlay) -->
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  <script>
+    // Carregar versió des de metadata.json
+    fetch('data/metadata.json')
+      .then(r => r.json())
+      .then(data => {
+        document.getElementById('versio-label').textContent = data.versio_label;
+      })
+      .catch(() => {});
+
+    // Buscador overlay
+    function toggleBuscador() {
+      const overlay = document.getElementById('buscador-overlay');
+      const input = document.getElementById('buscador-input');
+      if (overlay.style.display === 'none') {
+        overlay.style.display = 'flex';
+        input.focus();
+      } else {
+        overlay.style.display = 'none';
+        input.value = '';
+        document.getElementById('buscador-resultats').innerHTML = '';
+      }
+    }
+
+    // Tancar buscador amb Escape
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        const overlay = document.getElementById('buscador-overlay');
+        if (overlay.style.display !== 'none') toggleBuscador();
+      }
+    });
+  </script>
+
+</body>
+</html>
