@@ -136,8 +136,6 @@
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
-      if (s.grup === s.titol) { sep2.style.display = 'none'; bcActual.style.display = 'none'; }
-      else { sep2.style.display = ''; bcActual.style.display = ''; bcActual.textContent = s.titol; }
       document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));

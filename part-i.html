@@ -202,12 +202,7 @@
       document.getElementById('seccio-' + s.id).style.display = 'block';
 
       if (s.grup === s.titol || s.titol === 'Top 100' || !s.pos) {
-        sep2.style.display = 'none';
-        bcActual.style.display = 'none';
       } else {
-        sep2.style.display = '';
-        bcActual.style.display = '';
-        bcActual.textContent = s.titol;
       }
 
       // Actualitza títol sticky
