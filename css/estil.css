@@ -1235,3 +1235,34 @@ body.amb-sidebar {
 .col-pos {
   font-weight: 400 !important;
 }
+
+/* --- Jerarquia visual unificada --- */
+
+/* Director sempre en gris, mateixa mida a tots els llocs */
+.taula-films .col-subtil,
+.taula-ranking .col-subtil {
+  color: var(--color-text-suau);
+  font-size: 0.82rem;
+}
+
+/* Context en gris */
+.col-context-doc {
+  color: var(--color-text-suau);
+}
+
+/* Director a les taules de dècada: gris i mateixa mida que als rànquings */
+.taula-films td.col-subtil {
+  color: var(--color-text-suau);
+  font-size: 0.82rem;
+}
+
+/* IIC i posicions en negre normal (no gris, no negreta) */
+.col-iic {
+  color: var(--color-text) !important;
+  font-weight: 400 !important;
+}
+
+.col-center {
+  color: var(--color-text);
+  font-weight: 400;
+}
