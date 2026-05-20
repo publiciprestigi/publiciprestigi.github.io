@@ -55,7 +55,7 @@
       </div>
       <div class="sidebar-separador"></div>
       <div class="sidebar-grup">
-        <a href="notes.html" class="sidebar-link sidebar-link-notes">Notes</a>
+        <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notes</a>
       </div>
     </aside>
 
@@ -174,7 +174,12 @@
     function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
 
     document.querySelectorAll('.sidebar-link').forEach(a => {
-      a.addEventListener('click', e => { e.preventDefault(); const idx = seccions.findIndex(s => s.id === a.dataset.seccio); if (idx >= 0) mostraSeccio(idx); });
+      a.addEventListener('click', e => {
+        if (a.dataset.extern) return; // enllaços externs, navegació normal
+        e.preventDefault();
+        const idx = seccions.findIndex(s => s.id === a.dataset.seccio);
+        if (idx >= 0) mostraSeccio(idx);
+      });
     });
 
     fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
