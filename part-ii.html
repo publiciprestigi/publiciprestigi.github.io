@@ -48,6 +48,7 @@
       </div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Seccions oficials</div>
+        <a href="#" class="sidebar-link" data-seccio="introduccio">Introducció</a>
         <a href="#" class="sidebar-link" data-seccio="cannes">Festival de Cannes</a>
         <a href="#" class="sidebar-link" data-seccio="berlin">Festival de Berlín</a>
         <a href="#" class="sidebar-link" data-seccio="venezia">Festival de Venècia</a>
@@ -68,6 +69,10 @@
 
       <div class="seccio-contingut" id="seccio-premiades">
         <div class="taula-placeholder">Taula: premis per dècada</div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-introduccio">
+        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-cannes">
@@ -121,6 +126,7 @@
   <script>
     const seccions = [
       { id: 'premiades',           titol: 'Pel·lícules premiades a festivals per dècada',          sup: 'Presència i premis als festivals internacionals', grup: 'Pel·lícules premiades' },
+      { id: 'introduccio', titol: 'Presència a les seccions oficials per festival', sup: 'Presència i premis als festivals internacionals', grup: 'Seccions oficials' },
       { id: 'cannes',              titol: 'Festival de Cannes',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
       { id: 'berlin',              titol: 'Festival de Berlín',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
       { id: 'venezia',             titol: 'Festival de Venècia',                        sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
@@ -136,7 +142,7 @@
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
-      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-sup').textContent = 'Presència i premis als festivals internacionals';
       document.getElementById('titol-principal').textContent = s.titol;
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');

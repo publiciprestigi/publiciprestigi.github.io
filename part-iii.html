@@ -140,7 +140,7 @@
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
-      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-sup').textContent = 'Cruïlles, comparatives i interpretacions';
       document.getElementById('titol-principal').textContent = s.titol;
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
