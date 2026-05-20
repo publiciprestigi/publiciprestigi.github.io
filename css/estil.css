@@ -1136,3 +1136,30 @@ body.amb-sidebar {
   vertical-align: bottom;
   padding-top: 0;
 }
+
+/* --- Fixes generals --- */
+
+/* Context header: no cursiva */
+.taula-films th.col-context-doc,
+.taula-films th.col-context-header {
+  font-style: normal;
+}
+
+/* Films context: mateix tamany, només gris */
+.taula-films .film-context td {
+  color: var(--color-text-suau);
+  font-size: 0.82rem;
+}
+
+/* Botó context: més padding vertical */
+.btn-context {
+  padding: 14px 16px !important;
+}
+
+/* Unificar capçaleres taules i rankings */
+.taula-ranking th {
+  font-size: 0.72rem;
+}
+.taula-films th {
+  font-size: 0.72rem;
+}
