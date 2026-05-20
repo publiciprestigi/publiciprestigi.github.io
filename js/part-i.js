@@ -38,28 +38,28 @@ function construirFila(film) {
   const posHist = film.pos_hist ? `#${film.pos_hist}` : '—';
   const cls = film.in_top100 ? 'film-top100' : 'film-context';
   const titolText = film.in_top100
-    ? `<strong><em>${film.titol}</em></strong> <span class="film-any">(${film.any})</span>`
-    : `<em>${film.titol}</em> <span class="film-any">(${film.any})</span>`;
+    ? `<strong><em>${film.titol}</em></strong> (${film.any})`
+    : `<em>${film.titol}</em> (${film.any})`;
   const ctxId = film.context_text ? `ctx-${++_ctxCounter}` : null;
   const iBtn = ctxId
     ? `<button class="btn-info" onclick="toggleCtxFila('${ctxId}')" title="Context">i</button>`
     : '';
   const ctxRow = ctxId
     ? `<tr id="${ctxId}" class="fila-context-text" style="display:none">
-        <td colspan="10" class="cel-context-text">${film.context_text}</td>
+        <td colspan="9" class="cel-context-text">${film.context_text}</td>
        </tr>`
     : '';
 
   return `<tr class="${cls}" data-context="${!film.in_top100}">
     <td>${film.pos_decade}</td>
     <td class="col-subtil">${posHist}</td>
-    <td class="col-titol">${titolText} ${iBtn}</td>
+    <td class="col-titol">${titolText}</td>
     <td class="col-subtil">${film.director}</td>
     <td class="col-num">${fmt(film.espectadors)}</td>
     <td class="col-num col-gris">${fmtMercat(film.mercat_M, film.mercat_estimat)}</td>
     <td class="col-num col-gris">${fmtPct(film.penetracio, film.penetracio_estimat)}</td>
     <td class="col-num col-gris">${fmtPct(film.quota, film.quota_estimat)}</td>
-    <td class="col-num col-iic">${fmtIIC(film.iic)}</td>
+    <td class="col-num col-iic">${fmtIIC(film.iic)} ${iBtn}</td>
   </tr>${ctxRow}`;
 }
 
@@ -100,7 +100,7 @@ function construirTaulaDècada(decadaId, cont) {
           <tr class="fila-boto-context">
             <td colspan="9">
               <button class="btn-context" onclick="toggleContext('${decadaId}', this)">
-                + Mostrar ${context.length} pel·lícules de context &nbsp;·&nbsp; <span style="font-style:italic;font-weight:400;">Continuació del rànquing de la dècada, films no inclosos al Top 100</span>
+                + Mostrar ${context.length} pel·lícules de context (Continuació del rànquing de la dècada)
               </button>
             </td>
           </tr>
@@ -136,24 +136,51 @@ function construirRànquing(metrica, contenidorId, label) {
     .sort((a, b) => b[metrica] - a[metrica]);
   const top10 = top100.slice(0, 10);
   const resta = top100.slice(10);
+  // Calcular posició al Top 100 per espectadors per a la columna Var.
+  const posEsp = {};
+  filmsData.filter(f => f.in_top100)
+    .sort((a, b) => b.espectadors - a.espectadors)
+    .forEach((f, i) => { posEsp[f.titol] = i + 1; });
+
   const fila = (f, i) => {
     const val = metrica === 'espectadors' ? fmt(f[metrica])
       : metrica === 'iic' ? fmtIIC(f[metrica])
       : fmtPct(f[metrica], f[metrica + '_estimat']);
-    return `<tr><td>${i+1}</td><td><em>${f.titol}</em> (${f.any})</td>
+
+    let varHtml = '';
+    if (metrica !== 'espectadors') {
+      const posActual = i + 1;
+      const posRef = posEsp[f.titol] || posActual;
+      const diff = posRef - posActual;
+      if (diff > 0) varHtml = `<span class="var-up">↑${diff}</span>`;
+      else if (diff < 0) varHtml = `<span class="var-down">↓${Math.abs(diff)}</span>`;
+      else varHtml = `<span class="var-eq">=</span>`;
+    }
+
+    return `<tr><td>${i+1}</td>
+      <td><strong><em>${f.titol}</em></strong> (${f.any})</td>
       <td class="col-subtil">${f.director}</td>
-      <td class="col-num col-iic">${val}</td></tr>`;
+      <td class="col-num col-iic">${val}</td>
+      ${metrica !== 'espectadors' ? `<td class="col-var">${varHtml}</td>` : ''}
+      </tr>`;
   };
   cont.innerHTML = `<table class="taula-ranking">
-    <thead><tr><th>#</th><th>Títol</th><th class="col-subtil">Director/a</th>
-    <th class="col-num">${label}</th></tr></thead>
+    <thead><tr>
+      <th style="width:32px">#</th>
+      <th>Títol</th>
+      <th class="col-subtil">Director/a</th>
+      <th class="col-num">${label}</th>
+      ${metrica !== 'espectadors' ? '<th class="col-var" title="Variació respecte al rànquing per espectadors">Var.</th>' : ''}
+    </tr></thead>
     <tbody>
       ${top10.map((f,i) => fila(f,i)).join('')}
       ${resta.length ? `
         <tr class="fila-boto-context">
-          <td colspan="4"><button class="btn-context" onclick="expandirRanking('${contenidorId}', this)">
-            + Veure Top 100 complet
-          </button></td>
+          <td colspan="${metrica !== 'espectadors' ? 5 : 4}">
+            <button class="btn-context" onclick="expandirRanking('${contenidorId}', this)">
+              + Veure Top 100 complet
+            </button>
+          </td>
         </tr>
         ${resta.map((f,i) => fila(f,i+10).replace('<tr>','<tr style="display:none" class="fila-extra">')).join('')}
       ` : ''}
