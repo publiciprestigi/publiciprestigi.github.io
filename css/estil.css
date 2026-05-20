@@ -1040,3 +1040,50 @@ body.amb-sidebar {
   border-color: var(--color-text);
   color: var(--color-text);
 }
+
+/* --- Variació de posició als rànquings --- */
+.col-var {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  width: 48px;
+}
+
+.var-up {
+  color: #c0392b;
+}
+
+.var-down {
+  color: #2471a3;
+}
+
+.var-eq {
+  color: var(--color-text-suau);
+  font-weight: 400;
+}
+
+/* --- Botons anterior/següent més amples --- */
+.nav-seccio-btn {
+  font-family: var(--font-principal);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: none;
+  border: 1px solid var(--color-linia);
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background-color 0.12s;
+  max-width: 260px;
+}
+
+/* --- Botó context més ample --- */
+.fila-boto-context td {
+  border-bottom: none;
+  padding: 16px 0;
+}
+
+.btn-info {
+  vertical-align: middle;
+  margin-left: 6px;
+}
