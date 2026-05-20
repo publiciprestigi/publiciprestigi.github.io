@@ -98,19 +98,22 @@ em {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+}
+
+.capcalera-interior::before {
+  content: '';
+  flex: 1;
 }
 
 .capcalera-logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   text-decoration: none;
   color: var(--color-text);
   letter-spacing: -0.01em;
   white-space: nowrap;
+  flex: 1;
+  text-align: center;
 }
 
 .capcalera-logo:hover {
@@ -120,9 +123,11 @@ em {
 .capcalera-controls {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 20px;
   font-size: var(--mida-petit);
   color: var(--color-text-suau);
+  flex: 1;
 }
 
 .capcalera-versio {
