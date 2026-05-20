@@ -1087,3 +1087,41 @@ body.amb-sidebar {
   vertical-align: middle;
   margin-left: 6px;
 }
+
+/* --- Columna context al document (oculta per defecte en pantalles estretes) --- */
+.col-context-doc {
+  font-size: 0.75rem;
+  color: var(--color-text-suau);
+  font-style: italic;
+  line-height: 1.4;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+/* --- Posició als rànquings --- */
+.col-pos {
+  width: 28px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+/* --- Colors variació CORRECTES --- */
+.var-up { color: #27ae60; font-weight: 600; }   /* puja = verd */
+.var-down { color: #c0392b; font-weight: 600; } /* baixa = vermell */
+.var-eq { color: var(--color-text-suau); }
+
+/* --- Films llista als directors --- */
+.films-llista {
+  font-size: 0.75rem;
+  color: var(--color-text-suau);
+  line-height: 1.5;
+}
+
+/* --- Subtítol dins secció directors --- */
+.subtitol-ranking {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-linia);
+}
