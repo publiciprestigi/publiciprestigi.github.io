@@ -1230,3 +1230,8 @@ body.amb-sidebar {
   color: #27ae60;
   letter-spacing: 0.04em;
 }
+
+/* --- Columna # sense negreta --- */
+.col-pos {
+  font-weight: 400 !important;
+}
