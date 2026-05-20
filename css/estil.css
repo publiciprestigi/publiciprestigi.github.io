@@ -783,3 +783,35 @@ body.amb-sidebar {
     flex-direction: column;
   }
 }
+
+/* --- Sidebar separador i link Notes --- */
+.sidebar-separador {
+  height: 1px;
+  background-color: var(--color-linia);
+  margin: 8px 16px 16px;
+}
+
+.sidebar-link-notes {
+  color: var(--color-text-suau);
+  font-size: 0.85rem;
+}
+
+/* --- Grups de notes --- */
+.notes-grup {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.notes-grup:last-child {
+  border-bottom: none;
+}
+
+.notes-grup h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-suau);
+  margin-bottom: 24px;
+}
