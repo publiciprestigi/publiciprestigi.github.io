@@ -1168,3 +1168,12 @@ body.amb-sidebar {
 .col-context-doc {
   font-style: normal !important;
 }
+
+/* --- Evitar que el director es parteixi en dues línies als rànquings --- */
+.taula-ranking .col-subtil {
+  white-space: nowrap;
+}
+
+.taula-ranking td:nth-child(3) {
+  max-width: 320px;
+}
