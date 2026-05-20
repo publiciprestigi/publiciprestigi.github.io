@@ -825,3 +825,139 @@ body.amb-sidebar {
   color: var(--color-text-suau);
   margin-bottom: 24px;
 }
+
+/* --- Taules de films (Part I) --- */
+.taula-films {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  margin: 0 0 24px;
+  table-layout: auto;
+}
+
+.taula-films th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-suau);
+  padding: 8px 8px 8px 0;
+  border-bottom: 2px solid var(--color-text);
+  white-space: nowrap;
+}
+
+.taula-films td {
+  padding: 9px 8px 9px 0;
+  border-bottom: 1px solid var(--color-linia);
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+.taula-films .film-top100 td {
+  color: var(--color-text);
+}
+
+.taula-films .film-context td {
+  color: var(--color-text-suau);
+  font-size: 0.78rem;
+}
+
+.taula-films .col-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.taula-films .col-subtil {
+  color: var(--color-text-suau);
+}
+
+.taula-films .col-iic {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.taula-films .film-top100 .col-iic {
+  color: var(--color-text);
+}
+
+.taula-films .col-context-text {
+  font-size: 0.75rem;
+  color: var(--color-text-suau);
+  max-width: 280px;
+  line-height: 1.4;
+}
+
+.taula-films .col-titol {
+  min-width: 160px;
+}
+
+/* --- Botó context --- */
+.fila-boto-context td {
+  border-bottom: none;
+  padding: 12px 0;
+}
+
+.btn-context {
+  background: none;
+  border: 1px solid var(--color-linia);
+  border-radius: 3px;
+  padding: 5px 12px;
+  font-family: var(--font-principal);
+  font-size: 0.78rem;
+  color: var(--color-text-suau);
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.btn-context:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
+
+/* --- Taules de rànquing --- */
+.taula-ranking {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 0 0 24px;
+}
+
+.taula-ranking th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-suau);
+  padding: 8px 8px 8px 0;
+  border-bottom: 2px solid var(--color-text);
+}
+
+.taula-ranking td {
+  padding: 10px 8px 10px 0;
+  border-bottom: 1px solid var(--color-linia);
+  vertical-align: middle;
+}
+
+.taula-ranking .col-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.taula-ranking .col-iic {
+  font-weight: 700;
+}
+
+.taula-ranking .col-subtil {
+  color: var(--color-text-suau);
+  font-size: 0.8rem;
+}
+
+.nota-taula {
+  font-size: 0.82rem;
+  color: var(--color-text-suau);
+  margin-bottom: 16px;
+  font-style: italic;
+}
