@@ -39,9 +39,9 @@ function construirFila(film) {
 function capcalera() {
   return `<thead><tr>
     <th>#</th>
-    <th class="col-subtil col-center">Top 100</th>
+    <th class="col-subtil col-center">T100</th>
     <th>Títol</th>
-    <th class="col-subtil">Director/a</th>
+    <th class="col-subtil">Director</th>
     <th class="col-num">Espectadors</th>
     <th class="col-num col-gris">Mercat</th>
     <th class="col-num col-gris">Penetració</th>
@@ -145,9 +145,9 @@ function construirRànquing(metrica, contenidorId, label) {
 
   const thead = `<thead><tr>
     <th class="col-pos">#</th>
-    ${esEsp ? '' : '<th class="col-center col-subtil">Top 100</th>'}
+    ${esEsp ? '' : '<th class="col-center col-subtil">T100</th>'}
     <th>Títol</th>
-    <th class="col-subtil">Director/a</th>
+    <th class="col-subtil">Director</th>
     <th class="col-num">${label}</th>
     ${esEsp ? '' : '<th class="col-var" title="Variació respecte al rànquing per espectadors">Var.</th>'}
   </tr></thead>`;
