@@ -212,13 +212,15 @@ function construirRànquingDirectors() {
     const filmsHtml = d.filmsTop100.join(' · ');
     return `<tr${i>=10?' style="display:none" class="fila-extra-d1"':''}>
       <td class="col-pos">${i+1}</td>
-      <td class="col-num">${d.top100}</td>
-      <td><strong>${d.nom}</strong></td>
+      <td>
+        <strong>${d.nom}</strong>
+        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
+      </td>
+      <td class="col-center">${d.top100}</td>
       <td class="col-num">${fmt(d.espTop)}</td>
       <td class="col-num col-gris">${(d.espTop/totalEsp*100).toFixed(1)}%</td>
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="Veure films">+</button>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
       </td>
     </tr>`;
   };
@@ -245,13 +247,15 @@ function construirRànquingDirectors() {
     return `<tr${i>=10?' style="display:none" class="fila-extra-d2"':''}>
       <td class="col-pos">${posActual}</td>
       <td class="col-var">${vHtml}</td>
-      <td class="col-num">${d.top100}</td>
-      <td class="col-num">${add > 0 ? '+'+add : '—'}</td>
-      <td><strong>${d.nom}</strong></td>
+      <td>
+        <strong>${d.nom}</strong>
+        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
+      </td>
+      <td class="col-center">${d.top100}</td>
+      <td class="col-center">${add > 0 ? '+'+add : '—'}</td>
       <td class="col-num">${fmt(d.espTotal)}</td>
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="Veure films">+</button>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
       </td>
     </tr>`;
   };
@@ -261,8 +265,8 @@ function construirRànquingDirectors() {
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th class="col-num">Films T100</th>
         <th>Director</th>
+        <th class="col-center">Núm. films</th>
         <th class="col-num">Espectadors acumulats</th>
         <th class="col-num col-gris">% total</th>
         <th class="col-center">Films</th>
@@ -276,14 +280,14 @@ function construirRànquingDirectors() {
       </tbody>
     </table>
 
-    <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats</h3>
+    <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
-        <th class="col-num">T100</th>
-        <th class="col-num">Add.</th>
         <th>Director</th>
+        <th class="col-center">Núm. films</th>
+        <th class="col-center">Add.</th>
         <th class="col-num">Espectadors totals</th>
         <th class="col-center">Films</th>
       </tr></thead>
