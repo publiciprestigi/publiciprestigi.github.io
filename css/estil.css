@@ -961,3 +961,82 @@ body.amb-sidebar {
   margin-bottom: 16px;
   font-style: italic;
 }
+
+/* --- Context expandible per fila --- */
+.btn-info {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid var(--color-linia);
+  background: none;
+  color: var(--color-text-suau);
+  font-size: 9px;
+  font-family: var(--font-principal);
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 4px;
+  flex-shrink: 0;
+  transition: all 0.12s;
+  font-style: normal;
+}
+
+.btn-info:hover,
+.btn-info.actiu {
+  background: var(--color-text);
+  color: var(--color-fons);
+  border-color: var(--color-text);
+}
+
+.fila-context-text td {
+  background: #f8f8f8;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.cel-context-text {
+  font-size: 0.78rem;
+  color: var(--color-text-suau);
+  padding: 8px 12px 8px 0 !important;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* --- Any integrat al títol --- */
+.film-any {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text-suau);
+  font-size: 0.9em;
+}
+
+/* --- Dades en gris --- */
+.col-gris {
+  color: var(--color-text-suau) !important;
+}
+
+.taula-films .col-iic {
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+/* --- Botó context més gran i descriptiu --- */
+.btn-context {
+  background: none;
+  border: 1px solid var(--color-linia);
+  border-radius: 3px;
+  padding: 8px 16px;
+  font-family: var(--font-principal);
+  font-size: 0.82rem;
+  color: var(--color-text-suau);
+  cursor: pointer;
+  transition: all 0.12s;
+  width: 100%;
+  text-align: left;
+}
+
+.btn-context:hover {
+  border-color: var(--color-text);
+  color: var(--color-text);
+}
