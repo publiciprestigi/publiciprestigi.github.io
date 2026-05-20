@@ -1125,3 +1125,14 @@ body.amb-sidebar {
   padding-bottom: 8px;
   border-bottom: 1px solid var(--color-linia);
 }
+
+/* --- Columnes centrades --- */
+.col-center {
+  text-align: center !important;
+}
+
+/* --- Capçalera context alineada --- */
+.col-context-header {
+  vertical-align: bottom;
+  padding-top: 0;
+}
