@@ -1266,3 +1266,9 @@ body.amb-sidebar {
   color: var(--color-text);
   font-weight: 400;
 }
+
+/* --- Context en gris (forçat) --- */
+.taula-films td.col-context-doc {
+  color: var(--color-text-suau) !important;
+  font-style: normal !important;
+}
