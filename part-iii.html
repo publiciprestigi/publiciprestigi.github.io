@@ -140,9 +140,6 @@
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
-      document.getElementById('breadcrumb-grup').textContent = s.grup;
-      const sep2 = document.getElementById('breadcrumb-sep2');
-      const bcActual = document.getElementById('breadcrumb-actual');
       sep2.style.display = ''; bcActual.style.display = ''; bcActual.textContent = s.titol;
       document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;

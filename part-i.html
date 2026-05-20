@@ -58,18 +58,17 @@
       </div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Rànquings</div>
-        <a href="#" class="sidebar-link" data-seccio="espectadors">Top 10 per espectadors</a>
-        <a href="#" class="sidebar-link" data-seccio="penetracio">Top 10 per penetració</a>
-        <a href="#" class="sidebar-link" data-seccio="quota">Top 10 per quota</a>
-        <a href="#" class="sidebar-link" data-seccio="iic">Top 10 per IIC</a>
-        <a href="#" class="sidebar-link" data-seccio="directors">Top 10 per directors</a>
+        <a href="#" class="sidebar-link" data-seccio="espectadors">Per espectadors</a>
+        <a href="#" class="sidebar-link" data-seccio="penetracio">Per penetració</a>
+        <a href="#" class="sidebar-link" data-seccio="quota">Per quota de mercat</a>
+        <a href="#" class="sidebar-link" data-seccio="iic">Per IIC</a>
+        <a href="#" class="sidebar-link" data-seccio="directors">Per directors</a>
       </div>
     </aside>
 
     <!-- CONTINGUT PRINCIPAL -->
     <main class="contingut-sidebar">
 
-      <!-- Breadcrumb -->
       <!-- Títol sticky -->
       <div class="titol-sticky">
         <p class="titol-sticky-sup" id="titol-sup"></p>
@@ -202,10 +201,6 @@
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
 
-      // Actualitza breadcrumb
-      document.getElementById('breadcrumb-grup').textContent = s.grup;
-      const sep2 = document.getElementById('breadcrumb-sep2');
-      const bcActual = document.getElementById('breadcrumb-actual');
       if (s.grup === s.titol || s.titol === 'Top 100' || !s.pos) {
         sep2.style.display = 'none';
         bcActual.style.display = 'none';
