@@ -24,7 +24,7 @@ function construirFila(film) {
     : `<em>${film.titol}</em> (${film.any})`;
   return `<tr class="${cls}" data-context="${!film.in_top100}">
     <td>${film.pos_decade}</td>
-    <td class="col-subtil">${posHist}</td>
+    <td class="col-subtil col-center">${posHist}</td>
     <td class="col-titol">${titol}</td>
     <td class="col-subtil">${film.director}</td>
     <td class="col-num">${fmt(film.espectadors)}</td>
@@ -38,8 +38,8 @@ function construirFila(film) {
 
 function capcalera() {
   return `<thead><tr>
-    <th title="Posició dins la dècada">P.dèc.</th>
-    <th title="Posició al Top 100 històric" class="col-subtil">P.hist.</th>
+    <th>#</th>
+    <th class="col-subtil col-center">Top 100</th>
     <th>Títol</th>
     <th class="col-subtil">Director/a</th>
     <th class="col-num">Espectadors</th>
@@ -47,7 +47,7 @@ function capcalera() {
     <th class="col-num col-gris">Penetració</th>
     <th class="col-num col-gris">Quota</th>
     <th class="col-num">IIC</th>
-    <th class="col-context-doc">Context</th>
+    <th class="col-context-doc col-context-header">Context</th>
   </tr></thead>`;
 }
 
@@ -132,7 +132,7 @@ function construirRànquing(metrica, contenidorId, label) {
       : metrica === 'iic' ? fmtIIC(f[metrica])
       : fmtPct(f[metrica], f[metrica + '_estimat']);
     const varCol = esEsp ? '' : `<td class="col-var">${varHtml(posActual, posRef)}</td>`;
-    const posTop = esEsp ? '' : `<td class="col-num col-subtil">${posRef}</td>`;
+    const posTop = esEsp ? '' : `<td class="col-center col-subtil">${posRef}</td>`;
     return `<tr>
       <td class="col-pos">${posActual}</td>
       ${posTop}
@@ -145,7 +145,7 @@ function construirRànquing(metrica, contenidorId, label) {
 
   const thead = `<thead><tr>
     <th class="col-pos">#</th>
-    ${esEsp ? '' : '<th class="col-num col-subtil" title="Posició al rànquing per espectadors">P.esp.</th>'}
+    ${esEsp ? '' : '<th class="col-center col-subtil">Top 100</th>'}
     <th>Títol</th>
     <th class="col-subtil">Director/a</th>
     <th class="col-num">${label}</th>
