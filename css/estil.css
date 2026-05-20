@@ -1177,3 +1177,56 @@ body.amb-sidebar {
 .taula-ranking td:nth-child(3) {
   max-width: 320px;
 }
+
+/* --- Botó films director --- */
+.btn-films-dir {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--color-linia);
+  background: none;
+  font-family: var(--font-principal);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--color-text-suau);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.12s;
+}
+
+.btn-films-dir:hover {
+  background: var(--color-text);
+  color: var(--color-fons);
+  border-color: var(--color-text);
+}
+
+/* --- Llista de films expandida --- */
+.dir-films-list {
+  font-size: 0.78rem;
+  color: var(--color-text-suau);
+  line-height: 1.6;
+  margin-top: 8px;
+  text-align: left;
+  max-width: 480px;
+}
+
+/* --- Subtítol grup films --- */
+.dir-films-grup {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-suau);
+  margin-bottom: 4px;
+}
+
+/* --- NOU als rànquings de directors --- */
+.var-nou {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #27ae60;
+  letter-spacing: 0.04em;
+}
