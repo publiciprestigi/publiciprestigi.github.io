@@ -1272,3 +1272,41 @@ body.amb-sidebar {
   color: var(--color-text-suau) !important;
   font-style: normal !important;
 }
+
+/* --- Diferenciar Top 100 de context --- */
+
+/* Files Top 100: text principal negre */
+.taula-films .film-top100 td {
+  color: var(--color-text);
+}
+
+/* Files context: gris mitjà per a tot */
+.taula-films .film-context td {
+  color: #888 !important;
+  font-size: 0.82rem !important;
+}
+
+/* Context text: mateix tamany per a totes les files */
+.taula-films td.col-context-doc {
+  font-size: 0.78rem !important;
+  color: var(--color-text-suau) !important;
+}
+
+/* Director de files Top 100 en gris suau (no tan fosc com el títol) */
+.taula-films .film-top100 td.col-subtil {
+  color: var(--color-text-suau);
+}
+
+/* --- Distinció Top 100 vs context: només el títol canvia --- */
+.taula-films .film-top100 .col-titol {
+  color: var(--color-text);
+}
+
+.taula-films .film-context .col-titol {
+  color: #999 !important;
+}
+
+.taula-films .film-context td {
+  color: #bbb !important;
+  font-size: 0.82rem !important;
+}
