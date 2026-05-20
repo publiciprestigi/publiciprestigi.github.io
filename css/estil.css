@@ -1163,3 +1163,8 @@ body.amb-sidebar {
 .taula-films th {
   font-size: 0.72rem;
 }
+
+/* Context text: sense cursiva */
+.col-context-doc {
+  font-style: normal !important;
+}
