@@ -19,9 +19,7 @@ const fmtMercat = (n, e) => n == null ? '—' : n.toFixed(1) + 'M' + (e ? '≈' 
 function construirFila(film) {
   const posHist = film.pos_hist ? `#${film.pos_hist}` : '—';
   const cls = film.in_top100 ? 'film-top100' : 'film-context';
-  const titol = film.in_top100
-    ? `<strong><em>${film.titol}</em></strong> (${film.any})`
-    : `<em>${film.titol}</em> (${film.any})`;
+  const titol = `<strong><em>${film.titol}</em></strong> (${film.any})`;
   return `<tr class="${cls}" data-context="${!film.in_top100}">
     <td>${film.pos_decade}</td>
     <td class="col-subtil col-center">${posHist}</td>
