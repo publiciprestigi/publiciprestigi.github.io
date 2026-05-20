@@ -180,110 +180,140 @@ function construirRànquingDirectors() {
   const cont = document.getElementById('seccio-directors');
   if (!cont) return;
 
-  // Calcular total espectadors Top 100
   const totalEsp = filmsData.filter(f => f.in_top100)
     .reduce((acc, f) => acc + (f.espectadors || 0), 0);
 
-  // Acumular per director
   const dirs = {};
   filmsData.forEach(f => {
     const d = f.director;
-    if (!dirs[d]) dirs[d] = { nom: d, top100: 0, esp: 0, citats: 0, filmsTop100: [], filmsContext: [] };
+    if (!dirs[d]) dirs[d] = { nom: d, top100: 0, espTop: 0, espContext: 0, citats: 0, filmsTop100: [], filmsContext: [] };
     if (f.in_top100) {
       dirs[d].top100++;
-      dirs[d].esp += f.espectadors || 0;
-      dirs[d].filmsTop100.push(`${f.titol} (${f.any})`);
+      dirs[d].espTop += f.espectadors || 0;
+      dirs[d].filmsTop100.push(`<strong><em>${f.titol}</em></strong> (${f.any})`);
     } else {
-      dirs[d].filmsContext.push(`${f.titol} (${f.any})`);
+      dirs[d].espContext += f.espectadors || 0;
+      dirs[d].filmsContext.push(`<strong><em>${f.titol}</em></strong> (${f.any})`);
     }
     dirs[d].citats++;
   });
 
-  // Rànquing 1: sols Top 100, ordenat per núm. films (desempat espectadors)
+  let ctrDir = 0;
+
+  // Rànquing 1: sols Top 100
   const llista1 = Object.values(dirs).filter(d => d.top100 > 0)
-    .sort((a, b) => b.top100 - a.top100 || b.esp - a.esp);
+    .sort((a, b) => b.top100 - a.top100 || b.espTop - a.espTop);
 
-  // Rànquing 2: tots els citats, ordenat per espectadors totals
-  const llista2 = Object.values(dirs).filter(d => d.top100 > 0 || d.citats > 1)
-    .map(d => ({ ...d, espTotal: d.esp }))
-    .sort((a, b) => b.espTotal - a.espTotal);
-
-  // Posicions del rànquing 1 per calcular Var. al rànquing 2
   const posR1 = {};
   llista1.forEach((d, i) => { posR1[d.nom] = i + 1; });
 
-  const filaR1 = (d, i) => `<tr>
-    <td class="col-pos">${i+1}</td>
-    <td class="col-num">${d.top100}</td>
-    <td><strong>${d.nom}</strong><br><span class="films-llista">${d.filmsTop100.map(t=>`<em>${t}</em>`).join(' · ')}</span></td>
-    <td class="col-num">${fmt(d.esp)}</td>
-    <td class="col-num col-gris">${(d.esp/totalEsp*100).toFixed(1)}%</td>
-  </tr>`;
+  const filaR1 = (d, i) => {
+    const id = `dir1-${++ctrDir}`;
+    const filmsHtml = d.filmsTop100.join(' · ');
+    return `<tr${i>=10?' style="display:none" class="fila-extra-d1"':''}>
+      <td class="col-pos">${i+1}</td>
+      <td class="col-num">${d.top100}</td>
+      <td><strong>${d.nom}</strong></td>
+      <td class="col-num">${fmt(d.espTop)}</td>
+      <td class="col-num col-gris">${(d.espTop/totalEsp*100).toFixed(1)}%</td>
+      <td class="col-center">
+        <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="Veure films">+</button>
+        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
+      </td>
+    </tr>`;
+  };
+
+  // Rànquing 2: tots els citats
+  const llista2 = Object.values(dirs).filter(d => d.top100 > 0 || d.citats > 1)
+    .map(d => ({ ...d, espTotal: d.espTop + d.espContext }))
+    .sort((a, b) => b.espTotal - a.espTotal);
 
   const filaR2 = (d, i) => {
+    const id = `dir2-${++ctrDir}`;
+    const posRef = posR1[d.nom] || null;
     const posActual = i + 1;
-    const posRef = posR1[d.nom] || '—';
-    const vHtml = posRef !== '—' ? varHtml(posActual, posRef) : '—';
-    return `<tr${i>=10?' style="display:none" class="fila-extra"':''}>
+    let vHtml;
+    if (!posRef) {
+      vHtml = '<span class="var-nou">NOU</span>';
+    } else {
+      vHtml = varHtml(posActual, posRef);
+    }
+    const add = d.filmsContext.length;
+    let filmsHtml = '';
+    if (d.filmsTop100.length) filmsHtml += `<span class="dir-films-grup">Top 100</span>${d.filmsTop100.join(' · ')}`;
+    if (d.filmsContext.length) filmsHtml += `<span class="dir-films-grup" style="margin-top:6px">Addicionals</span>${d.filmsContext.join(' · ')}`;
+    return `<tr${i>=10?' style="display:none" class="fila-extra-d2"':''}>
       <td class="col-pos">${posActual}</td>
       <td class="col-var">${vHtml}</td>
       <td class="col-num">${d.top100}</td>
-      <td class="col-num">${d.citats - d.top100 > 0 ? '+' + (d.citats - d.top100) : '—'}</td>
-      <td><strong>${d.nom}</strong><br>
-        <span class="films-llista">${d.filmsTop100.map(t=>`<em>${t}</em>`).join(' · ')}</span>
-        ${d.filmsContext.length ? `<br><span class="films-llista col-gris">${d.filmsContext.map(t=>`<em>${t}</em>`).join(' · ')}</span>` : ''}
-      </td>
+      <td class="col-num">${add > 0 ? '+'+add : '—'}</td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-num">${fmt(d.espTotal)}</td>
+      <td class="col-center">
+        <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="Veure films">+</button>
+        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
+      </td>
     </tr>`;
   };
 
   cont.innerHTML = `
-    <h3 class="subtitol-ranking">Top 10 per directors — sols films Top 100</h3>
-    <p class="nota-taula">Directors per nombre de films al Top 100 (desempat per espectadors acumulats).</p>
+    <h3 class="subtitol-ranking">Només films del Top 100</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-num">Films T100</th>
-        <th>Director/a · Pel·lícules</th>
+        <th>Director</th>
         <th class="col-num">Espectadors acumulats</th>
         <th class="col-num col-gris">% total</th>
+        <th class="col-center">Films</th>
       </tr></thead>
-      <tbody>${llista1.slice(0,10).map((d,i) => filaR1(d,i)).join('')}
+      <tbody>
+        ${llista1.slice(0,10).map((d,i) => filaR1(d,i)).join('')}
         <tr class="fila-boto-context">
-          <td colspan="5"><button class="btn-context" onclick="expandirDirectors1(this)">+ Veure llista completa</button></td>
+          <td colspan="6"><button class="btn-context" onclick="expandirD1(this)">+ Veure llista completa</button></td>
         </tr>
-        ${llista1.slice(10).map((d,i) => filaR1(d,i+10).replace('<tr>', '<tr style="display:none" class="fila-extra-d1">')).join('')}
+        ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
     </table>
 
-    <h3 class="subtitol-ranking" style="margin-top:40px">Top 10 per directors — tots els films citats</h3>
-    <p class="nota-taula">Incorpora els films de context de cada director. La variació (Var.) indica el canvi de posició respecte al rànquing anterior.</p>
+    <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
         <th class="col-num">T100</th>
         <th class="col-num">Add.</th>
-        <th>Director/a · Pel·lícules</th>
+        <th>Director</th>
         <th class="col-num">Espectadors totals</th>
+        <th class="col-center">Films</th>
       </tr></thead>
-      <tbody>${llista2.slice(0,10).map((d,i) => filaR2(d,i)).join('')}
+      <tbody>
+        ${llista2.slice(0,10).map((d,i) => filaR2(d,i)).join('')}
         <tr class="fila-boto-context">
-          <td colspan="6"><button class="btn-context" onclick="expandirDirectors2(this)">+ Veure llista completa</button></td>
+          <td colspan="7"><button class="btn-context" onclick="expandirD2(this)">+ Veure llista completa</button></td>
         </tr>
         ${llista2.slice(10).map((d,i) => filaR2(d,i+10)).join('')}
       </tbody>
     </table>`;
 }
 
-window.expandirDirectors1 = function(btn) {
+window.toggleDirFilms = function(id, btn) {
+  const div = document.getElementById(id);
+  if (!div) return;
+  const vis = div.style.display !== 'none';
+  div.style.display = vis ? 'none' : 'block';
+  btn.textContent = vis ? '+' : '−';
+};
+
+window.expandirD1 = function(btn) {
   document.querySelectorAll('.fila-extra-d1').forEach(tr => tr.style.display = tr.style.display !== 'none' ? 'none' : '');
   btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure llista completa';
 };
-window.expandirDirectors2 = function(btn) {
-  document.querySelectorAll('#seccio-directors .fila-extra').forEach(tr => tr.style.display = tr.style.display !== 'none' ? 'none' : '');
+window.expandirD2 = function(btn) {
+  document.querySelectorAll('.fila-extra-d2').forEach(tr => tr.style.display = tr.style.display !== 'none' ? 'none' : '');
   btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure llista completa';
 };
+
 
 function construirRànquings() {
   construirRànquing('espectadors', 'seccio-espectadors', 'Espectadors');
