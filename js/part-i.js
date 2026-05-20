@@ -32,40 +32,56 @@ function fmtMercat(n, est) {
   return n.toFixed(1) + 'M' + (est ? '≈' : '');
 }
 
+let _ctxCounter = 0;
+
 function construirFila(film) {
   const posHist = film.pos_hist ? `#${film.pos_hist}` : '—';
   const cls = film.in_top100 ? 'film-top100' : 'film-context';
-  const titol = film.in_top100
-    ? `<strong><em>${film.titol}</em></strong>`
-    : `<em>${film.titol}</em>`;
+  const titolText = film.in_top100
+    ? `<strong><em>${film.titol}</em></strong> <span class="film-any">(${film.any})</span>`
+    : `<em>${film.titol}</em> <span class="film-any">(${film.any})</span>`;
+  const ctxId = film.context_text ? `ctx-${++_ctxCounter}` : null;
+  const iBtn = ctxId
+    ? `<button class="btn-info" onclick="toggleCtxFila('${ctxId}')" title="Context">i</button>`
+    : '';
+  const ctxRow = ctxId
+    ? `<tr id="${ctxId}" class="fila-context-text" style="display:none">
+        <td colspan="10" class="cel-context-text">${film.context_text}</td>
+       </tr>`
+    : '';
+
   return `<tr class="${cls}" data-context="${!film.in_top100}">
     <td>${film.pos_decade}</td>
     <td class="col-subtil">${posHist}</td>
-    <td>${film.any}</td>
-    <td class="col-titol">${titol}</td>
+    <td class="col-titol">${titolText} ${iBtn}</td>
     <td class="col-subtil">${film.director}</td>
     <td class="col-num">${fmt(film.espectadors)}</td>
-    <td class="col-num col-subtil">${fmtMercat(film.mercat_M, film.mercat_estimat)}</td>
-    <td class="col-num col-subtil">${fmtPct(film.penetracio, film.penetracio_estimat)}</td>
-    <td class="col-num col-subtil">${fmtPct(film.quota, film.quota_estimat)}</td>
+    <td class="col-num col-gris">${fmtMercat(film.mercat_M, film.mercat_estimat)}</td>
+    <td class="col-num col-gris">${fmtPct(film.penetracio, film.penetracio_estimat)}</td>
+    <td class="col-num col-gris">${fmtPct(film.quota, film.quota_estimat)}</td>
     <td class="col-num col-iic">${fmtIIC(film.iic)}</td>
-    <td class="col-context-text">${film.context_text || ''}</td>
-  </tr>`;
+  </tr>${ctxRow}`;
 }
+
+window.toggleCtxFila = function(id) {
+  const r = document.getElementById(id);
+  if (!r) return;
+  r.style.display = r.style.display === 'none' ? '' : 'none';
+  const btn = r.previousElementSibling.querySelector('.btn-info');
+  if (btn) btn.classList.toggle('actiu');
+};
 
 function capcalera() {
   return `<thead><tr>
     <th title="Posició dins la dècada">P.dèc.</th>
     <th title="Posició al Top 100 històric" class="col-subtil">P.hist.</th>
-    <th>Any</th>
     <th>Títol</th>
     <th class="col-subtil">Director/a</th>
     <th class="col-num">Espectadors</th>
-    <th class="col-num col-subtil">Mercat</th>
-    <th class="col-num col-subtil">Penetració</th>
-    <th class="col-num col-subtil">Quota</th>
+    <th class="col-num col-gris">Mercat</th>
+    <th class="col-num col-gris">Penetració</th>
+    <th class="col-num col-gris">Quota</th>
     <th class="col-num">IIC</th>
-    <th>Context</th>
   </tr></thead>`;
 }
 
@@ -82,9 +98,9 @@ function construirTaulaDècada(decadaId, cont) {
         ${top100.map(construirFila).join('')}
         ${context.length ? `
           <tr class="fila-boto-context">
-            <td colspan="11">
+            <td colspan="9">
               <button class="btn-context" onclick="toggleContext('${decadaId}', this)">
-                + Mostrar ${context.length} pel·lícules de context
+                + Mostrar ${context.length} pel·lícules de context &nbsp;·&nbsp; <span style="font-style:italic;font-weight:400;">Continuació del rànquing de la dècada, films no inclosos al Top 100</span>
               </button>
             </td>
           </tr>
