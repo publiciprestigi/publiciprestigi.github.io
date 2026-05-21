@@ -289,7 +289,7 @@ function construirRànquingDirectors() {
   const celTop3 = (d, key_pr, color) => {
     if (!d) return '<td class="col-subtil">—</td>';
     const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
-    return `<td><strong>${d.nom}</strong>${pr}</td>`;
+    return `<td>${d.nom}${pr}</td>`;
   };
 
   cont.innerHTML = `
