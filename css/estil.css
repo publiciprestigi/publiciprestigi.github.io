@@ -548,3 +548,14 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .nom-festival-color {
   font-weight: 700;
 }
+
+/* --- Premi en negre (secció Premiades) --- */
+.col-premi-negre {
+  color: var(--color-text);
+  font-size: 0.82rem;
+}
+
+/* --- Dècada: format compacte --- */
+.col-decada {
+  font-size: 0.75rem;
+}
