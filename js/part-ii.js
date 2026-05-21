@@ -81,7 +81,7 @@ function construirPremiades() {
         <tbody>
           ${films.map(f => `
             <tr>
-              <td>${titolFilm(f, false)}</td>
+              <td>${titolFilm(f, true)}</td>
               <td class="col-subtil">${f.director}</td>
               <td>${nomFest(f.festival)}</td>
               <td class="col-premi-negre">${f.premi || '—'}</td>
@@ -131,7 +131,7 @@ function construirFestival(festival, seccioId) {
 
     return `
       <tr class="${rowCls}">
-        <td>${titolFilm(f, isTop)}</td>
+        <td>${titolFilm(f, true)}</td>
         <td class="col-subtil">${f.director}</td>
         <td class="col-premi">${premi}</td>
         <td class="col-center">${top100txt}</td>
@@ -181,7 +181,7 @@ function construirRànquingEspectadors() {
       const isTop = !!f.top100_pos;
       return `<tr class="${f.premiat ? 'film-premiat' : ''}">
         <td class="col-pos">${i+1}</td>
-        <td>${titolFilm(f, isTop)}</td>
+        <td>${titolFilm(f, true)}</td>
         <td class="col-subtil">${f.director}</td>
         <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
         <td class="col-center">${isTop ? `<span class="top100-pos">#${f.top100_pos}</span>` : '—'}</td>
