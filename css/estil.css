@@ -454,3 +454,8 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .taula-films .film-context td {
   color: #888 !important;
 }
+
+/* --- Text de context de files Top 100: gris --- */
+.taula-films .film-top100 td.col-context-doc {
+  color: #888 !important;
+}
