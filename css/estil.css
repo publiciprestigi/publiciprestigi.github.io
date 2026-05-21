@@ -598,3 +598,42 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* Premi col */
 .col-premi { font-size: 0.82rem; color: var(--color-text-suau); }
+
+/* --- Part II fixes --- */
+
+/* Dècada en gris */
+.taula-festivals .col-decada { color: var(--color-text-suau); font-size: 0.78rem; }
+
+/* Premi en gris a Premiades */
+.taula-festivals .col-subtil { color: var(--color-text-suau); }
+
+/* Eliminar fons groc/premiat */
+.taula-festivals .film-premiat td { background: none !important; }
+.film-premiat td { background: none !important; }
+
+/* Columna # amb més aire al títol */
+.taula-festivals td.col-pos { padding-right: 16px; }
+.taula-festivals th.col-pos { padding-right: 16px; }
+
+/* Border-left per festival */
+#seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
+#seccio-berlin .taula-festivals       { border-left: 3px solid #1E4080; }
+#seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #6B3FA0; }
+
+/* --- Directors en negre normal a Part I --- */
+.taula-films td.col-subtil,
+.taula-films th.col-subtil {
+  color: var(--color-text);
+}
+
+/* Però Mercat, Penetració, Quota continuen en gris */
+.taula-films td.col-gris,
+.taula-films th.col-gris {
+  color: var(--color-text-suau) !important;
+}
+
+/* I les files de context continuen en gris */
+.taula-films .film-context td {
+  color: #888 !important;
+}
