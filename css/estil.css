@@ -633,9 +633,10 @@ body.amb-sidebar {
   border-right: 1px solid var(--color-linia);
   padding: 24px 0;
   position: sticky;
-  top: 129px;
-  height: calc(100vh - 129px);
+  top: 117px;
+  height: calc(100vh - 117px);
   overflow-y: auto;
+  align-self: flex-start;
 }
 
 .sidebar-grup {
@@ -686,10 +687,7 @@ body.amb-sidebar {
   flex: 1;
   padding: 32px 48px;
   min-width: 0;
-  overflow-y: auto;
-  height: calc(100vh - 129px);
-  position: sticky;
-  top: 129px;
+  overflow-y: visible;
 }
 
 /* --- Breadcrumb --- */
@@ -714,7 +712,7 @@ body.amb-sidebar {
 /* --- Títol sticky dins contingut --- */
 .titol-sticky {
   position: sticky;
-  top: 0;
+  top: 117px;
   background-color: var(--color-fons);
   padding: 12px 0 16px;
   border-bottom: 1px solid var(--color-linia);
@@ -1372,61 +1370,3 @@ body.amb-sidebar {
 }
 
 
-/* --- Títol sticky: enganxat just sota navegació --- */
-.titol-sticky {
-  position: sticky;
-  top: 0;
-  background-color: var(--color-fons);
-  padding: 16px 0 16px;
-  border-bottom: 1px solid var(--color-linia);
-  margin-bottom: 32px;
-  z-index: 10;
-}
-
-/* --- Sidebar: padding superior per alinear amb contingut --- */
-.sidebar {
-  padding-top: 32px;
-}
-
-/* --- Contingut sidebar: padding superior consistent --- */
-.contingut-sidebar {
-  padding-top: 32px;
-}
-
-/* --- Any en gris sense canvi de mida --- */
-.film-any {
-  color: var(--color-text-suau) !important;
-  font-weight: 400;
-  font-style: normal;
-  font-size: inherit !important;
-}
-
-/* --- Sticky fix: el contenidor ha de tenir height auto per al sticky --- */
-.contingut-sidebar {
-  overflow-y: visible;
-  height: auto;
-  position: static;
-}
-
-.layout-sidebar {
-  min-height: calc(100vh - 117px);
-}
-
-.sidebar {
-  position: sticky;
-  top: 117px;
-  height: calc(100vh - 117px);
-  overflow-y: auto;
-  padding-top: 32px;
-  align-self: flex-start;
-}
-
-.titol-sticky {
-  position: sticky;
-  top: 117px;
-  background-color: var(--color-fons);
-  padding: 16px 0;
-  border-bottom: 1px solid var(--color-linia);
-  margin-bottom: 32px;
-  z-index: 10;
-}
