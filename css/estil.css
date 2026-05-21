@@ -665,3 +665,11 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 #seccio-sansebastia .taula-festivals {
   border-left: none !important;
 }
+
+/* --- Títol festival en color --- */
+.titol-festival {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
