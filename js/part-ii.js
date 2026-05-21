@@ -103,6 +103,12 @@ function construirFestival(festival, seccioId) {
 
   const films   = festivalsData.filter(f => f.festival === festival).sort((a,b) => a.any - b.any);
   const color   = FC[festival];
+  const titolFestival = {
+    'Cannes':       'Festival de Cannes — Compétition officielle',
+    'Berlín':       'Festival de Berlín — Wettbewerb',
+    'Venècia':      'Festival de Venècia — Concorso',
+    'Sant Sebastià':'Festival de Sant Sebastià — Sección Oficial a concurso',
+  }[festival];
   const total   = films.length;
   const nPremis = films.filter(f => f.premiat).length;
 
@@ -124,6 +130,7 @@ function construirFestival(festival, seccioId) {
   }).join('');
 
   cont.innerHTML = `
+    <h2 class="titol-festival" style="color:${color}">${titolFestival}</h2>
     <p class="festival-resum" style="border-left:3px solid ${color};padding-left:12px;margin-bottom:20px">
       <strong>${total} participacions documentades</strong> · <strong>${nPremis} premiades</strong>
     </p>
@@ -132,7 +139,7 @@ function construirFestival(festival, seccioId) {
         <th class="col-pos">#</th>
         <th style="width:35%">Títol</th>
         <th class="col-subtil" style="width:13%">Director</th>
-        <th style="width:25%">Premi / Observació</th>
+        <th style="width:25%">Premi / Nota</th>
         <th class="col-center" style="width:65px">Top 100</th>
         <th class="col-subtil" style="width:85px">Dècada</th>
         <th class="col-num" style="width:90px">Espectadors</th>
@@ -167,7 +174,7 @@ function construirRànquingEspectadors() {
     </tr>`;
 
     html += `
-      <h3 class="subtitol-ranking" style="margin-top:32px;padding-left:10px;border-left:3px solid ${color}">${festival}</h3>
+      <h3 class="subtitol-ranking" style="margin-top:32px;color:${color}">${festival}</h3>
       <table class="taula-festivals">
         <thead><tr>
           <th class="col-pos">#</th>
@@ -175,7 +182,7 @@ function construirRànquingEspectadors() {
           <th class="col-subtil">Director</th>
           <th class="col-center" style="width:50px">Premi</th>
           <th class="col-center" style="width:65px">Top 100</th>
-          <th class="col-num">Espectadors</th>
+          <th class="col-num" style="text-align:right">Espectadors</th>
         </tr></thead>
         <tbody>
           ${top10.map((f,i) => fila(f,i)).join('')}

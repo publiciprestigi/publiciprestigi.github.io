@@ -267,7 +267,7 @@ function construirRànquingDirectors() {
         <th class="col-pos">#</th>
         <th>Director</th>
         <th class="col-center">Núm. films</th>
-        <th class="col-num">Espectadors acumulats</th>
+        <th class="col-num" style="text-align:right">Espectadors acumulats</th>
         <th class="col-num col-gris">% total</th>
         <th class="col-center">Films</th>
       </tr></thead>
@@ -288,7 +288,7 @@ function construirRànquingDirectors() {
         <th>Director</th>
         <th class="col-center">Núm. films</th>
         <th class="col-center">Add.</th>
-        <th class="col-num">Espectadors totals</th>
+        <th class="col-num" style="text-align:right">Espectadors totals</th>
         <th class="col-center">Films</th>
       </tr></thead>
       <tbody>
