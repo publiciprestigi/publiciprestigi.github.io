@@ -637,3 +637,11 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .taula-films .film-context td {
   color: #888 !important;
 }
+
+/* --- Director: gris a Part I (reverteix el canvi anterior) --- */
+.taula-films td.col-subtil {
+  color: var(--color-text-suau) !important;
+}
+.taula-films th.col-subtil {
+  color: var(--color-text-suau) !important;
+}
