@@ -134,7 +134,7 @@ function construirRànquing(metrica, contenidorId, label) {
     return `<tr>
       <td class="col-pos">${posActual}</td>
       ${posTop}
-      <td><strong><em>${f.titol}</em></strong> (${f.any})</td>
+      <td><strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span></td>
       <td class="col-subtil">${f.director}</td>
       <td class="col-num col-iic">${val}</td>
       ${varCol}
