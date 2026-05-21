@@ -232,14 +232,14 @@ function construirRànquingDirectors() {
   // Helper: cell with sel + ★N in festival color
   const cel = (sel, pr, color) => {
     if (!sel) return `<td class="col-center col-subtil">—</td>`;
-    const pr_txt = pr ? ` <span class="estrella-col" style="color:${color}">★${pr>1?pr:''}</span>` : '';
+    const pr_txt = pr ? ` <span style="color:${color}">★${pr>1?pr:''}</span>` : '';
     return `<td class="col-center">${sel}${pr_txt}</td>`;
   };
 
   // Total ★ cell
   const celTotal = (pr) => {
     if (!pr) return `<td class="col-center col-subtil">—</td>`;
-    return `<td class="col-center"><span class="estrella">★${pr>1?pr:''}</span></td>`;
+    return `<td class="col-center">★${pr>1?pr:''}</td>`;
   };
 
   /* --- TOP 25 TOTS ELS FESTIVALS --- */
@@ -286,10 +286,10 @@ function construirRànquingDirectors() {
   const top3v = top3PerFest('Venècia','v_sel','v_pr');
   const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr');
 
-  const celTop3 = (d, key_sel, key_pr, color) => {
-    if (!d) return '<td>—</td>';
-    const pr = d[key_pr] ? ` <span class="estrella-col" style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
-    return `<td><strong>${d.nom}</strong>${pr} <span class="col-subtil">/ ${d[key_sel]} sel.</span></td>`;
+  const celTop3 = (d, key_pr, color) => {
+    if (!d) return '<td class="col-subtil">—</td>';
+    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
+    return `<td><strong>${d.nom}</strong>${pr}</td>`;
   };
 
   cont.innerHTML = `
@@ -327,34 +327,34 @@ function construirRànquingDirectors() {
     <table class="taula-festivals">
       <thead><tr>
         <th style="width:110px">Festival</th>
-        <th>1r classificat</th>
-        <th>2n classificat</th>
-        <th>3r classificat</th>
+        <th>1r</th>
+        <th>2n</th>
+        <th>3r</th>
       </tr></thead>
       <tbody>
         <tr>
           <td>${nomFest('Cannes')}</td>
-          ${celTop3(top3c[0],'c_sel','c_pr',FC['Cannes'])}
-          ${celTop3(top3c[1],'c_sel','c_pr',FC['Cannes'])}
-          ${celTop3(top3c[2],'c_sel','c_pr',FC['Cannes'])}
+          ${celTop3(top3c[0],'c_pr',FC['Cannes'])}
+          ${celTop3(top3c[1],'c_pr',FC['Cannes'])}
+          ${celTop3(top3c[2],'c_pr',FC['Cannes'])}
         </tr>
         <tr>
           <td>${nomFest('Berlín')}</td>
-          ${celTop3(top3b[0],'b_sel','b_pr',FC['Berlín'])}
-          ${celTop3(top3b[1],'b_sel','b_pr',FC['Berlín'])}
-          ${celTop3(top3b[2],'b_sel','b_pr',FC['Berlín'])}
+          ${celTop3(top3b[0],'b_pr',FC['Berlín'])}
+          ${celTop3(top3b[1],'b_pr',FC['Berlín'])}
+          ${celTop3(top3b[2],'b_pr',FC['Berlín'])}
         </tr>
         <tr>
           <td>${nomFest('Venècia')}</td>
-          ${celTop3(top3v[0],'v_sel','v_pr',FC['Venècia'])}
-          ${celTop3(top3v[1],'v_sel','v_pr',FC['Venècia'])}
-          ${celTop3(top3v[2],'v_sel','v_pr',FC['Venècia'])}
+          ${celTop3(top3v[0],'v_pr',FC['Venècia'])}
+          ${celTop3(top3v[1],'v_pr',FC['Venècia'])}
+          ${celTop3(top3v[2],'v_pr',FC['Venècia'])}
         </tr>
         <tr>
           <td>${nomFest('Sant Sebastià')}</td>
-          ${celTop3(top3s[0],'s_sel','s_pr',FC['Sant Sebastià'])}
-          ${celTop3(top3s[1],'s_sel','s_pr',FC['Sant Sebastià'])}
-          ${celTop3(top3s[2],'s_sel','s_pr',FC['Sant Sebastià'])}
+          ${celTop3(top3s[0],'s_pr',FC['Sant Sebastià'])}
+          ${celTop3(top3s[1],'s_pr',FC['Sant Sebastià'])}
+          ${celTop3(top3s[2],'s_pr',FC['Sant Sebastià'])}
         </tr>
       </tbody>
     </table>`;
