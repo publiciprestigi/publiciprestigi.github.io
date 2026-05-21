@@ -19,7 +19,7 @@ const fmtMercat = (n, e) => n == null ? '—' : n.toFixed(1) + 'M' + (e ? '≈' 
 function construirFila(film) {
   const posHist = film.pos_hist ? `${film.pos_hist}` : '—';
   const cls = film.in_top100 ? 'film-top100' : 'film-context';
-  const titol = `<strong><em>${film.titol}</em></strong> (${film.any})`;
+  const titol = `<strong><em>${film.titol}</em></strong> <span class="film-any">(${film.any})</span>`;
   return `<tr class="${cls}" data-context="${!film.in_top100}">
     <td>${film.pos_decade}</td>
     <td class="col-subtil col-center">${posHist}</td>
@@ -190,10 +190,10 @@ function construirRànquingDirectors() {
     if (f.in_top100) {
       dirs[d].top100++;
       dirs[d].espTop += f.espectadors || 0;
-      dirs[d].filmsTop100.push(`<strong><em>${f.titol}</em></strong> (${f.any})`);
+      dirs[d].filmsTop100.push(`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`);
     } else {
       dirs[d].espContext += f.espectadors || 0;
-      dirs[d].filmsContext.push(`<strong><em>${f.titol}</em></strong> (${f.any})`);
+      dirs[d].filmsContext.push(`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`);
     }
     dirs[d].citats++;
   });
