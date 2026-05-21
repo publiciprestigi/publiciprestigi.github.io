@@ -645,3 +645,23 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .taula-films th.col-subtil {
   color: var(--color-text-suau) !important;
 }
+
+/* --- Part II: ajustos grisos/negres --- */
+
+/* Premi en negre a Premiades per dècada */
+.taula-festivals td:last-child {
+  color: var(--color-text);
+}
+
+/* Espectadors en negre a taules de festival i rànquing */
+.taula-festivals td.col-num {
+  color: var(--color-text) !important;
+}
+
+/* Eliminar border-left de color per festival */
+#seccio-cannes .taula-festivals,
+#seccio-berlin .taula-festivals,
+#seccio-venezia .taula-festivals,
+#seccio-sansebastia .taula-festivals {
+  border-left: none !important;
+}
