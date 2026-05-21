@@ -634,7 +634,7 @@ body.amb-sidebar {
   width: 220px;
   flex-shrink: 0;
   border-right: 1px solid var(--color-linia);
-  padding: 24px 0;
+  padding: 32px 0 24px;
   position: sticky;
   top: 117px;
   height: calc(100vh - 117px);
@@ -717,7 +717,7 @@ body.amb-sidebar {
   position: sticky;
   top: 117px;
   background-color: var(--color-fons);
-  padding: 12px 0 16px;
+  padding: 20px 0 16px;
   border-bottom: 1px solid var(--color-linia);
   margin-bottom: 32px;
   z-index: 10;
@@ -1386,4 +1386,17 @@ body.amb-sidebar {
   color: var(--color-text-suau);
   font-weight: 400;
   font-style: normal;
+}
+
+/* --- Capçalera Context fixada --- */
+.taula-films th:last-child {
+  width: 220px;
+  min-width: 120px;
+  vertical-align: bottom !important;
+  white-space: nowrap;
+}
+
+/* --- Sidebar: alineació inicial correcta --- */
+.contingut-sidebar {
+  padding-top: 32px;
 }
