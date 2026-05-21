@@ -1,92 +1,53 @@
 /* ============================================================
-   Públic i Prestigi — Full d'estils global
-   Referència visual: publiciprestigi.substack.com
+   Públic i Prestigi — Full d'estils global v2 (net)
    ============================================================ */
 
-/* --- Variables globals --- */
+/* --- Variables --- */
 :root {
-  --color-fons:       #ffffff;
-  --color-text:       #1a1a1a;
-  --color-text-suau:  #6b6b6b;
-  --color-linia:      #e5e5e5;
-  --color-accent:     #1a1a1a;
-  --color-enllaç:     #1a1a1a;
-
-  --font-principal: -apple-system, "SF Pro Text", "SF Pro Display",
-                    BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
-
-  --amplada-max:    1200px;
-  --amplada-text:    720px;
-
-  --mida-cos:        18px;
-  --mida-petit:      14px;
-  --mida-nav:        15px;
-
-  --interlineat:     1.7;
-  --espai-seccio:    64px;
+  --color-fons: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-suau: #6b6b6b;
+  --color-linia: #e5e5e5;
+  --font-principal: -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --amplada-max: 1200px;
+  --amplada-text: 720px;
+  --mida-cos: 18px;
+  --mida-petit: 14px;
+  --mida-nav: 15px;
+  --interlineat: 1.7;
 }
 
-/* --- Reset base --- */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-  font-size: var(--mida-cos);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+html { font-size: var(--mida-cos); -webkit-font-smoothing: antialiased; }
 
 body {
   font-family: var(--font-principal);
   font-size: var(--mida-cos);
   line-height: var(--interlineat);
   color: var(--color-text);
-  background-color: var(--color-fons);
+  background: var(--color-fons);
 }
 
 /* --- Tipografia --- */
-h1, h2, h3, h4 {
-  font-family: var(--font-principal);
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--color-text);
-}
-
+h1, h2, h3, h4 { font-family: var(--font-principal); font-weight: 700; line-height: 1.25; color: var(--color-text); }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
 h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1.25rem; }
+a { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { opacity: 0.65; }
+strong { font-weight: 600; }
 
-p {
-  margin-bottom: 1.25rem;
-}
-
-a {
-  color: var(--color-enllaç);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-a:hover {
-  opacity: 0.65;
-}
-
-strong {
-  font-weight: 600;
-}
-
-em {
-  font-style: italic;
-}
-
-/* --- Capçalera --- */
+/* ============================================================
+   CAPÇALERA
+   ============================================================ */
 .capcalera {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--color-fons);
+  background: var(--color-fons);
   border-bottom: 1px solid var(--color-linia);
 }
 
@@ -100,10 +61,7 @@ em {
   justify-content: space-between;
 }
 
-.capcalera-interior::before {
-  content: '';
-  flex: 1;
-}
+.capcalera-interior::before { content: ''; flex: 1; }
 
 .capcalera-logo {
   font-size: 1.25rem;
@@ -115,10 +73,7 @@ em {
   flex: 1;
   text-align: center;
 }
-
-.capcalera-logo:hover {
-  opacity: 0.65;
-}
+.capcalera-logo:hover { opacity: 0.65; }
 
 .capcalera-controls {
   display: flex;
@@ -137,51 +92,25 @@ em {
   text-decoration: none;
   white-space: nowrap;
 }
+.capcalera-versio:hover { color: var(--color-text); opacity: 1; }
 
-.capcalera-versio:hover {
-  color: var(--color-text);
-  opacity: 1;
-}
+.capcalera-idioma { display: flex; gap: 8px; font-size: var(--mida-petit); }
+.capcalera-idioma a { text-decoration: none; color: var(--color-text-suau); }
+.capcalera-idioma a.actiu { color: var(--color-text); font-weight: 600; }
+.capcalera-idioma a:hover { color: var(--color-text); opacity: 1; }
 
-.capcalera-idioma {
-  display: flex;
-  gap: 8px;
-  font-size: var(--mida-petit);
-}
+.capcalera-lupa { cursor: pointer; color: var(--color-text-suau); display: flex; align-items: center; }
+.capcalera-lupa:hover { color: var(--color-text); }
 
-.capcalera-idioma a {
-  text-decoration: none;
-  color: var(--color-text-suau);
-}
-
-.capcalera-idioma a.actiu {
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-.capcalera-idioma a:hover {
-  color: var(--color-text);
-  opacity: 1;
-}
-
-.capcalera-lupa {
-  cursor: pointer;
-  color: var(--color-text-suau);
-  display: flex;
-  align-items: center;
-}
-
-.capcalera-lupa:hover {
-  color: var(--color-text);
-}
-
-/* --- Navegació --- */
+/* ============================================================
+   NAVEGACIÓ PRINCIPAL
+   ============================================================ */
 .navegacio {
   position: sticky;
   top: 72px;
   z-index: 99;
   border-bottom: 1px solid var(--color-linia);
-  background-color: var(--color-fons);
+  background: var(--color-fons);
 }
 
 .navegacio-interior {
@@ -196,10 +125,7 @@ em {
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
-
-.navegacio-interior::-webkit-scrollbar {
-  display: none;
-}
+.navegacio-interior::-webkit-scrollbar { display: none; }
 
 .nav-link {
   display: inline-block;
@@ -212,415 +138,13 @@ em {
   border-bottom: 2px solid transparent;
   transition: color 0.15s, border-color 0.15s;
 }
+.nav-link:hover { color: var(--color-text); opacity: 1; }
+.nav-link.actiu { color: var(--color-text); border-bottom-color: var(--color-text); font-weight: 600; }
 
-.nav-link:hover {
-  color: var(--color-text);
-  opacity: 1;
-}
-
-.nav-link.actiu {
-  color: var(--color-text);
-  border-bottom-color: var(--color-text);
-  font-weight: 600;
-}
-
-.nav-link.extern {
-  color: var(--color-text-suau);
-}
-
-/* --- Contingut principal --- */
-.contingut {
-  max-width: var(--amplada-max);
-  margin: 0 auto;
-  padding: 48px 24px var(--espai-seccio);
-}
-
-.contingut-text {
-  max-width: var(--amplada-text);
-}
-
-/* --- Taules --- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.9rem;
-  margin: 1.5rem 0 2rem;
-}
-
-thead tr {
-  border-bottom: 2px solid var(--color-text);
-}
-
-th {
-  text-align: left;
-  font-weight: 600;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  padding: 8px 12px 8px 0;
-  color: var(--color-text-suau);
-}
-
-td {
-  padding: 10px 12px 10px 0;
-  border-bottom: 1px solid var(--color-linia);
-  vertical-align: top;
-}
-
-tbody tr:hover {
-  background-color: #f9f9f9;
-}
-
-/* --- Peu de pàgina --- */
-.peu {
-  border-top: 1px solid var(--color-linia);
-  padding: 32px 24px;
-  font-size: var(--mida-petit);
-  color: var(--color-text-suau);
-}
-
-.peu-interior {
-  max-width: var(--amplada-max);
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.peu a {
-  color: var(--color-text-suau);
-  text-decoration: none;
-}
-
-.peu a:hover {
-  color: var(--color-text);
-}
-
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  :root {
-    --mida-cos: 16px;
-    --espai-seccio: 40px;
-  }
-
-  .capcalera-interior {
-    padding: 0 16px;
-  }
-
-  .capcalera-versio {
-    display: none;
-  }
-
-  .contingut {
-    padding: 32px 16px var(--espai-seccio);
-  }
-
-  .peu-interior {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  h1 { font-size: 1.6rem; }
-  h2 { font-size: 1.25rem; }
-}
-
-@media (max-width: 480px) {
-  .nav-link {
-    padding: 12px 12px;
-    font-size: 13px;
-  }
-}
-
-/* --- Portada (Inici) --- */
-.inici-portada {
-  max-width: var(--amplada-text);
-  margin: 0 auto;
-  padding-top: 16px;
-}
-
-.inici-titol {
-  margin-bottom: 32px;
-}
-
-.inici-titol h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-
-.inici-subtitol {
-  font-size: 1rem;
-  color: var(--color-text-suau);
-  margin-bottom: 0;
-}
-
-.inici-intro {
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-.inici-intro p {
-  font-size: 1.05rem;
-  color: var(--color-text);
-}
-
-/* --- Botons d'accés a les Parts --- */
-.inici-acces {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  background-color: var(--color-linia);
-  border: 1px solid var(--color-linia);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.boto-acces {
-  display: grid;
-  grid-template-columns: 60px 120px 1fr;
-  align-items: center;
-  gap: 16px;
-  padding: 20px 24px;
-  background-color: var(--color-fons);
-  text-decoration: none;
-  color: var(--color-text);
-  transition: background-color 0.15s;
-}
-
-.boto-acces:hover {
-  background-color: #f5f5f5;
-  opacity: 1;
-}
-
-.boto-acces-part {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-suau);
-}
-
-.boto-acces-nom {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.boto-acces-desc {
-  font-size: 0.85rem;
-  color: var(--color-text-suau);
-}
-
-/* --- Buscador overlay --- */
-.buscador-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255,255,255,0.97);
-  z-index: 200;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 80px;
-}
-
-.buscador-interior {
-  width: 100%;
-  max-width: 640px;
-  padding: 0 24px;
-  position: relative;
-}
-
-#buscador-input {
-  width: 100%;
-  font-family: var(--font-principal);
-  font-size: 1.25rem;
-  border: none;
-  border-bottom: 2px solid var(--color-text);
-  padding: 12px 40px 12px 0;
-  outline: none;
-  color: var(--color-text);
-  background: transparent;
-}
-
-.buscador-tancar {
-  position: absolute;
-  right: 24px;
-  top: 12px;
-  background: none;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: var(--color-text-suau);
-}
-
-#buscador-resultats {
-  margin-top: 24px;
-  font-size: 0.95rem;
-}
-
-@media (max-width: 768px) {
-  .boto-acces {
-    grid-template-columns: 1fr;
-    gap: 4px;
-    padding: 16px;
-  }
-
-  .boto-acces-desc {
-    display: none;
-  }
-}
-
-/* --- Capçalera de Part --- */
-.part-capcalera {
-  max-width: var(--amplada-text);
-  margin: 0 auto 48px;
-  padding-bottom: 32px;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-.part-etiqueta {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-text-suau);
-  margin-bottom: 8px;
-}
-
-.part-subtitol {
-  font-size: 0.95rem;
-  color: var(--color-text-suau);
-  margin-top: 12px;
-  line-height: 1.5;
-}
-
-/* --- Índex intern --- */
-.index-intern {
-  max-width: var(--amplada-text);
-  margin: 0 auto 48px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-.index-intern a {
-  font-size: var(--mida-nav);
-  color: var(--color-text-suau);
-  text-decoration: none;
-  padding: 4px 0;
-  white-space: nowrap;
-  transition: color 0.15s;
-}
-
-.index-intern a:hover {
-  color: var(--color-text);
-  opacity: 1;
-}
-
-/* --- Seccions --- */
-.seccio {
-  max-width: var(--amplada-text);
-  margin: 0 auto 64px;
-}
-
-.seccio h2 {
-  margin-bottom: 24px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-.subseccio {
-  margin-top: 40px;
-}
-
-/* --- Placeholders (en construcció) --- */
-.grafic-placeholder,
-.taula-placeholder {
-  background-color: #f5f5f5;
-  border: 1px dashed var(--color-linia);
-  border-radius: 4px;
-  padding: 32px 24px;
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--color-text-suau);
-  margin: 16px 0;
-}
-
-.en-construccio {
-  color: var(--color-text-suau);
-  font-style: italic;
-}
-
-/* --- Índex intern amb separadors --- */
-.index-sep {
-  color: var(--color-text-suau);
-  font-size: 0.85rem;
-  margin: 0 10px;
-  line-height: 1;
-}
-
-/* --- Sub-subseccions (dècades) --- */
-.sub-subseccio {
-  margin-top: 40px;
-  padding-top: 32px;
-  border-top: 1px solid var(--color-linia);
-}
-
-.sub-subseccio h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--color-text);
-}
-
-/* --- Pàgina de versions --- */
-.versio-item {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-.versio-item:first-child {
-  border-top: 1px solid var(--color-linia);
-}
-
-.versio-cap {
-  display: flex;
-  align-items: baseline;
-  gap: 16px;
-  margin-bottom: 8px;
-}
-
-.versio-num {
-  font-weight: 700;
-  font-size: 1rem;
-}
-
-.versio-data {
-  font-size: var(--mida-petit);
-  color: var(--color-text-suau);
-}
-
-.versio-resum {
-  font-size: 0.9rem;
-  color: var(--color-text-suau);
-  margin-bottom: 0;
-}
-
-/* --- Layout amb sidebar --- */
-body.amb-sidebar {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+/* ============================================================
+   LAYOUT AMB SIDEBAR (Parts I, II, III)
+   ============================================================ */
+body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 .layout-sidebar {
   display: flex;
@@ -630,6 +154,7 @@ body.amb-sidebar {
   width: 100%;
 }
 
+/* Sidebar: sticky sota capçalera+nav (72+45=117px) */
 .sidebar {
   width: 220px;
   flex-shrink: 0;
@@ -642,9 +167,7 @@ body.amb-sidebar {
   align-self: flex-start;
 }
 
-.sidebar-grup {
-  margin-bottom: 24px;
-}
+.sidebar-grup { margin-bottom: 24px; }
 
 .sidebar-grup-titol {
   font-size: 0.7rem;
@@ -666,57 +189,25 @@ body.amb-sidebar {
   transition: all 0.12s;
   line-height: 1.4;
 }
+.sidebar-link:hover { color: var(--color-text); background: #f5f5f5; opacity: 1; }
+.sidebar-link.actiu { color: var(--color-text); border-left-color: var(--color-text); font-weight: 600; background: #f5f5f5; }
+.sidebar-link.sub { padding-left: 28px; font-size: 0.8rem; }
 
-.sidebar-link:hover {
-  color: var(--color-text);
-  background-color: #f5f5f5;
-  opacity: 1;
-}
+.sidebar-separador { height: 1px; background: var(--color-linia); margin: 8px 16px 16px; }
+.sidebar-link-notes { color: var(--color-text-suau); font-size: 0.85rem; }
 
-.sidebar-link.actiu {
-  color: var(--color-text);
-  border-left-color: var(--color-text);
-  font-weight: 600;
-  background-color: #f5f5f5;
-}
-
-.sidebar-link.sub {
-  padding-left: 28px;
-  font-size: 0.8rem;
-}
-
-/* --- Contingut principal amb sidebar --- */
+/* Contingut principal */
 .contingut-sidebar {
   flex: 1;
   padding: 32px 48px;
   min-width: 0;
-  overflow-y: visible;
 }
 
-/* --- Breadcrumb --- */
-.breadcrumb {
-  font-size: 0.8rem;
-  color: var(--color-text-suau);
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  flex-wrap: wrap;
-}
-
-.breadcrumb span {
-  color: var(--color-text-suau);
-}
-
-.breadcrumb-sep {
-  color: var(--color-linia);
-}
-
-/* --- Títol sticky dins contingut --- */
+/* Títol sticky: 20px aire sobre el menú */
 .titol-sticky {
   position: sticky;
   top: 117px;
-  background-color: var(--color-fons);
+  background: var(--color-fons);
   padding: 20px 0 16px;
   border-bottom: 1px solid var(--color-linia);
   margin-bottom: 32px;
@@ -730,19 +221,12 @@ body.amb-sidebar {
   font-weight: 400;
 }
 
-.titol-sticky h1 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
+.titol-sticky h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; }
 
-/* --- Seccions de contingut --- */
-.seccio-contingut {
-  display: none;
-  max-width: var(--amplada-text);
-}
+/* Seccions */
+.seccio-contingut { display: none; max-width: var(--amplada-text); }
 
-/* --- Navegació anterior / següent --- */
+/* Navegació anterior/següent */
 .nav-seccions {
   display: flex;
   align-items: center;
@@ -759,81 +243,110 @@ body.amb-sidebar {
   background: none;
   border: 1px solid var(--color-linia);
   border-radius: 4px;
-  padding: 8px 16px;
+  padding: 12px 20px;
   cursor: pointer;
-  transition: background-color 0.12s;
-  max-width: 240px;
-  text-align: left;
+  transition: background 0.12s;
+  max-width: 260px;
 }
+.nav-seccio-btn:last-child { text-align: right; }
+.nav-seccio-btn:hover { background: #f5f5f5; }
+.nav-seccio-pos { font-size: 0.75rem; color: var(--color-text-suau); }
 
-.nav-seccio-btn:last-child {
-  text-align: right;
-}
-
-.nav-seccio-btn:hover {
-  background-color: #f5f5f5;
-}
-
-.nav-seccio-pos {
-  font-size: 0.75rem;
-  color: var(--color-text-suau);
-}
-
-/* --- Responsive sidebar --- */
+/* Responsive */
 @media (max-width: 900px) {
-  .sidebar {
-    display: none;
-  }
-  .contingut-sidebar {
-    padding: 24px 16px;
-    height: auto;
-    position: static;
-    overflow-y: visible;
-  }
-  .layout-sidebar {
-    flex-direction: column;
-  }
+  .sidebar { display: none; }
+  .contingut-sidebar { padding: 24px 16px; }
+  .layout-sidebar { flex-direction: column; }
 }
 
-/* --- Sidebar separador i link Notes --- */
-.sidebar-separador {
-  height: 1px;
-  background-color: var(--color-linia);
-  margin: 8px 16px 16px;
+/* ============================================================
+   PÀGINA INICI
+   ============================================================ */
+.contingut { max-width: var(--amplada-max); margin: 0 auto; padding: 48px 24px 64px; }
+.contingut-text { max-width: var(--amplada-text); }
+
+.inici-portada { max-width: var(--amplada-text); margin: 0 auto; padding-top: 16px; }
+.inici-titol { margin-bottom: 32px; }
+.inici-titol h1 { font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+.inici-subtitol { font-size: 1rem; color: var(--color-text-suau); margin-bottom: 0; }
+.inici-intro { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--color-linia); }
+.inici-intro p { font-size: 1.05rem; }
+
+.inici-acces {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--color-linia);
+  border: 1px solid var(--color-linia);
+  border-radius: 4px; overflow: hidden;
+}
+.boto-acces {
+  display: grid; grid-template-columns: 60px 120px 1fr;
+  align-items: center; gap: 16px; padding: 20px 24px;
+  background: var(--color-fons); text-decoration: none; color: var(--color-text);
+  transition: background 0.15s;
+}
+.boto-acces:hover { background: #f5f5f5; opacity: 1; }
+.boto-acces-part { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); }
+.boto-acces-nom { font-size: 1rem; font-weight: 700; }
+.boto-acces-desc { font-size: 0.85rem; color: var(--color-text-suau); }
+
+@media (max-width: 768px) {
+  .boto-acces { grid-template-columns: 1fr; gap: 4px; padding: 16px; }
+  .boto-acces-desc { display: none; }
 }
 
-.sidebar-link-notes {
-  color: var(--color-text-suau);
-  font-size: 0.85rem;
-}
+/* ============================================================
+   PEU DE PÀGINA
+   ============================================================ */
+.peu { border-top: 1px solid var(--color-linia); padding: 32px 24px; font-size: var(--mida-petit); color: var(--color-text-suau); }
+.peu-interior { max-width: var(--amplada-max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.peu a { color: var(--color-text-suau); text-decoration: none; }
+.peu a:hover { color: var(--color-text); }
 
-/* --- Grups de notes --- */
-.notes-grup {
-  margin-bottom: 48px;
-  padding-bottom: 48px;
-  border-bottom: 1px solid var(--color-linia);
+/* ============================================================
+   BUSCADOR
+   ============================================================ */
+.buscador-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255,255,255,0.97); z-index: 200;
+  display: flex; align-items: flex-start; justify-content: center; padding-top: 80px;
 }
-
-.notes-grup:last-child {
-  border-bottom: none;
+.buscador-interior { width: 100%; max-width: 640px; padding: 0 24px; position: relative; }
+#buscador-input {
+  width: 100%; font-family: var(--font-principal); font-size: 1.25rem;
+  border: none; border-bottom: 2px solid var(--color-text);
+  padding: 12px 40px 12px 0; outline: none; color: var(--color-text); background: transparent;
 }
+.buscador-tancar { position: absolute; right: 24px; top: 12px; background: none; border: none; font-size: 1rem; cursor: pointer; color: var(--color-text-suau); }
+#buscador-resultats { margin-top: 24px; font-size: 0.95rem; }
 
-.notes-grup h2 {
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-suau);
-  margin-bottom: 24px;
-}
+/* ============================================================
+   PÀGINA DE VERSIONS
+   ============================================================ */
+.versio-item { padding: 24px 0; border-bottom: 1px solid var(--color-linia); }
+.versio-item:first-child { border-top: 1px solid var(--color-linia); }
+.versio-cap { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+.versio-num { font-weight: 700; font-size: 1rem; }
+.versio-data { font-size: var(--mida-petit); color: var(--color-text-suau); }
+.versio-resum { font-size: 0.9rem; color: var(--color-text-suau); margin-bottom: 0; }
 
-/* --- Taules de films (Part I) --- */
+/* ============================================================
+   PÀGINES ESTÀTIQUES (Notes, Sobre, Legal)
+   ============================================================ */
+.part-capcalera { max-width: var(--amplada-text); margin: 0 auto 48px; padding-bottom: 32px; border-bottom: 1px solid var(--color-linia); }
+.part-etiqueta { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-suau); margin-bottom: 8px; }
+.seccio { max-width: var(--amplada-text); margin: 0 auto 64px; }
+.seccio h2 { margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--color-linia); }
+.en-construccio { color: var(--color-text-suau); font-style: italic; }
+
+.notes-grup { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--color-linia); }
+.notes-grup:last-child { border-bottom: none; }
+.notes-grup h2 { font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); margin-bottom: 24px; }
+
+/* ============================================================
+   TAULES DE FILMS (Part I — dècades)
+   ============================================================ */
 .taula-films {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.82rem;
-  margin: 0 0 24px;
-  table-layout: auto;
+  width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0 0 24px; table-layout: auto;
 }
 
 .taula-films th {
@@ -845,6 +358,7 @@ body.amb-sidebar {
   color: var(--color-text-suau);
   padding: 8px 8px 8px 0;
   border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom;
   white-space: nowrap;
 }
 
@@ -855,548 +369,78 @@ body.amb-sidebar {
   line-height: 1.4;
 }
 
-.taula-films .film-top100 td {
-  color: var(--color-text);
-}
+/* Top 100: negre */
+.taula-films .film-top100 td { color: var(--color-text); }
 
-.taula-films .film-context td {
-  color: var(--color-text-suau);
-  font-size: 0.78rem;
-}
+/* Context/addicionals: gris #888 */
+.taula-films .film-context td { color: #888; }
 
-.taula-films .col-num {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
+/* Director sempre gris */
+.taula-films td.col-subtil { color: var(--color-text-suau); font-size: 0.82rem; }
 
-.taula-films .col-subtil {
-  color: var(--color-text-suau);
-}
+/* Columnes numèriques */
+.col-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.col-gris { color: var(--color-text-suau) !important; }
+.col-center { text-align: center !important; }
+.col-pos { font-weight: 400; }
 
-.taula-films .col-iic {
-  font-weight: 700;
-  color: var(--color-text);
-}
+/* IIC: negre, pes normal */
+.col-iic { color: var(--color-text); font-weight: 400; }
 
-.taula-films .film-top100 .col-iic {
-  color: var(--color-text);
-}
+/* Context text: gris, normal */
+.col-context-doc { color: var(--color-text-suau); font-style: normal; font-size: 0.78rem; width: 220px; }
+.taula-films th.col-context-doc { font-size: 0.72rem; white-space: nowrap; }
 
-.taula-films .col-context-text {
-  font-size: 0.75rem;
-  color: var(--color-text-suau);
-  max-width: 280px;
-  line-height: 1.4;
-}
+/* Títol: negreta+cursiva, any en gris, MATEIXA mida */
+.col-titol { min-width: 160px; }
+.film-any { color: var(--color-text-suau); font-weight: 400; font-style: normal; }
 
-.taula-films .col-titol {
-  min-width: 160px;
-}
-
-/* --- Botó context --- */
-.fila-boto-context td {
-  border-bottom: none;
-  padding: 12px 0;
-}
-
+/* Botó context */
+.fila-boto-context td { border-bottom: none; padding: 16px 0; }
 .btn-context {
-  background: none;
-  border: 1px solid var(--color-linia);
-  border-radius: 3px;
-  padding: 5px 12px;
-  font-family: var(--font-principal);
-  font-size: 0.78rem;
-  color: var(--color-text-suau);
-  cursor: pointer;
-  transition: all 0.12s;
+  background: none; border: 1px solid var(--color-linia); border-radius: 3px;
+  padding: 14px 16px; font-family: var(--font-principal); font-size: 0.82rem;
+  color: var(--color-text-suau); cursor: pointer; transition: all 0.12s; width: 100%; text-align: left;
 }
+.btn-context:hover { border-color: var(--color-text); color: var(--color-text); }
 
-.btn-context:hover {
-  border-color: var(--color-text);
-  color: var(--color-text);
-}
-
-/* --- Taules de rànquing --- */
-.taula-ranking {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.85rem;
-  margin: 0 0 24px;
-}
+/* ============================================================
+   TAULES DE RÀNQUING
+   ============================================================ */
+.taula-ranking { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0 0 24px; }
 
 .taula-ranking th {
-  text-align: left;
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-suau);
-  padding: 8px 8px 8px 0;
-  border-bottom: 2px solid var(--color-text);
+  text-align: left; font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-suau);
+  padding: 8px 8px 8px 0; border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom; white-space: nowrap;
 }
 
-.taula-ranking td {
-  padding: 10px 8px 10px 0;
-  border-bottom: 1px solid var(--color-linia);
-  vertical-align: middle;
-}
+.taula-ranking td { padding: 10px 8px 10px 0; border-bottom: 1px solid var(--color-linia); vertical-align: middle; }
+.taula-ranking .col-subtil { color: var(--color-text-suau); font-size: 0.8rem; white-space: nowrap; }
+.taula-ranking td:nth-child(3) { max-width: 320px; }
 
-.taula-ranking .col-num {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
+.nota-taula { font-size: 0.82rem; color: var(--color-text-suau); margin-bottom: 16px; font-style: italic; }
+.subtitol-ranking { font-size: 1rem; font-weight: 600; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--color-linia); }
 
-.taula-ranking .col-iic {
-  font-weight: 700;
-}
+/* Variació */
+.col-var { text-align: center; font-size: 0.85rem; font-weight: 600; white-space: nowrap; width: 48px; }
+.var-up { color: #27ae60; }
+.var-down { color: #c0392b; }
+.var-eq { color: var(--color-text-suau); font-weight: 400; }
+.var-nou { font-size: 0.7rem; font-weight: 700; color: #27ae60; letter-spacing: 0.04em; }
 
-.taula-ranking .col-subtil {
-  color: var(--color-text-suau);
-  font-size: 0.8rem;
-}
-
-.nota-taula {
-  font-size: 0.82rem;
-  color: var(--color-text-suau);
-  margin-bottom: 16px;
-  font-style: italic;
-}
-
-/* --- Context expandible per fila --- */
-.btn-info {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  border: 1px solid var(--color-linia);
-  background: none;
-  color: var(--color-text-suau);
-  font-size: 9px;
-  font-family: var(--font-principal);
-  cursor: pointer;
-  vertical-align: middle;
-  margin-left: 4px;
-  flex-shrink: 0;
-  transition: all 0.12s;
-  font-style: normal;
-}
-
-.btn-info:hover,
-.btn-info.actiu {
-  background: var(--color-text);
-  color: var(--color-fons);
-  border-color: var(--color-text);
-}
-
-.fila-context-text td {
-  background: #f8f8f8;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-.cel-context-text {
-  font-size: 0.78rem;
-  color: var(--color-text-suau);
-  padding: 8px 12px 8px 0 !important;
-  line-height: 1.5;
-  font-style: italic;
-}
-
-/* --- Any integrat al títol --- */
-.film-any {
-  font-weight: 400;
-  font-style: normal;
-  color: var(--color-text-suau);
-  font-size: 0.9em;
-}
-
-/* --- Dades en gris --- */
-.col-gris {
-  color: var(--color-text-suau) !important;
-}
-
-.taula-films .col-iic {
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-/* --- Botó context més gran i descriptiu --- */
-.btn-context {
-  background: none;
-  border: 1px solid var(--color-linia);
-  border-radius: 3px;
-  padding: 8px 16px;
-  font-family: var(--font-principal);
-  font-size: 0.82rem;
-  color: var(--color-text-suau);
-  cursor: pointer;
-  transition: all 0.12s;
-  width: 100%;
-  text-align: left;
-}
-
-.btn-context:hover {
-  border-color: var(--color-text);
-  color: var(--color-text);
-}
-
-/* --- Variació de posició als rànquings --- */
-.col-var {
-  text-align: center;
-  font-size: 0.85rem;
-  font-weight: 600;
-  white-space: nowrap;
-  width: 48px;
-}
-
-.var-up {
-  color: #c0392b;
-}
-
-.var-down {
-  color: #2471a3;
-}
-
-.var-eq {
-  color: var(--color-text-suau);
-  font-weight: 400;
-}
-
-/* --- Botons anterior/següent més amples --- */
-.nav-seccio-btn {
-  font-family: var(--font-principal);
-  font-size: 0.85rem;
-  color: var(--color-text);
-  background: none;
-  border: 1px solid var(--color-linia);
-  border-radius: 4px;
-  padding: 12px 20px;
-  cursor: pointer;
-  transition: background-color 0.12s;
-  max-width: 260px;
-}
-
-/* --- Botó context més ample --- */
-.fila-boto-context td {
-  border-bottom: none;
-  padding: 16px 0;
-}
-
-.btn-info {
-  vertical-align: middle;
-  margin-left: 6px;
-}
-
-/* --- Columna context al document (oculta per defecte en pantalles estretes) --- */
-.col-context-doc {
-  font-size: 0.75rem;
-  color: var(--color-text-suau);
-  font-style: italic;
-  line-height: 1.4;
-  min-width: 200px;
-  max-width: 300px;
-}
-
-/* --- Posició als rànquings --- */
-.col-pos {
-  width: 28px;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-/* --- Colors variació CORRECTES --- */
-.var-up { color: #27ae60; font-weight: 600; }   /* puja = verd */
-.var-down { color: #c0392b; font-weight: 600; } /* baixa = vermell */
-.var-eq { color: var(--color-text-suau); }
-
-/* --- Films llista als directors --- */
-.films-llista {
-  font-size: 0.75rem;
-  color: var(--color-text-suau);
-  line-height: 1.5;
-}
-
-/* --- Subtítol dins secció directors --- */
-.subtitol-ranking {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--color-linia);
-}
-
-/* --- Columnes centrades --- */
-.col-center {
-  text-align: center !important;
-}
-
-/* --- Capçalera context alineada --- */
-.col-context-header {
-  vertical-align: bottom;
-  padding-top: 0;
-}
-
-/* --- Fixes generals --- */
-
-/* Context header: no cursiva */
-.taula-films th.col-context-doc,
-.taula-films th.col-context-header {
-  font-style: normal;
-}
-
-/* Films context: mateix tamany, només gris */
-.taula-films .film-context td {
-  color: var(--color-text-suau);
-  font-size: 0.82rem;
-}
-
-/* Botó context: més padding vertical */
-.btn-context {
-  padding: 14px 16px !important;
-}
-
-/* Unificar capçaleres taules i rankings */
-.taula-ranking th {
-  font-size: 0.72rem;
-}
-.taula-films th {
-  font-size: 0.72rem;
-}
-
-/* Context text: sense cursiva */
-.col-context-doc {
-  font-style: normal !important;
-}
-
-/* --- Evitar que el director es parteixi en dues línies als rànquings --- */
-.taula-ranking .col-subtil {
-  white-space: nowrap;
-}
-
-.taula-ranking td:nth-child(3) {
-  max-width: 320px;
-}
-
-/* --- Botó films director --- */
+/* Directors: botó i llista */
 .btn-films-dir {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  border: 1px solid var(--color-linia);
-  background: none;
-  font-family: var(--font-principal);
-  font-size: 14px;
-  line-height: 1;
-  cursor: pointer;
-  color: var(--color-text-suau);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.12s;
+  width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--color-linia);
+  background: none; font-family: var(--font-principal); font-size: 14px; line-height: 1;
+  cursor: pointer; color: var(--color-text-suau);
+  display: inline-flex; align-items: center; justify-content: center; transition: all 0.12s;
 }
+.btn-films-dir:hover { background: var(--color-text); color: var(--color-fons); border-color: var(--color-text); }
+.dir-films-list { font-size: 0.78rem; color: var(--color-text-suau); line-height: 1.6; margin-top: 8px; text-align: left; max-width: 480px; }
+.dir-films-grup { display: block; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); margin-bottom: 4px; }
 
-.btn-films-dir:hover {
-  background: var(--color-text);
-  color: var(--color-fons);
-  border-color: var(--color-text);
-}
-
-/* --- Llista de films expandida --- */
-.dir-films-list {
-  font-size: 0.78rem;
-  color: var(--color-text-suau);
-  line-height: 1.6;
-  margin-top: 8px;
-  text-align: left;
-  max-width: 480px;
-}
-
-/* --- Subtítol grup films --- */
-.dir-films-grup {
-  display: block;
-  font-size: 0.68rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-text-suau);
-  margin-bottom: 4px;
-}
-
-/* --- NOU als rànquings de directors --- */
-.var-nou {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: #27ae60;
-  letter-spacing: 0.04em;
-}
-
-/* --- Columna # sense negreta --- */
-.col-pos {
-  font-weight: 400 !important;
-}
-
-/* --- Jerarquia visual unificada --- */
-
-/* Director sempre en gris, mateixa mida a tots els llocs */
-.taula-films .col-subtil,
-.taula-ranking .col-subtil {
-  color: var(--color-text-suau);
-  font-size: 0.82rem;
-}
-
-/* Context en gris */
-.col-context-doc {
-  color: var(--color-text-suau);
-}
-
-/* Director a les taules de dècada: gris i mateixa mida que als rànquings */
-.taula-films td.col-subtil {
-  color: var(--color-text-suau);
-  font-size: 0.82rem;
-}
-
-/* IIC i posicions en negre normal (no gris, no negreta) */
-.col-iic {
-  color: var(--color-text) !important;
-  font-weight: 400 !important;
-}
-
-.col-center {
-  color: var(--color-text);
-  font-weight: 400;
-}
-
-/* --- Context en gris (forçat) --- */
-.taula-films td.col-context-doc {
-  color: var(--color-text-suau) !important;
-  font-style: normal !important;
-}
-
-/* --- Diferenciar Top 100 de context --- */
-
-/* Files Top 100: text principal negre */
-.taula-films .film-top100 td {
-  color: var(--color-text);
-}
-
-/* Files context: gris mitjà per a tot */
-.taula-films .film-context td {
-  color: #888 !important;
-  font-size: 0.82rem !important;
-}
-
-/* Context text: mateix tamany per a totes les files */
-.taula-films td.col-context-doc {
-  font-size: 0.78rem !important;
-  color: var(--color-text-suau) !important;
-}
-
-/* Director de files Top 100 en gris suau (no tan fosc com el títol) */
-.taula-films .film-top100 td.col-subtil {
-  color: var(--color-text-suau);
-}
-
-/* --- Distinció Top 100 vs context: només el títol canvia --- */
-.taula-films .film-top100 .col-titol {
-  color: var(--color-text);
-}
-
-.taula-films .film-context .col-titol {
-  color: #999 !important;
-}
-
-.taula-films .film-context td {
-  color: #bbb !important;
-  font-size: 0.82rem !important;
-}
-
-/* --- Ajust final context --- */
-.taula-films td.col-context-doc {
-  font-size: 0.82rem !important;
-}
-
-.taula-films .film-context .col-titol {
-  color: #777 !important;
-}
-
-.taula-films .film-context td {
-  color: #888 !important;
-  font-size: 0.82rem !important;
-}
-
-
-/* --- Capçaleres unificades --- */
-.taula-films th,
-.taula-ranking th {
-  font-size: 0.72rem !important;
-  font-weight: 600 !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--color-text-suau);
-  padding: 8px 8px 8px 0;
-  border-bottom: 2px solid var(--color-text);
-  vertical-align: bottom;
-  white-space: nowrap;
-}
-
-/* Context header alineació */
-.taula-films th.col-context-doc,
-.taula-films th.col-context-header {
-  font-style: normal !important;
-  font-size: 0.72rem !important;
-  vertical-align: bottom;
-}
-
-/* Any entre parèntesis en gris */
-.film-any {
-  color: var(--color-text-suau);
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* --- Títol sticky alineat amb sidebar --- */
-.titol-sticky {
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.contingut-sidebar {
-  padding-top: 24px;
-}
-
-.titol-sticky h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-
-
-/* --- Context header alineació correcta --- */
-.taula-films thead th {
-  vertical-align: bottom !important;
-}
-
-/* --- Any: sempre mateix tamany que el títol --- */
-.taula-films .film-any,
-.taula-ranking .film-any {
-  font-size: 1em !important;
-  color: var(--color-text-suau);
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* --- Capçalera Context fixada --- */
-.taula-films th:last-child {
-  width: 220px;
-  min-width: 120px;
-  vertical-align: bottom !important;
-  white-space: nowrap;
-}
-
-/* --- Sidebar: alineació inicial correcta --- */
-.contingut-sidebar {
-  padding-top: 32px;
-}
+/* ============================================================
+   BUSCADOR OVERLAY
+   ============================================================ */
