@@ -449,3 +449,8 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .sidebar-spacer {
   height: 56px;
 }
+
+/* --- Films context: gris, mateix tamany --- */
+.taula-films .film-context td {
+  color: #888 !important;
+}
