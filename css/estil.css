@@ -521,3 +521,30 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   color: var(--color-text-suau);
   margin-bottom: 20px;
 }
+
+/* --- Films Top 100 a les taules de festival --- */
+.taula-festivals .film-top100-fest td {
+  color: var(--color-text);
+}
+
+/* --- Posicions Top 100 i dècada --- */
+.top100-pos {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.decada-pos {
+  color: var(--color-text-suau);
+  font-size: 0.78rem;
+}
+
+/* --- Premi destacat (Premiades per dècada) --- */
+.col-premi-destacat {
+  color: var(--color-text);
+  font-size: 0.82rem;
+}
+
+/* --- Nom festival en color (sense badge) --- */
+.nom-festival-color {
+  font-weight: 700;
+}
