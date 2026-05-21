@@ -73,10 +73,10 @@ function construirPremiades() {
       <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
         <thead><tr>
-          <th>Títol</th>
-          <th class="col-subtil">Director</th>
+          <th style="width:45%">Títol</th>
+          <th class="col-subtil" style="width:15%">Director</th>
           <th style="width:110px">Festival</th>
-          <th>Premi</th>
+          <th style="width:30%">Premi</th>
         </tr></thead>
         <tbody>
           ${films.map(f => `
@@ -84,7 +84,7 @@ function construirPremiades() {
               <td>${titolFilm(f, true)}</td>
               <td class="col-subtil">${f.director}</td>
               <td>${nomFest(f.festival)}</td>
-              <td class="col-premi-negre">${f.premi || '—'}</td>
+              <td class="col-subtil" style="font-size:0.82rem">${f.premi || '—'}</td>
             </tr>`).join('')}
         </tbody>
       </table>`;
@@ -126,7 +126,7 @@ function construirFestival(festival, seccioId) {
     const premi  = f.premiat
       ? `<span class="estrella">★</span> ${f.premi || ''}`
       : (f.premi || '—');
-    const top100txt = isTop ? `<span class="top100-pos">#${f.top100_pos}</span>` : '—';
+    const top100txt = isTop ? `${f.top100_pos}` : '—';
     const decadatxt = (f.decada && f.decada !== '—') ? f.decada : '—';
 
     return `
@@ -144,12 +144,12 @@ function construirFestival(festival, seccioId) {
     <p class="festival-resum" style="border-left:3px solid ${color};padding-left:12px;margin-bottom:20px">
       <strong>${total} participacions documentades</strong> · <strong>${nPremis} premiades</strong>
     </p>
-    <table class="taula-festivals">
+    <table class="taula-festivals taula-${festival.replace(/[\s]/g,'-').toLowerCase()}">
       <thead><tr>
-        <th>Títol</th>
-        <th class="col-subtil">Director</th>
-        <th>Premi / Observació</th>
-        <th class="col-center" style="width:60px">Top 100</th>
+        <th style="width:35%">Títol</th>
+        <th class="col-subtil" style="width:15%">Director</th>
+        <th style="width:28%">Premi / Observació</th>
+        <th class="col-center" style="width:60px">T100</th>
         <th class="col-subtil" style="width:90px">Dècada</th>
         <th class="col-num" style="width:90px">Espect.</th>
       </tr></thead>
@@ -184,20 +184,20 @@ function construirRànquingEspectadors() {
         <td>${titolFilm(f, true)}</td>
         <td class="col-subtil">${f.director}</td>
         <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
-        <td class="col-center">${isTop ? `<span class="top100-pos">#${f.top100_pos}</span>` : '—'}</td>
+        <td class="col-center">${isTop ? `${f.top100_pos}` : '—'}</td>
         <td class="col-num">${fmt(f.espectadors)}</td>
       </tr>`;
     };
 
     html += `
       <h3 class="subtitol-ranking" style="margin-top:32px;padding-left:10px;border-left:3px solid ${color}">${festival}</h3>
-      <table class="taula-festivals">
+      <table class="taula-festivals rank-${festival==="Cannes"?"rank-cannes":festival==="Berlín"?"rank-berlin":festival==="Venècia"?"rank-venezia":"rank-sansebastia"}">
         <thead><tr>
           <th class="col-pos">#</th>
           <th>Títol</th>
           <th class="col-subtil">Director</th>
-          <th class="col-center" style="width:36px">★</th>
-          <th class="col-center" style="width:60px">Top 100</th>
+          <th class="col-center" style="width:50px">Premi</th>
+          <th class="col-center" style="width:60px">T100</th>
           <th class="col-num">Espectadors</th>
         </tr></thead>
         <tbody>
@@ -266,7 +266,7 @@ function construirRànquingDirectors() {
   const top25 = llista.slice(0, 25);
 
   const fila25 = (d, i) => `
-    <tr${i>=10?' style="display:none" class="fila-extra-dirs"':''}>
+    <tr${''}>
       <td class="col-pos">${i+1}</td>
       <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.total_sel}</td>
@@ -296,7 +296,8 @@ function construirRànquingDirectors() {
     </tr>`;
 
   cont.innerHTML = `
-    <p class="nota-taula">Top 25 per presència acumulada als quatre festivals. Desempat per premis i jerarquia de festival.</p>
+    <h3 class="subtitol-ranking-gran">Top 25 — Quatre festivals</h3>
+    <p class="nota-taula">Presència acumulada als quatre festivals. Desempat per premis i jerarquia de festival (Cannes > Berlín > Venècia > Sant Sebastià).</p>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
@@ -310,11 +311,7 @@ function construirRànquingDirectors() {
       </tr></thead>
       <tbody>
         ${top25.map((d,i) => fila25(d,i)).join('')}
-        <tr class="fila-boto-context">
-          <td colspan="8">
-            <button class="btn-context" onclick="expandirDirs(this)">+ Veure Top 25 complet</button>
-          </td>
-        </tr>
+
       </tbody>
     </table>
 
