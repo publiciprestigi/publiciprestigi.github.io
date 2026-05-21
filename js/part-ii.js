@@ -130,7 +130,6 @@ function construirFestival(festival, seccioId) {
   }).join('');
 
   cont.innerHTML = `
-    <h2 class="titol-festival" style="color:${color}">${titolFestival}</h2>
     <p class="festival-resum" style="border-left:3px solid ${color};padding-left:12px;margin-bottom:20px">
       <strong>${total} participacions documentades</strong> · <strong>${nPremis} premiades</strong>
     </p>
