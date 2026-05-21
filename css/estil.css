@@ -159,7 +159,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   width: 220px;
   flex-shrink: 0;
   border-right: 1px solid var(--color-linia);
-  padding: 64px 0 24px;
+  padding: 0 0 24px;
   position: sticky;
   top: 117px;
   height: calc(100vh - 117px);
@@ -444,3 +444,8 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* ============================================================
    BUSCADOR OVERLAY
    ============================================================ */
+
+/* --- Sidebar spacer: alinea el primer ítem amb el supertítol --- */
+.sidebar-spacer {
+  height: 56px;
+}
