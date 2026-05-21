@@ -459,3 +459,65 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .taula-films .film-top100 td.col-context-doc {
   color: #888 !important;
 }
+
+/* ============================================================
+   PART II — FESTIVALS
+   ============================================================ */
+
+.taula-festivals {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0 0 24px;
+}
+
+.taula-festivals th {
+  text-align: left; font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-suau);
+  padding: 8px 8px 8px 0; border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom; white-space: nowrap;
+}
+
+.taula-festivals td {
+  padding: 9px 8px 9px 0; border-bottom: 1px solid var(--color-linia);
+  vertical-align: middle; line-height: 1.4;
+}
+
+/* Files premiades destacades */
+.taula-festivals .film-premiat td {
+  background: #fdfaf2;
+}
+
+/* Estrella premi */
+.estrella {
+  color: #B8860B;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Badge festival */
+.badge-festival {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Nom festival en color */
+.nom-festival {
+  font-weight: 600;
+}
+
+/* Premi: text normal gris */
+.col-premi {
+  font-size: 0.78rem;
+  color: var(--color-text-suau);
+}
+
+/* Resum festival */
+.festival-resum {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  margin-bottom: 20px;
+}
