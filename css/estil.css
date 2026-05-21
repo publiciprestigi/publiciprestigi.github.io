@@ -680,3 +680,48 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
+
+/* --- Portada --- */
+.inici-titol h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.inici-subtitol {
+  font-size: 1.1rem;
+  color: var(--color-text-suau);
+  margin-bottom: 0;
+}
+
+.inici-versio {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.inici-intro h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.inici-contacte {
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  padding-top: 24px;
+  border-top: 1px solid var(--color-linia);
+}
+
+.inici-dedicatoria {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  font-style: italic;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
