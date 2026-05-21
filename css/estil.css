@@ -1378,3 +1378,12 @@ body.amb-sidebar {
 .taula-films thead th {
   vertical-align: bottom !important;
 }
+
+/* --- Any: sempre mateix tamany que el títol --- */
+.taula-films .film-any,
+.taula-ranking .film-any {
+  font-size: 1em !important;
+  color: var(--color-text-suau);
+  font-weight: 400;
+  font-style: normal;
+}
