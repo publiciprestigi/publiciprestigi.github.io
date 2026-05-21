@@ -136,12 +136,12 @@ function construirFestival(festival, seccioId) {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:35%">Títol</th>
-        <th class="col-subtil" style="width:13%">Director</th>
-        <th style="width:25%">Premi / Nota</th>
-        <th class="col-center" style="width:65px">Top 100</th>
-        <th class="col-subtil" style="width:85px">Dècada</th>
-        <th class="col-num" style="width:90px">Espectadors</th>
+        <th style="width:40%">Títol</th>
+        <th class="col-subtil" style="width:12%">Director</th>
+        <th style="width:22%">Premi / Nota</th>
+        <th class="col-center" style="width:60px">Top 100</th>
+        <th class="col-subtil" style="width:75px">Dècada</th>
+        <th class="col-num" style="width:85px">Espectadors</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
