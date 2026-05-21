@@ -26,11 +26,8 @@ async function carregarFestivals() {
 
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
 
-function titolFilm(f, bold) {
-  const t = bold
-    ? `<strong><em>${f.titol}</em></strong>`
-    : `<em>${f.titol}</em>`;
-  return `${t} <span class="film-any">(${f.any})</span>`;
+function titolFilm(f) {
+  return `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`;
 }
 
 function nomFest(festival) {
@@ -49,7 +46,6 @@ function getDecada(any) {
 
 /* ============================================================
    PREMIADES PER DÈCADA
-   Columnes: Títol (any gris) · Director (gris) · Festival (color) · Premi (negre)
    ============================================================ */
 function construirPremiades() {
   const cont = document.getElementById('seccio-premiades');
@@ -60,15 +56,12 @@ function construirPremiades() {
     '2000s':'Anys 2000–2009','2010s':'Anys 2010–2019','2020s':'Anys 2020–2025'
   };
 
-  const premiades = festivalsData
-    .filter(f => f.premiat)
-    .sort((a, b) => a.any - b.any);
+  const premiades = festivalsData.filter(f => f.premiat).sort((a,b) => a.any - b.any);
 
   let html = '';
   ['60s','70s','80s','90s','2000s','2010s','2020s'].forEach(dec => {
     const films = premiades.filter(f => getDecada(f.any) === dec);
     if (!films.length) return;
-
     html += `
       <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
@@ -79,17 +72,15 @@ function construirPremiades() {
           <th style="width:30%">Premi</th>
         </tr></thead>
         <tbody>
-          ${films.map(f => `
-            <tr>
-              <td>${titolFilm(f, true)}</td>
-              <td class="col-subtil">${f.director}</td>
-              <td>${nomFest(f.festival)}</td>
-              <td class="col-subtil" style="font-size:0.82rem">${f.premi || '—'}</td>
-            </tr>`).join('')}
+          ${films.map(f => `<tr>
+            <td>${titolFilm(f)}</td>
+            <td class="col-subtil">${f.director}</td>
+            <td>${nomFest(f.festival)}</td>
+            <td class="col-subtil" style="font-size:0.82rem">${f.premi || '—'}</td>
+          </tr>`).join('')}
         </tbody>
       </table>`;
   });
-
   cont.innerHTML = html;
 }
 
@@ -104,54 +95,47 @@ function construirIntroduccio() {
 
 /* ============================================================
    TAULES PER FESTIVAL
-   Columnes: Títol (any gris) · Director (gris) · Premi/Observació · Top 100 · Dècada · Espect.
-   Files premiades amb fons lleuger i ★ al premi
-   Films al Top 100 en negreta
+   # · Títol · Director · Premi/Observació · Top 100 · Dècada · Espectadors
    ============================================================ */
 function construirFestival(festival, seccioId) {
   const cont = document.getElementById(seccioId);
   if (!cont) return;
 
-  const films = festivalsData
-    .filter(f => f.festival === festival)
-    .sort((a, b) => a.any - b.any);
+  const films   = festivalsData.filter(f => f.festival === festival).sort((a,b) => a.any - b.any);
+  const color   = FC[festival];
+  const total   = films.length;
+  const nPremis = films.filter(f => f.premiat).length;
 
-  const color  = FC[festival];
-  const total    = films.length;
-  const nPremis  = films.filter(f => f.premiat).length;
-
-  const files = films.map(f => {
-    const isTop = !!f.top100_pos;
+  const files = films.map((f, i) => {
+    const isTop  = !!f.top100_pos;
     const rowCls = f.premiat ? 'film-premiat' : '';
-    const premi  = f.premiat
-      ? `<span class="estrella">★</span> ${f.premi || ''}`
-      : (f.premi || '—');
-    const top100txt = isTop ? `${f.top100_pos}` : '—';
-    const decadatxt = (f.decada && f.decada !== '—') ? f.decada : '—';
-
-    return `
-      <tr class="${rowCls}">
-        <td>${titolFilm(f, true)}</td>
-        <td class="col-subtil">${f.director}</td>
-        <td class="col-premi">${premi}</td>
-        <td class="col-center">${top100txt}</td>
-        <td class="col-subtil col-decada">${decadatxt}</td>
-        <td class="col-num">${fmt(f.espectadors)}</td>
-      </tr>`;
+    const premi  = f.premiat ? `<span class="estrella">★</span> ${f.premi || ''}` : (f.premi || '—');
+    const top100 = isTop ? `${f.top100_pos}` : '—';
+    const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
+    return `<tr class="${rowCls}">
+      <td class="col-subtil col-pos">${i+1}</td>
+      <td>${titolFilm(f)}</td>
+      <td class="col-subtil">${f.director}</td>
+      <td class="col-premi">${premi}</td>
+      <td class="col-center col-subtil">${top100}</td>
+      <td class="col-subtil col-decada">${decada}</td>
+      <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
+    </tr>`;
   }).join('');
 
   cont.innerHTML = `
     <p class="festival-resum" style="border-left:3px solid ${color};padding-left:12px;margin-bottom:20px">
       <strong>${total} participacions documentades</strong> · <strong>${nPremis} premiades</strong>
     </p>
-    <table class="taula-festivals taula-${festival.replace(/[\s]/g,'-').toLowerCase()}">
+    <table class="taula-festivals">
       <thead><tr>
+        <th class="col-pos">#</th>
         <th style="width:35%">Títol</th>
-        <th class="col-subtil" style="width:15%">Director</th>
-        <th style="width:28%">Premi / Observació</th>
-        <th class="col-center" style="width:60px">T100</th>
-        <th class="col-subtil" style="width:90px">Dècada</th>
-        <th class="col-num" style="width:90px">Espect.</th>
+        <th class="col-subtil" style="width:13%">Director</th>
+        <th style="width:25%">Premi / Observació</th>
+        <th class="col-center" style="width:65px">Top 100</th>
+        <th class="col-subtil" style="width:85px">Dècada</th>
+        <th class="col-num" style="width:90px">Espectadors</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -159,45 +143,38 @@ function construirFestival(festival, seccioId) {
 
 /* ============================================================
    RÀNQUING PER ESPECTADORS
-   Top 10 per festival, expandible
    ============================================================ */
 function construirRànquingEspectadors() {
   const cont = document.getElementById('seccio-ranking-espectadors');
   if (!cont) return;
 
   let html = '';
-
   ['Cannes','Berlín','Venècia','Sant Sebastià'].forEach(festival => {
-    const films = festivalsData
-      .filter(f => f.festival === festival && f.espectadors)
-      .sort((a, b) => b.espectadors - a.espectadors);
+    const films = festivalsData.filter(f => f.festival === festival && f.espectadors)
+      .sort((a,b) => b.espectadors - a.espectadors);
+    const top10  = films.slice(0, 10);
+    const resta  = films.slice(10);
+    const cid    = `resp-${festival.replace(/\s/g,'-')}`;
+    const color  = FC[festival];
 
-    const top10 = films.slice(0, 10);
-    const resta = films.slice(10);
-    const cid   = `resp-${festival.replace(/[\s]/g,'-')}`;
-    const color = FC[festival];
-
-    const fila = (f, i) => {
-      const isTop = !!f.top100_pos;
-      return `<tr class="${f.premiat ? 'film-premiat' : ''}">
-        <td class="col-pos">${i+1}</td>
-        <td>${titolFilm(f, true)}</td>
-        <td class="col-subtil">${f.director}</td>
-        <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
-        <td class="col-center">${isTop ? `${f.top100_pos}` : '—'}</td>
-        <td class="col-num">${fmt(f.espectadors)}</td>
-      </tr>`;
-    };
+    const fila = (f, i) => `<tr class="${f.premiat?'film-premiat':''}">
+      <td class="col-pos">${i+1}</td>
+      <td>${titolFilm(f)}</td>
+      <td class="col-subtil">${f.director}</td>
+      <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
+      <td class="col-center col-subtil">${f.top100_pos || '—'}</td>
+      <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
+    </tr>`;
 
     html += `
       <h3 class="subtitol-ranking" style="margin-top:32px;padding-left:10px;border-left:3px solid ${color}">${festival}</h3>
-      <table class="taula-festivals rank-${festival==="Cannes"?"rank-cannes":festival==="Berlín"?"rank-berlin":festival==="Venècia"?"rank-venezia":"rank-sansebastia"}">
+      <table class="taula-festivals">
         <thead><tr>
           <th class="col-pos">#</th>
           <th>Títol</th>
           <th class="col-subtil">Director</th>
           <th class="col-center" style="width:50px">Premi</th>
-          <th class="col-center" style="width:60px">T100</th>
+          <th class="col-center" style="width:65px">Top 100</th>
           <th class="col-num">Espectadors</th>
         </tr></thead>
         <tbody>
@@ -215,7 +192,6 @@ function construirRànquingEspectadors() {
         </tbody>
       </table>`;
   });
-
   cont.innerHTML = html;
 }
 
@@ -228,7 +204,6 @@ window.expandirRankEsp = function(cid, btn) {
 
 /* ============================================================
    RÀNQUING DIRECTORS
-   Top 25 quatre festivals + Top 10 tres grans
    ============================================================ */
 function construirRànquingDirectors() {
   const cont = document.getElementById('seccio-ranking-directors');
@@ -239,103 +214,150 @@ function construirRànquingDirectors() {
     const d = f.director;
     if (!dirs[d]) dirs[d] = {
       nom: d, total_sel: 0, total_premis: 0,
-      c_sel: 0, c_pr: 0,
-      b_sel: 0, b_pr: 0,
-      v_sel: 0, v_pr: 0,
-      s_sel: 0, s_pr: 0,
+      c_sel:0, c_pr:0, b_sel:0, b_pr:0, v_sel:0, v_pr:0, s_sel:0, s_pr:0,
     };
     dirs[d].total_sel++;
     if (f.premiat) dirs[d].total_premis++;
-    if (f.festival === 'Cannes')       { dirs[d].c_sel++; if (f.premiat) dirs[d].c_pr++; }
-    else if (f.festival === 'Berlín')  { dirs[d].b_sel++; if (f.premiat) dirs[d].b_pr++; }
-    else if (f.festival === 'Venècia') { dirs[d].v_sel++; if (f.premiat) dirs[d].v_pr++; }
-    else if (f.festival === 'Sant Sebastià') { dirs[d].s_sel++; if (f.premiat) dirs[d].s_pr++; }
+    if      (f.festival==='Cannes')        { dirs[d].c_sel++; if(f.premiat) dirs[d].c_pr++; }
+    else if (f.festival==='Berlín')        { dirs[d].b_sel++; if(f.premiat) dirs[d].b_pr++; }
+    else if (f.festival==='Venècia')       { dirs[d].v_sel++; if(f.premiat) dirs[d].v_pr++; }
+    else if (f.festival==='Sant Sebastià') { dirs[d].s_sel++; if(f.premiat) dirs[d].s_pr++; }
   });
 
   const llista = Object.values(dirs).sort((a,b) =>
-    b.total_sel - a.total_sel || b.total_premis - a.total_premis ||
-    b.c_sel - a.c_sel || b.b_sel - a.b_sel || b.v_sel - a.v_sel
+    b.total_sel-a.total_sel || b.total_premis-a.total_premis ||
+    b.c_sel-a.c_sel || b.b_sel-a.b_sel || b.v_sel-a.v_sel
   );
 
-  const cel = (sel, pr) => {
+  // Helper: cell with sel + ★N in festival color
+  const cel = (sel, pr, color) => {
     if (!sel) return `<td class="col-center col-subtil">—</td>`;
-    const s = pr ? `${sel} <span class="estrella">★${pr>1?pr:''}</span>` : `${sel}`;
-    return `<td class="col-center">${s}</td>`;
+    const pr_txt = pr ? ` <span class="estrella-col" style="color:${color}">★${pr>1?pr:''}</span>` : '';
+    return `<td class="col-center">${sel}${pr_txt}</td>`;
   };
 
+  // Total ★ cell
+  const celTotal = (pr) => {
+    if (!pr) return `<td class="col-center col-subtil">—</td>`;
+    return `<td class="col-center"><span class="estrella">★${pr>1?pr:''}</span></td>`;
+  };
+
+  /* --- TOP 25 TOTS ELS FESTIVALS --- */
   const top25 = llista.slice(0, 25);
+  const fila25 = (d, i) => `<tr>
+    <td class="col-pos">${i+1}</td>
+    <td><strong>${d.nom}</strong></td>
+    <td class="col-center">${d.total_sel}</td>
+    ${celTotal(d.total_premis)}
+    ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
+    ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
+    ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
+    ${cel(d.s_sel, d.s_pr, FC['Sant Sebastià'])}
+  </tr>`;
 
-  const fila25 = (d, i) => `
-    <tr${''}>
-      <td class="col-pos">${i+1}</td>
-      <td><strong>${d.nom}</strong></td>
-      <td class="col-center">${d.total_sel}</td>
-      ${cel(d.c_sel, d.c_pr)}
-      ${cel(d.b_sel, d.b_pr)}
-      ${cel(d.v_sel, d.v_pr)}
-      ${cel(d.s_sel, d.s_pr)}
-      <td class="col-center">${d.total_premis || '—'}</td>
-    </tr>`;
-
+  /* --- TOP 10 TRES GRANS --- */
   const top10_3 = Object.values(dirs)
-    .filter(d => d.c_sel + d.b_sel + d.v_sel > 0)
+    .filter(d => d.c_sel+d.b_sel+d.v_sel > 0)
     .sort((a,b) =>
-      (b.c_sel+b.b_sel+b.v_sel) - (a.c_sel+a.b_sel+a.v_sel) ||
-      (b.c_pr+b.b_pr+b.v_pr) - (a.c_pr+a.b_pr+a.v_pr)
+      (b.c_sel+b.b_sel+b.v_sel)-(a.c_sel+a.b_sel+a.v_sel) ||
+      (b.c_pr+b.b_pr+b.v_pr)-(a.c_pr+a.b_pr+a.v_pr)
     ).slice(0, 10);
 
-  const fila3 = (d, i) => `
-    <tr>
-      <td class="col-pos">${i+1}</td>
-      <td><strong>${d.nom}</strong></td>
-      <td class="col-center">${d.c_sel+d.b_sel+d.v_sel}</td>
-      ${cel(d.c_sel, d.c_pr)}
-      ${cel(d.b_sel, d.b_pr)}
-      ${cel(d.v_sel, d.v_pr)}
-      <td class="col-center">${(d.c_pr+d.b_pr+d.v_pr)||'—'}</td>
-    </tr>`;
+  const fila3 = (d, i) => `<tr>
+    <td class="col-pos">${i+1}</td>
+    <td><strong>${d.nom}</strong></td>
+    <td class="col-center">${d.c_sel+d.b_sel+d.v_sel}</td>
+    ${celTotal(d.c_pr+d.b_pr+d.v_pr)}
+    ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
+    ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
+    ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
+  </tr>`;
+
+  /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
+  const top3PerFest = (festival, key_sel, key_pr) => {
+    return Object.values(dirs)
+      .filter(d => d[key_sel] > 0)
+      .sort((a,b) => b[key_pr]-a[key_pr] || b[key_sel]-a[key_sel])
+      .slice(0, 3);
+  };
+
+  const top3c = top3PerFest('Cannes','c_sel','c_pr');
+  const top3b = top3PerFest('Berlín','b_sel','b_pr');
+  const top3v = top3PerFest('Venècia','v_sel','v_pr');
+  const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr');
+
+  const celTop3 = (d, key_sel, key_pr, color) => {
+    if (!d) return '<td>—</td>';
+    const pr = d[key_pr] ? ` <span class="estrella-col" style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
+    return `<td><strong>${d.nom}</strong>${pr} <span class="col-subtil">/ ${d[key_sel]} sel.</span></td>`;
+  };
 
   cont.innerHTML = `
-    <h3 class="subtitol-ranking-gran">Top 25 — Quatre festivals</h3>
-    <p class="nota-taula">Presència acumulada als quatre festivals. Desempat per premis i jerarquia de festival (Cannes > Berlín > Venècia > Sant Sebastià).</p>
+    <h3 class="subtitol-ranking-gran">Top 25 — Tots els festivals</h3>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Director</th>
+        <th>Director/a</th>
         <th class="col-center">Total sel.</th>
+        <th class="col-center">Total ★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
         <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
         <th class="col-center" style="color:${FC['Venècia']}">Venècia</th>
-        <th class="col-center" style="color:${FC['Sant Sebastià']}">SS</th>
-        <th class="col-center">Premis</th>
+        <th class="col-center" style="color:${FC['Sant Sebastià']}">Sant Sebastià</th>
       </tr></thead>
-      <tbody>
-        ${top25.map((d,i) => fila25(d,i)).join('')}
-
-      </tbody>
+      <tbody>${top25.map((d,i) => fila25(d,i)).join('')}</tbody>
     </table>
 
-    <h3 class="subtitol-ranking" style="margin-top:40px">Top 10 — Tres grans festivals (Cannes, Berlín, Venècia)</h3>
+    <h3 class="subtitol-ranking-gran" style="margin-top:40px">Top 10 — Només Cannes, Berlín i Venècia</h3>
     <p class="nota-taula">Exclou Sant Sebastià per la seva menor projecció internacional.</p>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Director</th>
+        <th>Director/a</th>
         <th class="col-center">Total sel.</th>
+        <th class="col-center">Total ★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
         <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
         <th class="col-center" style="color:${FC['Venècia']}">Venècia</th>
-        <th class="col-center">Premis</th>
       </tr></thead>
       <tbody>${top10_3.map((d,i) => fila3(d,i)).join('')}</tbody>
+    </table>
+
+    <h3 class="subtitol-ranking-gran" style="margin-top:40px">Top 3 — Més premiats</h3>
+    <table class="taula-festivals">
+      <thead><tr>
+        <th style="width:110px">Festival</th>
+        <th>1r classificat</th>
+        <th>2n classificat</th>
+        <th>3r classificat</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>${nomFest('Cannes')}</td>
+          ${celTop3(top3c[0],'c_sel','c_pr',FC['Cannes'])}
+          ${celTop3(top3c[1],'c_sel','c_pr',FC['Cannes'])}
+          ${celTop3(top3c[2],'c_sel','c_pr',FC['Cannes'])}
+        </tr>
+        <tr>
+          <td>${nomFest('Berlín')}</td>
+          ${celTop3(top3b[0],'b_sel','b_pr',FC['Berlín'])}
+          ${celTop3(top3b[1],'b_sel','b_pr',FC['Berlín'])}
+          ${celTop3(top3b[2],'b_sel','b_pr',FC['Berlín'])}
+        </tr>
+        <tr>
+          <td>${nomFest('Venècia')}</td>
+          ${celTop3(top3v[0],'v_sel','v_pr',FC['Venècia'])}
+          ${celTop3(top3v[1],'v_sel','v_pr',FC['Venècia'])}
+          ${celTop3(top3v[2],'v_sel','v_pr',FC['Venècia'])}
+        </tr>
+        <tr>
+          <td>${nomFest('Sant Sebastià')}</td>
+          ${celTop3(top3s[0],'s_sel','s_pr',FC['Sant Sebastià'])}
+          ${celTop3(top3s[1],'s_sel','s_pr',FC['Sant Sebastià'])}
+          ${celTop3(top3s[2],'s_sel','s_pr',FC['Sant Sebastià'])}
+        </tr>
+      </tbody>
     </table>`;
 }
-
-window.expandirDirs = function(btn) {
-  document.querySelectorAll('.fila-extra-dirs').forEach(tr => {
-    tr.style.display = tr.style.display !== 'none' ? 'none' : '';
-  });
-  btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure Top 25 complet';
-};
 
 document.addEventListener('DOMContentLoaded', carregarFestivals);
