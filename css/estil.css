@@ -1324,3 +1324,71 @@ body.amb-sidebar {
   color: #888 !important;
   font-size: 0.82rem !important;
 }
+
+
+/* --- Capçaleres unificades --- */
+.taula-films th,
+.taula-ranking th {
+  font-size: 0.72rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-suau);
+  padding: 8px 8px 8px 0;
+  border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+/* Context header alineació */
+.taula-films th.col-context-doc,
+.taula-films th.col-context-header {
+  font-style: normal !important;
+  font-size: 0.72rem !important;
+  vertical-align: bottom;
+}
+
+/* Any entre parèntesis en gris */
+.film-any {
+  color: var(--color-text-suau);
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* --- Títol sticky alineat amb sidebar --- */
+.titol-sticky {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.contingut-sidebar {
+  padding-top: 24px;
+}
+
+.titol-sticky h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+/* --- Títol sticky: enganxat just sota navegació --- */
+.titol-sticky {
+  position: sticky;
+  top: 0;
+  background-color: var(--color-fons);
+  padding: 16px 0 16px;
+  border-bottom: 1px solid var(--color-linia);
+  margin-bottom: 32px;
+  z-index: 10;
+}
+
+/* --- Sidebar: padding superior per alinear amb contingut --- */
+.sidebar {
+  padding-top: 32px;
+}
+
+/* --- Contingut sidebar: padding superior consistent --- */
+.contingut-sidebar {
+  padding-top: 32px;
+}
