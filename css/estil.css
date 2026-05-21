@@ -561,44 +561,15 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 }
 
 
+
 /* ============================================================
-   PART II — Colors de fons per festival (molt suaus)
+   PART II — Estils adicionals
    ============================================================ */
 
-/* Fons taula per festival */
-.taula-cannes tbody tr    { background: #fdf5f5; }
-.taula-cannes tbody tr:nth-child(even) { background: #fae8e8; }
+/* Estrella en color festival */
+.estrella-col { font-weight: 700; font-size: 0.9rem; }
 
-.taula-berlin tbody tr    { background: #f5f7fd; }
-.taula-berlin tbody tr:nth-child(even) { background: #e8edf8; }
-
-.taula-venezia tbody tr    { background: #f5fbf8; }
-.taula-venezia tbody tr:nth-child(even) { background: #e8f5ef; }
-
-.taula-sansebastia tbody tr    { background: #f8f5fd; }
-.taula-sansebastia tbody tr:nth-child(even) { background: #efe8f8; }
-
-/* Rànquing espectadors: same per festival */
-.rank-cannes tbody tr    { background: #fdf5f5; }
-.rank-cannes tbody tr:nth-child(even) { background: #fae8e8; }
-
-.rank-berlin tbody tr    { background: #f5f7fd; }
-.rank-berlin tbody tr:nth-child(even) { background: #e8edf8; }
-
-.rank-venezia tbody tr    { background: #f5fbf8; }
-.rank-venezia tbody tr:nth-child(even) { background: #e8f5ef; }
-
-.rank-sansebastia tbody tr    { background: #f8f5fd; }
-.rank-sansebastia tbody tr:nth-child(even) { background: #efe8f8; }
-
-/* Part I: fons molt suau groguenc per taules de dècades */
-.taula-films tbody tr    { background: #fdfdf8; }
-.taula-films tbody tr:nth-child(even) { background: #f8f8ec; }
-
-/* Eliminar fons groc de premiades */
-.taula-festivals .film-premiat td { background: none; }
-
-/* Directors: títol Top 25 */
+/* Títol gran rànquings Part II */
 .subtitol-ranking-gran {
   font-size: 1.1rem;
   font-weight: 700;
@@ -606,3 +577,24 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   padding-bottom: 8px;
   border-bottom: 1px solid var(--color-linia);
 }
+
+/* Premi en negre (secció Premiades) */
+.col-premi-negre { color: var(--color-text); font-size: 0.82rem; }
+
+/* Dècada: format compacte */
+.col-decada { font-size: 0.75rem; }
+
+/* Festival resum */
+.festival-resum { font-size: 0.85rem; color: var(--color-text-suau); margin-bottom: 20px; }
+
+/* Badge festival */
+.badge-festival {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  color: white; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em; white-space: nowrap;
+}
+
+/* Estrella premi */
+.estrella { color: #B8860B; font-weight: 700; font-size: 0.9rem; }
+
+/* Premi col */
+.col-premi { font-size: 0.82rem; color: var(--color-text-suau); }
