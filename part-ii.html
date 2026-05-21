@@ -128,10 +128,10 @@
     const seccions = [
       { id: 'premiades',           titol: 'Pel·lícules premiades a festivals per dècada',          sup: 'Presència i premis als festivals internacionals', grup: 'Pel·lícules premiades' },
       { id: 'introduccio', titol: 'Presència a les seccions oficials per festival', sup: 'Presència i premis als festivals internacionals', grup: 'Seccions oficials' },
-      { id: 'cannes',              titol: 'Festival de Cannes',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
-      { id: 'berlin',              titol: 'Festival de Berlín',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
-      { id: 'venezia',             titol: 'Festival de Venècia',                        sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
-      { id: 'sansebastia',         titol: 'Festival de Sant Sebastià',                  sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'cannes',              titol: 'Festival de Cannes — Compétition officielle',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'berlin',              titol: 'Festival de Berlín — Wettbewerb',                         sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'venezia',             titol: 'Festival de Venècia — Concorso',                        sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
+      { id: 'sansebastia',         titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',                  sup: 'Presència a les seccions oficials', grup: 'Seccions oficials' },
       { id: 'ranking-espectadors', titol: 'Rànquing per espectadors de cada festival',  sup: 'Rànquings', grup: 'Rànquings' },
       { id: 'ranking-directors',   titol: 'Rànquing per directors',                     sup: 'Rànquings', grup: 'Rànquings' },
     ];
@@ -145,6 +145,13 @@
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = 'Presència i premis als festivals internacionals';
       document.getElementById('titol-principal').textContent = s.titol;
+      // Color per festival
+      const festColors = {
+        'cannes': '#9B2335', 'berlin': '#1E4080',
+        'venezia': '#2E7D5E', 'sansebastia': '#6B3FA0'
+      };
+      const h1 = document.getElementById('titol-principal');
+      h1.style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
       if (lnk) lnk.classList.add('actiu');
