@@ -748,3 +748,48 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .inici-acces {
   margin-top: 48px;
 }
+
+/* --- Portada: títol gran --- */
+.inici-h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.inici-subtitol-gran {
+  font-size: 1rem;
+  color: var(--color-text-suau);
+  margin-bottom: 24px;
+}
+
+.inici-titol-gran {
+  margin-bottom: 20px;
+}
+
+/* --- Portada: xifres --- */
+.inici-xifres {
+  display: flex;
+  gap: 32px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-linia);
+}
+
+.inici-xifra {
+  display: flex;
+  flex-direction: column;
+}
+
+.inici-xifra-n {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-text);
+}
+
+.inici-xifra-l {
+  font-size: 0.82rem;
+  color: var(--color-text-suau);
+  margin-top: 4px;
+}
