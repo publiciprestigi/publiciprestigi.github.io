@@ -724,7 +724,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* --- Portada: paràgraf lead --- */
 .inici-lead {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   line-height: 1.65;
 }
 
@@ -744,12 +744,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 }
 .nav-link-substack:hover { color: var(--color-text) !important; }
 
-/* --- Treure ratlla abans dels botons d'accés --- */
-.inici-intro {
-  border-bottom: none !important;
-}
-
+/* --- Botons d'accés més a prop del text --- */
 .inici-acces {
-  border-top: none !important;
-  margin-top: 32px;
+  margin-top: 20px;
 }
