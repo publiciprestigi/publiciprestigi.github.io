@@ -724,8 +724,8 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* --- Portada: paràgraf lead --- */
 .inici-lead {
-  font-size: 1.55rem;
-  line-height: 1.65;
+  font-size: 1rem;
+  line-height: var(--interlineat);
 }
 
 .inici-lead-sub {
@@ -746,5 +746,5 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* --- Botons d'accés més a prop del text --- */
 .inici-acces {
-  margin-top: 20px;
+  margin-top: 48px;
 }
