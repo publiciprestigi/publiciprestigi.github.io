@@ -1,0 +1,750 @@
+/* ============================================================
+   Públic i Prestigi — Full d'estils global v2 (net)
+   ============================================================ */
+
+/* --- Variables --- */
+:root {
+  --color-fons: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-suau: #6b6b6b;
+  --color-linia: #e5e5e5;
+  --font-principal: -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --amplada-max: 1200px;
+  --amplada-text: 720px;
+  --mida-cos: 18px;
+  --mida-petit: 14px;
+  --mida-nav: 15px;
+  --interlineat: 1.7;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { font-size: var(--mida-cos); -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: var(--font-principal);
+  font-size: var(--mida-cos);
+  line-height: var(--interlineat);
+  color: var(--color-text);
+  background: var(--color-fons);
+}
+
+/* --- Tipografia --- */
+h1, h2, h3, h4 { font-family: var(--font-principal); font-weight: 700; line-height: 1.25; color: var(--color-text); }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+p { margin-bottom: 1.25rem; }
+a { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { opacity: 0.65; }
+strong { font-weight: 600; }
+
+/* ============================================================
+   CAPÇALERA
+   ============================================================ */
+.capcalera {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-fons);
+  border-bottom: 1px solid var(--color-linia);
+}
+
+.capcalera-interior {
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.capcalera-interior::before { content: ''; flex: 1; }
+
+.capcalera-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  flex: 1;
+  text-align: center;
+}
+.capcalera-logo:hover { opacity: 0.65; }
+
+.capcalera-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  font-size: var(--mida-petit);
+  color: var(--color-text-suau);
+  flex: 1;
+}
+
+.capcalera-versio {
+  font-size: var(--mida-petit);
+  color: var(--color-text-suau);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.capcalera-versio:hover { color: var(--color-text); opacity: 1; }
+
+.capcalera-idioma { display: flex; gap: 8px; font-size: var(--mida-petit); }
+.capcalera-idioma a { text-decoration: none; color: var(--color-text-suau); }
+.capcalera-idioma a.actiu { color: var(--color-text); font-weight: 600; }
+.capcalera-idioma a:hover { color: var(--color-text); opacity: 1; }
+
+.capcalera-lupa { cursor: pointer; color: var(--color-text-suau); display: flex; align-items: center; }
+.capcalera-lupa:hover { color: var(--color-text); }
+
+/* ============================================================
+   NAVEGACIÓ PRINCIPAL
+   ============================================================ */
+.navegacio {
+  position: sticky;
+  top: 72px;
+  z-index: 99;
+  border-bottom: 1px solid var(--color-linia);
+  background: var(--color-fons);
+}
+
+.navegacio-interior {
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.navegacio-interior::-webkit-scrollbar { display: none; }
+
+.nav-link {
+  display: inline-block;
+  padding: 14px 18px;
+  font-size: var(--mida-nav);
+  font-weight: 500;
+  color: #3a3a3a;
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-link:hover { color: var(--color-text); opacity: 1; }
+.nav-link.actiu { color: var(--color-text); border-bottom-color: var(--color-text); font-weight: 600; }
+
+/* ============================================================
+   LAYOUT AMB SIDEBAR (Parts I, II, III)
+   ============================================================ */
+body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
+
+.layout-sidebar {
+  display: flex;
+  flex: 1;
+  max-width: var(--amplada-max);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Sidebar: sticky sota capçalera+nav (72+45=117px) */
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-linia);
+  padding: 0 0 24px;
+  position: sticky;
+  top: 117px;
+  height: calc(100vh - 117px);
+  overflow-y: auto;
+  align-self: flex-start;
+}
+
+.sidebar-grup { margin-bottom: 24px; }
+
+.sidebar-grup-titol {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-suau);
+  padding: 0 16px;
+  margin-bottom: 6px;
+}
+
+.sidebar-link {
+  display: block;
+  font-size: 0.85rem;
+  padding: 6px 16px;
+  color: var(--color-text-suau);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: all 0.12s;
+  line-height: 1.4;
+}
+.sidebar-link:hover { color: var(--color-text); background: #f5f5f5; opacity: 1; }
+.sidebar-link.actiu { color: var(--color-text); border-left-color: var(--color-text); font-weight: 600; background: #f5f5f5; }
+.sidebar-link.sub { padding-left: 28px; font-size: 0.8rem; }
+
+.sidebar-separador { height: 1px; background: var(--color-linia); margin: 8px 16px 16px; }
+.sidebar-link-notes { color: var(--color-text-suau); font-size: 0.85rem; }
+
+/* Contingut principal */
+.contingut-sidebar {
+  flex: 1;
+  padding: 0 48px 32px;
+  min-width: 0;
+}
+
+/* Títol sticky: 20px aire sobre el menú */
+.titol-sticky {
+  position: sticky;
+  top: 117px;
+  background: var(--color-fons);
+  padding: 32px 0 16px;
+  border-bottom: 1px solid var(--color-linia);
+  margin-bottom: 32px;
+  z-index: 10;
+}
+
+.titol-sticky-sup {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin-bottom: 6px;
+  font-weight: 400;
+}
+
+.titol-sticky h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; }
+
+/* Seccions */
+.seccio-contingut { display: none; max-width: var(--amplada-text); }
+
+/* Navegació anterior/següent */
+.nav-seccions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-linia);
+}
+
+.nav-seccio-btn {
+  font-family: var(--font-principal);
+  font-size: 0.85rem;
+  color: var(--color-text);
+  background: none;
+  border: 1px solid var(--color-linia);
+  border-radius: 4px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: background 0.12s;
+  max-width: 260px;
+}
+.nav-seccio-btn:last-child { text-align: right; }
+.nav-seccio-btn:hover { background: #f5f5f5; }
+.nav-seccio-pos { font-size: 0.75rem; color: var(--color-text-suau); }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .sidebar { display: none; }
+  .contingut-sidebar { padding: 24px 16px; }
+  .layout-sidebar { flex-direction: column; }
+}
+
+/* ============================================================
+   PÀGINA INICI
+   ============================================================ */
+.contingut { max-width: var(--amplada-max); margin: 0 auto; padding: 48px 24px 64px; }
+.contingut-text { max-width: var(--amplada-text); }
+
+.inici-portada { max-width: var(--amplada-text); margin: 0 auto; padding-top: 16px; }
+.inici-titol { margin-bottom: 32px; }
+.inici-titol h1 { font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
+.inici-subtitol { font-size: 1rem; color: var(--color-text-suau); margin-bottom: 0; }
+.inici-intro { margin-bottom: 24px; }
+.inici-intro p { font-size: 1.05rem; }
+
+.inici-acces {
+  display: flex; flex-direction: column; gap: 1px;
+  background: var(--color-linia);
+  border: 1px solid var(--color-linia);
+  border-radius: 4px; overflow: hidden;
+}
+.boto-acces {
+  display: grid; grid-template-columns: 60px 120px 1fr;
+  align-items: center; gap: 16px; padding: 20px 24px;
+  background: var(--color-fons); text-decoration: none; color: var(--color-text);
+  transition: background 0.15s;
+}
+.boto-acces:hover { background: #f5f5f5; opacity: 1; }
+.boto-acces-part { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); }
+.boto-acces-nom { font-size: 1rem; font-weight: 700; }
+.boto-acces-desc { font-size: 0.85rem; color: var(--color-text-suau); }
+
+@media (max-width: 768px) {
+  .boto-acces { grid-template-columns: 1fr; gap: 4px; padding: 16px; }
+  .boto-acces-desc { display: none; }
+}
+
+/* ============================================================
+   PEU DE PÀGINA
+   ============================================================ */
+.peu { border-top: 1px solid var(--color-linia); padding: 32px 24px; font-size: var(--mida-petit); color: var(--color-text-suau); }
+.peu-interior { max-width: var(--amplada-max); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+.peu a { color: var(--color-text-suau); text-decoration: none; }
+.peu a:hover { color: var(--color-text); }
+
+/* ============================================================
+   BUSCADOR
+   ============================================================ */
+.buscador-overlay {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(255,255,255,0.97); z-index: 200;
+  display: flex; align-items: flex-start; justify-content: center; padding-top: 80px;
+}
+.buscador-interior { width: 100%; max-width: 640px; padding: 0 24px; position: relative; }
+#buscador-input {
+  width: 100%; font-family: var(--font-principal); font-size: 1.25rem;
+  border: none; border-bottom: 2px solid var(--color-text);
+  padding: 12px 40px 12px 0; outline: none; color: var(--color-text); background: transparent;
+}
+.buscador-tancar { position: absolute; right: 24px; top: 12px; background: none; border: none; font-size: 1rem; cursor: pointer; color: var(--color-text-suau); }
+#buscador-resultats { margin-top: 24px; font-size: 0.95rem; }
+
+/* ============================================================
+   PÀGINA DE VERSIONS
+   ============================================================ */
+.versio-item { padding: 24px 0; border-bottom: 1px solid var(--color-linia); }
+.versio-item:first-child { border-top: 1px solid var(--color-linia); }
+.versio-cap { display: flex; align-items: baseline; gap: 16px; margin-bottom: 8px; }
+.versio-num { font-weight: 700; font-size: 1rem; }
+.versio-data { font-size: var(--mida-petit); color: var(--color-text-suau); }
+.versio-resum { font-size: 0.9rem; color: var(--color-text-suau); margin-bottom: 0; }
+
+/* ============================================================
+   PÀGINES ESTÀTIQUES (Notes, Sobre, Legal)
+   ============================================================ */
+.part-capcalera { max-width: var(--amplada-text); margin: 0 auto 48px; padding-bottom: 32px; border-bottom: 1px solid var(--color-linia); }
+.part-etiqueta { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-suau); margin-bottom: 8px; }
+.seccio { max-width: var(--amplada-text); margin: 0 auto 64px; }
+.seccio h2 { margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--color-linia); }
+.en-construccio { color: var(--color-text-suau); font-style: italic; }
+
+.notes-grup { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--color-linia); }
+.notes-grup:last-child { border-bottom: none; }
+.notes-grup h2 { font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); margin-bottom: 24px; }
+
+/* ============================================================
+   TAULES DE FILMS (Part I — dècades)
+   ============================================================ */
+.taula-films {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0 0 24px; table-layout: auto;
+}
+
+.taula-films th {
+  text-align: left;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-suau);
+  padding: 8px 8px 8px 0;
+  border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom;
+  white-space: nowrap;
+}
+
+.taula-films td {
+  padding: 9px 8px 9px 0;
+  border-bottom: 1px solid var(--color-linia);
+  vertical-align: top;
+  line-height: 1.4;
+}
+
+/* Top 100: negre */
+.taula-films .film-top100 td { color: var(--color-text); }
+
+/* Context/addicionals: gris #888 */
+.taula-films .film-context td { color: #888; }
+
+/* Director sempre gris */
+.taula-films td.col-subtil { color: var(--color-text-suau); font-size: 0.82rem; }
+
+/* Columnes numèriques */
+.col-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.col-gris { color: var(--color-text-suau) !important; }
+.col-center { text-align: center !important; }
+.col-pos { font-weight: 400; }
+
+/* IIC: negre, pes normal */
+.col-iic { color: var(--color-text); font-weight: 400; }
+
+/* Context text: gris, normal */
+.col-context-doc { color: var(--color-text-suau); font-style: normal; font-size: 0.78rem; width: 200px; max-width: 200px; min-width: 200px; word-wrap: break-word; overflow-wrap: break-word; white-space: normal; }
+.taula-films th.col-context-doc { font-size: 0.72rem; white-space: nowrap; }
+
+/* Títol: negreta+cursiva, any en gris, MATEIXA mida */
+.col-titol { min-width: 160px; }
+.film-any { color: var(--color-text-suau); font-weight: 400; font-style: normal; }
+
+/* Botó context */
+.fila-boto-context td { border-bottom: none; padding: 16px 0; }
+.btn-context {
+  background: none; border: 1px solid var(--color-linia); border-radius: 3px;
+  padding: 14px 16px; font-family: var(--font-principal); font-size: 0.82rem;
+  color: var(--color-text-suau); cursor: pointer; transition: all 0.12s; width: 100%; text-align: left;
+}
+.btn-context:hover { border-color: var(--color-text); color: var(--color-text); }
+
+/* ============================================================
+   TAULES DE RÀNQUING
+   ============================================================ */
+.taula-ranking { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0 0 24px; }
+
+.taula-ranking th {
+  text-align: left; font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-suau);
+  padding: 8px 8px 8px 0; border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom; white-space: nowrap;
+}
+
+.taula-ranking td { padding: 10px 8px 10px 0; border-bottom: 1px solid var(--color-linia); vertical-align: middle; }
+.taula-ranking .col-subtil { color: var(--color-text-suau); font-size: 0.8rem; white-space: nowrap; }
+.taula-ranking td:nth-child(3) { max-width: 320px; }
+
+.nota-taula { font-size: 0.82rem; color: var(--color-text-suau); margin-bottom: 16px; font-style: italic; }
+.subtitol-ranking { font-size: 1rem; font-weight: 600; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--color-linia); }
+
+/* Variació */
+.col-var { text-align: center; font-size: 0.85rem; font-weight: 600; white-space: nowrap; width: 48px; }
+.var-up { color: #27ae60; }
+.var-down { color: #c0392b; }
+.var-eq { color: var(--color-text-suau); font-weight: 400; }
+.var-nou { font-size: 0.7rem; font-weight: 700; color: #27ae60; letter-spacing: 0.04em; }
+
+/* Directors: botó i llista */
+.btn-films-dir {
+  width: 22px; height: 22px; border-radius: 50%; border: 1px solid var(--color-linia);
+  background: none; font-family: var(--font-principal); font-size: 14px; line-height: 1;
+  cursor: pointer; color: var(--color-text-suau);
+  display: inline-flex; align-items: center; justify-content: center; transition: all 0.12s;
+}
+.btn-films-dir:hover { background: var(--color-text); color: var(--color-fons); border-color: var(--color-text); }
+.dir-films-list { font-size: 0.78rem; color: var(--color-text-suau); line-height: 1.6; margin-top: 8px; text-align: left; max-width: 480px; }
+.dir-films-grup { display: block; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); margin-bottom: 4px; }
+
+/* ============================================================
+   BUSCADOR OVERLAY
+   ============================================================ */
+
+/* --- Sidebar spacer: alinea el primer ítem amb el supertítol --- */
+.sidebar-spacer {
+  height: 56px;
+}
+
+/* --- Films context: gris, mateix tamany --- */
+.taula-films .film-context td {
+  color: #888 !important;
+}
+
+/* --- Text de context de files Top 100: gris --- */
+.taula-films .film-top100 td.col-context-doc {
+  color: #888 !important;
+}
+
+/* ============================================================
+   PART II — FESTIVALS
+   ============================================================ */
+
+.taula-festivals {
+  width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0 0 24px;
+}
+
+.taula-festivals th {
+  text-align: left; font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-text-suau);
+  padding: 8px 8px 8px 0; border-bottom: 2px solid var(--color-text);
+  vertical-align: bottom; white-space: nowrap;
+}
+
+.taula-festivals td {
+  padding: 9px 8px 9px 0; border-bottom: 1px solid var(--color-linia);
+  vertical-align: middle; line-height: 1.4;
+}
+
+/* Files premiades destacades */
+.taula-festivals .film-premiat td {
+  background: #fdfaf2;
+}
+
+/* Estrella premi */
+.estrella {
+  color: #B8860B;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Badge festival */
+.badge-festival {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+/* Nom festival en color */
+.nom-festival {
+  font-weight: 600;
+}
+
+/* Premi: text normal gris */
+.col-premi {
+  font-size: 0.78rem;
+  color: var(--color-text-suau);
+}
+
+/* Resum festival */
+.festival-resum {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  margin-bottom: 20px;
+}
+
+/* --- Films Top 100 a les taules de festival --- */
+.taula-festivals .film-top100-fest td {
+  color: var(--color-text);
+}
+
+/* --- Posicions Top 100 i dècada --- */
+.top100-pos {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.decada-pos {
+  color: var(--color-text-suau);
+  font-size: 0.78rem;
+}
+
+/* --- Premi destacat (Premiades per dècada) --- */
+.col-premi-destacat {
+  color: var(--color-text);
+  font-size: 0.82rem;
+}
+
+/* --- Nom festival en color (sense badge) --- */
+.nom-festival-color {
+  font-weight: 700;
+}
+
+/* --- Premi en negre (secció Premiades) --- */
+.col-premi-negre {
+  color: var(--color-text);
+  font-size: 0.82rem;
+}
+
+/* --- Dècada: format compacte --- */
+.col-decada {
+  font-size: 0.75rem;
+}
+
+
+
+/* ============================================================
+   PART II — Estils adicionals
+   ============================================================ */
+
+/* Estrella en color festival */
+.estrella-col { font-weight: 700; font-size: 0.9rem; }
+
+/* Títol gran rànquings Part II */
+.subtitol-ranking-gran {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-linia);
+}
+
+/* Premi en negre (secció Premiades) */
+.col-premi-negre { color: var(--color-text); font-size: 0.82rem; }
+
+/* Dècada: format compacte */
+.col-decada { font-size: 0.75rem; }
+
+/* Festival resum */
+.festival-resum { font-size: 0.85rem; color: var(--color-text-suau); margin-bottom: 20px; }
+
+/* Badge festival */
+.badge-festival {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  color: white; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.03em; white-space: nowrap;
+}
+
+/* Estrella premi */
+.estrella { color: #B8860B; font-weight: 700; font-size: 0.9rem; }
+
+/* Premi col */
+.col-premi { font-size: 0.82rem; color: var(--color-text-suau); }
+
+/* --- Part II fixes --- */
+
+/* Dècada en gris */
+.taula-festivals .col-decada { color: var(--color-text-suau); font-size: 0.78rem; }
+
+/* Premi en gris a Premiades */
+.taula-festivals .col-subtil { color: var(--color-text-suau); }
+
+/* Eliminar fons groc/premiat */
+.taula-festivals .film-premiat td { background: none !important; }
+.film-premiat td { background: none !important; }
+
+/* Columna # amb més aire al títol */
+.taula-festivals td.col-pos { padding-right: 16px; }
+.taula-festivals th.col-pos { padding-right: 16px; }
+
+/* Border-left per festival */
+#seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
+#seccio-berlin .taula-festivals       { border-left: 3px solid #1E4080; }
+#seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #6B3FA0; }
+
+/* --- Directors en negre normal a Part I --- */
+.taula-films td.col-subtil,
+.taula-films th.col-subtil {
+  color: var(--color-text);
+}
+
+/* Però Mercat, Penetració, Quota continuen en gris */
+.taula-films td.col-gris,
+.taula-films th.col-gris {
+  color: var(--color-text-suau) !important;
+}
+
+/* I les files de context continuen en gris */
+.taula-films .film-context td {
+  color: #888 !important;
+}
+
+/* --- Director: gris a Part I (reverteix el canvi anterior) --- */
+.taula-films td.col-subtil {
+  color: var(--color-text-suau) !important;
+}
+.taula-films th.col-subtil {
+  color: var(--color-text-suau) !important;
+}
+
+/* --- Part II: ajustos grisos/negres --- */
+
+/* Premi en negre a Premiades per dècada */
+.taula-festivals td:last-child {
+  color: var(--color-text);
+}
+
+/* Espectadors en negre a taules de festival i rànquing */
+.taula-festivals td.col-num {
+  color: var(--color-text) !important;
+}
+
+/* Eliminar border-left de color per festival */
+#seccio-cannes .taula-festivals,
+#seccio-berlin .taula-festivals,
+#seccio-venezia .taula-festivals,
+#seccio-sansebastia .taula-festivals {
+  border-left: none !important;
+}
+
+/* --- Títol festival en color --- */
+.titol-festival {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+}
+
+/* --- Sobre el projecte: sense línies separadores entre seccions --- */
+.contingut-text h2 {
+  border-bottom: none;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Portada --- */
+.inici-titol h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.inici-subtitol {
+  font-size: 1.1rem;
+  color: var(--color-text-suau);
+  margin-bottom: 0;
+}
+
+.inici-versio {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  margin-bottom: 32px;
+}
+
+.inici-intro h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+.inici-contacte {
+  margin-top: 32px;
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+}
+
+.inici-dedicatoria {
+  font-size: 0.85rem;
+  color: var(--color-text-suau);
+  font-style: italic;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+/* --- Portada: paràgraf lead --- */
+.inici-lead {
+  font-size: var(--mida-cos);
+  line-height: var(--interlineat);
+}
+
+.inici-lead-sub {
+  color: var(--color-text-suau);
+  font-weight: 400;
+}
+
+.inici-lead-anys {
+  color: var(--color-text-suau);
+}
+
+/* --- Link Substack al menú --- */
+.nav-link-substack {
+  color: var(--color-text-suau) !important;
+  font-size: 0.82rem;
+}
+.nav-link-substack:hover { color: var(--color-text) !important; }
+
+/* --- Botons d'accés més a prop del text --- */
+.inici-acces {
+  margin-top: 48px;
+}
