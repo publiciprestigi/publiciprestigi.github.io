@@ -350,10 +350,19 @@ function construirRànquingDirectors() {
   const top3v = top3PerFest('Venècia','v_sel','v_pr');
   const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr');
 
-  const celTop3 = (d, key_pr, color) => {
+  let _t3ctr = 0;
+  const celTop3 = (d, key_pr, color, fest) => {
     if (!d) return '<td class="col-subtil">—</td>';
     const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
-    return `<td>${d.nom}${pr}</td>`;
+    const id = `t3f-${++_t3ctr}`;
+    const films = festivalsData
+      .filter(f => f.festival === fest && f.director === d.nom && f.premiat)
+      .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
+      .join(' · ');
+    return `<td>${d.nom}${pr}
+      <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)" style="margin-left:4px">+</button>
+      <div id="${id}" class="dir-films-list" style="display:none;margin-top:6px">${films}</div>
+    </td>`;
   };
 
   cont.innerHTML = `
@@ -395,40 +404,31 @@ function construirRànquingDirectors() {
         <th>1r</th>
         <th>2n</th>
         <th>3r</th>
-        <th class="col-center">Films</th>
       </tr></thead>
       <tbody>
         <tr>
           <td>${nomFest('Cannes')}</td>
-          ${celTop3(top3c[0],'c_pr',FC['Cannes'])}
-          ${celTop3(top3c[1],'c_pr',FC['Cannes'])}
-          ${celTop3(top3c[2],'c_pr',FC['Cannes'])}
-          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-c',this)">+</button>
-          <div id="top3-c" class="dir-films-list" style="display:none">${[top3c[0],top3c[1],top3c[2]].filter(Boolean).map((d,i)=>`<div class='top3-dir-bloc'><span class='top3-dir-num'>${i+1}.</span> <strong>${d.nom}</strong><br><span class='top3-dir-films'>${festivalsData.filter(f=>f.festival==='Cannes'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ')}</span></div>`).join('')}</div></td>
+          ${celTop3(top3c[0],'c_pr',FC['Cannes'],'Cannes')}
+          ${celTop3(top3c[1],'c_pr',FC['Cannes'],'Cannes')}
+          ${celTop3(top3c[2],'c_pr',FC['Cannes'],'Cannes')}
         </tr>
         <tr>
           <td>${nomFest('Berlín')}</td>
-          ${celTop3(top3b[0],'b_pr',FC['Berlín'])}
-          ${celTop3(top3b[1],'b_pr',FC['Berlín'])}
-          ${celTop3(top3b[2],'b_pr',FC['Berlín'])}
-          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-b',this)">+</button>
-          <div id="top3-b" class="dir-films-list" style="display:none">${[top3b[0],top3b[1],top3b[2]].filter(Boolean).map((d,i)=>`<div class='top3-dir-bloc'><span class='top3-dir-num'>${i+1}.</span> <strong>${d.nom}</strong><br><span class='top3-dir-films'>${festivalsData.filter(f=>f.festival==='Berlín'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ')}</span></div>`).join('')}</div></td>
+          ${celTop3(top3b[0],'b_pr',FC['Berlín'],'Berlín')}
+          ${celTop3(top3b[1],'b_pr',FC['Berlín'],'Berlín')}
+          ${celTop3(top3b[2],'b_pr',FC['Berlín'],'Berlín')}
         </tr>
         <tr>
           <td>${nomFest('Venècia')}</td>
-          ${celTop3(top3v[0],'v_pr',FC['Venècia'])}
-          ${celTop3(top3v[1],'v_pr',FC['Venècia'])}
-          ${celTop3(top3v[2],'v_pr',FC['Venècia'])}
-          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-v',this)">+</button>
-          <div id="top3-v" class="dir-films-list" style="display:none">${[top3v[0],top3v[1],top3v[2]].filter(Boolean).map((d,i)=>`<div class='top3-dir-bloc'><span class='top3-dir-num'>${i+1}.</span> <strong>${d.nom}</strong><br><span class='top3-dir-films'>${festivalsData.filter(f=>f.festival==='Venècia'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ')}</span></div>`).join('')}</div></td>
+          ${celTop3(top3v[0],'v_pr',FC['Venècia'],'Venècia')}
+          ${celTop3(top3v[1],'v_pr',FC['Venècia'],'Venècia')}
+          ${celTop3(top3v[2],'v_pr',FC['Venècia'],'Venècia')}
         </tr>
         <tr>
           <td>${nomFest('Sant Sebastià')}</td>
-          ${celTop3(top3s[0],'s_pr',FC['Sant Sebastià'])}
-          ${celTop3(top3s[1],'s_pr',FC['Sant Sebastià'])}
-          ${celTop3(top3s[2],'s_pr',FC['Sant Sebastià'])}
-          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-s',this)">+</button>
-          <div id="top3-s" class="dir-films-list" style="display:none">${[top3s[0],top3s[1],top3s[2]].filter(Boolean).map((d,i)=>`<div class='top3-dir-bloc'><span class='top3-dir-num'>${i+1}.</span> <strong>${d.nom}</strong><br><span class='top3-dir-films'>${festivalsData.filter(f=>f.festival==='Sant Sebastià'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ')}</span></div>`).join('')}</div></td>
+          ${celTop3(top3s[0],'s_pr',FC['Sant Sebastià'],'Sant Sebastià')}
+          ${celTop3(top3s[1],'s_pr',FC['Sant Sebastià'],'Sant Sebastià')}
+          ${celTop3(top3s[2],'s_pr',FC['Sant Sebastià'],'Sant Sebastià')}
         </tr>
       </tbody>
     </table>`;
