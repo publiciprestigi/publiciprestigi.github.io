@@ -743,3 +743,13 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   font-size: 0.82rem;
 }
 .nav-link-substack:hover { color: var(--color-text) !important; }
+
+/* --- Treure ratlla abans dels botons d'accés --- */
+.inici-intro {
+  border-bottom: none !important;
+}
+
+.inici-acces {
+  border-top: none !important;
+  margin-top: 32px;
+}
