@@ -404,7 +404,7 @@ function construirRànquingDirectors() {
           ${celTop3(top3c[1],'c_pr',FC['Cannes'])}
           ${celTop3(top3c[2],'c_pr',FC['Cannes'])}
           <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-c',this)">+</button>
-          <div id="top3-c" class="dir-films-list" style="display:none">${[top3c[0],top3c[1],top3c[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Cannes']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Cannes'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
+          <div id="top3-c" class="dir-films-list" style="display:none">${[top3c[0],top3c[1],top3c[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Cannes']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Cannes'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="estrella">★</span> <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
         <tr>
           <td>${nomFest('Berlín')}</td>
@@ -412,7 +412,7 @@ function construirRànquingDirectors() {
           ${celTop3(top3b[1],'b_pr',FC['Berlín'])}
           ${celTop3(top3b[2],'b_pr',FC['Berlín'])}
           <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-b',this)">+</button>
-          <div id="top3-b" class="dir-films-list" style="display:none">${[top3b[0],top3b[1],top3b[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Berlín']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Berlín'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
+          <div id="top3-b" class="dir-films-list" style="display:none">${[top3b[0],top3b[1],top3b[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Berlín']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Berlín'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="estrella">★</span> <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
         <tr>
           <td>${nomFest('Venècia')}</td>
@@ -420,7 +420,7 @@ function construirRànquingDirectors() {
           ${celTop3(top3v[1],'v_pr',FC['Venècia'])}
           ${celTop3(top3v[2],'v_pr',FC['Venècia'])}
           <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-v',this)">+</button>
-          <div id="top3-v" class="dir-films-list" style="display:none">${[top3v[0],top3v[1],top3v[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Venècia']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Venècia'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
+          <div id="top3-v" class="dir-films-list" style="display:none">${[top3v[0],top3v[1],top3v[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Venècia']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Venècia'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="estrella">★</span> <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
         <tr>
           <td>${nomFest('Sant Sebastià')}</td>
@@ -428,7 +428,7 @@ function construirRànquingDirectors() {
           ${celTop3(top3s[1],'s_pr',FC['Sant Sebastià'])}
           ${celTop3(top3s[2],'s_pr',FC['Sant Sebastià'])}
           <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-s',this)">+</button>
-          <div id="top3-s" class="dir-films-list" style="display:none">${[top3s[0],top3s[1],top3s[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Sant Sebastià']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Sant Sebastià'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
+          <div id="top3-s" class="dir-films-list" style="display:none">${[top3s[0],top3s[1],top3s[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Sant Sebastià']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Sant Sebastià'&&f.director===d.nom&&f.premiat).map(f=>`<strong><em>${f.titol}</em></strong> <span class="estrella">★</span> <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
       </tbody>
     </table>`;
