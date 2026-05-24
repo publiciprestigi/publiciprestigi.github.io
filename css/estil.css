@@ -793,3 +793,19 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   color: var(--color-text-suau);
   margin-top: 4px;
 }
+
+/* --- Top 3: directors amb films --- */
+.top3-dir-bloc {
+  margin-bottom: 8px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+.top3-dir-num {
+  color: var(--color-text-suau);
+  font-size: 0.72rem;
+}
+.top3-dir-films {
+  color: var(--color-text-suau);
+  display: block;
+  padding-left: 12px;
+}
