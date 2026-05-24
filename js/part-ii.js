@@ -256,16 +256,43 @@ function construirRànquingDirectors() {
 
   /* --- TOP 25 TOTS ELS FESTIVALS --- */
   const top25 = llista.slice(0, 25);
-  const fila25 = (d, i) => `<tr>
-    <td class="col-pos">${i+1}</td>
-    <td><strong>${d.nom}</strong></td>
-    <td class="col-center">${d.total_sel}</td>
-    ${celTotal(d.total_premis)}
-    ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
-    ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
-    ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
-    ${cel(d.s_sel, d.s_pr, FC['Sant Sebastià'])}
-  </tr>`;
+  let _dirCtr = 0;
+
+  const filmsDir = (d) => {
+    const fests = ['Cannes','Berlín','Venècia','Sant Sebastià'];
+    let html = '';
+    fests.forEach(fest => {
+      const films = festivalsData.filter(f => f.festival === fest && f.director === d.nom);
+      if (!films.length) return;
+      html += `<span class="dir-films-grup" style="color:${FC[fest]}">${fest}</span>`;
+      html += films.map(f => {
+        const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
+        return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
+      }).join(' · ');
+      html += ' ';
+    });
+    return html;
+  };
+
+  const fila25 = (d, i) => {
+    const id = `d25-${++_dirCtr}`;
+    return `<tr>
+      <td class="col-pos">${i+1}</td>
+      <td>
+        <strong>${d.nom}</strong>
+        <div id="${id}" class="dir-films-list" style="display:none">${filmsDir(d)}</div>
+      </td>
+      <td class="col-center">${d.total_sel}</td>
+      ${celTotal(d.total_premis)}
+      ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
+      ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
+      ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
+      ${cel(d.s_sel, d.s_pr, FC['Sant Sebastià'])}
+      <td class="col-center">
+        <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)">+</button>
+      </td>
+    </tr>`;
+  };
 
   /* --- TOP 10 TRES GRANS --- */
   const top10_3 = Object.values(dirs)
@@ -275,15 +302,40 @@ function construirRànquingDirectors() {
       (b.c_pr+b.b_pr+b.v_pr)-(a.c_pr+a.b_pr+a.v_pr)
     ).slice(0, 10);
 
-  const fila3 = (d, i) => `<tr>
-    <td class="col-pos">${i+1}</td>
-    <td><strong>${d.nom}</strong></td>
-    <td class="col-center">${d.c_sel+d.b_sel+d.v_sel}</td>
-    ${celTotal(d.c_pr+d.b_pr+d.v_pr)}
-    ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
-    ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
-    ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
-  </tr>`;
+  const filmsDir3 = (d) => {
+    const fests = ['Cannes','Berlín','Venècia'];
+    let html = '';
+    fests.forEach(fest => {
+      const films = festivalsData.filter(f => f.festival === fest && f.director === d.nom);
+      if (!films.length) return;
+      html += `<span class="dir-films-grup" style="color:${FC[fest]}">${fest}</span>`;
+      html += films.map(f => {
+        const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
+        return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
+      }).join(' · ');
+      html += ' ';
+    });
+    return html;
+  };
+
+  const fila3 = (d, i) => {
+    const id = `d3-${++_dirCtr}`;
+    return `<tr>
+      <td class="col-pos">${i+1}</td>
+      <td>
+        <strong>${d.nom}</strong>
+        <div id="${id}" class="dir-films-list" style="display:none">${filmsDir3(d)}</div>
+      </td>
+      <td class="col-center">${d.c_sel+d.b_sel+d.v_sel}</td>
+      ${celTotal(d.c_pr+d.b_pr+d.v_pr)}
+      ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
+      ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
+      ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
+      <td class="col-center">
+        <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)">+</button>
+      </td>
+    </tr>`;
+  };
 
   /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
   const top3PerFest = (festival, key_sel, key_pr) => {
@@ -316,6 +368,7 @@ function construirRànquingDirectors() {
         <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
         <th class="col-center" style="color:${FC['Venècia']}">Venècia</th>
         <th class="col-center" style="color:${FC['Sant Sebastià']}">Sant Sebastià</th>
+        <th class="col-center">Films</th>
       </tr></thead>
       <tbody>${top25.map((d,i) => fila25(d,i)).join('')}</tbody>
     </table>
@@ -342,6 +395,7 @@ function construirRànquingDirectors() {
         <th>1r</th>
         <th>2n</th>
         <th>3r</th>
+        <th class="col-center">Films</th>
       </tr></thead>
       <tbody>
         <tr>
@@ -349,27 +403,51 @@ function construirRànquingDirectors() {
           ${celTop3(top3c[0],'c_pr',FC['Cannes'])}
           ${celTop3(top3c[1],'c_pr',FC['Cannes'])}
           ${celTop3(top3c[2],'c_pr',FC['Cannes'])}
+          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-c',this)">+</button>
+          <div id="top3-c" class="dir-films-list" style="display:none">${[top3c[0],top3c[1],top3c[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Cannes']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Cannes'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
         <tr>
           <td>${nomFest('Berlín')}</td>
           ${celTop3(top3b[0],'b_pr',FC['Berlín'])}
           ${celTop3(top3b[1],'b_pr',FC['Berlín'])}
           ${celTop3(top3b[2],'b_pr',FC['Berlín'])}
+          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-b',this)">+</button>
+          <div id="top3-b" class="dir-films-list" style="display:none">${[top3b[0],top3b[1],top3b[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Berlín']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Berlín'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
         <tr>
           <td>${nomFest('Venècia')}</td>
           ${celTop3(top3v[0],'v_pr',FC['Venècia'])}
           ${celTop3(top3v[1],'v_pr',FC['Venècia'])}
           ${celTop3(top3v[2],'v_pr',FC['Venècia'])}
+          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-v',this)">+</button>
+          <div id="top3-v" class="dir-films-list" style="display:none">${[top3v[0],top3v[1],top3v[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Venècia']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Venècia'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
         <tr>
           <td>${nomFest('Sant Sebastià')}</td>
           ${celTop3(top3s[0],'s_pr',FC['Sant Sebastià'])}
           ${celTop3(top3s[1],'s_pr',FC['Sant Sebastià'])}
           ${celTop3(top3s[2],'s_pr',FC['Sant Sebastià'])}
+          <td class="col-center"><button class="btn-films-dir" onclick="toggleTop3Films('top3-s',this)">+</button>
+          <div id="top3-s" class="dir-films-list" style="display:none">${[top3s[0],top3s[1],top3s[2]].filter(Boolean).map(d=>`<span class="dir-films-grup" style="color:${FC['Sant Sebastià']}">${d.nom}</span>${festivalsData.filter(f=>f.festival==='Sant Sebastià'&&f.director===d.nom).map(f=>`<strong><em>${f.titol}</em></strong>${f.premiat?` <span class="estrella">★</span>`:''} <span class="film-any">(${f.any})</span>`).join(' · ')}`).join('<br>')}</div></td>
         </tr>
       </tbody>
     </table>`;
 }
+
+window.toggleTop3Films = function(id, btn) {
+  const div = document.getElementById(id);
+  if (!div) return;
+  const vis = div.style.display !== 'none';
+  div.style.display = vis ? 'none' : 'block';
+  btn.textContent = vis ? '+' : '−';
+};
+
+window.toggleDirFilms = function(id, btn) {
+  const div = document.getElementById(id);
+  if (!div) return;
+  const vis = div.style.display !== 'none';
+  div.style.display = vis ? 'none' : 'block';
+  btn.textContent = vis ? '+' : '−';
+};
 
 document.addEventListener('DOMContentLoaded', carregarFestivals);
