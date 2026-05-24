@@ -269,7 +269,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 .inici-titol { margin-bottom: 32px; }
 .inici-titol h1 { font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 8px; }
 .inici-subtitol { font-size: 1rem; color: var(--color-text-suau); margin-bottom: 0; }
-.inici-intro { margin-bottom: 48px; padding-bottom: 48px; border-bottom: 1px solid var(--color-linia); }
+.inici-intro { margin-bottom: 24px; }
 .inici-intro p { font-size: 1.05rem; }
 
 .inici-acces {
@@ -724,7 +724,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* --- Portada: paràgraf lead --- */
 .inici-lead {
-  font-size: 1.45rem;
+  font-size: 1.55rem;
   line-height: 1.65;
 }
 
