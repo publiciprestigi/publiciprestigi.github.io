@@ -26,12 +26,14 @@ const fmtPct = (n, e) => n == null ? '—' : n.toFixed(2) + '%' + (e ? '≈' : '
 const fmtIIC = n => n == null ? '—' : n.toFixed(2);
 const fmtMercat = (n, e) => n == null ? '—' : n.toFixed(1) + 'M' + (e ? '≈' : '');
 
-function construirFila(film, decada) {
+function construirFila(film, decada, hidden) {
   const posHist = film.pos_hist ? `${film.pos_hist}` : '—';
   const cls = film.in_top100 ? 'film-top100' : 'film-context';
   const titol = `<strong><em>${film.titol}</em></strong> <span class="film-any">(${film.any})</span>`;
-  const col = decada && COLORS_DECADES[decada] ? `style="background:${COLORS_DECADES[decada].fons}"` : '';
-  return `<tr class="${cls}" data-context="${!film.in_top100}" ${col}>
+  const bg = decada && COLORS_DECADES[decada] ? COLORS_DECADES[decada].fons : '';
+  const display = hidden ? 'display:none;' : '';
+  const styleAttr = (bg || display) ? `style="${display}${bg ? 'background:' + bg : ''}"` : '';
+  return `<tr class="${cls}" data-context="${!film.in_top100}" ${styleAttr}>
     <td>${film.pos_decade}</td>
     <td class="col-subtil col-center">${posHist}</td>
     <td class="col-titol">${titol}</td>
@@ -79,7 +81,7 @@ function construirTaulaDècada(decadaId, cont) {
               </button>
             </td>
           </tr>
-          ${context.map(f => construirFila(f, decadaId).replace('data-context="true"', 'data-context="true" style="display:none"')).join('')}
+          ${context.map(f => construirFila(f, decadaId, true)).join('')}
         ` : ''}
       </tbody>
     </table>`;
