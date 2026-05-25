@@ -6,6 +6,8 @@
   <meta name="description" content="Part III — Anàlisi. Cruïlles, comparatives i interpretacions (1965–2025).">
   <title>Part III — Anàlisi · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
+  <link rel="stylesheet" href="css/textos-extra.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body class="amb-sidebar">
 
@@ -124,14 +126,14 @@
 
   <script>
     const seccions = [
-      { id: 'doble-corona', titol: 'La doble corona i el segon cercle',      sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
-      { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
-      { id: 'la-caza',      titol: 'La caza vs. Alcarràs',                   sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
-      { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',              sup: 'Cruïlles, comparatives i interpretacions', grup: 'Cruïlles i comparatives' },
-      { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
-      { id: 'autor',        titol: 'Cinema d\'autor industrial',              sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
-      { id: 'marc',         titol: 'Marc interpretatiu i idees clau',         sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
-      { id: 'conclusions',  titol: 'Conclusions',                             sup: 'Cruïlles, comparatives i interpretacions', grup: 'Interpretacions' },
+      { id: 'doble-corona', titol: 'La doble corona i el segon cercle',         sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'la-caza',      titol: 'La caza vs. Alcarràs',                      sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'autor',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'marc',         titol: 'Marc interpretatiu i idees clau',           sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'conclusions',  titol: 'Conclusions',                               sup: 'Cruïlles, comparatives i interpretacions' },
     ];
 
     let actual = 0;
@@ -141,7 +143,7 @@
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
-      document.getElementById('titol-sup').textContent = 'Cruïlles, comparatives i interpretacions';
+      document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -163,7 +165,7 @@
 
     document.querySelectorAll('.sidebar-link').forEach(a => {
       a.addEventListener('click', e => {
-        if (a.dataset.extern) return; // enllaços externs, navegació normal
+        if (a.dataset.extern) return;
         e.preventDefault();
         const idx = seccions.findIndex(s => s.id === a.dataset.seccio);
         if (idx >= 0) mostraSeccio(idx);
@@ -181,5 +183,6 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
   </script>
 
+  <script src="js/textos.js"></script>
 </body>
 </html>

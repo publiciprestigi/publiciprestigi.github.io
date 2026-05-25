@@ -6,6 +6,8 @@
   <meta name="description" content="Part II — Prestigi. Presència i premis als festivals internacionals (1965–2025).">
   <title>Part II — Prestigi · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
+  <link rel="stylesheet" href="css/textos-extra.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body class="amb-sidebar">
 
@@ -126,15 +128,14 @@
 
   <script>
     const seccions = [
-      { id: 'introduccio',          titol: 'Dades i criteri',                    sup: 'Presència i premis als festivals internacionals', grup: 'Context' },
-      { id: 'premiades',           titol: 'Premiades a festivals per dècada',          sup: 'Presència i premis als festivals internacionals', grup: 'Festivals' },
-      
-      { id: 'cannes',              titol: 'Festival de Cannes — Compétition officielle',                         sup: 'Presència a les seccions oficials', grup: 'Festivals' },
-      { id: 'berlin',              titol: 'Festival de Berlín — Wettbewerb',                         sup: 'Presència a les seccions oficials', grup: 'Festivals' },
-      { id: 'venezia',             titol: 'Festival de Venècia — Concorso',                        sup: 'Presència a les seccions oficials', grup: 'Festivals' },
-      { id: 'sansebastia',         titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',                  sup: 'Presència a les seccions oficials', grup: 'Festivals' },
-      { id: 'ranking-espectadors', titol: 'Rànquing per espectadors',  sup: 'Rànquings', grup: 'Rànquings' },
-      { id: 'ranking-directors',   titol: 'Rànquing per directors',                     sup: 'Rànquings', grup: 'Rànquings' },
+      { id: 'introduccio',          titol: 'Dades i criteri',                                          sup: 'Presència i premis als festivals internacionals' },
+      { id: 'premiades',            titol: 'Premiades a festivals per dècada',                         sup: 'Presència i premis als festivals internacionals' },
+      { id: 'cannes',               titol: 'Festival de Cannes — Compétition officielle',              sup: 'Presència a les seccions oficials' },
+      { id: 'berlin',               titol: 'Festival de Berlín — Wettbewerb',                         sup: 'Presència a les seccions oficials' },
+      { id: 'venezia',              titol: 'Festival de Venècia — Concorso',                          sup: 'Presència a les seccions oficials' },
+      { id: 'sansebastia',          titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',  sup: 'Presència a les seccions oficials' },
+      { id: 'ranking-espectadors',  titol: 'Rànquing per espectadors',                                sup: 'Rànquings' },
+      { id: 'ranking-directors',    titol: 'Rànquing per directors',                                  sup: 'Rànquings' },
     ];
 
     let actual = 0;
@@ -144,15 +145,10 @@
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
-      document.getElementById('titol-sup').textContent = 'Presència i premis als festivals internacionals';
+      document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
-      // Color per festival
-      const festColors = {
-        'cannes': '#9B2335', 'berlin': '#1E4080',
-        'venezia': '#2E7D5E', 'sansebastia': '#6B3FA0'
-      };
-      const h1 = document.getElementById('titol-principal');
-      h1.style.color = festColors[s.id] || 'var(--color-text)';
+      const festColors = { 'cannes': '#9B2335', 'berlin': '#1E4080', 'venezia': '#2E7D5E', 'sansebastia': '#6B3FA0' };
+      document.getElementById('titol-principal').style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
       if (lnk) lnk.classList.add('actiu');
@@ -186,6 +182,7 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
   </script>
 
+  <script src="js/textos.js"></script>
   <script src="js/part-ii.js"></script>
 </body>
 </html>
