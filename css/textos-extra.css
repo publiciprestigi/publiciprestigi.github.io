@@ -98,11 +98,10 @@
   background: transparent !important;
 }
 
-/* Zebra dins les taules de dècada — variació molt subtil sobre el color de fons */
-.taula-films tbody tr:nth-child(even) {
-  filter: brightness(0.97);
+/* Zebra dins les taules de dècada — files imparells blanc, parells color de dècada */
+.taula-films tbody tr:nth-child(odd) {
+  background: #ffffff !important;
 }
 .taula-films .fila-boto-context {
-  filter: none !important;
   background: transparent !important;
 }
