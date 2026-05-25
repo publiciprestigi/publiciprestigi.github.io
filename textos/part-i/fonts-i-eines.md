@@ -21,7 +21,7 @@ Les coproduccions es comptabilitzen com a espanyoles seguint el criteri oficial 
 
 Les xifres d'espectadors de l'ICAA per als films anteriors als anys 80 són totals acumulats des de l'estrena fins que el film desapareixia definitivament de la cartellera, un procés que podia durar anys. El sistema de distribució de l'època funcionava en cascada: un film s'estrenava primer als grans cinemes de les capitals, després a províncies i als pobles, i finalment a les sales de sessió contínua i als cines de reestrena. Cada graó d'aquesta cadena sumava espectadors durant molts mesos o anys addicionals. Per als films dels anys 90 en endavant, aquest fenomen pràcticament ha desaparegut: l'impacte es concentra en les primeres setmanes o mesos d'estrena i les dades reflecteixen un consum molt més immediat i homogeni.
 
-### El gran problema del rang brut d'espectadors
+### El problema del rang brut d'espectadors
 
 Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys 60, els espanyols anaven al cinema de mitjana 10 o 12 vegades l'any en un país de 32 milions d'habitants. El 2025, van al cinema menys d'una vegada i mitja l'any, en un país de 48 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció.
 
