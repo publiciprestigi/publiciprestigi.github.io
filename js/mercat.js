@@ -40,7 +40,7 @@ async function construirGraficMercat() {
       <p class="grafic-peu">
       
         Entrades venudes totals a Espanya (barres blaves) i població (línia taronja).
-        La caiguda del mercat és continuada i no s'explica per la població —que creix—
+        La caiguda del mercat és continuada i no s'explica per la població (que creix)
         sinó per la competència d'altres formes d'oci i la multiplicació de pantalles.
 
       </p>
