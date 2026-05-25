@@ -8,13 +8,13 @@ Quant a l'abast cronològic: l'estudi cobreix des de 1965, any a partir del qual
 
 Una advertència prèvia sobre les dades: les xifres d'espectadors de l'ICAA per als films anteriors als anys 80 són totals acumulats des de l'estrena fins que el film desapareixia definitivament de la cartellera, un procés que podia durar anys. El sistema de distribució de l'època funcionava en cascada: un film s'estrenava primer als grans cinemes de les capitals, després a províncies i als pobles, i finalment a les sales de sessió contínua i als cines de reestrena. Cada graó d'aquesta cadena sumava espectadors durant molts mesos o anys addicionals. Per als films dels anys 90 en endavant, aquest fenomen pràcticament ha desaparegut: l'impacte es concentra en les primeres setmanes o mesos d'estrena i les dades reflecteixen un consum molt més immediat i homogeni.
 
-## El gran problema del rang brut d'espectadors
+### El gran problema del rang brut d'espectadors
 
 Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing és enganyós. Als anys 60, els espanyols anaven al cinema de mitjana 10 o 12 vegades l'any en un país de 32 milions d'habitants. El 2025, van al cinema menys d'una vegada i mitja l'any, en un país de 48 milions, amb Netflix, HBO, YouTube i el mòbil competint per cada minut d'atenció.
 
 Per exemple: *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espectadors en un mercat total de 370 milions d'entrades (una quota de l'1,16%). *Mujeres al borde de un ataque de nervios* (1988) va fer 3,3 milions en un mercat de 85 milions (una quota del 3,94%). En espectadors bruts guanya Pedro Lazaga. En quota de mercat, Almodóvar quasi quadruplica la seva marca. L'Índex d'Impacte Cultural (IIC) proposa respondre quina de les dues va impactar més realment la societat del seu temps.
 
-## Les quatre mètriques: com es llegeix cadascuna
+### Les quatre mètriques: com es llegeix cadascuna
 
 A les taules d'aquest estudi trobareu quatre columnes de mesura. Cadascuna conta una història diferent:
 
@@ -27,10 +27,10 @@ A les taules d'aquest estudi trobareu quatre columnes de mesura. Cadascuna conta
 
 *Limitació honesta: l'IIC és una eina útil per a la comparació contextual, no una veritat científica. Les dades de mercat dels anys 60-70 (el total de les entrades venudes en sales de cinema per any, siguin per a pel·lícules espanyoles com internacionals) són estimacions basades en fonts estadístiques. A més, les xifres d'espectadors d'aquelles dècades poden incloure reposicions i reestrenes posteriors al seu any d'estrena, per la qual cosa els valors d'IIC dels films antics podrien estar lleugerament sobrevalorats.*
 
-## Sobre la quota de mercat i el símbol ≈
+### Sobre la quota de mercat i el símbol ≈
 
 Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern, *Historia del cine español*, Cátedra) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore.
 
-## Sobre els textos 'Impacte Social / Context'
+### Sobre els textos de 'Context'
 
 Els textos de context han estat redactats a partir d'una síntesi de la historiografia del cinema espanyol: *Historia del cine español* de Romà Gubern et al. (Cátedra), *El cine español después de Franco* de John Hopewell (El arquero, 1989), *Del azul al verde: el cine español bajo el franquismo* de Domènec Font (Avance, 1976), els catàlegs de l'Academia de las Artes y las Ciencias Cinematográficas de España, i la cobertura de Cahiers du Cinéma España i Fotogramas. Són valoracions contextuals i interpretatives, no dades de l'ICAA.
