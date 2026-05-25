@@ -356,6 +356,18 @@ function construirRànquingDirectors() {
     return `<td>${d.nom}${pr}</td>`;
   };
 
+  const celTop3Exp = (d, key_pr, color, fest, id) => {
+    if (!d) return '<td class="col-subtil">—</td>';
+    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
+    const films = festivalsData
+      .filter(f => f.festival === fest && f.director === d.nom && f.premiat)
+      .map(f => `<em>${f.titol}</em> <span class="film-any">(${f.any})</span>`)
+      .join(' · ');
+    return `<td>${d.nom}${pr}
+      <div id="${id}" class="top3-dir-films" style="display:none">${films}</div>
+    </td>`;
+  };
+
   cont.innerHTML = `
     <h3 class="subtitol-ranking-gran">Top 25 — Tots els festivals</h3>
     <table class="taula-festivals">
@@ -398,76 +410,40 @@ function construirRànquingDirectors() {
         <th class="col-center" style="width:40px">Films</th>
       </tr></thead>
       <tbody>
-        <tr>
+        <tr data-fest="top3-c">
           <td>${nomFest('Cannes')}</td>
-          ${celTop3(top3c[0],'c_pr',FC['Cannes'])}
-          ${celTop3(top3c[1],'c_pr',FC['Cannes'])}
-          ${celTop3(top3c[2],'c_pr',FC['Cannes'])}
+          ${celTop3Exp(top3c[0],'c_pr',FC['Cannes'],'Cannes','top3-c-0')}
+          ${celTop3Exp(top3c[1],'c_pr',FC['Cannes'],'Cannes','top3-c-1')}
+          ${celTop3Exp(top3c[2],'c_pr',FC['Cannes'],'Cannes','top3-c-2')}
           <td class="col-center">
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-c',this)">+</button>
           </td>
         </tr>
-        <tr id="top3-c" style="display:none">
-          <td colspan="5" class="cel-context-text">
-            ${[top3c[0],top3c[1],top3c[2]].filter(Boolean).map((d,i)=>{
-              const films = festivalsData.filter(f=>f.festival==='Cannes'&&f.director===d.nom&&f.premiat)
-                .map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ');
-              return `<div class="top3-dir-bloc"><strong>${d.nom}</strong><br><span class="top3-dir-films">${films}</span></div>`;
-            }).join('')}
-          </td>
-        </tr>
-        <tr>
+        <tr data-fest="top3-b">
           <td>${nomFest('Berlín')}</td>
-          ${celTop3(top3b[0],'b_pr',FC['Berlín'])}
-          ${celTop3(top3b[1],'b_pr',FC['Berlín'])}
-          ${celTop3(top3b[2],'b_pr',FC['Berlín'])}
+          ${celTop3Exp(top3b[0],'b_pr',FC['Berlín'],'Berlín','top3-b-0')}
+          ${celTop3Exp(top3b[1],'b_pr',FC['Berlín'],'Berlín','top3-b-1')}
+          ${celTop3Exp(top3b[2],'b_pr',FC['Berlín'],'Berlín','top3-b-2')}
           <td class="col-center">
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-b',this)">+</button>
           </td>
         </tr>
-        <tr id="top3-b" style="display:none">
-          <td colspan="5" class="cel-context-text">
-            ${[top3b[0],top3b[1],top3b[2]].filter(Boolean).map((d,i)=>{
-              const films = festivalsData.filter(f=>f.festival==='Berlín'&&f.director===d.nom&&f.premiat)
-                .map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ');
-              return `<div class="top3-dir-bloc"><strong>${d.nom}</strong><br><span class="top3-dir-films">${films}</span></div>`;
-            }).join('')}
-          </td>
-        </tr>
-        <tr>
+        <tr data-fest="top3-v">
           <td>${nomFest('Venècia')}</td>
-          ${celTop3(top3v[0],'v_pr',FC['Venècia'])}
-          ${celTop3(top3v[1],'v_pr',FC['Venècia'])}
-          ${celTop3(top3v[2],'v_pr',FC['Venècia'])}
+          ${celTop3Exp(top3v[0],'v_pr',FC['Venècia'],'Venècia','top3-v-0')}
+          ${celTop3Exp(top3v[1],'v_pr',FC['Venècia'],'Venècia','top3-v-1')}
+          ${celTop3Exp(top3v[2],'v_pr',FC['Venècia'],'Venècia','top3-v-2')}
           <td class="col-center">
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-v',this)">+</button>
           </td>
         </tr>
-        <tr id="top3-v" style="display:none">
-          <td colspan="5" class="cel-context-text">
-            ${[top3v[0],top3v[1],top3v[2]].filter(Boolean).map((d,i)=>{
-              const films = festivalsData.filter(f=>f.festival==='Venècia'&&f.director===d.nom&&f.premiat)
-                .map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ');
-              return `<div class="top3-dir-bloc"><strong>${d.nom}</strong><br><span class="top3-dir-films">${films}</span></div>`;
-            }).join('')}
-          </td>
-        </tr>
-        <tr>
+        <tr data-fest="top3-s">
           <td>${nomFest('Sant Sebastià')}</td>
-          ${celTop3(top3s[0],'s_pr',FC['Sant Sebastià'])}
-          ${celTop3(top3s[1],'s_pr',FC['Sant Sebastià'])}
-          ${celTop3(top3s[2],'s_pr',FC['Sant Sebastià'])}
+          ${celTop3Exp(top3s[0],'s_pr',FC['Sant Sebastià'],'Sant Sebastià','top3-s-0')}
+          ${celTop3Exp(top3s[1],'s_pr',FC['Sant Sebastià'],'Sant Sebastià','top3-s-1')}
+          ${celTop3Exp(top3s[2],'s_pr',FC['Sant Sebastià'],'Sant Sebastià','top3-s-2')}
           <td class="col-center">
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-s',this)">+</button>
-          </td>
-        </tr>
-        <tr id="top3-s" style="display:none">
-          <td colspan="5" class="cel-context-text">
-            ${[top3s[0],top3s[1],top3s[2]].filter(Boolean).map((d,i)=>{
-              const films = festivalsData.filter(f=>f.festival==='Sant Sebastià'&&f.director===d.nom&&f.premiat)
-                .map(f=>`<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`).join(' · ');
-              return `<div class="top3-dir-bloc"><strong>${d.nom}</strong><br><span class="top3-dir-films">${films}</span></div>`;
-            }).join('')}
           </td>
         </tr>
       </tbody>
