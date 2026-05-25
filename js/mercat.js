@@ -41,7 +41,7 @@ async function construirGraficMercat() {
         Entrades venudes totals a Espanya (barres) i població (línia taronja), 1965–2025.
         La caiguda del mercat és continuada i no s'explica per la població —que creix—
         sinó per la competència d'altres formes d'oci i la multiplicació de pantalles.
-        <span class="grafic-llegenda-estimat">Barres més clares: dades estimades.</span>
+
       </p>
     </div>`;
 
