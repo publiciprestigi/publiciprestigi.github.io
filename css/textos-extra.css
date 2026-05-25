@@ -98,10 +98,7 @@
   background: transparent !important;
 }
 
-/* Zebra dins les taules de dècada — files imparells blanc, parells color de dècada */
-.taula-films tbody tr:nth-child(odd) {
-  background: #ffffff !important;
-}
+/* Taules de dècada — color uniforme, sense zebra */
 .taula-films .fila-boto-context {
   background: transparent !important;
 }
