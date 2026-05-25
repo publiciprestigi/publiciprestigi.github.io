@@ -33,10 +33,10 @@ A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna conta
 
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
-| **Espectadors absoluts** | *Entrades venudes* | La mesura bruta. Útil per comparar films del mateix any o dècada. Portser enganyosa per comparar èpoques. |
+| **Espectadors absoluts** | *Entrades venudes* | La mesura bruta. Útil per comparar films del mateix any o dècada, potser enganyosa per comparar èpoques. |
 | **Quota de mercat** | *Espectadors ÷ Mercat total de l'any* | De cada 100 entrades venudes a Espanya aquell any, quantes van ser per a aquest film? Penalitza els films dels 60s (mercat gegantí) i premia els moderns (mercat petit). |
 | **Penetració demogràfica** | *Espectadors ÷ Població espanyola* | De cada 100 espanyols, quants van veure la pel·li? Mesura la presència en la societat. Similar a la quota però amb relació a les persones, no al consum. |
-| **IIC — Índex d'Impacte Cultural** | *0,683 × √(Quota × Penetració), escala 0–10* | La mesura equilibrada: combina les dues anteriors amb la mitjana geomètrica i escala el resultat de 0 a 10 (on 10 = *8 apellidos vascos*). Probablement la més útil per comparar èpoques.
+| **IIC — Índex d'Impacte Cultural** | *0,683 × √(Quota × Penetració), escala 0–10* | La mesura equilibrada: combina les dues anteriors amb la mitjana geomètrica i escala el resultat de 0 a 10 (on 10 = *8 apellidos vascos*). Probablement la més útil per comparar èpoques. |
 
 ### Sobre la quota de mercat i el símbol ≈
 
