@@ -361,7 +361,7 @@ function construirRànquingDirectors() {
     const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
     const films = festivalsData
       .filter(f => f.festival === fest && f.director === d.nom && f.premiat)
-      .map(f => `<em>${f.titol}</em> <span class="film-any">(${f.any})</span>`)
+      .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
       .join(' · ');
     return `<td>${d.nom}${pr}
       <div id="${id}" class="top3-dir-films" style="display:none">${films}</div>
