@@ -44,4 +44,4 @@ Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual d
 
 ### Sobre els textos de 'Context'
 
-Els textos de context han estat redactats a partir d'una síntesi de la historiografia del cinema espanyol: *Historia del cine español* de Romà Gubern et al. (Cátedra), *El cine español después de Franco* de John Hopewell (El arquero, 1989), *Del azul al verde: el cine español bajo el franquismo* de Domènec Font (Avance, 1976), els catàlegs de l'Acadèmia de les Arts i les Ciències Cinematogràfiques d'Espanya, i la cobertura de Cahiers du Cinéma España i Fotogramas. Són valoracions contextuals i interpretatives, no dades de l'ICAA.
+Els textos de context han estat redactats a partir d'una síntesi de la historiografia del cinema espanyol: *Historia del cine español* de Romà Gubern et al. (Cátedra), *El cine español después de Franco* de John Hopewell (El arquero, 1989), *Del azul al verde: el cine español bajo el franquismo* de Domènec Font (Avance, 1976), els catàlegs de l'Acadèmia de les Arts i les Ciències Cinematogràfiques d'Espanya, i la cobertura de Cahiers du Cinéma España i Fotogramas. Són valoracions contextuals i interpretatives.
