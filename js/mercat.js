@@ -20,11 +20,10 @@ async function construirGraficMercat() {
   const poblacio  = dades.map(d => d.poblacio_M);
   const estimats  = dades.map(d => d.estimat);
 
-  // Colors de les barres: vermell per 2020, blau estimat vs blau verificat
+  // Colors de les barres: vermell per 2020, blau uniforme per a la resta
   const colorsBarres = dades.map(d => {
     if (d.any === 2020) return 'rgba(180, 50, 50, 0.85)';
-    if (d.estimat)      return 'rgba(100, 140, 190, 0.75)';
-    return                     'rgba(80, 120, 175, 0.85)';
+    return 'rgba(80, 120, 175, 0.85)';
   });
 
   // Límits de dècades per a les línies verticals
@@ -97,8 +96,8 @@ async function construirGraficMercat() {
       ctx.fillStyle = 'rgba(180,50,50,0.9)';
       ctx.font = 'bold 10px -apple-system, SF Pro Text, sans-serif';
       ctx.textAlign = 'right';
-      ctx.fillText('Col·lapse pandèmic', x2020 - 4, y2020 - 18);
-      ctx.fillText('50M (2020)', x2020 - 4, y2020 - 6);
+      ctx.fillText('Col·lapse pandèmic', x2020 + 4, y.top + 30);
+      ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
 
       // Anotació −78%
       const yRef = y.getPixelForValue(entrades[anys.indexOf(2025)]);
