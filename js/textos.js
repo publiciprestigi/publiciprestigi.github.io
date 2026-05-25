@@ -1,30 +1,8 @@
-/* Públic i Prestigi — Carregador de textos editorials des de Markdown
- *
- * Funcionament:
- * Cada contenidor HTML amb la classe "text-md" carrega un fitxer .md
- * de la carpeta /textos/ i el renderitza com a HTML.
- *
- * Atributs:
- *   data-text="part-i/decada-70s"   → carrega /textos/part-i/decada-70s.md
- *   data-bloc="intro"               → opcional: només renderitza el bloc <!-- intro -->
- *                                     Si no s'indica, renderitza tot el fitxer.
- *
- * Blocs dins d'un .md:
- *   <!-- intro -->
- *   Text introductori...
- *   <!-- /intro -->
- *
- *   <!-- comentari -->
- *   Text de comentari...
- *   <!-- /comentari -->
- *
- * Si el .md no té marques de bloc, tot el contingut es considera un bloc únic.
- */
+/* Públic i Prestigi — Carregador de textos editorials des de Markdown */
 
 (function() {
   'use strict';
 
-  // Cache: evita descarregar el mateix .md més d'un cop per pàgina
   const cache = {};
 
   async function carregaFitxer(ruta) {
@@ -43,13 +21,17 @@
 
   function extreuBloc(md, nomBloc) {
     if (!nomBloc) return md;
-    // Cerca <!-- nomBloc --> ... <!-- /nomBloc -->
+    // Extreu el text entre <!-- nomBloc --> i <!-- /nomBloc --> del Markdown brut
     const re = new RegExp(
-      '<!--\\s*' + nomBloc + '\\s*-->([\\s\\S]*?)<!--\\s*/' + nomBloc + '\\s*-->',
+      '<!--\\s*' + nomBloc + '\\s*-->[\\r\\n]?([\\s\\S]*?)[\\r\\n]?<!--\\s*\\/' + nomBloc + '\\s*-->',
       'i'
     );
     const m = md.match(re);
-    return m ? m[1].trim() : '';
+    if (!m) {
+      console.warn('Bloc "' + nomBloc + '" no trobat al fitxer');
+      return '';
+    }
+    return m[1].trim();
   }
 
   async function renderitza(div) {
@@ -62,7 +44,13 @@
       return;
     }
 
-    const contingut = bloc ? extreuBloc(md, bloc) : md;
+    // IMPORTANT: primer extreure el bloc del Markdown brut, després convertir a HTML
+    const contingut = extreuBloc(md, bloc);
+
+    if (!contingut) {
+      div.innerHTML = '';
+      return;
+    }
 
     if (typeof marked === 'undefined') {
       console.error('marked.js no s\'ha carregat');
@@ -70,14 +58,12 @@
       return;
     }
 
-    // Renderitza Markdown a HTML
     div.innerHTML = marked.parse(contingut);
     div.classList.add('text-md-carregat');
   }
 
   function inicialitza() {
-    const divs = document.querySelectorAll('.text-md[data-text]');
-    divs.forEach(renderitza);
+    document.querySelectorAll('.text-md[data-text]').forEach(renderitza);
   }
 
   if (document.readyState === 'loading') {
@@ -86,6 +72,5 @@
     inicialitza();
   }
 
-  // Exposat per si cal forçar una re-renderització després d'un canvi dinàmic
   window.PiP_textos = { renderitza, inicialitza };
 })();
