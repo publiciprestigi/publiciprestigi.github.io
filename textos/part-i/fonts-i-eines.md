@@ -7,13 +7,15 @@ Aquesta primera part de l'estudi recull les 100 pel·lícules espanyoles amb mé
 
 Les dues últimes posicions del rànquing original: *Una señora estupenda* (1967, d'Eugenio Martín, amb Lola Flores) i *Digan lo que digan* (1968, de Mario Camus, amb Raphael), han estat substituïdes per *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025) de Santiago Segura, les úniques pel·lícules espanyoles estrenades d'aquests darrers anys que han superat el llindar de 2 milions d'espectadors necessari per entrar al Top 100 de tots els temps.
 
-També s'han consultat la [resta d'anuaris publicats des de 1968](https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html) i el [catàleg de pel·lícules qualificades](https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html) del ICAA, per tal de confeccionar la resta de pel·lícules incloses més enllà del Top 100, les que apareixen en color gris a continuació de cada dècada, que ajuden a contextualitzar millor cada època i a completar una visió més àmplia de dècades amb poca representació.
+També s'han consultat la [resta d'anuaris publicats des de 1968](https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html) i el [catàleg de pel·lícules qualificades](https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html) del ICAA, per tal de confeccionar la resta de films inclosos més enllà del Top 100, les que apareixen en color gris a continuació de cada dècada, que ajuden a contextualitzar millor cada època i a completar una visió més àmplia de dècades amb poca representació.
 
-Quant a l'abast cronològic: l'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del rànquing.
+### Abast cronològic
+
+L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del rànquing.
 
 ### Coproduccions i directors no espanyols
 
-Les coproduccions es comptabilitzen com a espanyoles seguint el criteri oficial de l'ICAA: compten com a tals si compleixen els requisits legals de participació espanyola, sigui quina sigui la nacionalitat del director. Per això hi apareixen títols de Leone, Polanski o Woody Allen: no és una llicència de l'estudi, és la definició administrativa vigent. S'habilita un filtre per poder-les treure del llistat i poder visualitzar només títols de directors espanyols.
+Les coproduccions es comptabilitzen com a espanyoles seguint el criteri oficial de l'ICAA: compten com a tals si compleixen els requisits legals de participació espanyola, sigui quina sigui la nacionalitat del director. Per això hi apareixen títols de Leone, Polanski o Woody Allen: no és una llicència de l'estudi, és la definició administrativa vigent. S'habilita un filtre especial per poder-les treure del llistat.
 
 ### Diferències de models d'estrena 
 
