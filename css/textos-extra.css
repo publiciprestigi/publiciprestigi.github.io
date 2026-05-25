@@ -8,7 +8,7 @@
 }
 .text-md table th {
   text-align: left;
-  font-weight: 600;
+  font-weight: 700;
   padding: 6px 10px;
   border-bottom: 2px solid #333;
   white-space: nowrap;
@@ -46,5 +46,21 @@
 #titol-principal {
   font-size: 1.85rem;
   font-weight: 700;
-  color: #363737;
+  color: #1a1a1a;
+}
+
+/* Gràfic de mercat i població */
+.grafic-mercat-wrap {
+  margin: 8px 0 24px 0;
+}
+.grafic-peu {
+  font-size: 0.82em;
+  color: #666;
+  margin-top: 12px;
+  line-height: 1.5;
+  font-style: italic;
+}
+.grafic-llegenda-estimat {
+  display: inline-block;
+  margin-top: 4px;
 }
