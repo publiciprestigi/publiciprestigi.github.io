@@ -98,7 +98,17 @@
   background: transparent !important;
 }
 
-/* Taules de dècada — color uniforme, sense zebra */
+/* Taules de dècada — films de context sempre fons blanc */
+.taula-films tr[data-context="true"] {
+  background: #ffffff !important;
+}
 .taula-films .fila-boto-context {
-  background: transparent !important;
+  background: #ffffff !important;
+}
+
+/* Títol sticky — cobreix tot l'ample incloent el marge dret */
+.titol-sticky {
+  background: var(--color-fons, #ffffff);
+  width: 100%;
+  box-sizing: border-box;
 }
