@@ -99,13 +99,6 @@ async function construirGraficMercat() {
       ctx.fillText('Col·lapse pandèmic', x2020 + 4, y.top + 30);
       ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
 
-      // Anotació −78%
-      const yRef = y.getPixelForValue(entrades[anys.indexOf(2025)]);
-      ctx.fillStyle = 'rgba(100,100,100,0.7)';
-      ctx.font = '10px -apple-system, SF Pro Text, sans-serif';
-      ctx.textAlign = 'right';
-      ctx.fillText('−83% respecte al 1965', x2020 - 4, yRef + 24);
-
       ctx.restore();
     }
   };
