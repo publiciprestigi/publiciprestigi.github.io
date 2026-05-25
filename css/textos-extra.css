@@ -78,3 +78,23 @@
   color: #555;
   font-style: italic;
 }
+
+/* Padding primera columna a totes les taules de dades */
+.taula-films td:first-child,
+.taula-films th:first-child,
+.taula-ranking td:first-child,
+.taula-ranking th:first-child {
+  padding-left: 12px;
+}
+
+/* Zebra striping per als rànquings */
+.taula-ranking tbody tr:nth-child(even) {
+  background: #f4f7fa;
+}
+.taula-ranking tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+/* Excepció: files de botó i files extra no reben zebra */
+.taula-ranking .fila-boto-context {
+  background: transparent !important;
+}
