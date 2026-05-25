@@ -38,6 +38,10 @@ async function construirGraficMercat() {
     <div class="grafic-mercat-wrap">
       <canvas id="grafic-mercat-canvas"></canvas>
       <p class="grafic-peu">
+        Entrades venudes totals a Espanya (barres) i població (línia taronja), 1965–2025.
+        La caiguda del mercat és continuada i no s'explica per la població —que creix—
+        sinó per la competència d'altres formes d'oci i la multiplicació de pantalles.
+        El mercat de 2025 (65M) representa un −83% respecte al màxim de 1965 (∼390M).
 
       </p>
     </div>`;
@@ -208,4 +212,5 @@ async function construirGraficMercat() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', construirGraficMercat);
+// No s'executa automàticament — el crida part-i.html quan es navega a la secció
+window.PiP_graficMercat = construirGraficMercat;
