@@ -1,5 +1,15 @@
 /* Públic i Prestigi — Part I */
 
+const COLORS_DECADES = {
+  '60s':   { fons: '#f4f7fa', text: '#4a6070' },
+  '70s':   { fons: '#edf2f7', text: '#3a5568' },
+  '80s':   { fons: '#e4ecf4', text: '#2a4a60' },
+  '90s':   { fons: '#dae6f0', text: '#1a3f58' },
+  '2000s': { fons: '#cfe0ec', text: '#1a3850' },
+  '2010s': { fons: '#c3d9e8', text: '#0a2f48' },
+  '2020s': { fons: '#b6d2e4', text: '#0a2840' },
+};
+
 let filmsData = [];
 
 async function carregarFilms() {
@@ -16,11 +26,12 @@ const fmtPct = (n, e) => n == null ? '—' : n.toFixed(2) + '%' + (e ? '≈' : '
 const fmtIIC = n => n == null ? '—' : n.toFixed(2);
 const fmtMercat = (n, e) => n == null ? '—' : n.toFixed(1) + 'M' + (e ? '≈' : '');
 
-function construirFila(film) {
+function construirFila(film, decada) {
   const posHist = film.pos_hist ? `${film.pos_hist}` : '—';
   const cls = film.in_top100 ? 'film-top100' : 'film-context';
   const titol = `<strong><em>${film.titol}</em></strong> <span class="film-any">(${film.any})</span>`;
-  return `<tr class="${cls}" data-context="${!film.in_top100}">
+  const col = decada && COLORS_DECADES[decada] ? `style="background:${COLORS_DECADES[decada].fons}"` : '';
+  return `<tr class="${cls}" data-context="${!film.in_top100}" ${col}>
     <td>${film.pos_decade}</td>
     <td class="col-subtil col-center">${posHist}</td>
     <td class="col-titol">${titol}</td>
@@ -59,7 +70,7 @@ function construirTaulaDècada(decadaId, cont) {
     <table class="taula-films" data-decada="${decadaId}">
       ${capcalera()}
       <tbody>
-        ${top100.map(construirFila).join('')}
+        ${top100.map(f => construirFila(f, decadaId)).join('')}
         ${context.length ? `
           <tr class="fila-boto-context">
             <td colspan="10">
@@ -68,7 +79,7 @@ function construirTaulaDècada(decadaId, cont) {
               </button>
             </td>
           </tr>
-          ${context.map(f => construirFila(f).replace('data-context="true"', 'data-context="true" style="display:none"')).join('')}
+          ${context.map(f => construirFila(f, decadaId).replace('data-context="true"', 'data-context="true" style="display:none"')).join('')}
         ` : ''}
       </tbody>
     </table>`;
