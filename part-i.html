@@ -196,6 +196,8 @@
 
     let actual = 0;
 
+    let graficMercatInit = false;
+
     function mostraSeccio(idx) {
       actual = idx;
       const s = seccions[idx];
@@ -216,6 +218,12 @@
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = s.pos || ((idx + 1) + ' de ' + seccions.length);
       document.querySelector('.contingut-sidebar').scrollTop = 0;
+
+      // Inicialitza el gràfic de mercat la primera vegada que es visita
+      if (s.id === 'mercat' && !graficMercatInit && window.PiP_graficMercat) {
+        graficMercatInit = true;
+        setTimeout(window.PiP_graficMercat, 50);
+      }
     }
 
     function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
