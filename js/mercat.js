@@ -133,11 +133,7 @@ async function construirGraficMercat() {
       ]
     },
     options: {
-      animation: {
-        duration: 900,
-        easing: 'easeOutCubic',
-        delay: (ctx) => ctx.type === 'data' && ctx.datasetIndex === 0 ? 0 : 400,
-      },
+      animation: false,
       responsive: true,
       maintainAspectRatio: true,
       aspectRatio: 2.4,
