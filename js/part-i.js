@@ -87,9 +87,11 @@ window.toggleContext = function(decadaId, btn) {
 };
 
 function construirTaulesDècades() {
-  [['60s','seccio-60s'],['70s','seccio-70s'],['80s','seccio-80s'],
-   ['90s','seccio-90s'],['2000s','seccio-2000s'],['2010s','seccio-2010s'],
-   ['2020s','seccio-2020s']].forEach(([id, sid]) => {
+  // NOTA: els id interns són "taula-XXs", no "seccio-XXs",
+  // per evitar conflicte amb els div exteriors de navegació
+  [['60s','taula-60s'],['70s','taula-70s'],['80s','taula-80s'],
+   ['90s','taula-90s'],['2000s','taula-2000s'],['2010s','taula-2010s'],
+   ['2020s','taula-2020s']].forEach(([id, sid]) => {
     const c = document.getElementById(sid);
     if (c) construirTaulaDècada(id, c);
   });
@@ -97,7 +99,6 @@ function construirTaulesDècades() {
 
 /* --- Rànquings --- */
 
-// Posicions per espectadors (referència per a Var.)
 function posicionsEspectadors() {
   const pos = {};
   filmsData.filter(f => f.in_top100)
@@ -107,7 +108,7 @@ function posicionsEspectadors() {
 }
 
 function varHtml(posActual, posRef) {
-  const diff = posRef - posActual; // positiu = puja de posició = millora
+  const diff = posRef - posActual;
   if (diff > 0) return `<span class="var-up">↑${diff}</span>`;
   if (diff < 0) return `<span class="var-down">↓${Math.abs(diff)}</span>`;
   return `<span class="var-eq">=</span>`;
@@ -177,7 +178,7 @@ window.expandirRanking = function(cid, btn) {
 
 /* --- Rànquing directors --- */
 function construirRànquingDirectors() {
-  const cont = document.getElementById('seccio-directors');
+  const cont = document.getElementById('taula-directors');
   if (!cont) return;
 
   const totalEsp = filmsData.filter(f => f.in_top100)
@@ -200,7 +201,6 @@ function construirRànquingDirectors() {
 
   let ctrDir = 0;
 
-  // Rànquing 1: sols Top 100
   const llista1 = Object.values(dirs).filter(d => d.top100 > 0)
     .sort((a, b) => b.top100 - a.top100 || b.espTop - a.espTop);
 
@@ -225,7 +225,6 @@ function construirRànquingDirectors() {
     </tr>`;
   };
 
-  // Rànquing 2: tots els citats
   const llista2 = Object.values(dirs).filter(d => d.top100 > 0 || d.citats > 1)
     .map(d => ({ ...d, espTotal: d.espTop + d.espContext }))
     .sort((a, b) => b.espTotal - a.espTotal);
@@ -318,12 +317,11 @@ window.expandirD2 = function(btn) {
   btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure llista completa';
 };
 
-
 function construirRànquings() {
-  construirRànquing('espectadors', 'seccio-espectadors', 'Espectadors');
-  construirRànquing('penetracio', 'seccio-penetracio', 'Penetració');
-  construirRànquing('quota', 'seccio-quota', 'Quota de mercat');
-  construirRànquing('iic', 'seccio-iic', 'IIC');
+  construirRànquing('espectadors', 'taula-espectadors', 'Espectadors');
+  construirRànquing('penetracio',  'taula-penetracio',  'Penetració');
+  construirRànquing('quota',       'taula-quota',       'Quota de mercat');
+  construirRànquing('iic',         'taula-iic',         'IIC');
   construirRànquingDirectors();
 }
 
