@@ -98,7 +98,9 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const colors = ordre.map(d => COLORS_DECADES[d]?.fons || '#ccc');
   const textColors = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
-  cont.innerHTML = '<canvas id="grafic-decades-canvas"></canvas>';
+  cont.innerHTML = `
+    <canvas id="grafic-decades-canvas"></canvas>
+    <p class="grafic-peu">Nombre de pel·lícules del Top 100 per dècada i percentatge que representen sobre el total de 100 films.</p>`;
   const ctx = document.getElementById('grafic-decades-canvas').getContext('2d');
 
   new Chart(ctx, {
@@ -119,6 +121,13 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       aspectRatio: 2.8,
       plugins: {
         legend: { display: false },
+        title: {
+          display: true,
+          text: 'Distribució del Top 100 per dècada',
+          color: '#363737',
+          font: { size: 13, weight: '600', family: '-apple-system, SF Pro Text, sans-serif' },
+          padding: { bottom: 16 },
+        },
         tooltip: {
           callbacks: {
             label: ctx => ` ${ctx.parsed.y} pel·lícules (${pcts[ctx.dataIndex]}% del Top 100)`
@@ -159,7 +168,10 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
           ctx.fillStyle = textColors[i];
           ctx.font = 'bold 11px -apple-system, sans-serif';
           ctx.textAlign = 'center';
-          ctx.fillText(`${val} (${pcts[i]}%)`, xPos, yPos - 6);
+          ctx.font = 'bold 12px -apple-system, sans-serif';
+          ctx.fillText(`${val} films`, xPos, yPos - 18);
+          ctx.font = '11px -apple-system, sans-serif';
+          ctx.fillText(`${pcts[i]}%`, xPos, yPos - 5);
         });
         ctx.restore();
       }
