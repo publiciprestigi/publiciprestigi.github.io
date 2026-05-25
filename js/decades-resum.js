@@ -1,13 +1,13 @@
 /* Públic i Prestigi — Taula resum per dècades + gràfic de distribució */
 
 const COLORS_DECADES = {
-  '60s':   { fons: '#ede0c4', text: '#6b5230' },
-  '70s':   { fons: '#e0d4a8', text: '#5a4a20' },
-  '80s':   { fons: '#ccd8b4', text: '#3a5030' },
-  '90s':   { fons: '#b4d0c8', text: '#2a5048' },
-  '2000s': { fons: '#a0c0d4', text: '#1a4060' },
-  '2010s': { fons: '#88aac8', text: '#1a3858' },
-  '2020s': { fons: '#7098b8', text: '#0a2848' },
+  '60s':   { fons: '#f4f7fa', text: '#4a6070' },
+  '70s':   { fons: '#edf2f7', text: '#3a5568' },
+  '80s':   { fons: '#e4ecf4', text: '#2a4a60' },
+  '90s':   { fons: '#dae6f0', text: '#1a3f58' },
+  '2000s': { fons: '#cfe0ec', text: '#1a3850' },
+  '2010s': { fons: '#c3d9e8', text: '#0a2f48' },
+  '2020s': { fons: '#b6d2e4', text: '#0a2840' },
 };
 
 async function construirResumDecades() {
@@ -25,9 +25,9 @@ async function construirResumDecades() {
 
   const ordre = ['60s','70s','80s','90s','2000s','2010s','2020s'];
   const etiquetes = {
-    '60s': 'Anys 1965–1969', '70s': 'Anys 70', '80s': 'Anys 80',
-    '90s': 'Anys 90', '2000s': 'Anys 2000–2009',
-    '2010s': 'Anys 2010–2019', '2020s': 'Anys 2020–2025'
+    '60s': '1965–1969', '70s': '70s', '80s': '80s',
+    '90s': '90s', '2000s': '2000–2009',
+    '2010s': '2010–2019', '2020s': '2020–2025'
   };
 
   const top100 = films.filter(f => f.in_top100);
