@@ -29,16 +29,14 @@ Per exemple: *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espec
 
 ### Les quatre mètriques: com es llegeix cadascuna
 
-A les taules d'aquest estudi trobareu quatre columnes de mesura. Cadascuna conta una història diferent:
+A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna conta una història diferent:
 
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
-| **Espectadors absoluts** | *Entrades venudes* | La mesura bruta. Útil per comparar films del mateix any o dècada. Enganyosa per comparar èpoques: afavoreix els films dels 60s pel mercat gegantí. |
-| **Quota de mercat** | *Espectadors ÷ Mercat total de l'any* | De cada 100 entrades venudes a Espanya aquell any, quantes van ser per a aquest film? Penalitza els films dels 60s (mercat de 370M d'entrades venudes per any) i premia els moderns (mercat de 65-100M). |
+| **Espectadors absoluts** | *Entrades venudes* | La mesura bruta. Útil per comparar films del mateix any o dècada. Portser enganyosa per comparar èpoques. |
+| **Quota de mercat** | *Espectadors ÷ Mercat total de l'any* | De cada 100 entrades venudes a Espanya aquell any, quantes van ser per a aquest film? Penalitza els films dels 60s (mercat gegantí) i premia els moderns (mercat petit). |
 | **Penetració demogràfica** | *Espectadors ÷ Població espanyola* | De cada 100 espanyols, quants van veure la pel·li? Mesura la presència en la societat. Similar a la quota però amb relació a les persones, no al consum. |
-| **IIC — Índex d'Impacte Cultural** | *0,683 × √(Quota × Penetració), escala 0–10* | La mesura equilibrada: combina les dues anteriors amb la mitjana geomètrica i escala el resultat de 0 a 10 (on 10 = *8 apellidos vascos*). Probablement la més útil per comparar èpoques. |
-
-Limitació honesta: l'IIC és una eina útil per a la comparació contextual, no una veritat científica. Les dades de mercat dels anys 60-70 (el total de les entrades venudes en sales de cinema per any, siguin per a pel·lícules espanyoles com internacionals) són estimacions basades en fonts estadístiques. A més, les xifres d'espectadors d'aquelles dècades poden incloure reposicions i reestrenes posteriors al seu any d'estrena, per la qual cosa els valors d'IIC dels films antics podrien estar lleugerament sobrevalorats.
+| **IIC — Índex d'Impacte Cultural** | *0,683 × √(Quota × Penetració), escala 0–10* | La mesura equilibrada: combina les dues anteriors amb la mitjana geomètrica i escala el resultat de 0 a 10 (on 10 = *8 apellidos vascos*). Probablement la més útil per comparar èpoques.
 
 ### Sobre la quota de mercat i el símbol ≈
 
