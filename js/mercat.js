@@ -38,8 +38,6 @@ async function construirGraficMercat() {
     <div class="grafic-mercat-wrap">
       <canvas id="grafic-mercat-canvas"></canvas>
       <p class="grafic-peu">
-      
-        Entrades venudes totals a Espanya (barres blaves) i població (línia taronja).
 
       </p>
     </div>`;
