@@ -41,3 +41,9 @@
   margin-bottom: 10px;
   line-height: 1.55;
 }
+
+/* Títol principal de les pàgines interiors (sidebar) */
+#titol-principal {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
