@@ -6,6 +6,8 @@
   <meta name="description" content="Part I — Públic. Top 100 pel·lícules espanyoles amb més espectadors (1965–2025).">
   <title>Part I — Públic · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
+  <!-- Carregador de Markdown per als textos editorials -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body class="amb-sidebar">
 
@@ -80,9 +82,11 @@
       </div>
 
       <!-- Seccions -->
+
+      <!-- MODEL A: només text editorial -->
       <div class="seccio-contingut" id="seccio-dades">
         <div class="contingut-text">
-          <p class="en-construccio">Contingut en construcció</p>
+          <div class="text-md" data-text="part-i/fonts-i-eines"></div>
         </div>
       </div>
 
@@ -98,7 +102,9 @@
         <div id="seccio-60s"></div>
       </div>
 
+      <!-- MODEL B: text introductori + taula generada pel JS -->
       <div class="seccio-contingut" id="seccio-70s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-70s" data-bloc="intro"></div>
         <div id="seccio-70s"></div>
       </div>
 
@@ -122,8 +128,11 @@
         <div id="seccio-2020s"></div>
       </div>
 
+      <!-- MODEL C: text intro + taula + comentari editorial -->
       <div class="seccio-contingut" id="seccio-espectadors">
+        <div class="text-md text-md-intro" data-text="part-i/ranking-espectadors" data-bloc="intro"></div>
         <div id="seccio-espectadors"></div>
+        <div class="text-md text-md-comentari" data-text="part-i/ranking-espectadors" data-bloc="comentari"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-penetracio">
@@ -258,6 +267,9 @@
       if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
     });
   </script>
+
+  <!-- Carregador de textos editorials Markdown -->
+  <script src="js/textos.js"></script>
 
   <script src="js/part-i.js"></script>
 </body>
