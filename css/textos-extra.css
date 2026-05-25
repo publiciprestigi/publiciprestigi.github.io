@@ -65,6 +65,12 @@
   margin-top: 4px;
 }
 
+/* Taula resum dècades — padding primera columna */
+.taula-decades-resum td:first-child,
+.taula-decades-resum th:first-child {
+  padding-left: 12px;
+}
+
 /* Text intermedi entre taula i gràfic */
 .text-md-intermedi {
   margin-top: 28px;
