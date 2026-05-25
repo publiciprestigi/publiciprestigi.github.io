@@ -1,14 +1,6 @@
 /* Públic i Prestigi — Part I */
 
-const COLORS_DECADES = {
-  '60s':   { fons: '#f4f7fa', text: '#4a6070' },
-  '70s':   { fons: '#edf2f7', text: '#3a5568' },
-  '80s':   { fons: '#e4ecf4', text: '#2a4a60' },
-  '90s':   { fons: '#dae6f0', text: '#1a3f58' },
-  '2000s': { fons: '#cfe0ec', text: '#1a3850' },
-  '2010s': { fons: '#c3d9e8', text: '#0a2f48' },
-  '2020s': { fons: '#b6d2e4', text: '#0a2840' },
-};
+// COLORS_DECADES definit a decades-resum.js
 
 let filmsData = [];
 
