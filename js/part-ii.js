@@ -450,11 +450,11 @@ function construirRànquingDirectors() {
     </table>`;
 }
 
-window.toggleTop3Films = function(id, btn) {
-  const div = document.getElementById(id);
-  if (!div) return;
-  const vis = div.style.display !== 'none';
-  div.style.display = vis ? 'none' : 'block';
+window.toggleTop3Films = function(key, btn) {
+  const divs = [0,1,2].map(i => document.getElementById(key+'-'+i)).filter(Boolean);
+  if (!divs.length) return;
+  const vis = divs[0].style.display !== 'none';
+  divs.forEach(d => d.style.display = vis ? 'none' : 'block');
   btn.textContent = vis ? '+' : '−';
 };
 
