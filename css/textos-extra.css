@@ -87,14 +87,22 @@
   padding-left: 12px;
 }
 
-/* Zebra striping per als rànquings */
+/* Zebra striping per als rànquings — gris molt pàl·lid, ben diferent dels blaus de dècada */
 .taula-ranking tbody tr:nth-child(even) {
-  background: #f4f7fa;
+  background: #f7f7f7;
 }
 .taula-ranking tbody tr:nth-child(odd) {
   background: #ffffff;
 }
-/* Excepció: files de botó i files extra no reben zebra */
 .taula-ranking .fila-boto-context {
+  background: transparent !important;
+}
+
+/* Zebra dins les taules de dècada — variació molt subtil sobre el color de fons */
+.taula-films tbody tr:nth-child(even) {
+  filter: brightness(0.97);
+}
+.taula-films .fila-boto-context {
+  filter: none !important;
   background: transparent !important;
 }
