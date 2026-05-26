@@ -289,7 +289,7 @@ function construirRànquingDirectors() {
         ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
     </table>
-    <div class="text-md text-md-comentari" data-text="part-i/ranking-directors" data-bloc="comentari"></div>
+    <div id="comentari-directors-1"></div>
 
     <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
