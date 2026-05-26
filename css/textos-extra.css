@@ -184,39 +184,31 @@ th.col-iic-header {
 }
 
 /* ── Família completa de títols dins blocs Markdown: uniforme a tota la web ── */
-.text-md h2,
-.text-md-intro h2,
-.text-md-comentari h2,
-.text-md-intermedi h2 {
+.seccio-contingut .text-md h2,
+.seccio-contingut .text-md-intro h2,
+.seccio-contingut .text-md-comentari h2,
+.seccio-contingut .text-md-intermedi h2 {
   font-size: 1.15rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+  padding-bottom: 0;
   border-bottom: none;
 }
-.text-md h3,
-.text-md-intro h3,
-.text-md-comentari h3,
-.text-md-intermedi h3 {
+.seccio-contingut .text-md h3,
+.seccio-contingut .text-md-intro h3,
+.seccio-contingut .text-md-comentari h3,
+.seccio-contingut .text-md-intermedi h3 {
   font-size: 1rem;
   font-weight: 600;
   margin-top: 1.25rem;
   margin-bottom: 0.4rem;
   border-bottom: none;
 }
-.text-md h4,
-.text-md-intro h4,
-.text-md-comentari h4,
-.text-md-intermedi h4 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-top: 1rem;
-  margin-bottom: 0.35rem;
-}
-.text-md p,
-.text-md-intro p,
-.text-md-comentari p,
-.text-md-intermedi p {
+.seccio-contingut .text-md p,
+.seccio-contingut .text-md-intro p,
+.seccio-contingut .text-md-comentari p,
+.seccio-contingut .text-md-intermedi p {
   margin-bottom: 0.85rem;
   line-height: 1.6;
 }
