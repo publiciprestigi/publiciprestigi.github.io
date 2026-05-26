@@ -2,6 +2,12 @@
 
 Recull de tots els premis a les seccions oficials en competició dels quatre grans festivals del circuit A (Cannes, Berlín, Venècia i Sant Sebastià), organitzats per dècada. Àmbit exclusiu: selecció oficial estrictament a concurs pel premi màxim de cada festival (Compétition officielle, Wettbewerb, Concorso, Sección Oficial a concurso). Excloses: seccions oficials "no competitives", Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi i totes les seccions paral·leles. Es limiten els premis al trofeu principal de la secció oficial competitiva, especials del jurat, millor direcció, millors interpretacions i millor guió (no es valoren premis tècnics ni secundaris).
 
+fonts:
+28 participacions documentades · 12 premiades · Font: arxiu de la web del festival.
+42 participacions documentades · 8 premiades · Font: arxiu de la web del festival.
+30 participacions documentades · 7 premiades · Font: web del festival, Wikipedia, Filmaffinity.
+164 participacions documentades · 39 premiades · Fonts: web del festival, Wikipedia.
+
 ## Presència a les seccions oficials
 
 Les quatre taules de presència recullen totes les pel·lícules espanyoles documentades en secció oficial a concurs a **Cannes** (28), **Berlín** (42), **Venècia** (30) i **Sant Sebastià** (164) entre 1965 i 2025 (un total de 264). Per a cada film s'indica si apareix al Top 100 d'espectadors de la Part I (posició global, posició dins la dècada i nombre d'espectadors acumulats).
