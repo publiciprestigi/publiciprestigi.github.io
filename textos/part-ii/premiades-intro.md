@@ -1,6 +1,14 @@
 <!-- intro -->
-Recull cronològic de tots els premis obtinguts pel cinema espanyol a les seccions oficials dels quatre festivals entre 1965 i 2025. El símbol ★ assenyala cada guardó. La taula de resum al final de cada dècada permet visualitzar l'evolució de la presència espanyola al circuit internacional.
+Recull cronològic de tots els premis obtinguts pel cinema espanyol a les seccions oficials dels quatre festivals entre 1965 i 2025. El símbol ★ assenyala cada guardó.
 <!-- /intro -->
+
+<!-- resum-intro -->
+Distribució dels premis obtinguts pel cinema espanyol als quatre festivals de Classe A entre 1965 i 2025.
+<!-- /resum-intro -->
+
+<!-- grans-premis-titol -->
+Els grans premis màxims
+<!-- /grans-premis-titol -->
 
 <!-- grans-premis -->
 - **Palma d'Or (Cannes): 0.** Espanya mai ha guanyat la Palma d'Or. Amb 28 seleccions documentades i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi internacional continua escapant-se.
