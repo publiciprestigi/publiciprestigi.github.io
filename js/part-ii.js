@@ -119,7 +119,9 @@ function construirPremiades() {
         <canvas id="grafic-premis-decades"></canvas>
       </div>
     </div>`;
-  cont.appendChild(graficDiv);
+  const resDiv = document.getElementById('taula-resum-premis');
+  if (resDiv) resDiv.appendChild(graficDiv);
+  else cont.appendChild(graficDiv);
 
   setTimeout(() => {
     const canvas = document.getElementById('grafic-premis-decades');
