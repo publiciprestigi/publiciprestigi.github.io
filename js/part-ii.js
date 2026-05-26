@@ -82,6 +82,80 @@ function construirPremiades() {
       </table>`;
   });
   cont.innerHTML = html;
+
+  // Afegir gràfic de resum + cards de totals DESPRÉS del HTML
+  const graficDiv = document.createElement('div');
+  graficDiv.innerHTML = `
+    <div style="margin-top:40px;padding-top:32px;border-top:1px solid #e5e5e5">
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
+        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#9B2335;font-weight:500;margin-bottom:4px;">Cannes</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">12</div>
+        </div>
+        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#1E4080;font-weight:500;margin-bottom:4px;">Berlín</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">8</div>
+        </div>
+        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#2E7D5E;font-weight:500;margin-bottom:4px;">Venècia</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">7</div>
+        </div>
+        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#6B3FA0;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">39</div>
+        </div>
+        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
+          <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">66</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1E4080;display:inline-block;"></span>Berlín</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#2E7D5E;display:inline-block;"></span>Venècia</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#6B3FA0;display:inline-block;"></span>Sant Sebastià</span>
+      </div>
+      <div style="position:relative;width:100%;height:260px;">
+        <canvas id="grafic-premis-decades"></canvas>
+      </div>
+    </div>`;
+  cont.appendChild(graficDiv);
+
+  setTimeout(() => {
+    const canvas = document.getElementById('grafic-premis-decades');
+    if (!canvas || !window.Chart) return;
+    new window.Chart(canvas, {
+      type: 'bar',
+      data: {
+        labels: ['60s','70s','80s','90s','2000s','2010s','2020s'],
+        datasets: [
+          { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', borderWidth: 0 },
+          { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', borderWidth: 0 },
+          { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', borderWidth: 0 },
+          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,7], backgroundColor: '#6B3FA0', borderWidth: 0 },
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, animation: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            filter: (item) => item.raw > 0,
+            callbacks: {
+              footer: (items) => {
+                if (items.length <= 1) return '';
+                return 'Total dècada: ' + items.reduce((s,i) => s+i.raw, 0);
+              }
+            }
+          }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false }, ticks: { font: { size: 12 } } },
+          y: { stacked: true, beginAtZero: true, ticks: { stepSize: 2, font: { size: 12 } }, grid: { color: 'rgba(0,0,0,0.06)' } }
+        }
+      }
+    });
+  }, 100);
 }
 
 /* ============================================================
