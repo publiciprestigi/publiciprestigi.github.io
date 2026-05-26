@@ -179,6 +179,12 @@ window.expandirRanking = function(cid, btn) {
   const visible = files[0] && files[0].style.display !== 'none';
   files.forEach(tr => tr.style.display = visible ? 'none' : '');
   btn.textContent = visible ? '+ Veure Top 100 complet' : '− Amagar';
+  // Amaga/mostra el comentari editorial segons si estem al Top 10 o Top 100
+  const seccio = document.getElementById(cid)?.closest('.seccio-contingut');
+  if (seccio) {
+    const comentari = seccio.querySelector('.text-md-comentari');
+    if (comentari) comentari.style.display = visible ? '' : 'none';
+  }
 };
 
 /* --- Rànquing directors --- */
