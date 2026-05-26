@@ -270,6 +270,22 @@ function construirRànquingDirectors() {
     </tr>`;
   };
 
+  // Injectar comentari2 després que el carregador de textos hagi acabat
+  setTimeout(() => {
+    const seccio = cont.closest('.seccio-contingut');
+    if (seccio && window.PiP_textos) {
+      const existing = seccio.querySelector('.text-md-comentari2');
+      if (!existing) {
+        const div = document.createElement('div');
+        div.className = 'text-md text-md-comentari text-md-comentari2';
+        div.dataset.text = 'part-i/ranking-directors';
+        div.dataset.bloc = 'comentari2';
+        seccio.appendChild(div);
+        window.PiP_textos.renderitza(div);
+      }
+    }
+  }, 100);
+
   cont.innerHTML = `
     <h3 class="subtitol-ranking">Només films del Top 100</h3>
     <table class="taula-ranking">
