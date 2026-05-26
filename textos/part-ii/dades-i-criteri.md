@@ -4,7 +4,7 @@ Recull de tots els premis a les seccions oficials en competició dels quatre gra
 
 ## Presència a les seccions oficials
 
-Les quatre taules de presència recullen totes les pel·lícules espanyoles documentades en secció oficial a concurs a **Cannes** (28), **Berlín** (42), **Venècia** (30) i **Sant Sebastià** (167) entre 1965 i 2025 (un total de 267). Per a cada film s'indica si apareix al Top 100 d'espectadors de la Part I (posició global, posició dins la dècada i nombre d'espectadors acumulats).
+Les quatre taules de presència recullen totes les pel·lícules espanyoles documentades en secció oficial a concurs a **Cannes** (28), **Berlín** (42), **Venècia** (30) i **Sant Sebastià** (164) entre 1965 i 2025 (un total de 264). Per a cada film s'indica si apareix al Top 100 d'espectadors de la Part I (posició global, posició dins la dècada i nombre d'espectadors acumulats).
 
 L'ordre de presentació respon al prestigi internacional consagrat per la FIAPF: Cannes, Berlín i Venècia formen la tríada dels festivals de classe A de referència mundial. Sant Sebastià, tot i tenir la mateixa categoria, és un festival d'àmbit i projecció relativament menor. Aquesta diferència de rang explica per què el cinema espanyol hi té una presència molt superior numèricament: el festival és percebut per la indústria nacional com una finestra natural per a produccions de qualitat orientades al mercat domèstic, cosa que genera una *sobrerepresentació* respecte als tres grans festivals europeus.
 
