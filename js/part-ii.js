@@ -95,7 +95,6 @@ function construirIntroduccio() {
 
 /* ============================================================
    TAULES PER FESTIVAL
-   # · Títol · Director · Premi/Observació · Top 100 · Dècada · Espectadors
    ============================================================ */
 function construirFestival(festival, seccioId) {
   const cont = document.getElementById(seccioId);
@@ -103,12 +102,6 @@ function construirFestival(festival, seccioId) {
 
   const films   = festivalsData.filter(f => f.festival === festival).sort((a,b) => a.any - b.any);
   const color   = FC[festival];
-  const titolFestival = {
-    'Cannes':       'Festival de Cannes — Compétition officielle',
-    'Berlín':       'Festival de Berlín — Wettbewerb',
-    'Venècia':      'Festival de Venècia — Concorso',
-    'Sant Sebastià':'Festival de Sant Sebastià — Sección Oficial a concurso',
-  }[festival];
   const total   = films.length;
   const nPremis = films.filter(f => f.premiat).length;
 
@@ -235,17 +228,16 @@ function construirRànquingDirectors() {
     b.c_sel-a.c_sel || b.b_sel-a.b_sel || b.v_sel-a.v_sel
   );
 
-  // Helper: cell with sel + ★N in festival color
+  // CORREGIT: sempre mostra ★N, fins i tot quan N=1
   const cel = (sel, pr, color) => {
     if (!sel) return `<td class="col-center col-subtil">—</td>`;
-    const pr_txt = pr ? ` <span style="color:${color}">★${pr>1?pr:''}</span>` : '';
+    const pr_txt = pr ? ` <span style="color:${color}">★${pr}</span>` : '';
     return `<td class="col-center">${sel}${pr_txt}</td>`;
   };
 
-  // Total ★ cell
   const celTotal = (pr) => {
     if (!pr) return `<td class="col-center col-subtil">—</td>`;
-    return `<td class="col-center">★${pr>1?pr:''}</td>`;
+    return `<td class="col-center">★${pr}</td>`;
   };
 
   /* --- TOP 25 TOTS ELS FESTIVALS --- */
@@ -344,15 +336,16 @@ function construirRànquingDirectors() {
   const top3v = top3PerFest('Venècia','v_sel','v_pr');
   const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr');
 
+  // CORREGIT: sempre mostra ★N fins i tot quan N=1
   const celTop3 = (d, key_pr, color) => {
     if (!d) return '<td class="col-subtil">—</td>';
-    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
+    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]}</span>` : '';
     return `<td>${d.nom}${pr}</td>`;
   };
 
   const celTop3Exp = (d, key_pr, color, fest, id) => {
     if (!d) return '<td class="col-subtil">—</td>';
-    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]>1?d[key_pr]:''}</span>` : '';
+    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]}</span>` : '';
     const films = festivalsData
       .filter(f => f.festival === fest && f.director === d.nom && f.premiat)
       .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
