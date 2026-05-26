@@ -3,14 +3,14 @@ Recull cronològic de tots els premis obtinguts pel cinema espanyol a les seccio
 <!-- /intro -->
 
 <!-- resum-intro -->
+## Resum premis per festival i per dècada
+
 Distribució dels premis obtinguts pel cinema espanyol als quatre festivals de Classe A entre 1965 i 2025.
 <!-- /resum-intro -->
 
-<!-- grans-premis-titol -->
-Els grans premis màxims
-<!-- /grans-premis-titol -->
-
 <!-- grans-premis -->
+## Els grans premis màxims
+
 - **Palma d'Or (Cannes): 0.** Espanya mai ha guanyat la Palma d'Or. Amb 28 seleccions documentades i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi internacional continua escapant-se.
 
 - **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (Carlos Saura, 1981), *La colmena* (Mario Camus, 1983) i *Alcarràs* (Carla Simón, 2022). Buit de trenta-nou anys entre el segon i el tercer guardó: un desert que reflecteix la irregularitat de la presència espanyola al festival.
