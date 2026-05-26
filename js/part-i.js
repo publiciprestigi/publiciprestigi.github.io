@@ -312,16 +312,16 @@ function construirRànquingDirectors() {
     </table>`;
 }
 
-// Carregar els textos Markdown inserits dins el HTML de directors
+// Carregar el comentari del primer rànquing de directors
 function carregarTextosDirectors() {
-  setTimeout(() => {
-    const cont = document.getElementById('taula-directors');
-    if (!cont || !window.PiP_textos) return;
-    cont.querySelectorAll('.text-md[data-text]').forEach(div => {
-      window.PiP_textos.renderitza(div);
-    });
-  }, 50);
-  carregarTextosDirectors();
+  const placeholder = document.getElementById('comentari-directors-1');
+  if (!placeholder || !window.PiP_textos) return;
+  const div = document.createElement('div');
+  div.className = 'text-md text-md-comentari';
+  div.dataset.text = 'part-i/ranking-directors';
+  div.dataset.bloc = 'comentari';
+  placeholder.replaceWith(div);
+  window.PiP_textos.renderitza(div);
 }
 
 window.toggleDirFilms = function(id, btn) {
