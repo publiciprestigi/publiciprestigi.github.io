@@ -58,10 +58,21 @@ function construirPremiades() {
 
   const premiades = festivalsData.filter(f => f.premiat).sort((a,b) => a.any - b.any);
 
+  const COLORS_DEC_II = {
+    '60s':   '#f0f5f9',
+    '70s':   '#deeaf4',
+    '80s':   '#ccdeed',
+    '90s':   '#bad3e6',
+    '2000s': '#a8c7df',
+    '2010s': '#96bcd8',
+    '2020s': '#a5c7e2',
+  };
+
   let html = '';
   ['60s','70s','80s','90s','2000s','2010s','2020s'].forEach(dec => {
     const films = premiades.filter(f => getDecada(f.any) === dec);
     if (!films.length) return;
+    const bgDec = COLORS_DEC_II[dec];
     html += `
       <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
@@ -72,7 +83,7 @@ function construirPremiades() {
           <th style="width:30%">Premi</th>
         </tr></thead>
         <tbody>
-          ${films.map(f => `<tr>
+          ${films.map(f => `<tr style="background:${bgDec};border-bottom:2px solid #fff">
             <td>${titolFilm(f)}</td>
             <td class="col-subtil">${f.director}</td>
             <td>${nomFest(f.festival)}</td>
@@ -179,13 +190,21 @@ function construirFestival(festival, seccioId) {
   const total   = films.length;
   const nPremis = films.filter(f => f.premiat).length;
 
+  const COLORS_FEST = {
+    'Cannes':        'rgba(155, 35, 53, 0.07)',
+    'Berlín':        'rgba(30, 64, 128, 0.07)',
+    'Venècia':       'rgba(46, 125, 94, 0.07)',
+    'Sant Sebastià': 'rgba(107, 63, 160, 0.07)',
+  };
+  const bgFest = COLORS_FEST[festival] || '#fff';
+
   const files = films.map((f, i) => {
     const isTop  = !!f.top100_pos;
-    const rowCls = f.premiat ? 'film-premiat' : '';
     const premi  = f.premiat ? `<span class="estrella">★</span> ${f.premi || ''}` : (f.premi || '—');
     const top100 = isTop ? `${f.top100_pos}` : '—';
     const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
-    return `<tr class="${rowCls}">
+    const rowBg  = f.premiat ? 'rgba(255,253,230,0.8)' : bgFest;
+    return `<tr style="background:${rowBg};border-bottom:2px solid #fff">
       <td class="col-subtil col-pos">${i+1}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
