@@ -314,12 +314,13 @@ function construirRànquingDirectors() {
 
 // Carregar el comentari del primer rànquing de directors
 function carregarTextosDirectors() {
+  if (!window.PiP_textos) return;
   const placeholder = document.getElementById('comentari-directors-1');
-  if (!placeholder || !window.PiP_textos) return;
+  if (!placeholder) return;
   const div = document.createElement('div');
   div.className = 'text-md text-md-comentari';
   div.dataset.text = 'part-i/ranking-directors';
-  div.dataset.bloc = 'comentari';
+  div.dataset.bloc = 'comentari-r1';
   placeholder.replaceWith(div);
   window.PiP_textos.renderitza(div);
 }
