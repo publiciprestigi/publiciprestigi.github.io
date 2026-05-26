@@ -289,9 +289,7 @@ function construirRànquingDirectors() {
         ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
     </table>
-    <div id="comentari-directors-1"></div>
-
-    <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
+    <h3 class="subtitol-ranking" id="subtitol-directors-2" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
@@ -315,13 +313,15 @@ function construirRànquingDirectors() {
 // Carregar el comentari del primer rànquing de directors
 function carregarTextosDirectors() {
   if (!window.PiP_textos) return;
-  const placeholder = document.getElementById('comentari-directors-1');
-  if (!placeholder) return;
+  const subtitol2 = document.getElementById('subtitol-directors-2');
+  if (!subtitol2) return;
+  // Evitar duplicats
+  if (document.querySelector('[data-bloc="comentari-r1"]')) return;
   const div = document.createElement('div');
   div.className = 'text-md text-md-comentari';
   div.dataset.text = 'part-i/ranking-directors';
   div.dataset.bloc = 'comentari-r1';
-  placeholder.replaceWith(div);
+  subtitol2.parentNode.insertBefore(div, subtitol2);
   window.PiP_textos.renderitza(div);
 }
 
