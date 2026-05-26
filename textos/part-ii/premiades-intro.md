@@ -1,5 +1,5 @@
 <!-- intro -->
-Recull cronològic de tots els premis obtinguts pel cinema espanyol a les seccions oficials dels quatre festivals entre 1965 i 2025. El símbol ★ assenyala cada guardó.
+Recull cronològic de tots els premis obtinguts pel cinema espanyol a les seccions oficials dels quatre festivals entre 1965 i 2025.
 <!-- /intro -->
 
 <!-- resum-intro -->
