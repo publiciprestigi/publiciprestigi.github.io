@@ -11,11 +11,11 @@ Distribució dels premis obtinguts pel cinema espanyol als quatre festivals de C
 <!-- grans-premis -->
 ## Els grans premis màxims
 
-- **Palma d'Or (Cannes): 0.** Espanya mai ha guanyat la Palma d'Or. Amb 28 seleccions documentades i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi internacional continua escapant-se.
+- **Palma d'Or (Cannes): 0.** Amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi internacional continua escapant-se.
 
-- **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (Carlos Saura, 1981), *La colmena* (Mario Camus, 1983) i *Alcarràs* (Carla Simón, 2022). Buit de trenta-nou anys entre el segon i el tercer guardó: un desert que reflecteix la irregularitat de la presència espanyola al festival.
+- **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (Carlos Saura, 1981), *La colmena* (Mario Camus, 1983) i *Alcarràs* (Carla Simón, 2022), i un buit de trenta-nou anys entre el segon i el tercer guardó.
 
-- **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (Pedro Almodóvar, 2024). Primer i únic Lleó d'Or de la història del cinema espanyol. Una fita tardana però incontestable.
+- **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (Pedro Almodóvar, 2024). Primer i únic Lleó d'Or de la història del cinema espanyol.
 
-- **Conxa d'Or (Sant Sebastià): 13.** El festival on el cinema espanyol ha guanyat més vegades el màxim premi. La concentració als anys 2020s (6 premis en total a Sant Sebastià en la darrera dècada) reflecteix una nova generació de directors consolidada en el circuit internacional.
+- **Conxa d'Or (Sant Sebastià): 13.** El festival on s'ha guanyat més vegades el màxim premi, 5 d'ells en els darrers 15 anys: dos vegades per a Isaki Lacuesta, i un per Carlos Vermut, Albert Serra i Alauda Ruiz de Azúa.
 <!-- /grans-premis -->
