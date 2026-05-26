@@ -5,5 +5,5 @@ El gran aparador del cinema espanyol d'autor: quatre vegades més seleccions que
 <!-- /intro -->
 
 <!-- comentari -->
-Amb 164 films seleccionats —quatre vegades més que Berlín (42) i gairebé sis vegades més que Venècia (30)—, Sant Sebastià és el gran aparador del cinema espanyol d'autor. La seva accessibilitat geogràfica i lingüística el converteix en el punt d'entrada natural per a la producció espanyola al circuit internacional.
+- Amb 164 films seleccionats —quatre vegades més que Berlín (42) i gairebé sis vegades més que Venècia (30)—, Sant Sebastià és el gran aparador del cinema espanyol d'autor. La seva accessibilitat geogràfica i lingüística el converteix en el punt d'entrada natural per a la producció espanyola al circuit internacional.
 <!-- /comentari -->
