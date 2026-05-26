@@ -1,35 +1,60 @@
-/* Taules generades des de Markdown (textos editorials) */
+/* Públic i Prestigi — Estils addicionals (textos editorials, taules Markdown, gràfics) */
+
+/* ── Gris secundari més fort a tota la web ── */
+:root {
+  --color-text-suau: #555555;
+}
+
+/* ── Taules generades des de Markdown (textos editorials) ── */
 .text-md table {
   border-collapse: collapse;
   width: 100%;
-  margin: 16px 0 24px 0;
+  margin: 24px 0 32px 0;
   font-size: 0.82em;
   line-height: 1.4;
+  background: #f8f8f8;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .text-md table th {
   text-align: left;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-bottom: 2px solid #333;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-bottom: 2px solid #ddd;
   white-space: nowrap;
+  background: #f0f0f0;
 }
 .text-md table td {
-  padding: 6px 10px;
-  border-bottom: 1px solid #e5e5e5;
+  padding: 7px 12px;
+  border-bottom: 1px solid #ffffff;
   vertical-align: top;
+}
+.text-md table tbody tr:nth-child(even) td {
+  background: #f2f2f2;
+}
+.text-md table tbody tr:nth-child(odd) td {
+  background: #f8f8f8;
 }
 .text-md table tr:last-child td {
   border-bottom: none;
 }
 
-/* Text introductori abans d'una taula de dades */
+/* ── Text introductori abans d'una taula de dades ── */
 .text-md-intro {
   margin-bottom: 20px;
 }
 
-/* Comentari editorial després d'una taula de dades */
-.text-md-comentari {
+/* ── Text intermedi entre taula i gràfic ── */
+.text-md-intermedi {
   margin-top: 28px;
+  margin-bottom: 8px;
+  color: #555555;
+  font-style: italic;
+}
+
+/* ── Comentari editorial després d'una taula o gràfic ── */
+.text-md-comentari {
+  margin-top: 32px;
   padding-top: 20px;
   border-top: 1px solid #e5e5e5;
 }
@@ -42,73 +67,104 @@
   line-height: 1.55;
 }
 
-/* Títol principal de les pàgines interiors — alineat amb el to del Substack */
-#titol-principal {
-  font-size: 1.85rem;
-  font-weight: 700;
-  color: #1a1a1a;
-}
-
-/* Gràfic de mercat i població */
+/* ── Gràfic de mercat i població ── */
 .grafic-mercat-wrap {
-  margin: 8px 0 24px 0;
+  margin: 24px 0 32px 0;
 }
 .grafic-peu {
   font-size: 0.82em;
-  color: #666;
+  color: #555555;
   margin-top: 12px;
   line-height: 1.5;
   font-style: italic;
 }
-.grafic-llegenda-estimat {
-  display: inline-block;
-  margin-top: 4px;
-}
 
-/* Taula resum dècades — padding primera columna */
-.taula-decades-resum td:first-child,
-.taula-decades-resum th:first-child {
-  padding-left: 12px;
-}
-
-/* Text intermedi entre taula i gràfic */
-.text-md-intermedi {
-  margin-top: 28px;
-  margin-bottom: 8px;
-  color: #555;
-  font-style: italic;
-}
-
-/* Padding primera columna a totes les taules de dades */
+/* ── Padding primera columna a totes les taules de dades ── */
 .taula-films td:first-child,
 .taula-films th:first-child,
 .taula-ranking td:first-child,
-.taula-ranking th:first-child {
+.taula-ranking th:first-child,
+.taula-festivals td:first-child,
+.taula-festivals th:first-child {
   padding-left: 12px;
 }
 
-/* Zebra striping per als rànquings — gris molt pàl·lid, ben diferent dels blaus de dècada */
-.taula-ranking tbody tr:nth-child(even) {
-  background: #f7f7f7;
-}
-.taula-ranking tbody tr:nth-child(odd) {
-  background: #ffffff;
-}
-.taula-ranking .fila-boto-context {
-  background: transparent !important;
+/* ── Espaiat before/after taules i gràfics ── */
+.taula-films,
+.taula-ranking,
+.taula-festivals {
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
 
-/* Taules de dècada — films de context sempre fons blanc */
+/* ── Línies blanques entre files de les taules de dècada ── */
+.taula-films td {
+  border-bottom: 1px solid #ffffff;
+}
+.taula-films th {
+  border-bottom: 2px solid var(--color-text);
+}
+
+/* ── Films de context sempre fons blanc ── */
 .taula-films tr[data-context="true"] {
   background: #ffffff !important;
 }
 .taula-films .fila-boto-context {
   background: #ffffff !important;
 }
+.taula-films .fila-boto-context td {
+  border-bottom: none;
+}
 
-/* Títol sticky — cobreix tot l'ample incloent el marge dret */
-.titol-sticky {
-  background: var(--color-fons, #ffffff);
-  width: 100%;
-  box-sizing: border-box;
+/* ── Text context de les files: mateix gris que dades secundàries ── */
+.col-context-doc {
+  color: #555555 !important;
+  font-size: 0.78rem;
+}
+.taula-films .film-top100 td.col-context-doc {
+  color: #555555 !important;
+}
+.taula-films .film-context td {
+  color: #888888 !important;
+}
+
+/* ── Gris dades secundàries (col-gris) més fort ── */
+.col-gris {
+  color: #555555 !important;
+}
+
+/* ── IIC centrat ── */
+.col-iic {
+  text-align: center !important;
+}
+.taula-films th:has(+ th),
+th.col-iic-header {
+  text-align: center !important;
+}
+
+/* ── Zebra striping rànquings (gris neutre, no blau) ── */
+.taula-ranking tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+.taula-ranking tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+.taula-ranking td {
+  border-bottom: 1px solid #ffffff;
+}
+.taula-ranking .fila-boto-context {
+  background: transparent !important;
+}
+
+/* ── Títol principal pàgines interiors ── */
+#titol-principal {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #363737;
+}
+
+/* ── Taula resum dècades ── */
+.taula-decades-resum {
+  margin-top: 24px;
+  margin-bottom: 32px;
 }
