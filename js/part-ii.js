@@ -58,21 +58,10 @@ function construirPremiades() {
 
   const premiades = festivalsData.filter(f => f.premiat).sort((a,b) => a.any - b.any);
 
-  const COLORS_DEC_II = {
-    '60s':   '#f0f5f9',
-    '70s':   '#deeaf4',
-    '80s':   '#ccdeed',
-    '90s':   '#bad3e6',
-    '2000s': '#a8c7df',
-    '2010s': '#96bcd8',
-    '2020s': '#a5c7e2',
-  };
-
   let html = '';
   ['60s','70s','80s','90s','2000s','2010s','2020s'].forEach(dec => {
     const films = premiades.filter(f => getDecada(f.any) === dec);
     if (!films.length) return;
-    const bgDec = COLORS_DEC_II[dec];
     html += `
       <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
@@ -83,7 +72,7 @@ function construirPremiades() {
           <th style="width:30%">Premi</th>
         </tr></thead>
         <tbody>
-          ${films.map(f => `<tr style="background:${bgDec};border-bottom:2px solid #fff">
+          ${films.map((f,i) => `<tr style="background:${i%2===0?'#ffffff':'#f7f7f7'};border-bottom:2px solid #fff">
             <td>${titolFilm(f)}</td>
             <td class="col-subtil">${f.director}</td>
             <td>${nomFest(f.festival)}</td>
@@ -249,7 +238,7 @@ function construirRànquingEspectadors() {
     const color  = FC[festival];
 
     const fila = (f, i) => {
-      const bg = f.premiat ? '#fffef5' : (i % 2 === 0 ? '#ffffff' : '#f7f7f7');
+      const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
         <td class="col-pos">${i+1}</td>
         <td>${titolFilm(f)}</td>
