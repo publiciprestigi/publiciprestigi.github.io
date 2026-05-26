@@ -5,5 +5,5 @@ El festival de més prestigi internacional i la presència espanyola més select
 <!-- /intro -->
 
 <!-- comentari -->
-Set de les vint-i-vuit seleccions espanyoles a Cannes es concentren en un sol director entre 1973 i 1983. Sense Saura, el cinema espanyol dels 70s seria pràcticament invisible al circuit internacional: la dictadura i la transició democràtica trobaven en ell el seu portaveu més reconegut fora de les fronteres.
+- Set de les vint-i-vuit seleccions espanyoles a Cannes es concentren en un sol director entre 1973 i 1983. Sense Saura, el cinema espanyol dels 70s seria pràcticament invisible al circuit internacional: la dictadura i la transició democràtica trobaven en ell el seu portaveu més reconegut fora de les fronteres.
 <!-- /comentari -->
