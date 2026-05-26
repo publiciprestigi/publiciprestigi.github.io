@@ -102,6 +102,7 @@
 
       <!-- Dècades: div exterior = navegació, div interior "taula-XXs" = on el JS escriu la taula -->
       <div class="seccio-contingut" id="seccio-60s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-60s" data-bloc="intro"></div>
         <div id="taula-60s"></div>
       </div>
 
@@ -112,22 +113,27 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-80s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-80s" data-bloc="intro"></div>
         <div id="taula-80s"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-90s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-90s" data-bloc="intro"></div>
         <div id="taula-90s"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-2000s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-2000s" data-bloc="intro"></div>
         <div id="taula-2000s"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-2010s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-2010s" data-bloc="intro"></div>
         <div id="taula-2010s"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-2020s">
+        <div class="text-md text-md-intro" data-text="part-i/decada-2020s" data-bloc="intro"></div>
         <div id="taula-2020s"></div>
       </div>
 
@@ -139,19 +145,27 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-penetracio">
+        <div class="text-md text-md-intro" data-text="part-i/ranking-penetracio" data-bloc="intro"></div>
         <div id="taula-penetracio"></div>
+        <div class="text-md text-md-comentari" data-text="part-i/ranking-penetracio" data-bloc="comentari"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-quota">
+        <div class="text-md text-md-intro" data-text="part-i/ranking-quota" data-bloc="intro"></div>
         <div id="taula-quota"></div>
+        <div class="text-md text-md-comentari" data-text="part-i/ranking-quota" data-bloc="comentari"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-iic">
+        <div class="text-md text-md-intro" data-text="part-i/ranking-iic" data-bloc="intro"></div>
         <div id="taula-iic"></div>
+        <div class="text-md text-md-comentari" data-text="part-i/ranking-iic" data-bloc="comentari"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-directors">
+        <div class="text-md text-md-intro" data-text="part-i/ranking-directors" data-bloc="intro"></div>
         <div id="taula-directors"></div>
+        <div class="text-md text-md-comentari" data-text="part-i/ranking-directors" data-bloc="comentari"></div>
       </div>
 
       <div class="nav-seccions">
@@ -182,19 +196,19 @@
     const seccions = [
       { id: 'dades',       titol: 'Fonts i eines',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: 'mercat',      titol: 'Mercat i població',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'decades',     titol: 'Resum per dècada',               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: '60s',         titol: 'Anys 1965–1969',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '1 de 7' },
-      { id: '70s',         titol: 'Anys 70',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '2 de 7' },
-      { id: '80s',         titol: 'Anys 80',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '3 de 7' },
-      { id: '90s',         titol: 'Anys 90',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '4 de 7' },
-      { id: '2000s',       titol: 'Anys 2000–2009',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '5 de 7' },
-      { id: '2010s',       titol: 'Anys 2010–2019',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '6 de 7' },
-      { id: '2020s',       titol: 'Anys 2020–2025',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '7 de 7' },
-      { id: 'espectadors', titol: 'Rànquing per espectadors absoluts',      sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'penetracio',  titol: 'Rànquing per penetració demogràfica',    sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'quota',       titol: 'Rànquing per quota de mercat',           sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'iic',         titol: 'Rànquing per Índex d\'Impacte Cultural', sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'directors',   titol: 'Rànquing per directors',                 sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'decades',     titol: 'Distribució per dècades',               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: '60s',         titol: 'Anys 1965–1969',                        sup: 'Distribució per dècades', pos: '1 de 7' },
+      { id: '70s',         titol: 'Anys 70',                               sup: 'Distribució per dècades', pos: '2 de 7' },
+      { id: '80s',         titol: 'Anys 80',                               sup: 'Distribució per dècades', pos: '3 de 7' },
+      { id: '90s',         titol: 'Anys 90',                               sup: 'Distribució per dècades', pos: '4 de 7' },
+      { id: '2000s',       titol: 'Anys 2000–2009',                        sup: 'Distribució per dècades', pos: '5 de 7' },
+      { id: '2010s',       titol: 'Anys 2010–2019',                        sup: 'Distribució per dècades', pos: '6 de 7' },
+      { id: '2020s',       titol: 'Anys 2020–2025',                        sup: 'Distribució per dècades', pos: '7 de 7' },
+      { id: 'espectadors', titol: 'Rànquing per espectadors absoluts',      sup: 'Rànquings' },
+      { id: 'penetracio',  titol: 'Rànquing per penetració demogràfica',    sup: 'Rànquings' },
+      { id: 'quota',       titol: 'Rànquing per quota de mercat',           sup: 'Rànquings' },
+      { id: 'iic',         titol: 'Rànquing per Índex d\'Impacte Cultural', sup: 'Rànquings' },
+      { id: 'directors',   titol: 'Rànquing per directors',                 sup: 'Rànquings' },
     ];
 
     let actual = 0;
