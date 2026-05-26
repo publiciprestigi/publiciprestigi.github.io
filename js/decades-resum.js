@@ -129,17 +129,41 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
           padding: { bottom: 16 },
         },
         tooltip: {
-          callbacks: {
-            title: ctx => etiquetes[ordre[ctx[0].dataIndex]],
-            label: ctx => {
-              const i = ctx.dataIndex;
-              const d = grups[ordre[i]];
-              const lider = d.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
-              return [
-                ` ${ctx.parsed.y} films · ${pcts[i]}% del Top 100`,
-                ` Líder: ${lider.titol} (${lider.any})`
-              ];
+          enabled: false,
+          external: function(context) {
+            // Tooltip HTML personalitzat
+            let tooltipEl = document.getElementById('tooltip-decades');
+            if (!tooltipEl) {
+              tooltipEl = document.createElement('div');
+              tooltipEl.id = 'tooltip-decades';
+              tooltipEl.style.cssText = `
+                position: absolute; background: rgba(255,255,255,0.97);
+                border: 1px solid #e5e5e5; border-radius: 4px;
+                padding: 10px 14px; font-size: 0.82rem; pointer-events: none;
+                font-family: -apple-system, sans-serif; color: #363737;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 100;
+                line-height: 1.6; min-width: 200px;
+              `;
+              document.body.appendChild(tooltipEl);
             }
+            const { tooltip } = context;
+            if (tooltip.opacity === 0) {
+              tooltipEl.style.opacity = '0';
+              return;
+            }
+            const i = tooltip.dataPoints[0].dataIndex;
+            const d = grups[ordre[i]];
+            const lider = d.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
+            tooltipEl.innerHTML = `
+              <div style="font-weight:600;margin-bottom:4px">${etiquetes[ordre[i]]}</div>
+              <div>${pcts[i]}% del Top 100 · ${counts[i]} films</div>
+              <div style="margin-top:6px;font-size:0.78rem;color:#555">
+                Líder: <em><strong>${lider.titol}</strong></em> (${lider.any})
+              </div>`;
+            const pos = context.chart.canvas.getBoundingClientRect();
+            tooltipEl.style.opacity = '1';
+            tooltipEl.style.left = pos.left + window.scrollX + tooltip.caretX + 12 + 'px';
+            tooltipEl.style.top = pos.top + window.scrollY + tooltip.caretY - 20 + 'px';
           }
         }
       },
