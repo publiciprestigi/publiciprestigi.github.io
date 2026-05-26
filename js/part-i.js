@@ -270,22 +270,6 @@ function construirRànquingDirectors() {
     </tr>`;
   };
 
-  // Injectar comentari2 després que el carregador de textos hagi acabat
-  setTimeout(() => {
-    const seccio = cont.closest('.seccio-contingut');
-    if (seccio && window.PiP_textos) {
-      const existing = seccio.querySelector('.text-md-comentari2');
-      if (!existing) {
-        const div = document.createElement('div');
-        div.className = 'text-md text-md-comentari text-md-comentari2';
-        div.dataset.text = 'part-i/ranking-directors';
-        div.dataset.bloc = 'comentari2';
-        seccio.appendChild(div);
-        window.PiP_textos.renderitza(div);
-      }
-    }
-  }, 100);
-
   cont.innerHTML = `
     <h3 class="subtitol-ranking">Només films del Top 100</h3>
     <table class="taula-ranking">
@@ -305,6 +289,7 @@ function construirRànquingDirectors() {
         ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
     </table>
+    <div class="text-md text-md-comentari" data-text="part-i/ranking-directors" data-bloc="comentari"></div>
 
     <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
@@ -325,6 +310,18 @@ function construirRànquingDirectors() {
         ${llista2.slice(10).map((d,i) => filaR2(d,i+10)).join('')}
       </tbody>
     </table>`;
+}
+
+// Carregar els textos Markdown inserits dins el HTML de directors
+function carregarTextosDirectors() {
+  setTimeout(() => {
+    const cont = document.getElementById('taula-directors');
+    if (!cont || !window.PiP_textos) return;
+    cont.querySelectorAll('.text-md[data-text]').forEach(div => {
+      window.PiP_textos.renderitza(div);
+    });
+  }, 50);
+  carregarTextosDirectors();
 }
 
 window.toggleDirFilms = function(id, btn) {
