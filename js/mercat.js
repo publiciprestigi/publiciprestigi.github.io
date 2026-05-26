@@ -20,11 +20,18 @@ async function construirGraficMercat() {
   const poblacio  = dades.map(d => d.poblacio_M);
   const estimats  = dades.map(d => d.estimat);
 
-  // Colors de les barres: vermell per 2020, blau uniforme per a la resta
-  const colorsBarres = dades.map(d => {
-    if (d.any === 2020) return 'rgba(180, 50, 50, 0.85)';
-    return 'rgba(80, 120, 175, 0.85)';
-  });
+  // Colors de les barres per dècada, seguint la gamma de blaus de l'estudi
+  const colorPerAny = (any) => {
+    if (any === 2020) return 'rgba(180, 50, 50, 0.85)';
+    if (any <= 1969) return 'rgba(240, 245, 249, 0.95)';
+    if (any <= 1979) return 'rgba(228, 237, 245, 0.95)';
+    if (any <= 1989) return 'rgba(215, 230, 241, 0.95)';
+    if (any <= 1999) return 'rgba(202, 222, 238, 0.95)';
+    if (any <= 2009) return 'rgba(190, 214, 234, 0.95)';
+    if (any <= 2019) return 'rgba(178, 207, 230, 0.95)';
+    return 'rgba(165, 199, 226, 0.95)';
+  };
+  const colorsBarres = dades.map(d => colorPerAny(d.any));
 
   // Límits de dècades per a les línies verticals
   const decades = [

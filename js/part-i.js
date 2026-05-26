@@ -49,7 +49,7 @@ function capcalera() {
     <th class="col-num col-gris">Mercat</th>
     <th class="col-num col-gris">Penetració</th>
     <th class="col-num col-gris">Quota</th>
-    <th class="col-num">IIC</th>
+    <th class="col-num col-iic">IIC</th>
     <th class="col-context-doc col-context-header">Context</th>
   </tr></thead>`;
 }
@@ -152,7 +152,7 @@ function construirRànquing(metrica, contenidorId, label) {
     ${esEsp ? '' : '<th class="col-center col-subtil">T100</th>'}
     <th>Títol</th>
     <th class="col-subtil">Director</th>
-    <th class="col-num">${label}</th>
+    <th class="col-num col-iic">${label}</th>
     ${esEsp ? '' : '<th class="col-var" title="Variació respecte al rànquing per espectadors">Var.</th>'}
   </tr></thead>`;
 
