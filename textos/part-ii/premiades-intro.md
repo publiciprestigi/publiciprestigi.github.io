@@ -17,5 +17,5 @@ Distribució dels premis obtinguts pel cinema espanyol als quatre festivals de C
 
 - **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (Pedro Almodóvar, 2024). Primer i únic Lleó d'Or de la història del cinema espanyol.
 
-- **Conxa d'Or (Sant Sebastià): 13.** El festival on s'ha guanyat més vegades el màxim premi, 5 d'ells en els darrers 15 anys: dos vegades per a Isaki Lacuesta, i un per Carlos Vermut, Albert Serra i Alauda Ruiz de Azúa.
+- **Conxa d'Or (Sant Sebastià): 13.** On s'ha guanyat més vegades el màxim premi, 5 d'ells en els darrers 15 anys: Alauda Ruiz de Azúa, Albert Serra, Carlos Vermut i dos vegades per a Isaki Lacuesta.
 <!-- /grans-premis -->
