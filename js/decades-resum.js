@@ -72,7 +72,7 @@ async function construirResumDecades() {
           <th class="col-num">Espectadors</th>
           <th class="col-num col-gris">Mercat</th>
           <th class="col-num col-gris">Penetració</th>
-          <th class="col-num">IIC</th>
+          <th class="col-num col-iic">IIC</th>
         </tr>
       </thead>
       <tbody>${files}</tbody>
@@ -130,7 +130,16 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
         },
         tooltip: {
           callbacks: {
-            label: ctx => ` ${ctx.parsed.y} pel·lícules (${pcts[ctx.dataIndex]}% del Top 100)`
+            title: ctx => etiquetes[ordre[ctx[0].dataIndex]],
+            label: ctx => {
+              const i = ctx.dataIndex;
+              const d = grups[ordre[i]];
+              const lider = d.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
+              return [
+                ` ${ctx.parsed.y} films · ${pcts[i]}% del Top 100`,
+                ` Líder: ${lider.titol} (${lider.any})`
+              ];
+            }
           }
         }
       },
