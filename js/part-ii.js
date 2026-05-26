@@ -66,10 +66,10 @@ function construirPremiades() {
       <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
         <thead><tr>
-          <th style="width:45%">Títol</th>
-          <th class="col-subtil" style="width:15%">Director</th>
-          <th style="width:110px">Festival</th>
-          <th style="width:30%">Premi</th>
+          <th style="width:32%">Títol</th>
+          <th class="col-subtil" style="width:18%">Director</th>
+          <th style="width:100px">Festival</th>
+          <th style="width:36%">Premi</th>
         </tr></thead>
         <tbody>
           ${films.map((f,i) => `<tr style="background:${i%2===0?'#ffffff':'#f7f7f7'};border-bottom:2px solid #fff">
