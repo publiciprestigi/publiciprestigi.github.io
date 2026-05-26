@@ -24,7 +24,7 @@ function construirFila(film, decada, hidden) {
   const titol = `<strong><em>${film.titol}</em></strong> <span class="film-any">(${film.any})</span>`;
   const bg = decada && COLORS_DECADES[decada] ? COLORS_DECADES[decada].fons : '';
   const display = hidden ? 'display:none;' : '';
-  const styleAttr = (bg || display) ? `style="${display}${bg ? 'background:' + bg : ''}"` : '';
+  const styleAttr = (bg || display) ? `style="${display}${bg ? 'background:' + bg + ';border-bottom:2px solid #fff' : ''}"` : '';
   return `<tr class="${cls}" data-context="${!film.in_top100}" ${styleAttr}>
     <td>${film.pos_decade}</td>
     <td class="col-subtil col-center">${posHist}</td>
