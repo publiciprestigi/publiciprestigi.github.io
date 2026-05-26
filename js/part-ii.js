@@ -15,10 +15,10 @@ async function carregarFestivals() {
     festivalsData = await r.json();
     construirPremiades();
     construirIntroduccio();
-    construirFestival('Cannes',       'seccio-cannes');
-    construirFestival('Berlín',       'seccio-berlin');
-    construirFestival('Venècia',      'seccio-venezia');
-    construirFestival('Sant Sebastià','seccio-sansebastia');
+    construirFestival('Cannes',       'taula-cannes');
+    construirFestival('Berlín',       'taula-berlin');
+    construirFestival('Venècia',      'taula-venezia');
+    construirFestival('Sant Sebastià','taula-sansebastia');
     construirRànquingEspectadors();
     construirRànquingDirectors();
   } catch(e) { console.error('Error:', e); }
@@ -48,7 +48,7 @@ function getDecada(any) {
    PREMIADES PER DÈCADA
    ============================================================ */
 function construirPremiades() {
-  const cont = document.getElementById('seccio-premiades');
+  const cont = document.getElementById('taula-premiades');
   if (!cont) return;
 
   const DEC_LABELS = {
@@ -142,7 +142,7 @@ function construirFestival(festival, seccioId) {
    RÀNQUING PER ESPECTADORS
    ============================================================ */
 function construirRànquingEspectadors() {
-  const cont = document.getElementById('seccio-ranking-espectadors');
+  const cont = document.getElementById('taula-ranking-espectadors');
   if (!cont) return;
 
   let html = '';
@@ -203,7 +203,7 @@ window.expandirRankEsp = function(cid, btn) {
    RÀNQUING DIRECTORS
    ============================================================ */
 function construirRànquingDirectors() {
-  const cont = document.getElementById('seccio-ranking-directors');
+  const cont = document.getElementById('taula-ranking-directors');
   if (!cont) return;
 
   const dirs = {};
