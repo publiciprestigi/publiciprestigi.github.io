@@ -1,5 +1,5 @@
 <!-- intro -->
-Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena per nombre de films (desempat per espectadors acumulats). El segon amplia el focus incorporant també els films de context de cada director —aquells citats al llarg de l'estudi per contextualitzar les dècades però que no van superar el llindar d'entrada al Top 100.
+Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena per nombre de films (desempat per espectadors acumulats). El segon amplia el focus incorporant també els films de context de cada director, aquells citats per contextualitzar les dècades però que no van superar el llindar d'entrada al Top 100.
 <!-- /intro -->
 
 <!-- comentari-r1 -->
