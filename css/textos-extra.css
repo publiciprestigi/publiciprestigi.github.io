@@ -20,9 +20,9 @@
   text-align: left;
   font-weight: 600;
   padding: 8px 12px;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid #e0e0e0;
   white-space: nowrap;
-  background: #f0f0f0;
+  background: #f5f5f5;
 }
 .text-md table td {
   padding: 7px 12px;
@@ -30,10 +30,10 @@
   vertical-align: top;
 }
 .text-md table tbody tr:nth-child(even) td {
-  background: #f2f2f2;
+  background: #f7f7f7;
 }
 .text-md table tbody tr:nth-child(odd) td {
-  background: #f8f8f8;
+  background: #fafafa;
 }
 .text-md table tr:last-child td {
   border-bottom: none;
