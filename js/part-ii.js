@@ -203,8 +203,7 @@ function construirFestival(festival, seccioId) {
     const premi  = f.premiat ? `<span class="estrella">★</span> ${f.premi || ''}` : (f.premi || '—');
     const top100 = isTop ? `${f.top100_pos}` : '—';
     const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
-    const rowBg  = f.premiat ? 'rgba(255,253,230,0.8)' : bgFest;
-    return `<tr style="background:${rowBg};border-bottom:2px solid #fff">
+    return `<tr style="background:${bgFest};border-bottom:2px solid #fff">
       <td class="col-subtil col-pos">${i+1}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
@@ -249,14 +248,17 @@ function construirRànquingEspectadors() {
     const cid    = `resp-${festival.replace(/\s/g,'-')}`;
     const color  = FC[festival];
 
-    const fila = (f, i) => `<tr class="${f.premiat?'film-premiat':''}">
-      <td class="col-pos">${i+1}</td>
-      <td>${titolFilm(f)}</td>
-      <td class="col-subtil">${f.director}</td>
-      <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
-      <td class="col-center col-subtil">${f.top100_pos || '—'}</td>
-      <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
-    </tr>`;
+    const fila = (f, i) => {
+      const bg = f.premiat ? '#fffef5' : (i % 2 === 0 ? '#ffffff' : '#f7f7f7');
+      return `<tr style="background:${bg};border-bottom:2px solid #fff">
+        <td class="col-pos">${i+1}</td>
+        <td>${titolFilm(f)}</td>
+        <td class="col-subtil">${f.director}</td>
+        <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
+        <td class="col-center col-subtil">${f.top100_pos || '—'}</td>
+        <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
+      </tr>`;
+    };
 
     html += `
       <h3 class="subtitol-ranking" style="margin-top:32px;color:${color}">${festival}</h3>
@@ -355,7 +357,8 @@ function construirRànquingDirectors() {
 
   const fila25 = (d, i) => {
     const id = `d25-${++_dirCtr}`;
-    return `<tr>
+    const bg25 = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
+    return `<tr style="background:${bg25};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td>
         <strong>${d.nom}</strong>
@@ -399,7 +402,8 @@ function construirRànquingDirectors() {
 
   const fila3 = (d, i) => {
     const id = `d3-${++_dirCtr}`;
-    return `<tr>
+    const bg3 = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
+    return `<tr style="background:${bg3};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td>
         <strong>${d.nom}</strong>
