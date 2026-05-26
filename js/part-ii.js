@@ -85,12 +85,10 @@ function construirPremiades() {
 }
 
 /* ============================================================
-   INTRODUCCIÓ
+   INTRODUCCIÓ — el text ve del sistema Markdown (textos.js)
    ============================================================ */
 function construirIntroduccio() {
-  const cont = document.getElementById('seccio-introduccio');
-  if (!cont) return;
-  cont.innerHTML = `<p class="en-construccio">Contingut en construcció</p>`;
+  // No fa res — el contingut el carrega textos.js des de part-ii/dades-i-criteri.md
 }
 
 /* ============================================================
