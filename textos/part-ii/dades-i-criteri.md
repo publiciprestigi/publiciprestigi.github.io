@@ -1,8 +1,8 @@
-Els festivals com a termómetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l'estudi recull la presència i els premis en les seccions oficials a competició en els quatre grans festivals internacionals del circuit A: **Cannes**, **Berlín**, **Venècia** i **Sant Sebastià**.
+Els festivals com a termòmetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l’estudi recull la presència i els premis obtinguts per pel·lícules espanyoles a les seccions oficials competitives dels quatre festivals internacionals analitzats: **Cannes**, **Berlín**, **Venècia** i **Sant Sebastià**.”
 
 ## Premis i límits del criteri
 
-Àmbit exclusiu: secció oficial estrictament a concurs (Compétition officielle, Wettbewerb, Concorso, Sección Oficial a concurso). Excloses: secció oficial "no competitiva" i totes les seccions paral·leles (Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi, etc.) Es limiten els premis al guardó màxim de cada festival, especials del jurat, millor direcció, millors interpretacions i millor guió (no es recullen altres premis tècnics i secundaris).
+L’àmbit d’anàlisi es limita estrictament a la secció oficial a concurs de cada festival: Compétition officielle, Wettbewerb, Concorso i Sección Oficial a concurso. En queden excloses les seccions oficials no competitives i totes les seccions paral·leles (Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi, etc.). El recompte de premis es limita al guardó màxim de cada festival, als premis especials del jurat, a la millor direcció, a les millors interpretacions i al millor guió (no s’hi inclouen altres premis tècnics o secundaris).
 
 ## Presència a les seccions oficials
 
