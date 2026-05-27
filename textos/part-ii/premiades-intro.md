@@ -1,5 +1,5 @@
 <!-- intro -->
-Recull cronològic de tots els premis obtinguts pel cinema espanyol a les seccions oficials dels quatre festivals entre 1965 i 2025.
+Recull cronològic de tots els premis a les seccions oficials en competició dels quatre grans festivals del circuit A (Cannes, Berlín, Venècia i Sant Sebastià), organitzats per dècada.
 <!-- /intro -->
 
 <!-- resum-intro -->
