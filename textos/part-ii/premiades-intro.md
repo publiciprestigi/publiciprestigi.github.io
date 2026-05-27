@@ -17,7 +17,7 @@ I per acabar, la relació dels guardons màxims assolits a millor pel·lícula d
 
 - **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (Carlos Saura, 1981), *La colmena* (Mario Camus, 1983) i *Alcarràs* (Carla Simón, 2022), i un buit de trenta-nou anys entre el segon i el tercer guardó.
 
-- **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (Pedro Almodóvar, 2024). Primer i únic Lleó d'Or de la història del cinema espanyol.
+- **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (Pedro Almodóvar, 2024). Primer i únic Lleó d'Or de la història del cinema espanyol, ben recent.
 
 - **Conxa d'Or (Sant Sebastià): 13.** El festival que acumula més premiades, 5 d'elles en els darrers 15 anys: *Los pasos dobles* (2011) i *Entre dos aguas* (2018) d'Isaki Lacuesta, *Magical Girl* (2014) de Carlos Vermut, *Tardes de soledad* (2024) d'Albert Serra i *Los domingos* (2025) d'Alauda Ruiz de Azúa.
 <!-- /grans-premis -->
