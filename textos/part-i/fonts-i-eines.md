@@ -27,9 +27,9 @@ Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el ràn
 
 *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espectadors en un mercat total de 370 milions d'entrades (una quota de l'1,16%). *Mujeres al borde de un ataque de nervios* (1988) va fer 3,3 milions en un mercat de 85 milions (una quota del 3,94%). En espectadors bruts guanya Pedro Lazaga. En quota de mercat, Almodóvar quasi quadruplica la seva marca. L'Índex d'Impacte Cultural (IIC) proposa respondre quina de les dues va impactar més realment la societat del seu temps.
 
-## Les quatre mètriques: com es llegeix cadascuna
+## Les quatre mètriques: com llegir-les
 
-A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna conta una història diferent:
+A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna explica una història diferent:
 
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
