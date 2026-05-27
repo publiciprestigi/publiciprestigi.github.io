@@ -224,8 +224,8 @@ th.col-iic-header {
 
 /* ── Línia de mediana sota el títol de festival ── */
 .festival-mediana {
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   color: #555555;
-  margin-top: 0;
-  margin-bottom: 12px;
+  margin-top: 2px;
+  margin-bottom: 16px;
 }
