@@ -73,7 +73,7 @@ function construirPremiades() {
     const films = premiades.filter(f => getDecada(f.any) === dec);
     if (!films.length) return;
     html += `
-      <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
+      <h3 class="subtitol-ranking-gran" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
         <thead><tr>
           <th style="width:32%">Títol</th>
