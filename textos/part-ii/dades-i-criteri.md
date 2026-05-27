@@ -12,7 +12,7 @@ A les taules que veurem de cada festival, s'indica amb el símbol ★ els premis
 
 L’ordre de presentació (i d’avaluació en els rànquings posteriors) respon a una jerarquia de prestigi àmpliament assumida en l’àmbit cinematogràfic: Cannes, Berlín i Venècia són habitualment considerats, en aquest ordre, els tres grans festivals internacionals de referència.
 
-Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que el cinema espanyol hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als tres grans festivals europeus.
+Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als tres grans festivals europeus.
 
 ## Sobre les fonts
 
