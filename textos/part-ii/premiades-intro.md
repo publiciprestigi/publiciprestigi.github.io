@@ -11,7 +11,7 @@ Primer, les xifres de les pel·lícules premiades a cada festival i la suma tota
 <!-- grans-premis -->
 ## Els grans premis
 
-
+I per acabar, la relació dels guardons màxims assolits a millor pel·lícula de cada festival. 
 
 - **Palma d'Or (Cannes): 0.** Amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi continua escapant-se.
 
@@ -19,5 +19,5 @@ Primer, les xifres de les pel·lícules premiades a cada festival i la suma tota
 
 - **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (Pedro Almodóvar, 2024). Primer i únic Lleó d'Or de la història del cinema espanyol.
 
-- **Conxa d'Or (Sant Sebastià): 13.** El festival amb més premis, 5 d'ells en els darrers 15 anys: Alauda Ruiz de Azúa, Albert Serra, Carlos Vermut i dos vegades per a Isaki Lacuesta.
+- **Conxa d'Or (Sant Sebastià): 13.** El festival amb més premis, 5 d'ells en els darrers 15 anys: *Los pasos dobles* (2011) i *Entre dos aguas* (2018) d'Isaki Lacuesta, *Magical Girl* (2014) de Carlos Vermut, *Tardes de soledad* (2024) d'Albert Serra i *Los domingos* (2025) d'Alauda Ruiz de Azúa.
 <!-- /grans-premis -->
