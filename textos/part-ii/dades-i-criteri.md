@@ -2,7 +2,7 @@ Els festivals com a termómetre del reconeixement crític especialitzat del cine
 
 ## Premis i límits del criteri
 
-Àmbit exclusiu: secció oficial estrictament a concurs (Compétition officielle, Wettbewerb, Concorso, Sección Oficial a concurso). Excloses: secció oficial "no competitiva", Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi i totes les seccions paral·leles. Es limiten els premis al guardó màxim de cada festival, especials del jurat, millor direcció, millors interpretacions i millor guió (no es valoren altres premis tècnics i secundaris).
+Àmbit exclusiu: secció oficial estrictament a concurs (Compétition officielle, Wettbewerb, Concorso, Sección Oficial a concurso). Excloses: secció oficial "no competitiva" i totes les seccions paral·leles (Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi, etc.) Es limiten els premis al guardó màxim de cada festival, especials del jurat, millor direcció, millors interpretacions i millor guió (no es recullen altres premis tècnics i secundaris).
 
 ## Presència a les seccions oficials
 
