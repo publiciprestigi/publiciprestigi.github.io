@@ -4,12 +4,6 @@ Els festivals com a termómetre del reconeixement crític especialitzat del cine
 
 Àmbit exclusiu: secció oficial estrictament a concurs (Compétition officielle, Wettbewerb, Concorso, Sección Oficial a concurso). Excloses: seccions oficials "no competitives", Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi i totes les seccions paral·leles. Es limiten els premis al guardó màxim de cada festival, especials del jurat, millor direcció, millors interpretacions i millor guió (no es valoren altres premis tècnics i secundaris).
 
-fonts:
-28 participacions documentades · 12 premiades · Font: arxiu de la web del festival.
-42 participacions documentades · 8 premiades · Font: arxiu de la web del festival.
-30 participacions documentades · 7 premiades · Font: web del festival, Wikipedia, Filmaffinity.
-164 participacions documentades · 39 premiades · Fonts: web del festival, Wikipedia.
-
 ## Presència a les seccions oficials
 
 Les quatre taules de presència recullen totes les pel·lícules espanyoles documentades en secció oficial a concurs a **Cannes** (28), **Berlín** (42), **Venècia** (30) i **Sant Sebastià** (164) entre 1965 i 2025 (un total de 264). Per a cada film s'indica si apareix al Top 100 d'espectadors de la Part I (posició global, posició dins la dècada i nombre d'espectadors acumulats).
@@ -19,3 +13,10 @@ L'ordre de presentació respon al prestigi internacional consagrat per la FIAPF:
 Una nota metodològica prèvia: la selecció oficial a competició en un dels quatre grans festivals és, en si mateixa, un reconeixement de primer nivell: és la institució del festival que valida el film davant la comunitat cinematogràfica internacional i el col·loca en el debat crític global. Aquesta validació no és trivial —menys de l'1% de la producció mundial de cada any accedeix a la competició oficial de Cannes, Berlín o Venècia.
 
 Els premis que atorguen els jurats posteriorment afegeixen un reconeixement addicional, però de naturalesa diferent: depenen de la composició canviant del jurat, de les tendències estètiques del moment, dels equilibris geogràfics i polítics, i d'un grau inevitable de subjectivitat. No mesuren qualitat objectiva sinó que reflecteixen el consens d'un grup concret en un moment concret. Per això, en aquest document tractem tot el corpus de pel·lícules seleccionades, premiades o no, com a objecte d'anàlisi rellevant. El símbol ★ assenyala els premis obtinguts.
+
+## Sobre les fonts
+
+28 participacions documentades · 12 premiades · Font: arxiu de la web del festival.
+42 participacions documentades · 8 premiades · Font: arxiu de la web del festival.
+30 participacions documentades · 7 premiades · Font: web del festival, Wikipedia, Filmaffinity.
+164 participacions documentades · 39 premiades · Fonts: web del festival, Wikipedia.
