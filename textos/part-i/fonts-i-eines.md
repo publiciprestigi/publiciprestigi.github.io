@@ -29,7 +29,7 @@ Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el ràn
 
 ## Les quatre mètriques: com es llegeix cadascuna
 
-A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna conta una història diferent:
+A les taules de dades d'aquest estudi trobarem quatre columnes de mesura. Cadascuna conta una història diferent:
 
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
