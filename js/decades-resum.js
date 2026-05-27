@@ -94,15 +94,13 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const noms   = ordre.map(d => etiquetes[d]);
   const counts = ordre.map(d => grups[d].length);
   const pcts   = ordre.map(d => Math.round(grups[d].length / total * 100));
-  // Convertir hex a rgba per al hover
-  const hexToRgba = (hex, alpha) => {
-    const r = parseInt(hex.slice(1,3), 16);
-    const g = parseInt(hex.slice(3,5), 16);
-    const b = parseInt(hex.slice(5,7), 16);
-    return `rgba(${r},${g},${b},${alpha})`;
+  // Colors saturats per defecte, clars al hover (mateixos que les taules)
+  const COLORS_SAT = {
+    '60s':'#8aaec8','70s':'#7aa0be','80s':'#6a92b4','90s':'#5a84aa',
+    '2000s':'#4a76a0','2010s':'#3a6896','2020s':'#2a5a8c'
   };
-  const colors      = ordre.map(d => COLORS_DECADES[d]?.fons || '#ccc');
-  const colorsHover = ordre.map(d => hexToRgba(COLORS_DECADES[d]?.fons || '#cccccc', 0.4));
+  const colors      = ordre.map(d => COLORS_SAT[d] || '#ccc');
+  const colorsHover = ordre.map(d => COLORS_DECADES[d]?.fons || '#ccc');
   const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `

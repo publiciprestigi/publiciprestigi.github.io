@@ -20,18 +20,17 @@ async function construirGraficMercat() {
   const poblacio  = dades.map(d => d.poblacio_M);
   const estimats  = dades.map(d => d.estimat);
 
-  // Colors de les barres: mateixa gamma que les taules de dècada
-  const COLORS_DEC_MERCAT = {
-    '60s':   { ple: '#f4f7fa', hover: 'rgba(244,247,250,0.4)' },
-    '70s':   { ple: '#edf2f7', hover: 'rgba(237,242,247,0.4)' },
-    '80s':   { ple: '#e4ecf4', hover: 'rgba(228,236,244,0.4)' },
-    '90s':   { ple: '#dae6f0', hover: 'rgba(218,230,240,0.4)' },
-    '2000s': { ple: '#cfe0ec', hover: 'rgba(207,224,236,0.4)' },
-    '2010s': { ple: '#c3d9e8', hover: 'rgba(195,217,232,0.4)' },
-    '2020s': { ple: '#b6d2e4', hover: 'rgba(182,210,228,0.4)' },
+  // Colors saturats per defecte, clars al hover (mateixos que les taules)
+  const COLORS_SAT_MERCAT = {
+    '60s':'#8aaec8','70s':'#7aa0be','80s':'#6a92b4','90s':'#5a84aa',
+    '2000s':'#4a76a0','2010s':'#3a6896','2020s':'#2a5a8c'
+  };
+  const COLORS_CLAR_MERCAT = {
+    '60s':'#f4f7fa','70s':'#edf2f7','80s':'#e4ecf4','90s':'#dae6f0',
+    '2000s':'#cfe0ec','2010s':'#c3d9e8','2020s':'#b6d2e4'
   };
   const decadaPerAny = (any) => {
-    if (any === 2020) return null; // COVID — color especial
+    if (any === 2020) return null;
     if (any <= 1969) return '60s';
     if (any <= 1979) return '70s';
     if (any <= 1989) return '80s';
@@ -42,13 +41,13 @@ async function construirGraficMercat() {
   };
   const colorPerAny = (any) => {
     const dec = decadaPerAny(any);
-    if (!dec) return 'rgba(180, 50, 50, 0.9)';
-    return COLORS_DEC_MERCAT[dec].ple;
+    if (!dec) return '#b43232';
+    return COLORS_SAT_MERCAT[dec];
   };
   const colorHoverPerAny = (any) => {
     const dec = decadaPerAny(any);
-    if (!dec) return 'rgba(180, 50, 50, 0.4)';
-    return COLORS_DEC_MERCAT[dec].hover;
+    if (!dec) return '#e8a0a0';
+    return COLORS_CLAR_MERCAT[dec];
   };
   const colorsBarres = dades.map(d => colorPerAny(d.any));
   const colorsHover  = dades.map(d => colorHoverPerAny(d.any));
