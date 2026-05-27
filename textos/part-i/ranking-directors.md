@@ -11,7 +11,7 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 <!-- /comentari-r1 -->
 
 <!-- comentari-r2 -->
-La variació (Var.) indica el canvi de posició respecte al rànquing de sols films Top 100.
+La variació (Var.) indica el canvi de posició respecte al rànquing de només films del Top 100.
 
 - Mariano Ozores confirma la hipòtesi: amb 3 films al Top 100 i 6 de context addicionals, supera els 14M d'espectadors totals. Cap megatop, però una consistència extraordinària durant tres dècades.
 
