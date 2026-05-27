@@ -247,9 +247,7 @@ function construirRànquingEspectadors() {
     const cid    = `resp-${festival.replace(/\s/g,'-')}`;
     const color  = FC[festival];
 
-    const top100count = films.filter(f => f.in_top100).length;
     const mediana = calcularMediana(films);
-    const top100txt = top100count === 0 ? 'Cap film al Top 100' : `${top100count} film${top100count > 1 ? 's' : ''} al Top 100`;
     const medianaTxt = mediana ? `Mediana de tots els films seleccionats: ${fmt(mediana)} espectadors` : '';
 
     const fila = (f, i) => {
@@ -266,7 +264,7 @@ function construirRànquingEspectadors() {
 
     html += `
       <h2 class="subtitol-festival-ranking" style="margin-top:32px;color:${color}">${festival}</h2>
-      <p class="festival-mediana">${top100txt} &nbsp;·&nbsp; ${medianaTxt}</p>
+      <p class="festival-mediana">${medianaTxt}</p>
       <table class="taula-festivals">
         <thead><tr>
           <th class="col-pos">#</th>
