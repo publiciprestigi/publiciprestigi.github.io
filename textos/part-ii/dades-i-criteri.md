@@ -1,6 +1,6 @@
 Els festivals com a termómetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l'estudi recull els premis i la presència en les seccions oficials a competició en els quatre grans festivals internacionals del circuit A: Cannes, Berlín, Venècia i Sant Sebastià.
 
-## Premis i seleccions
+## Premis i límits del criteri
 
 Recull de tots els premis a les seccions oficials en competició dels quatre grans festivals del circuit A (Cannes, Berlín, Venècia i Sant Sebastià), organitzats per dècada. Àmbit exclusiu: selecció oficial estrictament a concurs pel premi màxim de cada festival (Compétition officielle, Wettbewerb, Concorso, Sección Oficial a concurso). Excloses: seccions oficials "no competitives", Un Certain Regard, Panorama, Orizzonti, Quinzaine des Cinéastes, Zabaltegi i totes les seccions paral·leles. Es limiten els premis al trofeu principal de la secció oficial competitiva, especials del jurat, millor direcció, millors interpretacions i millor guió (no es valoren premis tècnics ni secundaris).
 
