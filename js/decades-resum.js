@@ -10,6 +10,17 @@ const COLORS_DECADES = {
   '2020s': { fons: '#b6d2e4', text: '#0a2840' },
 };
 
+// Colors saturats per als gràfics (plens per defecte, apagats al hover)
+const COLORS_DECADES_GRAFIC = {
+  '60s':   { ple: 'rgba(140, 175, 205, 0.9)', hover: 'rgba(140, 175, 205, 0.4)' },
+  '70s':   { ple: 'rgba(120, 160, 195, 0.9)', hover: 'rgba(120, 160, 195, 0.4)' },
+  '80s':   { ple: 'rgba(100, 145, 185, 0.9)', hover: 'rgba(100, 145, 185, 0.4)' },
+  '90s':   { ple: 'rgba(80, 130, 175, 0.9)',  hover: 'rgba(80, 130, 175, 0.4)'  },
+  '2000s': { ple: 'rgba(60, 115, 165, 0.9)',  hover: 'rgba(60, 115, 165, 0.4)'  },
+  '2010s': { ple: 'rgba(40, 100, 155, 0.9)',  hover: 'rgba(40, 100, 155, 0.4)'  },
+  '2020s': { ple: 'rgba(30, 85, 145, 0.9)',   hover: 'rgba(30, 85, 145, 0.4)'   },
+};
+
 async function construirResumDecades() {
   const cont = document.getElementById('taula-decades-resum');
   if (!cont) return;
@@ -50,7 +61,7 @@ async function construirResumDecades() {
     const mercatEst   = fs.some(f => f.mercat_estimat);
     const col = COLORS_DECADES[decada] || { fons: '#f5f5f5', text: '#333' };
 
-    return `<tr style="background:${col.fons}">
+    return `<tr style="background:${col.fons};border-bottom:2px solid #fff">
       <td style="color:${col.text};font-weight:600">${etiquetes[decada]}</td>
       <td class="col-titol"><strong><em>${lider.titol}</em></strong></td>
       <td class="col-subtil">${lider.director}</td>
@@ -61,7 +72,6 @@ async function construirResumDecades() {
     </tr>`;
   }).join('');
 
-  // Taula
   cont.innerHTML = `
     <table class="taula-films taula-decades-resum">
       <thead>
@@ -78,13 +88,11 @@ async function construirResumDecades() {
       <tbody>${files}</tbody>
     </table>`;
 
-  // Text intermedi (bloc del .md)
   const divIntermedi = document.querySelector('#seccio-decades .text-md-intermedi');
   if (divIntermedi && window.PiP_textos) {
     window.PiP_textos.renderitza(divIntermedi);
   }
 
-  // Gràfic de distribució
   construirGraficDecades(grups, ordre, etiquetes, total);
 }
 
@@ -95,8 +103,9 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const noms   = ordre.map(d => etiquetes[d]);
   const counts = ordre.map(d => grups[d].length);
   const pcts   = ordre.map(d => Math.round(grups[d].length / total * 100));
-  const colors = ordre.map(d => COLORS_DECADES[d]?.fons || '#ccc');
-  const textColors = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
+  const colors      = ordre.map(d => COLORS_DECADES_GRAFIC[d]?.ple   || '#aaa');
+  const colorsHover = ordre.map(d => COLORS_DECADES_GRAFIC[d]?.hover || '#ccc');
+  const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `
     <canvas id="grafic-decades-canvas"></canvas>
@@ -110,8 +119,8 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       datasets: [{
         data: counts,
         backgroundColor: colors,
-        borderColor: textColors.map(c => c + '88'),
-        borderWidth: 1,
+        hoverBackgroundColor: colorsHover,
+        borderWidth: 0,
       }]
     },
     options: {
@@ -131,7 +140,6 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
         tooltip: {
           enabled: false,
           external: function(context) {
-            // Tooltip HTML personalitzat
             let tooltipEl = document.getElementById('tooltip-decades');
             if (!tooltipEl) {
               tooltipEl = document.createElement('div');
@@ -198,8 +206,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
         counts.forEach((val, i) => {
           const xPos = x.getPixelForValue(i);
           const yPos = y.getPixelForValue(val);
-          ctx.fillStyle = textColors[i];
-          ctx.font = 'bold 11px -apple-system, sans-serif';
+          ctx.fillStyle = COLORS_DECADES[ordre[i]]?.text || '#333';
           ctx.textAlign = 'center';
           ctx.font = 'bold 12px -apple-system, sans-serif';
           ctx.fillText(`${val} films`, xPos, yPos - 18);
