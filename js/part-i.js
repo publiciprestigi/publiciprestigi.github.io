@@ -271,7 +271,7 @@ function construirRànquingDirectors() {
   };
 
   cont.innerHTML = `
-    <h3 class="subtitol-ranking">Només films del Top 100</h3>
+    <h3 class="subtitol-ranking-gran">Només films del Top 100</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
@@ -296,7 +296,7 @@ function construirRànquingDirectors() {
         <li style="margin-bottom:10px;line-height:1.55">Pedro Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films Top 100 supera els 3,5M. El seu terreny natural és la quota alta en mercats comprimits, no els espectadors absoluts.</li>
       </ul>
     </div>
-    <h3 class="subtitol-ranking" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
+    <h3 class="subtitol-ranking-gran" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
