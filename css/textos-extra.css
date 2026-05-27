@@ -229,3 +229,13 @@ th.col-iic-header {
   margin-top: 2px;
   margin-bottom: 16px;
 }
+
+/* ── Subtítol gran per a seccions amb múltiples rànquings ── */
+.subtitol-ranking-gran {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 8px;
+  color: #363737;
+  border-top: none;
+}
