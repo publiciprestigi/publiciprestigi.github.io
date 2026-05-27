@@ -20,26 +20,35 @@ async function construirGraficMercat() {
   const poblacio  = dades.map(d => d.poblacio_M);
   const estimats  = dades.map(d => d.estimat);
 
-  // Colors de les barres per dècada — plens per defecte, apagats al hover
+  // Colors de les barres: mateixa gamma que les taules de dècada
+  const COLORS_DEC_MERCAT = {
+    '60s':   { ple: '#f4f7fa', hover: 'rgba(244,247,250,0.4)' },
+    '70s':   { ple: '#edf2f7', hover: 'rgba(237,242,247,0.4)' },
+    '80s':   { ple: '#e4ecf4', hover: 'rgba(228,236,244,0.4)' },
+    '90s':   { ple: '#dae6f0', hover: 'rgba(218,230,240,0.4)' },
+    '2000s': { ple: '#cfe0ec', hover: 'rgba(207,224,236,0.4)' },
+    '2010s': { ple: '#c3d9e8', hover: 'rgba(195,217,232,0.4)' },
+    '2020s': { ple: '#b6d2e4', hover: 'rgba(182,210,228,0.4)' },
+  };
+  const decadaPerAny = (any) => {
+    if (any === 2020) return null; // COVID — color especial
+    if (any <= 1969) return '60s';
+    if (any <= 1979) return '70s';
+    if (any <= 1989) return '80s';
+    if (any <= 1999) return '90s';
+    if (any <= 2009) return '2000s';
+    if (any <= 2019) return '2010s';
+    return '2020s';
+  };
   const colorPerAny = (any) => {
-    if (any === 2020) return 'rgba(180, 50, 50, 0.9)';
-    if (any <= 1969) return 'rgba(140, 175, 205, 0.9)';
-    if (any <= 1979) return 'rgba(120, 160, 195, 0.9)';
-    if (any <= 1989) return 'rgba(100, 145, 185, 0.9)';
-    if (any <= 1999) return 'rgba(80, 130, 175, 0.9)';
-    if (any <= 2009) return 'rgba(60, 115, 165, 0.9)';
-    if (any <= 2019) return 'rgba(40, 100, 155, 0.9)';
-    return 'rgba(30, 85, 145, 0.9)';
+    const dec = decadaPerAny(any);
+    if (!dec) return 'rgba(180, 50, 50, 0.9)';
+    return COLORS_DEC_MERCAT[dec].ple;
   };
   const colorHoverPerAny = (any) => {
-    if (any === 2020) return 'rgba(180, 50, 50, 0.4)';
-    if (any <= 1969) return 'rgba(140, 175, 205, 0.4)';
-    if (any <= 1979) return 'rgba(120, 160, 195, 0.4)';
-    if (any <= 1989) return 'rgba(100, 145, 185, 0.4)';
-    if (any <= 1999) return 'rgba(80, 130, 175, 0.4)';
-    if (any <= 2009) return 'rgba(60, 115, 165, 0.4)';
-    if (any <= 2019) return 'rgba(40, 100, 155, 0.4)';
-    return 'rgba(30, 85, 145, 0.4)';
+    const dec = decadaPerAny(any);
+    if (!dec) return 'rgba(180, 50, 50, 0.4)';
+    return COLORS_DEC_MERCAT[dec].hover;
   };
   const colorsBarres = dades.map(d => colorPerAny(d.any));
   const colorsHover  = dades.map(d => colorHoverPerAny(d.any));
@@ -197,7 +206,7 @@ async function construirGraficMercat() {
           position: 'left',
           title: {
             display: true,
-            text: 'Milions d'entrades venudes',
+            text: "Milions d'entrades venudes",
             color: '#666',
             font: { size: 11 },
           },
@@ -210,7 +219,7 @@ async function construirGraficMercat() {
           position: 'right',
           title: {
             display: true,
-            text: 'Població (milions d'habitants)',
+            text: "Població (milions d'habitants)",
             color: 'rgba(190, 110, 30, 0.8)',
             font: { size: 11 },
           },

@@ -10,16 +10,7 @@ const COLORS_DECADES = {
   '2020s': { fons: '#b6d2e4', text: '#0a2840' },
 };
 
-// Colors saturats per als gràfics (plens per defecte, apagats al hover)
-const COLORS_DECADES_GRAFIC = {
-  '60s':   { ple: 'rgba(140, 175, 205, 0.9)', hover: 'rgba(140, 175, 205, 0.4)' },
-  '70s':   { ple: 'rgba(120, 160, 195, 0.9)', hover: 'rgba(120, 160, 195, 0.4)' },
-  '80s':   { ple: 'rgba(100, 145, 185, 0.9)', hover: 'rgba(100, 145, 185, 0.4)' },
-  '90s':   { ple: 'rgba(80, 130, 175, 0.9)',  hover: 'rgba(80, 130, 175, 0.4)'  },
-  '2000s': { ple: 'rgba(60, 115, 165, 0.9)',  hover: 'rgba(60, 115, 165, 0.4)'  },
-  '2010s': { ple: 'rgba(40, 100, 155, 0.9)',  hover: 'rgba(40, 100, 155, 0.4)'  },
-  '2020s': { ple: 'rgba(30, 85, 145, 0.9)',   hover: 'rgba(30, 85, 145, 0.4)'   },
-};
+
 
 async function construirResumDecades() {
   const cont = document.getElementById('taula-decades-resum');
@@ -103,8 +94,15 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const noms   = ordre.map(d => etiquetes[d]);
   const counts = ordre.map(d => grups[d].length);
   const pcts   = ordre.map(d => Math.round(grups[d].length / total * 100));
-  const colors      = ordre.map(d => COLORS_DECADES_GRAFIC[d]?.ple   || '#aaa');
-  const colorsHover = ordre.map(d => COLORS_DECADES_GRAFIC[d]?.hover || '#ccc');
+  // Convertir hex a rgba per al hover
+  const hexToRgba = (hex, alpha) => {
+    const r = parseInt(hex.slice(1,3), 16);
+    const g = parseInt(hex.slice(3,5), 16);
+    const b = parseInt(hex.slice(5,7), 16);
+    return `rgba(${r},${g},${b},${alpha})`;
+  };
+  const colors      = ordre.map(d => COLORS_DECADES[d]?.fons || '#ccc');
+  const colorsHover = ordre.map(d => hexToRgba(COLORS_DECADES[d]?.fons || '#cccccc', 0.4));
   const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `
