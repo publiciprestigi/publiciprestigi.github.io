@@ -20,18 +20,29 @@ async function construirGraficMercat() {
   const poblacio  = dades.map(d => d.poblacio_M);
   const estimats  = dades.map(d => d.estimat);
 
-  // Colors de les barres per dècada, seguint la gamma de blaus de l'estudi
+  // Colors de les barres per dècada — plens per defecte, apagats al hover
   const colorPerAny = (any) => {
-    if (any === 2020) return 'rgba(180, 50, 50, 0.85)';
-    if (any <= 1969) return 'rgba(240, 245, 249, 0.95)';
-    if (any <= 1979) return 'rgba(228, 237, 245, 0.95)';
-    if (any <= 1989) return 'rgba(215, 230, 241, 0.95)';
-    if (any <= 1999) return 'rgba(202, 222, 238, 0.95)';
-    if (any <= 2009) return 'rgba(190, 214, 234, 0.95)';
-    if (any <= 2019) return 'rgba(178, 207, 230, 0.95)';
-    return 'rgba(165, 199, 226, 0.95)';
+    if (any === 2020) return 'rgba(180, 50, 50, 0.9)';
+    if (any <= 1969) return 'rgba(140, 175, 205, 0.9)';
+    if (any <= 1979) return 'rgba(120, 160, 195, 0.9)';
+    if (any <= 1989) return 'rgba(100, 145, 185, 0.9)';
+    if (any <= 1999) return 'rgba(80, 130, 175, 0.9)';
+    if (any <= 2009) return 'rgba(60, 115, 165, 0.9)';
+    if (any <= 2019) return 'rgba(40, 100, 155, 0.9)';
+    return 'rgba(30, 85, 145, 0.9)';
+  };
+  const colorHoverPerAny = (any) => {
+    if (any === 2020) return 'rgba(180, 50, 50, 0.4)';
+    if (any <= 1969) return 'rgba(140, 175, 205, 0.4)';
+    if (any <= 1979) return 'rgba(120, 160, 195, 0.4)';
+    if (any <= 1989) return 'rgba(100, 145, 185, 0.4)';
+    if (any <= 1999) return 'rgba(80, 130, 175, 0.4)';
+    if (any <= 2009) return 'rgba(60, 115, 165, 0.4)';
+    if (any <= 2019) return 'rgba(40, 100, 155, 0.4)';
+    return 'rgba(30, 85, 145, 0.4)';
   };
   const colorsBarres = dades.map(d => colorPerAny(d.any));
+  const colorsHover  = dades.map(d => colorHoverPerAny(d.any));
 
   // Límits de dècades per a les línies verticals
   const decades = [
@@ -49,13 +60,11 @@ async function construirGraficMercat() {
         La caiguda del mercat és continuada i no s'explica per la població —que creix—
         sinó per la competència d'altres formes d'oci i la multiplicació de pantalles.
         El mercat de 2025 (65M) representa un −83% respecte al màxim de 1965 (∼390M).
-
       </p>
     </div>`;
 
   const ctx = document.getElementById('grafic-mercat-canvas').getContext('2d');
 
-  // Plugin per a les línies verticals de dècada i anotacions
   const pluginDecades = {
     id: 'decades',
     afterDraw(chart) {
@@ -69,7 +78,6 @@ async function construirGraficMercat() {
         const yTop = y.top;
         const yBot = y.bottom;
 
-        // Línia vertical grisa
         ctx.beginPath();
         ctx.strokeStyle = 'rgba(100,100,100,0.25)';
         ctx.lineWidth = 1;
@@ -79,15 +87,13 @@ async function construirGraficMercat() {
         ctx.stroke();
         ctx.setLineDash([]);
 
-        // Etiqueta de dècada
         ctx.fillStyle = 'rgba(100,100,100,0.6)';
         ctx.font = '11px -apple-system, SF Pro Text, sans-serif';
         ctx.textAlign = 'left';
         ctx.fillText(etiqueta, xPos + 4, yTop + 14);
       });
 
-      // Anotació màxim
-      const idxMax = 0; // 1965
+      const idxMax = 0;
       const xMax = x.getPixelForValue(idxMax);
       const yMax = y.getPixelForValue(entrades[idxMax]);
       ctx.fillStyle = '#363737';
@@ -97,7 +103,6 @@ async function construirGraficMercat() {
       ctx.font = '10px -apple-system, SF Pro Text, sans-serif';
       ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
 
-      // Anotació 2020
       const idx2020 = anys.indexOf(2020);
       const x2020 = x.getPixelForValue(idx2020);
       const y2020 = y.getPixelForValue(entrades[idx2020]);
@@ -120,6 +125,7 @@ async function construirGraficMercat() {
           label: 'Entrades venudes (M)',
           data: entrades,
           backgroundColor: colorsBarres,
+          hoverBackgroundColor: colorsHover,
           borderWidth: 0,
           yAxisID: 'y',
           order: 2,
@@ -191,7 +197,7 @@ async function construirGraficMercat() {
           position: 'left',
           title: {
             display: true,
-            text: 'Milions d\'entrades venudes',
+            text: 'Milions d'entrades venudes',
             color: '#666',
             font: { size: 11 },
           },
@@ -204,7 +210,7 @@ async function construirGraficMercat() {
           position: 'right',
           title: {
             display: true,
-            text: 'Població (milions d\'habitants)',
+            text: 'Població (milions d'habitants)',
             color: 'rgba(190, 110, 30, 0.8)',
             font: { size: 11 },
           },
@@ -219,5 +225,4 @@ async function construirGraficMercat() {
   });
 }
 
-// No s'executa automàticament — el crida part-i.html quan es navega a la secció
 window.PiP_graficMercat = construirGraficMercat;
