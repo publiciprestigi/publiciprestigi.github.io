@@ -5,11 +5,13 @@ Recull cronològic de tots els premis a les seccions oficials en competició del
 <!-- resum-intro -->
 ## Resum per festival i dècada
 
-Distribució dels premis obtinguts pel cinema espanyol als quatre festivals de Classe A entre 1965 i 2025.
+Primer, les xifres de les pel·lícules premiades a cada festival i la suma total. Després, un gràfic cronològic amb l'evolució. Es comptabilitzen els films que han rebut algun premi, no cada premi que hagin obtingut.
 <!-- /resum-intro -->
 
 <!-- grans-premis -->
 ## Els grans premis
+
+
 
 - **Palma d'Or (Cannes): 0.** Amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi continua escapant-se.
 
