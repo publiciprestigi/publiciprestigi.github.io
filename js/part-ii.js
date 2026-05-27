@@ -26,6 +26,16 @@ async function carregarFestivals() {
 
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
 
+function calcularMediana(films) {
+  const valors = films
+    .map(f => f.espectadors)
+    .filter(v => v != null && v > 0)
+    .sort((a, b) => a - b);
+  if (!valors.length) return null;
+  const mid = Math.floor(valors.length / 2);
+  return valors.length % 2 !== 0 ? valors[mid] : Math.round((valors[mid-1] + valors[mid]) / 2);
+}
+
 function titolFilm(f) {
   return `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`;
 }
@@ -237,6 +247,11 @@ function construirRànquingEspectadors() {
     const cid    = `resp-${festival.replace(/\s/g,'-')}`;
     const color  = FC[festival];
 
+    const top100count = films.filter(f => f.in_top100).length;
+    const mediana = calcularMediana(films);
+    const top100txt = top100count === 0 ? 'Cap film al Top 100' : `${top100count} film${top100count > 1 ? 's' : ''} al Top 100`;
+    const medianaTxt = mediana ? `Mediana de tots els films seleccionats: ${fmt(mediana)} espectadors` : '';
+
     const fila = (f, i) => {
       const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
@@ -250,7 +265,8 @@ function construirRànquingEspectadors() {
     };
 
     html += `
-      <h3 class="subtitol-ranking" style="margin-top:32px;color:${color}">${festival}</h3>
+      <h2 class="subtitol-festival-ranking" style="margin-top:32px;color:${color}">${festival}</h2>
+      <p class="festival-mediana">${top100txt} &nbsp;·&nbsp; ${medianaTxt}</p>
       <table class="taula-festivals">
         <thead><tr>
           <th class="col-pos">#</th>
