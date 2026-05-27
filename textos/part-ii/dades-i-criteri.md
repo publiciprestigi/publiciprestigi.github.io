@@ -16,7 +16,4 @@ Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocu
 
 ## Sobre les fonts
 
-28 participacions documentades · 12 premiades · Font: arxiu de la web del festival.
-42 participacions documentades · 8 premiades · Font: arxiu de la web del festival.
-30 participacions documentades · 7 premiades · Font: web del festival, Wikipedia, Filmaffinity.
-164 participacions documentades · 39 premiades · Fonts: web del festival, Wikipedia.
+Les dades s’han recollit principalment a partir dels arxius històrics disponibles a les webs oficials de cada festival. En els casos de Cannes i Berlín, aquests arxius són especialment exhaustius. Per a Venècia i Sant Sebastià, les webs oficials no ofereixen el mateix grau de detall; per això, en els casos necessaris, s’han completat determinades dades amb fonts complementàries com Wikipedia i Filmaffinity, amb les possibles incerteses pròpies de fonts no oficials.
