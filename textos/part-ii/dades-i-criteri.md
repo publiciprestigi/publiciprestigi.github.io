@@ -1,4 +1,4 @@
-Els festivals com a termómetre del reconeixement internacional especialitzat del cinema espanyol. En aquesta segona part, l'estudi recull els premis i la presència en les seccions oficials a competició de les pel·lícules espanyoles en els quatre grans festivals del circuit A: Cannes, Berlín, Venècia i Sant Sebastià.
+Els festivals com a termómetre del reconeixement internacional especialitzat del cinema espanyol. En aquesta segona part, l'estudi recull els premis i la presència en les seccions oficials a competició en els quatre grans festivals del circuit A: Cannes, Berlín, Venècia i Sant Sebastià.
 
 ## Premis i seleccions
 
