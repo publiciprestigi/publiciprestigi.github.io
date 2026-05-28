@@ -1,5 +1,5 @@
 <!-- intro -->
-Ordenem per espectadors a sales de cinema totes les participacions espanyoles a les seccions oficials competitives dels quatre festivals, començant pel Top 10. S'indica també si han obtingut premi i si apareixen al Top 100 històric.
+Ordenem segons el nombre d’espectadors en sales de cinema tots els films espanyols seleccionats a les seccions oficials competitives dels quatre festivals, començant pel Top 10. S’hi indica també si han obtingut algun premi i si apareixen al Top 100 històric.
 
 <!-- /intro -->
 
