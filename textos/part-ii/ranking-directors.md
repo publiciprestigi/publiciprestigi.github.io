@@ -18,5 +18,5 @@ En el segón Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres f
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-[TEXT PENDENT — comentari del Top 3 més premiats per festival. Aquí explicar el cas d'Aitor Arregi (Moriarti) i per què apareix com a representant del col·lectiu.]
+- Aitor Arregi apareix com a "representant" del col·lectiu i productora Moriarti, l'únic que apareix com a codirector en les tres pel·lícules premiades a Sant Sebastià.
 <!-- /comentari-top3 -->
