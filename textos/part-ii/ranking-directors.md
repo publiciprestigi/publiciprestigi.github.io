@@ -8,13 +8,13 @@ En el segón Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres f
 <!-- /intro -->
 
 <!-- comentari-top25 -->
-- Saura lidera amb 16 seleccions i 8 premis; Almodóvar el segueix amb 10 i 6. En nombre Saura és dominant, però Almodóvar té una cosa que Saura no té de forma sistemàtica: presència simultània al Top 100 d'espectadors. És la diferència entre el prestigi pur i la "doble corona".
+- Saura lidera amb 16 seleccionades i 8 premis, Almodóvar el segueix amb 10 i 6. En nombre Saura és dominant, però Almodóvar té una cosa que Saura no té de forma sistemàtica: presència simultània al Top 100 d'espectadors. És la diferència entre el prestigi pur i la "doble corona".
 
-- Dels 25 directors d'aquest rànquing, la majoria no tenen cap film al Top 100 d'espectadors. Només 4 hi apareixen: Almodóvar (2 films — *Mujeres al borde…* i *Todo sobre mi madre*), i Camus, Aranda i Olea amb un film cadascun (*Los santos inocentes*, *Juana la Loca* i *Tormento* respectivament).
+- Dels 25 directors d'aquest rànquing, la majoria no tenen cap film al Top 100 d'espectadors. Només 4 hi apareixen: Almodóvar (*Mujeres al borde…* i *Todo sobre mi madre*), Mario Camus (*Los santos inocentes*), Vicente Aranda (*Juana la Loca*) i Pedro Olea (*Tormento*).
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
-- Com canvia el rànquing: Vicente Aranda (#3 al Top 25), Montxo Armendáriz (#5), Gonzalo Suàrez (#6), Imanol Uribe (#9) e Isaki Lacuesta (#10) desapareixen del Top 10 sense Sant Sebastià. En canvi, apareixen: Mario Camus (#8→#3), Fernando Trueba (#15→#5), Isabel Coixet (#14→#6), Ricardo Franco (→#8), Víctor Erice (#19→#9) i Carla Simón (→10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
+- Com canvia el rànquing: randa (#3 al Top 25), Montxo Armendáriz (#5), Gonzalo Suàrez (#6), Imanol Uribe (#9) e Isaki Lacuesta (#10) desapareixen del Top 10 sense Sant Sebastià. En canvi, apareixen: Camus (#8→#3), Fernando Trueba (#15→#5), Isabel Coixet (#14→#6), Ricardo Franco (→#8), Víctor Erice (#19→#9) i Carla Simón (→10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
