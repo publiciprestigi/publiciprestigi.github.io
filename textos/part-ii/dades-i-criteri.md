@@ -1,4 +1,4 @@
-Els festivals com a termòmetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l’estudi recull la presència i els premis obtinguts per pel·lícules espanyoles a les seccions oficials competitives dels quatre festivals internacionals analitzats: **Cannes**, **Berlín**, **Venècia** i **Sant Sebastià**.
+Els festivals com a termòmetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l’estudi recull la presència i els premis obtinguts per pel·lícules espanyoles a les seccions oficials competitives dels quatre festivals internacionals més representatius: **Cannes**, **Berlín**, **Venècia** i **Sant Sebastià**.
 
 ## Premis i límits del criteri
 
