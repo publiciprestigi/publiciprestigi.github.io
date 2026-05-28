@@ -26,6 +26,16 @@ async function carregarFestivals() {
 
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
 
+function calcularMediana(films) {
+  const valors = films
+    .map(f => f.espectadors)
+    .filter(v => v != null && v > 0)
+    .sort((a, b) => a - b);
+  if (!valors.length) return null;
+  const mid = Math.floor(valors.length / 2);
+  return valors.length % 2 !== 0 ? valors[mid] : Math.round((valors[mid-1] + valors[mid]) / 2);
+}
+
 function titolFilm(f) {
   return `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`;
 }
@@ -58,32 +68,21 @@ function construirPremiades() {
 
   const premiades = festivalsData.filter(f => f.premiat).sort((a,b) => a.any - b.any);
 
-  const COLORS_DEC_II = {
-    '60s':   '#f0f5f9',
-    '70s':   '#deeaf4',
-    '80s':   '#ccdeed',
-    '90s':   '#bad3e6',
-    '2000s': '#a8c7df',
-    '2010s': '#96bcd8',
-    '2020s': '#a5c7e2',
-  };
-
   let html = '';
   ['60s','70s','80s','90s','2000s','2010s','2020s'].forEach(dec => {
     const films = premiades.filter(f => getDecada(f.any) === dec);
     if (!films.length) return;
-    const bgDec = COLORS_DEC_II[dec];
     html += `
-      <h3 class="subtitol-ranking" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
+      <h3 class="subtitol-ranking-gran" style="margin-top:28px">${DEC_LABELS[dec]}</h3>
       <table class="taula-festivals">
         <thead><tr>
-          <th style="width:45%">Títol</th>
-          <th class="col-subtil" style="width:15%">Director</th>
-          <th style="width:110px">Festival</th>
-          <th style="width:30%">Premi</th>
+          <th style="width:32%">Títol</th>
+          <th class="col-subtil" style="width:18%">Director</th>
+          <th style="width:100px">Festival</th>
+          <th style="width:36%">Premi</th>
         </tr></thead>
         <tbody>
-          ${films.map(f => `<tr style="background:${bgDec};border-bottom:2px solid #fff">
+          ${films.map((f,i) => `<tr style="background:${i%2===0?'#ffffff':'#f7f7f7'};border-bottom:2px solid #fff">
             <td>${titolFilm(f)}</td>
             <td class="col-subtil">${f.director}</td>
             <td>${nomFest(f.festival)}</td>
@@ -113,11 +112,11 @@ function construirPremiades() {
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
           <div style="font-size:11px;color:#6B3FA0;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">39</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">40</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
           <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">66</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">67</div>
         </div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
@@ -145,7 +144,7 @@ function construirPremiades() {
           { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', borderWidth: 0 },
           { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', borderWidth: 0 },
           { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', borderWidth: 0 },
-          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,7], backgroundColor: '#6B3FA0', borderWidth: 0 },
+          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#6B3FA0', borderWidth: 0 },
         ]
       },
       options: {
@@ -203,8 +202,7 @@ function construirFestival(festival, seccioId) {
     const premi  = f.premiat ? `<span class="estrella">★</span> ${f.premi || ''}` : (f.premi || '—');
     const top100 = isTop ? `${f.top100_pos}` : '—';
     const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
-    const rowBg  = f.premiat ? 'rgba(255,253,230,0.8)' : bgFest;
-    return `<tr style="background:${rowBg};border-bottom:2px solid #fff">
+    return `<tr style="background:${bgFest};border-bottom:2px solid #fff">
       <td class="col-subtil col-pos">${i+1}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
@@ -249,8 +247,11 @@ function construirRànquingEspectadors() {
     const cid    = `resp-${festival.replace(/\s/g,'-')}`;
     const color  = FC[festival];
 
+    const mediana = calcularMediana(films);
+    const medianaTxt = mediana ? `Mediana de tots els films seleccionats: ${fmt(mediana)} espectadors` : '';
+
     const fila = (f, i) => {
-      const bg = f.premiat ? '#fffef5' : (i % 2 === 0 ? '#ffffff' : '#f7f7f7');
+      const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
         <td class="col-pos">${i+1}</td>
         <td>${titolFilm(f)}</td>
@@ -262,7 +263,8 @@ function construirRànquingEspectadors() {
     };
 
     html += `
-      <h3 class="subtitol-ranking" style="margin-top:32px;color:${color}">${festival}</h3>
+      <h2 class="subtitol-festival-ranking" style="margin-top:32px;color:${color}">${festival}</h2>
+      <p class="festival-mediana">${medianaTxt}</p>
       <table class="taula-festivals">
         <thead><tr>
           <th class="col-pos">#</th>
@@ -422,11 +424,32 @@ function construirRànquingDirectors() {
   };
 
   /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
+  // Àlies per al Top 3: agrupa directors que formen part d'un col·lectiu
+  const ALIASES_TOP3 = [
+    { clau: 'Arregi', nom: 'Aitor Arregi (Moriarti)' },
+  ];
+
   const top3PerFest = (festival, key_sel, key_pr) => {
-    return Object.values(dirs)
-      .filter(d => d[key_sel] > 0)
-      .sort((a,b) => b[key_pr]-a[key_pr] || b[key_sel]-a[key_sel])
-      .slice(0, 3);
+    // Recalcular agrupant per àlies
+    const dirsAlies = {};
+    festivalsData.filter(f => f.festival === festival).forEach(f => {
+      let nomDir = f.director;
+      for (const alias of ALIASES_TOP3) {
+        if (f.director.includes(alias.clau)) { nomDir = alias.nom; break; }
+      }
+      if (!dirsAlies[nomDir]) dirsAlies[nomDir] = { nom: nomDir, sel: 0, pr: 0 };
+      dirsAlies[nomDir].sel++;
+      if (f.premiat) dirsAlies[nomDir].pr++;
+    });
+    return Object.values(dirsAlies)
+      .filter(d => d.pr > 0)
+      .sort((a,b) => b.pr - a.pr || b.sel - a.sel)
+      .slice(0, 3)
+      .map(d => {
+        // Retornem un objecte compatible amb el format que espera celTop3Exp
+        const festKey = { 'Cannes': 'c', 'Berlín': 'b', 'Venècia': 'v', 'Sant Sebastià': 's' }[festival];
+        return { nom: d.nom, [`${festKey}_pr`]: d.pr, [`${festKey}_sel`]: d.sel };
+      });
   };
 
   const top3c = top3PerFest('Cannes','c_sel','c_pr');
