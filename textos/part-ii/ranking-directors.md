@@ -1,9 +1,9 @@
 <!-- intro -->
-La taula recull els 25 directors i directores amb major presència acumulada a les seccions oficials dels quatre festivals. La columna 'Total sel.' suma totes les participacions. Les columnes per festival mostren el nombre de seleccions i, quan n'hi ha, s'afegeix ★N on N és el nombre de guardons obtinguts.
+El primer Top 25 recull els directors amb major presència acumulada a les seccions oficials dels quatre festivals. Sumant primer el total dels films seleccionats i després amb una ★ el número dels que han sigut premiats. I a continuació, el resultat de cada festival seguint la mateixa pauta.
 
-En cas d'empat en el nombre total de seleccions, el criteri de desempat és el nombre total de premis i el valor del festival, que segueix la jerarquia de prestigi internacional establerta: Cannes > Berlín > Venècia > Sant Sebastià. Així, un director amb 3 seleccions a Cannes es posiciona per davant d'un altre amb 3 seleccions a Sant Sebastià.
+En cas d'empat, el criteri és el nombre total de premis i el valor del festival, que segueix la jerarquia de prestigi internacional establerta: Cannes > Berlín > Venècia > Sant Sebastià. Així, un director amb 3 seleccions a Cannes es posiciona per davant d'un altre amb 3 seleccions a Sant Sebastià.
 
-Rànquing paral·lel excloent Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. Els empats es resolen per nombre de premis i pel valor del festival (Cannes > Berlín > Venècia).
+En el segón Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. Els empats es resolen amb la mateixa metodologia.
 
 <!-- /intro -->
 
