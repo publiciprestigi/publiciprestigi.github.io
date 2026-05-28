@@ -112,11 +112,11 @@ function construirPremiades() {
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
           <div style="font-size:11px;color:#6B3FA0;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">39</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">40</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
           <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">66</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">67</div>
         </div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
@@ -144,7 +144,7 @@ function construirPremiades() {
           { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', borderWidth: 0 },
           { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', borderWidth: 0 },
           { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', borderWidth: 0 },
-          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,7], backgroundColor: '#6B3FA0', borderWidth: 0 },
+          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#6B3FA0', borderWidth: 0 },
         ]
       },
       options: {
