@@ -14,7 +14,8 @@ En el segón Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres f
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
-- Com canvia el rànquing sense Sant Sebaastià: Vicente Aranda (#3 al Top 25) baixa al #11 sense SS; Montxo Armendáriz (#5) desapareix del Top 10. En canvi, Mario Camus (#8→#3) i Isabel Coixet (#17→#5) pugen dràsticament: la seva trajectòria estava construïda sobre Cannes i Berlín respectivament, no sobre Sant Sebastià. Manuel Gutiérrez Aragón (#4 al Top 25) manté la posició (#4 C+B+V) gràcies als seus 3 films a Berlín. El rànquing sense SS revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
+- Com canvia el rànquing sense Sant Sebaastià: Vicente Aranda (#3 al Top 25), Montxo Armendáriz (#5), Gonzalo Suàrez (#6), Imanol Uribe (#9) e Isaki Lacuesta (#10) desapareixen en el Top 10.
+- En canvi, Mario Camus (#8→#3) i Isabel Coixet (#14→#6) pugen. Manuel Gutiérrez Aragón (#4 al Top 25) manté la posició (#4). El rànquing sense SS revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
