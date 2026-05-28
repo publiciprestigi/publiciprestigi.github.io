@@ -426,9 +426,24 @@ function construirRànquingDirectors() {
   };
 
   /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
+  // Àlies per al Top 3: agrupa directors d'un col·lectiu sota un representant
+  const ALIASES_TOP3 = [
+    { clau: 'Arregi', nom: 'Aitor Arregi (Moriarti)' },
+  ];
+
   const top3PerFest = (festival, key_sel, key_pr) => {
-    return Object.values(dirs)
-      .filter(d => d[key_sel] > 0)
+    const dirsAlies = {};
+    festivalsData.filter(f => f.festival === festival).forEach(f => {
+      let nomDir = f.director;
+      for (const alias of ALIASES_TOP3) {
+        if (f.director.includes(alias.clau)) { nomDir = alias.nom; break; }
+      }
+      if (!dirsAlies[nomDir]) dirsAlies[nomDir] = { nom: nomDir, [key_sel]: 0, [key_pr]: 0 };
+      dirsAlies[nomDir][key_sel]++;
+      if (f.premiat) dirsAlies[nomDir][key_pr]++;
+    });
+    return Object.values(dirsAlies)
+      .filter(d => d[key_pr] > 0)
       .sort((a,b) => b[key_pr]-a[key_pr] || b[key_sel]-a[key_sel])
       .slice(0, 3);
   };
@@ -476,7 +491,6 @@ function construirRànquingDirectors() {
 
   cont10.innerHTML = `
     <h3 class="subtitol-ranking-gran">Top 10 — Només Cannes, Berlín i Venècia</h3>
-    <p class="nota-taula">Exclou Sant Sebastià per la seva menor projecció internacional.</p>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
