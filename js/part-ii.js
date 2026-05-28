@@ -303,8 +303,10 @@ window.expandirRankEsp = function(cid, btn) {
    RÀNQUING DIRECTORS
    ============================================================ */
 function construirRànquingDirectors() {
-  const cont = document.getElementById('taula-ranking-directors');
-  if (!cont) return;
+  const cont25 = document.getElementById('taula-ranking-directors-top25');
+  const cont10 = document.getElementById('taula-ranking-directors-top10');
+  const cont3  = document.getElementById('taula-ranking-directors-top3');
+  if (!cont25) return;
 
   const dirs = {};
   festivalsData.forEach(f => {
