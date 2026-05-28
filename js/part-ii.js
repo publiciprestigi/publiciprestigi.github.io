@@ -494,7 +494,6 @@ function construirRànquingDirectors() {
 
   cont10.innerHTML = `
     <h3 class="subtitol-ranking-gran">Top 10 — Només Cannes, Berlín i Venècia</h3>
-    <p class="nota-taula">Exclou Sant Sebastià per la seva menor projecció internacional.</p>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
