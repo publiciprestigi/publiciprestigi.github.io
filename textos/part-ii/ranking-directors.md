@@ -1,5 +1,5 @@
 <!-- intro -->
-El primer Top 25 recull els directors amb major presència acumulada a les seccions oficials dels quatre festivals. Sumant primer el total dels films seleccionats i després amb una ★ el número dels que han sigut premiats. I a continuació, el resultat de cada festival seguint la mateixa pauta.
+El primer Top 25 recull els directors amb major presència acumulada als quatre festivals. Sumant primer el total dels films seleccionats i després amb una ★ el número dels que han sigut premiats. I a continuació, el resultat de cada festival seguint la mateixa pauta.
 
 En cas d'empat, el criteri és el nombre total de premis i el valor del festival, que segueix la jerarquia de prestigi internacional establerta: Cannes > Berlín > Venècia > Sant Sebastià. Així, un director amb 3 seleccions a Cannes es posiciona per davant d'un altre amb 3 seleccions a Sant Sebastià.
 
