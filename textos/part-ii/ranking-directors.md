@@ -3,7 +3,7 @@ La taula recull els 25 directors i directores amb major presència acumulada a l
 
 En cas d'empat en el nombre total de seleccions, el criteri de desempat és el nombre total de premis i el valor del festival, que segueix la jerarquia de prestigi internacional establerta: Cannes > Berlín > Venècia > Sant Sebastià. Així, un director amb 3 seleccions a Cannes es posiciona per davant d'un altre amb 3 seleccions a Sant Sebastià, reflectint la diferent projecció internacional de cada festival.
 
-Rànquing paral·lel excloent Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. El ★ indica premi en seccions oficials a concurs. Els empats es resolen per nombre de premis i pel valor del festival (Cannes > Berlín > Venècia).
+Rànquing paral·lel excloent Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. Els empats es resolen per nombre de premis i pel valor del festival (Cannes > Berlín > Venècia).
 
 <!-- /intro -->
 
