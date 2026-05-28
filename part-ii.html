@@ -52,7 +52,7 @@
       </div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Festivals</div>
-        <a href="#" class="sidebar-link" data-seccio="premiades">Premiades per dècada</a>
+        <a href="#" class="sidebar-link" data-seccio="premiades">Premiades</a>
         <a href="#" class="sidebar-link" data-seccio="cannes">Cannes</a>
         <a href="#" class="sidebar-link" data-seccio="berlin">Berlín</a>
         <a href="#" class="sidebar-link" data-seccio="venezia">Venècia</a>
@@ -115,8 +115,12 @@
 
       <div class="seccio-contingut" id="seccio-ranking-directors">
         <div class="text-md text-md-intro" data-text="part-ii/ranking-directors" data-bloc="intro"></div>
-        <div id="taula-ranking-directors"></div>
-        <div class="text-md text-md-comentari" data-text="part-ii/ranking-directors" data-bloc="comentari"></div>
+        <div id="taula-ranking-directors-top25"></div>
+        <div class="text-md text-md-comentari" data-text="part-ii/ranking-directors" data-bloc="comentari-top25"></div>
+        <div id="taula-ranking-directors-top10"></div>
+        <div class="text-md text-md-comentari" data-text="part-ii/ranking-directors" data-bloc="comentari-top10"></div>
+        <div id="taula-ranking-directors-top3"></div>
+        <div class="text-md text-md-comentari" data-text="part-ii/ranking-directors" data-bloc="comentari-top3"></div>
       </div>
 
       <div class="nav-seccions">
@@ -146,13 +150,13 @@
   <script>
     const seccions = [
       { id: 'introduccio',          titol: 'Dades i criteri',                                          sup: 'Presència i premis als festivals internacionals' },
-      { id: 'premiades',            titol: 'Premiades per dècada',                                     sup: 'Presència i premis als festivals internacionals' },
+      { id: 'premiades',            titol: 'Premiades a festivals per dècada',                         sup: 'Presència i premis als festivals internacionals' },
       { id: 'cannes',               titol: 'Festival de Cannes — Compétition officielle',              sup: 'Presència a les seccions oficials' },
       { id: 'berlin',               titol: 'Festival de Berlín — Wettbewerb',                         sup: 'Presència a les seccions oficials' },
       { id: 'venezia',              titol: 'Festival de Venècia — Concorso',                          sup: 'Presència a les seccions oficials' },
       { id: 'sansebastia',          titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',  sup: 'Presència a les seccions oficials' },
-      { id: 'ranking-espectadors',  titol: 'Rànquing per espectadors',                                sup: 'Presència i premis als festivals internacionals' },
-      { id: 'ranking-directors',    titol: 'Rànquing per directors',                                  sup: 'Presència i premis als festivals internacionals' },
+      { id: 'ranking-espectadors',  titol: 'Rànquing per espectadors',                                sup: 'Rànquings' },
+      { id: 'ranking-directors',    titol: 'Rànquing per directors',                                  sup: 'Rànquings' },
     ];
 
     let actual = 0;
