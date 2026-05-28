@@ -455,7 +455,7 @@ function construirRànquingDirectors() {
     </td>`;
   };
 
-  cont.innerHTML = `
+  cont25.innerHTML = `
     <h3 class="subtitol-ranking-gran">Top 25 — Tots els festivals</h3>
     <table class="taula-festivals">
       <thead><tr>
@@ -470,9 +470,10 @@ function construirRànquingDirectors() {
         <th class="col-center">Films</th>
       </tr></thead>
       <tbody>${top25.map((d,i) => fila25(d,i)).join('')}</tbody>
-    </table>
+    </table>`;
 
-    <h3 class="subtitol-ranking-gran" style="margin-top:40px">Top 10 — Només Cannes, Berlín i Venècia</h3>
+  cont10.innerHTML = `
+    <h3 class="subtitol-ranking-gran">Top 10 — Només Cannes, Berlín i Venècia</h3>
     <p class="nota-taula">Exclou Sant Sebastià per la seva menor projecció internacional.</p>
     <table class="taula-festivals">
       <thead><tr>
@@ -485,9 +486,10 @@ function construirRànquingDirectors() {
         <th class="col-center" style="color:${FC['Venècia']}">Venècia</th>
       </tr></thead>
       <tbody>${top10_3.map((d,i) => fila3(d,i)).join('')}</tbody>
-    </table>
+    </table>`;
 
-    <h3 class="subtitol-ranking-gran" style="margin-top:40px">Top 3 — Més premiats</h3>
+  cont3.innerHTML = `
+    <h3 class="subtitol-ranking-gran">Top 3 — Més premiats</h3>
     <table class="taula-festivals">
       <thead><tr>
         <th style="width:110px">Festival</th>
