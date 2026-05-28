@@ -10,6 +10,6 @@ Ordenem segons el nombre d’espectadors en sales de cinema tots els films espan
 
 - La mètrica de la mediana és més fiable que la mitjana per descriure el comportament habitual en sales de cinema de les pel·lícules seleccionades a cada festival, perquè no es distorsiona quan hi ha un valor excepcionalment alt. A Venècia, *Mar adentro* (4,1M) i *Mujeres al borde…* (3,3M) inflen la mitjana fins a 1,2M, mentre que la mediana real queda en només 206.000 espectadors.
 
-- Precisament aquesta mètrica revela un ordre molt significatiu: Cannes (469k) > Berlín (242k) > Venècia (206k) > Sant Sebastià (197k). És a dir, el volum habitual d’espectadors en sales coincideix exactament amb la jerarquia de prestigi internacional. La dada és sorprenent: el festival de més prestigi és també el que selecciona, en termes medians, el cinema espanyol amb més recorregut comercial posterior.
+- Precisament aquesta mesura revela un ordre molt significatiu: Cannes (469k) > Berlín (242k) > Venècia (206k) > Sant Sebastià (197k). És a dir, el volum habitual d’espectadors en sales coincideix exactament amb la jerarquia de prestigi internacional. La dada és sorprenent: el festival de més prestigi és també el que selecciona, en termes medians, el cinema espanyol amb més recorregut comercial posterior.
 
 <!-- /comentari -->
