@@ -3,7 +3,7 @@ El primer Top 25 recull els directors amb més presència acumulada als quatre f
 
 En cas d'empat, el criteri és el nombre total de premis i després el valor del festival, que segueix la jerarquia: Cannes > Berlín > Venècia > Sant Sebastià. Així, un director amb 3 participacions a Cannes es posiciona per davant d'un altre amb 3 a Sant Sebastià.
 
-En el segón Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. Els empats es resolen amb la mateixa metodologia.
+En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. Els empats es resolen amb la mateixa metodologia.
 
 <!-- /intro -->
 
