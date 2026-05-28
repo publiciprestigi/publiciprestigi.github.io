@@ -426,24 +426,9 @@ function construirRànquingDirectors() {
   };
 
   /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
-  // Àlies per al Top 3: agrupa directors d'un col·lectiu sota un representant
-  const ALIASES_TOP3 = [
-    { clau: 'Arregi', nom: 'Aitor Arregi (Moriarti)' },
-  ];
-
   const top3PerFest = (festival, key_sel, key_pr) => {
-    const dirsAlies = {};
-    festivalsData.filter(f => f.festival === festival).forEach(f => {
-      let nomDir = f.director;
-      for (const alias of ALIASES_TOP3) {
-        if (f.director.includes(alias.clau)) { nomDir = alias.nom; break; }
-      }
-      if (!dirsAlies[nomDir]) dirsAlies[nomDir] = { nom: nomDir, [key_sel]: 0, [key_pr]: 0 };
-      dirsAlies[nomDir][key_sel]++;
-      if (f.premiat) dirsAlies[nomDir][key_pr]++;
-    });
-    return Object.values(dirsAlies)
-      .filter(d => d[key_pr] > 0)
+    return Object.values(dirs)
+      .filter(d => d[key_sel] > 0)
       .sort((a,b) => b[key_pr]-a[key_pr] || b[key_sel]-a[key_sel])
       .slice(0, 3);
   };
@@ -463,8 +448,11 @@ function construirRànquingDirectors() {
   const celTop3Exp = (d, key_pr, color, fest, id) => {
     if (!d) return '<td class="col-subtil">—</td>';
     const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]}</span>` : '';
+    // Si és un àlies, buscar per la clau original (ex: "Arregi")
+    const aliasClau = ALIASES_TOP3.find(a => a.nom === d.nom)?.clau;
     const films = festivalsData
-      .filter(f => f.festival === fest && f.director === d.nom && f.premiat)
+      .filter(f => f.festival === fest && f.premiat &&
+        (aliasClau ? f.director.includes(aliasClau) : f.director === d.nom))
       .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
       .join(' · ');
     return `<td>${d.nom}${pr}
@@ -491,6 +479,7 @@ function construirRànquingDirectors() {
 
   cont10.innerHTML = `
     <h3 class="subtitol-ranking-gran">Top 10 — Només Cannes, Berlín i Venècia</h3>
+    <p class="nota-taula">Exclou Sant Sebastià per la seva menor projecció internacional.</p>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
