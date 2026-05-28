@@ -14,7 +14,7 @@ Primer, les xifres de les pel·lícules premiades a cada festival i la suma tota
 
 I per acabar, la relació dels guardons màxims assolits a millor pel·lícula de cada festival. 
 
-- **Palma d'Or (Cannes): 0.** En el període analitzat, amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi continua escapant-se.
+- **Palma d'Or (Cannes): 0.** En el període analitzat, amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi continua escapant-se (l'únic precedent és la Palma d'Or a **Viridiana** de Luis Buñuel l'any 1961). 
 
 - **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (Carlos Saura, 1981), *La colmena* (Mario Camus, 1983) i *Alcarràs* (Carla Simón, 2022), i un buit de trenta-nou anys entre el segon i el tercer guardó.
 
