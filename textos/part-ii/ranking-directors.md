@@ -20,5 +20,4 @@ En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-- Aitor Arregi és l'únic representant que apareix del trio de co-directors de la productora Moriarti (amb Jon Garaño i Jose Mari Goenaga), perquè és l'únic dels tres que firma com a codirector en les tres pel·lícules premiades a Sant Sebastià.
 <!-- /comentari-top3 -->
