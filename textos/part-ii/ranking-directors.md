@@ -14,7 +14,7 @@ En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
-- Com canvia el rànquing: Vicente Aranda (#3 al Top 25), Montxo Armendáriz (#5), Gonzalo Suàrez (#6), Imanol Uribe (#9) e Isaki Lacuesta (#10) desapareixen del Top 10 sense Sant Sebastià. Es mantenen Saura, Almodóvar, Camus, Gutiérrez Aragón i Luna.
+- Com canvia el rànquing: Vicente Aranda (#3 al Top 25), Montxo Armendáriz (#5), Gonzalo Suàrez (#6), Imanol Uribe (#9) e Isaki Lacuesta (#10) desapareixen del Top 10 sense Sant Sebastià. I es mantenen Saura, Almodóvar, Camus, Gutiérrez Aragón i Luna.
  
 - En canvi, apareixen: Fernando Trueba (#15→#5), Isabel Coixet (#14→#6), Ricardo Franco (→#8), Víctor Erice (#19→#9) i Carla Simón (→10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
 <!-- /comentari-top10 -->
