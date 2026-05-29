@@ -20,5 +20,5 @@ En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-- Recordatori: es consideren films premiats els que han rebut el guardó màxim de cada festival, especial del jurat, millor direcció, millors interpretacions o millor guió (no s’hi inclouen altres premis tècnics o secundaris).
+- Recordatori: es consideren films premiats els que han rebut el guardó màxim de cada festival, especial del jurat, millor direcció, millors interpretacions o millor guió.
 <!-- /comentari-top3 -->
