@@ -310,7 +310,7 @@ function construirRànquingDirectors() {
 
   // Àlies per agrupar membres de col·lectius sota un representant
   const ALIASES_DIRS = [
-    { clau: 'Arregi', nom: 'Aitor Arregi (Moriarti)' },
+    { clau: 'Arregi', nom: 'Aitor Arregi' },
   ];
 
   const dirs = {};
