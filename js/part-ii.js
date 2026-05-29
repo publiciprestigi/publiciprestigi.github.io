@@ -250,9 +250,11 @@ function construirRànquingEspectadors() {
     const mediana = calcularMediana(films);
     const medianaTxt = mediana ? `Mediana de tots els films seleccionats: ${fmt(mediana)} espectadors` : '';
 
-    const fila = (f, i) => {
+    const fila = (f, i, hidden, cid) => {
       const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-      return `<tr style="background:${bg};border-bottom:2px solid #fff">
+      const cls = hidden ? `class="fila-extra-${cid}"` : '';
+      const display = hidden ? 'display:none;' : '';
+      return `<tr ${cls} style="${display}background:${bg};border-bottom:2px solid #fff">
         <td class="col-pos">${i+1}</td>
         <td>${titolFilm(f)}</td>
         <td class="col-subtil">${f.director}</td>
@@ -275,7 +277,7 @@ function construirRànquingEspectadors() {
           <th class="col-num" style="text-align:right">Espectadors</th>
         </tr></thead>
         <tbody>
-          ${top10.map((f,i) => fila(f,i)).join('')}
+          ${top10.map((f,i) => fila(f,i,false,cid)).join('')}
           ${resta.length ? `
             <tr class="fila-boto-context">
               <td colspan="6">
@@ -284,7 +286,7 @@ function construirRànquingEspectadors() {
                 </button>
               </td>
             </tr>
-            ${resta.map((f,i) => fila(f,i+10).replace('<tr ','<tr style="display:none" class="fila-extra-'+cid+' ')).join('')}
+            ${resta.map((f,i) => fila(f,i+10,true,cid)).join('')}
           ` : ''}
         </tbody>
       </table>`;
