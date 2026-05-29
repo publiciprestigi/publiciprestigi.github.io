@@ -8,9 +8,9 @@ En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres
 <!-- /intro -->
 
 <!-- comentari-top25 -->
-- Saura lidera amb 16 pel·Lícules seleccionades i 8 d'elles premiades, Almodóvar el segueix amb 10 i 6. En nombre Saura és dominant, però Almodóvar és pràcticament l'únic pont sòlid entre públic i prestigi que apareix tant al Top 100 per espectadors com al circuit de festivals internacionals de manera sostinguda.
+- Saura lidera amb 16 pel·lícules seleccionades i 8 d'elles premiades, Almodóvar el segueix amb 10 i 6. En nombre Saura és dominant, però Almodóvar és pràcticament l'únic pont sòlid entre públic i prestigi que apareix tant al Top 100 per espectadors com al circuit de festivals internacionals de manera sostinguda.
 
-- Dels 25 directors d'aquest rànquing, la gran majoria no tenen cap film al Top 100 d'espectadors. Només hi apareixen 4: Almodóvar (*Mujeres al borde…*, *Todo sobre mi madre* i *Tacones lejanos*), Mario Camus (*Los santos inocentes*), Vicente Aranda (*Juana la Loca*) i Pedro Olea (*Tormento*).
+- Dels 25 directors d'aquest rànquing, només 4 coincideixen a la vegada al Top 100 d'espectadors: el citat Almodóvar (*Mujeres al borde…*, *Todo sobre mi madre* i *Tacones lejanos*), Mario Camus (*Los santos inocentes*), Vicente Aranda (*Juana la Loca*) i Pedro Olea (*Tormento*).
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
