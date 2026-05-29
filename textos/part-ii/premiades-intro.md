@@ -16,7 +16,7 @@ I per acabar, la relació dels guardons màxims assolits a millor pel·lícula d
 
 - **Palma d'Or (Cannes): 0.** En el període analitzat, amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi continua escapant-se.
 
-- **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (1981) de Carlos Saura, *La colmena* 1983) de Mario Camus i *Alcarràs* (2022) de Carla Simón, i un buit de trenta-nou anys entre el segon i el tercer guardó.
+- **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (1981) de Carlos Saura, *La colmena* (1983) de Mario Camus i *Alcarràs* (2022) de Carla Simón, i un buit de trenta-nou anys entre el segon i el tercer guardó.
 
 - **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (2024) de Pedro Almodóvar. Primer i únic Lleó d'Or de la història del cinema espanyol, i ben recent.
 
