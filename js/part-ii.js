@@ -250,11 +250,9 @@ function construirRànquingEspectadors() {
     const mediana = calcularMediana(films);
     const medianaTxt = mediana ? `Mediana de tots els films seleccionats: ${fmt(mediana)} espectadors` : '';
 
-    const fila = (f, i, hidden, cid) => {
+    const fila = (f, i) => {
       const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-      const cls = hidden ? `class="fila-extra-${cid}"` : '';
-      const display = hidden ? 'display:none;' : '';
-      return `<tr ${cls} style="${display}background:${bg};border-bottom:2px solid #fff">
+      return `<tr style="background:${bg};border-bottom:2px solid #fff">
         <td class="col-pos">${i+1}</td>
         <td>${titolFilm(f)}</td>
         <td class="col-subtil">${f.director}</td>
@@ -277,7 +275,7 @@ function construirRànquingEspectadors() {
           <th class="col-num" style="text-align:right">Espectadors</th>
         </tr></thead>
         <tbody>
-          ${top10.map((f,i) => fila(f,i,false,cid)).join('')}
+          ${top10.map((f,i) => fila(f,i)).join('')}
           ${resta.length ? `
             <tr class="fila-boto-context">
               <td colspan="6">
@@ -286,7 +284,7 @@ function construirRànquingEspectadors() {
                 </button>
               </td>
             </tr>
-            ${resta.map((f,i) => fila(f,i+10,true,cid)).join('')}
+            ${resta.map((f,i) => fila(f,i+10).replace('<tr ','<tr style="display:none" class="fila-extra-'+cid+' ')).join('')}
           ` : ''}
         </tbody>
       </table>`;
@@ -295,10 +293,10 @@ function construirRànquingEspectadors() {
 }
 
 window.expandirRankEsp = function(cid, btn) {
-  document.querySelectorAll(`.fila-extra-${cid}`).forEach(tr => {
-    tr.style.display = tr.style.display !== 'none' ? 'none' : '';
-  });
-  btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure tots';
+  const files = document.querySelectorAll(`.fila-extra-${cid}`);
+  const visible = files.length > 0 && files[0].style.display !== 'none';
+  files.forEach(tr => tr.style.display = visible ? 'none' : '');
+  btn.textContent = visible ? '+ Veure tots els films' : '− Amagar';
 };
 
 /* ============================================================
