@@ -20,5 +20,5 @@ En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-- Insistim amb la metodologia: es consideren films premiats els que han rebut el guardó màxim de cada festival, algún tipus de premi especial del jurat, la millor direcció, millors interpretacions o millor guió (no s’hi inclouen altres premis tècnics o secundaris).
+- Insistim amb la metodologia: es consideren films premiats els que han rebut el guardó màxim de cada festival, algún premi especial del jurat, millor direcció, millors interpretacions o millor guió (no s’hi inclouen altres premis tècnics o secundaris).
 <!-- /comentari-top3 -->
