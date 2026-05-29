@@ -308,9 +308,17 @@ function construirRànquingDirectors() {
   const cont3  = document.getElementById('taula-ranking-directors-top3');
   if (!cont25) return;
 
+  // Àlies per agrupar membres de col·lectius sota un representant
+  const ALIASES_DIRS = [
+    { clau: 'Arregi', nom: 'Aitor Arregi (Moriarti)' },
+  ];
+
   const dirs = {};
   festivalsData.forEach(f => {
-    const d = f.director;
+    let d = f.director;
+    for (const alias of ALIASES_DIRS) {
+      if (f.director.includes(alias.clau)) { d = alias.nom; break; }
+    }
     if (!dirs[d]) dirs[d] = {
       nom: d, total_sel: 0, total_premis: 0,
       c_sel:0, c_pr:0, b_sel:0, b_pr:0, v_sel:0, v_pr:0, s_sel:0, s_pr:0,
@@ -347,8 +355,10 @@ function construirRànquingDirectors() {
   const filmsDir = (d) => {
     const fests = ['Cannes','Berlín','Venècia','Sant Sebastià'];
     let html = '';
+    const aliasClau25 = ALIASES_DIRS.find(a => a.nom === d.nom)?.clau;
     fests.forEach(fest => {
-      const films = festivalsData.filter(f => f.festival === fest && f.director === d.nom);
+      const films = festivalsData.filter(f => f.festival === fest &&
+        (aliasClau25 ? f.director.includes(aliasClau25) : f.director === d.nom));
       if (!films.length) return;
       html += `<span class="dir-films-grup" style="color:${FC[fest]}">${fest}</span>`;
       html += films.map(f => {
