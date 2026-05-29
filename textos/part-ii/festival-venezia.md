@@ -1,4 +1,4 @@
 <!-- intro -->
-El festival amb la presència espanyola més irregular, però també amb fites importants. Fou on va començar la gran projecció internacional d’Almodóvar amb *Mujeres al borde de un ataque de nervios* (1988), culminada 36 anys després amb *La habitación de al lado* (2024), primer i únic Lleó d’Or per al cinema espanyol. Alejandro Amenábar hi va viure un impacte similar amb *Mar adentro* (2004), mentre que Bigas Luna i Álex de la Iglesia també hi van obtenir reconeixements clau. Les edicions sense competició oficial estan marcades amb ⚠.
+El festival amb la presència espanyola més irregular, però també amb fites importants. Fou on va començar la gran projecció internacional d’Almodóvar amb *Mujeres al borde de un ataque de nervios* (1988), culminada 36 anys després amb *La habitación de al lado* (2024), primer i únic Lleó d’Or per al cinema espanyol. Alejandro Amenábar hi va viure un impacte similar amb *Mar adentro* (2004), mentre que Bigas Luna i Álex de la Iglesia també hi van obtenir reconeixements per primer cop. Les edicions sense competició oficial estan marcades amb ⚠.
 <!-- /intro -->
 
