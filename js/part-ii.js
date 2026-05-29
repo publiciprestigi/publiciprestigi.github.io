@@ -428,7 +428,7 @@ function construirRànquingDirectors() {
   /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
   // Àlies: agrupa directors d'un col·lectiu sota un representant
   const ALIASES_TOP3 = [
-    { clau: 'Arregi', nom: 'Aitor Arregi (Moriarti)' },
+    { clau: 'Arregi', nom: 'Aitor Arregi' },
   ];
 
   const top3PerFest = (festival, key_sel, key_pr) => {
