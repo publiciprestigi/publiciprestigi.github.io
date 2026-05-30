@@ -1,5 +1,5 @@
 <!-- intro -->
-De cada 100 entrades venudes a Espanya aquell any, quantes van ser per a aquest film? La quota premia les pel·lícules que van dominar clarament el seu any en un mercat concret. Els anys 60s i 70s, amb mercats de 300-400 milions d’entrades, queden penalitzats: repartir tantes entrades entre molts films deixa quotes més baixes per a tothom. Veiem primer el Top 10:
+De cada 100 entrades venudes a Espanya aquell any, quantes van ser per a aquest film? La quota premia les pel·lícules que van dominar clarament el seu any en un mercat concret. Els anys 60s i 70s, amb mercats de 400-200 milions d’entrades, queden penalitzats: repartir tantes entrades entre molts films deixa quotes més baixes per a tothom. Veiem primer el Top 10:
 
 <!-- /intro -->
 
