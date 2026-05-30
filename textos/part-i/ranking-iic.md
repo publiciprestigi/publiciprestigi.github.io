@@ -1,5 +1,5 @@
 <!-- intro -->
-L’IIC combina quota i penetració en una sola xifra comparativa: IIC = 0,683 × √(quota × penetració). Permet comparar pel·lícules de dècades molt diferents. Un IIC alt indica un film que va tenir molt pes tant dins el mercat com sobre la població del seu temps.
+L’IIC combina quota i penetració en una sola xifra comparativa: IIC = 0,683 × √(quota × penetració). Permet comparar pel·lícules de dècades molt diferents. Un IIC alt indica un film que va tenir molt pes tant dins el mercat com sobre la població del seu temps. Veiem primer el Top 10:
 
 <!-- /intro -->
 
