@@ -100,7 +100,14 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
     '2000s':'#4a76a0','2010s':'#3a6896','2020s':'#2a5a8c'
   };
   const colors      = ordre.map(d => COLORS_SAT[d] || '#ccc');
-  const colorsHover = ordre.map(d => COLORS_DECADES[d]?.fons || '#ccc');
+  // Hover: mateixos colors però amb opacitat reduïda (efecte subtil, no brusc)
+  const hexToRgba = (hex, alpha) => {
+    const r = parseInt(hex.slice(1,3),16);
+    const g = parseInt(hex.slice(3,5),16);
+    const b = parseInt(hex.slice(5,7),16);
+    return `rgba(${r},${g},${b},${alpha})`;
+  };
+  const colorsHover = ordre.map(d => hexToRgba(COLORS_SAT[d] || '#8aaec8', 0.6));
   const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `
