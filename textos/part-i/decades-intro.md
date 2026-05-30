@@ -3,7 +3,7 @@ Resum cronològic de les pel·lícules líder de cada dècada, a partir de quatr
 <!-- /intro -->
 
 <!-- intermedi -->
-Veiem ara com es distribueixen per dècades les 100 pel·lícules espanyoles amb més espectadors en sales de cinema al llarg de tot el període estudiat:
+Veiem ara com es distribueixen per dècades les 100 pel·lícules espanyoles amb més espectadors al llarg de tot el període estudiat:
 <!-- /intermedi -->
 
 <!-- comentari -->
