@@ -4,7 +4,7 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 
 <!-- comentari-r1 -->
 - Santiago Segura domina el rànquing amb una contundència difícil de discutir: 8 films, 23,8M d’espectadors i el 8,1% de tots els espectadors del Top 100. No és un èxit aïllat, sinó una maquinària de cinema popular sostinguda des de 1998 a través de dues sagues: primer *Torrente* i després *Padre no hay más que uno*.
-- 
+
 - El Top 10 barreja dos models molt diferents de director taquiller: els grans artesans del cinema popular dels 60s, com Lazaga, Sáenz de Heredia, Forqué o Marquina, afavorits per un mercat gegant; i els directors moderns de l’esdeveniment, com Martínez-Lázaro, Bayona o Amenábar, amb menys films però amb impactes molt concentrats.
 
 - Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films al Top 100 supera els 3,5M. El seu pes històric no es mesura tant pels espectadors absoluts com per una continuïtat única entre públic, prestigi internacional i centralitat cultural.
