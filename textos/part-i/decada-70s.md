@@ -1,3 +1,4 @@
 <!-- intro -->
-Dècada de transició i crisi progressiva. El mercat cau de 305 a 195 milions d’entrades. Apareix el 'destape' i, per primera vegada, el cinema menys convencional i més arriscat connecta amb el gran públic: *Furtivos* de José Luis Borau (1 de cada 10 espanyols la va veure), *La guerra de papá* d'Antonio Mercero, *Asignatura pendiente* de José Luis Garci i *La escopeta nacional* de Luis García Berlanga, entren al Top 100. L’IIC puja respecte al període anterior perquè el mercat s’ha reduït: el mateix nombre d’espectadors en un mercat més petit val molt més.
+Dècada de transició i crisi progressiva. El mercat cau de 305 a 195 milions d’entrades. Apareix el destape i, per primera vegada, un cinema menys convencional i més arriscat connecta amb el gran públic: *Furtivos* de José Luis Borau (1 de cada 10 espanyols la va veure), *La guerra de papá* d’Antonio Mercero, *Asignatura pendiente* de José Luis Garci i *La escopeta nacional* de Luis García Berlanga entren al Top 100. L’IIC puja respecte al període anterior perquè el mercat s’ha reduït: el mateix nombre d’espectadors en un mercat més petit val molt més.
+
 <!-- /intro -->
