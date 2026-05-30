@@ -4,11 +4,12 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 <!-- /intro -->
 
 <!-- comentari-r1 -->
-- Santiago Segura domina el rànquing amb una contundència difícil de discutir: 8 films, 23,8M d’espectadors i el 8,1% de tots els espectadors del Top 100. No és un èxit aïllat, sinó una maquinària de cinema popular sostinguda des de 1998, primer amb *Torrente* i després amb *Padre no hay más que uno*.
+- Santiago Segura domina el rànquing amb una contundència difícil de discutir: 8 films, 23,8M d’espectadors i el 8,1% de tots els espectadors del Top 100. No és un èxit aïllat, sinó una maquinària de cinema popular sostinguda des de 1998 a través de dues sagues: primer *Torrente* i després *Padre no hay más que uno*.
 
-- L'eficiència per film: Martínez-Lázaro (5,97M/film), Bayona (5,06M) i Amenábar (4,67M) són els directors moderns més eficients. Els directors dels 60s (Lazaga, Forqué, Sáenz de Heredia) tenien el vent a favor d'un mercat gegant però sense concentració de públic per film.
+- El Top 10 barreja dos models molt diferents de director taquiller: els grans artesans del cinema popular dels 60s, com Lazaga, Sáenz de Heredia, Forqué o Marquina, afavorits per un mercat gegant; i els directors moderns de l’esdeveniment, com Martínez-Lázaro, Bayona o Amenábar, amb menys films però amb impactes molt concentrats.
 
-- Pedro Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films Top 100 supera els 3,5M. El seu terreny natural és la quota alta en mercats comprimits, no els espectadors absoluts.
+- Pedro Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films al Top 100 supera els 3,5M. El seu pes històric no es mesura tant pels espectadors absoluts com per l’impacte relatiu, la continuïtat internacional i la centralitat cultural del seu cinema.
+
 <!-- /comentari-r1 -->
 
 <!-- comentari-r2 -->
