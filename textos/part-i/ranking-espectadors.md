@@ -1,5 +1,5 @@
 <!-- intro -->
-La mesura bruta: quines pel·lícules han venut més entrades, sense cap ajust temporal, demogràfic ni de mercat al llarg d’aquests seixanta anys. Veiem primer el Top 10:
+La mesura bruta: quines pel·lícules han venut més entrades, sense cap ajust temporal, demogràfic ni de mercat al llarg d’aquests seixanta anys. Veiem primer el Top 10. El rànquing complet es pot desplegar a continuació.
 
 <!-- /intro -->
 
