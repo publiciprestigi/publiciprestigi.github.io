@@ -8,7 +8,7 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 
 - El Top 10 barreja dos models molt diferents de director taquiller: els grans artesans del cinema popular dels 60s, com Lazaga, Sáenz de Heredia, Forqué o Marquina, afavorits per un mercat gegant; i els directors moderns de l’esdeveniment, com Martínez-Lázaro, Bayona o Amenábar, amb menys films però amb impactes molt concentrats.
 
-- Pedro Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films al Top 100 supera els 3,5M. El seu pes històric no es mesura tant pels espectadors absoluts com per l’impacte relatiu, la continuïtat internacional i la centralitat cultural del seu cinema.
+- Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films al Top 100 supera els 3,5M. El seu pes històric no es mesura tant pels espectadors absoluts com per una continuïtat única entre públic, prestigi internacional i centralitat cultural.
 
 <!-- /comentari-r1 -->
 
