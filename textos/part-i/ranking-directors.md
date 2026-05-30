@@ -15,11 +15,11 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 <!-- comentari-r2 -->
 La columna de variació (Var.) indica el canvi de posició respecte al rànquing de només films del Top 100.
 
-- Mariano Ozores confirma la hipòtesi: amb 3 films al Top 100 i 6 de context addicionals, supera els 14M d'espectadors totals. Cap megatop, però una consistència extraordinària durant tres dècades.
+Mariano Ozores confirma la hipòtesi: amb 3 films al Top 100 i 6 títols de context addicionals, supera els 14M d’espectadors totals. Cap megatop, però una consistència extraordinària durant tres dècades.
 
-- Àlex de la Iglesia puja des de fora del Top 10 fins al Top 6 quan s'inclouen els altres films citats: amb tan sols 1 film al Top 100 però 5 addicionals, acumula 10M d'espectadors. Una carrera consistent i infravalorada pel rànquing principal.
+- Álex de la Iglesia és un dels grans beneficiats del rànquing ampliat: amb tan sols 1 film al Top 100 però 5 títols addicionals, entra al Top 10 i acumula més de 10M d’espectadors. Una carrera molt més sòlida del que suggereix el rànquing principal.
 
-- Lazaga i Sáenz de Heredia baixen posicions, però pot ser enganyós: tenen més pel·lícules susceptibles d'estar per sobre d'altres films de context de dècada citats que no apareixen al Top dels anys 60s ni 70s.
+- Lazaga i Sáenz de Heredia baixen posicions, però la lectura pot ser enganyosa: el rànquing ampliat infrarepresenta els directors dels 60s, perquè molts films populars d’aquella dècada que no entren al Top 100 tampoc han estat incorporats com a films de context.
 
-**Atenció: aquest rànquing té una limitació estructural important.** Els films de context no són els films 101–200 d'Espanya: són únicament els films mencionats als textos de context de cada dècada per ser representatius de la seva època, i la selecció no és exhaustiva. Això crea un biaix significatiu: a la dècada dels 60, a partir de la posició 46 cap enrere, hi ha moltes més pel·lícules amb un volum d'espectadors que superen en espectadors absoluts molts films de context dels 80s i 90s que sí que apareixen al quadre. El rànquing, per tant, infrarepresenta sistemàticament els directors dels 60s respecte als de dècades posteriors.
+**Atenció**: aquest rànquing té una limitació estructural important. Els films de context no són els films 101–200 del cinema espanyol, sinó només títols citats als textos de cada dècada per ajudar a explicar el període. La selecció no és exhaustiva i afavoreix més fàcilment els directors de dècades recents, on el nombre d’espectadors necessari per destacar és molt més baix. Per tant, el rànquing serveix com a lectura complementària, no com a classificació absoluta.
 <!-- /comentari-r2 -->
