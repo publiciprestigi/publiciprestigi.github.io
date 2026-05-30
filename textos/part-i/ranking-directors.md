@@ -11,7 +11,7 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 <!-- /comentari-r1 -->
 
 <!-- comentari-r2 -->
-La columna de variació (Var.) indica el canvi de posició respecte al rànquing de només films del Top 100.
+La columna de variació (Var.) indica el canvi de posició respecte al rànquing anterior de només films del Top 100.
 
 - Mariano Ozores és el gran nom que emergeix amb el rànquing ampliat: amb 3 films al Top 100 i 6 títols de context addicionals, supera els 14M d’espectadors totals. Cap títol descomunal, però una consistència extraordinària durant tres dècades.
 
