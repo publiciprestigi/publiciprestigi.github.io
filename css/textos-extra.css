@@ -239,3 +239,10 @@ th.col-iic-header {
   color: #363737;
   border-top: none;
 }
+
+/* ── Titol no fixat (sobreescriu position:sticky de estil.css) ── */
+/* Per revertir: elimina aquestes 3 línies */
+.titol-sticky {
+  position: relative;
+  top: auto;
+}
