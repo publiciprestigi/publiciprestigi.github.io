@@ -3,7 +3,7 @@ Resum cronològic de les pel·lícules líder per dècada, amb les quatre mètri
 <!-- /intro -->
 
 <!-- intermedi -->
-I ara veiem com es distribueixen les 100 pel·lícules a través de les dècades:
+I ara veiem com es distribueixen les 100 pel·lícules a través dels seixanta anys estudiats:
 <!-- /intermedi -->
 
 <!-- comentari -->
