@@ -189,8 +189,9 @@ window.expandirRanking = function(cid, btn) {
 
 /* --- Rànquing directors --- */
 function construirRànquingDirectors() {
-  const cont = document.getElementById('taula-directors');
-  if (!cont) return;
+  const cont1 = document.getElementById('taula-directors-r1');
+  const cont2 = document.getElementById('taula-directors-r2');
+  if (!cont1) return;
 
   const totalEsp = filmsData.filter(f => f.in_top100)
     .reduce((acc, f) => acc + (f.espectadors || 0), 0);
@@ -270,7 +271,7 @@ function construirRànquingDirectors() {
     </tr>`;
   };
 
-  cont.innerHTML = `
+  cont1.innerHTML = `
     <h3 class="subtitol-ranking-gran">Només films del Top 100</h3>
     <table class="taula-ranking">
       <thead><tr>
@@ -288,8 +289,10 @@ function construirRànquingDirectors() {
         </tr>
         ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
-    </table>
-    <h3 class="subtitol-ranking-gran" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
+    </table>`;
+
+  cont2.innerHTML = `
+    <h3 class="subtitol-ranking-gran">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
