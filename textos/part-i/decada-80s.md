@@ -1,3 +1,5 @@
 <!-- intro -->
 La dècada del col·lapse. El mercat cau de 175 a 80 milions d'entrades: la irrupció del VHS i la Llei Miró transformen radicalment els hàbits de consum i el model de producció. Només 3 films del Top 100 provenen d'aquesta dècada, però l'IIC dels tres és notable, especialment *Mujeres al borde de un ataque de nervios* (3,98), perquè s'aconsegueix en un mercat cada vegada més petit. Almodóvar comença a construir el seu univers justament quan el cinema espanyol de masses s'esfonsa.
+
+El col·lapse del mercat i el miratge cultural. El mercat cau de 174 a 78 milions d'entrades (55% en deu anys) per la irrupció del VHS i els canvis estructurals de la Llei Miró (1983) (9), que arracona el cinema més popular prioritzant el cinema de “qualitat”, fent emergir des dels marges figures com Almodóvar. El cinema d'autor domina la taquilla mentre les xifres absolutes s'enfonsen: l'IIC de Mujeres al borde… (3,98) supera molts blockbusters dels 2000s, però només 3 pel·lícules superen el llindar del Top 100.
 <!-- /intro -->
