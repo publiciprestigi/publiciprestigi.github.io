@@ -1,9 +1,9 @@
 <!-- intro -->
-Resum cronològic de les pel·lícules líder per dècada, amb les quatre mètriques bàsiques: espectadors, quota de mercat, penetració demogràfica i Índex d'Impacte Cultural (IIC).
+Resum cronològic de les pel·lícules líder de cada dècada, a partir de quatre mètriques bàsiques: espectadors, quota de mercat, penetració demogràfica i Índex d’Impacte Cultural (IIC).
 <!-- /intro -->
 
 <!-- intermedi -->
-I ara veiem com es distribueixen les 100 pel·lícules a través dels seixanta anys estudiats:
+Veiem ara com es distribueixen per dècades les 100 pel·lícules espanyoles amb més espectadors en sales de cinema al llarg de tot el període estudiat:”
 <!-- /intermedi -->
 
 <!-- comentari -->
