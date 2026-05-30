@@ -289,13 +289,6 @@ function construirRànquingDirectors() {
         ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
     </table>
-    <div class="text-md-comentari" style="margin-top:28px;padding-top:20px;border-top:1px solid #e5e5e5">
-      <ul style="padding-left:20px">
-        <li style="margin-bottom:10px;line-height:1.55">Santiago Segura lidera amb 8 films i 23,8M d'espectadors (el 8,1% de tots els espectadors del Top 100). Cap director combina tanta producció consistent amb tan alt rendiment comercial en la història del cinema espanyol.</li>
-        <li style="margin-bottom:10px;line-height:1.55">L'eficiència per film: Martínez-Lázaro (5,97M/film), Bayona (5,06M) i Amenábar (4,67M) són els directors moderns més eficients. Els directors dels 60s (Lazaga, Forqué, Sáenz de Heredia) tenien el vent a favor d'un mercat gegant però sense concentració de públic per film.</li>
-        <li style="margin-bottom:10px;line-height:1.55">Pedro Almodóvar (#7, 8M acumulats) sorprèn per la modèstia de la xifra: cap dels seus tres films Top 100 supera els 3,5M. El seu terreny natural és la quota alta en mercats comprimits, no els espectadors absoluts.</li>
-      </ul>
-    </div>
     <h3 class="subtitol-ranking-gran" style="margin-top:40px">De tots els films citats (Top 100 + context)</h3>
     <table class="taula-ranking">
       <thead><tr>
@@ -315,21 +308,6 @@ function construirRànquingDirectors() {
         ${llista2.slice(10).map((d,i) => filaR2(d,i+10)).join('')}
       </tbody>
     </table>`;
-}
-
-// Carregar el comentari del primer rànquing de directors
-function carregarTextosDirectors() {
-  if (!window.PiP_textos) return;
-  const subtitol2 = document.getElementById('subtitol-directors-2');
-  if (!subtitol2) return;
-  // Evitar duplicats
-  if (document.querySelector('[data-bloc="comentari-r1"]')) return;
-  const div = document.createElement('div');
-  div.className = 'text-md text-md-comentari';
-  div.dataset.text = 'part-i/ranking-directors';
-  div.dataset.bloc = 'comentari-r1';
-  subtitol2.parentNode.insertBefore(div, subtitol2);
-  window.PiP_textos.renderitza(div);
 }
 
 window.toggleDirFilms = function(id, btn) {
