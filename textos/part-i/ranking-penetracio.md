@@ -3,9 +3,10 @@ De cada 100 espanyols, quants van veure la pel·lícula? La penetració corregei
 <!-- /intro -->
 
 <!-- comentari -->
-- *La muerte tenía un precio* (#5 per espectadors, #2 per penetració) puja 3 llocs: un mercat de 370M entrades i 32M habitants amplifica qualsevol èxit. Un de cada 6 espanyols va veure el film.
+- *La muerte tenía un precio* (#5 per espectadors, #2 per penetració) puja tres llocs: amb una població molt menor que l’actual, els seus 5,5 milions d’espectadors equivalen a una penetració enorme, 1 de cada 6 espanyols va veure el film.
 
-- *La ciudad no es para mí* (#11→#4) és la gran sorpresa: salta 7 posicions. Pedro Lazaga i el cinema popular dels 60s domina aquí com en cap altre rànquing.
+- La ciudad no es para mí (#11→#4) és la gran sorpresa: salta set posicions i confirma fins a quin punt Pedro Lazaga i el cinema popular dels 60s dominen aquest rànquing.
 
-- La penetració revela que els 60s tenien un mercat massiu i fragmentat: fins a 5 films d'aquesta dècada apareixen en aquest Top 10, un altre dels 70s i només 4 films a partir de l'any 2000.
+- La penetració revela millor que cap altra mètrica la força social del cinema dels 60s: cinc films d’aquella dècada entren al Top 10, més un dels 70s, davant només quatre títols posteriors a l’any 2000.
+
 <!-- /comentari -->
