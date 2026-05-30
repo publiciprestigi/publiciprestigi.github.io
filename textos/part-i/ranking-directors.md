@@ -15,7 +15,7 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 <!-- comentari-r2 -->
 La columna de variació (Var.) indica el canvi de posició respecte al rànquing de només films del Top 100.
 
-Mariano Ozores confirma la hipòtesi: amb 3 films al Top 100 i 6 títols de context addicionals, supera els 14M d’espectadors totals. Cap megatop, però una consistència extraordinària durant tres dècades.
+- Mariano Ozores confirma la hipòtesi: amb 3 films al Top 100 i 6 títols de context addicionals, supera els 14M d’espectadors totals. Cap megatop, però una consistència extraordinària durant tres dècades.
 
 - Álex de la Iglesia és un dels grans beneficiats del rànquing ampliat: amb tan sols 1 film al Top 100 però 5 títols addicionals, entra al Top 10 i acumula més de 10M d’espectadors. Una carrera molt més sòlida del que suggereix el rànquing principal.
 
