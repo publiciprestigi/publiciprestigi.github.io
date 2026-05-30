@@ -7,5 +7,5 @@ La distribució per dècades revela amb claredat els dos grans cicles del cinema
 <!-- /intermedi -->
 
 <!-- comentari -->
-El gràfic confirma visualment el que les dades avancen: el cinema espanyol de masses és, en bona part, un fenomen dels anys 60. La caiguda als 80 és abrupta i estructural, no conjuntural. I la recuperació dels 2000 i 2010 es produeix en un context radicalment diferent: menys espectadors totals però amb una concentració molt més gran al voltant d'uns pocs títols d'impacte massiu.
+xxx
 <!-- /comentari -->
