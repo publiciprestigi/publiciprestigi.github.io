@@ -1,5 +1,5 @@
 <!-- intro -->
-De cada 100 espanyols, quants van veure la pel·lícula? La penetració corregeix l'efecte de la grandària de la població. Els films dels 60s-70s surten afavorits: Espanya tenia 32-34 milions d'habitants, i les sales eren l'única pantalla.
+De cada 100 espanyols, quants van veure la pel·lícula? La penetració corregeix l’efecte de la mida de la població. Els films dels 60s i 70s surten afavorits: Espanya tenia 32-34 milions d’habitants i les sales eren la gran finestra de consum cinematogràfic.
 <!-- /intro -->
 
 <!-- comentari -->
