@@ -1,5 +1,5 @@
 <!-- intro -->
-Resum cronològic de les pel·lícules líder per dècada, amb les quatre mètriques bàsiques que veurem al llarg de tot l'estudi: espectadors, quota de mercat, penetració demogràfica i Índex d'Impacte Cultural (IIC).
+Resum cronològic de les pel·lícules líder per dècada, amb les quatre mètriques bàsiques: espectadors, quota de mercat, penetració demogràfica i Índex d'Impacte Cultural (IIC).
 <!-- /intro -->
 
 <!-- intermedi -->
