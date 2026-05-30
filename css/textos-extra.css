@@ -177,7 +177,11 @@ th.col-iic-header {
 #seccio-sansebastia .text-md-comentari,
 #seccio-ranking-espectadors .text-md-comentari,
 #seccio-ranking-directors .text-md-comentari,
-#seccio-directors .text-md-comentari {
+#seccio-directors .text-md-comentari,
+#seccio-espectadors .text-md-comentari,
+#seccio-penetracio .text-md-comentari,
+#seccio-quota .text-md-comentari,
+#seccio-iic .text-md-comentari {
   border-top: none;
   padding-top: 0;
   margin-top: 16px;
