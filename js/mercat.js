@@ -160,7 +160,7 @@ async function construirGraficMercat() {
       plugins: {
         legend: {
           position: 'top',
-          align: 'end',
+          align: 'center',
           labels: {
             font: { size: 12, family: '-apple-system, SF Pro Text, sans-serif' },
             color: '#363737',
