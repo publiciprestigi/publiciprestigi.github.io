@@ -4,7 +4,7 @@ Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena pe
 <!-- /intro -->
 
 <!-- comentari-r1 -->
-- Santiago Segura lidera amb 8 films i 23,8M d'espectadors (el 8,1% de tots els espectadors del Top 100). Cap director combina tanta producció consistent amb tan alt rendiment comercial en la història del cinema espanyol.
+- Santiago Segura domina el rànquing amb una contundència difícil de discutir: 8 films, 23,8M d’espectadors i el 8,1% de tots els espectadors del Top 100. No és un èxit aïllat, sinó una maquinària de cinema popular sostinguda des de 1998, primer amb *Torrente* i després amb *Padre no hay más que uno*.
 
 - L'eficiència per film: Martínez-Lázaro (5,97M/film), Bayona (5,06M) i Amenábar (4,67M) són els directors moderns més eficients. Els directors dels 60s (Lazaga, Forqué, Sáenz de Heredia) tenien el vent a favor d'un mercat gegant però sense concentració de públic per film.
 
