@@ -97,6 +97,7 @@ function construirPremiades() {
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
     <div style="margin-top:40px;padding-top:32px;border-top:1px solid #e5e5e5">
+      <p style="text-align:center;font-size:13px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:0">Premiades per festival (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
           <div style="font-size:11px;color:#9B2335;font-weight:500;margin-bottom:4px;">Cannes</div>
@@ -119,7 +120,7 @@ function construirPremiades() {
           <div style="font-size:22px;font-weight:500;color:#363737;">67</div>
         </div>
       </div>
-      <p style="text-align:center;font-size:13px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:0">Premiades per festival i dècada (1965–2025)</p>
+      <p style="text-align:center;font-size:13px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:24px">Evolució premiades per dècada (1965–2025)</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1E4080;display:inline-block;"></span>Berlín</span>
@@ -167,7 +168,7 @@ function construirPremiades() {
         scales: {
           x: { stacked: true, grid: { display: false }, ticks: { font: { size: 12 } } },
           y: { stacked: true, beginAtZero: true,
-               title: { display: true, text: 'Premis', color: '#666', font: { size: 11 } },
+               title: { display: false },
                ticks: { stepSize: 2, font: { size: 12 } }, grid: { color: 'rgba(0,0,0,0.06)' } }
         }
       }
