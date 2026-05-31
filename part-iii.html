@@ -88,11 +88,6 @@
         <div class="grafic-wrap" style="height:340px;position:relative;margin-top:18px">
           <canvas id="grafic-bretxa"></canvas>
         </div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/bretxa" data-bloc="intro-grafic2"></div>
-        <div class="grafic-wrap" style="height:340px;position:relative;margin-top:18px">
-          <canvas id="grafic-corpus"></canvas>
-        </div>
       </div>
 
       <div class="seccio-contingut" id="seccio-la-caza">
@@ -157,7 +152,6 @@
 
     let actual = 0;
     let graficBretxaInit = false;
-    let graficCorpusInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -184,10 +178,6 @@
       if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
         graficBretxaInit = true;
         setTimeout(window.PiP_graficBretxa, 50);
-      }
-      if (s.id === 'bretxa' && !graficCorpusInit && window.PiP_graficCorpus) {
-        graficCorpusInit = true;
-        setTimeout(window.PiP_graficCorpus, 50);
       }
     }
 
