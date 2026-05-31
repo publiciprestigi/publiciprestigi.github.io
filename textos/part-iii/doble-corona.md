@@ -5,9 +5,9 @@ Denominem 'doble corona' les pel·lícules que han aconseguit simultàniament el
 <!-- comentari-corona -->
 - Sant Sebastià aporta 6 dels 10 films de la 'doble corona' i 7 dels 15 del 'segon cercle'. La seva orientació cap al cinema espanyol i iberoamericà amb vocació popular el fa l'únic dels quatre festivals on la coincidència entre prestigi i audiència és recurrent. Berlín no té cap film a la 'doble corona', però n'acumula fins a 5 al 'segon cercle', que veurem a continuació.
 
-- 7 dels 10 films de la "doble corona" són premiats (70 %), molt per sobre de la mitjana del 25 % en el conjunt dels 264 films de festival seleccionats. El premi sembla acompanyar els films que ja tenien potencial de mercat, però no crea audiència on no n'hi ha: els premis màxims dels festivals rarament apareixen als rànquings d'espectadors (únicament passa amb *Furtivos* i *Los lunes al sol*, guanyadores de la Conxa d'Or).
+- 7 dels 10 films de la 'doble corona' són premiats (70 %), molt per sobre de la mitjana del 25 % en el conjunt dels 264 films de festival seleccionats. El premi sembla acompanyar els films que ja tenien potencial de mercat, però no crea audiència on no n'hi ha: els premis màxims dels festivals rarament apareixen als rànquings d'espectadors (únicament passa amb *Furtivos* i *Los lunes al sol*, guanyadores de la Conxa d'Or).
 
-- La 'doble corona' és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. Al "segon cercle", *La isla mínima* (2014) i *Mientras dure la guerra* (2019) són les úniques excepcions recents. Des del 2005, públic i prestigi han divergit de manera estructural. La pregunta és si això és irreversible o conjuntural.
+- La 'doble corona' és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. Al 'segon cercle', *La isla mínima* (2014) i *Mientras dure la guerra* (2019) són les úniques excepcions recents. Des del 2005, públic i prestigi han divergit de manera estructural. La pregunta és si això és irreversible o conjuntural.
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
