@@ -21,4 +21,4 @@ La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
-El gràfic següent mostra l’evolució, per dècades, de la ràtio de bretxa (línia negra) en relació amb la mida mitjana del mercat de sales (línia grisa).<!-- /intro-grafic1 -->
+El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mida mitjana del mercat de sales (línia grisa).<!-- /intro-grafic1 -->
