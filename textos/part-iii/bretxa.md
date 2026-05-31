@@ -17,11 +17,5 @@ La següent taula compara, dècada a dècada, la mitjana d'espectadors de les pe
 <!-- intro-grafic1 -->
 ## Mercat i bretxa: dues històries que es travessen
 
-La ràtio per si sola no explica per què passa el que passa. Sobreposant l'evolució del mercat anual (línia gris discontínua) i la ràtio de bretxa (línia negra amb els valors semàfor) es veu que els 80s no són un *èxit* de coincidència: són una caiguda paral·lela dels dos mons. En canvi, als 2010s el mercat es manté estable mentre la bretxa s'esfondra. Allà sí que es produeix una **separació real** entre el cinema de festival i el cinema popular.
+La ràtio per si sola no explica per què passa el que passa. La paradoxa dels anys 80: la ràtio puja al màxim (0,32) no perquè el cinema de festival creixi, sinó perquè el mercat popular s'enfonsa més ràpidament que el de festival. Als 2010s passa el contrari: el mercat es manté estable mentre el cinema de festival s'allunya del públic. **Aquesta sí que és una separació real** entre els dos mons.
 <!-- /intro-grafic1 -->
-
-<!-- intro-grafic2 -->
-## La salut del corpus festivaler per dècada
-
-El cinema espanyol cada cop té **més presència internacional** —les seleccions i premis dels anys 2010 i 2020 superen tot el passat— però **menys connexió amb el públic propi**: la columna de doble corona, que als anys 70 era de 3 films, als anys 2010 i 2020 és zero. La paradoxa central de Públic i Prestigi.
-<!-- /intro-grafic2 -->
