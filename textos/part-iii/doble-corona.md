@@ -19,7 +19,8 @@ Per sota del llindar del Top 100 hi ha un altre grup rellevant: 15 films selecci
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
-- *Volver* d'Almodóvar (2014) és el cas més clar del ‘segon cercle’: un film d’autor de primer nivell internacional que arriba gairebé als 2 milions d’espectadors. Que no entri al Top 100 és una qüestió de llindar, no de manca d’impacte.
+- *Volver*  (Almodóvar, 2006) és el cas més clar del ‘segon cercle’: un film d’autor de primer nivell internacional, premiat a Cannes i amb nominació als Oscar, que arriba gairebé als 2 milions d’espectadors. Que no entri al Top 100 és una qüestió de llindar, no de manca d’impacte.
 
 - El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* d'Alberto Rodríguez (2014) i *Mientras dure la guerra* (2019) d'Amenábar; als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
+
 <!-- /comentari-cercle -->
