@@ -205,15 +205,12 @@ function construirBretxa() {
 
   const files = bretxaDades.map(r => {
     const c = colorRatio(r.ratio);
-    const dcCell = r.dc > 0
-      ? `<strong style="color:#1e4080">${r.dc}</strong>`
-      : `<span style="color:#aaa">0</span>`;
-    return `<tr style="border-bottom:2px solid #fff">
-      <td style="background:${c.fons};color:${c.text};font-weight:600;text-align:center">${ETIQ_CURTA[r.decada]}</td>
-      <td class="col-center">${dcCell}</td>
-      <td class="col-num col-subtil">${fmt(r.mitF)}</td>
-      <td class="col-num col-subtil">${fmt(r.mit20)}</td>
-      <td class="col-center" style="background:${c.fons}"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
+    return `<tr style="background:${c.fons};border-bottom:2px solid #fff">
+      <td class="col-center"><strong>${ETIQ_CURTA[r.decada]}</strong></td>
+      <td class="col-center">${r.dc}</td>
+      <td class="col-num">${fmt(r.mitF)}</td>
+      <td class="col-num">${fmt(r.mit20)}</td>
+      <td class="col-center"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
     </tr>`;
   }).join('');
 
