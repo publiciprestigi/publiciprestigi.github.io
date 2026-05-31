@@ -1,7 +1,7 @@
 <!-- intro -->
 La taula següent compara, dècada a dècada, la mitjana d’espectadors en sales de les pel·lícules seleccionades a competició oficial als festivals de la Part II amb la mitjana dels films de la mateixa dècada presents al Top 100 d’espectadors de la Part I.
 
-La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festivals ÷ mitjana Top 100. Un valor proper a 1,00 indicaria que el cinema de festivals i el cinema més popular captaven audiències similars. Un valor proper a 0,00, en canvi, indica una separació molt forta entre els dos circuits. La columna 'Doble corona' indica el nombre de films que apareixen alhora en tots dos circuits.
+La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festivals ÷ mitjana Top 100. Un valor proper a 1,00 indicaria que el cinema de festivals i el cinema més popular captaven audiències similars. Un valor proper a 0,00, en canvi, indica una separació molt forta entre els dos circuits. La columna 'doble corona' indica el nombre de films que apareixen alhora en tots dos circuits.
 <!-- /intro -->
 
 <!-- llegenda-taula -->
