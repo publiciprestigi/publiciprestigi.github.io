@@ -20,7 +20,7 @@ A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols q
 <!-- comentari-cercle -->
 - *Volver* (2006), d’Almodóvar, és el cas més evident del grup: un film de primer nivell internacional, premiat a Cannes i amb nominació a l’Oscar per a Penélope Cruz, que arriba gairebé als 2 milions d’espectadors. Que no entri al Top 100 i, per tant, no sigui ‘doble corona’ és una qüestió de llindar, no de manca d’impacte.
 
-- El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* d'Alberto Rodríguez (2014) i *Mientras dure la guerra* (2019) d'Amenábar; als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
+- El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* (2014) d'Alberto Rodríguez i *Mientras dure la guerra* (2019) d'Amenábar; als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
 
 Fins i tot sumant la ‘doble corona’ i el ‘segon cercle’, parlem només de 25 títols sobre els 264 films de festival analitzats: un 9,5%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
 
