@@ -12,11 +12,14 @@ El ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 <!-- /llegenda-taula -->
 
 <!-- comentari -->
-- La bretxa s'eixampla dràsticament als anys 2010 (ràtio 0,08): el cinema de festival i el cinema popular pràcticament no comparteixen públic. És el mínim històric del període estudiat — per cada 100 espectadors que anaven a veure un film popular del Top 100, 8 anaven a veure un film de festival. Dos universos gairebé sense contacte. Als anys 70 i 80, el cinema crític tenia un públic polititzat ampli (ràtio 0,28–0,32); als 2010, la professionalització del cinema d'autor el tanca en circuits minoritaris.
+-La taula mostra que la bretxa no evoluciona en línia recta. Als 60s, els festivals tenen una mitjana respectable (499k), però el Top 100 juga en una altra lliga (3,25M), en un mercat encara massiu. Als 80s, el ràtio puja fins al 0,32, però no perquè el cinema de festival es faci molt més popular, sinó perquè el cinema comercial també cau fort. El trencament més clar arriba als 2010s: el Top 100 es dispara fins als 3,21M de mitjana, mentre els festivals baixen a 265k. És el punt de màxima separació entre públic i prestigi (0.08).
 
-- La dècada dels 70 mostra una de les coincidències relatives més elevades (ràtio 0,28): 38 seleccions, 10 premiats, i films com *Furtivos*, *La guerra de papá* o *La prima Angélica* que acumulaven centenars de milers d'espectadors malgrat l'etiqueta de "cinema de qualitat". No és que el cinema de festival fos massiu — és que el context polític de la Transició creava un públic ampli i motivat per al cinema crític. Una condició que no s'ha tornat a donar.
+- Els 70s són el moment de més porositat relativa entre públic i prestigi. Amb un ràtio de 0,28 i tres casos de “doble corona”, films com *Furtivos*, *La guerra de papá* o *La prima Angélica* demostren que el context polític de la Transició creava un públic més ampli i motivat per a aquest tipus de cinema. Una condició que no s’ha tornat a donar amb la mateixa intensitat. No era cinema massiu en el sentit dels grans èxits populars, però tampoc estava tan separat del públic com ho estaria dècades després.
 
-- Els anys 2020–2025 mostren una lleugera recuperació (ràtio 0,14) respecte als 2010, però amb un mercat pandèmic distorsionat i una dècada incompleta. Les causes d'aquest repunt no són clares, pot ser efecte rebot post-COVID o un canvi generacional en el cinema de festival, però és significativa.
+- Als 2010s, en canvi, la professionalització del cinema d’autor consolida un circuit molt més especialitzat: més reconegut, més internacionalitzat, però també més allunyat dels grans públics en sales. Els 2020s mostren una petita recuperació del ràtio (0,14), però cal llegir-la amb prudència: la dècada és incompleta, el mercat encara està marcat per la pandèmia i la mitjana del Top 100 cau molt. No sembla tant una reconciliació clara entre festivals i públic com l’efecte d’un mercat general més petit i encara en recomposició.
+
+
+
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
