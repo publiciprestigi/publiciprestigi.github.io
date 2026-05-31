@@ -1,5 +1,5 @@
 <!-- intro -->
-Denominem "doble corona" les pel·lícules que han aconseguit simultàniament dues formes de reconeixement radicalment diferent: selecció oficial a un dels quatre grans festivals internacionals i posició al Top 100 d'espectadors del cinema espanyol. De les 264 pel·lícules de festival seleccionades del corpus, únicament 10 títols (3,8 %) pertanyen a aquest cercle exclusiu.
+Denominem "doble corona" les pel·lícules que han aconseguit simultàniament dues formes de reconeixement radicalment diferent: participar en les seccions oficials competitives d'un dels quatre grans festivals internacionals i entrar al Top 100 d'espectadors històric del cinema espanyol. De les 264 pel·lícules de festival seleccionades, únicament 10 títols (3,8 %) pertanyen a aquest cercle exclusiu.
 <!-- /intro -->
 
 <!-- comentari-corona -->
