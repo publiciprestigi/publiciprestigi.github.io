@@ -3,7 +3,7 @@ La següent taula compara, dècada a dècada, la mitjana d'espectadors de les pe
 <!-- /intro -->
 
 <!-- llegenda-taula -->
-*"Doble corona" és el nombre de films presents alhora al corpus de festivals i al Top 100 d'espectadors. "Mitj. festivals" i "Mitj. Top 100" fan servir les dades reals d'espectadors que apareixen a la Part I i II de l'estudi.*
+*"Doble corona" és el nombre de films presents alhora al corpus de festivals i al Top 100 d'espectadors. "Mitjana festivals" i "Mitjana Top 100" fan servir les dades reals d'espectadors que apareixen a la Part I i II de l'estudi.*
 <!-- /llegenda-taula -->
 
 <!-- comentari -->
