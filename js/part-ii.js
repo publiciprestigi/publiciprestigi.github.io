@@ -157,7 +157,7 @@ function construirPremiades() {
           tooltip: {
             filter: (item) => item.raw > 0,
             callbacks: {
-              label: (item) => ` ${item.dataset.label}: ${item.raw} premiades`,
+              label: (item) => ` ${item.dataset.label}: ${item.raw}`,
               footer: (items) => {
                 if (items.length <= 1) return '';
                 return 'Total dècada: ' + items.reduce((s,i) => s+i.raw, 0);
