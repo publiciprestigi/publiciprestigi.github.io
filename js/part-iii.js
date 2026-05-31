@@ -53,7 +53,7 @@ function construirDobleCorona() {
       <td>${nomFest(f.festival)}</td>
       <td class="col-center">${premi}</td>
       <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
-      <td class="col-center"><strong>#${f.top100_pos}</strong></td>
+      <td class="col-center col-subtil">#${f.top100_pos}</td>
     </tr>`;
   }).join('');
 

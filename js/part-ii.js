@@ -206,7 +206,7 @@ function construirFestival(festival, seccioId) {
   const files = films.map((f, i) => {
     const isTop  = !!f.top100_pos;
     const premi  = f.premiat ? `<span class="estrella">★</span> ${f.premi || ''}` : (f.premi || '—');
-    const top100 = isTop ? `${f.top100_pos}` : '—';
+    const top100 = isTop ? `#${f.top100_pos}` : '—';
     const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
     return `<tr style="background:${bgFest};border-bottom:2px solid #fff">
       <td class="col-subtil col-pos">${i+1}</td>
@@ -263,7 +263,7 @@ function construirRànquingEspectadors() {
         <td>${titolFilm(f)}</td>
         <td class="col-subtil">${f.director}</td>
         <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
-        <td class="col-center col-subtil">${f.top100_pos || '—'}</td>
+        <td class="col-center col-subtil">${f.top100_pos ? '#' + f.top100_pos : '—'}</td>
         <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
       </tr>`;
     };
