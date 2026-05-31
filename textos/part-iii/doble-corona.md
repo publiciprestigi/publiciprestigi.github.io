@@ -13,7 +13,8 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- intro-cercle -->
 ## El segon cercle: més films de festival amb públic significatiu (11–25)
 
-Per sota del llindar del Top 100 hi ha un altre grup rellevant: 15 films presents als festivals que superen el milió d’espectadors. No formen part de la ‘doble corona’, però demostren que els dos circuits no sempre viuen d’esquena. Títols com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991) combinen reconeixement crític i una audiència popular notable. Sumats als 10 anteriors, aquests 25 títols representen només el 9,5% del corpus de films de festival analitzat.
+Per sota del llindar del Top 100 hi ha un altre grup rellevant: 15 films seleccionats als festivals que superen el milió d’espectadors. No formen part de la ‘doble corona’, però demostren que els dos circuits no sempre viuen d’esquena. Títols com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991) combinen reconeixement crític i una audiència popular notable. Sumats als 10 anteriors, aquests 25 títols representen només el 9,5% del corpus de films de festival analitzat.
+
 
 <!-- /intro-cercle -->
 
