@@ -15,7 +15,7 @@ Denominem 'doble corona' les pel·lícules que han aconseguit simultàniament el
 
 A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols que podríem anomenar el 'segon cercle': films presents als festivals amb més d'un milió d'espectadors, que no arriben al Top 100, però que demostren que la bretxa entre els dos mons no és sempre absoluta. Alguns d'ells (*Volver*, *Belle Époque*, *La colmena*, *Amantes*) combinen reconeixement crític i audiència popular en proporcions notables.
 
-La diferència entre la 'doble corona' i el 'segon cercle' és de grau, no de naturalesa: tots aquests films han tingut un impacte popular real. El que canvia és la seva posició relativa respecte al conjunt del mercat espanyol. Junts, els 25 films (10 + 15) representen només el 9,5 % del corpus on prestigi i audiència es troben.
+La diferència entre la 'doble corona' i el 'segon cercle' és de grau, no de naturalesa: tots aquests films han tingut un impacte popular real. El que canvia és la seva posició relativa respecte al conjunt del mercat espanyol. Junts, els 25 films (10 + 15) representen només el 9,5 % del corpus on públic i prestigi es troben.
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
