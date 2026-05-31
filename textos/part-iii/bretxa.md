@@ -19,7 +19,5 @@ El ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
-## Mercat i bretxa: dues històries que es travessen
-
 La ràtio per si sola no explica per què passa el que passa. La paradoxa dels anys 80: la ràtio puja al màxim (0,32) no perquè el cinema de festival creixi, sinó perquè el mercat popular s'enfonsa més ràpidament que el de festival. Als 2010s passa el contrari: el mercat es manté estable mentre el cinema de festival s'allunya del públic. **Aquesta sí que és una separació real** entre els dos mons.
 <!-- /intro-grafic1 -->
