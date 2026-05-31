@@ -9,12 +9,13 @@ El ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 <!-- /llegenda-taula -->
 
 <!-- comentari -->
-- Als 60s, els films de festival freguen el mig milió d’espectadors de mitjana (499k), la segona més alta, però el Top 100 juga en una altra lliga (3,25M), en ple mercat de masses, per això una ràtio tan modesta del 0,15. Als 80s, la ràtio puja fins al 0,32, no perquè el cinema de festival es faci molt més popular, sinó perquè el cinema comercial també cau fort. El trencament més clar arriba als 2010s: el Top 100 es dispara fins als 3,21M de mitjana, mentre els festivals baixen a 265k. És el punt de màxima separació entre els dos circuits (0,08).
+- Als 60s, els films de festival freguen el mig milió d’espectadors de mitjana (499k), una de les xifres més altes de tota la sèrie. Però el Top 100 juga en una altra lliga (3,25M), en ple mercat de masses. D’aquí una ràtio modesta del 0,15: el cinema de festival tenia públic, però el cinema popular es movia en una escala molt superior.
 
-- Els 70s són el moment de més porositat relativa entre públic i prestigi. Amb una ràtio de 0,28 i tres casos de “doble corona”, films com *Furtivos*, *La guerra de papá* o *La prima Angélica* mostren que el context polític de la Transició creava un públic més ampli i motivat per a aquest tipus de cinema. Una condició que no s’ha tornat a donar amb la mateixa intensitat. No era cinema massiu en el sentit dels grans èxits populars, però tampoc estava tan separat del públic com ho estaria dècades després.
+- Els 70s són el moment de més porositat relativa entre públic i prestigi. Amb una ràtio de 0,28 i tres casos de “doble corona”, films com *Furtivos*, *La guerra de papá* o *La prima Angélica* mostren que el context polític de la Transició creava un públic més ampli i motivat per a aquest tipus de cinema. No era cinema massiu en el sentit dels grans èxits populars, però tampoc estava tan separat del públic com ho estaria dècades després.
 
-- Als 2010s, en canvi, la professionalització del cinema d'autor consolida un circuit molt més especialitzat: més reconegut, més internacionalitzat, però també més allunyat dels grans públics en sales. Els 2020s mostren una petita recuperació de la ràtio (0,14), però cal llegir-la amb prudència: la dècada és incompleta, el mercat encara està marcat per la pandèmia i la mitjana del Top 100 cau molt. No sembla tant una reconciliació clara entre festivals i públic com l’efecte d’un mercat general més petit i encara en recomposició.
+- Els 80s donen la ràtio més alta de tota la taula (0,32), però és un pic enganyós. No puja perquè el cinema de festival es faci molt més popular, sinó perquè el Top 100 també cau fort, fins a una mitjana d’1,52M d’espectadors. És la bretxa més estreta, sí, però dins d’un mercat ja molt comprimit.
 
+- El trencament més clar arriba als 2010s: la mitjana del Top 100 es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre els festivals baixen a 265k. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d’autor: més reconegut i més internacionalitzat, però també més allunyat del gran públic en sales. Els 2020s apunten una petita recuperació de la ràtio (0,14), però amb una dècada incompleta i un mercat encara en recomposició.
 
 <!-- /comentari -->
 
