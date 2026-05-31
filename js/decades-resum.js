@@ -184,12 +184,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
           ticks: { color: '#555', font: { size: 12 } }
         },
         y: {
-          title: {
-            display: true,
-            text: 'Nombre de pel·lícules al Top 100',
-            color: '#666',
-            font: { size: 11 }
-          },
+          title: { display: false },
           ticks: {
             stepSize: 5,
             color: '#666',

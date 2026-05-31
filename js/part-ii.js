@@ -128,6 +128,7 @@ function construirPremiades() {
       <div style="position:relative;width:100%;height:260px;">
         <canvas id="grafic-premis-decades"></canvas>
       </div>
+      <p class="grafic-peu">Nombre de films premiats per festival i dècada. Es comptabilitzen els films que han rebut algun premi, no cada premi que hagin obtingut.</p>
     </div>`;
   const resDiv = document.getElementById('taula-resum-premis');
   if (resDiv) resDiv.appendChild(graficDiv);
@@ -141,10 +142,10 @@ function construirPremiades() {
       data: {
         labels: ['60s','70s','80s','90s','2000s','2010s','2020s'],
         datasets: [
-          { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', borderWidth: 0 },
-          { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', borderWidth: 0 },
-          { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', borderWidth: 0 },
-          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#6B3FA0', borderWidth: 0 },
+          { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.5)',   borderWidth: 0 },
+          { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', hoverBackgroundColor: 'rgba(30,64,128,0.5)',   borderWidth: 0 },
+          { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', hoverBackgroundColor: 'rgba(46,125,94,0.5)',   borderWidth: 0 },
+          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#6B3FA0', hoverBackgroundColor: 'rgba(107,63,160,0.5)', borderWidth: 0 },
         ]
       },
       options: {
@@ -154,6 +155,7 @@ function construirPremiades() {
           tooltip: {
             filter: (item) => item.raw > 0,
             callbacks: {
+              label: (item) => ` ${item.dataset.label}: ${item.raw} premiades`,
               footer: (items) => {
                 if (items.length <= 1) return '';
                 return 'Total dècada: ' + items.reduce((s,i) => s+i.raw, 0);
@@ -163,7 +165,9 @@ function construirPremiades() {
         },
         scales: {
           x: { stacked: true, grid: { display: false }, ticks: { font: { size: 12 } } },
-          y: { stacked: true, beginAtZero: true, ticks: { stepSize: 2, font: { size: 12 } }, grid: { color: 'rgba(0,0,0,0.06)' } }
+          y: { stacked: true, beginAtZero: true,
+               title: { display: true, text: 'Premis', color: '#666', font: { size: 11 } },
+               ticks: { stepSize: 2, font: { size: 12 } }, grid: { color: 'rgba(0,0,0,0.06)' } }
         }
       }
     });

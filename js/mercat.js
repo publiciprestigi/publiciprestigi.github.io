@@ -152,7 +152,7 @@ async function construirGraficMercat() {
       animation: false,
       responsive: true,
       maintainAspectRatio: true,
-      aspectRatio: 2.4,
+      aspectRatio: 2.8,
       interaction: {
         mode: 'index',
         intersect: false,
@@ -198,12 +198,7 @@ async function construirGraficMercat() {
         },
         y: {
           position: 'left',
-          title: {
-            display: true,
-            text: "Milions d'entrades venudes",
-            color: '#666',
-            font: { size: 11 },
-          },
+          title: { display: false },
           ticks: { color: '#666', font: { size: 11 } },
           grid: { color: 'rgba(0,0,0,0.06)' },
           min: 0,
@@ -211,12 +206,7 @@ async function construirGraficMercat() {
         },
         y2: {
           position: 'right',
-          title: {
-            display: true,
-            text: "Població (milions d'habitants)",
-            color: 'rgba(190, 110, 30, 0.8)',
-            font: { size: 11 },
-          },
+          title: { display: false },
           ticks: { color: 'rgba(190, 110, 30, 0.8)', font: { size: 11 } },
           grid: { display: false },
           min: 0,
