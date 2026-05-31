@@ -79,8 +79,7 @@
   margin: 0 !important;
 }
 #taula-resum-premis {
-  padding: 28px 0;
-  border-top: 1px solid #e5e5e5;
+  padding: 8px 0 28px 0;
   border-bottom: 1px solid #e5e5e5;
 }
 .grafic-peu {
@@ -91,6 +90,13 @@
   line-height: 1.5;
   font-style: italic;
   text-align: center;
+}
+/* Comentari que segueix un gràfic: sense border-top (ja el té el gràfic a baix) */
+#seccio-mercat .text-md-comentari,
+#seccio-decades .text-md-comentari {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 24px;
 }
 
 /* ── Padding primera columna a totes les taules de dades ── */
