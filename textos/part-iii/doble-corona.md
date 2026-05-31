@@ -12,7 +12,7 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
-## El segon cercle: més films de festival amb públic significatiu (11–25)
+## El segon cercle (11–25)
 
 A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols que podriem anomenar el 'segon cercle': films amb més d’un milió d'espectadors que no arribem al Top 100, com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991), però que combinen reconeixement crític i impacte popular en proporcions més que notables.
 <!-- /intro-cercle -->
