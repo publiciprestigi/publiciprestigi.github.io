@@ -5,7 +5,7 @@ Denominem "doble corona" les pel·lícules que han aconseguit simultàniament du
 <!-- comentari-corona -->
 - Sant Sebastià aporta 6 dels 10 films de la "doble corona" i 7 dels 15 del "segon cercle". La seva orientació cap al cinema espanyol i iberoamericà amb vocació popular el fa l'únic dels quatre festivals on la coincidència entre prestigi i audiència és recurrent. Berlín no té cap film a la "doble corona", però n'acumula fins a 5 al "segon cercle", que veurem a continuació.
 
-- 7 dels 10 films de la "doble corona" són premiats (70 %), molt per sobre de la mitjana del 25 % en el conjunt del corpus. El premi sembla acompanyar els films que ja tenien potencial de mercat, però no crea audiència on no n'hi ha: Palmes d'Or (o premis del jurat), Lleons d'Or i Conxes d'Or del corpus rarament apareixen als rànquings d'espectadors.
+- 7 dels 10 films de la "doble corona" són premiats (70 %), molt per sobre de la mitjana del 25 % en el conjunt dels 264 films de festival seleccionats. El premi sembla acompanyar els films que ja tenien potencial de mercat, però no crea audiència on no n'hi ha: Palmes d'Or (o premis del jurat), Lleons d'Or i Conxes d'Or del corpus rarament apareixen als rànquings d'espectadors.
 
 - La "doble corona" és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. Al "segon cercle", *La isla mínima* (2014) i *Mientras dure la guerra* (2019) són les úniques excepcions recents. Des del 2005, mercat i prestigi han divergit de manera estructural. La pregunta és si això és irreversible o conjuntural.
 <!-- /comentari-corona -->
