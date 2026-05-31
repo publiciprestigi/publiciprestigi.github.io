@@ -3,7 +3,7 @@ Denominem "doble corona" les pel·lícules que han aconseguit simultàniament du
 <!-- /intro -->
 
 <!-- comentari-corona -->
-- Sant Sebastià aporta 6 dels 10 films de la "doble corona" i 7 dels 15 del "segon cercle". La seva orientació cap al cinema espanyol i iberoamericà amb vocació popular el fa l'únic dels quatre festivals on la coincidència entre prestigi i audiència és recurrent. Berlín no té cap film a la "doble corona", però n'acumula fins a 5 al "segon cercle".
+- Sant Sebastià aporta 6 dels 10 films de la "doble corona" i 7 dels 15 del "segon cercle". La seva orientació cap al cinema espanyol i iberoamericà amb vocació popular el fa l'únic dels quatre festivals on la coincidència entre prestigi i audiència és recurrent. Berlín no té cap film a la "doble corona", però n'acumula fins a 5 al "segon cercle", que veurem a continuació.
 
 - 7 dels 10 films de la "doble corona" són premiats (70 %), molt per sobre de la mitjana del 25 % en el conjunt del corpus. El premi sembla acompanyar els films que ja tenien potencial de mercat, però no crea audiència on no n'hi ha: Palmes d'Or (o premis del jurat), Lleons d'Or i Conxes d'Or del corpus rarament apareixen als rànquings d'espectadors.
 
