@@ -225,8 +225,8 @@ function construirBretxa() {
       <thead><tr>
         <th class="col-center" style="width:80px">Dècada</th>
         <th class="col-center" style="width:110px">Doble corona</th>
-        <th class="col-num" style="width:130px">Mitj. festivals</th>
-        <th class="col-num" style="width:130px">Mitj. Top 100</th>
+        <th class="col-num" style="width:140px">Mitjana festivals</th>
+        <th class="col-num" style="width:140px">Mitjana Top 100</th>
         <th class="col-center" style="width:110px">Ràtio bretxa</th>
       </tr></thead>
       <tbody>${files}</tbody>
