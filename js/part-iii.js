@@ -190,29 +190,41 @@ function construirBretxa() {
 
   bretxaDades = calcularBretxa();
 
-  const files = bretxaDades.map((r, i) => {
-    const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-    return `<tr style="background:${bg};border-bottom:2px solid #fff">
-      <td><strong>${r.label}</strong></td>
-      <td class="col-center col-subtil">${r.sel}</td>
-      <td class="col-center col-subtil">${r.premiats}</td>
-      <td class="col-center col-subtil">${r.dc}</td>
+  // Etiquetes curtes (com Part I "Resum per dècada")
+  const ETIQ_CURTA = {
+    '60s':'60s','70s':'70s','80s':'80s','90s':'90s',
+    '2000s':'2000s','2010s':'2010s','2020s':'2020s'
+  };
+
+  // Colors semàfor segons ràtio
+  function colorRatio(r) {
+    if (r > 0.25)  return { fons: '#e6f0e8', text: '#2E7D5E' }; // verd
+    if (r >= 0.10) return { fons: '#faefdb', text: '#b87509' }; // taronja
+    return { fons: '#f7e3e3', text: '#a93226' };                // vermell
+  }
+
+  const files = bretxaDades.map(r => {
+    const c = colorRatio(r.ratio);
+    const dcCell = r.dc > 0
+      ? `<strong style="color:#1e4080">${r.dc}</strong>`
+      : `<span style="color:#aaa">0</span>`;
+    return `<tr style="border-bottom:2px solid #fff">
+      <td style="background:${c.fons};color:${c.text};font-weight:600;text-align:center">${ETIQ_CURTA[r.decada]}</td>
+      <td class="col-center">${dcCell}</td>
       <td class="col-num col-subtil">${fmt(r.mitF)}</td>
       <td class="col-num col-subtil">${fmt(r.mit20)}</td>
-      <td class="col-center"><strong>${r.ratio.toFixed(2)}</strong></td>
+      <td class="col-center" style="background:${c.fons}"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
     </tr>`;
   }).join('');
 
   taula.innerHTML = `
     <table class="taula-festivals">
       <thead><tr>
-        <th>Dècada</th>
-        <th class="col-center" style="width:55px">Sel.</th>
-        <th class="col-center" style="width:55px">★</th>
+        <th class="col-center" style="width:80px">Dècada</th>
         <th class="col-center" style="width:110px">Doble corona</th>
-        <th class="col-num" style="width:120px">Mit. festivals</th>
-        <th class="col-num" style="width:120px">Mit. Top 20 dèc</th>
-        <th class="col-center" style="width:90px">Ràtio bretxa</th>
+        <th class="col-num" style="width:130px">Mitj. festivals</th>
+        <th class="col-num" style="width:130px">Mitj. Top 100</th>
+        <th class="col-center" style="width:110px">Ràtio bretxa</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
