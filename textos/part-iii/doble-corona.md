@@ -8,7 +8,7 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 
 - La majoria dels films de la ‘doble corona’ (7 de 10) van obtenir també algun premi, però només dues pel·lícules van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. El gran premi, per tant, no és imprescindible per connectar amb el públic.
 
-- La ‘doble corona’ és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004). Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits.
+- La ‘doble corona’ és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004). Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits amb tanta força.
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
