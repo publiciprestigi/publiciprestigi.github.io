@@ -96,7 +96,7 @@ function construirPremiades() {
   // Afegir gràfic de resum + cards de totals DESPRÉS del HTML
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
-    <div style="margin-top:40px;padding-top:32px;border-top:1px solid #e5e5e5">
+    <div style="margin-top:0;padding-top:0;border-top:none">
       <p style="text-align:center;font-size:13px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:0">Premiades per festival (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
