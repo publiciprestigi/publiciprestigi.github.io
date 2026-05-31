@@ -62,14 +62,16 @@ function construirDobleCorona() {
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
+    const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
       <td>${nomFest(f.festival)}</td>
       <td class="col-center">${premi}</td>
+      <td class="col-center col-subtil">#${f.top100_pos}</td>
+      <td class="col-subtil col-decada">${decada}</td>
       <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
-      <td class="col-center"><strong>#${f.top100_pos}</strong></td>
     </tr>`;
   }).join('');
 
@@ -77,12 +79,13 @@ function construirDobleCorona() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:34%">Títol</th>
-        <th class="col-subtil" style="width:18%">Director</th>
+        <th>Títol</th>
+        <th class="col-subtil">Director</th>
         <th style="width:110px">Festival</th>
         <th class="col-center" style="width:55px">Premi</th>
+        <th class="col-center" style="width:70px">Top 100</th>
+        <th class="col-subtil" style="width:90px">Dècada</th>
         <th class="col-num" style="width:115px">Espectadors</th>
-        <th class="col-center" style="width:75px">Top 100</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -109,12 +112,15 @@ function construirSegonCercle() {
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
+    const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td class="col-pos">${i+11}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
       <td>${nomFest(f.festival)}</td>
       <td class="col-center">${premi}</td>
+      <td class="col-center col-subtil">—</td>
+      <td class="col-subtil col-decada">${decada}</td>
       <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
     </tr>`;
   }).join('');
@@ -123,10 +129,12 @@ function construirSegonCercle() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:34%">Títol</th>
-        <th class="col-subtil" style="width:18%">Director</th>
+        <th>Títol</th>
+        <th class="col-subtil">Director</th>
         <th style="width:110px">Festival</th>
         <th class="col-center" style="width:55px">Premi</th>
+        <th class="col-center" style="width:70px">Top 100</th>
+        <th class="col-subtil" style="width:90px">Dècada</th>
         <th class="col-num" style="width:115px">Espectadors</th>
       </tr></thead>
       <tbody>${files}</tbody>
