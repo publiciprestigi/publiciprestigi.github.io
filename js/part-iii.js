@@ -79,13 +79,13 @@ function construirDobleCorona() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Títol</th>
-        <th class="col-subtil">Director</th>
-        <th style="width:110px">Festival</th>
+        <th style="width:40%">Títol</th>
+        <th class="col-subtil" style="width:12%">Director</th>
+        <th style="width:100px">Festival</th>
         <th class="col-center" style="width:55px">Premi</th>
         <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-subtil" style="width:90px">Dècada</th>
-        <th class="col-num" style="width:115px">Espectadors</th>
+        <th class="col-subtil" style="width:75px">Dècada</th>
+        <th class="col-num" style="width:110px">Espectadors</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -129,13 +129,13 @@ function construirSegonCercle() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Títol</th>
-        <th class="col-subtil">Director</th>
-        <th style="width:110px">Festival</th>
+        <th style="width:40%">Títol</th>
+        <th class="col-subtil" style="width:12%">Director</th>
+        <th style="width:100px">Festival</th>
         <th class="col-center" style="width:55px">Premi</th>
         <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-subtil" style="width:90px">Dècada</th>
-        <th class="col-num" style="width:115px">Espectadors</th>
+        <th class="col-subtil" style="width:75px">Dècada</th>
+        <th class="col-num" style="width:110px">Espectadors</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
