@@ -1,25 +1,24 @@
 <!-- intro -->
-Denominem 'doble corona' les pel·lícules que han aconseguit simultàniament el reconeixement dels dos circuits: participant en la secció oficial competitiva d'un dels quatre grans festivals internacionals i entrant al Top 100 d'espectadors històric del cinema espanyol. Únicament 10 títols pertanyen a aquest grup exclusiu:
+Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament el reconeixement dels dos circuits: participar en la secció oficial competitiva d’un dels quatre festivals analitzats i entrar al Top 100 històric d’espectadors del cinema espanyol. Només 10 títols formen part d’aquest grup exclusiu:
 <!-- /intro -->
 
 <!-- comentari-corona -->
-- Sant Sebastià aporta 6 dels 10 films de la 'doble corona' i 7 dels 15 del 'segon cercle'. La seva orientació cap al cinema espanyol i iberoamericà amb vocació popular el fa l'únic dels quatre festivals on la coincidència entre prestigi i audiència és recurrent. Berlín no té cap film a la 'doble corona', però n'acumula fins a 5 al 'segon cercle', que veurem a continuació.
+- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre prestigi i públic: aporta 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Berlín, en canvi, no té cap ‘doble corona’, però acumula fins a 5 títols al grup següent.
 
-- 7 dels 10 films de la 'doble corona' són premiats (70 %), molt per sobre de la mitjana del 25 % en el conjunt dels 264 films de festival seleccionats. El premi sembla acompanyar els films que ja tenien potencial de mercat, però no crea audiència on no n'hi ha: els premis màxims dels festivals rarament apareixen als rànquings d'espectadors (únicament passa amb *Furtivos* i *Los lunes al sol*, guanyadores de la Conxa d'Or).
+- 7 dels 10 films de la ‘doble corona’ són premiats, molt per sobre de la mitjana del conjunt del corpus de festivals. El premi no fabrica el públic, però en aquests casos acompanya pel·lícules que ja tenien un recorregut comercial important. Dins d’aquest grup, només dues són també guanyadores del màxim guardó del seu festival: Furtivos i Los lunes al sol, totes dues Conxa d’Or.
 
-- La 'doble corona' és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. Al 'segon cercle', *La isla mínima* (2014) i *Mientras dure la guerra* (2019) són les úniques excepcions recents. Des del 2005, públic i prestigi han divergit de manera estructural. La pregunta és si això és irreversible o conjuntural.
+- La ‘doble corona’ és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004). Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits.
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
 ## El segon cercle: més films de festival amb públic significatiu (11–25)
 
-A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols que podríem anomenar el 'segon cercle': films presents als festivals amb més d'un milió d'espectadors, que no arriben al Top 100, però que demostren que la bretxa entre els dos mons no és sempre absoluta. Alguns d'ells (*Volver*, *Belle Époque*, *La colmena*, *Amantes*) combinen reconeixement crític i audiència popular en proporcions notables.
+Per sota del llindar del Top 100 hi ha un altre grup rellevant: 15 films presents als festivals que superen el milió d’espectadors. No formen part de la ‘doble corona’, però demostren que la frontera entre prestigi i públic no sempre és absoluta. Títols com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991) combinen reconeixement crític i una audiència popular notable. Sumats als 10 anteriors, aquests 25 títols representen només el 9,5% del corpus de films de festival analitzat.
 
-La diferència entre la 'doble corona' i el 'segon cercle' és de grau, no de naturalesa: tots aquests films han tingut un impacte popular real. El que canvia és la seva posició relativa respecte al conjunt del mercat espanyol. Junts, els 25 films (10 + 15) representen només el 9,5 % del corpus on públic i prestigi es troben.
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
-- *Volver* (Almodóvar, Cannes ★, 1,93M) és el cas més clar del 'segon cercle': un film d'autor de primer nivell internacional que arriba a una audiència popular real. El fet que no estigui al Top 100 històric és una qüestió de competència (el mercat dels anys 2000 era molt fragmentat), no de manca d'impacte.
+- Volver (Almodóvar, Cannes ★, 1,93M) és el cas més clar del ‘segon cercle’: un film d’autor de primer nivell internacional que arriba gairebé als 2 milions d’espectadors. Que no entri al Top 100 és una qüestió de llindar, no de manca d’impacte.
 
-- El 'segon cercle' és majoritàriament dels anys 70–90 (10 dels 15 títols). Als anys 2010–2020, tan sols *La isla mínima* (SS ★, 1,29M) i *Mientras dure la guerra* (SS, 1,89M) s'apropen al 'segon cercle'. La bretxa de les dècades recents queda confirmada.
+El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* (2014) i *Mientras dure la guerra (2019); als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
 <!-- /comentari-cercle -->
