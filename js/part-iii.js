@@ -2,6 +2,7 @@
 
 let festivalsData = [];
 let filmsData = [];
+let marketData = [];
 
 const FC = {
   'Cannes':       '#9B2335',
@@ -22,12 +23,14 @@ function nomFest(festival) {
 
 async function carregarDades() {
   try {
-    const [rf, ri] = await Promise.all([
+    const [rf, ri, rm] = await Promise.all([
       fetch('data/festivals.json'),
       fetch('data/films.json'),
+      fetch('data/market.json'),
     ]);
     festivalsData = await rf.json();
     filmsData = await ri.json();
+    marketData = await rm.json();
     construirDobleCorona();
     construirSegonCercle();
     construirBretxa();
@@ -180,7 +183,10 @@ function calcularBretxa() {
       ? Math.round(top20.reduce((s, f) => s + (f.espectadors || 0), 0) / top20.length)
       : 0;
     const ratio = mit20 ? mitF / mit20 : 0;
-    return { decada: d, label: DEC_LABELS[d], sel, premiats, dc, mitF, mit20, ratio };
+    // Mercat mitjà anual de la dècada (M entrades)
+    const mercatDec = marketData.filter(x => getDecada(x.any) === d).map(x => x.entrades_M);
+    const mercatMit = mercatDec.length ? mercatDec.reduce((a,b) => a+b, 0) / mercatDec.length : 0;
+    return { decada: d, label: DEC_LABELS[d], sel, premiats, dc, mitF, mit20, ratio, mercatMit };
   });
 }
 
@@ -207,7 +213,7 @@ function construirBretxa() {
     const c = colorRatio(r.ratio);
     return `<tr style="background:${c.fons};border-bottom:2px solid #fff">
       <td class="col-center"><strong>${ETIQ_CURTA[r.decada]}</strong></td>
-      <td class="col-center">${r.dc}</td>
+      <td class="col-center" style="color:#6b6b6b">${r.dc}</td>
       <td class="col-num">${fmt(r.mitF)}</td>
       <td class="col-num">${fmt(r.mit20)}</td>
       <td class="col-center"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
@@ -232,56 +238,94 @@ window.PiP_graficBretxa = function() {
   const grafic = document.getElementById('grafic-bretxa');
   if (!grafic || typeof Chart === 'undefined' || !bretxaDades) return;
   if (window._chartBretxa) window._chartBretxa.destroy();
+
+  // Color de cada punt de la ràtio segons llindar (semàfor)
+  function colorPunt(r) {
+    if (r > 0.25)  return '#2E7D5E'; // verd
+    if (r >= 0.10) return '#b87509'; // taronja
+    return '#a93226';                // vermell
+  }
+  const colorsPunts = bretxaDades.map(r => colorPunt(r.ratio));
+
   const ctx = grafic.getContext('2d');
   window._chartBretxa = new Chart(ctx, {
     type: 'line',
     data: {
       labels: bretxaDades.map(r => r.label),
-      datasets: [{
-        label: 'Ràtio bretxa',
-        data: bretxaDades.map(r => +r.ratio.toFixed(3)),
-        borderColor: '#363737',
-        backgroundColor: 'rgba(54,55,55,0.08)',
-        borderWidth: 2,
-        pointRadius: 6,
-        pointHoverRadius: 8,
-        pointBackgroundColor: '#363737',
-        pointBorderColor: '#fff',
-        pointBorderWidth: 2,
-        tension: 0.25,
-        fill: true,
-      }],
+      datasets: [
+        {
+          label: 'Mercat anual mitjà (M entrades)',
+          data: bretxaDades.map(r => +r.mercatMit.toFixed(1)),
+          borderColor: '#b8b8b8',
+          backgroundColor: 'rgba(184,184,184,0.10)',
+          borderWidth: 2,
+          borderDash: [6, 4],
+          pointRadius: 4,
+          pointBackgroundColor: '#b8b8b8',
+          pointBorderColor: '#fff',
+          pointBorderWidth: 1.5,
+          tension: 0.25,
+          fill: true,
+          yAxisID: 'yMercat',
+          order: 2,
+        },
+        {
+          label: 'Ràtio bretxa',
+          data: bretxaDades.map(r => +r.ratio.toFixed(3)),
+          borderColor: '#363737',
+          backgroundColor: 'transparent',
+          borderWidth: 2.5,
+          pointRadius: 7,
+          pointHoverRadius: 9,
+          pointBackgroundColor: colorsPunts,
+          pointBorderColor: '#fff',
+          pointBorderWidth: 2,
+          tension: 0.25,
+          fill: false,
+          yAxisID: 'yRatio',
+          order: 1,
+        },
+      ],
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
+      interaction: { mode: 'index', intersect: false },
       plugins: {
-        legend: { display: false },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: { boxWidth: 14, font: { size: 11 } },
+        },
         tooltip: {
           callbacks: {
-            label: ctx => `Ràtio: ${ctx.parsed.y.toFixed(2)}`,
-            afterLabel: ctx => {
-              const r = bretxaDades[ctx.dataIndex];
-              return [
-                `Mit. festivals: ${fmt(r.mitF)}`,
-                `Mit. Top 20 dèc: ${fmt(r.mit20)}`,
-              ];
+            label: ctx => {
+              if (ctx.dataset.yAxisID === 'yRatio')
+                return `Ràtio bretxa: ${ctx.parsed.y.toFixed(2)}`;
+              return `Mercat: ${ctx.parsed.y.toFixed(0)} M entrades`;
             },
           },
         },
       },
       scales: {
-        y: {
+        yRatio: {
+          type: 'linear',
+          position: 'left',
           min: 0,
           max: 0.4,
-          ticks: {
-            callback: v => v.toFixed(2),
-            color: '#666',
-            font: { size: 11 },
-          },
+          ticks: { callback: v => v.toFixed(2), color: '#363737', font: { size: 11 } },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Ràtio bretxa (festivals / Top 20 dèc)', font: { size: 12 } },
+          title: { display: true, text: 'Ràtio bretxa', font: { size: 12 }, color: '#363737' },
+        },
+        yMercat: {
+          type: 'linear',
+          position: 'right',
+          min: 0,
+          max: 400,
+          ticks: { callback: v => v + ' M', color: '#888', font: { size: 11 } },
+          grid: { display: false },
+          title: { display: true, text: 'Mercat anual (M entrades)', font: { size: 12 }, color: '#888' },
         },
         x: {
           ticks: { color: '#363737', font: { size: 11 } },
@@ -293,5 +337,71 @@ window.PiP_graficBretxa = function() {
 };
 
 
+
+window.PiP_graficCorpus = function() {
+  const grafic = document.getElementById('grafic-corpus');
+  if (!grafic || typeof Chart === 'undefined' || !bretxaDades) return;
+  if (window._chartCorpus) window._chartCorpus.destroy();
+  const ctx = grafic.getContext('2d');
+
+  window._chartCorpus = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: bretxaDades.map(r => r.label),
+      datasets: [
+        {
+          label: 'Films seleccionats',
+          data: bretxaDades.map(r => r.sel),
+          backgroundColor: '#c8d4dc',
+          borderColor: '#9eb0bb',
+          borderWidth: 1,
+        },
+        {
+          label: 'Films premiats',
+          data: bretxaDades.map(r => r.premiats),
+          backgroundColor: '#daa520',
+          borderColor: '#a98217',
+          borderWidth: 1,
+        },
+        {
+          label: 'Doble corona (Top 100)',
+          data: bretxaDades.map(r => r.dc),
+          backgroundColor: '#363737',
+          borderColor: '#1f1f1f',
+          borderWidth: 1,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: {
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: { boxWidth: 14, font: { size: 11 } },
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y}`,
+          },
+        },
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { color: '#363737', font: { size: 11 } },
+          grid: { color: '#eee' },
+          title: { display: true, text: 'Nombre de films', font: { size: 12 } },
+        },
+        x: {
+          ticks: { color: '#363737', font: { size: 11 } },
+          grid: { display: false },
+        },
+      },
+    },
+  });
+};
 
 document.addEventListener('DOMContentLoaded', carregarDades);
