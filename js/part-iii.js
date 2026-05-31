@@ -338,70 +338,7 @@ window.PiP_graficBretxa = function() {
 
 
 
-window.PiP_graficCorpus = function() {
-  const grafic = document.getElementById('grafic-corpus');
-  if (!grafic || typeof Chart === 'undefined' || !bretxaDades) return;
-  if (window._chartCorpus) window._chartCorpus.destroy();
-  const ctx = grafic.getContext('2d');
-
-  window._chartCorpus = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: bretxaDades.map(r => r.label),
-      datasets: [
-        {
-          label: 'Films seleccionats',
-          data: bretxaDades.map(r => r.sel),
-          backgroundColor: '#c8d4dc',
-          borderColor: '#9eb0bb',
-          borderWidth: 1,
-        },
-        {
-          label: 'Films premiats',
-          data: bretxaDades.map(r => r.premiats),
-          backgroundColor: '#daa520',
-          borderColor: '#a98217',
-          borderWidth: 1,
-        },
-        {
-          label: 'Doble corona (Top 100)',
-          data: bretxaDades.map(r => r.dc),
-          backgroundColor: '#363737',
-          borderColor: '#1f1f1f',
-          borderWidth: 1,
-        },
-      ],
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      animation: false,
-      plugins: {
-        legend: {
-          display: true,
-          position: 'bottom',
-          labels: { boxWidth: 14, font: { size: 11 } },
-        },
-        tooltip: {
-          callbacks: {
-            label: ctx => `${ctx.dataset.label}: ${ctx.parsed.y}`,
-          },
-        },
-      },
-      scales: {
-        y: {
-          beginAtZero: true,
-          ticks: { color: '#363737', font: { size: 11 } },
-          grid: { color: '#eee' },
-          title: { display: true, text: 'Nombre de films', font: { size: 12 } },
-        },
-        x: {
-          ticks: { color: '#363737', font: { size: 11 } },
-          grid: { display: false },
-        },
-      },
-    },
-  });
-};
+// Gràfic salut corpus festivaler — arxivat (eliminat de Part III bretxa,
+// es podria reutilitzar en una futura secció d'anàlisi del corpus).
 
 document.addEventListener('DOMContentLoaded', carregarDades);
