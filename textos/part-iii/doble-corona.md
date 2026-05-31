@@ -1,5 +1,6 @@
 <!-- intro -->
 Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament el reconeixement dels dos circuits: participar en la secció oficial competitiva d’un dels quatre festivals analitzats i entrar al Top 100 històric d’espectadors del cinema espanyol. Només 10 títols formen part d’aquest grup exclusiu:
+
 <!-- /intro -->
 
 <!-- comentari-corona -->
