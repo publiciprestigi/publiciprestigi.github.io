@@ -14,13 +14,14 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- intro-cercle -->
 ## El segon cercle: més films de festival amb públic significatiu (11–25)
 
-A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols que podriem anomenar el 'segon cercle': ffilms amb més d’un milió d'espectadors que no arribem al Top 100, com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991), però que combinen reconeixement crític i impacte popular en proporcions més que notables. Sumats als 10 anteriors, aquests 25 títols representen només el 9,5% del corpus de films de festival analitzat.
-
+A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols que podriem anomenar el 'segon cercle': films amb més d’un milió d'espectadors que no arribem al Top 100, com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991), però que combinen reconeixement crític i impacte popular en proporcions més que notables.
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
 - *Volver* (2006), d’Almodóvar, és el cas més clar d’aquest grup: un film de primer nivell internacional, premiat a Cannes i amb nominació a l’Oscar per a Penélope Cruz, que arriba gairebé als 2 milions d’espectadors. Que no entri al Top 100 i, per tant, no sigui ‘doble corona’ és una qüestió de llindar, no de manca d’impacte.
 
 - El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* d'Alberto Rodríguez (2014) i *Mientras dure la guerra* (2019) d'Amenábar; als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
+
+Fins i tot sumant la ‘doble corona’ i el ‘segon cercle’, parlem només de 25 títols sobre els 264 films de festival analitzats: un 9,5%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
 
 <!-- /comentari-cercle -->
