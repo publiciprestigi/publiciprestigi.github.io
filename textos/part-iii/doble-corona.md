@@ -3,7 +3,7 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- /intro -->
 
 <!-- comentari-corona -->
-- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: aporta 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Cannes i Venècia n’aporten 2 cadascun, mentre que Berlín no té cap, però acumula fins a 5 títols al grup següent, com veurem a continuació.
+- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: concentra 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Cannes i Venècia n’aporten 2 cadascun, mentre que Berlín no té cap, però acumula fins a 5 títols al grup següent, com veurem a continuació.
 
 - La majoria dels films de la ‘doble corona’ (7 de 10) van obtenir també algun premi. Però el detall important és un altre: només dues pel·lícules van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. El gran premi, per tant, no és imprescindible per connectar amb el públic.
 
@@ -13,7 +13,7 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- intro-cercle -->
 ## El segon cercle: més films de festival amb públic significatiu (11–25)
 
-Per sota del llindar del Top 100 hi ha un altre grup rellevant: 15 films seleccionats als festivals que superen el milió d’espectadors. No formen part de la ‘doble corona’, però demostren que els dos circuits no sempre viuen d’esquena. Títols com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991) combinen reconeixement crític i una audiència popular notable. Sumats als 10 anteriors, aquests 25 títols representen només el 9,5% del corpus de films de festival analitzat.
+Per sota del llindar del Top 100 hi ha un altre grup rellevant: 15 films seleccionats als festivals que superen el milió d’espectadors. Títols com *Volver* (2006), *Belle Époque* (1992), *La colmena* (1983) o *Amantes* (1991) combinen reconeixement crític i un impacte popular més que notable. Sumats als 10 anteriors, aquests 25 títols representen només el 9,5% del corpus de films de festival analitzat.
 
 
 <!-- /intro-cercle -->
