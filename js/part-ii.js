@@ -119,6 +119,7 @@ function construirPremiades() {
           <div style="font-size:22px;font-weight:500;color:#363737;">67</div>
         </div>
       </div>
+      <p style="text-align:center;font-size:13px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:0">Premiades per festival i dècada (1965–2025)</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1E4080;display:inline-block;"></span>Berlín</span>
@@ -128,7 +129,7 @@ function construirPremiades() {
       <div style="position:relative;width:100%;height:260px;">
         <canvas id="grafic-premis-decades"></canvas>
       </div>
-      <p class="grafic-peu">Nombre de films premiats per festival i dècada. Es comptabilitzen els films que han rebut algun premi, no cada premi que hagin obtingut.</p>
+      <p class="grafic-peu">Nombre de films premiats per festival i dècada.</p>
     </div>`;
   const resDiv = document.getElementById('taula-resum-premis');
   if (resDiv) resDiv.appendChild(graficDiv);

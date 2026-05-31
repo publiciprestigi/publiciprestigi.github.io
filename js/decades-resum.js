@@ -135,7 +135,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
         legend: { display: false },
         title: {
           display: true,
-          text: 'Distribució del Top 100 per dècada',
+          text: 'Distribució del Top 100 per dècada (1965–2025)',
           color: '#363737',
           font: { size: 13, weight: '600', family: '-apple-system, SF Pro Text, sans-serif' },
           padding: { bottom: 16 },
