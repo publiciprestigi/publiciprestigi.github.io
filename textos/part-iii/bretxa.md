@@ -16,7 +16,7 @@ La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 
 - El trencament més clar arriba als 2010s: la mitjana del Top 100 es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre els festivals baixen a 265k. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d’autor: més reconegut i més internacionalitzat, però també més allunyat del gran públic en sales. Els 2020s apunten una petita recuperació de la ràtio (0,14), però amb una dècada incompleta i un mercat encara en recomposició.
 
-- El trencament més clar arriba als 2010s: amb un mercat relativament estabilitzat, la mitjana del Top 100 es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre els festivals baixen a 265k. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d’autor: més reconegut i més internacionalitzat, però també més allunyat del gran públic en sales. Els 2020s apunten una petita recuperació de la ràtio (0,14), però amb una dècada incompleta i un mercat encara en recomposició.”
+- El trencament més clar arriba als 2010s: amb un mercat relativament estabilitzat, la mitjana del Top 100 es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre els festivals baixen a 265k. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d’autor: més reconegut i més internacionalitzat, però també més allunyat del gran públic en sales. Els 2020s apunten una petita recuperació de la ràtio (0,14), però amb una dècada incompleta i un mercat encara en recomposició.
 
 <!-- /comentari -->
 
