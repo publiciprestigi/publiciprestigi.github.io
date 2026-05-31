@@ -11,7 +11,7 @@ Denominem "doble corona" les pel·lícules que han aconseguit simultàniament du
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
-# El segon cercle: films de festival amb audiència significativa (11–25)
+## El segon cercle: films de festival amb audiència significativa (11–25)
 
 A continuació dels 10 films de la "doble corona", hi ha un grup de 15 títols que podríem anomenar "el segon cercle": films presents als festivals amb més d'un milió d'espectadors, que no arriben al Top 100, però que demostren que la bretxa entre els dos mons no és sempre absoluta. Alguns d'ells (*Volver*, *Belle Époque*, *La colmena*, *Amantes*) combinen reconeixement crític i audiència popular en proporcions notables.
 
