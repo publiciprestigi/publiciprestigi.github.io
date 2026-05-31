@@ -3,9 +3,9 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- /intro -->
 
 <!-- comentari-corona -->
-- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: aporta 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Berlín, en canvi, no té cap ‘doble corona’, però acumula fins a 5 títols al grup següent.
+- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: aporta 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Cannes i Venècia n’aporten 2 cadascun, mentre que Berlín no té cap ‘doble corona’, però acumula fins a 5 títols al grup següent.
 
-- La majoria dels films de la ‘doble corona’ no només van ser seleccionats, sinó que també van obtenir algun premi. Però el detall important és un altre: només dos títols van guanyar el màxim guardó del seu festival, *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. En la resta de casos, la coincidència no passa tant pel triomf absolut al palmarès com per haver funcionat amb força als dos circuits.
+- La majoria dels films de la ‘doble corona’ no només van ser seleccionats, sinó que també van obtenir algun premi. Però el detall important és un altre, només dos títols van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. En la resta de casos, la coincidència no passa tant pel triomf absolut al palmarès com per haver funcionat amb força als dos circuits.
 
 - La ‘doble corona’ és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004). Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits.
 <!-- /comentari-corona -->
