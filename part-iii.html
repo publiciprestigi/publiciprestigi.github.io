@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/estil.css">
   <link rel="stylesheet" href="css/textos-extra.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="amb-sidebar">
 
@@ -78,7 +79,13 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-bretxa">
-        <div class="taula-placeholder">Taula + gràfic interactiu de bretxa per dècada</div>
+        <div class="text-md text-md-intro" data-text="part-iii/bretxa" data-bloc="intro"></div>
+        <div id="taula-bretxa"></div>
+        <div class="text-md text-md-llegenda" data-text="part-iii/bretxa" data-bloc="llegenda-taula" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
+        <div class="grafic-wrap" style="height:340px;position:relative;margin-top:24px">
+          <canvas id="grafic-bretxa"></canvas>
+        </div>
+        <div class="text-md text-md-comentari" data-text="part-iii/bretxa" data-bloc="comentari"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-la-caza">
@@ -142,6 +149,7 @@
     ];
 
     let actual = 0;
+    let graficBretxaInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -163,6 +171,12 @@
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
+
+      // Inicialitza el gràfic de bretxa la primera vegada que es visita
+      if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
+        graficBretxaInit = true;
+        setTimeout(window.PiP_graficBretxa, 50);
+      }
     }
 
     function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
