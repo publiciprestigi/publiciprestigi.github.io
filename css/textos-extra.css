@@ -83,9 +83,14 @@
   margin-top: 0;
   border-bottom: 1px solid #e5e5e5;
 }
-/* Text introductori del resum de premis: sense marge inferior extra */
+/* Resum premis: eliminar espai extra entre text i gràfic */
 #seccio-premiades .text-md-intro {
-  margin-bottom: 8px;
+  margin-bottom: 0;
+}
+#taula-resum-premis > div {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: none !important;
 }
 .grafic-peu {
   font-size: 0.82em;
@@ -188,6 +193,14 @@ th.col-iic-header {
 }
 
 .subtitol-ranking.sense-ralla { border-top: none; padding-top: 0; margin-top: 28px; }
+
+/* Comentari que segueix un gràfic Part I: sense border-top */
+#seccio-mercat .text-md-comentari,
+#seccio-decades .text-md-comentari {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 24px;
+}
 
 /* Part I i II: sense border-top als blocs de comentari de rànquings */
 #seccio-premiades .text-md-comentari,
