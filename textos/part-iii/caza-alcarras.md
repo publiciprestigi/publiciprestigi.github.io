@@ -3,7 +3,7 @@ Dos films espanyols premiats a Berlín, separats per 56 anys. *La caza* arriba e
 
 *Alcarràs*, en canvi, neix en un moment cultural i industrial molt diferent: segon llargmetratge de Carla Simón, amb 36 anys, i Ós d’Or el 2022. El premi marca una doble fita: la directora es converteix en la primera cineasta espanyola que guanya el màxim guardó d’un dels grans festivals internacionals, i el film, en el primer en llengua catalana a aconseguir-ho.
 
-La comparació no pretén equiparar els dos films, sinó mirar què canvia i què persisteix: dues generacions, dos contextos històrics, dues llengües i una mateixa via de legitimació internacional per al cinema d’autor.
+La comparació no pretén equiparar les dos pel·lícules, sinó mirar què canvia i què persisteix: dues generacions, dos contextos històrics, dues llengües i una mateixa via de legitimació internacional per al cinema d’autor.
 
 
 ## Dades i mètriques comparatives
