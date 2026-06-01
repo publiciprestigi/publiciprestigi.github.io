@@ -353,14 +353,14 @@ function construirCazaAlcarras() {
       festival: 'Berlín', premiat: true,
       espectadors: 341377,
       mercat: '370M≈', penetr: '1,06%≈', quota: '0,09%≈',
-      iic: '0,21', iaa: '341.377 (×1,0)', iaa_est: false,
+      iic: '0,21', iaa: '341.377', iaa_est: false,
     },
     {
       titol: 'Alcarràs', any: 2022, director: 'Carla Simón',
       festival: 'Berlín', premiat: true,
       espectadors: 403195,
       mercat: '71M', penetr: '0,84%', quota: '0,57%',
-      iic: '0,47', iaa: '1,06M–1,56M (×2,6–3,9)', iaa_est: true,
+      iic: '0,47', iaa: '1,06M–1,56M', iaa_est: true,
     },
   ];
 
@@ -380,7 +380,7 @@ function construirCazaAlcarras() {
       <td class="col-num col-subtil">${gris(f.penetr)}</td>
       <td class="col-num col-subtil">${gris(f.quota)}</td>
       <td class="col-center col-subtil">${f.iic}</td>
-      <td class="col-num" style="font-weight:600">${f.iaa_est ? `<em>${f.iaa}</em>` : f.iaa}</td>
+      <td class="col-num">${f.iaa_est ? `<em>${f.iaa}</em>` : f.iaa}</td>
     </tr>`;
   }).join('');
 
@@ -407,6 +407,16 @@ window.PiP_graficCazaIAA = function() {
   const el = document.getElementById('grafic-caza-iaa');
   if (!el || typeof Chart === 'undefined') return;
   if (window._chartCazaIAA) window._chartCazaIAA.destroy();
+
+  // Títol del gràfic
+  if (!document.getElementById('caza-iaa-tit')) {
+    const tit = document.createElement('p');
+    tit.id = 'caza-iaa-tit';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin-bottom:10px';
+    tit.innerHTML = 'IAA estimat: <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)';
+    el.parentNode.insertBefore(tit, el);
+  }
+
   const ctx = el.getContext('2d');
 
   function hatch(color) {
@@ -424,6 +434,28 @@ window.PiP_graficCazaIAA = function() {
     cx.stroke();
     return ctx.createPattern(c, 'repeat');
   }
+
+  // Etiquetes totals al final de cada barra
+  const etiquetesTotals = ['~1,06M–1,56M esp.', '341.377 esp.'];
+  const totalsPixel = [1310195, 341377];
+
+  const pluginTotals = {
+    id: 'cazaTotals',
+    afterDraw(chart) {
+      const ctx2 = chart.ctx;
+      ctx2.save();
+      ctx2.font = '600 11px -apple-system, Arial, sans-serif';
+      ctx2.fillStyle = '#363737';
+      ctx2.textBaseline = 'middle';
+      totalsPixel.forEach((total, i) => {
+        const x = chart.scales.x.getPixelForValue(total) + 6;
+        const meta = chart.getDatasetMeta(0);
+        const bar = meta.data[i];
+        if (bar) ctx2.fillText(etiquetesTotals[i], x, bar.y);
+      });
+      ctx2.restore();
+    },
+  };
 
   window._chartCazaIAA = new Chart(ctx, {
     type: 'bar',
@@ -461,6 +493,7 @@ window.PiP_graficCazaIAA = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
+      layout: { padding: { right: 160 } },
       plugins: {
         legend: {
           display: true,
@@ -497,6 +530,7 @@ window.PiP_graficCazaIAA = function() {
         },
       },
     },
+    plugins: [pluginTotals],
   });
 };
 
