@@ -34,6 +34,7 @@ async function carregarDades() {
     construirDobleCorona();
     construirSegonCercle();
     construirBretxa();
+    construirCazaAlcarras();
   } catch(e) { console.error('Error:', e); }
 }
 
@@ -337,6 +338,145 @@ window.PiP_graficBretxa = function() {
 };
 
 
+
+/* ============================================================
+   CAZA-ALCARRAS — Taula comparativa i gràfic IAA
+   ============================================================ */
+function construirCazaAlcarras() {
+  const cont = document.getElementById('taula-caza-comparativa');
+  if (!cont) return;
+
+  const films = [
+    {
+      any: 1966, titol: 'La caza', director: 'Carlos Saura',
+      festival: 'Berlín', premiat: true,
+      espectadors: 341377, espFactor: '(×1,0)',
+      mercat: '370M≈', penetr: '1,06%≈', quota: '0,09%≈',
+      iic: '0,21', iaa: '341.377 (×1,0)', iaa_est: false,
+    },
+    {
+      any: 2022, titol: 'Alcarràs', director: 'Carla Simón',
+      festival: 'Berlín', premiat: true,
+      espectadors: 403195, espFactor: null,
+      mercat: '71M', penetr: '0,84%', quota: '0,57%',
+      iic: '0,47', iaa: '1,06M–1,56M (×2,6–3,9)', iaa_est: true,
+    },
+  ];
+
+  const files = films.map((f, i) => {
+    const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
+    const premi = f.premiat ? '<span class="estrella">★</span>' : '';
+    const espStr = fmt(f.espectadors) + (f.espFactor ? ` <span class="col-subtil">${f.espFactor}</span>` : '');
+    const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
+    return `<tr style="background:${bg};border-bottom:2px solid #fff">
+      <td class="col-center col-subtil">${f.any}</td>
+      <td><strong><em>${f.titol}</em></strong></td>
+      <td class="col-subtil">${f.director}</td>
+      <td>${nomFest(f.festival)}</td>
+      <td class="col-center">${premi}</td>
+      <td class="col-num">${espStr}</td>
+      <td class="col-center col-subtil">—</td>
+      <td class="col-num col-subtil">${gris(f.mercat)}</td>
+      <td class="col-num col-subtil">${gris(f.penetr)}</td>
+      <td class="col-num col-subtil">${gris(f.quota)}</td>
+      <td class="col-center col-subtil">${f.iic}</td>
+      <td class="col-num" style="font-weight:600">${f.iaa_est ? `<em>${f.iaa}</em>` : f.iaa}</td>
+    </tr>`;
+  }).join('');
+
+  cont.innerHTML = `
+    <table class="taula-festivals" style="font-size:0.82em">
+      <thead><tr>
+        <th class="col-center" style="width:48px">Any</th>
+        <th style="width:14%">Títol</th>
+        <th class="col-subtil" style="width:12%">Director/a</th>
+        <th style="width:70px">Festival</th>
+        <th class="col-center" style="width:30px">★</th>
+        <th class="col-num" style="width:120px">Espectadors</th>
+        <th class="col-center" style="width:55px">Top 100</th>
+        <th class="col-num" style="width:65px">Mercat any</th>
+        <th class="col-num" style="width:65px">Penetr.</th>
+        <th class="col-num" style="width:55px">Quota</th>
+        <th class="col-center" style="width:40px">IIC</th>
+        <th class="col-num" style="width:150px">IAA estimat</th>
+      </tr></thead>
+      <tbody>${files}</tbody>
+    </table>`;
+}
+
+window.PiP_graficCazaIAA = function() {
+  const el = document.getElementById('grafic-caza-iaa');
+  if (!el || typeof Chart === 'undefined') return;
+  if (window._chartCazaIAA) window._chartCazaIAA.destroy();
+  const ctx = el.getContext('2d');
+  window._chartCazaIAA = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Alcarràs (2022)', 'La caza (1966)'],
+      datasets: [
+        {
+          label: 'Sala',
+          data: [403195, 341377],
+          backgroundColor: '#1E4080',
+          borderWidth: 0,
+        },
+        {
+          label: 'TV pública (TV3 + La 2 TVE)',
+          data: [330000, 0],
+          backgroundColor: '#9B2335',
+          borderWidth: 0,
+        },
+        {
+          label: 'TV pagament',
+          data: [200000, 0],
+          backgroundColor: '#d4a017',
+          borderWidth: 0,
+        },
+        {
+          label: 'Plataformes / VOD',
+          data: [377000, 0],
+          backgroundColor: 'rgba(107,63,160,0.55)',
+          borderWidth: 2,
+          borderColor: '#6B3FA0',
+        },
+      ],
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: {
+        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, font: { size: 11 } } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const v = ctx.parsed.x;
+              if (v === 0) return null;
+              return `${ctx.dataset.label}: ~${(v/1000).toFixed(0)}k esp.`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
+            color: '#363737', font: { size: 11 },
+          },
+          grid: { color: '#eee' },
+          title: { display: true, text: 'Espectadors', font: { size: 12 } },
+        },
+        y: {
+          stacked: true,
+          ticks: { color: '#363737', font: { size: 12 } },
+          grid: { display: false },
+        },
+      },
+    },
+  });
+};
 
 // Gràfic salut corpus festivaler — arxivat (eliminat de Part III bretxa,
 // es podria reutilitzar en una futura secció d'anàlisi del corpus).
