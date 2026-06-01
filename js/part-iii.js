@@ -437,8 +437,8 @@ window.PiP_graficCazaIAA = function() {
 
   // Etiquetes totals al final de cada barra
   const etiquetesTotals = [
-    { xifra: '~1,06M–1,56M esp.', mult: '(×2,5–4,0)', total: 1110195 },
-    { xifra: '341.377 esp.', mult: '(×1,0)', total: 341377 },
+    { xifra: '1,06M–1,56M', mult: '(×2,5–4,0)', total: 1310195 },
+    { xifra: '341.377', mult: '(×1,0)', total: 341377 },
   ];
 
   const pluginTotals = {
@@ -485,13 +485,13 @@ window.PiP_graficCazaIAA = function() {
           borderWidth: 0,
         },
         {
-          label: 'TV pagament',
+          label: 'TV pagament (estimació)',
           data: [150000, 0],
           backgroundColor: hatch('#d4a017'),
           borderWidth: 0,
         },
         {
-          label: 'Plataformes / VOD',
+          label: 'Plataformes (estimació)',
           data: [227000, 0],
           backgroundColor: hatch('#6B3FA0'),
           borderWidth: 0,
