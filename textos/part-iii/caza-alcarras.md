@@ -52,7 +52,7 @@ Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, for
 | ***La caza*** | 15 abr. 1966 | 1 feb. 1979 | + 12 anys 9 mesos | *TVE2 (UHF) — Nit* | No |
 | ***Furtivos*** | 16 set. 1975 | 23 jul. 1989 | + 13 anys 10 mesos | *TVE1 — Domingo Cine (diumenge nit)* | No |
 | ***Alcarràs*** | 29 abr. 2022 | 1 des. 2023 | + 1 any 7 mesos | *TV3/3Cat — La gran pel·lícula (divendres nit)* | Sí |
-|  | 29 abril 2022 | 19 mai. 2024 | + 2 anys 1 mes | *La2/TVE — Versión Española (diumenge nit)* | Sí |
+|  |  | 19 mai. 2024 | + 2 anys 1 mes | *La2/TVE — Versión Española (diumenge nit)* | Sí |
 <!-- /bloc-distribucio -->
 
 <!-- comentari-distribucio -->
