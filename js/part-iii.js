@@ -586,8 +586,4 @@ function construirLleis() {
 </div></div>`;
 }
 
- (eliminat de Part III bretxa,
-// es podria reutilitzar en una futura secció d'anàlisi del corpus).
-
 document.addEventListener('DOMContentLoaded', carregarDades);
-// Gràfic salut corpus festivaler — arxivat (idea per a futura secció d'anàlisi del corpus)
