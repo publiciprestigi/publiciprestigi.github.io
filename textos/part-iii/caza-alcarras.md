@@ -1,5 +1,5 @@
 <!-- intro -->
-Dos films espanyols, dos premis a Berlinale, un salt de 56 anys: *La caza* (tercer film de Carlos Saura, amb 34 anys), guanyant l'Os de Plata al millor director el 1966 en ple franquisme, el primer cop que un director espanyol guanyava un premi de direcció en un dels tres grans festivals internacionals amb una producció espanyola. L'únic precedent comparable va ser Luis Buñuel, que el 1951 guanyà el premi a millor director a Cannes amb *Los olvidados*, de producció mexicana, fruit del seu exili.
+Dos films espanyols, dos premis a Berlinale, un salt de 56 anys: *La caza* (tercer film de Carlos Saura, amb 34 anys), guanyant l'Os de Plata al millor director el 1966 en ple franquisme (14), el primer cop que un director espanyol guanyava un premi de direcció en un dels tres grans festivals internacionals amb una producció espanyola. L'únic precedent comparable va ser Luis Buñuel, que el 1951 guanyà el premi a millor director a Cannes amb *Los olvidados*, de producció mexicana, fruit del seu exili. (15)
 
 *Alcarràs* (segon film de Carla Simón, amb 36 anys), guanyant l'Os d'Or el 2022 com la primera directora (femenina) espanyola de la història i com la primera pel·lícula en llengua catalana en guanyar el màxim guardó d'un festival de classe A. La simetria revela la continuïtat d'una tradició de cinema espanyol d'autor reconegut internacionalment que travessa règims, generacions i llengües.
 
@@ -27,11 +27,13 @@ Les xifres de sala capturen una sola finestra d'exhibició. L'IAA estima l'audi�
 | <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD* | **×1,8–2,5** |
 | <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD + plataformes digitals* | **×2,0–3,0** |
 | <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV privada/pagament + TV autonòmiques + plataformes digitals en expansió constant* | **×2,5–4,0** |
+<!-- /bloc-iaa -->
 
+<!-- comentari-iaa -->
 - Les entrades de sala de cinema venudes d'*Alcarràs* representen, probablement, entre el 25% i el 35% de la seva audiència acumulada durant el període inicial d'estrena. El factor decreix progressivament des del període 1984–1989 fins al 1994–2005, tot i que el nombre de finestres augmenta: l'aparició de les televisions privades el 1990 va fragmentar l'audiència de TVE1 del 40–50% al 25–30% (16). Més finestres però menys audiència per finestra, fins que les plataformes digitals inverteixen la tendència.
 
 - Una tensió metodològica que cal reconèixer. Les entrades de sala mesuren quelcom que les altres finestres no repliquen: un moment cultural compartit, una experiència col·lectiva on desconeguts coincideixen en la foscor d'una sala. L'IAA mesura una cosa diferent: quantes persones han vist el film en total durant els seus primers anys comercials. Les dues mètriques responen a preguntes diferents: *quantes persones van viure juntes aquest film?*, i *quantes persones l'han vist?*, i no són intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de sala.
-<!-- /bloc-iaa -->
+<!-- /comentari-iaa -->
 
 <!-- bloc-distribucio -->
 ## El model de distribució: de la sala única a l'ecosistema multifinestra
@@ -47,14 +49,17 @@ Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, for
 | ***Furtivos*** | 16 set. 1975 | 23 jul. 1989 | + 13 anys 10 mesos | *TVE1 — Domingo Cine (diumenge nit)* | No |
 | ***Alcarràs*** | 29 abril 2022 | 1 des. 2023 | + 1 any 7 mesos | *TV3/3Cat — La gran pel·lícula (divendres nit)* | Sí |
 |  | 29 abril 2022 | 19 maig 2024 | + 2 anys 1 mes | *La2/TVE — Versión Española (diumenge nit)* | Sí |
+<!-- /bloc-distribucio -->
 
+<!-- comentari-distribucio -->
 - Els tres films anteriors a *Alcarràs* comparteixen una mateixa lògica: TVE comprava drets sense cap relació amb l'estratègia comercial original, i cap dels passis computa pel càlcul de l'IAA. *Alcarràs* trenca aquesta lògica: els 19 mesos fins al primer passi a TV3 i els 25 fins a La 2 formen part del calendari acordat contractualment entre coproductors. La televisió no arriba al film, el film ja porta la televisió incorporada des de l'origen.
+<!-- /comentari-distribucio -->
 
-
+<!-- final-distribucio -->
 Aquesta transformació explica per què el *timing* global de la distribució no ha canviat tant com sembla. Als anys 60–70, un film necessitava 2–3 anys per exhaurir el seu circuit comercial complet: la mateixa còpia de cel·luloide viatjava de Madrid a Bilbao, de Bilbao a Lleida, de Lleida al cinema de poble, i finalment al circuit de reestrenes. El temps era inherent al suport físic. El 2022, el mateix film necessita 2–3 anys per desbloquejar-se seqüencialment en cada finestra contractual: sala, plataforma de pagament, televisió en obert. El temps és inherent al contracte.
 
 La distribució en cascada dels anys 60–70 era una cascada geogràfica. La d'ara és una cascada de drets. El temps total és comparable, però el que s'expandeix ha canviat completament: abans era el territori, ara és l'accés. El gràfic següent ho quantifica:
-<!-- /bloc-distribucio -->
+<!-- /final-distribucio -->
 
 <!-- comentari-final -->
 - *Alcarràs* suma a les 403.195 entrades de sala una audiència televisiva estimada de 430k–630k espectadors: 280k–380k via TV3/3Cat (desembre 2023) i 150k–250k via La 2/TVE (maig 2024). A això s'hi afegeix un volum addicional de Movistar+ — coproductora i primera finestra de pagament — i de les plataformes digitals on *Alcarràs* és disponible (Prime Video, Filmin, MUBI, entre d'altres), que estimem entre 230k i 525k espectadors addicionals, però que no podem verificar amb dades públiques. (17)
