@@ -23,7 +23,7 @@ Per comparar èpoques tan diferents necessitem un índex que sumi totes les fine
 
 Les xifres de sala capturen només una finestra d’exhibició. L’IAA estima l’audiència total d’un film sumant les finestres disponibles en cada època durant el seu cicle inicial d’explotació comercial, aproximadament els primers 2–3 anys. Com l’IIC, és una mètrica pròpia d’aquest estudi: no és una dada publicada, sinó una estimació comparativa.
 
-El factor multiplicador varia segons el període. Un film dels anys 60 depenia exclusivament de la sala, un film actual pot arribar al públic per moltes vies simultànies. La taula següent resumeix el model utilitzat:
+El factor multiplicador varia segons el període. Un film dels anys 60 depenia exclusivament de la sala; un film actual pot arribar al públic per moltes vies simultànies. En el cas d’*Alcarràs*, les entrades venudes epresenten probablement entre un 25% i un 40% de la seva audiència acumulada durant el cicle inicial d’estrena. La taula següent resumeix els factors aplicats a cada període:
 
 
 | Període | Nº finestres | Tipus de finestres | Factor IAA estimat |
@@ -37,7 +37,7 @@ El factor multiplicador varia segons el període. Un film dels anys 60 depenia e
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
-- Les entrades venudes d’*Alcarràs* representen probablement entre un 25% i un 40% de la seva audiència acumulada durant el cicle inicial d’estrena. El factor no creix de manera lineal amb el nombre de finestres: entre 1984 i 2005, les noves vies de distribució fragmenten l’audiència, especialment amb l’aparició de les televisions privades i la pèrdua de pes de TVE1. Més finestres, però menys audiència per finestra. Amb les plataformes digitals, la tendència torna a canviar.
+- El factor no creix de manera lineal amb el nombre de finestres: entre 1984 i 2005, les noves vies de distribució fragmenten l’audiència, especialment amb l’aparició de les televisions privades i la pèrdua de pes de TVE1. Més finestres, però menys audiència per finestra. Amb les plataformes digitals, la tendència torna a canviar.
 
 - La tensió metodològica és evident. Les entrades de sala mesuren una experiència que les altres finestres no repliquen: una audiència reunida en un mateix espai i en un mateix moment. L’IAA mesura una altra cosa: quantes persones han vist el film, sumant totes les vies disponibles durant els seus primers anys comercials. Les dues preguntes són diferents: *quantes persones el van veure en sales?*, i *quantes persones el van acabar veient en total?* Per això no són mètriques intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de cinema.
 
