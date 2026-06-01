@@ -99,6 +99,7 @@
         <div class="grafic-wrap" style="height:220px;position:relative;margin-top:24px">
           <canvas id="grafic-caza-iaa"></canvas>
         </div>
+        <p style="font-size:0.78em;color:#888;font-style:italic;margin:6px 0 16px">&#9632; Sala &nbsp;&#9632; TV pública (TV3 + La 2 TVE) &nbsp;&#9632; TV pagament &nbsp;&#9632; Plataformes / VOD &nbsp;&nbsp;<span style="color:#aaa">(barres ratllades = estimació estructural, dades no públiques)</span></p>
         <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
       </div>
 
@@ -150,7 +151,7 @@
     const seccions = [
       { id: 'doble-corona', titol: 'La doble corona (1-10)',                    sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'la-caza',      titol: 'La caza vs. Alcarràs',                      sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'la-caza',      titol: 'La caza (1966) vs. Alcarràs (2022)',  titolHTML: '<em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)',  sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'autor',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
@@ -168,7 +169,7 @@
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = s.sup;
-      document.getElementById('titol-principal').textContent = s.titol;
+      document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
       if (lnk) lnk.classList.add('actiu');
