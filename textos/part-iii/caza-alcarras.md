@@ -19,14 +19,14 @@ Per comparar èpoques necessitem un índex que sumi totes les finestres de distr
 
 Les xifres de sala capturen una sola finestra d'exhibició. L'IAA estima l'audiència total sumant totes les finestres disponibles en cada era durant el cicle d'explotació comercial planificat, aproximadament els primers 2–3 anys. Com l'IIC, és una variable pròpia d'aquest estudi, no una dada publicada. El factor multiplicador varia segons l'època: un film dels anys 60 depenia gairebé exclusivament de la sala; un film de 2025 pot arribar als espectadors per cinc o més vies simultànies. La taula següent resumeix el model per períodes:
 
-| Període | Nº finestres | Tipus de finestres | Factor estimat |
+| Període | Nº finestres | Tipus de finestres | Factor IAA estimat |
 | --- | --- | --- | --- |
-| **1965–1984** | 1 | Sala de cinema | ×1,0 |
-| **1984–1989** | 3 | Sala + TVE (cas per cas) + VHS | ×2,5–3,5 |
-| **1990–1994** | 4 | Sala + TVE (obligatori per llei) + VHS + TV autonòmiques | ×2,0–3,0 |
-| **1994–2005** | 5 | Sala + TVE + TV privada/pagament + TV autonòmiques + DVD | ×1,8–2,5 |
-| **2005–2019** | 6 | Sala + TVE + TV privada/pagament + TV autonòmiques + DVD + plataformes digitals | ×2,0–3,0 |
-| **2020–2025** | 6+ | Sala + TVE + TV privada/pagament + TV autonòmiques + plataformes digitals en expansió constant | ×2,5–4,0 |
+| 1965–1984 | 1 | *Sala de cinema* | **×1,0** |
+| 1984–1989 | 3 | *Sala + TVE (cas per cas) + VHS* | **×2,5–3,5** |
+| 1990–1994 | 4 | *Sala + TVE (obligatori per llei) + VHS + TV autonòmiques* | **×2,0–3,0** |
+| 1994–2005 | 5 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD* | **×1,8–2,5** |
+| 2005–2019 | 6 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD + plataformes digitals* | **×2,0–3,0** |
+| 2020–2025 | 6+ | *Sala + TVE + TV privada/pagament + TV autonòmiques + plataformes digitals en expansió constant* | **×2,5–4,0** |
 
 - Les entrades de sala de cinema venudes d'*Alcarràs* representen, probablement, entre el 25% i el 35% de la seva audiència acumulada durant el període inicial d'estrena. El factor decreix progressivament des del període 1984–1989 fins al 1994–2005, tot i que el nombre de finestres augmenta: l'aparició de les televisions privades el 1990 va fragmentar l'audiència de TVE1 del 40–50% al 25–30% (16). Més finestres però menys audiència per finestra, fins que les plataformes digitals inverteixen la tendència.
 
@@ -42,11 +42,11 @@ Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, for
 
 | Títol | Estrena a sales | Estrena a televisió | Diferència | Canal i franja | IAA |
 | --- | --- | --- | --- | --- | --- |
-| *La ciudad no es para mí* | 15 març 1966 | 7 maig 1983 | → 17 anys 2 mesos | TVE1 — Primera Sesión (dissabte tarda) | No |
-| *La caza* | 15 abril 1966 | 1 febrer 1979 | → 12 anys 9 mesos | TVE2 (UHF) — Nit | No |
-| *Furtivos* | 16 set. 1975 | 23 jul. 1989 | → 13 anys 10 mesos | TVE1 — Domingo Cine (diumenge nit) | No |
-| *Alcarràs* | 29 abril 2022 | 1 des. 2023 | → 1 any 7 mesos | TV3/3Cat — La gran pel·lícula (divendres nit) | Sí |
-|  | 29 abril 2022 | 19 maig 2024 | → 2 anys 1 mes | La2/TVE — Versión Española (diumenge nit) | Sí |
+| ***La ciudad no es para mí*** (1966) | 15 març 1966 | 7 maig 1983 | + 17 anys 2 mesos | *TVE1 — Primera Sesión (dissabte tarda)* | No |
+| ***La caza*** (1966) | 15 abril 1966 | 1 febrer 1979 | + 12 anys 9 mesos | *TVE2 (UHF) — Nit* | No |
+| ***Furtivos*** (1975) | 16 set. 1975 | 23 jul. 1989 | + 13 anys 10 mesos | *TVE1 — Domingo Cine (diumenge nit)* | No |
+| ***Alcarràs*** (2022) | 29 abril 2022 | 1 des. 2023 | + 1 any 7 mesos | *TV3/3Cat — La gran pel·lícula (divendres nit)* | Sí |
+|  | 29 abril 2022 | 19 maig 2024 | + 2 anys 1 mes | *La2/TVE — Versión Española (diumenge nit)* | Sí |
 
 - Els tres films anteriors a *Alcarràs* comparteixen una mateixa lògica: TVE comprava drets sense cap relació amb l'estratègia comercial original, i cap dels passis computa pel càlcul de l'IAA. *Alcarràs* trenca aquesta lògica: els 19 mesos fins al primer passi a TV3 i els 25 fins a La 2 formen part del calendari acordat contractualment entre coproductors. La televisió no arriba al film, el film ja porta la televisió incorporada des de l'origen.
 
