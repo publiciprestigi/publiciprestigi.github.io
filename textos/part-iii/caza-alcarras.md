@@ -40,7 +40,7 @@ Les xifres de sala capturen una sola finestra d'exhibició. L'IAA estima l'audi�
 
 La diferència entre els dos films no és de qualitat ni d'impacte: és de model de negoci. El 1966, la sala era l'única pantalla. El 2022, és la primera d'un mínim de sis finestres, i la televisió hi és des del primer dia com a coproductora, no com a exhibidora posterior.
 
-Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, fora de qualsevol finestra comercial planificada. L'IAA és, per tant, la xifra de sala: 341.377 espectadors (×1,0). Per a *Alcarràs*, TVE, TV3/3Cat i Movistar+ han finançat el projecte i emeten el film en finestres temporals integrades en l'estratègia comercial des de l'origen. El quadre següent il·lustra que la lògica de *La caza* no era una excepció del franquisme: el cinema popular de Pedro Lazaga i Paco Martínez Soria i la "doble corona" de la transició de José Luis Borau van tenir exactament el mateix tractament televisiu.
+Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, fora de qualsevol finestra comercial planificada. L'IAA és, per tant, la xifra de sala: 341.377 espectadors (×1,0). Per a *Alcarràs*, TVE, TV3/3Cat i Movistar+ han finançat el projecte i emeten el film en finestres temporals integrades en l'estratègia comercial des de l'origen. El quadre següent il·lustra que la lògica de *La caza* no era una excepció del franquisme: el cinema popular de Pedro Lazaga i la 'doble corona' de la transició de José Luis Borau van tenir exactament el mateix tractament televisiu.
 
 | Títol | Estrena a sales | Estrena a TV | Diferència | Canal i franja | IAA |
 | --- | --- | --- | --- | --- | --- |
