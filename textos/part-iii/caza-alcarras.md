@@ -44,11 +44,11 @@ Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, for
 
 | Títol | Estrena a sales | Estrena a TV | Diferència | Canal i franja | IAA |
 | --- | --- | --- | --- | --- | --- |
-| ***La ciudad no es para mí*** | 15 març 1966 | 7 maig 1983 | + 17 anys 2 mesos | *TVE1 — Primera Sesión (dissabte tarda)* | No |
-| ***La caza*** | 15 abril 1966 | 1 febrer 1979 | + 12 anys 9 mesos | *TVE2 (UHF) — Nit* | No |
+| ***La ciudad no es para mí*** | 15 mar. 1966 | 7 mai. 1983 | + 17 anys 2 mesos | *TVE1 — Primera Sesión (dissabte tarda)* | No |
+| ***La caza*** | 15 abr. 1966 | 1 feb. 1979 | + 12 anys 9 mesos | *TVE2 (UHF) — Nit* | No |
 | ***Furtivos*** | 16 set. 1975 | 23 jul. 1989 | + 13 anys 10 mesos | *TVE1 — Domingo Cine (diumenge nit)* | No |
-| ***Alcarràs*** | 29 abril 2022 | 1 des. 2023 | + 1 any 7 mesos | *TV3/3Cat — La gran pel·lícula (divendres nit)* | Sí |
-|  | 29 abril 2022 | 19 maig 2024 | + 2 anys 1 mes | *La2/TVE — Versión Española (diumenge nit)* | Sí |
+| ***Alcarràs*** | 29 abr. 2022 | 1 des. 2023 | + 1 any 7 mesos | *TV3/3Cat — La gran pel·lícula (divendres nit)* | Sí |
+|  | 29 abril 2022 | 19 mai. 2024 | + 2 anys 1 mes | *La2/TVE — Versión Española (diumenge nit)* | Sí |
 <!-- /bloc-distribucio -->
 
 <!-- comentari-distribucio -->
