@@ -91,7 +91,15 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-la-caza">
-        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+        <div class="text-md text-md-intro" data-text="part-iii/caza-alcarras" data-bloc="intro"></div>
+        <div id="taula-caza-comparativa"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-taula"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-iaa"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-distribucio"></div>
+        <div class="grafic-wrap" style="height:220px;position:relative;margin-top:24px">
+          <canvas id="grafic-caza-iaa"></canvas>
+        </div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-lleis">
@@ -152,6 +160,7 @@
 
     let actual = 0;
     let graficBretxaInit = false;
+    let graficCazaInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -178,6 +187,10 @@
       if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
         graficBretxaInit = true;
         setTimeout(window.PiP_graficBretxa, 50);
+      }
+      if (s.id === 'la-caza' && !graficCazaInit && window.PiP_graficCazaIAA) {
+        graficCazaInit = true;
+        setTimeout(window.PiP_graficCazaIAA, 50);
       }
     }
 
