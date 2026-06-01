@@ -353,14 +353,14 @@ function construirCazaAlcarras() {
       festival: 'Berlín', premiat: true,
       espectadors: 341377,
       mercat: '370M≈', penetr: '1,06%≈', quota: '0,09%≈',
-      iic: '0,21', iaa: '341.377', iaa_est: false,
+      iic: '0,21', iaa_xifra: '341.377', iaa_mult: '(×1,0)', iaa_est: false,
     },
     {
       titol: 'Alcarràs', any: 2022, director: 'Carla Simón',
       festival: 'Berlín', premiat: true,
       espectadors: 403195,
       mercat: '71M', penetr: '0,84%', quota: '0,57%',
-      iic: '0,47', iaa: '1,06M–1,56M', iaa_est: true,
+      iic: '0,47', iaa_xifra: '1,06M–1,56M', iaa_mult: '(×2,5–4,0)', iaa_est: true,
     },
   ];
 
@@ -380,7 +380,7 @@ function construirCazaAlcarras() {
       <td class="col-num col-subtil">${gris(f.penetr)}</td>
       <td class="col-num col-subtil">${gris(f.quota)}</td>
       <td class="col-center col-subtil">${f.iic}</td>
-      <td class="col-num">${f.iaa_est ? `<em>${f.iaa}</em>` : f.iaa}</td>
+      <td class="col-num"><strong>${f.iaa_xifra}</strong> <span style="font-weight:400;color:#6b6b6b">${f.iaa_mult}</span></td>
     </tr>`;
   }).join('');
 
@@ -436,8 +436,10 @@ window.PiP_graficCazaIAA = function() {
   }
 
   // Etiquetes totals al final de cada barra
-  const etiquetesTotals = ['~1,06M–1,56M esp.', '341.377 esp.'];
-  const totalsPixel = [1310195, 341377];
+  const etiquetesTotals = [
+    { xifra: '~1,06M–1,56M esp.', mult: '(×2,5–4,0)', total: 1110195 },
+    { xifra: '341.377 esp.', mult: '(×1,0)', total: 341377 },
+  ];
 
   const pluginTotals = {
     id: 'cazaTotals',
@@ -447,11 +449,19 @@ window.PiP_graficCazaIAA = function() {
       ctx2.font = '600 11px -apple-system, Arial, sans-serif';
       ctx2.fillStyle = '#363737';
       ctx2.textBaseline = 'middle';
-      totalsPixel.forEach((total, i) => {
-        const x = chart.scales.x.getPixelForValue(total) + 6;
+      etiquetesTotals.forEach((et, i) => {
+        const x = chart.scales.x.getPixelForValue(et.total) + 6;
         const meta = chart.getDatasetMeta(0);
         const bar = meta.data[i];
-        if (bar) ctx2.fillText(etiquetesTotals[i], x, bar.y);
+        if (!bar) return;
+        const y = bar.y;
+        ctx2.font = 'bold 11px -apple-system, Arial, sans-serif';
+        ctx2.fillStyle = '#363737';
+        ctx2.fillText(et.xifra, x, y);
+        const xifraWidth = ctx2.measureText(et.xifra + ' ').width;
+        ctx2.font = '11px -apple-system, Arial, sans-serif';
+        ctx2.fillStyle = '#888';
+        ctx2.fillText(et.mult, x + xifraWidth, y);
       });
       ctx2.restore();
     },
@@ -470,19 +480,19 @@ window.PiP_graficCazaIAA = function() {
         },
         {
           label: 'TV pública (TV3 + La 2 TVE)',
-          data: [330000, 0],
+          data: [530000, 0],
           backgroundColor: '#9B2335',
           borderWidth: 0,
         },
         {
           label: 'TV pagament',
-          data: [200000, 0],
+          data: [150000, 0],
           backgroundColor: hatch('#d4a017'),
           borderWidth: 0,
         },
         {
           label: 'Plataformes / VOD',
-          data: [377000, 0],
+          data: [227000, 0],
           backgroundColor: hatch('#6B3FA0'),
           borderWidth: 0,
         },
