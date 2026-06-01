@@ -1,7 +1,7 @@
 <!-- intro -->
 Dos films espanyols premiats a Berlín, separats per 56 anys. *La caza* arriba en ple franquisme: tercer llargmetratge de Carlos Saura, amb 34 anys, i Ós de Plata a millor direcció el 1966. És el primer gran premi de direcció per a un director espanyol en un dels festivals europeus de referència amb una producció espanyola, amb l’excepció prèvia, parcialment comparable, de Buñuel a Cannes per *Los olvidados* (1951), de producció mexicana.
 
-*Alcarràs* arriba des d’un moment cultural i industrial molt diferent: segon llargmetratge de Carla Simón, amb 36 anys, i Ós d’Or el 2022. És la primera directora espanyola que guanya el màxim guardó de Berlín i la primera pel·lícula en llengua catalana que obté el premi principal d’un festival de classe A.
+*Alcarràs*, en canvi, neix en un moment cultural i industrial molt diferent: segon llargmetratge de Carla Simón, amb 36 anys, i Ós d’Or el 2022. És la primera directora espanyola que guanya el màxim guardó de Berlín i la primera pel·lícula en llengua catalana que obté el premi principal d’un festival de classe A.
 
 La comparació no pretén equiparar els dos films, sinó mirar què canvia i què persisteix: dues generacions, dos contextos històrics, dues llengües i una mateixa via de legitimació internacional per al cinema d’autor.
 
