@@ -366,7 +366,7 @@ function construirCazaAlcarras() {
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
-    const espStr = fmt(f.espectadors) + (f.espFactor ? ` <span class="col-subtil">${f.espFactor}</span>` : '');
+    const espStr = fmt(f.espectadors);
     const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td class="col-center col-subtil">${f.any}</td>
@@ -389,12 +389,12 @@ function construirCazaAlcarras() {
       <thead><tr>
         <th class="col-center" style="width:48px">Any</th>
         <th style="width:14%">Títol</th>
-        <th class="col-subtil" style="width:12%">Director/a</th>
+        <th class="col-subtil" style="width:12%">Director</th>
         <th style="width:70px">Festival</th>
         <th class="col-center" style="width:30px">★</th>
         <th class="col-num" style="width:120px">Espectadors</th>
         <th class="col-center" style="width:55px">Top 100</th>
-        <th class="col-num" style="width:65px">Mercat any</th>
+        <th class="col-num" style="width:65px">Mercat</th>
         <th class="col-num" style="width:65px">Penetr.</th>
         <th class="col-num" style="width:55px">Quota</th>
         <th class="col-center" style="width:40px">IIC</th>
@@ -409,6 +409,23 @@ window.PiP_graficCazaIAA = function() {
   if (!el || typeof Chart === 'undefined') return;
   if (window._chartCazaIAA) window._chartCazaIAA.destroy();
   const ctx = el.getContext('2d');
+
+  function hatch(color) {
+    const c = document.createElement('canvas');
+    c.width = 8; c.height = 8;
+    const cx = c.getContext('2d');
+    cx.fillStyle = color;
+    cx.fillRect(0, 0, 8, 8);
+    cx.strokeStyle = 'rgba(255,255,255,0.65)';
+    cx.lineWidth = 1.5;
+    cx.beginPath();
+    cx.moveTo(0, 8); cx.lineTo(8, 0);
+    cx.moveTo(-2, 2); cx.lineTo(2, -2);
+    cx.moveTo(6, 10); cx.lineTo(10, 6);
+    cx.stroke();
+    return ctx.createPattern(c, 'repeat');
+  }
+
   window._chartCazaIAA = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -429,15 +446,14 @@ window.PiP_graficCazaIAA = function() {
         {
           label: 'TV pagament',
           data: [200000, 0],
-          backgroundColor: '#d4a017',
+          backgroundColor: hatch('#d4a017'),
           borderWidth: 0,
         },
         {
           label: 'Plataformes / VOD',
           data: [377000, 0],
-          backgroundColor: 'rgba(107,63,160,0.55)',
-          borderWidth: 2,
-          borderColor: '#6B3FA0',
+          backgroundColor: hatch('#6B3FA0'),
+          borderWidth: 0,
         },
       ],
     },
@@ -447,7 +463,11 @@ window.PiP_graficCazaIAA = function() {
       maintainAspectRatio: false,
       animation: false,
       plugins: {
-        legend: { display: true, position: 'bottom', labels: { boxWidth: 14, font: { size: 11 } } },
+        legend: {
+          display: true,
+          position: 'bottom',
+          labels: { boxWidth: 14, font: { size: 11 } },
+        },
         tooltip: {
           callbacks: {
             label: ctx => {
