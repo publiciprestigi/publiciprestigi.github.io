@@ -50,6 +50,7 @@ Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, for
 
 - Els tres films anteriors a *Alcarràs* comparteixen una mateixa lògica: TVE comprava drets sense cap relació amb l'estratègia comercial original, i cap dels passis computa pel càlcul de l'IAA. *Alcarràs* trenca aquesta lògica: els 19 mesos fins al primer passi a TV3 i els 25 fins a La 2 formen part del calendari acordat contractualment entre coproductors. La televisió no arriba al film, el film ja porta la televisió incorporada des de l'origen.
 
+
 Aquesta transformació explica per què el *timing* global de la distribució no ha canviat tant com sembla. Als anys 60–70, un film necessitava 2–3 anys per exhaurir el seu circuit comercial complet: la mateixa còpia de cel·luloide viatjava de Madrid a Bilbao, de Bilbao a Lleida, de Lleida al cinema de poble, i finalment al circuit de reestrenes. El temps era inherent al suport físic. El 2022, el mateix film necessita 2–3 anys per desbloquejar-se seqüencialment en cada finestra contractual: sala, plataforma de pagament, televisió en obert. El temps és inherent al contracte.
 
 La distribució en cascada dels anys 60–70 era una cascada geogràfica. La d'ara és una cascada de drets. El temps total és comparable, però el que s'expandeix ha canviat completament: abans era el territori, ara és l'accés. El gràfic següent ho quantifica:
