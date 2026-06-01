@@ -10,11 +10,12 @@ La comparació no pretén equiparar les dos pel·lícules, sinó mirar què canv
 <!-- /intro -->
 
 <!-- comentari-taula -->
-- *La caza* i *Alcarràs* operen en mercats incomparables: 370 milions d'entrades anuals el 1966, 71 milions el 2022. Les xifres de sala són gairebé iguals, però l'impacte relatiu no: l'IIC d'*Alcarràs* (0,47) quasi dobla el de *La caza* (0,21). En un mercat cinc vegades més petit, *Alcarràs* ha funcionat comparativament molt millor.
+- La taula resumeix l’equívoc central: dues xifres de sala relativament pròximes poden tenir un pes molt diferent segons l’època. *La caza* competeix dins un mercat d’uns 370M d’entrades; *Alcarràs*, dins un mercat de 71M. La diferència es veu en les mètriques relatives: *La caza* té una quota del 0,09% i un IIC de 0,21; *Alcarràs* puja fins al 0,57% de quota i un IIC de 0,47. En termes relatius, *Alcarràs* pesa molt més dins del seu temps.
 
-- Els números absoluts de sala semblen, sorprenentment, iguals: 341.377 espectadors per a *La caza*, 403.195 per a *Alcarràs*. Com si 56 anys després el públic receptor d'un film "similar" fos exactament el mateix. Però darrere d'aquesta aparent simetria hi ha models de distribució radicalment diferents, i l'impacte real d'*Alcarràs* (com s'intueix amb l'IIC) ha estat molt superior al que la sala revela.
+- Els números absoluts de sala semblen, sorprenentment, gairebé iguals: 341.377 espectadors per a *La caza*, 403.195 per a *Alcarràs*. Com si 56 anys després el públic receptor d’un film d’autor premiat a Berlín fos pràcticament el mateix. Però darrere d’aquesta aparent simetria hi ha models de distribució radicalment diferents: l’impacte real d’*Alcarràs*, com suggereixen l’IIC i l’IAA estimat, ha estat molt superior al que la sala revela.
 
-Per comparar èpoques necessitem un índex que sumi totes les finestres de distribució disponibles en cada context. L'anomenarem IAA.
+Per comparar èpoques tan diferents necessitem un índex que sumi totes les finestres de distribució disponibles en cada context. L'anomenarem IAA.
+
 <!-- /comentari-taula -->
 
 <!-- bloc-iaa -->
