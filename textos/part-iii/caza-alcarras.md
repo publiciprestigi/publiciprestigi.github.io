@@ -3,7 +3,7 @@ Dos films espanyols, dos premis a Berlinale, un salt de 56 anys: *La caza* (terc
 
 *Alcarràs* (segon film de Carla Simón, amb 36 anys), guanyant l'Os d'Or el 2022 com la primera directora (femenina) espanyola de la història i com la primera pel·lícula en llengua catalana en guanyar el màxim guardó d'un festival de classe A. La simetria revela la continuïtat d'una tradició de cinema espanyol d'autor reconegut internacionalment que travessa règims, generacions i llengües.
 
-## Dades comparatives: espectadors, mercat i mètriques
+## Dades comparatives
 <!-- /intro -->
 
 <!-- comentari-taula -->
@@ -26,7 +26,7 @@ Les xifres de sala capturen una sola finestra d'exhibició. L'IAA estima l'audi�
 | <span style="white-space:nowrap">1990–1994</span> | 4 | *Sala + TVE (obligatori per llei) + VHS + TV autonòmiques* | **×2,0–3,0** |
 | <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD* | **×1,8–2,5** |
 | <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD + plataformes digitals* | **×2,0–3,0** |
-| <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV privada/pagament + TV autonòmiques + plataformes digitals en expansió constant* | **×2,5–4,0** |
+| <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV privada/pagament + TV autonòmiques + plataformes digitals en expansió* | **×2,5–4,0** |
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
@@ -36,7 +36,7 @@ Les xifres de sala capturen una sola finestra d'exhibició. L'IAA estima l'audi�
 <!-- /comentari-iaa -->
 
 <!-- bloc-distribucio -->
-## El model de distribució: de la sala única a l'ecosistema multifinestra
+## De la sala única a l'ecosistema multifinestra
 
 La diferència entre els dos films no és de qualitat ni d'impacte: és de model de negoci. El 1966, la sala era l'única pantalla. El 2022, és la primera d'un mínim de sis finestres, i la televisió hi és des del primer dia com a coproductora, no com a exhibidora posterior.
 
