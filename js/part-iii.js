@@ -455,11 +455,11 @@ window.PiP_graficCazaIAA = function() {
         const bar = meta.data[i];
         if (!bar) return;
         const y = bar.y;
-        ctx2.font = 'bold 11px -apple-system, Arial, sans-serif';
+        ctx2.font = 'bold 13px -apple-system, Arial, sans-serif';
         ctx2.fillStyle = '#363737';
         ctx2.fillText(et.xifra, x, y);
         const xifraWidth = ctx2.measureText(et.xifra + ' ').width;
-        ctx2.font = '11px -apple-system, Arial, sans-serif';
+        ctx2.font = '12px -apple-system, Arial, sans-serif';
         ctx2.fillStyle = '#888';
         ctx2.fillText(et.mult, x + xifraWidth, y);
       });
