@@ -470,7 +470,7 @@ window.PiP_graficCazaIAA = function() {
   window._chartCazaIAA = new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: [['Alcarràs', '(2022)'], ['La caza', '(1966)']],
+      labels: ['Alcarràs', 'La caza'],
       datasets: [
         {
           label: 'Sala',
@@ -508,6 +508,8 @@ window.PiP_graficCazaIAA = function() {
         legend: {
           display: true,
           position: 'bottom',
+          align: 'center',
+          onClick: () => {},
           labels: { boxWidth: 14, font: { size: 11 } },
         },
         tooltip: {
