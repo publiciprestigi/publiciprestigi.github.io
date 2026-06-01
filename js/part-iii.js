@@ -467,6 +467,19 @@ window.PiP_graficCazaIAA = function() {
     },
   };
 
+  // Llegenda HTML centrada (en lloc de la de Chart.js)
+  if (!document.getElementById('caza-iaa-leg')) {
+    const leg = document.createElement('div');
+    leg.id = 'caza-iaa-leg';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;margin-bottom:24px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.innerHTML = `
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>`;
+    el.parentNode.insertAdjacentElement('afterend', leg);
+  }
+
   window._chartCazaIAA = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -506,11 +519,7 @@ window.PiP_graficCazaIAA = function() {
       layout: { padding: { right: 160 } },
       plugins: {
         legend: {
-          display: true,
-          position: 'bottom',
-          align: 'center',
-          onClick: () => {},
-          labels: { boxWidth: 14, font: { size: 11 } },
+          display: false,
         },
         tooltip: {
           callbacks: {
