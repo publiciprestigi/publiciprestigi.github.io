@@ -3,7 +3,7 @@ Dos films espanyols, dos premis a Berlinale, un salt de 56 anys: *La caza* (terc
 
 *Alcarràs* (segon film de Carla Simón, amb 36 anys), guanyant l'Os d'Or el 2022 com la primera directora (femenina) espanyola de la història i com la primera pel·lícula en llengua catalana en guanyar el màxim guardó d'un festival de classe A. La simetria revela la continuïtat d'una tradició de cinema espanyol d'autor reconegut internacionalment que travessa règims, generacions i llengües.
 
-## Dades comparatives
+## Dades i mètriques comparatives
 <!-- /intro -->
 
 <!-- comentari-taula -->
