@@ -507,34 +507,15 @@ function construirLleis() {
   const cont = document.getElementById('grafic-lleis');
   if (!cont) return;
 
-  cont.innerHTML = `
-<style>
-.ll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;margin:16px 0 24px}
-.ll-g{position:relative;min-width:1360px;font-size:13px;font-family:Georgia,serif}
-.ll-g6{display:grid;grid-template-columns:31.67% 8.33% 6.67% 18.33% 23.33% 11.67%}
-.ll-lm{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed rgba(255,255,255,.42);z-index:4;pointer-events:none}
-.ll-lm.cl{border-left-color:rgba(0,0,0,.16)}
-.ll-gov{display:flex;height:22px;overflow:hidden}
-.ll-gb{display:flex;align-items:center;padding:0 7px;font-size:.6em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;border-right:1px solid rgba(255,255,255,.3);white-space:nowrap;overflow:hidden}
-.ll-per .c{padding:10px 10px 8px;font-size:.8em;font-weight:700;color:#fff;border-right:1px solid rgba(255,255,255,.18)}
-.ll-mom{position:relative;height:76px;background:#f5f5f5;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;overflow:visible}
-.ll-mp{position:absolute;z-index:10;width:0}
-.ll-ml{position:absolute;left:0;top:0;bottom:0;width:0;border-left:1px dashed #b0b0b0}
-.ll-mc{position:absolute;left:0;top:8px;transform:translateX(-50%);width:20px;height:20px;border-radius:50%;background:#363737;color:#fff;font-size:.62em;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f5f5;box-shadow:0 1px 3px rgba(0,0,0,.22);z-index:2}
-.ll-ma{position:absolute;left:0;top:32px;transform:translateX(-50%);font-size:.57em;color:#888;white-space:nowrap;font-style:italic;text-align:center}
-.ll-mn{position:absolute;left:0;top:44px;transform:translateX(-50%);font-size:.57em;color:#333;white-space:nowrap;font-weight:600;text-align:center}
-.ll-fin .c{padding:10px;font-size:.75em;color:#fff;font-style:italic;border-right:1px solid rgba(255,255,255,.18);line-height:1.4;min-height:68px}
-.ll-fin .c .nf{display:block;font-style:normal;font-weight:700;font-size:.88em;opacity:.82;margin-bottom:3px}
-.ll-iaa .c{padding:9px 10px;font-size:.85em;font-weight:700;color:#fff;text-align:center;background:rgba(39,174,96,.85);border-right:1px solid rgba(255,255,255,.25)}
-.ll-eix{position:relative;height:20px;border-top:1px solid #ccc;margin-top:5px}
-.ll-ea{position:absolute;font-size:.67em;color:#999;transform:translateX(-50%);padding-top:3px;white-space:nowrap}
-.ll-ef{font-size:.67em;color:#888;text-transform:uppercase;letter-spacing:.05em;padding:4px 0 2px}
-.ll-tit{font-size:.71em;color:#777;letter-spacing:.04em;margin-bottom:8px;font-style:italic}
-.c1{background:#2C3E50}.c2{background:#1A5276}.c3{background:#1E8449}
-.c4{background:#7D3C98}.c5{background:#B7770D}.c6{background:#922B21}
-.gf{background:#4E342E}.gt{background:#546E7A}.gps{background:#B71C1C}.gpp{background:#0D47A1}
-</style>
+  // Injectar CSS al head (una sola vegada)
+  if (!document.getElementById('ll-styles')) {
+    const s = document.createElement('style');
+    s.id = 'll-styles';
+    s.textContent = `.ll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;margin:16px 0 24px}.ll-g{position:relative;min-width:1360px;font-size:13px;font-family:Georgia,serif}.ll-g6{display:grid;grid-template-columns:31.67% 8.33% 6.67% 18.33% 23.33% 11.67%}.ll-lm{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed rgba(255,255,255,.42);z-index:4;pointer-events:none}.ll-lm.cl{border-left-color:rgba(0,0,0,.16)}.ll-gov{display:flex;height:22px;overflow:hidden}.ll-gb{display:flex;align-items:center;padding:0 7px;font-size:.6em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;border-right:1px solid rgba(255,255,255,.3);white-space:nowrap;overflow:hidden}.ll-per .c{padding:10px 10px 8px;font-size:.8em;font-weight:700;color:#fff;border-right:1px solid rgba(255,255,255,.18)}.ll-mom{position:relative;height:76px;background:#f5f5f5;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;overflow:visible}.ll-mp{position:absolute;z-index:10;width:0}.ll-ml{position:absolute;left:0;top:0;bottom:0;width:0;border-left:1px dashed #b0b0b0}.ll-mc{position:absolute;left:0;top:8px;transform:translateX(-50%);width:20px;height:20px;border-radius:50%;background:#363737;color:#fff;font-size:.62em;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f5f5;box-shadow:0 1px 3px rgba(0,0,0,.22);z-index:2}.ll-ma{position:absolute;left:0;top:32px;transform:translateX(-50%);font-size:.57em;color:#888;white-space:nowrap;font-style:italic;text-align:center}.ll-mn{position:absolute;left:0;top:44px;transform:translateX(-50%);font-size:.57em;color:#333;white-space:nowrap;font-weight:600;text-align:center}.ll-fin .c{padding:10px;font-size:.75em;color:#fff;font-style:italic;border-right:1px solid rgba(255,255,255,.18);line-height:1.4;min-height:68px}.ll-fin .c .nf{display:block;font-style:normal;font-weight:700;font-size:.88em;opacity:.82;margin-bottom:3px}.ll-iaa .c{padding:9px 10px;font-size:.85em;font-weight:700;color:#fff;text-align:center;background:rgba(39,174,96,.85);border-right:1px solid rgba(255,255,255,.25)}.ll-eix{position:relative;height:20px;border-top:1px solid #ccc;margin-top:5px}.ll-ea{position:absolute;font-size:.67em;color:#999;transform:translateX(-50%);padding-top:3px;white-space:nowrap}.ll-ef{font-size:.67em;color:#888;text-transform:uppercase;letter-spacing:.05em;padding:4px 0 2px}.ll-tit{font-size:.71em;color:#777;letter-spacing:.04em;margin-bottom:8px;font-style:italic}.c1{background:#2C3E50}.c2{background:#1A5276}.c3{background:#1E8449}.c4{background:#7D3C98}.c5{background:#B7770D}.c6{background:#922B21}.gf{background:#4E342E}.gt{background:#546E7A}.gps{background:#B71C1C}.gpp{background:#0D47A1}`;
+    document.head.appendChild(s);
+  }
 
+  cont.innerHTML = `
 <p class="ll-tit">Context de distribució, legislació i factor IAA (1965–2025)</p>
 <div class="ll-wrap"><div class="ll-g">
 
