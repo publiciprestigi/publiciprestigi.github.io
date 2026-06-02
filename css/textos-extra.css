@@ -33,7 +33,7 @@
   background: #ececec;
 }
 .text-md table tbody tr:nth-child(odd) td {
-  background: #f5f5f5;
+  background: #f8f8f8;
 }
 .text-md table tr:last-child td {
   border-bottom: none;
