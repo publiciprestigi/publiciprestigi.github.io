@@ -69,9 +69,9 @@ La distribució en cascada dels anys 60 i 70 era una cascada geogràfica. La d�
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
-- El gràfic fa visible el canvi de model. *La caza* queda reduïda a la seva xifra de sala, 341k espectadors, perquè no té altres finestres computables dins el seu cicle comercial. *Alcarràs*, en canvi, parteix d’una xifra de sala semblant, 403k, però hi suma 530k espectadors contrastats en televisió pública (TV3/3Cat i La 2/TVE) i dues capes estimades: uns 150k en televisió de pagament (Movistar+) i uns 227k en plataformes digitals. En total, el gràfic mostra el punt mitjà de la forquilla estimada, al voltant d’1,31M d’espectadors acumulats.
+- *La caza* queda reduïda a la seva xifra de sala, 341k espectadors, perquè no té altres finestres computables dins el seu cicle comercial. *Alcarràs*, en canvi, parteix d’una xifra semblant, 403k, però hi suma 530k espectadors contrastats en televisió pública (TV3/3Cat i La 2/TVE) i dues capes estimades no verificables: televisió de pagament (Movistar+) i plataformes digitals. En total, el gràfic mostra el punt mitjà de l’IAA estimat, al voltant d’1,31M d’espectadors acumulats.
 
-- La forquilla completa d’Alcarràs és més ampla: entre 1,06M i 1,56M, equivalent a un factor aproximat de ×2,5–4,0 sobre les entrades de sala. La part més sòlida és la suma de sala i televisió pública; la incertesa real comença sobretot amb Movistar+ i les plataformes. Per això la comparació és tan clara: La caza equival a la seva sala; Alcarràs supera clarament la seva xifra de sala, encara que l’abast total només es pugui donar en forma de forquilla.
+- Aquesta és la part més opaca del sistema actual. Les plataformes no publiquen dades individuals de visualització per títol, i ni l’ICAA ni la SGAE recullen aquesta informació de manera desagregada. La capa digital existeix, però queda fora de la mesura pública. Per això l’audiència acumulada d*’Alcarràs* és clarament superior a la xifra de sala, encara que només la puguem estimar.
 
 
 
