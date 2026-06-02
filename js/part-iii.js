@@ -35,6 +35,7 @@ async function carregarDades() {
     construirSegonCercle();
     construirBretxa();
     construirCazaAlcarras();
+    construirDuesGeneracions();
     construirLleis();
   } catch(e) { console.error('Error:', e); }
 }
@@ -564,6 +565,369 @@ window.PiP_graficCazaIAA = function() {
 /* ============================================================
    LLEIS — Timeline gràfic horitzontal amb scroll
    ============================================================ */
+// ═══════════════════════════════════════════════════════════════
+// DUES GENERACIONS, DOS MERCATS I UN PRESTIGI
+// ═══════════════════════════════════════════════════════════════
+
+let FILMS_SAURA = null;
+let FILMS_ALMODOVAR = null;
+let FILMS_ACTUAL = null;
+
+const COLORS_DEC_GLOBAL = {
+  '60s':   '#f4f7fa', '70s':   '#edf2f7', '80s':   '#e4ecf4',
+  '90s':   '#dae6f0', '2000s': '#cfe0ec', '2010s': '#c3d9e8',
+  '2020s': '#b6d2e4',
+};
+
+function construirDuesGeneracions() {
+  FILMS_SAURA = [
+    { any:1966, titol:'La caza', festival:'Berlín', premiat:true, esp:341377, top100:null, mercat:'370M≈', penetr:'1,06%≈', quota:'0,09%≈', iic:'0,21', iaa_xifra:'341.377', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1968, titol:'Peppermint Frappé', festival:'Berlín', premiat:true, esp:669165, top100:null, mercat:'330M≈', penetr:'1,91%≈', quota:'0,20%≈', iic:'0,42', iaa_xifra:'669.165', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1968, titol:'Stress es tres, tres', festival:'Venècia', premiat:false, esp:151363, top100:null, mercat:'330M≈', penetr:'0,43%≈', quota:'0,05%≈', iic:'0,10', iaa_xifra:'151.363', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1973, titol:'Ana y los lobos', festival:'Cannes', premiat:false, esp:478667, top100:null, mercat:'280M≈', penetr:'1,40%≈', quota:'0,17%≈', iic:'0,33', iaa_xifra:'478.667', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1974, titol:'La prima Angélica', festival:'Cannes', premiat:true, esp:1410478, top100:null, mercat:'270M≈', penetr:'4,01%≈', quota:'0,52%≈', iic:'0,99', iaa_xifra:'1.410.478', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1976, titol:'Cría cuervos', festival:'Cannes', premiat:true, esp:1293113, top100:null, mercat:'240M≈', penetr:'3,59%≈', quota:'0,54%≈', iic:'0,95', iaa_xifra:'1.293.113', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1977, titol:'Elisa, vida mía', festival:'Cannes', premiat:true, esp:365475, top100:null, mercat:'220M≈', penetr:'1,01%≈', quota:'0,17%≈', iic:'0,28', iaa_xifra:'365.475', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1978, titol:'Los ojos vendados', festival:'Cannes', premiat:false, esp:104249, top100:null, mercat:'205M≈', penetr:'0,28%≈', quota:'0,05%≈', iic:'0,08', iaa_xifra:'104.249', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1979, titol:'Mamá cumple cien años', festival:'Sant Sebastià', premiat:true, esp:1120399, top100:null, mercat:'200M≈', penetr:'3,04%≈', quota:'0,56%≈', iic:'0,89', iaa_xifra:'1.120.399', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1981, titol:'Deprisa, deprisa', festival:'Berlín', premiat:true, esp:1049600, top100:{pos:25,dec:'80s'}, mercat:'165M≈', penetr:'2,78%≈', quota:'0,64%≈', iic:'0,91', iaa_xifra:'1.049.600', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1983, titol:'Carmen', festival:'Cannes', premiat:true, esp:427324, top100:null, mercat:'115M≈', penetr:'1,12%≈', quota:'0,37%≈', iic:'0,44', iaa_xifra:'427.324', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1984, titol:'Los zancos', festival:'Venècia', premiat:false, esp:56789, top100:null, mercat:'115M≈', penetr:'0,15%≈', quota:'0,05%≈', iic:'0,06', iaa_xifra:'~142.000–199.000', iaa_mult:'(×2,5–3,5)', iaa_est:true },
+    { any:1988, titol:'El Dorado', festival:'Cannes', premiat:false, esp:571690, top100:null, mercat:'85M≈', penetr:'1,47%≈', quota:'0,67%≈', iic:'0,68', iaa_xifra:'~1,43M–2,00M', iaa_mult:'(×2,5–3,5)', iaa_est:true },
+    { any:1989, titol:'La noche oscura', festival:'Berlín', premiat:false, esp:36008, top100:null, mercat:'80M≈', penetr:'0,09%≈', quota:'0,05%≈', iic:'0,05', iaa_xifra:'~90.000–126.000', iaa_mult:'(×2,5–3,5)', iaa_est:true },
+    { any:1990, titol:'Ay, Carmela', festival:null, premiat:false, esp:907295, top100:{pos:28,dec:'90s'}, mercat:'80M≈', penetr:'2,33%≈', quota:'1,13%≈', iic:'1,11', iaa_xifra:'~1,82M–2,72M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:1993, titol:'¡Dispara!', festival:'Venècia', premiat:false, esp:169814, top100:null, mercat:'90M≈', penetr:'0,44%≈', quota:'0,19%≈', iic:'0,20', iaa_xifra:'~340.000–509.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:1996, titol:'Taxi', festival:'Sant Sebastià', premiat:false, esp:139825, top100:null, mercat:'98M≈', penetr:'0,36%≈', quota:'0,14%≈', iic:'0,15', iaa_xifra:'~252.000–350.000', iaa_mult:'(×1,8–2,5)', iaa_est:true },
+  ];
+
+  FILMS_ALMODOVAR = [
+    { any:1982, titol:'Laberinto de pasiones', festival:'Sant Sebastià', premiat:false, esp:358252, top100:null, mercat:'150M≈', penetr:'0,95%≈', quota:'0,24%≈', iic:'0,33', iaa_xifra:'358.252', iaa_mult:'(×1,0)', iaa_est:false },
+    { any:1988, titol:'Mujeres al borde…', festival:'Venècia', premiat:true, esp:3348457, top100:{pos:22,dec:'80s'}, mercat:'85M≈', penetr:'8,61%≈', quota:'3,94%≈', iic:'3,98', iaa_xifra:'~8,37M–11,72M', iaa_mult:'(×2,5–3,5)', iaa_est:true },
+    { any:1989, titol:'Átame', festival:'Berlín', premiat:false, esp:1351825, top100:{pos:8,dec:'80s'}, mercat:'80M≈', penetr:'3,48%≈', quota:'1,69%≈', iic:'1,66', iaa_xifra:'~3,38M–4,73M', iaa_mult:'(×2,5–3,5)', iaa_est:true },
+    { any:1991, titol:'Tacones lejanos', festival:null, premiat:false, esp:2073064, top100:{pos:6,dec:'90s'}, mercat:'88M≈', penetr:'5,32%≈', quota:'2,36%≈', iic:'2,42', iaa_xifra:'~4,15M–6,22M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:1993, titol:'Kika', festival:null, premiat:false, esp:1038568, top100:{pos:24,dec:'90s'}, mercat:'90M≈', penetr:'2,65%≈', quota:'1,15%≈', iic:'1,19', iaa_xifra:'~2,08M–3,12M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:1995, titol:'La flor de mi secreto', festival:null, premiat:false, esp:981846, top100:{pos:25,dec:'90s'}, mercat:'96M≈', penetr:'2,50%≈', quota:'1,02%≈', iic:'1,09', iaa_xifra:'~1,77M–2,46M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
+    { any:1997, titol:'Carne trémula', festival:null, premiat:false, esp:1433465, top100:{pos:12,dec:'90s'}, mercat:'100M≈', penetr:'3,64%≈', quota:'1,43%≈', iic:'1,56', iaa_xifra:'~2,58M–3,58M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
+    { any:1999, titol:'Todo sobre mi madre', festival:'Cannes', premiat:true, esp:2590699, top100:{pos:2,dec:'90s'}, mercat:'110M', penetr:'6,48%', quota:'2,36%', iic:'2,67', iaa_xifra:'~4,66M–6,48M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
+    { any:2002, titol:'Hable con ella', festival:null, premiat:false, esp:1367655, top100:{pos:26,dec:'2000s'}, mercat:'140M≈', penetr:'3,30%≈', quota:'0,97%≈', iic:'1,22', iaa_xifra:'~2,46M–3,42M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
+    { any:2006, titol:'Volver', festival:'Cannes', premiat:true, esp:1932119, top100:{pos:16,dec:'2000s'}, mercat:'121M', penetr:'4,37%', quota:'1,59%', iic:'1,80', iaa_xifra:'~3,86M–5,80M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2011, titol:'La piel que habito', festival:'Cannes', premiat:false, esp:735403, top100:null, mercat:'98M≈', penetr:'1,58%≈', quota:'0,75%≈', iic:'0,74', iaa_xifra:'~1,47M–2,21M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2016, titol:'Julieta', festival:'Cannes', premiat:false, esp:355378, top100:null, mercat:'96M≈', penetr:'0,76%≈', quota:'0,37%≈', iic:'0,36', iaa_xifra:'~0,71M–1,07M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2019, titol:'Dolor y gloria', festival:'Cannes', premiat:true, esp:964859, top100:null, mercat:'105M≈', penetr:'2,07%≈', quota:'0,92%≈', iic:'0,94', iaa_xifra:'~1,90M–2,90M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2021, titol:'Madres paralelas', festival:'Venècia', premiat:true, esp:425643, top100:null, mercat:'55M≈', penetr:'0,90%≈', quota:'0,77%≈', iic:'0,57', iaa_xifra:'~1,10M–1,70M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+    { any:2024, titol:'La habitación de al lado', festival:'Venècia', premiat:true, esp:402313, top100:null, mercat:'90M≈', penetr:'0,85%≈', quota:'0,45%≈', iic:'0,42', iaa_xifra:'~1,00M–1,60M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+  ];
+
+  FILMS_ACTUAL = [
+    { any:2013, titol:'Stockholm', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:13945, top100:null, mercat:'90M≈', penetr:'0,03%≈', quota:'0,02%≈', iic:'0,02≈', iaa_xifra:'~28.000–42.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2016, titol:'Que Dios nos perdone', director:'Rodrigo Sorogoyen', festival:'Sant Sebastià', premiat:true, esp:223302, top100:null, mercat:'96M≈', penetr:'0,48%≈', quota:'0,23%≈', iic:'0,23≈', iaa_xifra:'~447.000–670.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2018, titol:'El reino', director:'Rodrigo Sorogoyen', festival:'Sant Sebastià', premiat:false, esp:365264, top100:null, mercat:'98M≈', penetr:'0,78%≈', quota:'0,37%≈', iic:'0,37≈', iaa_xifra:'~0,73M–1,10M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2019, titol:'Madre', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:29585, top100:null, mercat:'105M≈', penetr:'0,06%≈', quota:'0,03%≈', iic:'0,03≈', iaa_xifra:'~60.000–90.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2022, titol:'As bestas', director:'Rodrigo Sorogoyen', festival:null, premiat:true, esp:1112098, top100:{pos:11,dec:'2020s'}, mercat:'71M', penetr:'2,35%', quota:'1,57%', iic:'1,31', iaa_xifra:'~2,78M–4,45M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+    { any:2010, titol:'Todos vós sodes capitáns', director:'Oliver Laxe', festival:'Cannes', premiat:false, esp:905, top100:null, mercat:'101M≈', penetr:'0,00%≈', quota:'0,00%≈', iic:'0,00', iaa_xifra:'~1.800–2.700', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2016, titol:'Mimosas', director:'Oliver Laxe', festival:'Cannes', premiat:false, esp:12097, top100:null, mercat:'96M≈', penetr:'0,03%≈', quota:'0,01%≈', iic:'0,01≈', iaa_xifra:'~24.000–36.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2019, titol:'O que arde', director:'Oliver Laxe', festival:'Cannes', premiat:false, esp:104633, top100:null, mercat:'105M≈', penetr:'0,22%≈', quota:'0,10%≈', iic:'0,10≈', iaa_xifra:'~210.000–315.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2025, titol:'Sirât', director:'Oliver Laxe', festival:'Cannes', premiat:true, esp:458542, top100:null, mercat:'65M≈', penetr:'0,97%≈', quota:'0,71%≈', iic:'0,57≈', iaa_xifra:'~1,15M–1,84M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+    { any:2017, titol:'Estiu 1993', director:'Carla Simón', festival:'Berlín', premiat:false, esp:198214, top100:null, mercat:'100M≈', penetr:'0,43%≈', quota:'0,20%≈', iic:'0,20≈', iaa_xifra:'~396.000–594.000', iaa_mult:'(×2,0–3,0)', iaa_est:true },
+    { any:2022, titol:'Alcarràs', director:'Carla Simón', festival:'Berlín', premiat:true, esp:403195, top100:null, mercat:'71M', penetr:'0,86%', quota:'0,57%', iic:'0,48', iaa_xifra:'~1,01M–1,61M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+    { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:281749, top100:null, mercat:'65M≈', penetr:'0,57%≈', quota:'0,33%≈', iic:'0,30≈', iaa_xifra:'~0,71M–1,13M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+    { any:2022, titol:'Cinco lobitos', director:'Alauda Ruiz de Azúa', festival:null, premiat:false, esp:154708, top100:null, mercat:'71M≈', penetr:'0,33%≈', quota:'0,22%≈', iic:'0,18≈', iaa_xifra:'~388.000–619.000', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:688335, top100:{pos:21,dec:'2020s'}, mercat:'65M', penetr:'1,45%', quota:'1,06%', iic:'0,85', iaa_xifra:'~1,72M–2,75M', iaa_mult:'(×2,5–4,0)', iaa_est:true },
+  ];
+
+  renderTaulaGen(FILMS_SAURA, 'taula-saura', 'Carlos Saura');
+  renderTaulaGen(FILMS_ALMODOVAR, 'taula-almodovar', 'Pedro Almodóvar');
+  renderTaulaGen(FILMS_ACTUAL, 'taula-actual', null);  // director per fila
+}
+
+function renderTaulaGen(films, contId, directorFix) {
+  const cont = document.getElementById(contId);
+  if (!cont) return;
+
+  const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
+
+  const files = films.map(f => {
+    const bg = COLORS_DEC_GLOBAL[getDecada(f.any)] || '#ffffff';
+    const premi = f.premiat ? '<span class="estrella">★</span>' : '';
+    const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
+    const dir = directorFix || f.director;
+    const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
+    const top = f.top100 ? `<span class="col-subtil">#${f.top100.pos}<br><span style="font-size:.85em">als ${f.top100.dec}</span></span>` : '<span class="col-subtil">—</span>';
+    return `<tr style="background:${bg};border-bottom:2px solid #fff">
+      <td>${titolCell}</td>
+      <td class="col-subtil">${dir}</td>
+      <td>${fest}</td>
+      <td class="col-center">${premi}</td>
+      <td class="col-center">${top}</td>
+      <td class="col-num">${fmt(f.esp)}</td>
+      <td class="col-num col-subtil">${gris(f.mercat)}</td>
+      <td class="col-num col-subtil">${gris(f.penetr)}</td>
+      <td class="col-num col-subtil">${gris(f.quota)}</td>
+      <td class="col-center col-subtil">${f.iic}</td>
+      <td class="col-num" style="line-height:1.3"><strong>${f.iaa_xifra}</strong><br><span style="font-weight:400;color:#6b6b6b;font-size:.9em">${f.iaa_mult}</span></td>
+    </tr>`;
+  }).join('');
+
+  cont.innerHTML = `
+    <table class="taula-festivals" style="font-size:0.82em">
+      <thead><tr>
+        <th style="width:22%">Títol</th>
+        <th class="col-subtil" style="width:13%">Director</th>
+        <th style="width:70px">Festival</th>
+        <th class="col-center" style="width:30px">★</th>
+        <th class="col-center" style="width:60px">Top 100</th>
+        <th class="col-num" style="width:90px">Espectadors</th>
+        <th class="col-num" style="width:60px">Mercat</th>
+        <th class="col-num" style="width:60px">Penetr.</th>
+        <th class="col-num" style="width:55px">Quota</th>
+        <th class="col-center" style="width:40px">IIC</th>
+        <th class="col-num" style="width:100px">IAA estimat</th>
+      </tr></thead>
+      <tbody>${files}</tbody>
+    </table>`;
+}
+
+// GRÀFIC 1: Saura vs Almodóvar — Trajectòria espectadors a sala
+window.PiP_graficSauraAlmodovar = function() {
+  const el = document.getElementById('grafic-saura-almodovar');
+  if (!el || typeof Chart === 'undefined' || !FILMS_SAURA) return;
+  if (window._chartSauraAlmod) window._chartSauraAlmod.destroy();
+
+  // Títol
+  const bloc = document.getElementById('grafic-sa-bloc');
+  if (bloc && !document.getElementById('sa-tit')) {
+    const tit = document.createElement('p');
+    tit.id = 'sa-tit';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.innerHTML = 'Saura i Almodóvar — Trajectòria d\'espectadors a sala per film (1966–2024)';
+    bloc.insertBefore(tit, bloc.firstChild);
+  }
+
+  const ctx = el.getContext('2d');
+
+  const dataSaura = FILMS_SAURA.map(f => ({
+    x: f.any, y: f.esp,
+    titol: f.titol, premiat: f.premiat,
+  }));
+  const dataAlm = FILMS_ALMODOVAR.map(f => ({
+    x: f.any, y: f.esp,
+    titol: f.titol, premiat: f.premiat,
+  }));
+
+  // Plugin per dibuixar etiquetes amb el nom del film
+  const pluginNoms = {
+    id: 'sa-noms',
+    afterDatasetsDraw(chart) {
+      const c = chart.ctx;
+      c.save();
+      c.font = 'italic 10px -apple-system, Arial, sans-serif';
+      c.textAlign = 'center';
+      chart.data.datasets.forEach((ds, di) => {
+        const meta = chart.getDatasetMeta(di);
+        c.fillStyle = ds.borderColor;
+        ds.data.forEach((pt, i) => {
+          const point = meta.data[i];
+          if (!point) return;
+          // alterna sobre/sota per evitar superposicions
+          const dy = i % 2 === 0 ? -10 : 18;
+          c.fillText(pt.titol, point.x, point.y + dy);
+        });
+      });
+      c.restore();
+    },
+  };
+
+  window._chartSauraAlmod = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [
+        {
+          label: 'Carlos Saura',
+          data: dataSaura,
+          borderColor: '#1E4080',
+          backgroundColor: '#1E4080',
+          borderWidth: 1.8,
+          tension: 0.15,
+          pointRadius: ctx => ctx.raw.premiat ? 7 : 5,
+          pointStyle: ctx => ctx.raw.premiat ? 'rectRot' : 'circle',
+          pointBorderWidth: 1,
+          pointBorderColor: '#fff',
+        },
+        {
+          label: 'Pedro Almodóvar',
+          data: dataAlm,
+          borderColor: '#9B2335',
+          backgroundColor: '#9B2335',
+          borderWidth: 1.8,
+          tension: 0.15,
+          pointRadius: ctx => ctx.raw.premiat ? 7 : 5,
+          pointStyle: ctx => ctx.raw.premiat ? 'rectRot' : 'circle',
+          pointBorderWidth: 1,
+          pointBorderColor: '#fff',
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
+            label: ctx => fmt(ctx.parsed.y) + ' espectadors' + (ctx.raw.premiat ? ' · ★ premiat' : ''),
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          min: 1965, max: 2026,
+          ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
+          grid: { color: '#eee' },
+        },
+        y: {
+          min: 0, max: 3700000,
+          ticks: {
+            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
+            color: '#363737', font: { size: 11 },
+          },
+          grid: { color: '#eee' },
+          title: { display: true, text: 'Espectadors a sala', font: { size: 12 } },
+        },
+      },
+    },
+    plugins: [pluginNoms],
+  });
+
+  // Llegenda HTML centrada
+  if (bloc && !document.getElementById('sa-leg')) {
+    const leg = document.createElement('div');
+    leg.id = 'sa-leg';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.innerHTML = `
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;background:#666;display:inline-block;border-radius:50%"></span><span>Festival (sense premi)</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:11px;height:11px;background:#666;display:inline-block;transform:rotate(45deg)"></span><span>Festival + premi</span></span>`;
+    bloc.appendChild(leg);
+  }
+};
+
+// GRÀFIC 2: Generació actual — Barres horitzontals
+window.PiP_graficGeneracioActual = function() {
+  const el = document.getElementById('grafic-generacio-actual');
+  if (!el || typeof Chart === 'undefined' || !FILMS_ACTUAL) return;
+  if (window._chartGenActual) window._chartGenActual.destroy();
+
+  // Títol
+  const bloc = document.getElementById('grafic-ga-bloc');
+  if (bloc && !document.getElementById('ga-tit')) {
+    const tit = document.createElement('p');
+    tit.id = 'ga-tit';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.innerHTML = 'Generació actual — Espectadors a sala (barra plena) vs. IAA estimat (barra clara)';
+    bloc.insertBefore(tit, bloc.firstChild);
+  }
+
+  const COLORS_DIR = {
+    'Rodrigo Sorogoyen':    { fort: '#1E4080', fluix: '#a8b8d4' },
+    'Oliver Laxe':          { fort: '#2E7D5E', fluix: '#a8c8b8' },
+    'Carla Simón':          { fort: '#7D3C98', fluix: '#cdb4d8' },
+    'Alauda Ruiz de Azúa':  { fort: '#3B85A8', fluix: '#abc8d8' },
+  };
+
+  // Parsejar rang IAA → mig
+  function rangMig(xifra) {
+    // xifra: '~1,01M–1,61M' o '~28.000–42.000'
+    const cleaned = xifra.replace(/[~\s]/g, '');
+    const parts = cleaned.split('–');
+    function aNum(s) {
+      if (s.includes('M')) return parseFloat(s.replace(',', '.').replace('M','')) * 1000000;
+      return parseInt(s.replace(/\./g, ''), 10);
+    }
+    if (parts.length === 2) {
+      return (aNum(parts[0]) + aNum(parts[1])) / 2;
+    }
+    return aNum(parts[0]);
+  }
+
+  function rangText(f) {
+    return f.iaa_xifra + ' ' + f.iaa_mult;
+  }
+
+  // Ordenat per director (Sorogoyen, Laxe, Simón, Ruiz de Azúa) i any
+  const orden = [...FILMS_ACTUAL];
+
+  const labels = orden.map(f => `${f.titol} — ${f.director.split(' ').slice(-1)[0]} (${f.any})`);
+  const sala = orden.map(f => f.esp);
+  const iaaAdd = orden.map(f => Math.max(0, rangMig(f.iaa_xifra) - f.esp));
+  const colorsFort = orden.map(f => COLORS_DIR[f.director].fort);
+  const colorsFluix = orden.map(f => COLORS_DIR[f.director].fluix);
+
+  const ctx = el.getContext('2d');
+  window._chartGenActual = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Espectadors a sala', data: sala, backgroundColor: colorsFort, borderWidth: 0 },
+        { label: 'IAA estimat (valor mig)', data: iaaAdd, backgroundColor: colorsFluix, borderWidth: 0 },
+      ],
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      layout: { padding: { right: 40 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title: items => orden[items[0].dataIndex].titol + ' (' + orden[items[0].dataIndex].any + ')',
+            label: ctx => {
+              const f = orden[ctx.dataIndex];
+              if (ctx.datasetIndex === 0) return 'Sala: ' + fmt(f.esp) + ' esp.';
+              return 'IAA estimat: ' + rangText(f);
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: {
+            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
+            color: '#363737', font: { size: 11 },
+          },
+          grid: { color: '#eee' },
+          title: { display: true, text: 'Espectadors (sala + IAA estimat)', font: { size: 12 } },
+        },
+        y: {
+          stacked: true,
+          ticks: { color: '#363737', font: { size: 10 } },
+          grid: { display: false },
+        },
+      },
+    },
+  });
+
+  // Llegenda HTML per director
+  if (bloc && !document.getElementById('ga-leg')) {
+    const leg = document.createElement('div');
+    leg.id = 'ga-leg';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.innerHTML = `
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sorogoyen</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#2E7D5E;display:inline-block;border-radius:2px"></span>Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#7D3C98;display:inline-block;border-radius:2px"></span>Simón</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#3B85A8;display:inline-block;border-radius:2px"></span>Ruiz de Azúa</span>`;
+    bloc.appendChild(leg);
+  }
+};
+
 function construirLleis() {
   const cont = document.getElementById('grafic-lleis');
   if (!cont) return;
