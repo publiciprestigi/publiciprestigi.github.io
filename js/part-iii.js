@@ -364,8 +364,14 @@ function construirCazaAlcarras() {
     },
   ];
 
+  const COLORS_DEC = {
+    '60s':   '#f4f7fa', '70s':   '#edf2f7', '80s':   '#e4ecf4',
+    '90s':   '#dae6f0', '2000s': '#cfe0ec', '2010s': '#c3d9e8',
+    '2020s': '#b6d2e4',
+  };
+
   const files = films.map((f, i) => {
-    const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
+    const bg = COLORS_DEC[getDecada(f.any)] || '#ffffff';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
