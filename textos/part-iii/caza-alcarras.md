@@ -1,4 +1,10 @@
 <!-- intro -->
+Dos films espanyols premiats a Berlín, separats per 56 anys. *La caza* arriba en ple franquisme: tercer llargmetratge de Carlos Saura, amb 34 anys, i Ós de Plata a millor direcció el 1966. És el primer gran premi de direcció per a un director espanyol en un dels festivals europeus de referència amb una producció espanyola, amb l’excepció prèvia, parcialment comparable, de Buñuel a Cannes per *Los olvidados* (1951), de producció mexicana.
+
+*Alcarràs*, en canvi, neix en un moment cultural i industrial molt diferent: segon llargmetratge de Carla Simón, amb 36 anys, i Ós d’Or el 2022. El premi marca una doble fita: la directora es converteix en la primera cineasta espanyola que guanya el màxim guardó d’un dels grans festivals internacionals, i el film, en el primer en llengua catalana a aconseguir-ho.
+
+La comparació no pretén equiparar les dues pel·lícules, sinó mirar què canvia i què persisteix: dues generacions, dos contextos històrics, dues llengües i una mateixa via de legitimació internacional per al cinema d’autor.
+
 ## Dades i mètriques comparatives
 <!-- /intro -->
 
@@ -6,7 +12,6 @@
 - La taula resumeix l’equívoc central: dues xifres de sala pròximes poden tenir un pes molt diferent segons l’època. *La caza* competeix dins un mercat d’uns 370M d’entrades; *Alcarràs*, dins un mercat de 71M. La diferència es veu en les mètriques: La caza té una quota del 0,09% i un IIC de 0,21; Alcarràs puja fins al 0,57% de quota i un IIC de 0,47.
 
 - Els números absoluts de sala semblen gairebé iguals: 341.377 espectadors per a *La caza*, 403.195 per a *Alcarràs*. Com si 56 anys després el públic receptor d’un film d’autor premiat a Berlín fos pràcticament el mateix. Però darrere d’aquesta simetria aparent hi ha models de distribució radicalment diferents: l’impacte d’*Alcarràs* és superior al que la sala revela, com ja apunta l’IIC i com veurem amb l’IAA.
-
 <!-- /comentari-taula -->
 
 <!-- bloc-iaa -->
