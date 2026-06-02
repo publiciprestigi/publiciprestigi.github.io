@@ -1,5 +1,6 @@
 <!-- intro -->
-El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que van modelar la seva producció, els canvis tecnològics que van transformar la seva distribució i les decisions polítiques que van determinar qui podia fer que i amb quins diners. El gràfic següent integra en una sola vista les finestres de distribució de cada període, els factors multiplicadors de l'IAA i els moments legislatius i tecnològics clau que expliquen (també) per què les dades de l'estudi diuen el que diuen.
+El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que van modelar la seva producció, els canvis tecnològics que van transformar la seva distribució i les decisions polítiques que van determinar qui podia fer que i amb quins diners. El gràfic següent integra en una sola vista les finestres de distribució de cada període, i els moments legislatius i tecnològics clau que expliquen (també) per què les dades de l'estudi diuen el que diuen.
+
 <!-- /intro -->
 
 <!-- moments -->
