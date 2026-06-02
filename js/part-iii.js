@@ -669,19 +669,19 @@ function renderTaulaGen(films, contId, directorFix) {
   }).join('');
 
   cont.innerHTML = `
-    <table class="taula-festivals" style="font-size:0.82em;table-layout:fixed;width:100%">
+    <table class="taula-festivals" style="font-size:0.82em">
       <thead><tr>
         <th style="width:28%">Títol</th>
-        <th class="col-subtil" style="width:12%">Director</th>
-        <th style="width:8%">Festival</th>
-        <th class="col-center" style="width:3%">★</th>
-        <th class="col-center" style="width:9%">Top 100</th>
-        <th class="col-num" style="width:9%">Espectadors</th>
-        <th class="col-num" style="width:7%">Mercat</th>
-        <th class="col-num" style="width:6%">Penetr.</th>
-        <th class="col-num" style="width:6%">Quota</th>
-        <th class="col-center" style="width:4%">IIC</th>
-        <th class="col-num" style="width:8%">IAA estimat</th>
+        <th class="col-subtil" style="width:13%">Director</th>
+        <th style="width:70px">Festival</th>
+        <th class="col-center" style="width:30px">★</th>
+        <th class="col-center" style="width:55px">Top 100</th>
+        <th class="col-num" style="width:105px">Espectadors</th>
+        <th class="col-num" style="width:65px">Mercat</th>
+        <th class="col-num" style="width:65px">Penetr.</th>
+        <th class="col-num" style="width:55px">Quota</th>
+        <th class="col-center" style="width:40px">IIC</th>
+        <th class="col-num" style="width:95px">IAA estimat</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
