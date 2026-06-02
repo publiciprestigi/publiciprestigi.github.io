@@ -652,7 +652,7 @@ function renderTaulaGen(films, contId, directorFix) {
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const dir = directorFix || f.director;
     const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
-    const top = f.top100 ? `<span class="col-subtil">#${f.top100.pos}<br><span style="font-size:.85em">als ${f.top100.dec}</span></span>` : '<span class="col-subtil">—</span>';
+    const top = f.top100 ? `<span class="col-subtil" style="font-size:.85em">${f.top100.pos}è · ${f.top100.dec}</span>` : '<span class="col-subtil">—</span>';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
@@ -669,19 +669,19 @@ function renderTaulaGen(films, contId, directorFix) {
   }).join('');
 
   cont.innerHTML = `
-    <table class="taula-festivals" style="font-size:0.82em">
+    <table class="taula-festivals" style="font-size:0.82em;table-layout:fixed;width:100%">
       <thead><tr>
-        <th style="width:22%">Títol</th>
-        <th class="col-subtil" style="width:13%">Director</th>
-        <th style="width:70px">Festival</th>
-        <th class="col-center" style="width:30px">★</th>
-        <th class="col-center" style="width:60px">Top 100</th>
-        <th class="col-num" style="width:90px">Espectadors</th>
-        <th class="col-num" style="width:60px">Mercat</th>
-        <th class="col-num" style="width:60px">Penetr.</th>
-        <th class="col-num" style="width:55px">Quota</th>
-        <th class="col-center" style="width:40px">IIC</th>
-        <th class="col-num" style="width:100px">IAA estimat</th>
+        <th style="width:28%">Títol</th>
+        <th class="col-subtil" style="width:12%">Director</th>
+        <th style="width:8%">Festival</th>
+        <th class="col-center" style="width:3%">★</th>
+        <th class="col-center" style="width:9%">Top 100</th>
+        <th class="col-num" style="width:9%">Espectadors</th>
+        <th class="col-num" style="width:7%">Mercat</th>
+        <th class="col-num" style="width:6%">Penetr.</th>
+        <th class="col-num" style="width:6%">Quota</th>
+        <th class="col-center" style="width:4%">IIC</th>
+        <th class="col-num" style="width:8%">IAA estimat</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
