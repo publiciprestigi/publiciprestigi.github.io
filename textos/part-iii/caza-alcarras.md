@@ -36,7 +36,7 @@ El factor multiplicador varia segons el període. Un film dels anys 60 depenia e
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
-- El factor no creix de manera lineal amb el nombre de finestres. Entre 1984 i 2005 apareixen noves vies de distribució, però l’audiència també es fragmenta: TVE perd pes, entren les televisions privades, les autonòmiques i el vídeo domèstic, i cada finestra concentra menys públic que abans. Més finestres, però menys audiència per finestra. Amb les plataformes digitals, la tendència torna a canviar.
+- El punt important de la taula és que el factor IAA no creix mecànicament amb el nombre de finestres. No és simplement “més finestres = més audiència”. El factor depèn de la capacitat real de cada finestra per afegir públic. Entre 1984 i 1989, TVE i el VHS encara podien concentrar audiències molt altes, d’aquí el multiplicador elevat. Als 90s i primers 2000s, en canvi, el nombre de finestres augmenta, però l’audiència es fragmenta entre televisions privades, autonòmiques, pagament i DVD. A partir de 2005, i sobretot als 2020s, les plataformes digitals tornen a ampliar molt l’accés, però també fan créixer el marge d’incertesa.
 
 També cal marcar una diferència de fons. Les entrades de sala mesuren una experiència col·lectiva: gent reunida en un mateix espai i en un mateix moment. L’IAA mesura una altra cosa: quantes persones han vist el film en total, sumant totes les vies disponibles durant els primers anys comercials. Les dues preguntes no són intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de cinema.
 
