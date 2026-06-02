@@ -116,12 +116,12 @@
         <div class="text-md text-md-intro" data-text="part-iii/dues-generacions" data-bloc="intro"></div>
 
         <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-saura"></div>
-        <div id="taula-saura" style="overflow-x:auto"></div>
-        <div class="text-md text-md-comentari" data-text="part-iii/dues-generacions" data-bloc="comentari-saura"></div>
+        <div id="taula-saura"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-saura"></div>
 
         <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-almodovar"></div>
-        <div id="taula-almodovar" style="overflow-x:auto"></div>
-        <div class="text-md text-md-comentari" data-text="part-iii/dues-generacions" data-bloc="comentari-almodovar"></div>
+        <div id="taula-almodovar"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-almodovar"></div>
 
         <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="text-grafic1"></div>
         <div id="grafic-sa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0">
@@ -133,8 +133,8 @@
         </div>
 
         <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-actual"></div>
-        <div id="taula-actual" style="overflow-x:auto"></div>
-        <div class="text-md text-md-comentari" data-text="part-iii/dues-generacions" data-bloc="comentari-actual"></div>
+        <div id="taula-actual"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-actual"></div>
 
         <div id="grafic-ga-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0">
           <div class="grafic-wrap" style="height:480px;position:relative;border-bottom:none">
@@ -194,6 +194,8 @@
     let actual = 0;
     let graficBretxaInit = false;
     let graficCazaInit = false;
+    let graficSAInit = false;
+    let graficGAInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -224,6 +226,10 @@
       if (s.id === 'la-caza' && !graficCazaInit && window.PiP_graficCazaIAA) {
         graficCazaInit = true;
         setTimeout(window.PiP_graficCazaIAA, 50);
+      }
+      if (s.id === 'generacions' && window.PiP_graficSauraAlmodovar && window.PiP_graficGeneracioActual) {
+        if (!graficSAInit) { graficSAInit = true; setTimeout(window.PiP_graficSauraAlmodovar, 50); }
+        if (!graficGAInit) { graficGAInit = true; setTimeout(window.PiP_graficGeneracioActual, 100); }
       }
     }
 
