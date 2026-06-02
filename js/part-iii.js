@@ -392,7 +392,7 @@ function construirCazaAlcarras() {
   }).join('');
 
   cont.innerHTML = `
-    <table class="taula-festivals" style="font-size:0.82em">
+    <table class="taula-festivals" style="font-size:0.82em;width:100%">
       <thead><tr>${TAULA_PELI_HEADER}</tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -671,7 +671,7 @@ function renderTaulaGen(films, contId, directorFix) {
   }).join('');
 
   cont.innerHTML = `
-    <table class="taula-festivals" style="font-size:0.82em">
+    <table class="taula-festivals" style="font-size:0.82em;width:100%">
       <thead><tr>${TAULA_PELI_HEADER}</tr></thead>
       <tbody>${files}</tbody>
     </table>`;
