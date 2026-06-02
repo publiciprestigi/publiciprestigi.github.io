@@ -567,6 +567,13 @@ const COLORS_DEC_GLOBAL = {
   '2020s': '#b6d2e4',
 };
 
+const COLORS_DIRECTOR = {
+  'Rodrigo Sorogoyen':    { fort: '#8c4a3a', fluix: '#e8cfc6' }, // terracota
+  'Oliver Laxe':          { fort: '#6a7530', fluix: '#dde0c0' }, // olivàcia
+  'Carla Simón':          { fort: '#a07020', fluix: '#ebd8b0' }, // or fosc
+  'Alauda Ruiz de Azúa':  { fort: '#1a6878', fluix: '#bfdce0' }, // turquesa
+};
+
 const TAULA_PELI_HEADER = `
   <th style="width:30%">Títol</th>
   <th class="col-subtil" style="width:12%">Director</th>
@@ -649,17 +656,17 @@ function renderTaulaGen(films, contId, directorFix) {
   const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
 
   const files = films.map((f, i) => {
-    const bg = COLORS_DEC_GLOBAL[getDecada(f.any)] || '#ffffff';
+    // Color de fons: si és la taula d'actuals (sense directorFix), color del director;
+    // si no, color de la dècada
+    const bg = !directorFix && COLORS_DIRECTOR[f.director]
+      ? COLORS_DIRECTOR[f.director].fluix
+      : COLORS_DEC_GLOBAL[getDecada(f.any)] || '#ffffff';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const dir = directorFix || f.director;
     const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
     const top = f.top100 ? `<span class="col-subtil" style="font-size:.85em">${f.top100.pos}a als ${f.top100.dec}</span>` : '<span class="col-subtil">—</span>';
-    // Si la fila següent és d'un altre director, doble el border-bottom blanc
-    const nextF = films[i+1];
-    const canviDirector = !directorFix && nextF && nextF.director !== f.director;
-    const bb = canviDirector ? '5px solid #fff' : '2px solid #fff';
-    return `<tr style="background:${bg};border-bottom:${bb}">
+    return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
       <td>${fest}</td>
@@ -836,10 +843,10 @@ window.PiP_graficGeneracioActual = function() {
   }
 
   const COLORS_DIR = {
-    'Rodrigo Sorogoyen':    { fort: '#1E4080', fluix: '#a8b8d4' },
-    'Oliver Laxe':          { fort: '#2E7D5E', fluix: '#a8c8b8' },
-    'Carla Simón':          { fort: '#7D3C98', fluix: '#cdb4d8' },
-    'Alauda Ruiz de Azúa':  { fort: '#3B85A8', fluix: '#abc8d8' },
+    'Rodrigo Sorogoyen':    { fort: COLORS_DIRECTOR['Rodrigo Sorogoyen'].fort,    fluix: COLORS_DIRECTOR['Rodrigo Sorogoyen'].fluix },
+    'Oliver Laxe':          { fort: COLORS_DIRECTOR['Oliver Laxe'].fort,          fluix: COLORS_DIRECTOR['Oliver Laxe'].fluix },
+    'Carla Simón':          { fort: COLORS_DIRECTOR['Carla Simón'].fort,          fluix: COLORS_DIRECTOR['Carla Simón'].fluix },
+    'Alauda Ruiz de Azúa':  { fort: COLORS_DIRECTOR['Alauda Ruiz de Azúa'].fort,  fluix: COLORS_DIRECTOR['Alauda Ruiz de Azúa'].fluix },
   };
 
   // Parsejar rang IAA → mig
@@ -924,10 +931,10 @@ window.PiP_graficGeneracioActual = function() {
     leg.id = 'ga-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#2E7D5E;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#7D3C98;display:inline-block;border-radius:2px"></span>Carla Simón</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#3B85A8;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#8c4a3a;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#6a7530;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a07020;display:inline-block;border-radius:2px"></span>Carla Simón</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1a6878;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
   }
 };
