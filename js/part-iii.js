@@ -374,30 +374,30 @@ function construirCazaAlcarras() {
       <td class="col-subtil">${f.director}</td>
       <td>${nomFest(f.festival)}</td>
       <td class="col-center">${premi}</td>
-      <td class="col-num">${fmt(f.espectadors)}</td>
       <td class="col-center col-subtil">—</td>
+      <td class="col-num">${fmt(f.espectadors)}</td>
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
       <td class="col-num col-subtil">${gris(f.penetr)}</td>
       <td class="col-num col-subtil">${gris(f.quota)}</td>
       <td class="col-center col-subtil">${f.iic}</td>
-      <td class="col-num"><strong>${f.iaa_xifra}</strong> <span style="font-weight:400;color:#6b6b6b">${f.iaa_mult}</span></td>
+      <td class="col-num"><strong>${f.iaa_xifra}</strong><br><span style="font-weight:400;color:#6b6b6b;font-size:0.9em">${f.iaa_mult}</span></td>
     </tr>`;
   }).join('');
 
   cont.innerHTML = `
     <table class="taula-festivals" style="font-size:0.82em">
       <thead><tr>
-        <th style="width:18%">Títol</th>
+        <th style="width:22%">Títol</th>
         <th class="col-subtil" style="width:12%">Director</th>
         <th style="width:70px">Festival</th>
         <th class="col-center" style="width:30px">★</th>
-        <th class="col-num" style="width:110px">Espectadors</th>
         <th class="col-center" style="width:55px">Top 100</th>
+        <th class="col-num" style="width:110px">Espectadors</th>
         <th class="col-num" style="width:65px">Mercat</th>
         <th class="col-num" style="width:65px">Penetr.</th>
         <th class="col-num" style="width:55px">Quota</th>
         <th class="col-center" style="width:40px">IIC</th>
-        <th class="col-num" style="width:150px">IAA estimat</th>
+        <th class="col-num" style="width:100px">IAA estimat</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
