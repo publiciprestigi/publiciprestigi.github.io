@@ -192,8 +192,12 @@ th.col-iic-header {
 
 /* Comentari que segueix un gràfic Part I: sense border-top */
 #seccio-mercat .text-md-comentari,
-#seccio-decades .text-md-comentari {
+#seccio-decades .text-md-comentari,
+#seccio-la-caza .text-md-comentari {
   border-top: none;
+  padding-top: 0;
+  margin-top: 16px;
+}
   padding-top: 0;
   margin-top: 24px;
 }
