@@ -5,7 +5,7 @@ El cas de *La caza* i *Alcarràs* no és un exemple puntual sinó un patró estr
 <!-- bloc-saura -->
 ## Carlos Saura (1966–1996): el prestigi com a força de resistència
 
-Saura és el director més present als grans festivals de tot el corpus: 16 seleccionades, 8 premis, presència a Cannes (7 vegades), Berlín (4), Venècia (3) i Sant Sebastià (2). I, amb tot, cap film al Top 100. La seva carrera és la il·lustració més clara de la bretxa entre prestigi i mercat en el cinema espanyol del segle XX.
+Saura és el director més present als grans festivals de tot el corpus: 16 seleccionades, 8 premis, presència a Cannes (7 vegades), Berlín (4), Venècia (3) i Sant Sebastià (2). I, amb tot, cap film al Top 100. La seva carrera és la il·lustració més clara de la bretxa entre públic i prestigi.
 
 Però les dades i el gràfic que segueix matisa aquesta lectura. Saura no era un director invisible al públic: *La prima Angélica* (1974, 1,41M), *Cría cuervos* (1976, 1,29M), *Mamá cumple cien años* (1979, 1,12M), *Deprisa deprisa* (1981, 1,05M) i *Ay, Carmela* (1990, 907k) són xifres molt notables, especialment quan s'aplica la penetració demogràfica. El que no va tenir mai és consistència comercial: els pics alterns amb caigudes brusques: *La noche oscura* (1989) fa només 36.000 espectadors. Als anys 80, el mercat en col·lapse i l'evolució cap a projectes de dansa i música més arriscats per al gran públic (*Carmen*, *El amor brujo*) van estrènyer progressivament el seu impacte.
 <!-- /bloc-saura -->
