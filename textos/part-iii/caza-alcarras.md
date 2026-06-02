@@ -38,18 +38,20 @@ El factor multiplicador varia segons el període. Un film dels anys 60 depenia e
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
-- El factor no creix de manera lineal amb el nombre de finestres: entre 1984 i 2005, les noves vies de distribució fragmenten l’audiència, especialment amb l’aparició de les televisions privades i la pèrdua de pes de TVE1. Més finestres, però menys audiència per finestra. Amb les plataformes digitals, la tendència torna a canviar.
+- El factor no creix de manera lineal amb el nombre de finestres. Entre 1984 i 2005 apareixen noves vies de distribució, però l’audiència també es fragmenta: TVE perd pes, entren les televisions privades, les autonòmiques i el vídeo domèstic, i cada finestra concentra menys públic que abans. Més finestres, però menys audiència per finestra. Amb les plataformes digitals, la tendència torna a canviar.
 
-- La tensió metodològica és evident. Les entrades de sala mesuren una experiència que les altres finestres no repliquen: una audiència reunida en un mateix espai i en un mateix moment. L’IAA mesura una altra cosa: quantes persones han vist el film, sumant totes les vies disponibles durant els seus primers anys comercials. Les dues preguntes són diferents: *quantes persones el van veure en sales?*, i *quantes persones el van acabar veient en total?* Per això no són mètriques intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de cinema.
+També cal marcar una diferència de fons. Les entrades de sala mesuren una experiència col·lectiva: gent reunida en un mateix espai i en un mateix moment. L’IAA mesura una altra cosa: quantes persones han vist el film en total, sumant totes les vies disponibles durant els primers anys comercials. Les dues preguntes no són intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de cinema.
 
 <!-- /comentari-iaa -->
 
 <!-- bloc-distribucio -->
 ## De la sala única a l'ecosistema multifinestra
 
-La diferència entre els dos films no és de qualitat ni d'impacte: és de model de negoci. El 1966, la sala era l'única pantalla. El 2022, és la primera d'un mínim de sis finestres, i la televisió hi és des del primer dia com a coproductora, no com a exhibidora posterior.
+La diferència entre La caza i Alcarràs no és només una diferència d’època: és una diferència de sistema. El 1966, la sala era tota l’explotació comercial real. El 2022, la sala és només la primera finestra d’un recorregut que ja neix amb televisions, plataformes i drets successius incorporats des de l’origen.
 
-Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, fora de qualsevol finestra comercial planificada. L'IAA és, per tant, la xifra de sala: 341.377 espectadors (×1,0). Per a *Alcarràs*, TVE, TV3/3Cat i Movistar+ han finançat el projecte i emeten el film en finestres temporals integrades en l'estratègia comercial des de l'origen. El quadre següent il·lustra que la lògica de *La caza* no era una excepció del franquisme, el cinema popular de Pedro Lazaga va tenir exactament el mateix tractament televisiu.
+Per a La caza, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol finestra comercial planificada. Per això el seu IAA coincideix amb la xifra de sala: 341.377 espectadors. En canvi, Alcarràs neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores o finestres integrades en l’estratègia d’explotació.
+
+El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, entra a la televisió dins un calendari previst i contractualitzat.
 
 | Títol | Estrena a sales | Estrena a TV | Diferència | Canal i franja | IAA |
 | --- | --- | --- | --- | --- | --- |
@@ -60,17 +62,18 @@ Per a *La caza*, l'estrena televisiva va arribar al cap de gairebé 13 anys, for
 <!-- /bloc-distribucio -->
 
 <!-- comentari-distribucio -->
-- Els tres films anteriors a *Alcarràs* comparteixen una mateixa lògica: TVE comprava drets sense cap relació amb l'estratègia comercial original, i cap dels passis computa pel càlcul de l'IAA. *Alcarràs* trenca aquesta lògica: els 19 mesos fins al primer passi a TV3 i els 25 fins a La 2 formen part del calendari acordat contractualment entre coproductors. La televisió no arriba al film, el film ja porta la televisió incorporada des de l'origen.
 <!-- /comentari-distribucio -->
 
 <!-- final-distribucio -->
-Aquesta transformació explica per què el *timing* global de la distribució no ha canviat tant com sembla. Als anys 60–70, un film necessitava 2–3 anys per exhaurir el seu circuit comercial complet: la mateixa còpia de cel·luloide viatjava de Madrid a Bilbao, de Bilbao a Lleida, de Lleida al cinema de poble, i finalment al circuit de reestrenes. El temps era inherent al suport físic. El 2022, el mateix film necessita 2–3 anys per desbloquejar-se seqüencialment en cada finestra contractual: sala, plataforma de pagament, televisió en obert. El temps és inherent al contracte.
+La transformació no és només tecnològica, sinó de lògica comercial. Als anys 60 i 70, un film podia trigar 2–3 anys a completar el seu recorregut perquè les còpies físiques circulaven pel territori: grans ciutats, capitals de província, cinemes de poble, reestrenes. El temps era geogràfic. Avui, el recorregut també pot durar 2–3 anys, però per una altra raó: cada finestra s’obre quan toca segons els contractes. El temps ja no depèn tant del territori com dels drets.
 
-La distribució en cascada dels anys 60–70 era una cascada geogràfica. La d'ara és una cascada de drets. El temps total és comparable, però el que s'expandeix ha canviat completament: abans era el territori, ara és l'accés. El gràfic següent ho quantifica:
+La distribució en cascada dels anys 60 i 70 era una cascada geogràfica. La d’ara és una cascada de drets. El calendari pot semblar comparable, però el que s’expandeix ha canviat completament: abans era el territori, ara és l’accés. El gràfic següent ho quantifica:
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
-- *Alcarràs* suma a les 403.195 entrades de sala una audiència televisiva estimada de 430k–630k espectadors: 280k–380k via TV3/3Cat (desembre 2023) i 150k–250k via La 2/TVE (maig 2024). A això s'hi afegeix un volum addicional de Movistar+ — coproductora i primera finestra de pagament — i de les plataformes digitals on *Alcarràs* és disponible (Prime Video, Filmin, MUBI, entre d'altres), que estimem entre 230k i 525k espectadors addicionals, però que no podem verificar amb dades públiques. (17)
+- Aplicat a *Alcarràs*, el canvi és clar. A les 403.195 entrades de sala s’hi pot sumar una audiència televisiva estimada de 430k–630k espectadors: 280k–380k a TV3/3Cat i 150k–250k a La 2/TVE. A més, hi ha una capa addicional de Movistar+ i de plataformes digitals com Prime Video, Filmin o MUBI, que estimem entre 230k i 525k espectadors més, però que no es pot verificar amb dades públiques. L’IAA resultant situa l’audiència acumulada d’Alcarràs entre 1,06M i 1,56M d’espectadors.
 
-- Cap plataforma publica dades individuals de visualització per títol, i cap organisme regulador espanyol — ni l'ICAA ni la SGAE — recull ni publica aquesta informació de manera desagregada. La capa digital de l'ecosistema de distribució actual és, per disseny, invisible als analistes externs. El que no es pot mesurar no deixa d'existir: confirma que l'impacte real d'*Alcarràs* és superior al que les dades públiques permeten documentar.
+- Aquesta és la part més opaca del sistema actual. Les plataformes no publiquen dades individuals de visualització per títol, i ni l’ICAA ni la SGAE recullen aquesta informació de manera desagregada. La capa digital existeix, però queda fora de la mesura pública. Per això l’impacte real d’*Alcarràs* és necessàriament superior al que mostren les entrades de sala, encara que només el puguem estimar.
+
+
 <!-- /comentari-final -->
