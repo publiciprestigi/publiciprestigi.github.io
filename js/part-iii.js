@@ -393,19 +393,7 @@ function construirCazaAlcarras() {
 
   cont.innerHTML = `
     <table class="taula-festivals" style="font-size:0.82em">
-      <thead><tr>
-        <th style="width:22%">Títol</th>
-        <th class="col-subtil" style="width:12%">Director</th>
-        <th style="width:70px">Festival</th>
-        <th class="col-center" style="width:30px">★</th>
-        <th class="col-center" style="width:55px">Top 100</th>
-        <th class="col-num" style="width:110px">Espectadors</th>
-        <th class="col-num" style="width:65px">Mercat</th>
-        <th class="col-num" style="width:65px">Penetr.</th>
-        <th class="col-num" style="width:55px">Quota</th>
-        <th class="col-center" style="width:40px">IIC</th>
-        <th class="col-num" style="width:100px">IAA estimat</th>
-      </tr></thead>
+      <thead><tr>${TAULA_PELI_HEADER}</tr></thead>
       <tbody>${files}</tbody>
     </table>`;
 }
@@ -579,6 +567,20 @@ const COLORS_DEC_GLOBAL = {
   '2020s': '#b6d2e4',
 };
 
+const TAULA_PELI_HEADER = `
+  <th style="width:30%">Títol</th>
+  <th class="col-subtil" style="width:12%">Director</th>
+  <th style="width:70px">Festival</th>
+  <th class="col-center" style="width:30px">★</th>
+  <th class="col-center" style="width:60px">Top 100</th>
+  <th class="col-num" style="width:100px">Espectadors</th>
+  <th class="col-num" style="width:65px">Mercat</th>
+  <th class="col-num" style="width:65px">Penetr.</th>
+  <th class="col-num" style="width:55px">Quota</th>
+  <th class="col-center" style="width:40px">IIC</th>
+  <th class="col-num" style="width:95px">IAA estimat</th>
+`;
+
 function construirDuesGeneracions() {
   FILMS_SAURA = [
     { any:1966, titol:'La caza', festival:'Berlín', premiat:true, esp:341377, top100:null, mercat:'370M≈', penetr:'1,06%≈', quota:'0,09%≈', iic:'0,21', iaa_xifra:'341.377', iaa_mult:'(×1,0)', iaa_est:false },
@@ -652,7 +654,7 @@ function renderTaulaGen(films, contId, directorFix) {
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const dir = directorFix || f.director;
     const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
-    const top = f.top100 ? `<span class="col-subtil" style="font-size:.85em">${f.top100.pos}è · ${f.top100.dec}</span>` : '<span class="col-subtil">—</span>';
+    const top = f.top100 ? `<span class="col-subtil" style="font-size:.85em">${f.top100.pos}a als ${f.top100.dec}</span>` : '<span class="col-subtil">—</span>';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
@@ -670,19 +672,7 @@ function renderTaulaGen(films, contId, directorFix) {
 
   cont.innerHTML = `
     <table class="taula-festivals" style="font-size:0.82em">
-      <thead><tr>
-        <th style="width:28%">Títol</th>
-        <th class="col-subtil" style="width:13%">Director</th>
-        <th style="width:70px">Festival</th>
-        <th class="col-center" style="width:30px">★</th>
-        <th class="col-center" style="width:55px">Top 100</th>
-        <th class="col-num" style="width:105px">Espectadors</th>
-        <th class="col-num" style="width:65px">Mercat</th>
-        <th class="col-num" style="width:65px">Penetr.</th>
-        <th class="col-num" style="width:55px">Quota</th>
-        <th class="col-center" style="width:40px">IIC</th>
-        <th class="col-num" style="width:95px">IAA estimat</th>
-      </tr></thead>
+      <thead><tr>${TAULA_PELI_HEADER}</tr></thead>
       <tbody>${files}</tbody>
     </table>`;
 }
