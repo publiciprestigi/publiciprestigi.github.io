@@ -648,14 +648,18 @@ function renderTaulaGen(films, contId, directorFix) {
 
   const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
 
-  const files = films.map(f => {
+  const files = films.map((f, i) => {
     const bg = COLORS_DEC_GLOBAL[getDecada(f.any)] || '#ffffff';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const dir = directorFix || f.director;
     const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
     const top = f.top100 ? `<span class="col-subtil" style="font-size:.85em">${f.top100.pos}a als ${f.top100.dec}</span>` : '<span class="col-subtil">—</span>';
-    return `<tr style="background:${bg};border-bottom:2px solid #fff">
+    // Si la fila següent és d'un altre director, doble el border-bottom blanc
+    const nextF = films[i+1];
+    const canviDirector = !directorFix && nextF && nextF.director !== f.director;
+    const bb = canviDirector ? '5px solid #fff' : '2px solid #fff';
+    return `<tr style="background:${bg};border-bottom:${bb}">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
       <td>${fest}</td>
@@ -803,6 +807,16 @@ window.PiP_graficSauraAlmodovar = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:11px;height:11px;background:#666;display:inline-block;transform:rotate(45deg)"></span><span>Festival + premi</span></span>`;
     bloc.appendChild(leg);
   }
+
+  // Degradat scroll: desapareix en arribar al final
+  const hint = document.getElementById('sa-scroll-hint');
+  const wrap = document.getElementById('sa-scroll-wrap');
+  if (hint && wrap) {
+    wrap.addEventListener('scroll', () => {
+      const atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 12;
+      hint.style.opacity = atEnd ? '0' : '1';
+    });
+  }
 };
 
 // GRÀFIC 2: Generació actual — Barres horitzontals
@@ -910,10 +924,10 @@ window.PiP_graficGeneracioActual = function() {
     leg.id = 'ga-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sorogoyen</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#2E7D5E;display:inline-block;border-radius:2px"></span>Laxe</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#7D3C98;display:inline-block;border-radius:2px"></span>Simón</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#3B85A8;display:inline-block;border-radius:2px"></span>Ruiz de Azúa</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#2E7D5E;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#7D3C98;display:inline-block;border-radius:2px"></span>Carla Simón</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#3B85A8;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
   }
 };
