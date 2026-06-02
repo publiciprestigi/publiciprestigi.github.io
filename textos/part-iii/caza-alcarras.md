@@ -23,7 +23,7 @@ Per comparar èpoques tan diferents necessitem un índex que sumi totes les fine
 
 Les xifres de sala capturen només una finestra d’exhibició. L’IAA estima l’audiència total d’un film sumant les finestres disponibles en cada època durant els primers 2–3 anys d’explotació comercial. Com l’IIC, és una mètrica pròpia d’aquest estudi: no és una xifra oficial, sinó una estimació orientativa per comparar èpoques que no són directament comparables.
 
-El factor multiplicador varia segons el període. Un film dels anys 60 depenia exclusivament de la sala; avui, en canvi, una pel·lícula pot arribar al públic per moltes vies simultànies. La taula següent resumeix els factors aplicats a cada període:
+El factor multiplicador varia segons el període. Un film dels anys 60 depenia exclusivament de la sala; avui, en canvi, una pel·lícula pot arribar al públic per moltes vies simultànies. El quadre següent resumeix els factors aplicats a cada període:
 
 | Període | Nº finestres | Tipus de finestres | Factor IAA estimat |
 | --- | --- | --- | --- |
@@ -49,7 +49,7 @@ També cal marcar una diferència de fons. Les entrades de sala mesuren una expe
 
 En el cas de *La caza*, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol finestra comercial planificada. Per això el seu IAA coincideix amb la xifra de sala: 341.377 espectadors. *Alcarràs*, en canvi, neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores i futures finestres d'emissió.
 
-El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, entra a la televisió dins un calendari pactat des de l’inici.
+El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, s'estrena a la televisió s'estrena televisivament només 19 mesos després de fer-ho al cinema:
 
 | Títol | Estrena a sales | Estrena a TV | Diferència | Canal i franja | IAA |
 | --- | --- | --- | --- | --- | --- |
