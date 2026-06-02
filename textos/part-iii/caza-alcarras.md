@@ -65,7 +65,7 @@ El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, d
 <!-- final-distribucio -->
 La transformació és tecnològica i, per tant, de lògica comercial. Als anys 60 i 70, un film podia trigar 2–3 anys a completar el seu recorregut perquè les còpies físiques circulaven pel territori: grans ciutats, capitals de província, cinemes de poble, reestrenes. Avui, en temps digitals, el recorregut també pot durar 2–3 anys, però per una altra raó: cada finestra s’obre quan li toca dins el calendari d’explotació. Abans el temps depenia del territori, ara depèn dels drets.
 
-La distribució en cascada dels anys 60 i 70 era geogràfica, la d’ara és una cascada d’accés. El gràfic següent ho quantifica:
+La distribució en cascada dels anys 60 i 70 era geogràfica, la d’ara és una cascada d’accés, i pràcticament en el mateix lapse de temps. El gràfic següent ho quantifica:
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
