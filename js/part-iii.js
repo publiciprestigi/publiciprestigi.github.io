@@ -471,7 +471,7 @@ window.PiP_graficCazaIAA = function() {
   if (!document.getElementById('caza-iaa-leg')) {
     const leg = document.createElement('div');
     leg.id = 'caza-iaa-leg';
-    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;margin-bottom:24px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;margin-bottom:0;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
