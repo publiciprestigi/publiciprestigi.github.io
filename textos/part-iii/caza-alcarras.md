@@ -45,7 +45,7 @@ També cal marcar una diferència de fons. Les entrades de sala mesuren una expe
 <!-- bloc-distribucio -->
 ## De la sala única a l'ecosistema multifinestra
 
-*La caza* i *Alcarrà*s pertanyen a dos sistemes de distribució completament diferents. El 1966, la sala concentrava tota l’explotació comercial real. El 2022, la sala és només la primera finestra d’un recorregut que ja neix amb televisions, plataformes i drets successius incorporats des de l’origen.
+*La caza* i *Alcarrà*s pertanyen a dos sistemes de distribució completament diferents. El 1966, la sala de cinema concentrava tota l’explotació comercial real. El 2022, la sala és només la primera finestra d’un recorregut que ja neix amb televisions, plataformes i drets successius incorporats des de l’origen.
 
 En el cas de *La caza*, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol finestra comercial planificada. Per això el seu IAA coincideix amb la xifra de sala: 341.377 espectadors. *Alcarràs*, en canvi, neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores i futures finestres d'emissió.
 
@@ -63,9 +63,9 @@ El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, d
 <!-- /comentari-distribucio -->
 
 <!-- final-distribucio -->
-La transformació no és només tecnològica, sinó de lògica comercial. Als anys 60 i 70, un film podia trigar 2–3 anys a completar el seu recorregut perquè les còpies físiques circulaven pel territori: grans ciutats, capitals de província, cinemes de poble, reestrenes. Ara, en temps digitals, el recorregut també pot durar 2–3 anys, però per una altra raó: cada finestra s’obre quan li toca dins el calendari d’explotació. Abans el temps depenia del territori, ara depèn dels drets.
+La transformació és tecnològica i, per tant, de lògica comercial. Als anys 60 i 70, un film podia trigar 2–3 anys a completar el seu recorregut perquè les còpies físiques circulaven pel territori: grans ciutats, capitals de província, cinemes de poble, reestrenes. Avui, en temps digitals, el recorregut també pot durar 2–3 anys, però per una altra raó: cada finestra s’obre quan li toca dins el calendari d’explotació. Abans el temps depenia del territori, ara depèn dels drets.
 
-La distribució en cascada dels anys 60 i 70 era geogràfica. La d’ara és una cascada d’accés. El gràfic següent ho quantifica:
+La distribució en cascada dels anys 60 i 70 era geogràfica, la d’ara és una cascada d’accés. El gràfic següent ho quantifica:
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
