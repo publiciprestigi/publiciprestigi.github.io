@@ -45,9 +45,9 @@ També cal marcar una diferència de fons. Les entrades de sala mesuren una expe
 <!-- bloc-distribucio -->
 ## De la sala única a l'ecosistema multifinestra
 
-La diferència entre La caza i Alcarràs no és només una diferència d’època: és una diferència de sistema. El 1966, la sala era tota l’explotació comercial real. El 2022, la sala és només la primera finestra d’un recorregut que ja neix amb televisions, plataformes i drets successius incorporats des de l’origen.
+La diferència entre *La caza* i *Alcarràs* no és només una diferència d’època: és una diferència de sistema. El 1966, la sala era tota l’explotació comercial real. El 2022, la sala és només la primera finestra d’un recorregut que ja neix amb televisions, plataformes i drets successius incorporats des de l’origen.
 
-Per a La caza, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol finestra comercial planificada. Per això el seu IAA coincideix amb la xifra de sala: 341.377 espectadors. En canvi, Alcarràs neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores o finestres integrades en l’estratègia d’explotació.
+Per a *La caza*, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol finestra comercial planificada. Per això el seu IAA coincideix amb la xifra de sala: 341.377 espectadors. En canvi, *Alcarràs* neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores o finestres integrades en l’estratègia d’explotació.
 
 El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, entra a la televisió dins un calendari previst i contractualitzat.
 
