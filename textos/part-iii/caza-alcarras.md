@@ -23,9 +23,7 @@ Per comparar èpoques tan diferents necessitem un índex que sumi totes les fine
 
 Les xifres de sala capturen només una finestra d’exhibició. L’IAA estima l’audiència total d’un film sumant les finestres disponibles en cada època durant els primers 2–3 anys d’explotació comercial. Com l’IIC, és una mètrica pròpia d’aquest estudi: no és una dada publicada, sinó una estimació comparativa.
 
-El factor multiplicador varia segons el període. Un film dels anys 60 depenia exclusivament de la sala; avui, en canvi, una pel·lícula pot arribar al públic per moltes vies simultànies. En el cas d’*Alcarràs*, les entrades venudes en sala representen probablement entre un 25% i un 40% de la seva audiència acumulada estimada. La taula següent resumeix els factors aplicats a cada període:
-
-
+El factor multiplicador varia segons el període. Un film dels anys 60 depenia exclusivament de la sala; avui, en canvi, una pel·lícula pot arribar al públic per moltes vies simultànies. La taula següent resumeix els factors aplicats a cada període:
 
 | Període | Nº finestres | Tipus de finestres | Factor IAA estimat |
 | --- | --- | --- | --- |
