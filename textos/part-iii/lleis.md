@@ -29,7 +29,7 @@ Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el pun
 
 ### 6. Les mesures de paritat (2018–2020): un canvi estructural
 
-La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d'igualtat de gènere, però sense discriminació positiva concreta. El canvi real arriba el 2018, quan l'ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s'hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L'efecte és mesurable: del 23% de les ajudes selectives el 2018 al 51% el 2021. La generació que protagonitza els festivals 2010–2025 (Ruiz de Azúa, Simón, Camborda, Palomero, Funes, Martín) és filla directa d'aquestes polítiques. Ara bé, les directores reben de mitjana un 24% menys de pressupost per film: amb menys recursos, el cinema més personal és sovint l'única opció viable.
+La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d'igualtat de gènere, però sense discriminació positiva concreta. El canvi real arriba el 2018, quan l'ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s'hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L'efecte és mesurable: del 23% de les ajudes selectives el 2018 al 51% el 2021. La generació que protagonitza la presència als festivals de prestigi dels últims anys (Ruiz de Azúa, Simón, Camborda, Palomero, Funes) és filla directa d'aquestes polítiques. Ara bé, les directores reben de mitjana un 24% menys de pressupost per film: amb menys recursos, el cinema més personal és sovint l'única opció viable.
 
 ### 7. La Llei de Comunicació Audiovisual (2022) i la batalla del productor independent
 
