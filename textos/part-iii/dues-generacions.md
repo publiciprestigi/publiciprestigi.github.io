@@ -33,7 +33,7 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 <!-- /comentari-almodovar -->
 
 <!-- text-grafic1 -->
-El gràfic següent mostra la trajectòria d’espectadors en sala per film dels dos directors al llarg de la seva carrera. Cercle: film a festival sense premi. Rombe: film a festival amb premi.
+El gràfic següent mostra l'evolució d’espectadors en sala dels films llistats de les taules prèvies:
 <!-- /text-grafic1 -->
 
 <!-- bloc-actual -->
