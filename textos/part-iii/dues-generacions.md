@@ -1,11 +1,13 @@
 <!-- intro -->
-L'exemple de la comparativa entre la *La caza* i *Alcarràs* és un patró estructural de dues èpoques molt diferents. El que va ser possible als anys 60 i 70, amb un mercat de 200–400 milions d'entrades anuals i la sala com a única finestra, i el que és possible ara, amb un mercat de 65 i sis o més finestres simultànies, són realitats incomparables en xifres brutes, però comparables quan s'apliquen les mètriques correctes. El que segueix és una mirada a les dues carreres més emblemàtiques, sostingudes i premiades de les generacions anteriors, Saura i Almodóvar, i a quatre directors de la generació actual que s'han convertit en els referents del cinema espanyol als festivals internacionals.
+El cas de *La caza* i *Alcarràs* no és un exemple puntual, sinó el símptoma de dues èpoques radicalment diferents. El que va ser possible entre els anys 60 i 90, amb mercats molt més grans i una centralitat encara decisiva de la sala, i el que és possible ara, amb un mercat de 65–90 milions d’entrades i sis o més finestres simultànies, són realitats incomparables en xifres brutes, però comparables quan s’apliquen les mètriques correctes.
+
+El que segueix és una mirada a dues carreres emblemàtiques de la generació anterior, Saura i Almodóvar, i a quatre directors de la generació actual que s’han convertit en referents del cinema espanyol als festivals internacionals.
 <!-- /intro -->
 
 <!-- bloc-saura -->
 ## Carlos Saura (1966–1996): el prestigi com a força de resistència
 
-Saura és el director més present als grans festivals internacionals amb molta diferència: 16 seleccionades, 8 premis, presència a Cannes (7 vegades), Berlín (4), Venècia (3) i Sant Sebastià (2). I, amb tot, cap film al Top 100. Però Saura no ha sigut un director invisible al públic: *La prima Angélica* (1974, 1,41M), *Cría cuervos* (1976, 1,29M), *Mamá cumple cien años* (1979, 1,12M), *Deprisa deprisa* (1981, 1,05M) i *Ay, Carmela* (1990, 907k) són xifres més que notables, especialment quan s'aplica la penetració demogràfica. El que no va tenir mai és consistència comercial, els pics alterns amb caigudes brusques. Als anys 80, el mercat en col·lapse i l'evolució cap a projectes de dansa i música més arriscats per al gran públic (*Carmen*, *El amor brujo*) van estrènyer progressivament el seu impacte.
+Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 premis, presència a Cannes, Berlín, Venècia i Sant Sebastià. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial: els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
