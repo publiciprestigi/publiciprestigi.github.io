@@ -11,35 +11,31 @@ Saura és el director més present als grans festivals internacionals amb molta 
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
-- El context de *La caza* abans de la Transició. El seu resultat de 341.377 espectadors en un mercat de 370 milions l'any 1966 representa una penetració de l'1,06%, una xifra coherent amb el que s'esperava d'un film arriscat en aquella època, on fins i tot els grans èxits rarament superaven el 2%. *La caza* no era cinema popular, el fet que passés la censura no garantia una distribució àmplia ni una campanya comercial equivalent a la dels films de consum.
+-*La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s. No entren al Top 100 històric, però superen el milió d’espectadors i aconsegueixen una penetració molt alta dins el seu temps. No eren cinema popular de masses, però tampoc cinema invisible: eren films d’autor amb una presència pública real.
 
-- Penetració real vs. xifres brutes. *La prima Angélica* (1974) assoleix una penetració del 3,91% en un mercat de 285M i *Cría cuervos* (1976) una del 3,59% en un mercat de 240M: en termes relatius, són comparables a molts *blockbusters* actuals. Els IIC de 1,40 i 1,39 els situen al nivell de *La isla mínima* o *As bestas*, èxits indiscutibles del cinema espanyol recent.
+- La paradoxa dels 80s és *Deprisa, deprisa*: Ós d’Or a Berlín i 1,05M d’espectadors. És el moment en què Saura aconsegueix alhora el prestigi màxim i un públic significatiu. Però la continuïtat no arriba: dos anys després, *Carmen* baixa fins als 427k, i la seva evolució cap a projectes de dansa i música va estrènyer progressivament el seu abast en sales.
 
-- La paradoxa dels anys 80. *Deprisa, deprisa* guanya l'Os d'Or de Berlín el 1981 i fa 1,05 milions d'espectadors. És l'únic moment dels anys 80 en què Saura aconsegueix simultàniament el prestigi màxim i un públic significatiu. Dos anys després, *Carmen* (Cannes 1983) fa "només" 427k.
-
-- L'IAA i el criteri de càlcul. Els films de Saura fins al 1983 corresponen al període 1965–1984 (×1,0): la sala era l'única finestra comercial planificada, i l'IAA és igual a la xifra de sala. *La prima Angélica* (1974) és el seu major èxit de sala de tota la carrera —1,41M d'espectadors— però amb un IAA idèntic a la xifra de sala. A partir de 1984 s'apliquen els factors de cada període: *El Dorado* (1988, 572k de sala) arriba a un IAA estimat de ~1,43M–2,00M; *Ay, Carmela* (1990, 907k de sala), a ~1,82M–2,72M. L'estrena televisiva d'*Ay, Carmela* a TVE1 va arribar 21 mesos després de l'estrena en sales, amb una audiència estimada de 2–3 milions d'espectadors, per sobre del factor genèric aplicat al període. En termes d'IAA, és probablement el film de Saura més vist de tota la seva carrera.
+- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. El Dorado passa de 572k espectadors en sala a un IAA estimat d’1,43M–2,00M, i Ay, Carmela, de 907k a 1,82M–2,72M. En audiència acumulada, és probablement el film de Saura amb més abast.
 <!-- /comentari-saura -->
 
 <!-- bloc-almodovar -->
 ## Pedro Almodóvar (1982–2024): l'excepció que confirma la regla
 
-Almodóvar és l'únic director de tot el corpus que ha aconseguit de manera consistent i sostinguda les dues coses alhora: presència als festivals internacionals (10 seleccions, 6 premis) i un públic massiu al mercat espanyol (9 films al Top 100). És l'excepció estructural del document: demostra que la "doble corona" és possible, però el fet que sigui única en 60 anys de cinema espanyol diu molt de la seva dificultat.
+Almodóvar és l’únic director del corpus que sosté durant dècades les dues dimensions alhora: presència als festivals internacionals i públic massiu al mercat espanyol. La seva carrera no anul·la la bretxa entre públic i prestigi; n’és l’excepció més visible.
 
-El gràfic mostra una carrera radicalment diferent de la de Saura: no hi ha irregularitat, hi ha evolució. La primera etapa (1982–99) és d'ascens progressiu, amb pics que creixen film a film. La segona (2002–11) és de consolidació internacional mentre el mercat de sala es redueix. La tercera (2016–24) mostra els patrons de la nova era: presència als festivals màxims (Cannes, Venècia), premis importants, però xifres de sala que s'apropen cada vegada més a les de la generació Simón-Sorogoyen.
+El gràfic mostra una trajectòria molt diferent de la de Saura: menys irregularitat i més evolució. Primer, ascens progressiu fins al gran esclat de *Mujeres al borde…*. Després, consolidació internacional i fort rendiment comercial als 90s i primers 2000s. Finalment, a partir dels 2010s, un desplaçament cap a xifres de sala més pròpies del nou cinema d’autor internacional.
 <!-- /bloc-almodovar -->
 
 <!-- comentari-almodovar -->
-- La "doble corona" sostinguda. Dels 9 films al Top 100, 4 també són a festivals: *Mujeres al borde…* (Venècia), *Átame* (Berlín), *Todo sobre mi madre* (Cannes), *Volver* (Cannes). Cap altre director del corpus s'apropa a aquest rècord.
+- La ‘doble corona’ sostinguda és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Todo sobre mi madre* i *Volver* combinen festivals i públic en una proporció que cap altre director del corpus manté amb aquesta continuïtat. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
 
-- L'IAA d'Almodóvar als 80–90s: la conjuntura perfecta. *Mujeres al borde…* (1988, 3,35M de sala) té un IAA estimat de ~8,4M–11,7M: sala massiva + TVE1 en quasi-monopoli (*share* del 40–50%) + VHS emergent, en el moment precís en què Espanya viu una obertura cultural i projecció internacional accelerades. L'estrena televisiva documentada a TVE1 el 1991 va arribar 34 mesos després de l'estrena en sales, dins del cicle comercial integrat, i podia afegir per si sola 4–6 milions d'espectadors. És una conjuntura irrepetible: quan les televisions privades van fragmentar l'audiència de TVE1 i el seu poder de convocatòria va disminuir, el factor multiplicador excepcional d'aquella finestra televisiva va desaparèixer.
+- *Mujeres al borde…* és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE1 encara amb una capacitat de convocatòria enorme, VHS emergent i una obertura cultural accelerada. El resultat és un IAA estimat de 8,4M–11,7M. És una combinació pràcticament irrepetible de sala massiva, televisió forta i projecció internacional.
 
-- La conversió als 2010s. A partir de *La piel que habito* (2011, 735k), Almodóvar deixa de ser un fenomen de masses espanyol per convertir-se (encara més) en un autor de circuit internacional. *Julieta* (2016, 355k), *La habitación de al lado* (2024, 402k), el seu primer Lleó d'Or a Venècia, són xifres comparables a les de Simón o Sorogoyen. El salt de prestigi ha coincidit amb una normalització del públic de sala.
-
-- El factor IAA als darrers anys d'Almodóvar. *La habitación de al lado* (2024, 402k de sala, Lleó d'Or Venècia) té un IAA estimat d'entre 1 i 1,6 milions —comparable al d'*Alcarràs* (2022, 403k de sala, Os d'Or Berlín, ~1,1–1,6M IAA). Dos films premiats als festivals màxims de la seva era, xifres de sala idèntiques, IAA equivalent: Almodóvar als 2020s opera *exactament* en el mateix rang que Simón o Ruiz de Azúa. El que ha canviat no és el talent ni el prestigi: és el mercat.
+- A partir dels 2010s, el patró canvia. *La piel que habito*, *Julieta*, *Dolor y gloria*, *Madres paralelas* i *La habitación de al lado* mantenen el reconeixement internacional, però ja no operen en el mateix mercat de sala que els grans Almodóvar dels 80s i 90s. La habitación de al lado (402k en sala, Lleó d’Or a Venècia) se situa en el mateix rang que Alcarràs: mateix ordre de públic, mateix tipus de prestigi, mateix ecosistema multifinestra. El que ha canviat no és el talent ni el prestigi: és el mercat.
 <!-- /comentari-almodovar -->
 
 <!-- text-grafic1 -->
-El gràfic següent mostra la trajectòria d'espectadors a sala per film dels dos directors al llarg de la seva carrera. Cercle: film a festival sense premi. Rombe: film a festival amb premi.
+El gràfic següent mostra la trajectòria d’espectadors en sala per film dels dos directors al llarg de la seva carrera. Cercle: film a festival sense premi. Rombe: film a festival amb premi.
 <!-- /text-grafic1 -->
 
 <!-- bloc-actual -->
