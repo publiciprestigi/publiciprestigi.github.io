@@ -13,7 +13,7 @@ El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50%
 
 ### 2. Les televisions privades (1990): el gran canvi de model
 
-L'aparició d'Antena 3 i Telecinco transforma el finançament del cinema. La legislació els obliga a invertir el 5% dels seus ingressos en producció audiovisual espanyola. Canal+ (1990) afegeix la primera finestra de pagament. Però el canvi estructural és anterior: quan Miró marxa, els productors renegocien el sistema i aconsegueixen que el pressupost es divideixi en tres terços obligatoris —taquilla, televisió i Estat— (19), convertint la televisió en una pota del model, no en una finestra opcional. Aquest és el model que farà possibles *Los otros*, *Mar adentro* o *El orfanato*: sala massiva + televisió com a segon mercat. El factor IAA del període 1990–1994 s'estima en ×2,0–3,0.
+L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró: els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades, taquilla, televisió i Estat (19). La televisió deixa de ser una emissió eventual anys després de l’estrena i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Los otros* a *Mar adentro* o *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
@@ -31,12 +31,9 @@ Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el pun
 
 La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d'igualtat de gènere, però sense discriminació positiva concreta. El canvi real arriba el 2018, quan l'ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s'hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L'efecte és mesurable: del 23% de les ajudes selectives el 2018 al 51% el 2021. La generació que protagonitza els festivals 2010–2025 (Ruiz de Azúa, Simón, Camborda, Palomero, Funes, Martín) és filla directa d'aquestes polítiques. Ara bé, les directores reben de mitjana un 24% menys de pressupost per film: amb menys recursos, el cinema més personal és sovint l'única opció viable.
 
-
-
-
 ### 7. La Llei de Comunicació Audiovisual (2022) i la batalla del productor independent
 
-La llei estén a les plataformes l'obligació d'invertir el 5% dels ingressos en producció audiovisual espanyola, igualant-les amb les televisions (21). Però la gran polèmica és la definició de "productor independent": si les plataformes poden accedir a ajudes dissenyades per al cinema independent, el model que ha produït *Alcarràs* o *Los domingos* es posa en risc. El Projecte de Llei del Cine i la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d'urgència, continua bloquejat el dia d'avui a la Comissió de Cultura per les dificultats d'un govern en minoria per negociar els suports necessaris.
+La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions (21). Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cine i la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d’urgència, continua pendent en fase d’esmenes. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
 <!-- /moments -->
 
 <!-- conclusio -->
