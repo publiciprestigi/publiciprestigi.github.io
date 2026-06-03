@@ -1,5 +1,5 @@
 <!-- intro -->
-Hi ha una tercera categoria que l’estudi ha documentat en dades, però no ha nomenat explícitament: un cinema que no encaixa del tot ni amb el circuit de festivals de la Part II ni amb el cinema popular de consum de la Part I. Podríem anomenar-lo cinema d’autor industrial: directors que dominen el llenguatge del gènere popular —terror, *thriller*, ciència-ficció, comèdia negra— amb una veu pròpia, pressupostos grans i una connexió directa amb el gran públic.
+Hi ha una tercera categoria que l’estudi ha documentat en dades, però no ha nomenat explícitament: un cinema que no encaixa del tot ni amb el circuit de festivals de la Part II ni amb el cinema popular de consum de la Part I. Podríem anomenar-lo cinema d’autor industrial: directors que dominen el llenguatge del gènere popular (terror, *thriller*, ciència-ficció, comèdia negra) amb una veu pròpia, pressupostos grans i una connexió directa amb el gran públic.
 
 Bayona, Amenábar i De la Iglesia no encaixen ni amb Saura ni amb Segura. Operen en una zona intermèdia on l’objectiu no és Cannes, sinó la sala de cinema i el gran públic, però amb un domini formal i una ambició artística que els distingeix del cinema popular pur.
 <!-- /intro -->
