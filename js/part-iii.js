@@ -611,13 +611,13 @@ function construirDuesGeneracions() {
 
   FILMS_ALMODOVAR = [
     { any:1982, titol:'Laberinto de pasiones', festival:'Sant Sebastià', premiat:false, esp:358252, top100:null, mercat:'150M≈', penetr:'0,95%≈', quota:'0,24%≈', iic:'0,33', iaa_xifra:'358.252', iaa_mult:'(×1,0)', iaa_est:false },
-    { any:1988, titol:'Mujeres al borde…', festival:'Venècia', premiat:true, esp:3348457, top100:{pos:22,dec:'80s'}, mercat:'85M≈', penetr:'8,61%≈', quota:'3,94%≈', iic:'3,98', iaa_xifra:'~8,37M–11,72M', iaa_mult:'(×2,5–3,5)', iaa_est:true },
+    { any:1988, titol:'Mujeres al borde…', festival:'Venècia', premiat:true, esp:3348457, top100:{globalPos:22}, mercat:'85M≈', penetr:'8,61%≈', quota:'3,94%≈', iic:'3,98', iaa_xifra:'~8,37M–11,72M', iaa_mult:'(×2,5–3,5)', iaa_est:true },
     { any:1989, titol:'Átame', festival:'Berlín', premiat:false, esp:1351825, top100:{pos:8,dec:'80s'}, mercat:'80M≈', penetr:'3,48%≈', quota:'1,69%≈', iic:'1,66', iaa_xifra:'~3,38M–4,73M', iaa_mult:'(×2,5–3,5)', iaa_est:true },
     { any:1991, titol:'Tacones lejanos', festival:null, premiat:false, esp:2073064, top100:{pos:6,dec:'90s'}, mercat:'88M≈', penetr:'5,32%≈', quota:'2,36%≈', iic:'2,42', iaa_xifra:'~4,15M–6,22M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
     { any:1993, titol:'Kika', festival:null, premiat:false, esp:1038568, top100:{pos:24,dec:'90s'}, mercat:'90M≈', penetr:'2,65%≈', quota:'1,15%≈', iic:'1,19', iaa_xifra:'~2,08M–3,12M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
     { any:1995, titol:'La flor de mi secreto', festival:null, premiat:false, esp:981846, top100:{pos:25,dec:'90s'}, mercat:'96M≈', penetr:'2,50%≈', quota:'1,02%≈', iic:'1,09', iaa_xifra:'~1,77M–2,46M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
     { any:1997, titol:'Carne trémula', festival:null, premiat:false, esp:1433465, top100:{pos:12,dec:'90s'}, mercat:'100M≈', penetr:'3,64%≈', quota:'1,43%≈', iic:'1,56', iaa_xifra:'~2,58M–3,58M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
-    { any:1999, titol:'Todo sobre mi madre', festival:'Cannes', premiat:true, esp:2590699, top100:{pos:2,dec:'90s'}, mercat:'110M', penetr:'6,48%', quota:'2,36%', iic:'2,67', iaa_xifra:'~4,66M–6,48M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
+    { any:1999, titol:'Todo sobre mi madre', festival:'Cannes', premiat:true, esp:2590699, top100:{globalPos:52}, mercat:'110M', penetr:'6,48%', quota:'2,36%', iic:'2,67', iaa_xifra:'~4,66M–6,48M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
     { any:2002, titol:'Hable con ella', festival:null, premiat:false, esp:1367655, top100:{pos:26,dec:'2000s'}, mercat:'140M≈', penetr:'3,30%≈', quota:'0,97%≈', iic:'1,22', iaa_xifra:'~2,46M–3,42M', iaa_mult:'(×1,8–2,5)', iaa_est:true },
     { any:2006, titol:'Volver', festival:'Cannes', premiat:true, esp:1932119, top100:{pos:16,dec:'2000s'}, mercat:'121M', penetr:'4,37%', quota:'1,59%', iic:'1,80', iaa_xifra:'~3,86M–5,80M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
     { any:2011, titol:'La piel que habito', festival:'Cannes', premiat:false, esp:735403, top100:null, mercat:'98M≈', penetr:'1,58%≈', quota:'0,75%≈', iic:'0,74', iaa_xifra:'~1,47M–2,21M', iaa_mult:'(×2,0–3,0)', iaa_est:true },
@@ -665,7 +665,13 @@ function renderTaulaGen(films, contId, directorFix) {
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const dir = directorFix || f.director;
     const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
-    const top = f.top100 ? `<span class="col-subtil" style="font-size:.85em">${f.top100.pos}a als ${f.top100.dec}</span>` : '<span class="col-subtil">—</span>';
+    let topText = '—';
+    if (f.top100) {
+      topText = f.top100.globalPos
+        ? `#${f.top100.globalPos}`
+        : `${f.top100.pos}a als ${f.top100.dec}`;
+    }
+    const top = `<span class="col-subtil">${topText}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
