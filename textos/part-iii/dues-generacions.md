@@ -33,7 +33,7 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 <!-- /comentari-almodovar -->
 
 <!-- text-grafic1 -->
-El gràfic següent mostra l'evolució d’espectadors en sala dels films llistats de les dos taules anteriors:
+El gràfic següent mostra l'evolució d’espectadors en sala de cinema dels films llistats de les dos taules anteriors:
 <!-- /text-grafic1 -->
 
 <!-- bloc-actual -->
