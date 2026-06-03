@@ -970,13 +970,6 @@ window.PiP_graficGeneracioActual = function() {
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#b06030;display:inline-block;border-radius:2px"></span>Carla Simón</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a05030;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
-
-    // Text peu del gràfic
-    const peu = document.createElement('p');
-    peu.id = 'ga-peu';
-    peu.style.cssText = 'text-align:center;font-size:11px;color:#888;font-style:italic;margin:8px 0 0';
-    peu.textContent = 'Cada parella de barres representa un film; el color identifica el director.';
-    bloc.appendChild(peu);
   }
 };
 
