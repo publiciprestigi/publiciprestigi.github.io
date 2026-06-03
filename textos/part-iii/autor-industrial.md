@@ -11,13 +11,13 @@ I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa
 <!-- /bloc-iglesia -->
 
 <!-- bloc-amenabar -->
-### Alejandro Amenábar: el cas més pur del perfil
+## Alejandro Amenábar: el cas més pur del perfil
 
 *Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film és un gènere diferent executat amb precisió i amb una marca d'autor reconeixible. *Mar adentro* és el moment en què el circuit de festivals el reconeix (Lleó de Plata a Venècia, Oscar, 4,1 milions d'espectadors, #12 del Top 100) però és l'excepció en una carrera construïda sobre el gran públic. Amenábar ha fet exactament el que Almodóvar va fer als anys 80–90, construir un públic massiu amb cinema d'autor accessible, però sense el reconeixement festival sistemàtic. El seu cas suggereix que la "doble corona" és possible per una via diferent: no només a partir dels festivals europeus sinó la dels premis anglosaxons i el mercat internacional.
 <!-- /bloc-amenabar -->
 
 <!-- bloc-bayona -->
-### J.A. Bayona: el més espectacular
+## J.A. Bayona: el més espectacular
 
 Qui ha portat la lògica d'aquesta categoria fins a les últimes conseqüències. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100), *Un monstruo viene a verme* (2016, 4,6M): tres films de gènere de gran format que han connectat amb el públic espanyol d'una manera que cap director de la seva generació ha igualat. I després el salt a Hollywood. Bayona no ha necessitat mai els festivals perquè el seu circuit és un altre (hi ha participat però mai en secció oficial competitiva). És el director espanyol que més s'ha apropat al model industrial internacional, i el fet que ho hagi fet des d'una base de cinema d'autor (*El orfanato* no és precisament una producció de gènere anònima) és el que el distingeix dels directors de cinema popular pur.
 <!-- /bloc-bayona -->
