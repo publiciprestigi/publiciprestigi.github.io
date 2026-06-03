@@ -973,6 +973,205 @@ window.PiP_graficGeneracioActual = function() {
   }
 };
 
+// ═══════════════════════════════════════════════════════════════
+// CINEMA D'AUTOR INDUSTRIAL — Gràfic 3 directors
+// ═══════════════════════════════════════════════════════════════
+
+window.PiP_graficAutorIndustrial = function() {
+  const el = document.getElementById('grafic-autor-industrial');
+  if (!el || typeof Chart === 'undefined') return;
+  if (window._chartAutorInd) window._chartAutorInd.destroy();
+
+  const FILMS_IGLESIA = [
+    { x:1995, y:1400000, titol:'El día de la bestia',          festival:false, premiat:false, top100:false },
+    { x:1999, y:1600000, titol:'Muertos de risa',              festival:false, premiat:false, top100:false },
+    { x:2000, y:1200000, titol:'La comunidad',                 festival:false, premiat:false, top100:false },
+    { x:2010, y: 400000, titol:'Balada triste de trompeta',    festival:true,  premiat:true,  top100:false },
+    { x:2017, y:3280000, titol:'Perfectos desconocidos',       festival:false, premiat:false, top100:true  },
+  ];
+  const FILMS_AMENABAR = [
+    { x:1996, y: 850000, titol:'Tesis',                        festival:false, premiat:false, top100:false },
+    { x:1997, y:1700000, titol:'Abre los ojos',                festival:false, premiat:false, top100:false },
+    { x:2001, y:6400000, titol:'Los otros',                    festival:false, premiat:false, top100:true  },
+    { x:2004, y:4100000, titol:'Mar adentro',                  festival:true,  premiat:true,  top100:true  },
+    { x:2009, y:3500000, titol:'Ágora',                        festival:false, premiat:false, top100:true  },
+    { x:2019, y:1900000, titol:'Mientras dure la guerra',      festival:false, premiat:false, top100:false },
+    { x:2025, y: 750000, titol:'El cautivo',                   festival:false, premiat:false, top100:false },
+  ];
+  const FILMS_BAYONA = [
+    { x:2007, y:4400000, titol:'El orfanato',                  festival:false, premiat:false, top100:true  },
+    { x:2012, y:6100000, titol:'Lo imposible',                 festival:false, premiat:false, top100:true  },
+    { x:2016, y:4600000, titol:'Un monstruo viene a verme',    festival:false, premiat:false, top100:true  },
+  ];
+
+  // Títol al bloc
+  const bloc = document.getElementById('grafic-ai-bloc');
+  if (bloc && !document.getElementById('ai-tit')) {
+    const tit = document.createElement('p');
+    tit.id = 'ai-tit';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.innerHTML = 'De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala';
+    bloc.insertBefore(tit, bloc.firstChild);
+  }
+
+  const ctx = el.getContext('2d');
+
+  function ptStyle(f) {
+    if (f.premiat) return 'rectRot';
+    if (f.top100)  return 'rect';
+    return 'circle';
+  }
+  function ptRadius(f) {
+    if (f.premiat || f.top100) return 9;
+    if (f.festival) return 7;
+    return 5;
+  }
+  function ptColor(f, def) {
+    if (!f.festival && !f.top100) return '#999';
+    return def;
+  }
+
+  const COL_IGLESIA  = '#b8463a';  // vermell càlid
+  const COL_AMENABAR = '#1e3d6b';  // blau marí
+  const COL_BAYONA   = '#1e6b5c';  // verd
+
+  // Plugin etiquetes amb el nom del film
+  const pluginNoms = {
+    id: 'ai-noms',
+    afterDatasetsDraw(chart) {
+      const c = chart.ctx;
+      c.save();
+      c.font = 'italic 11px -apple-system, Arial, sans-serif';
+      c.textAlign = 'center';
+      chart.data.datasets.forEach((ds, di) => {
+        const meta = chart.getDatasetMeta(di);
+        ds.data.forEach((pt, i) => {
+          const point = meta.data[i];
+          if (!point) return;
+          // Color: gris pels "altres", del director per la resta
+          const isGris = !pt.festival && !pt.top100;
+          c.fillStyle = isGris ? '#999' : ds.borderColor;
+          const dy = i % 2 === 0 ? -14 : 20;
+          const sufix = pt.premiat ? '  ★' : '';
+          c.fillText(pt.titol + sufix, point.x, point.y + dy);
+        });
+      });
+      c.restore();
+    },
+  };
+
+  window._chartAutorInd = new Chart(ctx, {
+    type: 'line',
+    data: {
+      datasets: [
+        {
+          label: 'Álex de la Iglesia',
+          data: FILMS_IGLESIA,
+          borderColor: COL_IGLESIA,
+          backgroundColor: COL_IGLESIA,
+          borderWidth: 2.5,
+          tension: 0.15,
+          pointRadius: ctx => ptRadius(ctx.raw),
+          pointStyle: ctx => ptStyle(ctx.raw),
+          pointBackgroundColor: ctx => ptColor(ctx.raw, COL_IGLESIA),
+          pointBorderWidth: 1.5,
+          pointBorderColor: '#fff',
+        },
+        {
+          label: 'Alejandro Amenábar',
+          data: FILMS_AMENABAR,
+          borderColor: COL_AMENABAR,
+          backgroundColor: COL_AMENABAR,
+          borderWidth: 2.5,
+          tension: 0.15,
+          pointRadius: ctx => ptRadius(ctx.raw),
+          pointStyle: ctx => ptStyle(ctx.raw),
+          pointBackgroundColor: ctx => ptColor(ctx.raw, COL_AMENABAR),
+          pointBorderWidth: 1.5,
+          pointBorderColor: '#fff',
+        },
+        {
+          label: 'J.A. Bayona',
+          data: FILMS_BAYONA,
+          borderColor: COL_BAYONA,
+          backgroundColor: COL_BAYONA,
+          borderWidth: 2.5,
+          tension: 0.15,
+          pointRadius: ctx => ptRadius(ctx.raw),
+          pointStyle: ctx => ptStyle(ctx.raw),
+          pointBackgroundColor: ctx => ptColor(ctx.raw, COL_BAYONA),
+          pointBorderWidth: 1.5,
+          pointBorderColor: '#fff',
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
+            label: ctx => {
+              const f = ctx.raw;
+              let txt = fmt(ctx.parsed.y) + ' espectadors';
+              if (f.premiat) txt += ' · ★ festival + premi';
+              else if (f.top100) txt += ' · Top 100';
+              else if (f.festival) txt += ' · festival';
+              return txt;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          min: 1994, max: 2027,
+          ticks: { stepSize: 5, color: '#363737', font: { size: 12 } },
+          grid: { color: '#eee' },
+        },
+        y: {
+          min: 0, max: 7000000,
+          ticks: {
+            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
+            color: '#363737', font: { size: 11 },
+          },
+          grid: { color: '#eee' },
+          title: { display: true, text: 'Espectadors a sala', font: { size: 12 } },
+        },
+      },
+    },
+    plugins: [pluginNoms],
+  });
+
+  // Llegenda HTML
+  if (bloc && !document.getElementById('ai-leg')) {
+    const leg = document.createElement('div');
+    leg.id = 'ai-leg';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.innerHTML = `
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
+      <span style="display:flex;align-items:center;gap:5px;margin-left:10px"><span style="width:11px;height:11px;background:#666;display:inline-block;transform:rotate(45deg)"></span><span>Festival + premi</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:11px;height:11px;background:#666;display:inline-block"></span><span>Top 100</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;background:#999;display:inline-block;border-radius:50%"></span><span>Altres films documentats</span></span>`;
+    bloc.appendChild(leg);
+  }
+
+  // Degradat scroll
+  const hint = document.getElementById('ai-scroll-hint');
+  const wrap = document.getElementById('ai-scroll-wrap');
+  if (hint && wrap) {
+    wrap.addEventListener('scroll', () => {
+      const atEnd = wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 12;
+      hint.style.opacity = atEnd ? '0' : '1';
+    });
+  }
+};
+
 function construirLleis() {
   const cont = document.getElementById('grafic-lleis');
   if (!cont) return;
