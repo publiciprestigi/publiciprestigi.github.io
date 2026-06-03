@@ -11,7 +11,7 @@ Saura és el director més present als grans festivals internacionals amb molta 
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
-- *La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s. No entren al Top 100 històric, però superen el milió d’espectadors i aconsegueixen una penetració molt alta dins el seu temps. No eren cinema popular de masses, però tampoc cinema invisible: eren films d’autor amb una presència pública real.
+- *La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s: 1,41M i 1,29M d’espectadors, amb una penetració molt alta dins el seu temps. En un mercat encara enorme, aquestes xifres no el situaven al nivell del cinema popular de masses, però sí molt per sobre del que avui sovint associem al cinema d’autor de festival.
 
 - L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. +El Dorado+ passa de 572k espectadors en sala a un IAA estimat d’1,43M–2,00M, i +Ay, Carmela+, de 907k a 1,82M–2,72M. En audiència acumulada, és probablement el film de Saura amb més abast.
 <!-- /comentari-saura -->
