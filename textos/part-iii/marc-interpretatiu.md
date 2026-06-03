@@ -3,7 +3,7 @@ Abans de les conclusions cal establir un marc interpretatiu que eviti la lectura
 <!-- /intro -->
 
 <!-- tres-categories -->
-### Tres categories
+## Tres categories
 
 Podríem classificar el cinema espanyol dels darrers seixanta anys en tres grans grups:
 
@@ -15,7 +15,7 @@ El tercer és el **cinema d'autor industrial**: Amenábar, Bayona, De la Iglesia
 <!-- /tres-categories -->
 
 <!-- professionalitzacio -->
-### La professionalització del cinema de festivals
+## La professionalització del cinema de festivals
 
 La professionalització del cinema de festivals és el fenomen que explica per què la bretxa entre la primera i la segona categoria s'ha eixamplat als anys 2010 fins al seu màxim històric. Als anys 60–70, un director com Saura feia cinema sense pensar necessàriament en un circuit separat: simplement feia el cinema que volia fer, i els festivals el reconeixien o no. La bretxa existia, però era en part circumstancial: la censura, el mercat gegant, la manca d'infraestructura de distribució alternativa.
 
@@ -25,7 +25,7 @@ Hi ha un tercer factor determinant: la formació. La generació actual ha passat
 <!-- /professionalitzacio -->
 
 <!-- memoria -->
-### La memòria cultural i el cànon
+## La memòria cultural i el cànon
 
 Hi ha finalment un fenomen que l'estudi posa en evidència sense proposar-s'ho: el problema de la memòria cultural. El cinema que recordem col·lectivament com a 'gran cinema espanyol' és majoritàriament el de festivals, no el del Top 100. Quan pensem en els seixanta anys del cinema espanyol, pensem en Buñuel, Berlanga, Saura, Erice, Almodóvar, no en Lazaga ni en Segura, que per espectadors els superen àmpliament. Però tampoc no pensem en Bayona o Amenábar com a "autors" de referència. El cànon crític ignora el cinema popular per excés de popularitat, i ignora el cinema d'autor industrial per excés de comercialitat. Només el cinema de festival sembla que tingui garantida la immortalitat crítica.
 
