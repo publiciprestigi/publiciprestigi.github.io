@@ -984,25 +984,25 @@ window.PiP_graficAutorIndustrial = function() {
   if (window._chartAutorInd) window._chartAutorInd.destroy();
 
   const FILMS_IGLESIA = [
-    { x:1995, y:1400000, titol:'El día de la bestia',          festival:false, premiat:false, top100:false },
-    { x:1999, y:1600000, titol:'Muertos de risa',              festival:false, premiat:false, top100:false },
-    { x:2000, y:1200000, titol:'La comunidad',                 festival:false, premiat:false, top100:false },
-    { x:2010, y: 400000, titol:'Balada triste de trompeta',    festival:true,  premiat:true,  top100:false },
-    { x:2017, y:3280000, titol:'Perfectos desconocidos',       festival:false, premiat:false, top100:true  },
+    { x:1995, y:1419191, titol:'El día de la bestia',          festival:false, premiat:false, top100:false },
+    { x:1999, y:1669964, titol:'Muertos de risa',              festival:false, premiat:false, top100:false },
+    { x:2000, y:1609084, titol:'La comunidad',                 festival:false, premiat:false, top100:false },
+    { x:2010, y: 369118, titol:'Balada triste de trompeta',    festival:true,  premiat:true,  top100:false },
+    { x:2017, y:3284907, titol:'Perfectos desconocidos',       festival:false, premiat:false, top100:true  },
   ];
   const FILMS_AMENABAR = [
-    { x:1996, y: 850000, titol:'Tesis',                        festival:false, premiat:false, top100:false },
-    { x:1997, y:1700000, titol:'Abre los ojos',                festival:false, premiat:false, top100:false },
-    { x:2001, y:6400000, titol:'Los otros',                    festival:false, premiat:false, top100:true  },
-    { x:2004, y:4100000, titol:'Mar adentro',                  festival:true,  premiat:true,  top100:true  },
-    { x:2009, y:3500000, titol:'Ágora',                        festival:false, premiat:false, top100:true  },
-    { x:2019, y:1900000, titol:'Mientras dure la guerra',      festival:false, premiat:false, top100:false },
-    { x:2025, y: 750000, titol:'El cautivo',                   festival:false, premiat:false, top100:false },
+    { x:1996, y: 855481, titol:'Tesis',                        festival:false, premiat:false, top100:false },
+    { x:1997, y:1794539, titol:'Abre los ojos',                festival:false, premiat:false, top100:false },
+    { x:2001, y:6410785, titol:'Los otros',                    festival:false, premiat:false, top100:true  },
+    { x:2004, y:4099475, titol:'Mar adentro',                  festival:true,  premiat:true,  top100:true  },
+    { x:2009, y:3492894, titol:'Ágora',                        festival:false, premiat:false, top100:true  },
+    { x:2019, y:1888896, titol:'Mientras dure la guerra',      festival:false, premiat:false, top100:false },
+    { x:2025, y: 797366, titol:'El cautivo',                   festival:false, premiat:false, top100:false },
   ];
   const FILMS_BAYONA = [
-    { x:2007, y:4400000, titol:'El orfanato',                  festival:false, premiat:false, top100:true  },
-    { x:2012, y:6100000, titol:'Lo imposible',                 festival:false, premiat:false, top100:true  },
-    { x:2016, y:4600000, titol:'Un monstruo viene a verme',    festival:false, premiat:false, top100:true  },
+    { x:2007, y:4420987, titol:'El orfanato',                  festival:false, premiat:false, top100:true  },
+    { x:2012, y:6129976, titol:'Lo imposible',                 festival:false, premiat:false, top100:true  },
+    { x:2016, y:4613760, titol:'Un monstruo viene a verme',    festival:false, premiat:false, top100:true  },
   ];
 
   // Títol al bloc
