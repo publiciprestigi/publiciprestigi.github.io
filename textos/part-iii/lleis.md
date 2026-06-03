@@ -5,7 +5,7 @@ El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que
 
 <!-- moments -->
 ## Set moments determinants
-<br>
+<div style="height:4px"></div>
 
 #### 1. El Decret Miró (1983) i la televisió pública
 
