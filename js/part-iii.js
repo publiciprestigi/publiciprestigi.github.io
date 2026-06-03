@@ -569,7 +569,7 @@ const COLORS_DEC_GLOBAL = {
 
 const COLORS_DIRECTOR = {
   'Rodrigo Sorogoyen':    { fort: '#8c4a3a', fluix: '#e8cfc6' }, // terracota
-  'Oliver Laxe':          { fort: '#6a7530', fluix: '#dde0c0' }, // olivàcia
+  'Oliver Laxe':          { fort: '#558020', fluix: '#cee0a0' }, // verd llimona
   'Carla Simón':          { fort: '#a07020', fluix: '#ebd8b0' }, // or fosc
   'Alauda Ruiz de Azúa':  { fort: '#1a6878', fluix: '#bfdce0' }, // turquesa
 };
@@ -932,7 +932,7 @@ window.PiP_graficGeneracioActual = function() {
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#8c4a3a;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#6a7530;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#558020;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a07020;display:inline-block;border-radius:2px"></span>Carla Simón</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1a6878;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
