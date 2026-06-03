@@ -29,7 +29,7 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 
 - *Mujeres al borde…* és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE1 encara amb una capacitat de convocatòria enorme, VHS emergent i una obertura cultural accelerada. El resultat és un IAA estimat de 8,4M–11,7M. És una combinació pràcticament irrepetible de sala massiva, televisió forta i projecció internacional.
 
-- A partir dels 2010s, el patró canvia. *La piel que habito*, *Julieta*, *Dolor y gloria*, *Madres paralelas* i *La habitación de al lado* mantenen el reconeixement internacional, però ja no operen en el mateix mercat de sala que els grans Almodóvar dels 80s i 90s. La habitación de al lado (402k en sala, Lleó d’Or a Venècia) se situa en el mateix rang que *Alcarràs*, *Sirât* o *Los domingos*: mateix ordre de públic, mateix tipus de prestigi, mateix ecosistema multifinestra. El que ha canviat no és el talent ni el prestigi: és el mercat.
+- A partir dels 2010s, el patró canvia. *La piel que habito*, *Julieta*, *Dolor y gloria* i *Madres paralelas* mantenen el reconeixement internacional, però ja no operen en el mateix mercat de sala que els grans Almodóvar dels 80s i 90s. *La habitación de al lado* (402k en sala, Lleó d’Or a Venècia) se situa en el mateix rang que *Alcarràs*, *Sirât* o *Los domingos*: mateix ordre de públic, mateix tipus de prestigi, mateix ecosistema multifinestra. El que ha canviat no és el talent ni el prestigi: és el mercat.
 <!-- /comentari-almodovar -->
 
 <!-- text-grafic1 -->
