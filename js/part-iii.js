@@ -671,7 +671,7 @@ function renderTaulaGen(films, contId, directorFix) {
         ? `#${f.top100.globalPos}`
         : `${f.top100.pos}a als ${f.top100.dec}`;
     }
-    const top = `<span class="col-subtil">${topText}</span>`;
+    const top = `<span class="col-subtil" style="font-size:.9em">${topText}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
