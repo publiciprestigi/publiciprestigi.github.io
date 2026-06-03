@@ -147,15 +147,42 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-autor">
-        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+        <div class="text-md text-md-intro" data-text="part-iii/autor-industrial" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-iglesia"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-amenabar"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-bayona"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="conclusio"></div>
+
+        <div id="grafic-ai-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="ai-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div style="min-width:1700px;height:480px;position:relative">
+                <canvas id="grafic-autor-industrial"></canvas>
+              </div>
+            </div>
+            <div id="ai-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="paradoxa"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-marc">
-        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+        <div class="text-md text-md-intro" data-text="part-iii/marc-interpretatiu" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/marc-interpretatiu" data-bloc="tres-categories"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/marc-interpretatiu" data-bloc="professionalitzacio"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/marc-interpretatiu" data-bloc="memoria"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-conclusions">
-        <div class="contingut-text"><p class="en-construccio">Contingut en construcció</p></div>
+        <div class="text-md text-md-intro" data-text="part-iii/conclusions" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-3"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-4"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-5"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-6"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-7"></div>
       </div>
 
       <div class="nav-seccions">
@@ -199,6 +226,7 @@
     let graficCazaInit = false;
     let graficSAInit = false;
     let graficGAInit = false;
+    let graficAIInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -233,6 +261,10 @@
       if (s.id === 'generacions' && window.PiP_graficSauraAlmodovar && window.PiP_graficGeneracioActual) {
         if (!graficSAInit) { graficSAInit = true; setTimeout(window.PiP_graficSauraAlmodovar, 50); }
         if (!graficGAInit) { graficGAInit = true; setTimeout(window.PiP_graficGeneracioActual, 100); }
+      }
+      if (s.id === 'autor' && !graficAIInit && window.PiP_graficAutorIndustrial) {
+        graficAIInit = true;
+        setTimeout(window.PiP_graficAutorIndustrial, 50);
       }
     }
 
