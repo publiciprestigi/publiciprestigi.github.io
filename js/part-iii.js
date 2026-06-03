@@ -727,7 +727,7 @@ window.PiP_graficSauraAlmodovar = function() {
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
-      c.font = 'italic 10px -apple-system, Arial, sans-serif';
+      c.font = 'italic 11px -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
       chart.data.datasets.forEach((ds, di) => {
         const meta = chart.getDatasetMeta(di);
@@ -753,11 +753,11 @@ window.PiP_graficSauraAlmodovar = function() {
           data: dataSaura,
           borderColor: '#1E4080',
           backgroundColor: '#1E4080',
-          borderWidth: 1.8,
+          borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 7 : 5,
+          pointRadius: ctx => ctx.raw.premiat ? 9 : 6,
           pointStyle: ctx => ctx.raw.premiat ? 'rectRot' : 'circle',
-          pointBorderWidth: 1,
+          pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
         {
@@ -765,11 +765,11 @@ window.PiP_graficSauraAlmodovar = function() {
           data: dataAlm,
           borderColor: '#9B2335',
           backgroundColor: '#9B2335',
-          borderWidth: 1.8,
+          borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 7 : 5,
+          pointRadius: ctx => ctx.raw.premiat ? 9 : 6,
           pointStyle: ctx => ctx.raw.premiat ? 'rectRot' : 'circle',
-          pointBorderWidth: 1,
+          pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
       ],
@@ -791,7 +791,7 @@ window.PiP_graficSauraAlmodovar = function() {
         x: {
           type: 'linear',
           min: 1965, max: 2026,
-          ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
+          ticks: { stepSize: 5, color: '#363737', font: { size: 12 } },
           grid: { color: '#eee' },
         },
         y: {
