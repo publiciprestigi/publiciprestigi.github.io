@@ -17,7 +17,7 @@ I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més pur del perfil
 
-*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film treballa un gènere diferent amb precisió industrial i marca d’autor reconeixible. *Mar adentro* és el moment en què el circuit de festivals el reconeix plenament (Lleó de Plata a Venècia, Oscar, 4,1 milions d’espectadors, #12 del Top 100), però és l’excepció dins d’una carrera construïda sobretot sobre el gran públic.
+*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film treballa un gènere diferent amb precisió industrial i marca d’autor reconeixible. *Mar adentro* és el moment en què el circuit de prestigi el reconeix plenament (Lleó de Plata a Venècia, Oscar, 4,1 milions d’espectadors, #12 del Top 100), però és l’excepció dins d’una carrera construïda sobretot sobre el gran públic.
 
 Amenábar ocupa una funció comparable a la d’Almodóvar als anys 80–90: construir un públic massiu amb cinema d’autor accessible. La diferència és que ho fa des del gènere (*thriller*, fantàstic, terror, drama biogràfic) i amb una vocació internacional molt clara. *Mar adentro* concentra el seu moment de màxima coincidència entre públic i prestigi, la resta de la seva carrera confirma que el cinema d’autor també podia ser industrial, popular i exportable.
 <!-- /bloc-amenabar -->
