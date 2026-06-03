@@ -8,7 +8,7 @@ Bayona, Amenábar i De la Iglesia no encaixen ni amb Saura ni amb Segura. Operen
 <!-- bloc-iglesia -->
 ## Álex de la Iglesia: el precursor
 
-I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa* (1999), *La comunidad* (2000): cinema de gènere amb una mirada social i política que cap dels altres té. Un modernitzador de públics i, directa o indirectament, el gran descobridor de Santiago Segura, obrint un espai per a un cinema popular amb consciència de gènere, grotesc i satíric, que després Segura va saber explotar amb uns resultats extraordinaris, convertint-se en el director més taquiller de la història del cinema espanyol.
+I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa* (1999), *La comunidad* (2000): cinema de gènere amb una mirada social i política que cap dels altres té. És un modernitzador de públics i, directa o indirectament, el gran descobridor de Santiago Segura. *El día de la bestia* obre un espai per a un cinema popular amb consciència de gènere, grotesc i satíric, que Segura portarà després com a director a una escala de taquilla extraordinària amb *Torrente*.
 
 És el menys industrial del grup, el que més s'assembla a un autor en el sentit europeu, però mai ha jugat gaire al circuit dels grans festivals. La seva presència a Venècia el 2010 amb *Balada triste de trompeta*, Lleó de Plata al millor director, és pràcticament l'única incursió significativa en aquest circuit. *Perfectos desconocidos* (2017, 3,28M) és el seu pic de taquilla, i curiosament el seu film menys autoral, en tractar-se d'una adaptació d'un recent èxit italià.
 
