@@ -21,7 +21,7 @@ La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Sempr
 
 ### 4. L'IVA del 21% (2012) i l'ascens de la TV de pagament
 
-El cop més dur per a les sales en democràcia: el govern Rajoy puja l'IVA cultural del 8% al 21% en plena crisi. El mercat cau de ~100 milions d'entrades el 2011 (20) a ~70 milions el 2013 i no es recupera mai del tot. A mesura que la sala perd pes, les finestres domèstiques el guanyen. El públic que deixa d'anar a les sales no desapareix, migra: cap a la televisió de pagament i, progressivament, cap a les plataformes que ja s'albiren a l'horitzó.
+El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cultural del 8% al 21% en plena crisi. El mercat cau de prop de ~100 milions d’entrades el 2011 a uns ~70 milions el 2013. Després hi haurà una recuperació parcial, però la sala ja queda instal·lada en una fragilitat nova, que la pandèmia acabarà d’exposar. A mesura que la sala perd centralitat, les finestres domèstiques guanyen pes: televisió de pagament primer, plataformes després. Una part del consum no desapareix, es desplaça.
 
 ### 5. Netflix i l'explosió de plataformes (2015–2025)
 
