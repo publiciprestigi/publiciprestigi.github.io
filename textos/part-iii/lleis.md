@@ -11,7 +11,7 @@ El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que
 
 El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50% del pressupost i neix l'ICAA. Eleva la qualitat del cinema espanyol, però elimina pràcticament el cinema de gènere popular. TVE és l'única alternativa a la sala: un passi eventual anys després de l'estrena. El factor multiplicador és ×1,0: qui no veia el film a la sala gairebé no el veia.
 
-### 2. Les televisions privades (1990): la televisió entra al model
+### 2. Les televisions privades (1990): canvi de model
 
 L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró: els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades, taquilla, televisió i Estat (19). La televisió deixa de ser una emissió eventual anys després de l’estrena i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Los otros* a *Mar adentro* o *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
 
