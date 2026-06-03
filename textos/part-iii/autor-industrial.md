@@ -3,7 +3,7 @@ Hi ha una tercera categoria que l'estudi ha documentat en dades, però no ha nom
 <!-- /intro -->
 
 <!-- bloc-iglesia -->
-### Álex de la Iglesia: el precursor
+## Álex de la Iglesia: el precursor
 
 I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa* (1999), *La comunidad* (2000): cinema de gènere amb una mirada social i política que cap dels altres té. Un modernitzador de públics i, directa o indirectament, el gran descobridor de Santiago Segura: va obrir un espai per a un cinema popular amb consciència de gènere que abans no existia a Espanya, un espai que Segura va saber explotar a posteriori amb uns resultats extraordinaris, fins a convertir-se en el director més taquiller de la història del cinema espanyol. (22)
 
