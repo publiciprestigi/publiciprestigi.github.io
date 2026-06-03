@@ -13,7 +13,7 @@ Saura és el director més present als grans festivals internacionals amb molta 
 <!-- comentari-saura -->
 - *La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s, amb una penetració molt alta dins el seu temps: 4,01% i 3,59%, respectivament. En un mercat encara enorme, aquestes xifres no el situaven al nivell del cinema popular de masses, però sí molt per sobre de la idea que avui tenim del cinema d’autor de festival.
 
-- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. *El Dorado* passa de 572k espectadors en sala a un IAA estimat d’1,43M–2,00M, i *Ay, Carmela*, de 907k a 1,82M–2,72M. En audiència acumulada, és probablement el film de Saura amb més abast.
+- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. *El Dorado* passa de 572k espectadors en sala a un IAA estimat d’1,43M–2,00M, i *Ay, Carmela*, de 907k a 1,82M–2,72M. En audiència acumulada, és probablement el film de Saura amb més impacte de la seva carrera.
 <!-- /comentari-saura -->
 
 <!-- bloc-almodovar -->
