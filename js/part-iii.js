@@ -735,7 +735,7 @@ window.PiP_graficSauraAlmodovar = function() {
           if (!point) return;
           // ★ als premiats (substitueix el punt natiu, que té radius 0)
           if (pt.premiat) {
-            c.font = 'bold 22px -apple-system, Arial, sans-serif';
+            c.font = 'bold 18px -apple-system, Arial, sans-serif';
             c.fillStyle = ds.borderColor;
             c.textBaseline = 'middle';
             c.fillText('★', point.x, point.y);
@@ -763,7 +763,7 @@ window.PiP_graficSauraAlmodovar = function() {
           backgroundColor: '#1E4080',
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 0 : 6,
+          pointRadius: ctx => ctx.raw.premiat ? 0 : 7,
           pointHitRadius: 12,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
@@ -776,7 +776,7 @@ window.PiP_graficSauraAlmodovar = function() {
           backgroundColor: '#9B2335',
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 0 : 6,
+          pointRadius: ctx => ctx.raw.premiat ? 0 : 7,
           pointHitRadius: 12,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
@@ -1035,8 +1035,8 @@ window.PiP_graficAutorIndustrial = function() {
   function ptRadius(f) {
     if (f.premiat) return 0;     // estrella al plugin
     if (f.top100) return 9;
-    if (f.festival) return 7;
-    return 5;
+    if (f.festival) return 8;
+    return 6;
   }
   function ptColor(f, def) {
     if (!f.festival && !f.top100) return '#999';
@@ -1061,7 +1061,7 @@ window.PiP_graficAutorIndustrial = function() {
           if (!point) return;
           // ★ als premiats
           if (pt.premiat) {
-            c.font = 'bold 22px -apple-system, Arial, sans-serif';
+            c.font = 'bold 18px -apple-system, Arial, sans-serif';
             c.fillStyle = ds.borderColor;
             c.textBaseline = 'middle';
             c.fillText('★', point.x, point.y);
