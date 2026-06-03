@@ -568,10 +568,10 @@ const COLORS_DEC_GLOBAL = {
 };
 
 const COLORS_DIRECTOR = {
-  'Rodrigo Sorogoyen':    { fort: '#c4a050', fluix: '#ecdca0' }, // blat/palla
-  'Oliver Laxe':          { fort: '#b88040', fluix: '#e8c890' }, // ocre
-  'Carla Simón':          { fort: '#b06030', fluix: '#e8b890' }, // terracota clar
-  'Alauda Ruiz de Azúa':  { fort: '#a05030', fluix: '#e8a890' }, // salmó
+  'Rodrigo Sorogoyen':    { fort: '#c4a050', fluix: '#f0e2b8' }, // blat/palla
+  'Oliver Laxe':          { fort: '#b88040', fluix: '#f0d4ac' }, // ocre
+  'Carla Simón':          { fort: '#b06030', fluix: '#f0c4ac' }, // terracota clar
+  'Alauda Ruiz de Azúa':  { fort: '#a05030', fluix: '#f0b4ac' }, // salmó
 };
 
 const TAULA_PELI_HEADER = `
@@ -844,7 +844,7 @@ window.PiP_graficGeneracioActual = function() {
     const tit = document.createElement('p');
     tit.id = 'ga-tit';
     tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = 'Generació actual — Espectadors a sala (barra plena) vs. IAA estimat (barra clara)';
+    tit.innerHTML = 'Generació actual — Espectadors a sala (barra sòlida) vs. IAA estimat (barra clara)';
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
@@ -883,9 +883,37 @@ window.PiP_graficGeneracioActual = function() {
   const colorsFort = orden.map(f => COLORS_DIR[f.director].fort);
   const colorsFluix = orden.map(f => COLORS_DIR[f.director].fluix);
 
+  // Plugin: línia separadora subtil entre canvis de director
+  const sepDirectors = {
+    id: 'sep-directors',
+    afterDraw(chart) {
+      const c = chart.ctx;
+      const meta = chart.getDatasetMeta(0);
+      c.save();
+      c.strokeStyle = 'rgba(0,0,0,0.18)';
+      c.setLineDash([3, 3]);
+      c.lineWidth = 1;
+      for (let i = 0; i < orden.length - 1; i++) {
+        if (orden[i].director !== orden[i+1].director) {
+          const bar1 = meta.data[i];
+          const bar2 = meta.data[i+1];
+          if (bar1 && bar2) {
+            const y = (bar1.y + bar2.y) / 2;
+            c.beginPath();
+            c.moveTo(chart.scales.x.left, y);
+            c.lineTo(chart.scales.x.right, y);
+            c.stroke();
+          }
+        }
+      }
+      c.restore();
+    },
+  };
+
   const ctx = el.getContext('2d');
   window._chartGenActual = new Chart(ctx, {
     type: 'bar',
+    plugins: [sepDirectors],
     data: {
       labels,
       datasets: [
@@ -942,6 +970,13 @@ window.PiP_graficGeneracioActual = function() {
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#b06030;display:inline-block;border-radius:2px"></span>Carla Simón</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a05030;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
+
+    // Text peu del gràfic
+    const peu = document.createElement('p');
+    peu.id = 'ga-peu';
+    peu.style.cssText = 'text-align:center;font-size:11px;color:#888;font-style:italic;margin:8px 0 0';
+    peu.textContent = 'Cada parella de barres representa un film; el color identifica el director.';
+    bloc.appendChild(peu);
   }
 };
 
