@@ -721,21 +721,29 @@ window.PiP_graficSauraAlmodovar = function() {
     titol: f.titol, premiat: f.premiat,
   }));
 
-  // Plugin per dibuixar etiquetes amb el nom del film
+  // Plugin per dibuixar etiquetes amb el nom del film + estrella als premiats
   const pluginNoms = {
     id: 'sa-noms',
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
-      c.font = 'italic 11px -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
       chart.data.datasets.forEach((ds, di) => {
         const meta = chart.getDatasetMeta(di);
-        c.fillStyle = ds.borderColor;
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          // alterna sobre/sota per evitar superposicions
+          // ★ als premiats (substitueix el punt natiu, que té radius 0)
+          if (pt.premiat) {
+            c.font = 'bold 22px -apple-system, Arial, sans-serif';
+            c.fillStyle = ds.borderColor;
+            c.textBaseline = 'middle';
+            c.fillText('★', point.x, point.y);
+          }
+          // Nom del film
+          c.font = 'italic 11px -apple-system, Arial, sans-serif';
+          c.fillStyle = ds.borderColor;
+          c.textBaseline = 'alphabetic';
           const dy = i % 2 === 0 ? -10 : 18;
           c.fillText(pt.titol, point.x, point.y + dy);
         });
@@ -755,8 +763,9 @@ window.PiP_graficSauraAlmodovar = function() {
           backgroundColor: '#1E4080',
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 9 : 6,
-          pointStyle: ctx => ctx.raw.premiat ? 'rectRot' : 'circle',
+          pointRadius: ctx => ctx.raw.premiat ? 0 : 6,
+          pointHitRadius: 12,
+          pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
@@ -767,8 +776,9 @@ window.PiP_graficSauraAlmodovar = function() {
           backgroundColor: '#9B2335',
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 9 : 6,
-          pointStyle: ctx => ctx.raw.premiat ? 'rectRot' : 'circle',
+          pointRadius: ctx => ctx.raw.premiat ? 0 : 6,
+          pointHitRadius: 12,
+          pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
@@ -817,7 +827,7 @@ window.PiP_graficSauraAlmodovar = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;background:#666;display:inline-block;border-radius:50%"></span><span>Festival (sense premi)</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="width:11px;height:11px;background:#666;display:inline-block;transform:rotate(45deg)"></span><span>Festival + premi</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="color:#666;font-size:18px;line-height:1">★</span><span>Festival + premi</span></span>`;
     bloc.appendChild(leg);
   }
 
@@ -1018,12 +1028,13 @@ window.PiP_graficAutorIndustrial = function() {
   const ctx = el.getContext('2d');
 
   function ptStyle(f) {
-    if (f.premiat) return 'rectRot';
     if (f.top100)  return 'rect';
     return 'circle';
+    // Premiats es dibuixen com a ★ al plugin (pointRadius 0)
   }
   function ptRadius(f) {
-    if (f.premiat || f.top100) return 9;
+    if (f.premiat) return 0;     // estrella al plugin
+    if (f.top100) return 9;
     if (f.festival) return 7;
     return 5;
   }
@@ -1036,25 +1047,32 @@ window.PiP_graficAutorIndustrial = function() {
   const COL_AMENABAR = '#1e3d6b';  // blau marí
   const COL_BAYONA   = '#1e6b5c';  // verd
 
-  // Plugin etiquetes amb el nom del film
+  // Plugin etiquetes amb el nom del film + estrella als premiats
   const pluginNoms = {
     id: 'ai-noms',
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
-      c.font = 'italic 11px -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
       chart.data.datasets.forEach((ds, di) => {
         const meta = chart.getDatasetMeta(di);
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          // Color: gris pels "altres", del director per la resta
+          // ★ als premiats
+          if (pt.premiat) {
+            c.font = 'bold 22px -apple-system, Arial, sans-serif';
+            c.fillStyle = ds.borderColor;
+            c.textBaseline = 'middle';
+            c.fillText('★', point.x, point.y);
+          }
+          // Nom del film (els "altres" en gris)
           const isGris = !pt.festival && !pt.top100;
+          c.font = 'italic 11px -apple-system, Arial, sans-serif';
           c.fillStyle = isGris ? '#999' : ds.borderColor;
+          c.textBaseline = 'alphabetic';
           const dy = i % 2 === 0 ? -14 : 20;
-          const sufix = pt.premiat ? '  ★' : '';
-          c.fillText(pt.titol + sufix, point.x, point.y + dy);
+          c.fillText(pt.titol, point.x, point.y + dy);
         });
       });
       c.restore();
@@ -1156,7 +1174,7 @@ window.PiP_graficAutorIndustrial = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
-      <span style="display:flex;align-items:center;gap:5px;margin-left:10px"><span style="width:11px;height:11px;background:#666;display:inline-block;transform:rotate(45deg)"></span><span>Festival + premi</span></span>
+      <span style="display:flex;align-items:center;gap:5px;margin-left:10px"><span style="color:#666;font-size:18px;line-height:1">★</span><span>Festival + premi</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:11px;height:11px;background:#666;display:inline-block"></span><span>Top 100</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;background:#999;display:inline-block;border-radius:50%"></span><span>Altres films documentats</span></span>`;
     bloc.appendChild(leg);
