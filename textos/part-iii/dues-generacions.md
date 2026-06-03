@@ -21,7 +21,7 @@ Saura és el director més present als grans festivals internacionals amb molta 
 
 Almodóvar és l’únic director del corpus que sosté durant dècades les dues dimensions alhora: presència als festivals internacionals i públic massiu al mercat espanyol. La seva carrera no anul·la la bretxa entre públic i prestigi, n’és l’excepció més visible.
 
-El gràfic mostra una trajectòria molt diferent de la de Saura: menys irregularitat i més evolució. Primer, ascens progressiu fins al gran esclat de *Mujeres al borde…*. Després, consolidació internacional i fort rendiment comercial als 90s i primers 2000s. Finalment, a partir dels 2010s, un desplaçament cap a xifres de sala més pròpies del nou cinema d’autor internacional.
+La taula mostra una trajectòria molt diferent de la de Saura: menys irregularitat i més evolució. Primer, ascens progressiu fins al gran esclat de *Mujeres al borde…*. Després, consolidació internacional i fort rendiment comercial als 90s i primers 2000s. Finalment, a partir dels 2010s, un desplaçament cap a xifres de sala més pròpies del nou cinema d’autor internacional.
 <!-- /bloc-almodovar -->
 
 <!-- comentari-almodovar -->
