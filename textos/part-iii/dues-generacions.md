@@ -7,15 +7,13 @@ El que segueix és una mirada a dues carreres emblemàtiques de la generació an
 <!-- bloc-saura -->
 ## Carlos Saura (1966–1996): el prestigi com a força de resistència
 
-Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 premis, presència a Cannes, Berlín, Venècia i Sant Sebastià. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial: els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
+Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial: els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
 - *La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s. No entren al Top 100 històric, però superen el milió d’espectadors i aconsegueixen una penetració molt alta dins el seu temps. No eren cinema popular de masses, però tampoc cinema invisible: eren films d’autor amb una presència pública real.
 
-- La paradoxa dels 80s és *Deprisa, deprisa*: Ós d’Or a Berlín i 1,05M d’espectadors. És el moment en què Saura aconsegueix alhora el prestigi màxim i un públic significatiu. Però la continuïtat no arriba: dos anys després, *Carmen* baixa fins als 427k, i la seva evolució cap a projectes de dansa i música va estrènyer progressivament el seu abast en sales.
-
-- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. El Dorado passa de 572k espectadors en sala a un IAA estimat d’1,43M–2,00M, i Ay, Carmela, de 907k a 1,82M–2,72M. En audiència acumulada, és probablement el film de Saura amb més abast.
+- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. +El Dorado+ passa de 572k espectadors en sala a un IAA estimat d’1,43M–2,00M, i +Ay, Carmela+, de 907k a 1,82M–2,72M. En audiència acumulada, és probablement el film de Saura amb més abast.
 <!-- /comentari-saura -->
 
 <!-- bloc-almodovar -->
