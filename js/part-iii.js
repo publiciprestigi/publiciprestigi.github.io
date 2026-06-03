@@ -917,14 +917,14 @@ window.PiP_graficGeneracioActual = function() {
           stacked: true,
           ticks: {
             callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
-            color: '#363737', font: { size: 11 },
+            color: '#363737', font: { size: 12 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Espectadors (sala + IAA estimat)', font: { size: 12 } },
+          title: { display: true, text: 'Espectadors (sala + IAA estimat)', font: { size: 13 } },
         },
         y: {
           stacked: true,
-          ticks: { color: '#363737', font: { size: 10 } },
+          ticks: { color: '#363737', font: { size: 12 } },
           grid: { display: false },
         },
       },
