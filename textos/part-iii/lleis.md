@@ -38,7 +38,7 @@ La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d�
 <!-- /moments -->
 
 <!-- conclusio -->
-El que revela aquest recorregut és que la bretxa entre el cinema de festivals i el cinema popular no és un accident ni una deriva natural del mercat: és el resultat acumulat de decisions polítiques concretes, lleis amb intencions específiques i canvis tecnològics que ningú va poder anticipar del tot. El Decret Miró volia fer cinema de qualitat i va acabar marginalitzant el cinema popular. L'IVA del 21% volia recaptar en temps de crisi i va provocar que les sales es buidessin. Les plataformes volien retenir subscriptors i la definició del que entenem per "veure una pel·lícula" d'estrena s'ha transformat per sempre.
+El que revela aquest recorregut és que la bretxa entre el cinema de festivals i el cinema popular no és un accident ni una deriva natural del mercat: és el resultat acumulat de decisions polítiques concretes, lleis amb intencions específiques i canvis tecnològics que ningú va poder anticipar del tot. El Decret Miró volia fer cinema de qualitat i va acabar marginalitzant el cinema popular. L'IVA del 21% volia recaptar en temps de crisi i va provocar que les sales es buidessin. Les plataformes volien retenir subscriptors i la definició del que entenem per *veure una pel·lícula* d'estrena s'ha transformat per sempre.
 
 Les dades d'aquest estudi no es poden llegir sense aquest context: no documenten un mercat lliure sinó un sector profundament modelat per la intervenció pública, els cicles econòmics i les revolucions tecnològiques.
 <!-- /conclusio -->
