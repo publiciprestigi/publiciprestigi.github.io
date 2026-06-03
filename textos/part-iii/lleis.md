@@ -19,7 +19,7 @@ L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pa
 
 La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Semprún (1988) havia intentat corregir els efectes del Decret Miró substituint les subvencions anticipades per ajudes automàtiques; la Llei 15/2001 havia establert un primer marc democràtic modern. La 55/2007 consolida tot aquest recorregut, codifica les obligacions d'inversió de les televisions i regula per primera vegada la distribució digital. No canvia el model de finançament (les televisions privades ja fa 17 anys que financen cinema) però li dona coherència legal. És també la llei que les plataformes faran obsoleta en menys de deu anys.
 
-### 4. L'IVA del 21% (2012) i l'ascens de la TV de pagament
+### 4. L'IVA del 21% (2012) i la fragilitat de la sala
 
 El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cultural del 8% al 21% en plena crisi. El mercat cau de prop de ~100 milions d’entrades el 2011 a uns ~70 milions el 2013. Després hi haurà una recuperació parcial, però la sala ja queda instal·lada en una fragilitat nova, que la pandèmia acabarà d’exposar. A mesura que la sala perd centralitat, les finestres domèstiques guanyen pes: televisió de pagament primer, plataformes després. Una part del consum no desapareix, es desplaça.
 
