@@ -1,5 +1,5 @@
 <!-- intro -->
-El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que van modelar la seva producció, els canvis tecnològics que van transformar la seva distribució i les decisions polítiques que van determinar qui podia fer que i amb quins diners. El gràfic següent integra en una sola vista les finestres de distribució de cada període, i els moments legislatius i tecnològics clau que expliquen (també) per què les dades de l'estudi diuen el que diuen.
+El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que van modelar la seva producció, els canvis tecnològics que van transformar la seva distribució i les decisions polítiques que van determinar qui podia fer què i amb quins diners. El gràfic següent integra en una sola vista les finestres de distribució de cada període, i els moments legislatius i tecnològics clau que ajuden a entendre per què les dades de l’estudi diuen el que diuen.
 
 <!-- /intro -->
 
@@ -29,7 +29,10 @@ Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el pun
 
 ### 6. Les mesures de paritat (2018–2020): un canvi estructural
 
-La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d'igualtat de gènere, però sense discriminació positiva concreta. El canvi real arriba el 2018, quan l'ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s'hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L'efecte és mesurable: del 23% de les ajudes selectives el 2018 al 51% el 2021. La generació que protagonitza els festivals 2010–2025 (Simón, Palomero, Ruiz de Azúa, Bollaín, Coixet) és filla directa d'aquestes polítiques. Ara bé, les directores reben de mitjana un 24% menys de pressupost per film: amb menys recursos, el cinema més personal és sovint l'única opció viable.
+La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d'igualtat de gènere, però sense discriminació positiva concreta. El canvi real arriba el 2018, quan l'ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s'hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L'efecte és mesurable: del 23% de les ajudes selectives el 2018 al 51% el 2021. La generació que protagonitza els festivals 2010–2025 (Ruiz de Azúa, Simón, Camborda, Palomero, Funes, Martín) és filla directa d'aquestes polítiques. Ara bé, les directores reben de mitjana un 24% menys de pressupost per film: amb menys recursos, el cinema més personal és sovint l'única opció viable.
+
+
+
 
 ### 7. La Llei de Comunicació Audiovisual (2022) i la batalla del productor independent
 
