@@ -1011,7 +1011,7 @@ window.PiP_graficAutorIndustrial = function() {
     const tit = document.createElement('p');
     tit.id = 'ai-tit';
     tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = 'De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala';
+    tit.innerHTML = 'De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala per film (1995–2025)';
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
