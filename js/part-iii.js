@@ -917,8 +917,8 @@ window.PiP_graficGeneracioActual = function() {
     data: {
       labels,
       datasets: [
-        { label: 'Espectadors a sala', data: sala, backgroundColor: colorsFort, borderWidth: 0 },
-        { label: 'IAA estimat (valor mig)', data: iaaAdd, backgroundColor: colorsFluix, borderWidth: 0 },
+        { label: 'Espectadors a sala', data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsFluix, borderWidth: 0 },
+        { label: 'IAA estimat (valor mig)', data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsFort, borderWidth: 0 },
       ],
     },
     options: {
