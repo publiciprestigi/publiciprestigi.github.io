@@ -1,17 +1,32 @@
 <!-- intro -->
-Hi ha una tercera categoria que l'estudi ha documentat en dades, però no ha nomenat explícitament, i que no encaixa ni amb el circuit de festivals de la Part II ni amb el cinema popular de consum de la Part I. Podria anomenar-se cinema d'autor industrial o de mercat, com quan *Cahiers du Cinéma* parla i valora a Hitchcock, Hawks o Spielberg. Dominen el llenguatge del gènere popular (terror, *thriller*, ciència-ficció, comèdia negra) amb una veu autoral reconeixible, treballen amb pressupostos grans i connecten amb el gran públic sense necessitar la validació dels festivals europeus. Bayona, Amenábar i De la Iglesia no encaixen ni amb Saura ni amb Segura: operen en una zona intermèdia on l'objectiu no és Cannes sinó la sala de cinema i el gran públic, però amb un domini i una ambició artística que els distingeix del cinema popular pur de *blockbuster*.
+Hi ha una tercera categoria que l’estudi ha documentat en dades, però no ha nomenat explícitament: un cinema que no encaixa del tot ni amb el circuit de festivals de la Part II ni amb el cinema popular de consum de la Part I. Podríem anomenar-lo cinema d’autor industrial: directors que dominen el llenguatge del gènere popular —terror, *thriller*, ciència-ficció, comèdia negra— amb una veu pròpia, pressupostos grans i una connexió directa amb el gran públic.
+
+Bayona, Amenábar i De la Iglesia no encaixen ni amb Saura ni amb Segura. Operen en una zona intermèdia on l’objectiu no és Cannes, sinó la sala de cinema i el gran públic, però amb un domini formal i una ambició artística que els distingeix del cinema popular pur.
 <!-- /intro -->
 
 <!-- bloc-iglesia -->
 ## Álex de la Iglesia: el precursor
 
 I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa* (1999), *La comunidad* (2000): cinema de gènere amb una mirada social i política que cap dels altres té. Un modernitzador de públics i, directa o indirectament, el gran descobridor de Santiago Segura, obrint un espai per a un cinema popular amb consciència de gènere que després Segura va saber explotar amb uns resultats extraordinaris, convertint-se en el director més taquiller de la història del cinema espanyol. És el menys industrial del grup, el que més s'assembla a un autor en el sentit europeu, però mai ha volgut jugar gaire al joc dels festivals europeus. La seva presència a Venècia el 2010 amb *Balada triste de trompeta*, Lleó de Plata al millor director, és pràcticament l'única incursió significativa en aquell circuit. *Perfectos desconocidos* (2017, 3,28M) és el seu pic de taquilla, i curiosament el seu film menys autoral, en tractar-se d'una adaptació d'un recent èxit italià.
+
+
+És el cas més complex dels tres. El día de la bestia (1995), Muertos de risa (1999) o La comunidad (2000) són cinema de gènere amb una mirada social i política molt marcada. De la Iglesia obre un espai per a un cinema popular amb consciència de gènere, grotesc, violent, satíric i recognoscible, que després altres directors explotarien per vies molt diferents.
+
+És el menys industrial del grup i el que més s’assembla a un autor en el sentit europeu, però mai ha jugat gaire al circuit dels grans festivals. La seva presència a Venècia el 2010 amb Balada triste de trompeta, Lleó de Plata al millor director, és gairebé l’única incursió significativa en aquest terreny. Perfectos desconocidos (2017, 3,28M) és el seu pic de taquilla i, alhora, un cas revelador: el seu film més vist és també el menys autoral, una adaptació d’un èxit italià recent.
+
+
+“També és, indirectament, una peça clau en l’aparició de Santiago Segura: sense El día de la bestia, on Segura esdevé una presència icònica, costa imaginar l’esclat de Torrente tres anys després. De la Iglesia obre una via de cinema popular friqui, grotesc i de gènere que Segura portarà després fins a la taquilla massiva.”
+
+
 <!-- /bloc-iglesia -->
 
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més pur del perfil
 
-*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film és un gènere diferent executat amb precisió i amb una marca d'autor reconeixible. *Mar adentro* és el moment en què el circuit de festivals el reconeix (Lleó de Plata a Venècia, Oscar, 4,1 milions d'espectadors, #12 del Top 100) però és l'excepció en una carrera construïda sobre el gran públic. Amenábar ha fet exactament el que Almodóvar va fer als anys 80–90, construir un públic massiu amb cinema d'autor accessible, però sense el reconeixement festival sistemàtic. El seu cas suggereix que la 'doble corona' és possible per una via diferent: no només a partir dels festivals europeus sinó la dels premis anglosaxons i el mercat internacional.
+*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film treballa un gènere diferent amb precisió industrial i marca d’autor reconeixible. Mar adentro és el moment en què el circuit de prestigi el reconeix plenament —Lleó de Plata a Venècia, Oscar, 4,1 milions d’espectadors, #12 del Top 100—, però és l’excepció dins d’una carrera construïda sobretot sobre el gran públic.
+
+Amenábar ocupa una funció comparable al que va fer Almodóvar als anys 80–90, construir un públic massiu amb cinema d'autor accessible, però sense el reconeixement festival sistemàtic. El seu cas suggereix que la 'doble corona' és possible per una via diferent: no només a partir dels festivals europeus sinó la dels premis anglosaxons i el mercat internacional.
+
 <!-- /bloc-amenabar -->
 
 <!-- bloc-bayona -->
