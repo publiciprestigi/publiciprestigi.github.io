@@ -7,7 +7,7 @@ El que segueix és una mirada a dues carreres emblemàtiques de la generació an
 <!-- bloc-saura -->
 ## Carlos Saura (1966–1996): el prestigi com a força de resistència
 
-Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial: els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
+Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial, els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
