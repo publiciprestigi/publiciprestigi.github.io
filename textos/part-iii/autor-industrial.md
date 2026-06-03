@@ -13,7 +13,7 @@ I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més pur del perfil
 
-*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film és un gènere diferent executat amb precisió i amb una marca d'autor reconeixible. *Mar adentro* és el moment en què el circuit de festivals el reconeix (Lleó de Plata a Venècia, Oscar, 4,1 milions d'espectadors, #12 del Top 100) però és l'excepció en una carrera construïda sobre el gran públic. Amenábar ha fet exactament el que Almodóvar va fer als anys 80–90, construir un públic massiu amb cinema d'autor accessible, però sense el reconeixement festival sistemàtic. El seu cas suggereix que la "doble corona" és possible per una via diferent: no només a partir dels festivals europeus sinó la dels premis anglosaxons i el mercat internacional.
+*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004): cada film és un gènere diferent executat amb precisió i amb una marca d'autor reconeixible. *Mar adentro* és el moment en què el circuit de festivals el reconeix (Lleó de Plata a Venècia, Oscar, 4,1 milions d'espectadors, #12 del Top 100) però és l'excepció en una carrera construïda sobre el gran públic. Amenábar ha fet exactament el que Almodóvar va fer als anys 80–90, construir un públic massiu amb cinema d'autor accessible, però sense el reconeixement festival sistemàtic. El seu cas suggereix que la 'doble corona' és possible per una via diferent: no només a partir dels festivals europeus sinó la dels premis anglosaxons i el mercat internacional.
 <!-- /bloc-amenabar -->
 
 <!-- bloc-bayona -->
