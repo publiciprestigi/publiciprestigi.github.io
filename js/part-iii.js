@@ -568,10 +568,10 @@ const COLORS_DEC_GLOBAL = {
 };
 
 const COLORS_DIRECTOR = {
-  'Rodrigo Sorogoyen':    { fort: '#c4a050', fluix: '#f0e2b8' }, // blat/palla
-  'Oliver Laxe':          { fort: '#b88040', fluix: '#f0d4ac' }, // ocre
-  'Carla Simón':          { fort: '#b06030', fluix: '#f0c4ac' }, // terracota clar
-  'Alauda Ruiz de Azúa':  { fort: '#a05030', fluix: '#f0b4ac' }, // salmó
+  'Rodrigo Sorogoyen':    { fort: '#dcbf78', fluix: '#f0e2b8', paler: '#f7eed6' }, // blat/palla
+  'Oliver Laxe':          { fort: '#d4ac6e', fluix: '#f0d4ac', paler: '#f7e2cf' }, // ocre
+  'Carla Simón':          { fort: '#d49a72', fluix: '#f0c4ac', paler: '#f7d8cf' }, // terracota clar
+  'Alauda Ruiz de Azúa':  { fort: '#d4886e', fluix: '#f0b4ac', paler: '#f7cfcf' }, // salmó
 };
 
 const TAULA_PELI_HEADER = `
@@ -882,6 +882,7 @@ window.PiP_graficGeneracioActual = function() {
   const iaaAdd = orden.map(f => Math.max(0, rangMig(f.iaa_xifra) - f.esp));
   const colorsFort = orden.map(f => COLORS_DIR[f.director].fort);
   const colorsFluix = orden.map(f => COLORS_DIR[f.director].fluix);
+  const colorsPaler = orden.map(f => COLORS_DIRECTOR[f.director].paler);
 
   // Plugin: línia separadora subtil entre canvis de director
   const sepDirectors = {
@@ -917,8 +918,8 @@ window.PiP_graficGeneracioActual = function() {
     data: {
       labels,
       datasets: [
-        { label: 'Espectadors a sala', data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsFluix, borderWidth: 0 },
-        { label: 'IAA estimat (valor mig)', data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsFort, borderWidth: 0 },
+        { label: 'Espectadors a sala', data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
+        { label: 'IAA estimat (valor mig)', data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
       ],
     },
     options: {
@@ -965,10 +966,10 @@ window.PiP_graficGeneracioActual = function() {
     leg.id = 'ga-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#c4a050;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#b88040;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#b06030;display:inline-block;border-radius:2px"></span>Carla Simón</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a05030;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#dcbf78;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d4ac6e;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d49a72;display:inline-block;border-radius:2px"></span>Carla Simón</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d4886e;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
   }
 };
