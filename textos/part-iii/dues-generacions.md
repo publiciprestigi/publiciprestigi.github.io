@@ -11,7 +11,7 @@ Saura és el director més present als grans festivals internacionals amb molta 
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
--*La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s. No entren al Top 100 històric, però superen el milió d’espectadors i aconsegueixen una penetració molt alta dins el seu temps. No eren cinema popular de masses, però tampoc cinema invisible: eren films d’autor amb una presència pública real.
+- *La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s. No entren al Top 100 històric, però superen el milió d’espectadors i aconsegueixen una penetració molt alta dins el seu temps. No eren cinema popular de masses, però tampoc cinema invisible: eren films d’autor amb una presència pública real.
 
 - La paradoxa dels 80s és *Deprisa, deprisa*: Ós d’Or a Berlín i 1,05M d’espectadors. És el moment en què Saura aconsegueix alhora el prestigi màxim i un públic significatiu. Però la continuïtat no arriba: dos anys després, *Carmen* baixa fins als 427k, i la seva evolució cap a projectes de dansa i música va estrènyer progressivament el seu abast en sales.
 
