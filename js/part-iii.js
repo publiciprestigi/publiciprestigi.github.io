@@ -568,10 +568,10 @@ const COLORS_DEC_GLOBAL = {
 };
 
 const COLORS_DIRECTOR = {
-  'Rodrigo Sorogoyen':    { fort: '#8c4a3a', fluix: '#e8cfc6' }, // terracota
-  'Oliver Laxe':          { fort: '#558020', fluix: '#cee0a0' }, // verd llimona
-  'Carla Simón':          { fort: '#a07020', fluix: '#ebd8b0' }, // or fosc
-  'Alauda Ruiz de Azúa':  { fort: '#1a6878', fluix: '#bfdce0' }, // turquesa
+  'Rodrigo Sorogoyen':    { fort: '#c4a050', fluix: '#ecdca0' }, // blat/palla
+  'Oliver Laxe':          { fort: '#b88040', fluix: '#e8c890' }, // ocre
+  'Carla Simón':          { fort: '#b06030', fluix: '#e8b890' }, // terracota clar
+  'Alauda Ruiz de Azúa':  { fort: '#a05030', fluix: '#e8a890' }, // salmó
 };
 
 const TAULA_PELI_HEADER = `
@@ -937,10 +937,10 @@ window.PiP_graficGeneracioActual = function() {
     leg.id = 'ga-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#8c4a3a;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#558020;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a07020;display:inline-block;border-radius:2px"></span>Carla Simón</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1a6878;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#c4a050;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#b88040;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#b06030;display:inline-block;border-radius:2px"></span>Carla Simón</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#a05030;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
   }
 };
