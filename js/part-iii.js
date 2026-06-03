@@ -387,7 +387,7 @@ function construirCazaAlcarras() {
       <td class="col-num col-subtil">${gris(f.penetr)}</td>
       <td class="col-num col-subtil">${gris(f.quota)}</td>
       <td class="col-center col-subtil">${f.iic}</td>
-      <td class="col-num">${f.iaa_xifra}<br><span style="font-weight:400;color:#6b6b6b;font-size:0.9em">${f.iaa_mult}</span></td>
+      <td class="col-num"><strong>${f.iaa_xifra}</strong><br><span style="font-weight:400;color:#6b6b6b;font-size:0.9em">${f.iaa_mult}</span></td>
     </tr>`;
   }).join('');
 
@@ -677,7 +677,7 @@ function renderTaulaGen(films, contId, directorFix) {
       <td class="col-num col-subtil">${gris(f.penetr)}</td>
       <td class="col-num col-subtil">${gris(f.quota)}</td>
       <td class="col-center col-subtil">${f.iic}</td>
-      <td class="col-num" style="line-height:1.3">${f.iaa_xifra}<br><span style="font-weight:400;color:#6b6b6b;font-size:.9em">${f.iaa_mult}</span></td>
+      <td class="col-num" style="line-height:1.3"><strong>${f.iaa_xifra}</strong><br><span style="font-weight:400;color:#6b6b6b;font-size:.9em">${f.iaa_mult}</span></td>
     </tr>`;
   }).join('');
 
