@@ -6,6 +6,7 @@ El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que
 <!-- moments -->
 ## Set moments determinants
 <br>
+
 #### 1. El Decret Miró (1983) i la televisió pública
 
 El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50% del pressupost i neix l'ICAA. Eleva la qualitat del cinema espanyol, però elimina pràcticament el cinema de gènere popular. TVE és l'única alternativa a la sala: un passi eventual anys després de l'estrena. El factor multiplicador és ×1,0: qui no veia el film a la sala gairebé no el veia.
