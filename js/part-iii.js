@@ -568,10 +568,10 @@ const COLORS_DEC_GLOBAL = {
 };
 
 const COLORS_DIRECTOR = {
-  'Rodrigo Sorogoyen':    { fort: '#dcbf78', fluix: '#f0e2b8', paler: '#f7eed6' }, // blat/palla
-  'Oliver Laxe':          { fort: '#d4ac6e', fluix: '#f0d4ac', paler: '#f7e2cf' }, // ocre
-  'Carla Simón':          { fort: '#d49a72', fluix: '#f0c4ac', paler: '#f7d8cf' }, // terracota clar
-  'Alauda Ruiz de Azúa':  { fort: '#d4886e', fluix: '#f0b4ac', paler: '#f7cfcf' }, // salmó
+  'Rodrigo Sorogoyen':    { fort: '#d4b266', fluix: '#f0e2b8', paler: '#f7eed6' }, // blat/palla
+  'Oliver Laxe':          { fort: '#c89c5a', fluix: '#f0d4ac', paler: '#f7e2cf' }, // ocre
+  'Carla Simón':          { fort: '#c88a5e', fluix: '#f0c4ac', paler: '#f7d8cf' }, // terracota clar
+  'Alauda Ruiz de Azúa':  { fort: '#c8785e', fluix: '#f0b4ac', paler: '#f7cfcf' }, // salmó
 };
 
 const TAULA_PELI_HEADER = `
@@ -966,10 +966,10 @@ window.PiP_graficGeneracioActual = function() {
     leg.id = 'ga-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#dcbf78;display:inline-block;border-radius:2px"></span>Rodrigo Sorogoyen</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d4ac6e;display:inline-block;border-radius:2px"></span>Oliver Laxe</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d49a72;display:inline-block;border-radius:2px"></span>Carla Simón</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#d4886e;display:inline-block;border-radius:2px"></span>Alauda Ruiz de Azúa</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0e2b8;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Rodrigo Sorogoyen</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0d4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Oliver Laxe</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0c4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Carla Simón</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0b4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Alauda Ruiz de Azúa</span>`;
     bloc.appendChild(leg);
   }
 };
