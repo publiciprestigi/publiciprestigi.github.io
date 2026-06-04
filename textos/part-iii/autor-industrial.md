@@ -25,7 +25,7 @@ Amenábar ocupa una funció comparable a la d’Almodóvar als anys 80–90: con
 <!-- bloc-bayona -->
 ## J.A. Bayona: el més espectacular
 
-És qui ha portat la lògica d'aquesta categoria fins a les últimes conseqüències. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100), *Un monstruo viene a verme* (2016, 4,6M): tres films de gènere de gran format que han connectat amb el públic espanyol d'una manera que cap director de la seva generació ha igualat. I després, el salt a Hollywood amb *Jurassic Park* de la ma de, justament, Spielberg.
+És qui ha portat la lògica d'aquesta categoria fins a les últimes conseqüències. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100), *Un monstruo viene a verme* (2016, 4,6M): tres films de gènere de gran format que han connectat amb el públic espanyol d'una manera que cap director de la seva generació ha igualat. I després, el salt a Hollywood amb *Jurassic Park* de la ma de, precisament, Spielberg.
 
 Bayona no ha necessitat mai els festivals perquè el seu circuit és un altre (hi ha participat però mai en secció oficial competitiva). És el director espanyol que més s'ha apropat al model industrial internacional, i el fet que ho hagi fet des d'una base de cinema d'autor (*El orfanato* no és precisament una producció de gènere anònima) és el que el distingeix del cinema popular pur.
 
