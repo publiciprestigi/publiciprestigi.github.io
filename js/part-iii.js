@@ -721,33 +721,51 @@ window.PiP_graficSauraAlmodovar = function() {
     titol: f.titol, premiat: f.premiat,
   }));
 
-  // Plugin per dibuixar etiquetes amb el nom del film + estrella als premiats
+  // Plugin etiquetes amb el nom del film (tots en color del director)
   const pluginNoms = {
     id: 'sa-noms',
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
+      c.font = 'italic 11px -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
+      c.textBaseline = 'alphabetic';
       chart.data.datasets.forEach((ds, di) => {
         const meta = chart.getDatasetMeta(di);
+        c.fillStyle = ds.borderColor;
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          // ★ als premiats (substitueix el punt natiu, que té radius 0)
-          if (pt.premiat) {
-            c.font = 'bold 18px -apple-system, Arial, sans-serif';
-            c.fillStyle = ds.borderColor;
-            c.textBaseline = 'middle';
-            c.fillText('★', point.x, point.y);
-          }
-          // Nom del film
-          c.font = 'italic 11px -apple-system, Arial, sans-serif';
-          c.fillStyle = ds.borderColor;
-          c.textBaseline = 'alphabetic';
           const dy = i % 2 === 0 ? -10 : 18;
           c.fillText(pt.titol, point.x, point.y + dy);
         });
       });
+      c.restore();
+    },
+  };
+
+  // Plugin línia llindar Top 100 (2.020.217 esp.)
+  const pluginLlindar = {
+    id: 'sa-llindar',
+    afterDraw(chart) {
+      const VAL = 2020217;
+      const c = chart.ctx;
+      const y = chart.scales.y.getPixelForValue(VAL);
+      if (y < chart.scales.y.top || y > chart.scales.y.bottom) return;
+      c.save();
+      c.strokeStyle = '#888';
+      c.setLineDash([6, 4]);
+      c.lineWidth = 1;
+      c.beginPath();
+      c.moveTo(chart.scales.x.left, y);
+      c.lineTo(chart.scales.x.right, y);
+      c.stroke();
+      c.setLineDash([]);
+      c.font = '11px -apple-system, Arial, sans-serif';
+      c.fillStyle = '#888';
+      c.textAlign = 'right';
+      c.textBaseline = 'bottom';
+      c.fillText('Llindar Top 100', chart.scales.x.right - 6, y - 3);
       c.restore();
     },
   };
@@ -763,8 +781,7 @@ window.PiP_graficSauraAlmodovar = function() {
           backgroundColor: '#1E4080',
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 0 : 7,
-          pointHitRadius: 12,
+          pointRadius: 7,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
@@ -776,8 +793,7 @@ window.PiP_graficSauraAlmodovar = function() {
           backgroundColor: '#9B2335',
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ctx.raw.premiat ? 0 : 7,
-          pointHitRadius: 12,
+          pointRadius: 7,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
@@ -788,12 +804,13 @@ window.PiP_graficSauraAlmodovar = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
+      layout: { padding: { bottom: 28 } },
       plugins: {
         legend: { display: false },
         tooltip: {
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => fmt(ctx.parsed.y) + ' espectadors' + (ctx.raw.premiat ? ' · ★ premiat' : ''),
+            label: ctx => fmt(ctx.parsed.y) + ' espectadors',
           },
         },
       },
@@ -815,7 +832,7 @@ window.PiP_graficSauraAlmodovar = function() {
         },
       },
     },
-    plugins: [pluginNoms],
+    plugins: [pluginNoms, pluginLlindar],
   });
 
   // Llegenda HTML centrada
@@ -826,8 +843,7 @@ window.PiP_graficSauraAlmodovar = function() {
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;background:#666;display:inline-block;border-radius:50%"></span><span>Festival (sense premi)</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="color:#666;font-size:18px;line-height:1">★</span><span>Festival + premi</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
 
@@ -921,10 +937,36 @@ window.PiP_graficGeneracioActual = function() {
     },
   };
 
+  // Plugin: línia vertical llindar Top 100 (2.020.217 esp.)
+  const pluginLlindar = {
+    id: 'ga-llindar',
+    afterDraw(chart) {
+      const VAL = 2020217;
+      const c = chart.ctx;
+      const x = chart.scales.x.getPixelForValue(VAL);
+      if (x < chart.scales.x.left || x > chart.scales.x.right) return;
+      c.save();
+      c.strokeStyle = '#888';
+      c.setLineDash([6, 4]);
+      c.lineWidth = 1;
+      c.beginPath();
+      c.moveTo(x, chart.scales.y.top);
+      c.lineTo(x, chart.scales.y.bottom);
+      c.stroke();
+      c.setLineDash([]);
+      c.font = '11px -apple-system, Arial, sans-serif';
+      c.fillStyle = '#888';
+      c.textAlign = 'left';
+      c.textBaseline = 'top';
+      c.fillText('Llindar Top 100', x + 4, chart.scales.y.top + 4);
+      c.restore();
+    },
+  };
+
   const ctx = el.getContext('2d');
   window._chartGenActual = new Chart(ctx, {
     type: 'bar',
-    plugins: [sepDirectors],
+    plugins: [sepDirectors, pluginLlindar],
     data: {
       labels,
       datasets: [
@@ -979,7 +1021,8 @@ window.PiP_graficGeneracioActual = function() {
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0e2b8;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Rodrigo Sorogoyen</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0d4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Oliver Laxe</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0c4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Carla Simón</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0b4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Alauda Ruiz de Azúa</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0b4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Alauda Ruiz de Azúa</span>
+      <span style="display:flex;align-items:center;gap:5px;margin-left:8px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
 };
@@ -1027,54 +1070,55 @@ window.PiP_graficAutorIndustrial = function() {
 
   const ctx = el.getContext('2d');
 
-  function ptStyle(f) {
-    if (f.top100)  return 'rect';
-    return 'circle';
-    // Premiats es dibuixen com a ★ al plugin (pointRadius 0)
-  }
-  function ptRadius(f) {
-    if (f.premiat) return 0;     // estrella al plugin
-    if (f.top100) return 9;
-    if (f.festival) return 8;
-    return 6;
-  }
-  function ptColor(f, def) {
-    if (!f.festival && !f.top100) return '#999';
-    return def;
-  }
-
   const COL_IGLESIA  = '#b8463a';  // vermell càlid
   const COL_AMENABAR = '#1e3d6b';  // blau marí
   const COL_BAYONA   = '#1e6b5c';  // verd
 
-  // Plugin etiquetes amb el nom del film + estrella als premiats
+  // Plugin etiquetes amb el nom del film (tots en color del director)
   const pluginNoms = {
     id: 'ai-noms',
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
+      c.font = 'italic 11px -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
+      c.textBaseline = 'alphabetic';
       chart.data.datasets.forEach((ds, di) => {
         const meta = chart.getDatasetMeta(di);
+        c.fillStyle = ds.borderColor;
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          // ★ als premiats
-          if (pt.premiat) {
-            c.font = 'bold 18px -apple-system, Arial, sans-serif';
-            c.fillStyle = ds.borderColor;
-            c.textBaseline = 'middle';
-            c.fillText('★', point.x, point.y);
-          }
-          // Nom del film (els "altres" en gris)
-          const isGris = !pt.festival && !pt.top100;
-          c.font = 'italic 11px -apple-system, Arial, sans-serif';
-          c.fillStyle = isGris ? '#999' : ds.borderColor;
-          c.textBaseline = 'alphabetic';
           const dy = i % 2 === 0 ? -14 : 20;
           c.fillText(pt.titol, point.x, point.y + dy);
         });
       });
+      c.restore();
+    },
+  };
+
+  // Plugin línia llindar Top 100 (2.020.217 esp.)
+  const pluginLlindar = {
+    id: 'ai-llindar',
+    afterDraw(chart) {
+      const VAL = 2020217;
+      const c = chart.ctx;
+      const y = chart.scales.y.getPixelForValue(VAL);
+      if (y < chart.scales.y.top || y > chart.scales.y.bottom) return;
+      c.save();
+      c.strokeStyle = '#888';
+      c.setLineDash([6, 4]);
+      c.lineWidth = 1;
+      c.beginPath();
+      c.moveTo(chart.scales.x.left, y);
+      c.lineTo(chart.scales.x.right, y);
+      c.stroke();
+      c.setLineDash([]);
+      c.font = '11px -apple-system, Arial, sans-serif';
+      c.fillStyle = '#888';
+      c.textAlign = 'right';
+      c.textBaseline = 'bottom';
+      c.fillText('Llindar Top 100', chart.scales.x.right - 6, y - 3);
       c.restore();
     },
   };
@@ -1090,9 +1134,9 @@ window.PiP_graficAutorIndustrial = function() {
           backgroundColor: COL_IGLESIA,
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ptRadius(ctx.raw),
-          pointStyle: ctx => ptStyle(ctx.raw),
-          pointBackgroundColor: ctx => ptColor(ctx.raw, COL_IGLESIA),
+          pointRadius: 7,
+          pointStyle: 'circle',
+          pointBackgroundColor: COL_IGLESIA,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
@@ -1103,9 +1147,9 @@ window.PiP_graficAutorIndustrial = function() {
           backgroundColor: COL_AMENABAR,
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ptRadius(ctx.raw),
-          pointStyle: ctx => ptStyle(ctx.raw),
-          pointBackgroundColor: ctx => ptColor(ctx.raw, COL_AMENABAR),
+          pointRadius: 7,
+          pointStyle: 'circle',
+          pointBackgroundColor: COL_AMENABAR,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
@@ -1116,9 +1160,9 @@ window.PiP_graficAutorIndustrial = function() {
           backgroundColor: COL_BAYONA,
           borderWidth: 2.5,
           tension: 0.15,
-          pointRadius: ctx => ptRadius(ctx.raw),
-          pointStyle: ctx => ptStyle(ctx.raw),
-          pointBackgroundColor: ctx => ptColor(ctx.raw, COL_BAYONA),
+          pointRadius: 7,
+          pointStyle: 'circle',
+          pointBackgroundColor: COL_BAYONA,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
         },
@@ -1128,19 +1172,13 @@ window.PiP_graficAutorIndustrial = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
+      layout: { padding: { bottom: 28 } },
       plugins: {
         legend: { display: false },
         tooltip: {
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => {
-              const f = ctx.raw;
-              let txt = fmt(ctx.parsed.y) + ' espectadors';
-              if (f.premiat) txt += ' · ★ festival + premi';
-              else if (f.top100) txt += ' · Top 100';
-              else if (f.festival) txt += ' · festival';
-              return txt;
-            },
+            label: ctx => fmt(ctx.parsed.y) + ' espectadors',
           },
         },
       },
@@ -1162,7 +1200,7 @@ window.PiP_graficAutorIndustrial = function() {
         },
       },
     },
-    plugins: [pluginNoms],
+    plugins: [pluginNoms, pluginLlindar],
   });
 
   // Llegenda HTML
@@ -1174,9 +1212,7 @@ window.PiP_graficAutorIndustrial = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
-      <span style="display:flex;align-items:center;gap:5px;margin-left:10px"><span style="color:#666;font-size:18px;line-height:1">★</span><span>Festival + premi</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="width:11px;height:11px;background:#666;display:inline-block"></span><span>Top 100</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;background:#999;display:inline-block;border-radius:50%"></span><span>Altres films documentats</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
 
