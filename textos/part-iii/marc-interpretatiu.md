@@ -7,9 +7,9 @@ Abans de les conclusions cal establir un marc interpretatiu que eviti la lectura
 
 Podríem classificar el cinema espanyol dels darrers seixanta anys en tres grans grups:
 
-El primer és el **cinema popular de consum** (Lazaga, Ozores, Segura, Martínez-Lázaro): films fets per omplir sales, gairebé ignorats per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. Però és contradictòriament invisible: és el cinema que ha vist la majoria dels espanyols i el que menys espai ocupa en la historiografia.
+El primer és el **cinema popular** de consum (Lazaga, Ozores, Segura, Martínez-Lázaro): films fets per omplir sales, gairebé ignorats per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. Però és contradictòriament invisible: és el cinema que ha vist la majoria dels espanyols i el que menys espai ocupa en la historiografia.
 
-El segon és el **cinema de festival o cinema d'autor de circuit**: Saura, Erice, Lacuesta, Simón, Serra. Films construïts per a un circuit internacional amb les seves pròpies regles, el seu propi públic i la seva pròpia economia. Però és presoner de la seva pròpia especialització: mai tan ben representat internacionalment, mai tan allunyat (aparentment) del gran públic.
+El segon és el **cinema de festival** o cinema d'autor de circuit: Saura, Erice, Lacuesta, Simón, Serra. Films construïts per a un circuit internacional amb les seves pròpies regles, el seu propi públic i la seva pròpia economia. Però és presoner de la seva pròpia especialització: mai tan ben representat internacionalment, mai tan allunyat (aparentment) del gran públic.
 
 El tercer és el **cinema d'autor industrial**: Amenábar, Bayona, De la Iglesia, que han construït les seves carreres sense l'objectiu prioritari de competir en els grans festivals europeus, i amb una ambició i uns resultats artístics que cap altre director de vocació popular ha aconseguit. Però és un model en crisi: va crear el cinema espanyol més vist dels últims anys i les plataformes l'han absorbit fins a amagar-lo per a les mètriques tradicionals.
 <!-- /tres-categories -->
