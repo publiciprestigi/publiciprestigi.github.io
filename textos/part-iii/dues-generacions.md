@@ -33,7 +33,7 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 <!-- /comentari-almodovar -->
 
 <!-- text-grafic1 -->
-El gràfic següent mostra l'evolució de les dos taules anteriors:
+El gràfic següent mostra l'evolució de les dues taules anteriors:
 <!-- /text-grafic1 -->
 
 <!-- bloc-actual -->
