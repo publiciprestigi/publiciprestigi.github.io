@@ -141,7 +141,7 @@ strong { font-weight: 600; }
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 .nav-link:hover { color: var(--color-text); background: rgba(0,0,0,0.05); opacity: 1; }
-.nav-link.actiu { color: var(--color-text); border-bottom-color: var(--color-text); font-weight: 600; margin-bottom: -1px; }
+.nav-link.actiu { color: var(--color-text); border-bottom: 3px solid var(--color-text); font-weight: 600; margin-bottom: -1px; }
 
 /* Links dins de cos de text: color accent, sense subratllat */
 .contingut-text a,
