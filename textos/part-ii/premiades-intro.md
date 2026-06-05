@@ -25,13 +25,13 @@ I per acabar, la relació dels guardons màxims assolits a millor pel·lícula d
     <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#1E4080">Os d'Or</div>
     <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Berlín</div>
     <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">3</div>
-    <div style="font-size:12px;color:#555;line-height:1.4"><em><strong>Deprisa, deprisa</strong></em> (1981) de Carlos Saura, <em><strong>La colmena</strong></em> (1983) de Mario Camus i <em><strong>Alcarràs</strong></em> (2022) de Carla Simón. 39 anys entre el segon i el tercer.</div>
+    <div style="font-size:12px;color:#555;line-height:1.4"><em><strong>Deprisa, deprisa</strong></em> (1981) de Carlos Saura, <em><strong>La colmena</strong></em> (1983) de Mario Camus i <em><strong>Alcarràs</strong></em> (2022) de Carla Simón</div>
   </div>
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
     <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#2E7D5E">Lleó d'Or</div>
     <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Venècia</div>
     <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">1</div>
-    <div style="font-size:12px;color:#555;line-height:1.4"><em><strong>La habitación de al lado</strong></em> (2024) de Pedro Almodóvar. Primer i únic Lleó d'Or del cinema espanyol.</div>
+    <div style="font-size:12px;color:#555;line-height:1.4"><em><strong>La habitación de al lado</strong></em> (2024) de Pedro Almodóvar</div>
   </div>
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
     <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#6B3FA0">Conxa d'Or</div>
