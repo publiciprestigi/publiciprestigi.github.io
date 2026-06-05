@@ -96,7 +96,7 @@ function construirPremiades() {
   // Afegir gràfic de resum + cards de totals DESPRÉS del HTML
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
-    <div style="margin-top:32px;padding-top:0;border-top:none">
+    <div style="margin-top:0;padding-top:0;border-top:none">
       <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:0">Evolució premiades per dècada (1965–2025)</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
