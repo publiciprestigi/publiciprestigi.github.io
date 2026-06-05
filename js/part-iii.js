@@ -1040,8 +1040,10 @@ window.PiP_graficAutorIndustrial = function() {
     { x:1995, y:1419191, titol:'El día de la bestia',          festival:false, premiat:false, top100:false },
     { x:1999, y:1669964, titol:'Muertos de risa',              festival:false, premiat:false, top100:false },
     { x:2000, y:1609084, titol:'La comunidad',                 festival:false, premiat:false, top100:false },
+    { x:2008, y:1423300, titol:'Los crímenes de Oxford',       festival:false, premiat:false, top100:false },
     { x:2010, y: 369118, titol:'Balada triste de trompeta',    festival:true,  premiat:true,  top100:false },
     { x:2017, y:3284907, titol:'Perfectos desconocidos',       festival:false, premiat:false, top100:true  },
+    { x:2022, y: 673654, titol:'El cuarto pasajero',           festival:false, premiat:false, top100:false },
   ];
   const FILMS_AMENABAR = [
     { x:1996, y: 855481, titol:'Tesis',                        festival:false, premiat:false, top100:false },
