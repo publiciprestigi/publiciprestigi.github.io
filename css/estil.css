@@ -852,7 +852,7 @@ body.pag-inici .inici-xifra-n {
 
 /* Hover botons d'accés: gris coherent amb nav */
 .boto-acces:hover {
-  background: rgba(0,0,0,0.05) !important;
+  background: rgba(0,0,0,0.025) !important;
   opacity: 1;
 }
 
