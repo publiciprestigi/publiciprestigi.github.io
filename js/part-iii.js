@@ -804,7 +804,7 @@ window.PiP_graficSauraAlmodovar = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      layout: { padding: { bottom: 28 } },
+      layout: { padding: { bottom: 48 } },
       plugins: {
         legend: { display: false },
         tooltip: {
