@@ -736,7 +736,7 @@ window.PiP_graficSauraAlmodovar = function() {
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          const dy = i % 2 === 0 ? -10 : 18;
+          const dy = i % 2 === 0 ? -10 : 28;
           c.fillText(pt.titol, point.x, point.y + dy);
         });
       });
@@ -804,7 +804,7 @@ window.PiP_graficSauraAlmodovar = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      layout: { padding: { bottom: 48 } },
+      layout: { padding: { bottom: 28 } },
       plugins: {
         legend: { display: false },
         tooltip: {
