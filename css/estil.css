@@ -155,6 +155,7 @@ strong { font-weight: 600; }
 .text-md a:hover,
 .seccio-contingut a:hover,
 .inici-intro a:hover {
+  opacity: 1;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
