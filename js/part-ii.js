@@ -97,7 +97,19 @@ function construirPremiades() {
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
     <div style="margin-top:0;padding-top:0;border-top:none">
-      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:0">Premiades per festival (1965–2025)</p>
+      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:0">Evolució premiades per dècada (1965–2025)</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1E4080;display:inline-block;"></span>Berlín</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#2E7D5E;display:inline-block;"></span>Venècia</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#6B3FA0;display:inline-block;"></span>Sant Sebastià</span>
+      </div>
+      <div style="position:relative;width:100%;height:260px;">
+        <canvas id="grafic-premis-decades"></canvas>
+      </div>
+      <p class="grafic-peu">Nombre de films premiats per festival i dècada.</p>
+
+      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Premiades per festival (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
           <div style="font-size:11px;color:#9B2335;font-weight:500;margin-bottom:4px;">Cannes</div>
@@ -120,17 +132,30 @@ function construirPremiades() {
           <div style="font-size:22px;font-weight:500;color:#363737;">67</div>
         </div>
       </div>
-      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Evolució premiades per dècada (1965–2025)</p>
-      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1E4080;display:inline-block;"></span>Berlín</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#2E7D5E;display:inline-block;"></span>Venècia</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#6B3FA0;display:inline-block;"></span>Sant Sebastià</span>
+
+      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Màxims guardons (1965–2025)</p>
+      <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:8px;">
+        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#9B2335;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Palma d'Or</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">0</div>
+        </div>
+        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#1E4080;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Os d'Or</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">3</div>
+        </div>
+        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#2E7D5E;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Lleó d'Or</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">1</div>
+        </div>
+        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
+          <div style="font-size:11px;color:#6B3FA0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Conxa d'Or</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">14</div>
+        </div>
+        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
+          <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
+          <div style="font-size:22px;font-weight:500;color:#363737;">18</div>
+        </div>
       </div>
-      <div style="position:relative;width:100%;height:260px;">
-        <canvas id="grafic-premis-decades"></canvas>
-      </div>
-      <p class="grafic-peu">Nombre de films premiats per festival i dècada.</p>
     </div>`;
   const resDiv = document.getElementById('taula-resum-premis');
   if (resDiv) resDiv.appendChild(graficDiv);
