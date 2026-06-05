@@ -10,34 +10,33 @@ Primer, les xifres de les pel·lícules premiades a cada festival i la suma tota
 <!-- /resum-intro -->
 
 <!-- grans-premis -->
-## Els grans premis
-
-I per acabar, la relació dels guardons màxims assolits a millor pel·lícula de cada festival.
-
-<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0 4px">
+<div style="border-top:1px solid #e0e0e0;padding-top:28px;margin-top:8px">
+<div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:0">
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
-    <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#9B2335">Palma d'Or</div>
-    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Cannes</div>
-    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">0</div>
-    <div style="font-size:12px;color:#555;line-height:1.4">El guardó màxim continua escapant-se.</div>
+    <div style="font-size:11px;font-weight:600;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#9B2335">Palma d'Or</div>
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em">Cannes</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1">0</div>
   </div>
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
-    <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#1E4080">Os d'Or</div>
-    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Berlín</div>
-    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">3</div>
-    <div style="font-size:12px;color:#555;line-height:1.4"><em><strong>Deprisa, deprisa</strong></em> (1981) de Carlos Saura, <em><strong>La colmena</strong></em> (1983) de Mario Camus i <em><strong>Alcarràs</strong></em> (2022) de Carla Simón</div>
+    <div style="font-size:11px;font-weight:600;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#1E4080">Os d'Or</div>
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em">Berlín</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1">3</div>
   </div>
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
-    <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#2E7D5E">Lleó d'Or</div>
-    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Venècia</div>
-    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">1</div>
-    <div style="font-size:12px;color:#555;line-height:1.4"><em><strong>La habitación de al lado</strong></em> (2024) de Pedro Almodóvar</div>
+    <div style="font-size:11px;font-weight:600;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#2E7D5E">Lleó d'Or</div>
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em">Venècia</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1">1</div>
   </div>
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
-    <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#6B3FA0">Conxa d'Or</div>
-    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Sant Sebastià</div>
-    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">14</div>
-    <div style="font-size:12px;color:#555;line-height:1.4">6 en els darrers 15 anys: Isaki Lacuesta (2), Carlos Vermut, Jaione Camborda, Albert Serra i Alauda Ruiz de Azúa.</div>
+    <div style="font-size:11px;font-weight:600;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#6B3FA0">Conxa d'Or</div>
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em">Sant Sebastià</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1">14</div>
   </div>
+  <div style="background:#f7f7f7;border-radius:6px;padding:16px 12px;text-align:center;border:1px solid #ddd">
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em">Total</div>
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:8px;text-transform:uppercase;letter-spacing:.04em">&nbsp;</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1">18</div>
+  </div>
+</div>
 </div>
 <!-- /grans-premis -->
