@@ -4,7 +4,7 @@
 
 /* --- Variables --- */
 :root {
-  --color-fons: #faf9f7;
+  --color-fons: #ffffff;
   --color-text: #363737;
   --color-text-suau: #6b6b6b;
   --color-accent: #1a75c4;
@@ -838,69 +838,43 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 }
 
 /* ============================================================
-   PORTADA — pàgina d'inici sense capçalera repetida
+   PORTADA — pàgina d'inici (sense capçalera, menú visible)
    ============================================================ */
 body.pag-inici .capcalera { display: none; }
-body.pag-inici .navegacio {
-  top: 0;
-  border-bottom: 1px solid var(--color-linia);
-}
-body.pag-inici .inici-portada {
-  padding-top: 48px;
+body.pag-inici .navegacio { top: 0; }
+
+/* Títol i subtítol centrats com a bloc únic */
+body.pag-inici .inici-titol-gran {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 52px;
 }
 body.pag-inici .inici-h1 {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  line-height: 1.15;
+  margin-bottom: 8px;
 }
 body.pag-inici .inici-subtitol-gran {
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-weight: 400;
   color: var(--color-text-suau);
-  max-width: 520px;
-  line-height: 1.5;
-  margin-bottom: 36px;
+  line-height: 1.4;
 }
-body.pag-inici .inici-xifres {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--color-linia);
-  border: 1px solid var(--color-linia);
-  border-radius: 4px;
-  overflow: hidden;
-  margin-bottom: 36px;
-}
-body.pag-inici .inici-xifra {
-  background: var(--color-fons);
-  padding: 20px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+
+/* Xifres: número més gran, sense redisseny del bloc */
 body.pag-inici .inici-xifra-n {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: var(--color-text);
-  line-height: 1;
 }
-body.pag-inici .inici-xifra-l {
-  font-size: 0.78rem;
-  color: var(--color-text-suau);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-/* Botons d'accés: hover amb desplaçament subtil */
-.boto-acces {
-  transition: background 0.15s, transform 0.1s;
-}
+
+/* Hover botons d'accés: gris coherent amb nav */
 .boto-acces:hover {
-  background: #f0ede8 !important;
+  background: rgba(0,0,0,0.04) !important;
   opacity: 1;
 }
-@media (max-width: 768px) {
-  body.pag-inici .inici-xifres {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  body.pag-inici .inici-h1 { font-size: 2.2rem; }
-}
+
+/* Idiomes: EN ocult */
+.capcalera-idioma .lang-en { display: none; }
+
