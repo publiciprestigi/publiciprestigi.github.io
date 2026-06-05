@@ -441,7 +441,7 @@ window.PiP_graficCazaIAA = function() {
     afterDraw(chart) {
       const ctx2 = chart.ctx;
       ctx2.save();
-      ctx2.font = '600 11px -apple-system, Arial, sans-serif';
+      ctx2.font = '600 11px "Inter", -apple-system, Arial, sans-serif';
       ctx2.fillStyle = '#363737';
       ctx2.textBaseline = 'middle';
       etiquetesTotals.forEach((et, i) => {
@@ -450,11 +450,11 @@ window.PiP_graficCazaIAA = function() {
         const bar = meta.data[i];
         if (!bar) return;
         const y = bar.y;
-        ctx2.font = 'bold 13px -apple-system, Arial, sans-serif';
+        ctx2.font = 'bold 13px "Inter", -apple-system, Arial, sans-serif';
         ctx2.fillStyle = '#363737';
         ctx2.fillText(et.xifra, x, y);
         const xifraWidth = ctx2.measureText(et.xifra + ' ').width;
-        ctx2.font = '12px -apple-system, Arial, sans-serif';
+        ctx2.font = '12px "Inter", -apple-system, Arial, sans-serif';
         ctx2.fillStyle = '#888';
         ctx2.fillText(et.mult, x + xifraWidth, y);
       });
@@ -727,7 +727,7 @@ window.PiP_graficSauraAlmodovar = function() {
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
-      c.font = 'italic 11px -apple-system, Arial, sans-serif';
+      c.font = 'italic 11px "Inter", -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
       c.textBaseline = 'alphabetic';
       chart.data.datasets.forEach((ds, di) => {
@@ -761,7 +761,7 @@ window.PiP_graficSauraAlmodovar = function() {
       c.lineTo(chart.scales.x.right, y);
       c.stroke();
       c.setLineDash([]);
-      c.font = '11px -apple-system, Arial, sans-serif';
+      c.font = '11px "Inter", -apple-system, Arial, sans-serif';
       c.fillStyle = '#888';
       c.textAlign = 'right';
       c.textBaseline = 'bottom';
@@ -954,7 +954,7 @@ window.PiP_graficGeneracioActual = function() {
       c.lineTo(x, chart.scales.y.bottom);
       c.stroke();
       c.setLineDash([]);
-      c.font = '11px -apple-system, Arial, sans-serif';
+      c.font = '11px "Inter", -apple-system, Arial, sans-serif';
       c.fillStyle = '#888';
       c.textAlign = 'left';
       c.textBaseline = 'top';
@@ -1080,7 +1080,7 @@ window.PiP_graficAutorIndustrial = function() {
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
       c.save();
-      c.font = 'italic 11px -apple-system, Arial, sans-serif';
+      c.font = 'italic 11px "Inter", -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
       c.textBaseline = 'alphabetic';
       chart.data.datasets.forEach((ds, di) => {
@@ -1114,7 +1114,7 @@ window.PiP_graficAutorIndustrial = function() {
       c.lineTo(chart.scales.x.right, y);
       c.stroke();
       c.setLineDash([]);
-      c.font = '11px -apple-system, Arial, sans-serif';
+      c.font = '11px "Inter", -apple-system, Arial, sans-serif';
       c.fillStyle = '#888';
       c.textAlign = 'right';
       c.textBaseline = 'bottom';
