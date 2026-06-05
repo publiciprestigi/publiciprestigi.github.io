@@ -91,7 +91,7 @@ async function construirGraficMercat() {
         ctx.setLineDash([]);
 
         ctx.fillStyle = 'rgba(100,100,100,0.6)';
-        ctx.font = '11px -apple-system, SF Pro Text, sans-serif';
+        ctx.font = '11px "Inter", -apple-system, sans-serif';
         ctx.textAlign = 'left';
         ctx.fillText(etiqueta, xPos + 4, yTop + 14);
       });
@@ -100,17 +100,17 @@ async function construirGraficMercat() {
       const xMax = x.getPixelForValue(idxMax);
       const yMax = y.getPixelForValue(entrades[idxMax]);
       ctx.fillStyle = '#363737';
-      ctx.font = 'bold 10px -apple-system, SF Pro Text, sans-serif';
+      ctx.font = 'bold 11px "Inter", -apple-system, sans-serif';
       ctx.textAlign = 'left';
       ctx.fillText('Màxim: ~390M', xMax + 6, yMax - 18);
-      ctx.font = '10px -apple-system, SF Pro Text, sans-serif';
+      ctx.font = '11px "Inter", -apple-system, sans-serif';
       ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
 
       const idx2020 = anys.indexOf(2020);
       const x2020 = x.getPixelForValue(idx2020);
       const y2020 = y.getPixelForValue(entrades[idx2020]);
       ctx.fillStyle = 'rgba(180,50,50,0.9)';
-      ctx.font = 'bold 10px -apple-system, SF Pro Text, sans-serif';
+      ctx.font = 'bold 11px "Inter", -apple-system, sans-serif';
       ctx.textAlign = 'right';
       ctx.fillText('Col·lapse pandèmic', x2020 + 4, y.top + 30);
       ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
@@ -162,7 +162,7 @@ async function construirGraficMercat() {
           position: 'top',
           align: 'center',
           labels: {
-            font: { size: 12, family: '-apple-system, SF Pro Text, sans-serif' },
+            font: { size: 12, family: '"Inter", -apple-system, sans-serif' },
             color: '#363737',
             boxWidth: 14,
             padding: 16,
@@ -172,7 +172,7 @@ async function construirGraficMercat() {
           display: true,
           text: 'Entrades venudes a Espanya i evolució de la població (1965–2025)',
           color: '#363737',
-          font: { size: 13, weight: '600', family: '-apple-system, SF Pro Text, sans-serif' },
+          font: { size: 15, weight: '700', family: '"Inter", -apple-system, sans-serif' },
           padding: { bottom: 16 },
         },
         tooltip: {
