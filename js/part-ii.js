@@ -112,48 +112,48 @@ function construirPremiades() {
       <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Premiades per festival (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#9B2335;font-weight:500;margin-bottom:4px;">Cannes</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">12</div>
+          <div style="font-size:12px;color:#9B2335;font-weight:500;margin-bottom:4px;">Cannes</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">12</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#1E4080;font-weight:500;margin-bottom:4px;">Berlín</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">8</div>
+          <div style="font-size:12px;color:#1E4080;font-weight:500;margin-bottom:4px;">Berlín</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">8</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#2E7D5E;font-weight:500;margin-bottom:4px;">Venècia</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">7</div>
+          <div style="font-size:12px;color:#2E7D5E;font-weight:500;margin-bottom:4px;">Venècia</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">7</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#6B3FA0;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">40</div>
+          <div style="font-size:12px;color:#6B3FA0;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">40</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
-          <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">67</div>
+          <div style="font-size:12px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">67</div>
         </div>
       </div>
 
       <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Màxims guardons (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:8px;">
         <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#9B2335;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Palma d'Or</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">0</div>
+          <div style="font-size:12px;color:#9B2335;font-weight:500;margin-bottom:4px">Palma d'Or</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">0</div>
         </div>
         <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#1E4080;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Os d'Or</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">3</div>
+          <div style="font-size:12px;color:#1E4080;font-weight:500;margin-bottom:4px">Os d'Or</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">3</div>
         </div>
         <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#2E7D5E;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Lleó d'Or</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">1</div>
+          <div style="font-size:12px;color:#2E7D5E;font-weight:500;margin-bottom:4px">Lleó d'Or</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">1</div>
         </div>
         <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:11px;color:#6B3FA0;font-weight:600;margin-bottom:4px;text-transform:uppercase;letter-spacing:.03em">Conxa d'Or</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">14</div>
+          <div style="font-size:12px;color:#6B3FA0;font-weight:500;margin-bottom:4px">Conxa d'Or</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">14</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
-          <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
-          <div style="font-size:22px;font-weight:500;color:#363737;">18</div>
+          <div style="font-size:12px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">18</div>
         </div>
       </div>
     </div>`;
