@@ -23,7 +23,7 @@ I per acabar, la relació dels guardons màxims assolits a millor pel·lícula d
   <div style="background:#fdf3d0;border-radius:6px;padding:16px 12px;text-align:center">
     <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Os d'Or · Berlín</div>
     <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">3</div>
-    <div style="font-size:12px;color:#555;line-height:1.4"><em>Deprisa, deprisa</em> (1981), <em>La colmena</em> (1983) i <em>Alcarràs</em> (2022). 39 anys entre el segon i el tercer.</div>
+    <div style="font-size:12px;color:#555;line-height:1.4"><em>**Deprisa, deprisa**</em> (1981), <em>La colmena</em> (1983) i <em>Alcarràs</em> (2022).</div>
   </div>
   <div style="background:#fdf3d0;border-radius:6px;padding:16px 12px;text-align:center">
     <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Lleó d'Or · Venècia</div>
