@@ -5,6 +5,7 @@ Recull cronològic de tots els premis obtinguts a les seccions oficials competit
 
 <!-- resum-intro -->
 <br>
+
 ## Resum per dècada, festival i màxims guardons 
 
 Primer, un gràfic cronològic amb l'evolució de les pel·lícules premiades per festival i dècada. Després, les xifres de les premiades a cada festival i la suma total. I per acabar, els màxims guardons obtinguts. Es comptabilitzen els films que han rebut algun premi, no cada premi que hagin obtingut.
