@@ -413,6 +413,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* Títol: negreta+cursiva, any en gris, MATEIXA mida */
 .col-titol { min-width: 160px; }
 .film-any { color: var(--color-text-suau); font-weight: 400; font-style: normal; }
+.film-context .film-any { color: #888; }
 
 /* Botó context */
 .fila-boto-context td { border-bottom: none; padding: 16px 0; }
