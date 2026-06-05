@@ -792,7 +792,6 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   gap: 32px;
   margin-top: 28px;
   padding-top: 24px;
-  border-top: 1px solid var(--color-linia);
 }
 
 .inici-xifra {
