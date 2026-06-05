@@ -130,8 +130,8 @@ strong { font-weight: 600; }
 
 .nav-link {
   display: inline-block;
-  padding: 14px 18px;
-  font-size: var(--mida-nav);
+  padding: 12px 18px;
+  font-size: 14px;
   font-weight: 500;
   color: #3a3a3a;
   text-decoration: none;
@@ -839,7 +839,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* ============================================================
    PORTADA — pàgina d'inici (sense capçalera, menú visible)
    ============================================================ */
-body.pag-inici .navegacio { top: 0; }
+body.pag-inici .navegacio { top: 72px; }
 
 
 /* Xifres: número més gran, sense redisseny del bloc */
