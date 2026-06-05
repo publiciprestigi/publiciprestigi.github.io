@@ -27,9 +27,9 @@ El factor multiplicador varia segons el període. Un film dels anys 60 depenia e
 | <span style="white-space:nowrap">1965–1984</span> | 1 | *Sala de cinema* | **×1,0** |
 | <span style="white-space:nowrap">1984–1989</span> | 3 | *Sala + TVE + VHS* | **×2,5–3,5** |
 | <span style="white-space:nowrap">1990–1994</span> | 4 | *Sala + TVE + VHS + TV autonòmiques* | **×2,0–3,0** |
-| <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD* | **×1,8–2,5** |
-| <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV privada/pagament + TV autonòmiques + DVD + plataformes digitals* | **×2,0–3,0** |
-| <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV privada/pagament + TV autonòmiques + plataformes digitals en expansió* | **×2,5–4,0** |
+| <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privades/pagament + TV autonòmiques + DVD* | **×1,8–2,5** |
+| <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV privades/pagament + TV autonòmiques + DVD + plataformes digitals* | **×2,0–3,0** |
+| <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV privades/pagament + TV autonòmiques + plataformes digitals en expansió* | **×2,5–4,0** |
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
