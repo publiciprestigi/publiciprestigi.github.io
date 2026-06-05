@@ -840,7 +840,6 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* ============================================================
    PORTADA — pàgina d'inici (sense capçalera, menú visible)
    ============================================================ */
-body.pag-inici .capcalera { display: none; }
 body.pag-inici .navegacio { top: 0; }
 
 /* Títol i subtítol centrats com a bloc únic */
