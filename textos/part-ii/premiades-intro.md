@@ -19,7 +19,7 @@ I per acabar, la relació dels guardons màxims assolits a millor pel·lícula d
     <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#9B2335">Palma d'Or</div>
     <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Cannes</div>
     <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">0</div>
-    <div style="font-size:12px;color:#555;line-height:1.4">28 seleccions, 12 premis de tota classe. El guardó màxim continua escapant-se.</div>
+    <div style="font-size:12px;color:#555;line-height:1.4">El guardó màxim continua escapant-se.</div>
   </div>
   <div style="background:#fcefc0;border-radius:6px;padding:16px 12px;text-align:center">
     <div style="font-size:11px;font-weight:500;margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;color:#1E4080">Os d'Or</div>
