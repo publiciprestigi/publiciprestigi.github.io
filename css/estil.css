@@ -155,7 +155,6 @@ strong { font-weight: 600; }
 .text-md a:hover,
 .seccio-contingut a:hover,
 .inici-intro a:hover {
-  opacity: 0.75;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -303,7 +302,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   background: var(--color-fons); text-decoration: none; color: var(--color-text);
   transition: background 0.15s;
 }
-.boto-acces:hover { background: #f5f5f5; opacity: 1; }
+.boto-acces:hover { opacity: 1; }
 .boto-acces-part { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-text-suau); }
 .boto-acces-nom { font-size: 1rem; font-weight: 700; }
 .boto-acces-desc { font-size: 0.85rem; color: var(--color-text-suau); }
@@ -842,24 +841,6 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
    ============================================================ */
 body.pag-inici .navegacio { top: 0; }
 
-/* Títol i subtítol centrats com a bloc únic */
-body.pag-inici .inici-titol-gran {
-  text-align: center;
-  margin-bottom: 40px;
-  padding-top: 52px;
-}
-body.pag-inici .inici-h1 {
-  font-size: 2.6rem;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 8px;
-}
-body.pag-inici .inici-subtitol-gran {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--color-text-suau);
-  line-height: 1.4;
-}
 
 /* Xifres: número més gran, sense redisseny del bloc */
 body.pag-inici .inici-xifra-n {
@@ -870,7 +851,7 @@ body.pag-inici .inici-xifra-n {
 
 /* Hover botons d'accés: gris coherent amb nav */
 .boto-acces:hover {
-  background: rgba(0,0,0,0.04) !important;
+  background: rgba(0,0,0,0.05) !important;
   opacity: 1;
 }
 
