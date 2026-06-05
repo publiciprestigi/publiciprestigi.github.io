@@ -12,10 +12,10 @@
   --font-principal: "Inter", -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --amplada-max: 1200px;
   --amplada-text: 720px;
-  --mida-cos: 18px;
+  --mida-cos: 19px;
   --mida-petit: 14px;
   --mida-nav: 15px;
-  --interlineat: 1.7;
+  --interlineat: 1.6;
 }
 
 /* --- Reset --- */
