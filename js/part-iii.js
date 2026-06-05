@@ -726,6 +726,7 @@ window.PiP_graficSauraAlmodovar = function() {
     id: 'sa-noms',
     afterDatasetsDraw(chart) {
       const c = chart.ctx;
+      const yBottom = chart.scales.y.bottom;
       c.save();
       c.font = 'italic 11px "Inter", -apple-system, Arial, sans-serif';
       c.textAlign = 'center';
@@ -736,7 +737,8 @@ window.PiP_graficSauraAlmodovar = function() {
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          const dy = i % 2 === 0 ? -10 : 18;
+          const preferDown = i % 2 !== 0;
+          const dy = (preferDown && point.y + 22 > yBottom) ? -10 : (preferDown ? 18 : -10);
           c.fillText(pt.titol, point.x, point.y + dy);
         });
       });
@@ -804,7 +806,7 @@ window.PiP_graficSauraAlmodovar = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      layout: { padding: { bottom: 36 } },
+      layout: { padding: { bottom: 28 } },
       plugins: {
         legend: { display: false },
         tooltip: {
