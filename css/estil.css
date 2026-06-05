@@ -760,7 +760,6 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* --- Link Substack al menú --- */
 .nav-link-substack {
   color: var(--color-text-suau) !important;
-  font-size: 0.82rem;
 }
 .nav-link-substack:hover { color: var(--color-text) !important; }
 
