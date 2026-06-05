@@ -16,8 +16,4 @@ Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocu
 
 ## Sobre les fonts
 
-Les dades s’han recollit principalment a partir dels arxius històrics disponibles a les webs oficials de cada festival. En els casos de <a href="https://www.festival-cannes.com/retrospective/" target="_blank" rel="noopener">Cannes</a> i <a href="https://www.festival-cannes.com/retrospective/](https://www.berlinale.de/de/archiv/archivuebersicht/willkommen.html" target="_blank" rel="noopener">Berlín</a>, aquests arxius són especialment exhaustius. Per a Venècia i Sant Sebastià, les webs no ofereixen el mateix grau de detall, per això s’han completat determinades dades amb fonts complementàries com Wikipedia i Filmaffinity, amb les possibles incerteses pròpies de fonts no oficials. Tota correcció d’inexactituds serà benvinguda.
-
-
-
-
+Les dades s’han recollit principalment a partir dels arxius històrics disponibles a les webs oficials de cada festival. En els casos de <a href="https://www.festival-cannes.com/retrospective/" target="_blank" rel="noopener">Cannes</a>, <a href="https://www.berlinale.de/de/archiv/archivuebersicht/willkommen.html" target="_blank" rel="noopener">Berlín</a> i <a href="https://www.sansebastianfestival.com/archivo/2/es" target="_blank" rel="noopener">Sant Sebastià</a>, aquests arxius són especialment exhaustius. Per a <a href="https://www.labiennale.org/it/storia-della-mostra-del-cinema" target="_blank" rel="noopener">Venècia</a>, la web no ofereix el mateix grau de detall, per això s’han completat determinades dades amb fonts complementàries com Wikipedia i Filmaffinity, amb les possibles incerteses pròpies de fonts no oficials. Tota correcció d’inexactituds serà benvinguda.
