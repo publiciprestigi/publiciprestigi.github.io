@@ -35,7 +35,7 @@ body {
 h1, h2, h3, h4 { font-family: var(--font-principal); font-weight: 700; line-height: 1.25; color: var(--color-text); }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-h3 { font-size: 1.20rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 p { margin-bottom: 1.25rem; }
 a { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
 a:hover { opacity: 0.65; }
