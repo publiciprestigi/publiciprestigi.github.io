@@ -12,13 +12,28 @@ Primer, les xifres de les pel·lícules premiades a cada festival i la suma tota
 <!-- grans-premis -->
 ## Els grans premis
 
-I per acabar, la relació dels guardons màxims assolits a millor pel·lícula de cada festival. 
+I per acabar, la relació dels guardons màxims assolits a millor pel·lícula de cada festival.
 
-- **Palma d'Or (Cannes): 0.** En el període analitzat, amb 28 films seleccionats i 12 premis de tota classe, el màxim guardó del festival considerat de més prestigi continua escapant-se.
-
-- **Os d'Or (Berlín): 3.** *Deprisa, deprisa* (1981) de Carlos Saura, *La colmena* (1983) de Mario Camus i *Alcarràs* (2022) de Carla Simón, i un buit de trenta-nou anys entre el segon i el tercer guardó.
-
-- **Lleó d'Or (Venècia): 1.** *La habitación de al lado* (2024) de Pedro Almodóvar. Primer i únic Lleó d'Or de la història del cinema espanyol, i ben recent.
-
-- **Conxa d'Or (Sant Sebastià): 14.** El festival que acumula més guardons, 6 d'ells en els darrers 15 anys: *Los pasos dobles* (2011) i *Entre dos aguas* (2018) d'Isaki Lacuesta, *Magical Girl* (2014) de Carlos Vermut, *O corno* (2023) de Jaione Camborda, *Tardes de soledad* (2024) d'Albert Serra i *Los domingos* (2025) d'Alauda Ruiz de Azúa.
+<div style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:20px 0 4px">
+  <div style="background:#fdf3d0;border-radius:6px;padding:16px 12px;text-align:center">
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Palma d'Or · Cannes</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">0</div>
+    <div style="font-size:12px;color:#555;line-height:1.4">28 seleccions, 12 premis de tota classe. El guardó màxim continua escapant-se.</div>
+  </div>
+  <div style="background:#fdf3d0;border-radius:6px;padding:16px 12px;text-align:center">
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Os d'Or · Berlín</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">3</div>
+    <div style="font-size:12px;color:#555;line-height:1.4"><em>Deprisa, deprisa</em> (1981), <em>La colmena</em> (1983) i <em>Alcarràs</em> (2022). 39 anys entre el segon i el tercer.</div>
+  </div>
+  <div style="background:#fdf3d0;border-radius:6px;padding:16px 12px;text-align:center">
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Lleó d'Or · Venècia</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">1</div>
+    <div style="font-size:12px;color:#555;line-height:1.4"><em>La habitación de al lado</em> (2024) de Pedro Almodóvar. Primer i únic Lleó d'Or del cinema espanyol.</div>
+  </div>
+  <div style="background:#fdf3d0;border-radius:6px;padding:16px 12px;text-align:center">
+    <div style="font-size:11px;color:#888;font-weight:500;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">Conxa d'Or · Sant Sebastià</div>
+    <div style="font-size:28px;font-weight:700;color:#363737;line-height:1;margin-bottom:8px">14</div>
+    <div style="font-size:12px;color:#555;line-height:1.4">El festival amb més guardons. 6 dels darrers 15 anys: Lacuesta, Vermut, Camborda, Serra, Ruiz de Azúa.</div>
+  </div>
+</div>
 <!-- /grans-premis -->
