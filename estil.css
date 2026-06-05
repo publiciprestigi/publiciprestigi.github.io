@@ -792,7 +792,6 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   gap: 32px;
   margin-top: 28px;
   padding-top: 24px;
-  border-top: 1px solid var(--color-linia);
 }
 
 .inici-xifra {
@@ -840,7 +839,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* ============================================================
    PORTADA — pàgina d'inici (sense capçalera, menú visible)
    ============================================================ */
-body.pag-inici .navegacio { top: 0; }
+body.pag-inici .navegacio { top: 72px; }
 
 
 /* Xifres: número més gran, sense redisseny del bloc */
