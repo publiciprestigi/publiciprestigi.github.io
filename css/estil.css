@@ -4,9 +4,10 @@
 
 /* --- Variables --- */
 :root {
-  --color-fons: #ffffff;
+  --color-fons: #faf9f7;
   --color-text: #363737;
   --color-text-suau: #6b6b6b;
+  --color-accent: #1a75c4;
   --color-linia: #e5e5e5;
   --font-principal: -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --amplada-max: 1200px;
@@ -136,10 +137,28 @@ strong { font-weight: 600; }
   text-decoration: none;
   white-space: nowrap;
   border-bottom: 2px solid transparent;
-  transition: color 0.15s, border-color 0.15s;
+  border-radius: 4px 4px 0 0;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.nav-link:hover { color: var(--color-text); opacity: 1; }
+.nav-link:hover { color: var(--color-text); background: rgba(0,0,0,0.05); opacity: 1; }
 .nav-link.actiu { color: var(--color-text); border-bottom-color: var(--color-text); font-weight: 600; }
+
+/* Links dins de cos de text: color accent, sense subratllat */
+.contingut-text a,
+.text-md a,
+.seccio-contingut a,
+.inici-intro a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.contingut-text a:hover,
+.text-md a:hover,
+.seccio-contingut a:hover,
+.inici-intro a:hover {
+  opacity: 0.75;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* ============================================================
    LAYOUT AMB SIDEBAR (Parts I, II, III)
@@ -816,4 +835,72 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   color: var(--color-text-suau);
   margin-top: 4px;
   line-height: 1.5;
+}
+
+/* ============================================================
+   PORTADA — pàgina d'inici sense capçalera repetida
+   ============================================================ */
+body.pag-inici .capcalera { display: none; }
+body.pag-inici .navegacio {
+  top: 0;
+  border-bottom: 1px solid var(--color-linia);
+}
+body.pag-inici .inici-portada {
+  padding-top: 48px;
+}
+body.pag-inici .inici-h1 {
+  font-size: 2.8rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+body.pag-inici .inici-subtitol-gran {
+  font-size: 1.1rem;
+  color: var(--color-text-suau);
+  max-width: 520px;
+  line-height: 1.5;
+  margin-bottom: 36px;
+}
+body.pag-inici .inici-xifres {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--color-linia);
+  border: 1px solid var(--color-linia);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 36px;
+}
+body.pag-inici .inici-xifra {
+  background: var(--color-fons);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+body.pag-inici .inici-xifra-n {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  line-height: 1;
+}
+body.pag-inici .inici-xifra-l {
+  font-size: 0.78rem;
+  color: var(--color-text-suau);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+/* Botons d'accés: hover amb desplaçament subtil */
+.boto-acces {
+  transition: background 0.15s, transform 0.1s;
+}
+.boto-acces:hover {
+  background: #f0ede8 !important;
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  body.pag-inici .inici-xifres {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  body.pag-inici .inici-h1 { font-size: 2.2rem; }
 }
