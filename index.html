@@ -9,10 +9,226 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estil.css">
+  <style>
+    /* ── PORTADA HERO ── */
+    .inici-portada {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 32px 0;
+    }
+
+    .inici-antetitol {
+      font-size: 0.62rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 28px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Hero: dues columnes */
+    .inici-hero {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-bottom: 0;
+    }
+
+    /* Columna esquerra */
+    .inici-hero-text .inici-claim {
+      font-size: 2.85rem;
+      font-weight: 700;
+      line-height: 1.07;
+      color: #1a1a1a;
+      letter-spacing: -0.025em;
+      margin-bottom: 22px;
+    }
+
+    .inici-hero-text .inici-intro-a {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .inici-hero-text .inici-intro-b {
+      font-size: 0.82rem;
+      color: #555;
+      line-height: 1.75;
+      margin-bottom: 20px;
+    }
+
+    .inici-hero-text .inici-versio {
+      font-size: 0.67rem;
+      color: #bbb;
+      margin-bottom: 28px;
+    }
+
+    /* Botó + xifres en línia */
+    .inici-boto-xifres {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding-top: 18px;
+      border-top: 1px solid #e5e5e5;
+      flex-wrap: wrap;
+    }
+
+    .inici-boto-entrar {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #1a1a1a;
+      text-decoration: none;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .inici-boto-entrar:hover { color: #9B2335; }
+
+    .inici-xifres-hero {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.67rem;
+      color: #888;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      flex-wrap: wrap;
+    }
+
+    .inici-xifres-hero strong { font-weight: 700; }
+    .inici-xifres-hero .sep { color: #ccc; }
+
+    /* Columna dreta — gràfic */
+    .inici-hero-grafic {
+      padding-top: 0;
+    }
+
+    .inici-hero-grafic svg {
+      width: 100%;
+      display: block;
+    }
+
+    /* ── BLOC INFERIOR: parts + cercador ── */
+    .inici-inferior {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 40px;
+    }
+
+    .inici-parts {
+      border-right: 1px solid #e0e0e0;
+    }
+
+    .inici-part {
+      display: grid;
+      grid-template-columns: 48px 1fr 28px;
+      align-items: center;
+      padding: 20px 28px;
+      border-bottom: 1px solid #e0e0e0;
+      text-decoration: none;
+      color: inherit;
+      transition: background .12s;
+    }
+
+    .inici-part:last-child { border-bottom: none; }
+    .inici-part:hover { background: #f8f8f6; }
+
+    .inici-part-num {
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .inici-part-info .nom {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 2px;
+    }
+
+    .inici-part-info .desc {
+      font-size: 0.75rem;
+      color: #888;
+      margin-bottom: 1px;
+    }
+
+    .inici-part-info .sub {
+      font-size: 0.7rem;
+      color: #bbb;
+    }
+
+    .inici-part-arrow {
+      font-size: 0.9rem;
+      color: #bbb;
+      text-align: right;
+    }
+
+    /* Dreta inferior: cercador + substack */
+    .inici-dreta {
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      justify-content: center;
+    }
+
+    .inici-cerca-label {
+      font-size: 0.75rem;
+      color: #aaa;
+      margin-bottom: 8px;
+    }
+
+    .inici-cerca-input {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      background: transparent;
+      font-size: 0.82rem;
+      color: #333;
+      padding: 6px 0;
+      outline: none;
+      font-family: inherit;
+    }
+
+    .inici-cerca-input::placeholder { color: #ccc; }
+
+    .inici-segueix-titol {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 6px;
+    }
+
+    .inici-segueix-text {
+      font-size: 0.75rem;
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+
+    .inici-segueix-link {
+      font-size: 0.75rem;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .inici-segueix-link:hover { color: #1a1a1a; }
+
+    /* Peu */
+    .peu { margin-top: 0; }
+  </style>
 </head>
 <body class="pag-inici">
 
-  <!-- CAPÇALERA -->
   <header class="capcalera">
     <div class="capcalera-interior">
       <a href="index.html" class="capcalera-logo">Públic i Prestigi</a>
@@ -31,7 +247,6 @@
     </div>
   </header>
 
-  <!-- NAVEGACIÓ -->
   <nav class="navegacio">
     <div class="navegacio-interior">
       <a href="index.html" class="nav-link actiu">Inici</a>
@@ -43,55 +258,85 @@
     </div>
   </nav>
 
-  <!-- CONTINGUT PRINCIPAL -->
   <main class="contingut">
     <div class="inici-portada">
-      <div class="inici-titol-gran">
-        <h1 class="inici-h1">Públic i Prestigi</h1>
-        <p class="inici-subtitol-gran">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
-      </div>
-      <div class="inici-intro contingut-text">
-        <p class="inici-lead">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement als festivals? I quan, excepcionalment, coincideixen? Un estudi viu i actualitzable que mesura i analitza la tensió entre el públic massiu i el prestigi crític. Benvinguts!</p>
-        <div class="inici-xifres">
-          <div class="inici-xifra">
-            <span class="inici-xifra-n">294M</span>
-            <span class="inici-xifra-l">espectadors acumulats</span>
-          </div>
-          <div class="inici-xifra">
-            <span class="inici-xifra-n">67</span>
-            <span class="inici-xifra-l">films premiats</span>
-          </div>
-          <div class="inici-xifra">
-            <span class="inici-xifra-n">264</span>
-            <span class="inici-xifra-l">films a seccions oficials</span>
-          </div>
-          <div class="inici-xifra">
-            <span class="inici-xifra-n">60</span>
-            <span class="inici-xifra-l">anys documentats</span>
-          </div>
-        </div>
-      </div>
-      <div class="inici-acces">
-          <a href="part-i.html" class="boto-acces">
-            <span class="boto-acces-part">Part I</span>
-            <span class="boto-acces-nom">Públic</span>
-            <span class="boto-acces-desc">Top 100 per espectadors</span>
-          </a>
-          <a href="part-ii.html" class="boto-acces">
-            <span class="boto-acces-part">Part II</span>
-            <span class="boto-acces-nom">Prestigi</span>
-            <span class="boto-acces-desc">Cannes, Berlín, Venècia, Sant Sebastià</span>
-          </a>
-          <a href="part-iii.html" class="boto-acces">
-            <span class="boto-acces-part">Part III</span>
-            <span class="boto-acces-nom">Anàlisi</span>
-            <span class="boto-acces-desc">Cruïlles, comparatives i interpretacions</span>
-          </a>
-        </div>
-      </div>
-    </main>
 
-  <!-- PEU DE PÀGINA -->
+      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol<br>en dos circuits (1965–2025)</p>
+
+      <div class="inici-hero">
+
+        <!-- Columna esquerra: textos -->
+        <div class="inici-hero-text">
+          <h1 class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</h1>
+          <p class="inici-intro-a">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement als festivals? I quan, excepcionalment, coincideixen?</p>
+          <p class="inici-intro-b">Un estudi viu i actualitzable que mesura i analitza la tensió entre el públic massiu i el prestigi crític.</p>
+          <p class="inici-versio">Versió 1 · Actualitzada el març del 2026</p>
+          <div class="inici-boto-xifres">
+            <a href="part-i.html" class="inici-boto-entrar">Entrar a l'estudi →</a>
+            <div class="inici-xifres-hero">
+              <span><strong style="color:#2255a4">100</strong> films de públic</span>
+              <span class="sep">·</span>
+              <span><strong style="color:#9B2335">264</strong> seleccions de festival</span>
+              <span class="sep">·</span>
+              <span><strong>10</strong> dobles corones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna dreta: gràfic SVG -->
+        <div class="inici-hero-grafic">
+          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
+      </div><!-- /hero -->
+
+      <!-- Bloc inferior -->
+      <div class="inici-inferior">
+        <div class="inici-parts">
+          <a href="part-i.html" class="inici-part">
+            <div class="inici-part-num" style="color:#9B2335">I</div>
+            <div class="inici-part-info">
+              <div class="nom">Públic</div>
+              <div class="desc">Les pel·lícules més vistes</div>
+              <div class="sub">Top 100, dècades i mercat</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+          <a href="part-ii.html" class="inici-part">
+            <div class="inici-part-num" style="color:#2255a4">II</div>
+            <div class="inici-part-info">
+              <div class="nom">Prestigi</div>
+              <div class="desc">El circuit dels festivals</div>
+              <div class="sub">Cannes, Berlín, Venècia i Sant Sebastià</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+          <a href="part-iii.html" class="inici-part">
+            <div class="inici-part-num" style="color:#2a7a4f">III</div>
+            <div class="inici-part-info">
+              <div class="nom">Anàlisi</div>
+              <div class="desc">On es troben els dos mons</div>
+              <div class="sub">Cruïlles, comparatives i interpretacions</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+        </div>
+        <div class="inici-dreta">
+          <div>
+            <div class="inici-cerca-label">Cerca una pel·lícula, un director o un any...</div>
+            <input class="inici-cerca-input" type="text" placeholder="" aria-label="Cerca">
+          </div>
+          <div>
+            <div class="inici-segueix-titol">Segueix el projecte</div>
+            <p class="inici-segueix-text">Noves dades, revisions i articles a l'Substack del projecte.</p>
+            <a href="https://publiciprestigi.substack.com" class="inici-segueix-link" target="_blank" rel="noopener">publiciprestigi.substack.com ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /inici-portada -->
+  </main>
+
   <footer class="peu">
     <div class="peu-interior">
       <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · Llicència CC BY-NC 4.0</span>
@@ -99,7 +344,6 @@
     </div>
   </footer>
 
-  <!-- BUSCADOR (overlay) -->
   <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
     <div class="buscador-interior">
       <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
@@ -111,30 +355,92 @@
   <script>
     fetch('data/metadata.json')
       .then(r => r.json())
-      .then(data => {
-        document.getElementById('versio-label').textContent = data.versio_label;
-      })
+      .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
       .catch(() => {});
 
     function toggleBuscador() {
       const overlay = document.getElementById('buscador-overlay');
       const input = document.getElementById('buscador-input');
       if (overlay.style.display === 'none') {
-        overlay.style.display = 'flex';
-        input.focus();
+        overlay.style.display = 'flex'; input.focus();
       } else {
-        overlay.style.display = 'none';
-        input.value = '';
+        overlay.style.display = 'none'; input.value = '';
         document.getElementById('buscador-resultats').innerHTML = '';
       }
     }
-
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Escape') {
-        const overlay = document.getElementById('buscador-overlay');
-        if (overlay.style.display !== 'none') toggleBuscador();
+        if (document.getElementById('buscador-overlay').style.display !== 'none') toggleBuscador();
       }
     });
+
+    // ── GRÀFIC SVG ──
+    (function() {
+      const svg = document.getElementById('grafic-circuits');
+      const ns = 'http://www.w3.org/2000/svg';
+      const W = 600, ML = 70, MR = 10;
+      const YP = 72, YF = 128;
+      const A0 = 1965, A1 = 2025;
+      const COL_PUB = '#2255a4', COL_PREST = '#9B2335';
+
+      function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
+      function el(tag, attrs, par) {
+        const e = document.createElementNS(ns, tag);
+        for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+        if (par) par.appendChild(e);
+        return e;
+      }
+
+      // Eix temporal + ticks
+      [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
+        el('line', { x1: x(a), y1: 50, x2: x(a), y2: 148, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
+        el('line', { x1: x(a), y1: 50, x2: x(a), y2: 55, stroke: '#ccc', 'stroke-width': '0.6' }, svg);
+        const t = el('text', { x: x(a), y: 43, 'font-size': '9', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+        t.textContent = a;
+      });
+
+      // Etiquetes carrils
+      function cLabel(label, sub, y, col) {
+        const t = el('text', { x: ML - 8, y: y + 2, 'font-size': '9.5', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        t.textContent = label;
+        const s = el('text', { x: ML - 8, y: y + 14, 'font-size': '7.5', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        s.textContent = sub;
+      }
+      cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
+      cLabel('PRESTIGI', 'Festivals', YF, COL_PREST);
+
+      // Punts
+      const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+        1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
+        1981,1984,1988,1991,1995,1997,1998,1999,
+        2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
+        2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
+
+      const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
+        1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
+        2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
+
+      pub.forEach(a => el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg));
+      prest.forEach(a => el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg));
+
+      // 3 etiquetes cap avall
+      const etiq = [
+        { any: 1975, titol: 'Furtivos', sub: 'SSFF · Conxa d\'Or', anchor: 'start', dx: 4 },
+        { any: 1999, titol: 'Todo sobre mi madre', sub: 'Cannes · Millor Direcció', anchor: 'middle', dx: 0 },
+        { any: 2004, titol: 'Mar adentro', sub: 'Venècia · Lleó d\'Or', anchor: 'end', dx: -4 },
+      ];
+
+      etiq.forEach(e => {
+        const cx = x(e.any);
+        el('line', { x1: cx, y1: YF + 4, x2: cx, y2: 156, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
+        const tany = el('text', { x: cx + e.dx, y: 166, 'font-size': '9.5', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+        tany.textContent = e.any;
+        const ttit = el('text', { x: cx + e.dx, y: 180, 'font-size': '11', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        ttit.textContent = e.titol;
+        const tsub = el('text', { x: cx + e.dx, y: 194, 'font-size': '8.5', fill: '#aaa', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
+        tsub.textContent = e.sub;
+      });
+    })();
   </script>
 
 </body>
