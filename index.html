@@ -10,173 +10,155 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estil.css">
   <style>
-    /* ── PORTADA HERO ── */
+
+    /* ── Reset portada — sobreescriu amplada restringida del CSS global ── */
+    .contingut { padding-bottom: 0; }
     .inici-portada {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 32px 0;
+      max-width: var(--amplada-max);
+      padding: 40px 0 0;
     }
 
+    /* ── Antetítol — ample complet ── */
     .inici-antetitol {
-      font-size: 0.62rem;
+      font-size: 0.6rem;
       letter-spacing: .12em;
       text-transform: uppercase;
-      color: #888;
-      margin-bottom: 28px;
+      color: #999;
+      margin-bottom: 24px;
       line-height: 1.6;
       font-weight: 400;
     }
 
-    /* Hero: dues columnes */
+    /* ── Hero: dues columnes ── */
     .inici-hero {
       display: grid;
-      grid-template-columns: 280px 1fr;
-      gap: 48px;
+      grid-template-columns: 340px 1fr;
+      gap: 56px;
       align-items: start;
-      margin-bottom: 0;
+      margin-bottom: 32px;
     }
 
-    /* Columna esquerra */
+    /* Columna esquerra: titular + botó */
     .inici-claim {
-      font-size: 2.6rem !important;
-      font-weight: 700 !important;
-      line-height: 1.07 !important;
-      color: #1a1a1a !important;
-      letter-spacing: -0.025em !important;
-      margin-bottom: 22px !important;
-      margin-top: 0 !important;
-      padding: 0 !important;
-    }
-
-    .inici-hero-text .inici-intro-a {
-      font-size: 0.82rem;
-      color: #555;
-      line-height: 1.75;
-      margin-bottom: 14px;
-    }
-
-    .inici-hero-text .inici-intro-b {
-      font-size: 0.82rem;
-      color: #555;
-      line-height: 1.75;
-      margin-bottom: 20px;
-    }
-
-    .inici-hero-text .inici-versio {
-      font-size: 0.67rem;
-      color: #bbb;
-      margin-bottom: 28px;
-    }
-
-    /* Botó + xifres en línia */
-    .inici-boto-xifres {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      padding-top: 18px;
-      border-top: 1px solid #e5e5e5;
-      flex-wrap: wrap;
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.08;
+      color: #1a1a1a;
+      letter-spacing: -0.025em;
+      margin: 0 0 28px 0;
     }
 
     .inici-boto-entrar {
-      font-size: 0.7rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.68rem;
       font-weight: 700;
       letter-spacing: .1em;
       text-transform: uppercase;
       color: #1a1a1a;
       text-decoration: none;
-      white-space: nowrap;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-shrink: 0;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 18px;
+      width: 100%;
+    }
+    .inici-boto-entrar:hover { color: #9B2335; text-decoration: none; }
+
+    /* Columna dreta: gràfic */
+    .inici-hero-grafic svg { width: 100%; display: block; }
+
+    /* ── Text introductori — ample complet, cos normal ── */
+    .inici-intro-bloc {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 24px;
+      margin-bottom: 0;
     }
 
-    .inici-boto-entrar:hover { color: #9B2335; }
+    .inici-intro-bloc p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      max-width: 780px;
+      margin-bottom: 10px;
+    }
+
+    .inici-intro-bloc p:last-child { margin-bottom: 0; }
+
+    /* Versió + xifres */
+    .inici-meta {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e5e5;
+      flex-wrap: wrap;
+    }
+
+    .inici-versio {
+      font-size: 0.68rem;
+      color: #bbb;
+      flex-shrink: 0;
+    }
 
     .inici-xifres-hero {
       display: flex;
       align-items: center;
       gap: 10px;
-      font-size: 0.67rem;
-      color: #888;
+      font-size: 0.65rem;
+      color: #999;
       letter-spacing: .04em;
       text-transform: uppercase;
-      flex-wrap: wrap;
     }
+    .inici-xifres-hero strong { font-weight: 700; font-size: 0.75rem; }
+    .inici-xifres-hero .sep { color: #ddd; }
 
-    .inici-xifres-hero strong { font-weight: 700; }
-    .inici-xifres-hero .sep { color: #ccc; }
-
-    /* Columna dreta — gràfic */
-    .inici-hero-grafic {
-      padding-top: 0;
-    }
-
-    .inici-hero-grafic svg {
-      width: 100%;
-      display: block;
-    }
-
-    /* ── BLOC INFERIOR: parts + cercador ── */
+    /* ── Bloc inferior: parts + dreta ── */
     .inici-inferior {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border-top: 1px solid #e0e0e0;
-      margin-top: 40px;
     }
 
-    .inici-parts {
-      border-right: 1px solid #e0e0e0;
-    }
+    .inici-parts { border-right: 1px solid #e5e5e5; }
 
     .inici-part {
       display: grid;
-      grid-template-columns: 48px 1fr 28px;
+      grid-template-columns: 48px 1fr 24px;
       align-items: center;
-      padding: 20px 28px;
-      border-bottom: 1px solid #e0e0e0;
+      padding: 20px 24px 20px 0;
+      border-bottom: 1px solid #e5e5e5;
       text-decoration: none;
       color: inherit;
       transition: background .12s;
+      gap: 8px;
     }
-
     .inici-part:last-child { border-bottom: none; }
-    .inici-part:hover { background: #f8f8f6; }
+    .inici-part:hover { background: #f9f9f7; }
 
     .inici-part-num {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
       line-height: 1;
     }
-
     .inici-part-info .nom {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: #1a1a1a;
       margin-bottom: 2px;
     }
-
     .inici-part-info .desc {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #888;
       margin-bottom: 1px;
     }
-
     .inici-part-info .sub {
-      font-size: 0.7rem;
+      font-size: 0.67rem;
       color: #bbb;
     }
+    .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
 
-    .inici-part-arrow {
-      font-size: 0.9rem;
-      color: #bbb;
-      text-align: right;
-    }
-
-    /* Dreta inferior: cercador + substack */
+    /* Dreta: cercador + substack */
     .inici-dreta {
-      padding: 28px 32px;
+      padding: 28px 0 28px 40px;
       display: flex;
       flex-direction: column;
       gap: 36px;
@@ -184,49 +166,42 @@
     }
 
     .inici-cerca-label {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #aaa;
       margin-bottom: 8px;
     }
-
     .inici-cerca-input {
       width: 100%;
       border: none;
       border-bottom: 1px solid #ddd;
       background: transparent;
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: #333;
       padding: 6px 0;
       outline: none;
       font-family: inherit;
     }
-
     .inici-cerca-input::placeholder { color: #ccc; }
 
     .inici-segueix-titol {
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
       color: #1a1a1a;
       margin-bottom: 6px;
     }
-
     .inici-segueix-text {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #888;
       line-height: 1.6;
       margin-bottom: 8px;
     }
-
     .inici-segueix-link {
-      font-size: 0.75rem;
+      font-size: 0.72rem;
       color: #555;
       text-decoration: none;
     }
-
     .inici-segueix-link:hover { color: #1a1a1a; }
 
-    /* Peu */
-    .peu { margin-top: 0; }
   </style>
 </head>
 <body class="pag-inici">
@@ -263,34 +238,37 @@
   <main class="contingut">
     <div class="inici-portada">
 
-      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol<br>en dos circuits (1965–2025)</p>
+      <!-- Antetítol ample complet -->
+      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
+      <!-- Hero: titular esquerra + gràfic dreta -->
       <div class="inici-hero">
-
-        <!-- Columna esquerra: textos -->
         <div class="inici-hero-text">
           <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
-          <p class="inici-intro-a">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement als festivals? I quan, excepcionalment, coincideixen?</p>
-          <p class="inici-intro-b">Un estudi viu i actualitzable que mesura i analitza la tensió entre el públic massiu i el prestigi crític.</p>
-          <p class="inici-versio">Versió 1 · Actualitzada el març del 2026</p>
-          <div class="inici-boto-xifres">
-            <a href="part-i.html" class="inici-boto-entrar">Entrar a l'estudi →</a>
-            <div class="inici-xifres-hero">
-              <span><strong style="color:#2255a4">100</strong> films de públic</span>
-              <span class="sep">·</span>
-              <span><strong style="color:#9B2335">264</strong> seleccions de festival</span>
-              <span class="sep">·</span>
-              <span><strong>10</strong> dobles corones</span>
-            </div>
-          </div>
+          <a href="part-i.html" class="inici-boto-entrar">Entrar a l'estudi →</a>
         </div>
-
-        <!-- Columna dreta: gràfic SVG -->
         <div class="inici-hero-grafic">
-          <svg id="grafic-circuits" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg"></svg>
+          <svg id="grafic-circuits" viewBox="0 0 560 180" xmlns="http://www.w3.org/2000/svg"></svg>
         </div>
+      </div>
 
-      </div><!-- /hero -->
+      <!-- Text introductori ample complet -->
+      <div class="inici-intro-bloc">
+        <p>Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement als festivals? I quan, excepcionalment, coincideixen?</p>
+        <p>Un estudi viu i actualitzable que mesura i analitza la tensió entre el públic massiu i el prestigi crític.</p>
+      </div>
+
+      <!-- Versió + xifres -->
+      <div class="inici-meta">
+        <span class="inici-versio">Versió 1 · Actualitzada el març del 2026</span>
+        <div class="inici-xifres-hero">
+          <span><strong style="color:#2255a4">100</strong> films de públic</span>
+          <span class="sep">·</span>
+          <span><strong style="color:#9B2335">264</strong> seleccions de festival</span>
+          <span class="sep">·</span>
+          <span><strong>10</strong> dobles corones</span>
+        </div>
+      </div>
 
       <!-- Bloc inferior -->
       <div class="inici-inferior">
@@ -336,7 +314,7 @@
         </div>
       </div>
 
-    </div><!-- /inici-portada -->
+    </div>
   </main>
 
   <footer class="peu">
@@ -363,25 +341,19 @@
     function toggleBuscador() {
       const overlay = document.getElementById('buscador-overlay');
       const input = document.getElementById('buscador-input');
-      if (overlay.style.display === 'none') {
-        overlay.style.display = 'flex'; input.focus();
-      } else {
-        overlay.style.display = 'none'; input.value = '';
-        document.getElementById('buscador-resultats').innerHTML = '';
-      }
+      if (overlay.style.display === 'none') { overlay.style.display = 'flex'; input.focus(); }
+      else { overlay.style.display = 'none'; input.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
     }
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        if (document.getElementById('buscador-overlay').style.display !== 'none') toggleBuscador();
-      }
+      if (e.key === 'Escape' && document.getElementById('buscador-overlay').style.display !== 'none') toggleBuscador();
     });
 
     // ── GRÀFIC SVG ──
     (function() {
       const svg = document.getElementById('grafic-circuits');
       const ns = 'http://www.w3.org/2000/svg';
-      const W = 600, ML = 70, MR = 10;
-      const YP = 80, YF = 140;
+      const W = 560, ML = 68, MR = 8;
+      const YP = 56, YF = 100;
       const A0 = 1965, A1 = 2025;
       const COL_PUB = '#2255a4', COL_PREST = '#9B2335';
 
@@ -393,19 +365,19 @@
         return e;
       }
 
-      // Eix temporal + ticks
+      // Eix anys + ticks
       [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
-        el('line', { x1: x(a), y1: 55, x2: x(a), y2: 158, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
-        el('line', { x1: x(a), y1: 55, x2: x(a), y2: 60, stroke: '#ccc', 'stroke-width': '0.6' }, svg);
-        const t = el('text', { x: x(a), y: 48, 'font-size': '9', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+        el('line', { x1: x(a), y1: 36, x2: x(a), y2: 112, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
+        el('line', { x1: x(a), y1: 36, x2: x(a), y2: 40, stroke: '#ccc', 'stroke-width': '0.5' }, svg);
+        const t = el('text', { x: x(a), y: 30, 'font-size': '8.5', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
         t.textContent = a;
       });
 
       // Etiquetes carrils
       function cLabel(label, sub, y, col) {
-        const t = el('text', { x: ML - 8, y: y + 2, 'font-size': '9.5', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        const t = el('text', { x: ML - 8, y: y + 2, 'font-size': '9', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
         t.textContent = label;
-        const s = el('text', { x: ML - 8, y: y + 14, 'font-size': '7.5', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        const s = el('text', { x: ML - 8, y: y + 13, 'font-size': '7', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
         s.textContent = sub;
       }
       cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
@@ -422,8 +394,8 @@
         1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
         2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
 
-      pub.forEach(a => el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg));
-      prest.forEach(a => el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg));
+      pub.forEach(a => el('circle', { cx: x(a), cy: YP, r: '3', fill: COL_PUB }, svg));
+      prest.forEach(a => el('circle', { cx: x(a), cy: YF, r: '3', fill: COL_PREST }, svg));
 
       // 3 etiquetes cap avall — ben separades
       const etiq = [
@@ -434,12 +406,12 @@
 
       etiq.forEach(e => {
         const cx = x(e.any);
-        el('line', { x1: cx, y1: YF + 5, x2: cx, y2: 166, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
-        const tany = el('text', { x: cx + e.dx, y: 176, 'font-size': '10', fill: '#777', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+        el('line', { x1: cx, y1: YF + 4, x2: cx, y2: 118, stroke: '#ddd', 'stroke-width': '0.7' }, svg);
+        const tany = el('text', { x: cx + e.dx, y: 127, 'font-size': '8.5', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
         tany.textContent = e.any;
-        const ttit = el('text', { x: cx + e.dx, y: 192, 'font-size': '11.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        const ttit = el('text', { x: cx + e.dx, y: 140, 'font-size': '10.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
         ttit.textContent = e.titol;
-        const tsub = el('text', { x: cx + e.dx, y: 207, 'font-size': '9', fill: '#aaa', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
+        const tsub = el('text', { x: cx + e.dx, y: 153, 'font-size': '8', fill: '#aaa', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
         tsub.textContent = e.sub;
       });
     })();
