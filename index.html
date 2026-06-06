@@ -337,20 +337,20 @@
 
   // 3 etiquetes escalonades cap avall
   const etiq = [
-    { any: 1975, titol: 'Furtivos',          sub: 'SSFF · Conxa d\'Or',       anchor: 'start',  dx: 4,  baseY: 130 },
-    { any: 2004, titol: 'Mar adentro',        sub: 'Venècia · Lleó d\'Or',     anchor: 'end',    dx: -4, baseY: 155 },
-    { any: 1988, titol: 'Mujeres al borde…', sub: 'Venècia · Premi Especial', anchor: 'middle', dx: 0,  baseY: 182 },
+    { any: 1975, titol: 'Furtivos',                    sub: 'SSIFF',   anchor: 'start',  dx: 4,  baseY: 130, showAny: true  },
+    { any: 2004, titol: 'Mar adentro',                 sub: 'Venècia', anchor: 'end',    dx: -4, baseY: 155, showAny: true  },
+    { any: 1988, titol: 'Todo sobre mi madre (1999)',  sub: 'Cannes',  anchor: 'middle', dx: 0,  baseY: 182, showAny: false },
   ];
 
   etiq.forEach(e => {
     const cx = x(e.any);
     // línia continua cap avall des del carril prestigi fins a l'etiqueta
     el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
-    const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '10', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
-    tany.textContent = e.any;
+    const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+    tany.textContent = e.showAny ? e.any : '';
     const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
     ttit.textContent = e.titol;
-    const tsub = el('text', { x: cx + e.dx, y: e.baseY + 32, 'font-size': '9.5', fill: '#bbb', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
+    const tsub = el('text', { x: cx + e.dx, y: e.baseY + 32, 'font-size': '11', fill: '#bbb', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
     tsub.textContent = e.sub;
   });
 })();
