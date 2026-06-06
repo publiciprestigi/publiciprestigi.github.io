@@ -30,20 +30,22 @@
     /* Hero: dues columnes */
     .inici-hero {
       display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 64px;
+      grid-template-columns: 280px 1fr;
+      gap: 48px;
       align-items: start;
       margin-bottom: 0;
     }
 
     /* Columna esquerra */
-    .inici-hero-text .inici-claim {
-      font-size: 2.85rem;
-      font-weight: 700;
-      line-height: 1.07;
-      color: #1a1a1a;
-      letter-spacing: -0.025em;
-      margin-bottom: 22px;
+    .inici-claim {
+      font-size: 2.6rem !important;
+      font-weight: 700 !important;
+      line-height: 1.07 !important;
+      color: #1a1a1a !important;
+      letter-spacing: -0.025em !important;
+      margin-bottom: 22px !important;
+      margin-top: 0 !important;
+      padding: 0 !important;
     }
 
     .inici-hero-text .inici-intro-a {
@@ -267,7 +269,7 @@
 
         <!-- Columna esquerra: textos -->
         <div class="inici-hero-text">
-          <h1 class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</h1>
+          <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
           <p class="inici-intro-a">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement als festivals? I quan, excepcionalment, coincideixen?</p>
           <p class="inici-intro-b">Un estudi viu i actualitzable que mesura i analitza la tensió entre el públic massiu i el prestigi crític.</p>
           <p class="inici-versio">Versió 1 · Actualitzada el març del 2026</p>
@@ -285,7 +287,7 @@
 
         <!-- Columna dreta: gràfic SVG -->
         <div class="inici-hero-grafic">
-          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+          <svg id="grafic-circuits" viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg"></svg>
         </div>
 
       </div><!-- /hero -->
@@ -379,7 +381,7 @@
       const svg = document.getElementById('grafic-circuits');
       const ns = 'http://www.w3.org/2000/svg';
       const W = 600, ML = 70, MR = 10;
-      const YP = 72, YF = 128;
+      const YP = 80, YF = 140;
       const A0 = 1965, A1 = 2025;
       const COL_PUB = '#2255a4', COL_PREST = '#9B2335';
 
@@ -393,9 +395,9 @@
 
       // Eix temporal + ticks
       [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
-        el('line', { x1: x(a), y1: 50, x2: x(a), y2: 148, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
-        el('line', { x1: x(a), y1: 50, x2: x(a), y2: 55, stroke: '#ccc', 'stroke-width': '0.6' }, svg);
-        const t = el('text', { x: x(a), y: 43, 'font-size': '9', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+        el('line', { x1: x(a), y1: 55, x2: x(a), y2: 158, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
+        el('line', { x1: x(a), y1: 55, x2: x(a), y2: 60, stroke: '#ccc', 'stroke-width': '0.6' }, svg);
+        const t = el('text', { x: x(a), y: 48, 'font-size': '9', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
         t.textContent = a;
       });
 
@@ -423,21 +425,21 @@
       pub.forEach(a => el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg));
       prest.forEach(a => el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg));
 
-      // 3 etiquetes cap avall
+      // 3 etiquetes cap avall — ben separades
       const etiq = [
-        { any: 1975, titol: 'Furtivos', sub: 'SSFF · Conxa d\'Or', anchor: 'start', dx: 4 },
-        { any: 1999, titol: 'Todo sobre mi madre', sub: 'Cannes · Millor Direcció', anchor: 'middle', dx: 0 },
-        { any: 2004, titol: 'Mar adentro', sub: 'Venècia · Lleó d\'Or', anchor: 'end', dx: -4 },
+        { any: 1975, titol: 'Furtivos', sub: 'SSFF · Conxa d\'Or', anchor: 'start', dx: 2 },
+        { any: 1988, titol: 'Mujeres al borde…', sub: 'Venècia · Premi Especial', anchor: 'middle', dx: 0 },
+        { any: 2004, titol: 'Mar adentro', sub: 'Venècia · Lleó d\'Or', anchor: 'end', dx: -2 },
       ];
 
       etiq.forEach(e => {
         const cx = x(e.any);
-        el('line', { x1: cx, y1: YF + 4, x2: cx, y2: 156, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
-        const tany = el('text', { x: cx + e.dx, y: 166, 'font-size': '9.5', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+        el('line', { x1: cx, y1: YF + 5, x2: cx, y2: 166, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
+        const tany = el('text', { x: cx + e.dx, y: 176, 'font-size': '10', fill: '#777', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
         tany.textContent = e.any;
-        const ttit = el('text', { x: cx + e.dx, y: 180, 'font-size': '11', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        const ttit = el('text', { x: cx + e.dx, y: 192, 'font-size': '11.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
         ttit.textContent = e.titol;
-        const tsub = el('text', { x: cx + e.dx, y: 194, 'font-size': '8.5', fill: '#aaa', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
+        const tsub = el('text', { x: cx + e.dx, y: 207, 'font-size': '9', fill: '#aaa', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
         tsub.textContent = e.sub;
       });
     })();
