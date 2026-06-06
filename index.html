@@ -292,9 +292,9 @@
 
   // Etiquetes de carril
   function cLabel(label, sub, y, col) {
-    const t = el('text', { x: ML - 14, y: y + 3, 'font-size': '11', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    const t = el('text', { x: ML - 14, y: y + 3, 'font-size': '13', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
     t.textContent = label;
-    const s = el('text', { x: ML - 14, y: y + 17, 'font-size': '9', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    const s = el('text', { x: ML - 14, y: y + 18, 'font-size': '11', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
     s.textContent = sub;
   }
   cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
@@ -337,9 +337,9 @@
 
   // 3 etiquetes escalonades cap avall
   const etiq = [
-    { any: 1975, titol: 'Furtivos',                    sub: 'SSIFF',   anchor: 'start',  dx: 4,  baseY: 130, showAny: true  },
-    { any: 2004, titol: 'Mar adentro',                 sub: 'Venècia', anchor: 'end',    dx: -4, baseY: 155, showAny: true  },
-    { any: 1988, titol: 'Todo sobre mi madre (1999)',  sub: 'Cannes',  anchor: 'middle', dx: 0,  baseY: 182, showAny: false },
+    { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
+    { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
+    { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
   ];
 
   etiq.forEach(e => {
@@ -347,11 +347,9 @@
     // línia continua cap avall des del carril prestigi fins a l'etiqueta
     el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
     const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
-    tany.textContent = e.showAny ? e.any : '';
+    tany.textContent = e.any;
     const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
     ttit.textContent = e.titol;
-    const tsub = el('text', { x: cx + e.dx, y: e.baseY + 32, 'font-size': '11', fill: '#bbb', 'text-anchor': e.anchor, 'font-family': 'system-ui,sans-serif' }, svg);
-    tsub.textContent = e.sub;
   });
 })();
   </script>
