@@ -80,18 +80,19 @@
     }
 
     /* Bloc inferior */
-    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; }
-    .inici-parts { border-right: 1px solid #e5e5e5; }
+    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
     .inici-part {
       display: grid;
       grid-template-columns: 48px 1fr 24px;
       align-items: center;
       gap: 8px;
-      padding: 18px 24px 18px 0;
+      padding: 0 24px 0 0;
       border-bottom: 1px solid #e5e5e5;
       text-decoration: none;
       color: inherit;
       transition: background .12s;
+      flex: 1;
     }
     .inici-part:last-child { border-bottom: none; }
     .inici-part:hover { background: #f9f9f7; }
@@ -100,45 +101,48 @@
     .inici-part-info .sub { font-size: 0.82rem; color: #888; }
     .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
 
-    .inici-dreta {
-      padding: 28px 0 28px 40px;
-      display: flex; flex-direction: column; gap: 32px; justify-content: center;
-    }
     .inici-substack {
-      display: flex;
-      flex-direction: column;
-      padding: 20px 0 20px 40px;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      padding: 0 0 0 40px;
       text-decoration: none;
       color: inherit;
       transition: opacity .15s;
     }
     .inici-substack:hover { opacity: 0.88; text-decoration: none; }
 
+    .inici-substack-header {
+      display: grid;
+      grid-template-columns: 1fr 24px;
+      align-items: center;
+      border-bottom: 1px solid #e5e5e5;
+      flex: 1;
+      padding: 0;
+    }
+
     .inici-substack-titol {
-      display: block;
       font-size: 0.95rem;
       font-weight: 600;
       color: #1a1a1a;
-      margin-bottom: 2px;
     }
 
-    .inici-substack-cta {
-      font-size: 0.82rem;
-      color: #888;
-      margin-bottom: 14px;
+    .inici-substack-arrow {
+      font-size: 0.85rem;
+      color: #ccc;
+      text-align: right;
     }
 
     .inici-substack-foto {
-      flex: 1;
       border-radius: 4px;
       overflow: hidden;
+      margin-top: 14px;
     }
 
     .inici-substack-foto img {
       width: 100%;
-      height: 260px;
+      height: 100%;
       object-fit: cover;
-      object-position: center 25%;
+      object-position: center 20%;
       display: block;
     }
   </style>
@@ -243,9 +247,9 @@
           </a>
         </div>
         <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
-          <div class="inici-substack-text">
-            <span class="inici-substack-titol">Segueix el projecte</span>
-            <span class="inici-substack-cta">Subscriu-te i col·labora →</span>
+          <div class="inici-substack-header">
+            <span class="inici-substack-titol">Subscriu-te</span>
+            <span class="inici-substack-arrow">→</span>
           </div>
           <div class="inici-substack-foto">
             <img src="img/bayona-serra.jpg" alt="J.A. Bayona i Albert Serra" />
