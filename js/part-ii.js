@@ -172,7 +172,7 @@ function construirPremiades() {
           { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.5)',   borderWidth: 0 },
           { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', hoverBackgroundColor: 'rgba(30,64,128,0.5)',   borderWidth: 0 },
           { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', hoverBackgroundColor: 'rgba(46,125,94,0.5)',   borderWidth: 0 },
-          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#C2185B', hoverBackgroundColor: 'rgba(107,63,160,0.5)', borderWidth: 0 },
+          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#C2185B', hoverBackgroundColor: 'rgba(194,24,91,0.5)', borderWidth: 0 },
         ]
       },
       options: {
@@ -224,7 +224,7 @@ function construirFestival(festival, seccioId) {
     'Cannes':        'rgba(155, 35, 53, 0.07)',
     'Berlín':        'rgba(30, 64, 128, 0.07)',
     'Venècia':       'rgba(46, 125, 94, 0.07)',
-    'Sant Sebastià': 'rgba(107, 63, 160, 0.07)',
+    'Sant Sebastià': 'rgba(194, 24, 91, 0.07)',
   };
   const bgFest = COLORS_FEST[festival] || '#fff';
 
