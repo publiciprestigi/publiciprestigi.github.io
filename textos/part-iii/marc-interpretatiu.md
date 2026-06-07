@@ -7,11 +7,11 @@
 
 No són compartiments estancs, però el conjunt permet distingir tres grans lògiques dins el cinema espanyol dels darrers seixanta anys.
 
-La primera és el **cinema popular de consum** —Lazaga, Ozores, Segura, Martínez-Lázaro—: films concebuts per arribar al públic més ampli, sovint menystinguts o poc atesos per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. I, tanmateix, és gairebé invisible en la historiografia: és el cinema que més gent ha vist i el que menys espai ocupa en el relat cultural del període.
+La primera és el **cinema popular** de consum (Lazaga, Ozores, Segura, Martínez-Lázaro): films concebuts per arribar al públic més ampli, sovint menystinguts o poc atesos per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. I, tanmateix, és gairebé invisible en la historiografia: és el cinema que més gent ha vist i el que menys espai ocupa en el relat cultural del període.
 
-La segona és el **cinema de festival o cinema d’autor de circuit** —Saura, Erice, Lacuesta, Simón, Serra—: films que circulen dins un ecosistema internacional amb regles, públic i economia propis. La seva força i el seu límit provenen de la mateixa especialització: mai tan ben representat internacionalment i mai tan allunyat de la sala massiva.
+La segona és el **cinema de festival** o cinema d’autor de circuit (Saura, Erice, Lacuesta, Serra, Simón): films que circulen dins un ecosistema internacional amb regles, públic i economia propis. La seva força i el seu límit provenen de la mateixa especialització: mai tan ben representat internacionalment i mai tan allunyat de la sala massiva.
 
-La tercera és el **cinema d’autor industrial** —Amenábar, Bayona, De la Iglesia—: directors que han construït les seves carreres sense fer dels grans festivals europeus l’objectiu prioritari, però amb una ambició formal poc habitual en el cinema de vocació popular. És també un model en transformació: va produir alguns dels grans èxits espanyols de les últimes dècades, però les plataformes l’han desplaçat cap a un espai que les mètriques tradicionals ja no saben mesurar.
+La tercera és el **cinema d’autor industrial** (Amenábar, Bayona, De la Iglesia): directors que han construït les seves carreres sense fer dels grans festivals europeus l’objectiu prioritari, però amb una ambició formal poc habitual en el cinema de vocació popular. És també un model en transformació: va produir alguns dels grans èxits espanyols de les últimes dècades, però les plataformes l’han desplaçat cap a un espai que les mètriques tradicionals ja no saben mesurar.
 <!-- /tres-categories -->
 
 <!-- professionalitzacio -->
@@ -25,12 +25,11 @@ Els projectes de Serra o Lacuesta es desenvolupen des del principi dins aquest e
 
 *Furtivos* (1975) era cinema d’autor i va fer 3,5 milions d’espectadors en sales. Avui, reproduir aquest resultat només amb la sala seria estructuralment gairebé impossible. Però l’IAA matisa aquesta impossibilitat: *As bestas* i *Los domingos* mostren que encara es pot assolir una audiència acumulada pròxima a la franja que en altres dècades ocupaven els films capaços d’unir prestigi i gran públic.
 
-No són noves ‘dobles corones’ en sentit estricte —el Top 100 es construeix amb entrades de sala—, però sí les seves cruïlles contemporànies. El que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra. Avui l’abast es reparteix entre sala, televisió i plataformes, i les xifres brutes accentuen una distància que l’IAA redueix.
+No són noves 'dobles corones' en sentit estricte (el Top 100 es construeix amb entrades de sala), però sí les seves cruïlles contemporànies. El que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra. Avui l’abast es reparteix entre sala, televisió i plataformes, i les xifres brutes accentuen una distància que l’IAA redueix.
 
 El film de festival i el film popular ja no parlen el mateix idioma de distribució, màrqueting ni expectatives, però la distància real entre tots dos pot ser menor del que indiquen les entrades de sala.
 
 La formació reforça aquest procés. La generació actual ha passat per escoles de cinema, residències i laboratoris europeus que ensenyen explícitament a desenvolupar projectes per al circuit internacional. Saura es va formar en un ecosistema molt menys codificat. Aquesta diferència es nota en la manera de construir, presentar i fer circular els projectes.
-
 <!-- /professionalitzacio -->
 
 <!-- memoria -->
