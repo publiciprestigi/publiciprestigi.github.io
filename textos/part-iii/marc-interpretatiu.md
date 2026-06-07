@@ -27,7 +27,7 @@ Els projectes de Serra o Lacuesta es desenvolupen des del principi dins aquest e
 
 No són noves 'dobles corones' en sentit estricte (el Top 100 es construeix amb entrades de sala), però sí les seves cruïlles contemporànies. El que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra. Avui l’abast es reparteix entre sala, televisió i plataformes, i les xifres brutes accentuen una distància que l’IAA redueix.
 
-El film de festival i el film popular ja no parlen el mateix idioma de distribució, màrqueting ni expectatives, però la distància real entre tots dos pot ser menor del que indiquen les entrades de sala.
+El cinema de festival i el cinema popular ja no parlen el mateix idioma de distribució, màrqueting ni expectatives, però la distància real entre tots dos pot ser menor del que indiquen les entrades de sala.
 
 La formació reforça aquest procés. La generació actual ha passat per escoles de cinema, residències i laboratoris europeus que ensenyen explícitament a desenvolupar projectes per al circuit internacional. Saura es va formar en un ecosistema molt menys codificat. Aquesta diferència es nota en la manera de construir, presentar i fer circular els projectes.
 <!-- /professionalitzacio -->
