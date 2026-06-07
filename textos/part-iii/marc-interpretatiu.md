@@ -23,7 +23,7 @@ Entre els anys 80 i 2000 es produeix una transformació estructural. Es consolid
 
 Els projectes de Serra o Lacuesta es desenvolupen des del principi dins aquest ecosistema, amb el seu llenguatge, els seus agents i el seu públic. La capacitat del cinema d’autor espanyol per competir i obtenir reconeixement internacional ha crescut amb aquesta especialització. Alhora, però, s’ha creat una barrera d’entrada per al gran públic que abans no existia de la mateixa manera.
 
-*Furtivos* (1975) era cinema d’autor i va fer 3,5 milions d’espectadors en sales. Avui, reproduir aquest resultat només amb la sala seria estructuralment gairebé impossible. Però l’IAA matisa aquesta impossibilitat: *As bestas* i *Los domingos* mostren que encara es pot assolir una audiència acumulada pròxima a la franja que en altres dècades ocupaven els films capaços d’unir prestigi i gran públic.
+*Furtivos* (1975) de Borau és cinema d’autor i va fer 3,5 milions d’espectadors en sales. Avui, reproduir aquest resultat només amb la sala seria estructuralment gairebé impossible. Però l’IAA matisa aquesta impossibilitat: *As bestas* (2022) de Sorogoyen i *Los domingos* (2025) de Ruiz de Azúa mostren que encara es pot assolir una audiència acumulada pròxima a la franja que en altres dècades ocupaven els films capaços d’unir prestigi i gran públic.
 
 No són noves 'dobles corones' en sentit estricte (el Top 100 es construeix amb entrades de sala), però sí les seves cruïlles contemporànies. El que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra. Avui l’abast es reparteix entre sala, televisió i plataformes, i les xifres brutes accentuen una distància que l’IAA redueix.
 
