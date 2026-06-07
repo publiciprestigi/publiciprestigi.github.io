@@ -170,7 +170,7 @@
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
-      const festColors = { 'cannes': '#9B2335', 'berlin': '#1E4080', 'venezia': '#2E7D5E', 'sansebastia': '#C2185B' };
+      const festColors = { 'cannes': '#9B2335', 'berlin': '#1E4080', 'venezia': '#2E7D5E', 'sansebastia': '#C0622A' };
       document.getElementById('titol-principal').style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
