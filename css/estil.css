@@ -234,13 +234,15 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 }
 
 .titol-sticky-sup {
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   color: var(--color-text);
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
-.titol-sticky h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; }
+.titol-sticky h1 { font-size: 2.05rem; font-weight: 700; line-height: 1.2; }
 
 /* Seccions */
 .seccio-contingut { display: none; max-width: var(--amplada-text); }
@@ -639,7 +641,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 #seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
 #seccio-berlin .taula-festivals       { border-left: 3px solid #1E4080; }
 #seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
-#seccio-sansebastia .taula-festivals  { border-left: 3px solid #6B3FA0; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #C2185B; }
 
 /* --- Directors en negre normal a Part I --- */
 .taula-films td.col-subtil,
@@ -858,3 +860,8 @@ body.pag-inici .inici-xifra-n {
 /* Idiomes: EN ocult */
 .capcalera-idioma .lang-en { display: none; }
 
+
+/* ── Color antetítol per part ── */
+body.part-i .titol-sticky-sup { color: #2a5582; }
+body.part-ii .titol-sticky-sup { color: #9B2335; }
+body.part-iii .titol-sticky-sup { color: #5a4a8a; }
