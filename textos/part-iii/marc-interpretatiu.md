@@ -21,15 +21,15 @@ La professionalització del cinema de festivals és una de les claus que expliqu
 
 Entre els anys 80 i 2000 es produeix una transformació estructural. Es consolida un circuit internacional de cinema d’autor amb agents propis, productors especialitzats, festivals intermedis que funcionen com a trampolí cap als grans, coproduccions europees, subvencions específiques i laboratoris de desenvolupament. Es professionalitza. (23)
 
-Els projectes de Serra o Lacuesta es desenvolupen des del principi dins aquest ecosistema, amb el seu llenguatge, els seus agents i el seu públic. La capacitat del cinema d’autor espanyol per competir i obtenir reconeixement internacional ha crescut amb aquesta especialització. Alhora, però, s’ha creat una barrera d’entrada per al gran públic que abans no existia de la mateixa manera.
+La formació reforça aquest procés. La generació actual ha passat per escoles de cinema, residències i laboratoris europeus orientats al desenvolupament de projectes per al circuit internacional. Saura es va formar en un ecosistema molt menys codificat. Aquesta diferència es nota en la manera de construir, presentar i fer circular els projectes.
 
-*Furtivos* (1975) de Borau és cinema d’autor i va fer 3,5 milions d’espectadors en sales. Avui, reproduir aquest resultat només amb la sala seria estructuralment gairebé impossible. Però l’IAA matisa aquesta impossibilitat: *As bestas* (2022) de Sorogoyen i *Los domingos* (2025) de Ruiz de Azúa mostren que encara es pot assolir una audiència acumulada pròxima a la franja que en altres dècades ocupaven els films capaços d’unir prestigi i gran públic.
+Les pel·lícules de Simón o Lacuesta es desenvolupen des del principi dins aquest ecosistema, amb el seu llenguatge, els seus agents i el seu públic. La capacitat del cinema d’autor espanyol per competir i obtenir reconeixement internacional ha crescut amb aquesta especialització. Alhora, però, s’ha creat una barrera d’entrada per al gran públic que abans no existia de la mateixa manera.
 
-No són noves 'dobles corones' en sentit estricte (el Top 100 es construeix amb entrades de sala), però sí les seves cruïlles contemporànies. El que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra. Avui l’abast es reparteix entre sala, televisió i plataformes, i les xifres brutes accentuen una distància que l’IAA redueix.
+*Furtivos* (1975), de Borau, és cinema d’autor i va fer 3,5 milions d’espectadors en sales. Avui, reproduir aquest resultat només amb la sala seria estructuralment gairebé impossible. Però l’IAA matisa aquesta impossibilitat: *As bestas* (2022), de Sorogoyen, i *Los domingos* (2025), de Ruiz de Azúa, mostren que encara es pot assolir una audiència acumulada pròxima a la franja que en altres dècades ocupaven els films capaços d’unir prestigi i gran públic.
 
-El cinema de festival i el cinema popular ja no parlen el mateix idioma de distribució, màrqueting ni expectatives, però la distància real entre tots dos pot ser menor del que indiquen les entrades de sala.
+No són noves ‘dobles corones’ en sentit estricte —el Top 100 es construeix amb entrades de sala—, però sí les seves cruïlles contemporànies. El que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra. Avui l’abast es reparteix entre sala, televisió i plataformes, i les xifres brutes accentuen una distància que l’IAA redueix.
 
-La formació reforça aquest procés. La generació actual ha passat per escoles de cinema, residències i laboratoris europeus que ensenyen explícitament a desenvolupar projectes per al circuit internacional. Saura es va formar en un ecosistema molt menys codificat. Aquesta diferència es nota en la manera de construir, presentar i fer circular els projectes.
+El cinema de festival i el cinema popular ja no parlen el mateix idioma de distribució, màrqueting ni expectatives, però la distància d’audiència entre tots dos pot ser menor del que indiquen les entrades de sala.
 <!-- /professionalitzacio -->
 
 <!-- memoria -->
