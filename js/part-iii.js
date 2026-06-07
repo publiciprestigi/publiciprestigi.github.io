@@ -8,7 +8,7 @@ const FC = {
   'Cannes':       '#9B2335',
   'Berlín':       '#1E4080',
   'Venècia':      '#2E7D5E',
-  'Sant Sebastià':'#6B3FA0',
+  'Sant Sebastià':'#C2185B',
 };
 
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
