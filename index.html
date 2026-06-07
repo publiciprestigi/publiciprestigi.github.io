@@ -274,7 +274,22 @@
   </div>
 
   <script>
-    fetch('data/metadata.json')
+    // ── CARRUSSEL FOTO PORTADA ──
+    const fotos = [
+      { src: 'img/bayona-serra.jpg',    pos: 'center 20%' },
+      { src: 'img/segura-iglesia.jpg',  pos: 'center 30%' },
+      { src: 'img/almodovar-laxe.jpg',  pos: 'center 25%' },
+      { src: 'img/azua.jpg',            pos: 'center 20%' },
+      { src: 'img/zamora-simon.jpg',    pos: 'center 15%' },
+      { src: 'img/querejeta-saura.jpg', pos: 'center 25%' },
+      { src: 'img/isasi-borau.jpg',     pos: 'center 20%' },
+    ];
+    const foto = fotos[Math.floor(Math.random() * fotos.length)];
+    const imgEl = document.querySelector('.inici-substack-foto img');
+    if (imgEl) {
+      imgEl.src = foto.src;
+      imgEl.style.objectPosition = foto.pos;
+    }
       .then(r => r.json())
       .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
       .catch(() => {});
