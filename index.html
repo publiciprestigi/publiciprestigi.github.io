@@ -290,6 +290,8 @@
       imgEl.src = foto.src;
       imgEl.style.objectPosition = foto.pos;
     }
+
+    fetch('data/metadata.json')
       .then(r => r.json())
       .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
       .catch(() => {});
