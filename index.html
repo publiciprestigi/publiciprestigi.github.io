@@ -271,7 +271,7 @@
 (function() {
   const svg = document.getElementById('grafic-circuits');
   const ns = 'http://www.w3.org/2000/svg';
-  const W = 600, ML = 110, MR = 12;
+  const W = 600, ML = 130, MR = 12;
   const YP = 60, YF = 110;
   const A0 = 1965, A1 = 2025;
   const COL_PUB = '#2255a4', COL_PREST = '#9B2335';
@@ -292,9 +292,9 @@
 
   // Etiquetes de carril
   function cLabel(label, sub, y, col) {
-    const t = el('text', { x: ML - 14, y: y + 3, 'font-size': '13', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
     t.textContent = label;
-    const s = el('text', { x: ML - 14, y: y + 18, 'font-size': '11', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
     s.textContent = sub;
   }
   cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
