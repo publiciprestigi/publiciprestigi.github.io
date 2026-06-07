@@ -6,7 +6,7 @@ const FC = {
   'Cannes':       '#9B2335',
   'Berlín':       '#1E4080',
   'Venècia':      '#2E7D5E',
-  'Sant Sebastià':'#6B3FA0',
+  'Sant Sebastià':'#C2185B',
 };
 
 async function carregarFestivals() {
@@ -102,7 +102,7 @@ function construirPremiades() {
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1E4080;display:inline-block;"></span>Berlín</span>
         <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#2E7D5E;display:inline-block;"></span>Venècia</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#6B3FA0;display:inline-block;"></span>Sant Sebastià</span>
+        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#C2185B;display:inline-block;"></span>Sant Sebastià</span>
       </div>
       <div style="position:relative;width:100%;height:260px;">
         <canvas id="grafic-premis-decades"></canvas>
@@ -124,7 +124,7 @@ function construirPremiades() {
           <div style="font-size:24px;font-weight:500;color:#363737;">7</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#6B3FA0;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
+          <div style="font-size:12px;color:#C2185B;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
           <div style="font-size:24px;font-weight:500;color:#363737;">40</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
@@ -148,7 +148,7 @@ function construirPremiades() {
           <div style="font-size:24px;font-weight:500;color:#363737;">1</div>
         </div>
         <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#6B3FA0;font-weight:500;margin-bottom:4px">Conxa d'Or</div>
+          <div style="font-size:12px;color:#C2185B;font-weight:500;margin-bottom:4px">Conxa d'Or</div>
           <div style="font-size:24px;font-weight:500;color:#363737;">14</div>
         </div>
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
@@ -172,7 +172,7 @@ function construirPremiades() {
           { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.5)',   borderWidth: 0 },
           { label: 'Berlín',        data: [2,2,2,1,0,0,1],  backgroundColor: '#1E4080', hoverBackgroundColor: 'rgba(30,64,128,0.5)',   borderWidth: 0 },
           { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', hoverBackgroundColor: 'rgba(46,125,94,0.5)',   borderWidth: 0 },
-          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#6B3FA0', hoverBackgroundColor: 'rgba(107,63,160,0.5)', borderWidth: 0 },
+          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#C2185B', hoverBackgroundColor: 'rgba(107,63,160,0.5)', borderWidth: 0 },
         ]
       },
       options: {
