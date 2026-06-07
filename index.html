@@ -104,17 +104,46 @@
       padding: 28px 0 28px 40px;
       display: flex; flex-direction: column; gap: 32px; justify-content: center;
     }
-    .inici-cerca-label { font-size: 0.72rem; color: #aaa; margin-bottom: 8px; }
-    .inici-cerca-input {
-      width: 100%; border: none; border-bottom: 1px solid #ddd;
-      background: transparent; font-size: 0.85rem; color: #333;
-      padding: 6px 0; outline: none; font-family: inherit;
+    .inici-substack {
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0 24px 40px;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity .15s;
     }
-    .inici-cerca-input::placeholder { color: #ccc; }
-    .inici-segueix-titol { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 6px; }
-    .inici-segueix-text { font-size: 0.72rem; color: #888; line-height: 1.6; margin-bottom: 8px; }
-    .inici-segueix-link { font-size: 0.72rem; color: #555; text-decoration: none; }
-    .inici-segueix-link:hover { color: #1a1a1a; }
+    .inici-substack:hover { opacity: 0.88; text-decoration: none; }
+
+    .inici-substack-titol {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 14px;
+    }
+
+    .inici-substack-foto {
+      flex: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 14px;
+    }
+
+    .inici-substack-foto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    .inici-substack-cta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #555;
+    }
   </style>
 </head>
 <body class="pag-inici">
@@ -216,17 +245,15 @@
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
-        <div class="inici-dreta">
-          <div>
-            <div class="inici-cerca-label">Cerca una pel·lícula, un director o un any...</div>
-            <input class="inici-cerca-input" type="text" placeholder="" aria-label="Cerca">
+        <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
+          <div class="inici-substack-text">
+            <span class="inici-substack-titol">Segueix el projecte</span>
           </div>
-          <div>
-            <div class="inici-segueix-titol">Segueix el projecte</div>
-            <p class="inici-segueix-text">Noves dades, revisions i articles a l'Substack del projecte.</p>
-            <a href="https://publiciprestigi.substack.com" class="inici-segueix-link" target="_blank" rel="noopener">publiciprestigi.substack.com ↗</a>
+          <div class="inici-substack-foto">
+            <img src="img/bayona-serra.jpg" alt="J.A. Bayona i Albert Serra" />
           </div>
-        </div>
+          <div class="inici-substack-cta">Subscriu-te i col·labora →</div>
+        </a>
       </div>
 
     </div>
