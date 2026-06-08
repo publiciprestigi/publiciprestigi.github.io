@@ -222,7 +222,7 @@ function construirFestival(festival, seccioId) {
 
   const COLORS_FEST = {
     'Cannes':        'rgba(155, 35, 53, 0.07)',
-    'Berlín':        'rgba(30, 64, 128, 0.07)',
+    'Berlín':        'rgba(121, 85, 72, 0.07)',
     'Venècia':       'rgba(46, 125, 94, 0.07)',
     'Sant Sebastià': 'rgba(192, 98, 42, 0.07)',
   };
