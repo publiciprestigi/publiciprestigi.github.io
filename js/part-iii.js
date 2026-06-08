@@ -1338,3 +1338,182 @@ function construirLleis() {
 }
 
 document.addEventListener('DOMContentLoaded', carregarDades);
+
+// ── GRÀFIC DETALLAT DOBLE CORONA ──────────────────────────────────────────
+window.PiP_graficDobleCorona = function() {
+  const wrap = document.getElementById('grafic-doble-corona-wrap');
+  if (!wrap) return;
+
+  const COL_PUB = '#2a5582';
+  const COL_PREST = '#9B2335';
+  const COL_DOBLE = '#1a1a1a';
+  const COL_OR = '#c8a000';
+
+  // Dades — les dobles corones identifiquem per any+titol
+  const dobles = [
+    { any: 1968, titol: 'No somos de piedra',   festival: 'Sant Sebastià', premiat: false },
+    { any: 1974, titol: 'Tormento',              festival: 'Sant Sebastià', premiat: false },
+    { any: 1975, titol: 'Furtivos',              festival: 'Sant Sebastià', premiat: true  },
+    { any: 1977, titol: 'La guerra de papá',     festival: 'Sant Sebastià', premiat: false },
+    { any: 1984, titol: 'Los santos inocentes',  festival: 'Cannes',        premiat: true  },
+    { any: 1988, titol: 'Mujeres al borde de un ataque de nervios', festival: 'Venècia', premiat: true },
+    { any: 1999, titol: 'Todo sobre mi madre',   festival: 'Cannes',        premiat: true  },
+    { any: 2001, titol: 'Juana la Loca',         festival: 'Sant Sebastià', premiat: true  },
+    { any: 2002, titol: 'Los lunes al sol',      festival: 'Sant Sebastià', premiat: true  },
+    { any: 2004, titol: 'Mar adentro',           festival: 'Venècia',       premiat: true  },
+  ];
+  const doblesAnys = new Set(dobles.map(d => d.any));
+
+  const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+    1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
+    1981,1984,1988,1991,1995,1997,1998,1999,
+    2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
+    2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
+
+  const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
+    1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
+    2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
+
+  const A0 = 1964, A1 = 2025;
+  const W = 860, ML = 0, MR = 0;
+  const YP = 52, YF = 108;
+  const R = 4, R_DOBLE = 5.5;
+
+  function xPct(a) {
+    return ((a - A0) / (A1 - A0) * 100).toFixed(3) + '%';
+  }
+
+  // Contenidor amb scroll horitzontal
+  wrap.style.cssText = 'margin-top:32px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:28px 0;';
+
+  const scrollWrap = document.createElement('div');
+  scrollWrap.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;position:relative;';
+
+  const inner = document.createElement('div');
+  inner.style.cssText = `min-width:700px;position:relative;height:${YF + 100}px;`;
+
+  // SVG
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('width', '100%');
+  svg.setAttribute('height', YF + 100);
+  svg.setAttribute('viewBox', `0 0 ${W} ${YF + 100}`);
+  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+  svg.style.cssText = 'display:block;width:100%;';
+
+  function el(tag, attrs, par) {
+    const e = document.createElementNS(svgNS, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (par) par.appendChild(e);
+    return e;
+  }
+
+  function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
+
+  // Anys eix
+  [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
+    el('line', { x1: x(a), y1: 28, x2: x(a), y2: YF + 12, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
+    el('line', { x1: x(a), y1: 28, x2: x(a), y2: 32, stroke: '#ccc', 'stroke-width': '0.5' }, svg);
+    const t = el('text', { x: x(a), y: 22, 'font-size': '9', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = a;
+  });
+
+  // Etiquetes carrils
+  function cLabel(label, sub, y, col) {
+    const t = el('text', { x: 4, y: y + 2, 'font-size': '9', fill: col, 'font-weight': '700', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = label;
+    const s = el('text', { x: 4, y: y + 13, 'font-size': '7.5', fill: '#bbb', 'font-family': 'system-ui,sans-serif' }, svg);
+    s.textContent = sub;
+  }
+
+  // Connexions dobles (sota els punts)
+  dobles.forEach(d => {
+    el('line', { x1: x(d.any), y1: YP, x2: x(d.any), y2: YF, stroke: '#bbb', 'stroke-width': '0.8', 'stroke-dasharray': '2,2' }, svg);
+  });
+
+  // Punts públic — normals primer
+  pub.forEach(a => {
+    if (!doblesAnys.has(a))
+      el('circle', { cx: x(a), cy: YP, r: R, fill: COL_PUB }, svg);
+  });
+
+  // Punts prestigi — normals primer
+  prest.forEach(a => {
+    if (!doblesAnys.has(a))
+      el('circle', { cx: x(a), cy: YF, r: R, fill: COL_PREST }, svg);
+  });
+
+  // Dobles corones — cercles buits damunt
+  dobles.forEach(d => {
+    if (pub.includes(d.any))
+      el('circle', { cx: x(d.any), cy: YP, r: R_DOBLE, fill: 'white', stroke: COL_PUB, 'stroke-width': '1.8' }, svg);
+    el('circle', { cx: x(d.any), cy: YF, r: R_DOBLE, fill: 'white', stroke: COL_PREST, 'stroke-width': '1.8' }, svg);
+    // Estrella si premiat
+    if (d.premiat) {
+      const t = el('text', { x: x(d.any), y: YF + R_DOBLE + 12, 'font-size': '9', fill: COL_OR, 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+      t.textContent = '★';
+    }
+  });
+
+  // Etiquetes de les dobles corones
+  const etiqDobles = [
+    { any: 1968, titol: 'No somos\nde piedra',  side: 'dalt' },
+    { any: 1974, titol: 'Tormento',              side: 'dalt' },
+    { any: 1975, titol: 'Furtivos',              side: 'dalt' },
+    { any: 1977, titol: 'La guerra\nde papá',    side: 'dalt' },
+    { any: 1984, titol: 'Los santos\ninocentes', side: 'dalt' },
+    { any: 1988, titol: 'Mujeres\nal borde…',   side: 'dalt' },
+    { any: 1999, titol: 'Todo sobre\nmi madre',  side: 'dalt' },
+    { any: 2001, titol: 'Juana\nla Loca',        side: 'baix' },
+    { any: 2002, titol: 'Los lunes\nal sol',      side: 'baix' },
+    { any: 2004, titol: 'Mar\nadentro',           side: 'baix' },
+  ];
+
+  etiqDobles.forEach(e => {
+    const cx = x(e.any);
+    const lines = e.titol.split('\n');
+    if (e.side === 'dalt') {
+      el('line', { x1: cx, y1: YP - R_DOBLE - 2, x2: cx, y2: YP - 22 - lines.length * 11, stroke: '#ddd', 'stroke-width': '0.6' }, svg);
+      lines.forEach((l, i) => {
+        const t = el('text', { x: cx, y: YP - 22 - (lines.length - 1 - i) * 11, 'font-size': '8', fill: '#555', 'text-anchor': 'middle', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        t.textContent = l;
+      });
+    } else {
+      el('line', { x1: cx, y1: YF + R_DOBLE + 14, x2: cx, y2: YF + 26, stroke: '#ddd', 'stroke-width': '0.6' }, svg);
+      lines.forEach((l, i) => {
+        const t = el('text', { x: cx, y: YF + 38 + i * 11, 'font-size': '8', fill: '#555', 'text-anchor': 'middle', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        t.textContent = l;
+      });
+    }
+  });
+
+  // Llegenda
+  const legY = YF + 72;
+  const legItems = [
+    { col: COL_PUB,   label: 'Públic — Top 100 (100 films)',      buit: false },
+    { col: COL_PREST, label: 'Prestigi — Festivals (264 films)',   buit: false },
+    { col: COL_PUB,   label: 'Doble corona',                       buit: true  },
+    { col: COL_OR,    label: '★ Premiat al festival',              buit: false, estrella: true },
+  ];
+  let legX = W / 2 - 260;
+  legItems.forEach(item => {
+    if (item.estrella) {
+      const t = el('text', { x: legX, y: legY + 4, 'font-size': '10', fill: COL_OR, 'font-family': 'system-ui,sans-serif' }, svg);
+      t.textContent = '★';
+      legX += 14;
+    } else if (item.buit) {
+      el('circle', { cx: legX + 5, cy: legY, r: '4.5', fill: 'white', stroke: item.col, 'stroke-width': '1.5' }, svg);
+      legX += 14;
+    } else {
+      el('circle', { cx: legX + 5, cy: legY, r: '4', fill: item.col }, svg);
+      legX += 14;
+    }
+    const t = el('text', { x: legX, y: legY + 4, 'font-size': '9', fill: '#555', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = item.label;
+    legX += item.label.length * 5.2 + 20;
+  });
+
+  inner.appendChild(svg);
+  scrollWrap.appendChild(inner);
+  wrap.appendChild(scrollWrap);
+};
