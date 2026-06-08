@@ -37,5 +37,5 @@ Bayona i Amenábar podrien haver construït trajectòries dins el circuit de fes
 <!-- paradoxa -->
 Però hi ha una paradoxa final. El model que va fer possible aquest cinema (televisions privades finançadores, distribució massiva en sala i cinema com a esdeveniment cultural compartit) és precisament el que les plataformes estan substituint. Bayona ho il·lustra millor que ningú: *La sociedad de la nieve* (2023), produïda per Netflix, va ser vista per desenes de milions de persones a tot el món, va guanyar el Goya a millor pel·lícula i va representar Espanya als Oscar. Però no apareix en aquest estudi perquè el seu pas per les sales era secundari en l’estratègia de distribució. Netflix, com la resta de plataformes digitals, no publica dades detallades d’audiència per títol i país, i les xifres de taquilla no reflecteixen l’audiència real del film.
 
-Una pel·lícula que probablement hauria ocupat les primeres posicions del Top 100 en qualsevol altra dècada ara és invisible per a les mètriques tradicionals. Ha canviat el mercat, ha canviat el circuit, però les dades públiques (encara) no el saben mesurar.
+Una pel·lícula que probablement hauria ocupat les primeres posicions del Top 100 en qualsevol altra dècada ara és invisible per a les mètriques tradicionals. Ha canviat el mercat, però les dades públiques (encara) no ho saben mesurar.
 <!-- /paradoxa -->
