@@ -148,14 +148,16 @@ strong { font-weight: 600; }
 .text-md a,
 .seccio-contingut a,
 .inici-intro a {
-  color: var(--color-accent);
-  text-decoration: none;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0,0,0,0.3);
 }
 .contingut-text a:hover,
 .text-md a:hover,
 .seccio-contingut a:hover,
 .inici-intro a:hover {
-  opacity: 1;
+  opacity: 0.65;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
