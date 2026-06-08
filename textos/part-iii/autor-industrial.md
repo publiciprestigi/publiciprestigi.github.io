@@ -29,7 +29,7 @@ Amenábar ocupa una funció comparable a la d’Almodóvar als anys 80–90: con
 
 Bayona no ha necessitat mai els festivals, hi ha participat però mai en secció oficial a competició, el seu circuit és un altre. És el director espanyol que més s’ha apropat al model industrial internacional, però ho ha fet des d'una base d'autor (*El orfanato* no és precisament una producció de gènere anònima), amb una exgiència de connexió amb el públic incomparable.
 
-Bayona no ha necessitat mai els festivals, hi ha participat, però mai en secció oficial a competició, el seu circuit és un altre. És el director espanyol que més s’ha apropat al model industrial internacional, però ho ha fet des d’una base d’autor (*El orfanato* no és precisament una producció de gènere anònima), amb una exigència de producció i una ambició de connexió massiva amb el públic incomparables.
+Bayona no ha necessitat mai els festivals, hi ha participat, però mai en secció oficial a competició, el seu circuit és un altre. És el director espanyol que més s’ha apropat al model industrial internacional, però ho ha fet des d’una base d’autor (*El orfanato* no és precisament una producció de gènere anònima), amb una exigència tècnica i de producció i una ambició de connexió massiva amb el públic incomparables.
 <!-- /bloc-bayona -->
 
 <!-- conclusio -->
