@@ -9,13 +9,13 @@
   --color-text-suau: #6b6b6b;
   --color-accent: #1a75c4;
   --color-linia: #e5e5e5;
-  --font-principal: -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-principal: "Inter", -apple-system, "SF Pro Text", BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
   --amplada-max: 1200px;
   --amplada-text: 720px;
-  --mida-cos: 18px;
+  --mida-cos: 19px;
   --mida-petit: 14px;
   --mida-nav: 15px;
-  --interlineat: 1.7;
+  --interlineat: 1.6;
 }
 
 /* --- Reset --- */
@@ -35,7 +35,7 @@ body {
 h1, h2, h3, h4 { font-family: var(--font-principal); font-weight: 700; line-height: 1.25; color: var(--color-text); }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-h3 { font-size: 1.15rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 p { margin-bottom: 1.25rem; }
 a { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
 a:hover { opacity: 0.65; }
@@ -141,21 +141,23 @@ strong { font-weight: 600; }
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
 .nav-link:hover { color: var(--color-text); background: rgba(0,0,0,0.05); opacity: 1; }
-.nav-link.actiu { color: var(--color-text); border-bottom-color: var(--color-text); font-weight: 600; margin-bottom: -1px; }
+.nav-link.actiu { color: var(--color-text); border-bottom: 3px solid var(--color-text); font-weight: 600; margin-bottom: -1px; }
 
 /* Links dins de cos de text: color accent, sense subratllat */
 .contingut-text a,
 .text-md a,
 .seccio-contingut a,
 .inici-intro a {
-  color: var(--color-accent);
-  text-decoration: none;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0,0,0,0.3);
 }
 .contingut-text a:hover,
 .text-md a:hover,
 .seccio-contingut a:hover,
 .inici-intro a:hover {
-  opacity: 1;
+  opacity: 0.65;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -227,20 +229,22 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   position: sticky;
   top: 117px;
   background: var(--color-fons);
-  padding: 32px 0 16px;
-  border-bottom: 1px solid var(--color-linia);
+  padding: 40px 0 16px;
+  border-bottom: none;
   margin-bottom: 32px;
   z-index: 10;
 }
 
 .titol-sticky-sup {
-  font-size: 0.9rem;
+  font-size: 0.72rem;
   color: var(--color-text);
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   font-weight: 400;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
-.titol-sticky h1 { font-size: 2.2rem; font-weight: 700; line-height: 1.2; }
+.titol-sticky h1 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
 
 /* Seccions */
 .seccio-contingut { display: none; max-width: var(--amplada-text); }
@@ -413,6 +417,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* Títol: negreta+cursiva, any en gris, MATEIXA mida */
 .col-titol { min-width: 160px; }
 .film-any { color: var(--color-text-suau); font-weight: 400; font-style: normal; }
+.film-context .film-any { color: #888; }
 
 /* Botó context */
 .fila-boto-context td { border-bottom: none; padding: 16px 0; }
@@ -636,9 +641,9 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* Border-left per festival */
 #seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
-#seccio-berlin .taula-festivals       { border-left: 3px solid #1E4080; }
+#seccio-berlin .taula-festivals       { border-left: 3px solid #1976D2; }
 #seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
-#seccio-sansebastia .taula-festivals  { border-left: 3px solid #6B3FA0; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #E07B2A; }
 
 /* --- Directors en negre normal a Part I --- */
 .taula-films td.col-subtil,
@@ -759,7 +764,6 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 /* --- Link Substack al menú --- */
 .nav-link-substack {
   color: var(--color-text-suau) !important;
-  font-size: 0.82rem;
 }
 .nav-link-substack:hover { color: var(--color-text) !important; }
 
@@ -858,3 +862,8 @@ body.pag-inici .inici-xifra-n {
 /* Idiomes: EN ocult */
 .capcalera-idioma .lang-en { display: none; }
 
+
+/* ── Color antetítol per part ── */
+body.part-i .titol-sticky-sup { color: #2a5582; }
+body.part-ii .titol-sticky-sup { color: #9B2335; }
+body.part-iii .titol-sticky-sup { color: #5a4a8a; }
