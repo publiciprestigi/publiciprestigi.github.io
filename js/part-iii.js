@@ -6,9 +6,9 @@ let marketData = [];
 
 const FC = {
   'Cannes':       '#9B2335',
-  'Berlín':       '#1E4080',
+  'Berlín':       '#1976D2',
   'Venècia':      '#2E7D5E',
-  'Sant Sebastià':'#C2185B',
+  'Sant Sebastià':'#E07B2A',
 };
 
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
@@ -468,7 +468,7 @@ window.PiP_graficCazaIAA = function() {
     leg.id = 'caza-iaa-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;margin-bottom:24px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1976D2;display:inline-block;border-radius:2px"></span>Sala</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>`;
@@ -483,7 +483,7 @@ window.PiP_graficCazaIAA = function() {
         {
           label: 'Sala',
           data: [403195, 341377],
-          backgroundColor: '#1E4080',
+          backgroundColor: '#1976D2',
           borderWidth: 0,
         },
         {
@@ -779,8 +779,8 @@ window.PiP_graficSauraAlmodovar = function() {
         {
           label: 'Carlos Saura',
           data: dataSaura,
-          borderColor: '#1E4080',
-          backgroundColor: '#1E4080',
+          borderColor: '#1976D2',
+          backgroundColor: '#1976D2',
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
@@ -843,7 +843,7 @@ window.PiP_graficSauraAlmodovar = function() {
     leg.id = 'sa-leg';
     leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
     leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
+      <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1976D2;display:inline-block"></span><span>Carlos Saura</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
