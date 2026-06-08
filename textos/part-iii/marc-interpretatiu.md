@@ -21,9 +21,12 @@ La professionalització del cinema d'autor en el circuit de festivals és una de
 
 Entre els anys 80 i 2000 es produeix una transformació estructural. Es consolida un circuit internacional de cinema d’autor amb les seves pròpies regles, productors especialitzats, festivals intermedis que funcionen com a trampolí cap als grans, coproduccions europees, subvencions específiques, etc. Es professionalitza. Molts directors actuals no fan els seus films ‘i ja veurem si van a festivals’: els construeixen des del principi pensant en aquest circuit, i això determina un cert llenguatge i uns models de distribució, màrketing i expectatives de públic concretes. La formació reforça aquest procés. La generació actual ha passat per escoles de cinema, laboratoris i residències orientades al desenvolupament de projectes per a aquest ecosistema. Han après a fer cinema de festival de manera explícita.
 
-El resultat: la qualitat i el reconeixement internacional del cinema d’autor espanyol ha crescut precisament perquè s’ha especialitzat, però aquesta especialització ha creat una barrera d’entrada per al gran públic, que potser abans no existia de la mateixa manera.
+El resultat és doble: el reconeixement internacional del cinema d’autor espanyol ha crescut precisament perquè s’ha especialitzat, però aquesta especialització ha creat una barrera d’entrada per al gran públic, una barrera que potser abans no existia de la mateixa manera.
 
-*Furtivos* (1975) era cinema d'autor arriscat i va fer 3,5 milions d’espectadors en sales durant la Transició. Avui, reproduir aquest resultat només amb la sala seria gairebé impossible. Però si l'IAA tingués validesa científica, *As bestas* (2022) i *Los domingos* (2025) estarien en el Top 100 i podrien ser perfectament les noves 'dobles corones' de l'època actual. Potser el que ha canviat no és necessàriament la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra, la sala de cinema.
+*Furtivos* (1975) era cinema d’autor arriscat i va fer 3,5 milions d’espectadors en sales a les portes de la Transició. Avui, reproduir aquest resultat només amb la sala seria gairebé impossible. Però, amb les dades completes de totes les finestres, tal com intenta evaluar l'IAA, *As bestas* (2022) i *Los domingos* (2025) podrien considerar-se les noves ‘dobles corones’ l'època actual. Potser el que ha canviat no és la capacitat d’arribar a molta gent, sinó la possibilitat de concentrar tota aquesta audiència en una única finestra: la sala de cinema.
+
+
+
 <!-- /professionalitzacio -->
 
 <!-- memoria -->
