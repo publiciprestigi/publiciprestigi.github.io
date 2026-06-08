@@ -1,5 +1,5 @@
 <!-- intro -->
-*La ciudad no es para mí* (1966, 4,3M) i *La caza* (1966, 341k) surten del mateix any i del mateix país. La distància entre totes dues respon sobretot al gènere, el públic objectiu i les condicions de distribució. Les dades dibuixen dos circuits principals, públic i prestigi, que rarament es creuen, i una tercera zona intermèdia. Entendre per què se separen és tan interessant com veure quan, excepcionalment, coincideixen.
+Abans de les conclusions cal establir un marc interpretatiu que eviti la lectura precipitada de les dades. *La ciudad no es para mí* (1966, 4,3M) i *La caza* (1966, 341k) surten del mateix any i del mateix país. La distància entre totes dues respon sobretot al gènere, el públic objectiu i les condicions de distribució. L’estudi evidencia que són dos sistemes amb lògiques pròpies que rarament es creuen, i que entendre per què no es creuen és tan interessant com veure quan, excepcionalment, ho fan.
 <!-- /intro -->
 
 <!-- tres-categories -->
@@ -9,9 +9,9 @@ No són compartiments estancs, però el conjunt permet distingir tres grans cate
 
 La primera és el cinema popular de consum (Lazaga, Ozores, Segura, Martínez-Lázaro): films concebuts per arribar al públic més ampli, sovint menystinguts o poc atesos per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. I, tanmateix, és gairebé invisible en la historiografia: és el cinema que més gent ha vist i el que menys espai ocupa en el relat cultural del període.
 
-La segona és el cinema de festival o cinema d’autor de circuit (Saura, Erice, Lacuesta, Serra, Simón): films que circulen dins un ecosistema internacional amb regles, públic i economia propis. La seva força i el seu límit provenen de la mateixa especialització: mai tan ben representat internacionalment i (aparentment) mai tan allunyat de la sala massiva.
+La segona és el cinema de festival o cinema d’autor de circuit (Saura, Erice, Lacuesta, Serra, Simón): films que circulen dins un ecosistema internacional amb regles, públic i economia propis. La seva força i el seu límit provenen de la mateixa especialització: mai tan ben representat internacionalment i mai tan allunyat (aparentment) del gran públc.
 
-La tercera és el cinema d’autor industrial (Amenábar, Bayona, De la Iglesia): directors que han construït les seves carreres sense fer dels grans festivals europeus l’objectiu prioritari, però amb una ambició formal poc habitual en el cinema de vocació popular. És també un model en transformació: va produir alguns dels grans èxits espanyols de les últimes dècades, però les plataformes l’han desplaçat cap a un espai que les mètriques tradicionals ja no saben mesurar.
+La tercera, en una zona intermedia, és el cinema d’autor industrial (Amenábar, Bayona, De la Iglesia): directors que han construït les seves carreres sense fer dels grans festivals europeus l’objectiu prioritari, però amb una ambició formal poc habitual en el cinema de vocació popular. És també un model en transformació: va produir alguns dels grans èxits espanyols de les últimes dècades, però les plataformes l’han desplaçat cap a un espai que les mètriques tradicionals ja no el poden mesurar.
 <!-- /tres-categories -->
 
 <!-- professionalitzacio -->
