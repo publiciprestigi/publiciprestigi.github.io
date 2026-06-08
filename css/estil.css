@@ -639,9 +639,9 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* Border-left per festival */
 #seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
-#seccio-berlin .taula-festivals       { border-left: 3px solid #1E4080; }
+#seccio-berlin .taula-festivals       { border-left: 3px solid #795548; }
 #seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
-#seccio-sansebastia .taula-festivals  { border-left: 3px solid #C2185B; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #C0622A; }
 
 /* --- Directors en negre normal a Part I --- */
 .taula-films td.col-subtil,
