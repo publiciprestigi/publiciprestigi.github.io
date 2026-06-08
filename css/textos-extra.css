@@ -175,12 +175,8 @@ th.col-iic-header {
   background: transparent !important;
 }
 
-/* ── Títol principal pàgines interiors ── */
-#titol-principal {
-  font-size: 2.05rem;
-  font-weight: 700;
-  color: #363737;
-}
+
+
 
 /* ── Taula resum dècades ── */
 .taula-decades-resum {
