@@ -231,7 +231,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   background: var(--color-fons);
   padding: 40px 0 16px;
   border-bottom: none;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   z-index: 10;
 }
 
@@ -244,7 +244,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   text-transform: uppercase;
 }
 
-.titol-sticky h1 { font-size: 1.8rem; font-weight: 700; line-height: 1.2; }
+.titol-sticky h1 { font-size: 1.7rem; font-weight: 700; line-height: 1.2; }
 
 /* Seccions */
 .seccio-contingut { display: none; max-width: var(--amplada-text); }
