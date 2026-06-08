@@ -78,6 +78,7 @@
         <div class="text-md text-md-intermedi" data-text="part-iii/doble-corona" data-bloc="intro-cercle"></div>
         <div id="taula-segon-cercle"></div>
         <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-cercle"></div>
+        <div id="grafic-doble-corona-wrap"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-bretxa">
@@ -226,6 +227,7 @@
     let actual = 0;
     let graficBretxaInit = false;
     let graficCazaInit = false;
+    let graficDoblesInit = false;
     let graficSAInit = false;
     let graficGAInit = false;
     let graficAIInit = false;
@@ -255,6 +257,10 @@
       if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
         graficBretxaInit = true;
         setTimeout(window.PiP_graficBretxa, 50);
+      }
+      if (s.id === 'doble-corona' && !graficDoblesInit && window.PiP_graficDobleCorona) {
+        graficDoblesInit = true;
+        setTimeout(window.PiP_graficDobleCorona, 50);
       }
       if (s.id === 'la-caza' && !graficCazaInit && window.PiP_graficCazaIAA) {
         graficCazaInit = true;
