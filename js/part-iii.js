@@ -1296,8 +1296,8 @@ function construirLleis() {
   <div class="c c1"><span class="nf">1 finestra</span>Sala de cinema</div>
   <div class="c c2"><span class="nf">3 finestres</span>Sala + TVE + VHS</div>
   <div class="c c3"><span class="nf">4 finestres</span>Sala + TVE + VHS + TV autonòmiques</div>
-  <div class="c c4"><span class="nf">5 finestres</span>Sala + TVE + TV privada/pagament + TV autonòmiques + DVD</div>
-  <div class="c c5"><span class="nf">6 finestres</span>Sala + TVE + TV privada/pagament + TV autonòmiques + DVD + plataformes</div>
+  <div class="c c4"><span class="nf">5 finestres</span>Sala + TVE + TV privades/pagament + TV autonòmiques + DVD</div>
+  <div class="c c5"><span class="nf">6 finestres</span>Sala + TVE + TV privades/pagament + TV autonòmiques + DVD + plataformes</div>
   <div class="c c6"><span class="nf">6+ finestres</span>Sala + TVE + TV priv./pag. + TV auton. + plataformes en expansió</div>
 </div>
 
