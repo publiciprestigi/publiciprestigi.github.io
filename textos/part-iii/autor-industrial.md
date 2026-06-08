@@ -31,7 +31,7 @@ Bayona no ha necessitat mai els festivals, hi ha participat, però mai en secci�
 <!-- /bloc-bayona -->
 
 <!-- conclusio -->
-La contradicció d’aquesta categoria és inversa a la dels directors de festival. Bayona i Amenábar podrien haver construït trajectòries de festivals (*Mar adentro* ho demostra), però han triat un altre joc i l’han guanyat en els seus propis termes. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional. I això no és poca cosa.
+Bayona i Amenábar podrien haver construït trajectòries dins el circuit de festivals (*Mar adentro* ho demostra), però han triat un altre joc i l’han guanyat en els seus propis termes. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional. I això no és poca cosa.
 <!-- /conclusio -->
 
 <!-- paradoxa -->
