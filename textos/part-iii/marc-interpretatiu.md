@@ -9,7 +9,7 @@ No són compartiments estancs, però el conjunt permet distingir tres grans lòg
 
 La primera és el **cinema popular** de consum (Lazaga, Ozores, Segura, Martínez-Lázaro): films concebuts per arribar al públic més ampli, sovint menystinguts o poc atesos per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. I, tanmateix, és gairebé invisible en la historiografia: és el cinema que més gent ha vist i el que menys espai ocupa en el relat cultural del període.
 
-La segona és el **cinema de festival** o cinema d’autor de circuit (Saura, Erice, Lacuesta, Serra, Simón): films que circulen dins un ecosistema internacional amb regles, públic i economia propis. La seva força i el seu límit provenen de la mateixa especialització: mai tan ben representat internacionalment i mai tan allunyat de la sala massiva.
+La segona és el **cinema de festival** o cinema d’autor de circuit (Saura, Erice, Lacuesta, Serra, Simón): films que circulen dins un ecosistema internacional amb regles, públic i economia propis. La seva força i el seu límit provenen de la mateixa especialització: mai tan ben representat internacionalment i (aparentment) mai tan allunyat de la sala massiva.
 
 La tercera és el **cinema d’autor industrial** (Amenábar, Bayona, De la Iglesia): directors que han construït les seves carreres sense fer dels grans festivals europeus l’objectiu prioritari, però amb una ambició formal poc habitual en el cinema de vocació popular. És també un model en transformació: va produir alguns dels grans èxits espanyols de les últimes dècades, però les plataformes l’han desplaçat cap a un espai que les mètriques tradicionals ja no saben mesurar.
 <!-- /tres-categories -->
