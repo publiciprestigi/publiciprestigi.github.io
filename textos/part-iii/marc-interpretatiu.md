@@ -3,9 +3,9 @@
 <!-- /intro -->
 
 <!-- tres-categories -->
-## Tres lògiques
+## Tres categories
 
-No són compartiments estancs, però el conjunt permet distingir tres grans lògiques dins el cinema espanyol dels darrers seixanta anys.
+No són compartiments estancs, però el conjunt permet distingir tres grans categories dins el cinema espanyol dels darrers seixanta anys.
 
 La primera és el cinema popular de consum (Lazaga, Ozores, Segura, Martínez-Lázaro): films concebuts per arribar al públic més ampli, sovint menystinguts o poc atesos per la crítica, però que constitueixen la columna vertebral del Top 100 i el registre més fidel dels gustos majoritaris de cada dècada. I, tanmateix, és gairebé invisible en la historiografia: és el cinema que més gent ha vist i el que menys espai ocupa en el relat cultural del període.
 
