@@ -231,7 +231,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   background: var(--color-fons);
   padding: 40px 0 16px;
   border-bottom: none;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   z-index: 10;
 }
 
