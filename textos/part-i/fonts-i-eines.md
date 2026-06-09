@@ -11,7 +11,7 @@ També s'han consultat la resta d'[anuaris publicats des de 1968](https://www.cu
 
 ## Abast cronològic
 
-L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del Top 100. És per això que totes les dades de l'estudi parteixen d'aquest any, tant per la Part I d'espectadors a sales de cinema com per la Part II de festivals i premis.
+L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del Top 100. És per això que totes les dades de l'estudi parteixen d'aquest any, tant per la Part I d'espectadors a sales de cinema com per la Part II de festivals i premis. <sup>[N]</sup>
 
 ## Coproduccions i directors no espanyols
 
@@ -40,7 +40,7 @@ A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna expli
 
 ## Sobre la quota de mercat i el símbol ≈
 
-Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern, *Historia del cine español*, Cátedra) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore.
+Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern, *Historia del cine español*, Cátedra) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore. <sup>[N]</sup>
 
 ## Sobre els textos de 'Context'
 
