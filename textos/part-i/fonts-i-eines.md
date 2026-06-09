@@ -23,7 +23,7 @@ Les xifres d'espectadors de l'ICAA per als films anteriors als anys 80 són tota
 
 ## El problema del rang brut d'espectadors
 
-Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys 60, els espanyols anaven al cinema de mitjana 10 o 12 vegades l'any en un país de 32 milions d'habitants. El 2025, van al cinema menys d'una vegada i mitja l'any, en un país de 48 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció. [N]
+Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys 60, els espanyols anaven al cinema de mitjana 10 o 12 vegades l'any en un país de 32 milions d'habitants. El 2025, van al cinema menys d'una vegada i mitja l'any, en un país de 48 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup>[N]</sup>
 
 *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espectadors en un mercat total de 370 milions d'entrades (una quota de l'1,16%). *Mujeres al borde de un ataque de nervios* (1988) va fer 3,3 milions en un mercat de 85 milions (una quota del 3,94%). En espectadors bruts guanya Pedro Lazaga. En quota de mercat, Almodóvar quasi quadruplica la seva marca. L'Índex d'Impacte Cultural (IIC) proposa respondre quina de les dues va impactar més realment la societat del seu temps.
 
