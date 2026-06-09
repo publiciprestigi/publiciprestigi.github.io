@@ -1337,30 +1337,30 @@ function construirLleis() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', carregarDades);
+document.addEventListener('DOMContentLoaded', function() {
+  carregarDades();
+  construirGraficDobleCorona();
+});
 
-// ── GRÀFIC DETALLAT DOBLE CORONA ──────────────────────────────────────────
-window.PiP_graficDobleCorona = function() {
+function construirGraficDobleCorona() {
   const wrap = document.getElementById('grafic-doble-corona-wrap');
   if (!wrap) return;
 
   const COL_PUB = '#2a5582';
   const COL_PREST = '#9B2335';
-  const COL_DOBLE = '#1a1a1a';
   const COL_OR = '#c8a000';
 
-  // Dades — les dobles corones identifiquem per any+titol
   const dobles = [
-    { any: 1968, titol: 'No somos de piedra',   festival: 'Sant Sebastià', premiat: false },
-    { any: 1974, titol: 'Tormento',              festival: 'Sant Sebastià', premiat: false },
-    { any: 1975, titol: 'Furtivos',              festival: 'Sant Sebastià', premiat: true  },
-    { any: 1977, titol: 'La guerra de papá',     festival: 'Sant Sebastià', premiat: false },
-    { any: 1984, titol: 'Los santos inocentes',  festival: 'Cannes',        premiat: true  },
-    { any: 1988, titol: 'Mujeres al borde de un ataque de nervios', festival: 'Venècia', premiat: true },
-    { any: 1999, titol: 'Todo sobre mi madre',   festival: 'Cannes',        premiat: true  },
-    { any: 2001, titol: 'Juana la Loca',         festival: 'Sant Sebastià', premiat: true  },
-    { any: 2002, titol: 'Los lunes al sol',      festival: 'Sant Sebastià', premiat: true  },
-    { any: 2004, titol: 'Mar adentro',           festival: 'Venècia',       premiat: true  },
+    { any: 1968, titol: 'No somos de piedra',   premiat: false },
+    { any: 1974, titol: 'Tormento',              premiat: false },
+    { any: 1975, titol: 'Furtivos',              premiat: true  },
+    { any: 1977, titol: 'La guerra de papá',     premiat: false },
+    { any: 1984, titol: 'Los santos inocentes',  premiat: true  },
+    { any: 1988, titol: 'Mujeres al borde…',     premiat: true  },
+    { any: 1999, titol: 'Todo sobre mi madre',   premiat: true  },
+    { any: 2001, titol: 'Juana la Loca',         premiat: true  },
+    { any: 2002, titol: 'Los lunes al sol',      premiat: true  },
+    { any: 2004, titol: 'Mar adentro',           premiat: true  },
   ];
   const doblesAnys = new Set(dobles.map(d => d.any));
 
@@ -1375,145 +1375,118 @@ window.PiP_graficDobleCorona = function() {
     2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
 
   const A0 = 1964, A1 = 2025;
-  const W = 860, ML = 0, MR = 0;
-  const YP = 52, YF = 108;
-  const R = 4, R_DOBLE = 5.5;
+  const W = 860, YP = 70, YF = 126;
+  const R = 4, RD = 5.5;
 
-  function xPct(a) {
-    return ((a - A0) / (A1 - A0) * 100).toFixed(3) + '%';
-  }
-
-  // Contenidor amb scroll horitzontal
-  wrap.style.cssText = 'margin-top:32px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:28px 0;';
-
-  const scrollWrap = document.createElement('div');
-  scrollWrap.style.cssText = 'overflow-x:auto;-webkit-overflow-scrolling:touch;position:relative;';
-
-  const inner = document.createElement('div');
-  inner.style.cssText = `min-width:700px;position:relative;height:${YF + 100}px;`;
-
-  // SVG
-  const svgNS = 'http://www.w3.org/2000/svg';
-  const svg = document.createElementNS(svgNS, 'svg');
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${W} ${YF + 90}`);
   svg.setAttribute('width', '100%');
-  svg.setAttribute('height', YF + 100);
-  svg.setAttribute('viewBox', `0 0 ${W} ${YF + 100}`);
   svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-  svg.style.cssText = 'display:block;width:100%;';
+  svg.style.display = 'block';
 
   function el(tag, attrs, par) {
-    const e = document.createElementNS(svgNS, tag);
-    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    const e = document.createElementNS(ns, tag);
+    for (const [k,v] of Object.entries(attrs)) e.setAttribute(k,v);
     if (par) par.appendChild(e);
     return e;
   }
+  function x(a) { return 8 + (a - A0) / (A1 - A0) * (W - 16); }
 
-  function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
-
-  // Anys eix
-  [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
-    el('line', { x1: x(a), y1: 28, x2: x(a), y2: YF + 12, stroke: '#eeeeee', 'stroke-width': '0.6' }, svg);
-    el('line', { x1: x(a), y1: 28, x2: x(a), y2: 32, stroke: '#ccc', 'stroke-width': '0.5' }, svg);
-    const t = el('text', { x: x(a), y: 22, 'font-size': '9', fill: '#bbb', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+  // Eix anys
+  [1965,1975,1985,1995,2005,2015,2025].forEach(a => {
+    el('line',{x1:x(a),y1:38,x2:x(a),y2:YF+12,stroke:'#eeeeee','stroke-width':'0.6'},svg);
+    el('line',{x1:x(a),y1:38,x2:x(a),y2:42,stroke:'#ccc','stroke-width':'0.5'},svg);
+    const t = el('text',{x:x(a),y:32,'font-size':'9',fill:'#bbb','text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
     t.textContent = a;
   });
 
   // Etiquetes carrils
   function cLabel(label, sub, y, col) {
-    const t = el('text', { x: 4, y: y + 2, 'font-size': '9', fill: col, 'font-weight': '700', 'font-family': 'system-ui,sans-serif' }, svg);
+    const t = el('text',{x:6,y:y+2,'font-size':'9',fill:col,'font-weight':'700','font-family':'system-ui,sans-serif'},svg);
     t.textContent = label;
-    const s = el('text', { x: 4, y: y + 13, 'font-size': '7.5', fill: '#bbb', 'font-family': 'system-ui,sans-serif' }, svg);
+    const s = el('text',{x:6,y:y+13,'font-size':'7.5',fill:'#bbb','font-family':'system-ui,sans-serif'},svg);
     s.textContent = sub;
   }
+  cLabel('PÚBLIC','Top 100',YP,COL_PUB);
+  cLabel('PRESTIGI','Festivals',YF,COL_PREST);
 
-  // Connexions dobles (sota els punts)
+  // Connexions dobles
   dobles.forEach(d => {
-    el('line', { x1: x(d.any), y1: YP, x2: x(d.any), y2: YF, stroke: '#bbb', 'stroke-width': '0.8', 'stroke-dasharray': '2,2' }, svg);
+    el('line',{x1:x(d.any),y1:YP,x2:x(d.any),y2:YF,stroke:'#ccc','stroke-width':'0.8','stroke-dasharray':'2,2'},svg);
   });
 
-  // Punts públic — normals primer
-  pub.forEach(a => {
-    if (!doblesAnys.has(a))
-      el('circle', { cx: x(a), cy: YP, r: R, fill: COL_PUB }, svg);
-  });
+  // Punts normals
+  pub.forEach(a => { if(!doblesAnys.has(a)) el('circle',{cx:x(a),cy:YP,r:R,fill:COL_PUB},svg); });
+  prest.forEach(a => { if(!doblesAnys.has(a)) el('circle',{cx:x(a),cy:YF,r:R,fill:COL_PREST},svg); });
 
-  // Punts prestigi — normals primer
-  prest.forEach(a => {
-    if (!doblesAnys.has(a))
-      el('circle', { cx: x(a), cy: YF, r: R, fill: COL_PREST }, svg);
-  });
-
-  // Dobles corones — cercles buits damunt
+  // Dobles corones
   dobles.forEach(d => {
     if (pub.includes(d.any))
-      el('circle', { cx: x(d.any), cy: YP, r: R_DOBLE, fill: 'white', stroke: COL_PUB, 'stroke-width': '1.8' }, svg);
-    el('circle', { cx: x(d.any), cy: YF, r: R_DOBLE, fill: 'white', stroke: COL_PREST, 'stroke-width': '1.8' }, svg);
-    // Estrella si premiat
+      el('circle',{cx:x(d.any),cy:YP,r:RD,fill:'white',stroke:COL_PUB,'stroke-width':'1.8'},svg);
+    el('circle',{cx:x(d.any),cy:YF,r:RD,fill:'white',stroke:COL_PREST,'stroke-width':'1.8'},svg);
     if (d.premiat) {
-      const t = el('text', { x: x(d.any), y: YF + R_DOBLE + 12, 'font-size': '9', fill: COL_OR, 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+      const t = el('text',{x:x(d.any),y:YF+RD+12,'font-size':'9',fill:COL_OR,'text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
       t.textContent = '★';
     }
   });
 
-  // Etiquetes de les dobles corones
-  const etiqDobles = [
-    { any: 1968, titol: 'No somos\nde piedra',  side: 'dalt' },
-    { any: 1974, titol: 'Tormento',              side: 'dalt' },
-    { any: 1975, titol: 'Furtivos',              side: 'dalt' },
-    { any: 1977, titol: 'La guerra\nde papá',    side: 'dalt' },
-    { any: 1984, titol: 'Los santos\ninocentes', side: 'dalt' },
-    { any: 1988, titol: 'Mujeres\nal borde…',   side: 'dalt' },
-    { any: 1999, titol: 'Todo sobre\nmi madre',  side: 'dalt' },
-    { any: 2001, titol: 'Juana\nla Loca',        side: 'baix' },
-    { any: 2002, titol: 'Los lunes\nal sol',      side: 'baix' },
-    { any: 2004, titol: 'Mar\nadentro',           side: 'baix' },
+  // Etiquetes dalt/baix alternades per evitar solapament
+  const etiq = [
+    {any:1968,titol:'No somos\nde piedra', dalt:true},
+    {any:1974,titol:'Tormento',            dalt:false},
+    {any:1975,titol:'Furtivos',            dalt:true},
+    {any:1977,titol:'La guerra\nde papá',  dalt:false},
+    {any:1984,titol:'Los santos\ninocentes',dalt:true},
+    {any:1988,titol:'Mujeres\nal borde…',  dalt:false},
+    {any:1999,titol:'Todo sobre\nmi madre',dalt:true},
+    {any:2001,titol:'Juana\nla Loca',      dalt:false},
+    {any:2002,titol:'Los lunes\nal sol',   dalt:true},
+    {any:2004,titol:'Mar\nadentro',        dalt:false},
   ];
 
-  etiqDobles.forEach(e => {
+  etiq.forEach(e => {
     const cx = x(e.any);
     const lines = e.titol.split('\n');
-    if (e.side === 'dalt') {
-      el('line', { x1: cx, y1: YP - R_DOBLE - 2, x2: cx, y2: YP - 22 - lines.length * 11, stroke: '#ddd', 'stroke-width': '0.6' }, svg);
-      lines.forEach((l, i) => {
-        const t = el('text', { x: cx, y: YP - 22 - (lines.length - 1 - i) * 11, 'font-size': '8', fill: '#555', 'text-anchor': 'middle', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+    if (e.dalt) {
+      const topY = YP - RD - 4 - lines.length * 11;
+      el('line',{x1:cx,y1:YP-RD-2,x2:cx,y2:topY+lines.length*11,'stroke':'#ddd','stroke-width':'0.6'},svg);
+      lines.forEach((l,i) => {
+        const t = el('text',{x:cx,y:topY+i*11+9,'font-size':'8',fill:'#555','text-anchor':'middle','font-style':'italic','font-family':'system-ui,sans-serif'},svg);
         t.textContent = l;
       });
     } else {
-      el('line', { x1: cx, y1: YF + R_DOBLE + 14, x2: cx, y2: YF + 26, stroke: '#ddd', 'stroke-width': '0.6' }, svg);
-      lines.forEach((l, i) => {
-        const t = el('text', { x: cx, y: YF + 38 + i * 11, 'font-size': '8', fill: '#555', 'text-anchor': 'middle', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+      const botY = YF + RD + 18;
+      el('line',{x1:cx,y1:YF+RD+2,x2:cx,y2:botY-4,'stroke':'#ddd','stroke-width':'0.6'},svg);
+      lines.forEach((l,i) => {
+        const t = el('text',{x:cx,y:botY+i*11,'font-size':'8',fill:'#555','text-anchor':'middle','font-style':'italic','font-family':'system-ui,sans-serif'},svg);
         t.textContent = l;
       });
     }
   });
 
   // Llegenda
-  const legY = YF + 72;
-  const legItems = [
-    { col: COL_PUB,   label: 'Públic — Top 100 (100 films)',      buit: false },
-    { col: COL_PREST, label: 'Prestigi — Festivals (264 films)',   buit: false },
-    { col: COL_PUB,   label: 'Doble corona',                       buit: true  },
-    { col: COL_OR,    label: '★ Premiat al festival',              buit: false, estrella: true },
+  const legY = YF + 65;
+  const legDades = [
+    {col:COL_PUB,  label:'Públic — Top 100 (100 films)', buit:false},
+    {col:COL_PREST,label:'Prestigi — Festivals (264 films)', buit:false},
+    {col:COL_PUB,  label:'Doble corona', buit:true},
+    {col:COL_OR,   label:'Premiat al festival', estrella:true},
   ];
-  let legX = W / 2 - 260;
-  legItems.forEach(item => {
+  let lx = W/2 - 250;
+  legDades.forEach(item => {
     if (item.estrella) {
-      const t = el('text', { x: legX, y: legY + 4, 'font-size': '10', fill: COL_OR, 'font-family': 'system-ui,sans-serif' }, svg);
-      t.textContent = '★';
-      legX += 14;
+      const t = el('text',{x:lx,y:legY+4,'font-size':'10',fill:COL_OR,'font-family':'system-ui,sans-serif'},svg);
+      t.textContent = '★'; lx += 14;
     } else if (item.buit) {
-      el('circle', { cx: legX + 5, cy: legY, r: '4.5', fill: 'white', stroke: item.col, 'stroke-width': '1.5' }, svg);
-      legX += 14;
+      el('circle',{cx:lx+5,cy:legY,r:'4.5',fill:'white',stroke:item.col,'stroke-width':'1.5'},svg); lx += 14;
     } else {
-      el('circle', { cx: legX + 5, cy: legY, r: '4', fill: item.col }, svg);
-      legX += 14;
+      el('circle',{cx:lx+5,cy:legY,r:'4',fill:item.col},svg); lx += 14;
     }
-    const t = el('text', { x: legX, y: legY + 4, 'font-size': '9', fill: '#555', 'font-family': 'system-ui,sans-serif' }, svg);
+    const t = el('text',{x:lx,y:legY+4,'font-size':'9',fill:'#555','font-family':'system-ui,sans-serif'},svg);
     t.textContent = item.label;
-    legX += item.label.length * 5.2 + 20;
+    lx += item.label.length * 5.2 + 20;
   });
 
-  inner.appendChild(svg);
-  scrollWrap.appendChild(inner);
-  wrap.appendChild(scrollWrap);
-};
+  wrap.appendChild(svg);
+}
