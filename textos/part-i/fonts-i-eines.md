@@ -11,7 +11,7 @@ També s'han consultat la resta d'[anuaris publicats des de 1968](https://www.cu
 
 ## Abast cronològic
 
-L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del Top 100. És per això que totes les dades de l'estudi parteixen d'aquest any, tant per la part I d'espectadors a sales de cinema com per la part II de festivals i premis.
+L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del Top 100. És per això que totes les dades de l'estudi parteixen d'aquest any, tant per la Part I d'espectadors a sales de cinema com per la Part II de festivals i premis.
 
 ## Coproduccions i directors no espanyols
 
