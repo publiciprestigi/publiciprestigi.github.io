@@ -33,7 +33,7 @@ La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d�
 
 ### 7. La Llei de Comunicació Audiovisual (2022) i la batalla del productor independent
 
-La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions (21). Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cine i la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d’urgència, continua pendent en fase d’esmenes. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
+La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions. <sup>[N]</sup> Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cine i la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d’urgència, continua pendent en fase d’esmenes. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
 <!-- /moments -->
 
 <!-- conclusio -->
