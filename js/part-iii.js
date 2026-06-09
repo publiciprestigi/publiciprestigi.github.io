@@ -1346,25 +1346,28 @@ function construirGraficDobleCorona() {
   const wrap = document.getElementById('grafic-doble-corona-wrap');
   if (!wrap) return;
 
+  wrap.style.cssText = 'margin-top:28px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:28px 0 20px;position:relative;';
+
   const COL_PUB = '#2a5582';
   const COL_PREST = '#9B2335';
   const COL_OR = '#c8a000';
 
+  // Dades dobles corones amb posició Top 100
   const dobles = [
-    { any: 1968, titol: 'No somos de piedra',   premiat: false },
-    { any: 1974, titol: 'Tormento',              premiat: false },
-    { any: 1975, titol: 'Furtivos',              premiat: true  },
-    { any: 1977, titol: 'La guerra de papá',     premiat: false },
-    { any: 1984, titol: 'Los santos inocentes',  premiat: true  },
-    { any: 1988, titol: 'Mujeres al borde…',     premiat: true  },
-    { any: 1999, titol: 'Todo sobre mi madre',   premiat: true  },
-    { any: 2001, titol: 'Juana la Loca',         premiat: true  },
-    { any: 2002, titol: 'Los lunes al sol',      premiat: true  },
-    { any: 2004, titol: 'Mar adentro',           premiat: true  },
+    { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null,           premiat:false },
+    { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null,           premiat:false },
+    { any:1975, titol:'Furtivos',            top100:'#16', festival:'Sant Sebastià', premi:'Conxa d\'Or',  premiat:true  },
+    { any:1977, titol:'La guerra de papá',   top100:'#18', festival:'Sant Sebastià', premi:null,           premiat:false },
+    { any:1984, titol:'Los santos inocentes',top100:'#62', festival:'Cannes',        premi:'Millor actor', premiat:true  },
+    { any:1988, titol:'Mujeres al borde de un ataque de nervios', top100:'#22', festival:'Venècia', premi:'Millor guió', premiat:true },
+    { any:1999, titol:'Todo sobre mi madre', top100:'#52', festival:'Cannes',        premi:'Millor direcció', premiat:true },
+    { any:2001, titol:'Juana la Loca',       top100:'#68', festival:'Sant Sebastià', premi:'Millor actriu',premiat:true  },
+    { any:2002, titol:'Los lunes al sol',    top100:'#70', festival:'Sant Sebastià', premi:'Conxa d\'Or',  premiat:true  },
+    { any:2004, titol:'Mar adentro',         top100:'#12', festival:'Venècia',       premi:'Lleó de Plata',premiat:true  },
   ];
   const doblesAnys = new Set(dobles.map(d => d.any));
 
-  const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+  const pub = [1964,1965,1965,1966,1966,1666,1966,1966,1967,1967,1967,1968,1968,1968,
     1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
     1981,1984,1988,1991,1995,1997,1998,1999,
     2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
@@ -1374,119 +1377,128 @@ function construirGraficDobleCorona() {
     1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
     2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
 
-  const A0 = 1964, A1 = 2025;
-  const W = 860, YP = 70, YF = 126;
-  const R = 4, RD = 5.5;
+  const A0=1964, A1=2025, W=860, YP=72, YF=128, R=4, RD=6;
+  const ns='http://www.w3.org/2000/svg';
 
-  const ns = 'http://www.w3.org/2000/svg';
-  const svg = document.createElementNS(ns, 'svg');
-  svg.setAttribute('viewBox', `0 0 ${W} ${YF + 90}`);
-  svg.setAttribute('width', '100%');
-  svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
-  svg.style.display = 'block';
+  // Títol
+  const titolEl = document.createElement('p');
+  titolEl.style.cssText = 'font-size:0.82em;font-weight:600;color:#363737;margin-bottom:16px;text-align:center;font-family:system-ui,sans-serif;';
+  titolEl.textContent = 'Dobles corones: films al Top 100 i a secció oficial competitiva de festival (1965–2025)';
+  wrap.appendChild(titolEl);
 
-  function el(tag, attrs, par) {
-    const e = document.createElementNS(ns, tag);
-    for (const [k,v] of Object.entries(attrs)) e.setAttribute(k,v);
-    if (par) par.appendChild(e);
-    return e;
+  const svg = document.createElementNS(ns,'svg');
+  svg.setAttribute('viewBox',`0 0 ${W} ${YF+52}`);
+  svg.setAttribute('width','100%');
+  svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+  svg.style.cssText='display:block;width:100%;overflow:visible;';
+
+  function el(tag,attrs,par){
+    const e=document.createElementNS(ns,tag);
+    for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);
+    if(par)par.appendChild(e);return e;
   }
-  function x(a) { return 8 + (a - A0) / (A1 - A0) * (W - 16); }
+  function x(a){return 8+(a-A0)/(A1-A0)*(W-16);}
 
   // Eix anys
-  [1965,1975,1985,1995,2005,2015,2025].forEach(a => {
-    el('line',{x1:x(a),y1:38,x2:x(a),y2:YF+12,stroke:'#eeeeee','stroke-width':'0.6'},svg);
-    el('line',{x1:x(a),y1:38,x2:x(a),y2:42,stroke:'#ccc','stroke-width':'0.5'},svg);
-    const t = el('text',{x:x(a),y:32,'font-size':'9',fill:'#bbb','text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
-    t.textContent = a;
+  [1965,1975,1985,1995,2005,2015,2025].forEach(a=>{
+    el('line',{x1:x(a),y1:42,x2:x(a),y2:YF+10,stroke:'#eeeeee','stroke-width':'0.6'},svg);
+    el('line',{x1:x(a),y1:42,x2:x(a),y2:46,stroke:'#ccc','stroke-width':'0.5'},svg);
+    const t=el('text',{x:x(a),y:36,'font-size':'9.5',fill:'#bbb','text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
+    t.textContent=a;
   });
 
   // Etiquetes carrils
-  function cLabel(label, sub, y, col) {
-    const t = el('text',{x:6,y:y+2,'font-size':'9',fill:col,'font-weight':'700','font-family':'system-ui,sans-serif'},svg);
-    t.textContent = label;
-    const s = el('text',{x:6,y:y+13,'font-size':'7.5',fill:'#bbb','font-family':'system-ui,sans-serif'},svg);
-    s.textContent = sub;
+  function cLabel(label,sub,y,col){
+    const t=el('text',{x:6,y:y+2,'font-size':'10',fill:col,'font-weight':'700','font-family':'system-ui,sans-serif'},svg);
+    t.textContent=label;
+    const s=el('text',{x:6,y:y+14,'font-size':'8.5',fill:'#bbb','font-family':'system-ui,sans-serif'},svg);
+    s.textContent=sub;
   }
   cLabel('PÚBLIC','Top 100',YP,COL_PUB);
   cLabel('PRESTIGI','Festivals',YF,COL_PREST);
 
   // Connexions dobles
-  dobles.forEach(d => {
+  dobles.forEach(d=>{
     el('line',{x1:x(d.any),y1:YP,x2:x(d.any),y2:YF,stroke:'#ccc','stroke-width':'0.8','stroke-dasharray':'2,2'},svg);
   });
 
   // Punts normals
-  pub.forEach(a => { if(!doblesAnys.has(a)) el('circle',{cx:x(a),cy:YP,r:R,fill:COL_PUB},svg); });
-  prest.forEach(a => { if(!doblesAnys.has(a)) el('circle',{cx:x(a),cy:YF,r:R,fill:COL_PREST},svg); });
+  pub.forEach(a=>{if(!doblesAnys.has(a))el('circle',{cx:x(a),cy:YP,r:R,fill:COL_PUB},svg);});
+  prest.forEach(a=>{if(!doblesAnys.has(a))el('circle',{cx:x(a),cy:YF,r:R,fill:COL_PREST},svg);});
 
-  // Dobles corones
-  dobles.forEach(d => {
-    if (pub.includes(d.any))
-      el('circle',{cx:x(d.any),cy:YP,r:RD,fill:'white',stroke:COL_PUB,'stroke-width':'1.8'},svg);
-    el('circle',{cx:x(d.any),cy:YF,r:RD,fill:'white',stroke:COL_PREST,'stroke-width':'1.8'},svg);
-    if (d.premiat) {
-      const t = el('text',{x:x(d.any),y:YF+RD+12,'font-size':'9',fill:COL_OR,'text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
-      t.textContent = '★';
+  // Dobles corones — cercles buits
+  const cerclesDobles = [];
+  dobles.forEach(d=>{
+    if(pub.includes(d.any)){
+      const c=el('circle',{cx:x(d.any),cy:YP,r:RD,fill:'white',stroke:COL_PUB,'stroke-width':'2',cursor:'pointer'},svg);
+      cerclesDobles.push({el:c,data:d,y:YP});
     }
-  });
-
-  // Etiquetes dalt/baix alternades per evitar solapament
-  const etiq = [
-    {any:1968,titol:'No somos\nde piedra', dalt:true},
-    {any:1974,titol:'Tormento',            dalt:false},
-    {any:1975,titol:'Furtivos',            dalt:true},
-    {any:1977,titol:'La guerra\nde papá',  dalt:false},
-    {any:1984,titol:'Los santos\ninocentes',dalt:true},
-    {any:1988,titol:'Mujeres\nal borde…',  dalt:false},
-    {any:1999,titol:'Todo sobre\nmi madre',dalt:true},
-    {any:2001,titol:'Juana\nla Loca',      dalt:false},
-    {any:2002,titol:'Los lunes\nal sol',   dalt:true},
-    {any:2004,titol:'Mar\nadentro',        dalt:false},
-  ];
-
-  etiq.forEach(e => {
-    const cx = x(e.any);
-    const lines = e.titol.split('\n');
-    if (e.dalt) {
-      const topY = YP - RD - 4 - lines.length * 11;
-      el('line',{x1:cx,y1:YP-RD-2,x2:cx,y2:topY+lines.length*11,'stroke':'#ddd','stroke-width':'0.6'},svg);
-      lines.forEach((l,i) => {
-        const t = el('text',{x:cx,y:topY+i*11+9,'font-size':'8',fill:'#555','text-anchor':'middle','font-style':'italic','font-family':'system-ui,sans-serif'},svg);
-        t.textContent = l;
-      });
-    } else {
-      const botY = YF + RD + 18;
-      el('line',{x1:cx,y1:YF+RD+2,x2:cx,y2:botY-4,'stroke':'#ddd','stroke-width':'0.6'},svg);
-      lines.forEach((l,i) => {
-        const t = el('text',{x:cx,y:botY+i*11,'font-size':'8',fill:'#555','text-anchor':'middle','font-style':'italic','font-family':'system-ui,sans-serif'},svg);
-        t.textContent = l;
-      });
+    const c2=el('circle',{cx:x(d.any),cy:YF,r:RD,fill:'white',stroke:COL_PREST,'stroke-width':'2',cursor:'pointer'},svg);
+    cerclesDobles.push({el:c2,data:d,y:YF});
+    if(d.premiat){
+      const t=el('text',{x:x(d.any),y:YF+RD+13,'font-size':'10',fill:COL_OR,'text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
+      t.textContent='★';
     }
   });
 
   // Llegenda
-  const legY = YF + 65;
-  const legDades = [
-    {col:COL_PUB,  label:'Públic — Top 100 (100 films)', buit:false},
-    {col:COL_PREST,label:'Prestigi — Festivals (264 films)', buit:false},
+  const legY=YF+38;
+  const legItems=[
+    {col:COL_PUB,  label:'Públic — Top 100', buit:false},
+    {col:COL_PREST,label:'Prestigi — Festivals', buit:false},
     {col:COL_PUB,  label:'Doble corona', buit:true},
     {col:COL_OR,   label:'Premiat al festival', estrella:true},
   ];
-  let lx = W/2 - 250;
-  legDades.forEach(item => {
-    if (item.estrella) {
-      const t = el('text',{x:lx,y:legY+4,'font-size':'10',fill:COL_OR,'font-family':'system-ui,sans-serif'},svg);
-      t.textContent = '★'; lx += 14;
-    } else if (item.buit) {
-      el('circle',{cx:lx+5,cy:legY,r:'4.5',fill:'white',stroke:item.col,'stroke-width':'1.5'},svg); lx += 14;
-    } else {
-      el('circle',{cx:lx+5,cy:legY,r:'4',fill:item.col},svg); lx += 14;
+  let lx=W/2-230;
+  legItems.forEach(item=>{
+    if(item.estrella){
+      const t=el('text',{x:lx,y:legY+5,'font-size':'12',fill:COL_OR,'font-family':'system-ui,sans-serif'},svg);
+      t.textContent='★';lx+=18;
+    }else if(item.buit){
+      el('circle',{cx:lx+6,cy:legY,r:'5.5',fill:'white',stroke:item.col,'stroke-width':'1.8'},svg);lx+=18;
+    }else{
+      el('circle',{cx:lx+6,cy:legY,r:'5',fill:item.col},svg);lx+=18;
     }
-    const t = el('text',{x:lx,y:legY+4,'font-size':'9',fill:'#555','font-family':'system-ui,sans-serif'},svg);
-    t.textContent = item.label;
-    lx += item.label.length * 5.2 + 20;
+    const t=el('text',{x:lx,y:legY+5,'font-size':'11',fill:'#555','font-family':'system-ui,sans-serif'},svg);
+    t.textContent=item.label;
+    lx+=item.label.length*6+22;
   });
 
   wrap.appendChild(svg);
+
+  // Tooltip
+  const tooltip=document.createElement('div');
+  tooltip.style.cssText='position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:10px 13px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.6;max-width:220px;font-family:system-ui,sans-serif;';
+  wrap.appendChild(tooltip);
+
+  cerclesDobles.forEach(({el:c,data:d})=>{
+    c.addEventListener('mouseenter',e=>{
+      const rect=wrap.getBoundingClientRect();
+      const svgRect=svg.getBoundingClientRect();
+      const cx=parseFloat(c.getAttribute('cx'));
+      const cy=parseFloat(c.getAttribute('cy'));
+      const svgW=svgRect.width;
+      const svgH=svgRect.height;
+      const px=(cx/W)*svgW;
+      const py=(cy/(YF+52))*svgH;
+
+      let html=`<strong>${d.titol}</strong><br>${d.any}`;
+      html+=`<br>${d.top100} al Top 100`;
+      html+=`<br>${d.festival}`;
+      if(d.premi)html+=` · ${d.premi}`;
+
+      tooltip.innerHTML=html;
+      tooltip.style.display='block';
+      const tw=220;
+      let left=px+10;
+      if(left+tw>svgW)left=px-tw-10;
+      tooltip.style.left=left+'px';
+      tooltip.style.top=(py-10+svgRect.top-wrap.getBoundingClientRect().top)+'px';
+      c.setAttribute('opacity','0.7');
+    });
+    c.addEventListener('mouseleave',()=>{
+      tooltip.style.display='none';
+      c.setAttribute('opacity','1');
+    });
+  });
 }
