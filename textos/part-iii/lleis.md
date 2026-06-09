@@ -13,7 +13,7 @@ El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50%
 
 ### 2. Les televisions privades (1990): canvi de model
 
-L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró: els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades, taquilla, televisió i Estat. <sup>[N]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
+L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró, els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades: taquilla, televisió i Estat. <sup>[N]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
