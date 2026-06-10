@@ -25,7 +25,7 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 <!-- /bloc-almodovar -->
 
 <!-- comentari-almodovar -->
-- La ‘doble corona’ sostinguda (i el 'segón cercle') és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Todo sobre mi madre* i *Volver* combinen festivals i públic en una proporció que cap altre director del corpus manté amb aquesta continuïtat. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
+- La ‘doble corona’ sostinguda (i el 'segón cercle') és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Tacones lejanos*, *Todo sobre mi madre* i *Volver* combinen festivals i públic en una proporció que cap altre director del corpus manté amb aquesta continuïtat. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
 
 - *Mujeres al borde…*  és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE encara amb una capacitat de convocatòria enorme, abans que la fragmentació del *share* es consolidés amb les privades, i una obertura cultural accelerada amb la consolidació democràtica. L’estrena televisiva arriba el gener de 1991, dos anys després de l’estrena en sales. <sup>[N]</sup> El resultat és un IAA estimat de 10,04M: una combinació mai vista fins llavors de sala massiva, televisió forta i projecció internacional.
 
