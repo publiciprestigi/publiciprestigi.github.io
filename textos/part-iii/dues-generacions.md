@@ -51,5 +51,5 @@ El conjunt mostra la paradoxa del període actual: aquests directors no generen 
 
 - Simón i Ruiz de Azúa: la nova zona de contacte. *Alcarràs* (Ós d’Or a Berlín, 2022) i *Los domingos* (Conxa d’Or a Sant Sebastià, 2025) són els casos més recents de films amb reconeixement màxim als festivals i xifres de sala significatives per al període actual. L’IAA estimat de *Los domingos* (2,24M, amb les finestres posteriors encara obertes) el situa en un ordre de magnitud comparable al dels grans pics de Saura o als Almodóvar més recents. La sala ja no dona tota la mesura del seu abast.
 
-El gràfic següent visualitza aquesta diferència entre públic de sala i audiència acumulada estimada. En la generació actual, el salt entre una xifra i l’altra no és un detall menor, és una part central del funcionament del mercat. Si només ens fixem amb l'IAA, *As bestas* i *Los domingos* podrien ser perfectament les noves 'dobles corones' de l'època actual.
+El gràfic següent visualitza aquesta diferència entre públic de sala i audiència acumulada estimada. En la generació actual, el salt entre una xifra i l’altra no és un detall menor, és una part central del funcionament del mercat. Si només ens fixem amb l'IAA, *As bestas* i *Los domingos* podrien ser perfectament les noves 'dobles corones' de l'època actual. <sup>[N]</sup>
 <!-- /comentari-actual -->
