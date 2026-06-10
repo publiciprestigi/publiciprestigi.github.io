@@ -21,7 +21,7 @@ Les xifres de sala capturen només una finestra d’exhibició. L’IAA estima l
 
 El factor multiplicador varia segons el període i s'expressa com a forquilla per reflectir la incertesa inherent al càlcul. A les taules i gràfics d'aquest estudi s'utilitza el punt mig de cada forquilla com a valor de referència, indicat amb el símbol ~.
 
-| Període | Nº finestres | Tipus de finestres | Factor IAA | IAA estimat (punt mig) |
+| Període | Nº finestres | Tipus de finestres | Factor IAA | IAA punt mig |
 | --- | --- | --- | --- | --- |
 | <span style="white-space:nowrap">1965–1984</span> | 1 | *Sala de cinema* | ×1,0 | **×1,0** |
 | <span style="white-space:nowrap">1984–1989</span> | 3 | *Sala + TVE + VHS* | ×2,5–3,5 | **×3,0** |
