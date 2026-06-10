@@ -10,19 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estil.css">
   <style>
-    /* ── Pàgina de Notes ── */
     .notes-portada {
       max-width: var(--amplada-text);
       padding-top: 40px;
-    }
-
-    .notes-antetitol {
-      font-size: 0.72rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: #999;
-      margin-bottom: 10px;
-      font-weight: 400;
     }
 
     .notes-titol {
@@ -40,11 +30,11 @@
       line-height: 1.5;
     }
 
-    /* Grups per part */
     .notes-grup {
       border-top: 1px solid var(--color-linia);
       padding-top: 28px;
-      margin-bottom: 40px;
+      margin-bottom: 0;
+      padding-bottom: 40px;
     }
 
     .notes-grup-titol {
@@ -56,7 +46,6 @@
       margin-bottom: 20px;
     }
 
-    /* Notes individuals */
     .nota {
       display: grid;
       grid-template-columns: 28px 1fr;
@@ -86,17 +75,13 @@
       text-decoration-color: rgba(0,0,0,0.3);
     }
     .nota-text a:hover { opacity: 0.65; }
-
     .nota-text strong { font-weight: 600; color: var(--color-text); }
 
-    /* Sublabel de secció dins d'un grup */
     .notes-seccio {
       font-size: 0.75rem;
-      font-weight: 600;
+      font-weight: 500;
       color: #bbb;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      margin: 24px 0 12px 40px;
+      margin: 20px 0 10px 40px;
     }
     .notes-seccio:first-of-type { margin-top: 0; }
   </style>
@@ -135,13 +120,12 @@
   <main class="contingut">
     <div class="notes-portada">
 
-      <p class="notes-antetitol">Públic i Prestigi · Versió 1 (1965–2025)</p>
       <h1 class="notes-titol">Notes</h1>
       <p class="notes-subtitol">Referències, fonts i aclariments metodològics. Cada nota és accessible també des de la pàgina on apareix referenciada.</p>
 
       <!-- PART I -->
       <div class="notes-grup">
-        <p class="notes-grup-titol">Part I — Públic</p>
+        <p class="notes-grup-titol">Part I</p>
 
         <p class="notes-seccio">Fonts i eines</p>
 
@@ -177,7 +161,7 @@
 
       <!-- PART II -->
       <div class="notes-grup">
-        <p class="notes-grup-titol">Part II — Prestigi</p>
+        <p class="notes-grup-titol">Part II</p>
 
         <p class="notes-seccio">Dades i criteri</p>
 
@@ -196,9 +180,9 @@
 
       <!-- PART III -->
       <div class="notes-grup">
-        <p class="notes-grup-titol">Part III — Anàlisi</p>
+        <p class="notes-grup-titol">Part III</p>
 
-        <p class="notes-seccio">Evolució de la bretxa públic vs. prestigi</p>
+        <p class="notes-seccio">Evolució de la bretxa</p>
 
         <div class="nota" id="n8">
           <span class="nota-num">[8]</span>
@@ -279,7 +263,6 @@
         </div>
 
       </div>
-      <!-- Fi Part III -->
 
     </div>
   </main>
