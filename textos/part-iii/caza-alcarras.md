@@ -46,7 +46,7 @@ També cal marcar una diferència de fons. Les entrades de sala mesuren una expe
 
 En el cas de *La caza*, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol estratègia planificada. *Alcarràs*, en canvi, neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores i futures finestres d’emissió.
 
-El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, fa l’estrena televisiva només 19 mesos després de fer-ho al cinema:
+El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, fa l’estrena televisiva només 19 mesos després de fer-ho al cinema: <sup>[N]</sup>
 
 
 | Títol | Estrena a sales | Estrena a TV | Diferència | Canal i franja | IAA |
