@@ -432,7 +432,7 @@ window.PiP_graficCazaIAA = function() {
 
   // Etiquetes totals al final de cada barra
   const etiquetesTotals = [
-    { xifra: '~1,31M', mult: '(×2,5–4,0 · punt mig: ×3,25)', total: 1310195 },
+    { xifra: '~1,31M', mult: '(×3,25)', total: 1310195 },
     { xifra: '341.377', mult: '(×1,0)', total: 341377 },
   ];
 
