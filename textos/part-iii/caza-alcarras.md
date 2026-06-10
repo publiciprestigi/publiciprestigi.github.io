@@ -32,7 +32,7 @@ El factor multiplicador varia segons el període i s'expressa com a forquilla pe
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
-- L'IAA no és un recompte de finestres que acumula espectadors exponencialment: estima la capacitat real de cada ecosistema de distribució per afegir públic. Per això no creix de manera lineal: puja amb el primer cicle TVE/VHS, baixa quan l’audiència es fragmenta entre més canals i formats, i torna a créixer amb les plataformes digitals, on l’accés s’amplia però la verificació es fa més difícil.
+- L'IAA no és un recompte de finestres: estima la capacitat real de cada ecosistema de distribució per afegir públic. Per això no creix de manera lineal: puja amb el primer cicle TVE/VHS, baixa quan l’audiència es fragmenta entre més canals i formats, i torna a créixer amb les plataformes digitals, on l’accés s’amplia però la verificació es fa més difícil.
 
 També cal marcar una diferència de fons. Les entrades de sala mesuren una experiència col·lectiva: gent reunida en un mateix espai i en un mateix moment. L’IAA mesura una altra cosa: quantes persones han vist el film en total, sumant totes les vies disponibles durant els primers anys comercials. Les dues preguntes no són intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de cinema.
 
