@@ -9,7 +9,7 @@ El cinema espanyol dels darrers seixanta anys no s'entendria sense les lleis que
 
 ### 1. El Decret Miró (1983) i la televisió pública
 
-El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50% del pressupost i neix l’ICAA. Eleva la qualitat del cinema espanyol, però elimina pràcticament el cinema de gènere popular. En aquesta primera etapa, la sala continua sent el centre absolut del model; per als films anteriors a 1984, el factor multiplicador és ×1,0: qui no veia el film a la sala gairebé no el veia. A finals dels 80, TVE i el VHS comencen a funcionar com a finestres posteriors reals: els films comencen a arribar pocs anys després de l'estrena, encara sense una estratègia planificada des de l'origen, però ja amb capacitat d'ampliar audiència.
+El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50% del pressupost i neix l’ICAA. Eleva la qualitat del cinema espanyol, però elimina pràcticament el cinema de gènere popular. En aquesta primera etapa, la sala continua sent el centre absolut del model; per als films anteriors a 1984, el factor multiplicador és ×1,0: qui no veia el film a la sala gairebé no el veia. A finals dels 80, TVE i el VHS comencen a funcionar com a finestres posteriors reals: els films comencen a arribar pocs anys després de l'estrena, encara sense una estratègia planificada des de l'origen, però ja amb capacitat d'ampliar l'audiència.
 
 ### 2. Les televisions privades (1990): canvi de model
 
