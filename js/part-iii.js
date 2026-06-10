@@ -361,7 +361,7 @@ function construirCazaAlcarras() {
       festival: 'Berlín', premiat: true,
       espectadors: 403195,
       mercat: '71M', penetr: '0,84%', quota: '0,57%',
-      iic: '0,47', iaa_xifra: '1,06M–1,56M', iaa_mult: '', iaa_est: true,
+      iic: '0,47', iaa_xifra: '~1,31M', iaa_mult: '', iaa_est: true,
     },
   ];
 
@@ -432,7 +432,7 @@ window.PiP_graficCazaIAA = function() {
 
   // Etiquetes totals al final de cada barra
   const etiquetesTotals = [
-    { xifra: '1,06M–1,56M', mult: '(×2,5–4,0)', total: 1310195 },
+    { xifra: '~1,31M', mult: '(×2,5–4,0 · punt mig: ×3,25)', total: 1310195 },
     { xifra: '341.377', mult: '(×1,0)', total: 341377 },
   ];
 
