@@ -39,39 +39,58 @@ La capacitat del cinema espanyol de produir ‘dobles corones’ no ha desapareg
 <!-- /punt-3 -->
 
 <!-- punt-4 -->
-### 4. El cinema d'autor industrial: una tercera via en transformació
+## 4. Més públic potencial, menys experiència compartida
 
-Entre el cinema popular i el de festival hi ha una categoria que l'estudi ha documentat en dades: directors que dominen el llenguatge del gènere (terror, *thriller*, ciència-ficció) amb una veu autoral reconeixible, treballen amb pressupostos grans i connecten amb el gran públic sense la validació dels festivals europeus. Amenábar va construir un públic massiu des del gènere (*Los otros*, #2 del Top 100; *Mar adentro*, #12 i Lleó de Plata); Bayona ha portat el model fins a les últimes conseqüències (*Lo imposible*, #3 del Top 100) abans del salt a Hollywood; De la Iglesia, el més autoral i precursor, va obrir l'espai d'un cinema de gènere amb consciència política. La seva victòria va ser fer que el mercat espanyol acceptés com a normal una ambició industrial sostinguda. Però és un model en transformació: *La sociedad de la nieve* (2023) de Bayona, produïda per Netflix, hauria ocupat les primeres posicions del Top 100 en qualsevol altra dècada, i és invisible per a les mètriques tradicionals perquè el seu pas per la sala era secundari. Les plataformes han desplaçat aquest cinema cap a un espai que ja no sabem mesurar.
+*Tenim més públic potencial i menys dades comunes; més consum, però una experiència menys compartida.*
+
+Durant els anys noranta i dos mil, les televisions generalistes finançaven i amplificaven l’audiència a gran escala. Una pel·lícula podia passar de les sales a una emissió televisiva vista simultàniament per milions de persones i convertir-se en una experiència col·lectiva. (film-esdeveniment)
+
+Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una bona part del finançament i del poder de distribució ha passat a les plataformes, que tenen una lògica diferent: ampliar i retenir subscriptors, més que crear fenòmens col·lectius d’audiència.
+
+Una pel·lícula pot arribar avui a espectadors de molts països, durant mesos o anys i a través de dispositius diferents, sense generar necessàriament un moment compartit. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat.
+
+El cinema disposa avui d’un sistema de distribució potencialment global, però més opac i menys compartit. La tecnologia amplia l’accés mentre debilita els instruments públics per mesurar-lo; les polítiques obren noves portes, però ho fan dins d’una indústria cada vegada més dependent de decisions empresarials que queden fora de l’escrutini públic.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
-### 5. La generació actual: prestigi equivalent, mercat incomparable i renovació femenina
+## 5. Prestigi equivalent, mercat incomparable
 
-Simón, Ruiz de Azúa, Sorogoyen i Laxe han aconseguit reconeixements màxims als festivals (Ós d'Or, Premi del Jurat, Conxa d'Or) comparables als de Saura o Erice en els seus millors moments. Però operen en un mercat de sala 4–5 vegades més petit. La comparació directa per espectadors és enganyosa; l'IIC i l'IAA revelen que l'impacte cultural real és més proper del que les xifres brutes suggereixen. Serra i Lacuesta, en el registre més radical, demostren que el prestigi internacional pot construir-se completament al marge del mercat de sala: són el pol oposat a Sorogoyen, l'únic que s'acosta clarament als llindars del cinema popular amb *As bestas* (2022). Si ell és la prova que mercat i prestigi encara poden coexistir, Serra i Lacuesta ho són que el prestigi pot existir sense mercat.
+*La generació actual ha assolit reconeixements comparables als de les grans generacions anteriors, però dins d’un mercat de sala que ja no és comparable.*
 
-La generació actual té, a més, una dimensió que les taules no capturen: és la primera amb una presència femenina dominant als festivals, resultat mesurable de les polítiques de paritat de l'ICAA iniciades el 2018. El cinema d'autor espanyol va néixer masculí i es renova femení.
+Simón, Ruiz de Azúa, Sorogoyen o Laxe han aconseguit premis màxims als grans festivals, però operen en un mercat quatre o cinc vegades més petit que el de les generacions precedents. Comparar directament les seves xifrs amb les de Saura o Almodóvar pot ocultar més coses de les que revela.
+
+Dins d’aquesta generació conviuen relacions molt diferents amb el mercat. Sorogoyen, amb As bestas, demostra que mercat i prestigi poden coexistir. Serra i Lacuesta representen el pol contrari: la possibilitat de construir un prestigi internacional gairebé completament al marge del mercat de sala. Si Sorogoyen és la prova que mercat i prestigi encara poden conviure, Serra i Lacuesta ho són que el prestigi pot existir sense mercat.
+Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altre director del període ha mantingut durant tant de temps una combinació comparable de públic, prestigi internacional i centralitat cultural. Però els seus films recents també operen dins l’escala actual del cinema d’autor.
+
+La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne la profunditat: fins i tot Almodóvar, el pont més resistent entre públic i prestigi, treballa avui dins un mercat que ja no és el que va construir la seva excepcionalitat.
+
 <!-- /punt-5 -->
 
 <!-- punt-6 -->
-### 6. L'IIC i l'IAA: eines de mesura sense validesa científica
+## 6. Més igualtat en l’accés, desigualtat persistent en els recursos
 
-Les dues mètriques pròpies que aporta aquest estudi són eines d'aproximació per comparar realitats que les dades disponibles no permeten comparar directament. Cap de les dues pretén tenir validesa científica. L'IAA estima l'audiència d'un film durant el seu període inicial d'estrena (aproximadament els primers 2–3 anys de distribució comercial activa), comptabilitzant totes les finestres disponibles en cada context. El seu marge d'incertesa varia segons l'època: en els films anteriors a 1984 coincideix sempre amb la sala; en els recents, la principal limitació són les plataformes, que no publiquen audiències clares. El seu valor, com el de l'IIC, no és la precisió sinó la direcció: permet establir equivalències que les xifres brutes oculten. Sense aquesta limitació explícita, les eines serien enganyoses.
+*Les dones han arribat al centre del prestigi internacional, però continuen treballant amb pressupostos considerablement inferiors.*
+
+La generació actual és la primera amb una presència femenina central als grans festivals. Simón, Ruiz de Azúa, Palomero, Camborda o Funes protagonitzen una renovació que coincideix amb l’avenç històric del feminisme i amb les polítiques actives d’igualtat incorporades a les ajudes públiques.
+
+Aquesta transformació no es produeix dins d’una indústria audiovisual feble. La producció de cinema, sèries, televisió i continguts per a plataformes viu un període d’una activitat extraordinària. El que ha perdut força i centralitat és el mercat de sala, especialment l’espai del cinema mitjà i d’autor.
+
+La paradoxa és que l’accés a la direcció, al finançament i al reconeixement s’ha ampliat sense que desapareguin les desigualtats materials. Els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors. Hi ha més portes obertes, però la igualtat en l’accés encara no equival a igualtat en els recursos. (i això també determina el tipus de cinema que poden fer)
+El cinema d’autor espanyol va néixer masculí i es renova femení. (recolocar)
 <!-- /punt-6 -->
 
 <!-- punt-7 -->
-### 7. La sala ja no és l'únic baròmetre
+## 7. El cinema més vist no és sempre el cinema més recordat
 
-Les mètriques tradicionals (espectadors de sala, quota de mercat, penetració demogràfica) han deixat de ser instruments suficients per mesurar l'impacte cultural del cinema en l'era del *streaming*. La sala ha passat de ser l'única finestra a ser la primera d'un ecosistema de cinc o més canals.
+*El públic i el cànon conserven memòries diferents del mateix període.*
 
-El mercat espanyol ha caigut de 400 milions d'entrades anuals als anys 60 a 65–90 milions als anys 2020, amb una caiguda estructural que la pandèmia va accelerar però no causar. La recuperació post-COVID ha estat parcial: el cinema de gran espectacle ha tornat amb força, però el cinema mitjà resisteix amb xifres molt inferiors a les d'abans de la pandèmia. És una tendència global, no espanyola. Les televisions generalistes, que durant els 90 i els 2000 finançaven i amplificaven aquell cinema, han reculat; el pressupost que gestionaven ha migrat cap a les plataformes, però amb una lògica diferent: retenir subscriptors, no crear fenòmens col·lectius.
+Quan pensem en el gran cinema espanyol de les darreres dècades, pensem sobretot en els autors legitimats pels festivals, la crítica i l’acadèmia. El cinema popular ocupa un lloc central en la memòria personal de milions d’espectadors, però sovint un lloc secundari en la història cultural.
 
-La incògnita és si aquesta classe mitjana del cinema tornarà a les sales o si la seva desaparició del circuit comercial és estructural. Tot apunta al segon escenari. La capacitat del cinema espanyol de produir "dobles corones" no ha desaparegut: ha canviat d'escala. *Los domingos* (2025) registra 688k espectadors de sala i un IAA estimat de ~1,7–2,8 milions. En el mercat actual, és el que *Furtivos* o *Mar adentro* van ser en el seu. La diferència és que avui la sala ja no ho explica tot, i no tenim (encara) les eines per mesurar la resta amb precisió.
+El cinema d’autor més industrial queda també en una posició ambigua: massa comercial per a una part del cànon i massa singular per ser considerat només cinema de consum. Això no obliga a equiparar èxit popular i valor artístic, però sí a reconèixer que el cànon conserva unes obres millor que unes altres i que la història d’una cinematografia no està formada només per les pel·lícules que les institucions han legitimat.
+L’última paradoxa és, potser, la que dona sentit a tot l’estudi: el cinema que més espectadors van veure no sempre és el cinema que millor recordem, i el cinema que ocupa el centre de la memòria cultural no sempre va ocupar el centre de l’experiència popular.
+
+Entre aquestes dues memòries —la del públic i la del prestigi— es troba la història completa que aquest estudi HA INTENTAT EXPLICAR.
 <!-- /punt-7 -->
 
 <!-- punt-8 -->
-### 8. Coda: la memòria i el cànon
-
-Hi ha un fenomen que l'estudi posa en evidència sense proposar-s'ho: el problema de la memòria cultural. El cinema que recordem col·lectivament com a "gran cinema espanyol" és majoritàriament el de festivals, no el del Top 100. Quan pensem en els darrers seixanta anys, pensem en Buñuel, Berlanga, Saura, Erice o Almodóvar, no en Lazaga o Segura, tot i les seves audiències enormes. Tampoc acostumem a pensar en Bayona o Amenábar com a autors de referència.
-
-El cànon crític tendeix a relegar el cinema popular per excés de popularitat i el cinema d'autor industrial per excés de comercialitat. Només el cinema de festival sembla tenir garantida la immortalitat crítica. Aquesta selecció de la memòria no és innocent: reflecteix quins circuits culturals han tingut el poder de construir el cànon. La crítica i l'acadèmia han desenvolupat més eines per llegir i legitimar el cinema d'autor, i és comprensible. Però té un cost: relega l'experiència cinematogràfica majoritària, el cinema que va formar part de la vida de més espectadors. Mesurar les dues coses —el que va omplir sales i el que va guanyar premis— i mirar quan, excepcionalment, van coincidir, és el que ha intentat aquest estudi.
 <!-- /punt-8 -->
