@@ -8,7 +8,7 @@ Les dades de públic i prestigi no ofereixen una única història del cinema esp
 <span style="color:#999">La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.</span>
 
 
-Dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Si hi afegim els quinze títols del «segon cercle», la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
+Dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Si hi afegim els quinze títols del 'segon cercle', la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
 
 El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Les grans audiències s’han concentrat sobretot en la comèdia popular, el thriller, el cinema de gènere o les produccions vinculades a la televisió, que rarament han passat pels grans festivals.
 
