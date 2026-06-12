@@ -71,7 +71,9 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 
 *Les dones han arribat al centre del prestigi internacional, però continuen treballant amb pressupostos considerablement inferiors.*
 
-La generació actual és la primera amb una presència femenina central als grans festivals. Simón, Ruiz de Azúa, Palomero, Camborda o Funes protagonitzen una renovació que coincideix amb l’avenç històric del feminisme i amb les polítiques actives d’igualtat incorporades a les ajudes públiques.
+El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es produeix, qui pot produir-ho, com circulen les pel·lícules i quines tenen accés als recursos.
+
+En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. Simón, Ruiz de Azúa, Palomero, Camborda o Funes protagonitzen una renovació que coincideix amb l’avenç històric del feminisme i amb les polítiques actives d’igualtat incorporades a les ajudes públiques.
 
 Aquesta transformació no es produeix dins d’una indústria audiovisual feble. La producció de cinema, sèries, televisió i continguts per a plataformes viu un període d’una activitat extraordinària. El que ha perdut força i centralitat és el mercat de sala, especialment l’espai del cinema mitjà i d’autor.
 
