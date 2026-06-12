@@ -73,7 +73,7 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 <!-- punt-6 -->
 ## 6. Més accés, menys recursos
 
-<span style="color:#999">La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència d'evidents desigualtats materials.</span>
+<span style="color:#999">La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència d'evidents desigualtats.</span>
 
 El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es pot i qui pot produir, com circulen les pel·lícules i quines tenen accés als recursos.
 
