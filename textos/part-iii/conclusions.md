@@ -5,7 +5,7 @@ Les dades de públic i prestigi no ofereixen una única història del cinema esp
 <!-- punt-1 -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
-**Públic i prestigi comparteixen una mateixa cinematografia, però només excepcionalment comparteixen les mateixes pel·lícules.**
+*Públic i prestigi comparteixen una mateixa cinematografia, però només excepcionalment comparteixen les mateixes pel·lícules.*
 
 Dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Si hi afegim els quinze títols del ‘segon cercle’, la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
 
@@ -29,7 +29,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 <!-- punt-3 -->
 ## 3. Més finestres i menys dades
 
-**La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.**
+*La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.*
 
 La taquilla continua sent l’única dada pública comparable al llarg de tot el període, però ja no explica per si sola l’abast d’una pel·lícula. La sala ha passat de ser el centre gairebé exclusiu de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions, el vídeo sota demanda i les plataformes.
 
