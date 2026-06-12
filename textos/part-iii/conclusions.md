@@ -73,7 +73,7 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 
 El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es produeix, qui pot produir-ho, com circulen les pel·lícules i quines tenen accés als recursos.
 
-En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. Aquesta renovació coincideix amb l’avenç històric del feminisme i amb les polítiques actives d’igualtat incorporades a les ajudes públiques. El cinema d’autor espanyol va néixer masculí i es renova femení.
+En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení. Aquesta renovació coincideix amb les polítiques actives d’igualtat incorporades a les ajudes públiques.
 
 El canvi es produeix dins d’una indústria audiovisual en expansió i transformació, amb una gran activitat en sèries, televisió i plataformes. El que ha perdut força i centralitat és el mercat de sala, especialment l’espai del cinema mitjà i d’autor.
 
