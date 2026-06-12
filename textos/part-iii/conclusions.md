@@ -73,11 +73,9 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 
 El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es produeix, qui pot produir-ho, com circulen les pel·lícules i quines tenen accés als recursos.
 
-En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení. Aquesta renovació coincideix amb les polítiques actives d’igualtat incorporades a les ajudes públiques.
+En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení, en paral·lel a les polítiques actives d’igualtat incorporades a les ajudes públiques. Aquesta renovació té lloc dins d’una indústria audiovisual en expansió —amb una gran activitat en sèries, televisió i plataformes—, però just quan el mercat de sala i l’espai del cinema mitjà i d’autor perden força. Les dones accedeixen així al centre simbòlic d’un territori històricament masculí, paradoxalment, just quan deixa de ser el centre industrial.
 
-El canvi es produeix dins d’una indústria audiovisual en expansió i transformació, amb una gran activitat en sèries, televisió i plataformes. El que ha perdut força i centralitat és el mercat de sala, especialment l’espai del cinema mitjà i d’autor.
-
-L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però les desigualtats materials persisteixen. Els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. La igualtat en l’accés encara no equival a igualtat en les condicions.
+L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però les desigualtats materials persisteixen. Els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer.
 
 <!-- /punt-6 -->
 
