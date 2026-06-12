@@ -23,9 +23,15 @@ L'explicació no és només la irrupció de les plataformes, sinó un procés m�
 <!-- /punt-2 -->
 
 <!-- punt-3 -->
-### 3. Almodóvar és l'única excepció estructural en seixanta anys
+##3. Més finestres i menys dades
 
-És l'únic director que ha sostingut durant gairebé dues dècades les dues dimensions alhora: presència continuada als grans festivals (10 seleccions, 6 premis) i públic massiu al mercat espanyol. Només té 3 films al Top 100 (*Mujeres al borde…*, *Todo sobre mi madre* i *Tacones lejanos*), però la seva petjada va molt més enllà: *Átame*, *Volver* i bona part de la seva filmografia formen el nucli del "segon cercle", on prestigi i públic conviuen en proporcions que cap altre director manté amb aquesta continuïtat. La combinació de gènere popular, estil propi i distribució internacional agressiva que va construir als 80–90 no s'ha pogut replicar. *La habitación de al lado* (2024), el seu primer Lleó d'Or a Venècia, fa 402k espectadors de sala, exactament en el mateix rang de Simón o Ruiz de Azúa: el mateix Almodóvar, en un mercat que ja no és el seu. L'excepció ha tancat un cicle.
+**La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.**
+
+La taquilla continua sent l’única dada pública comparable al llarg de tot el període, però ja no explica per si sola l’abast d’una pel·lícula. La sala ha passat de ser el centre gairebé exclusiu de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions, el vídeo sota demanda i les plataformes.
+
+Això pot haver eixamplat la diferència visible entre el cinema popular i el cinema de festival a la taquilla, sense que la distància entre les seves audiències totals hagi crescut en la mateixa proporció. Films com Alcarràs, As bestas o Los domingos continuen acumulant públic després de l’estrena, encara que no disposem de dades completes per mesurar aquest recorregut. En produccions concebudes directament per a plataformes, com La sociedad de la nieve, la taquilla és ja una dada clarament insuficient.
+
+La capacitat del cinema espanyol de produir ‘dobles corones’ no ha desaparegut: ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
 <!-- /punt-3 -->
 
 <!-- punt-4 -->
