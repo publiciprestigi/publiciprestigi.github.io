@@ -67,17 +67,18 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 <!-- /punt-5 -->
 
 <!-- punt-6 -->
-## 6. Més igualtat en l’accés, desigualtat persistent en els recursos
+## 6. Més igualtat en l’accés, un sistema encara desigual
 
-*Les dones han arribat al centre del prestigi internacional, però continuen treballant amb pressupostos considerablement inferiors.*
+*La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència de profundes desigualtats materials.*
 
 El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es produeix, qui pot produir-ho, com circulen les pel·lícules i quines tenen accés als recursos.
 
-En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i s'està renovant femení. Una renovació que coincideix amb l’avenç històric del feminisme i amb les polítiques actives d’igualtat incorporades a les ajudes públiques.
+En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. Aquesta renovació coincideix amb l’avenç històric del feminisme i amb les polítiques actives d’igualtat incorporades a les ajudes públiques. El cinema d’autor espanyol va néixer masculí i es renova femení.
 
-Aquesta transformació no es produeix dins d’una indústria audiovisual feble. La producció de cinema, sèries, televisió i continguts per a plataformes viu un període d’una activitat extraordinària. El que ha perdut força i centralitat és el mercat de sala, especialment l’espai del cinema mitjà i d’autor.
+El canvi es produeix dins d’una indústria audiovisual en expansió i transformació, amb una gran activitat en sèries, televisió i plataformes. El que ha perdut força i centralitat és el mercat de sala, especialment l’espai del cinema mitjà i d’autor.
 
-La paradoxa és que l’accés a la direcció, al finançament i al reconeixement s’ha ampliat sense que desapareguin les desigualtats materials. Els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors. Hi ha més portes obertes, però la igualtat en l’accés encara no equival a igualtat en els recursos. (i això també determina el tipus de cinema que poden fer)
+L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però les desigualtats materials persisteixen. Els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. La igualtat en l’accés encara no equival a igualtat en les condicions.
+
 <!-- /punt-6 -->
 
 <!-- punt-7 -->
