@@ -3,7 +3,7 @@ Les dades de públic i prestigi no ofereixen una única història del cinema esp
 <!-- /intro -->
 
 <!-- punt-1 -->
-### 1. Una mateixa cinematografia, dos sistemes gairebé independents
+## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
 **Públic i prestigi comparteixen una mateixa cinematografia, però només excepcionalment comparteixen les mateixes pel·lícules.**
 
