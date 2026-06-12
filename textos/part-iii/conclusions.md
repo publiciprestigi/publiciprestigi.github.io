@@ -67,7 +67,7 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 <!-- /punt-5 -->
 
 <!-- punt-6 -->
-## 6. Més igualtat en l’accés, un sistema encara desigual
+## 6. Més accés, menys recursos
 
 *La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència de profundes desigualtats materials.*
 
