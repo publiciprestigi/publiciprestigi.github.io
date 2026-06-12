@@ -23,13 +23,13 @@ L'explicació no és només la irrupció de les plataformes, sinó un procés m�
 <!-- /punt-2 -->
 
 <!-- punt-3 -->
-##3. Més finestres i menys dades
+## 3. Més finestres i menys dades
 
 **La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.**
 
 La taquilla continua sent l’única dada pública comparable al llarg de tot el període, però ja no explica per si sola l’abast d’una pel·lícula. La sala ha passat de ser el centre gairebé exclusiu de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions, el vídeo sota demanda i les plataformes.
 
-Això pot haver eixamplat la diferència visible entre el cinema popular i el cinema de festival a la taquilla, sense que la distància entre les seves audiències totals hagi crescut en la mateixa proporció. Films com Alcarràs, As bestas o Los domingos continuen acumulant públic després de l’estrena, encara que no disposem de dades completes per mesurar aquest recorregut. En produccions concebudes directament per a plataformes, com La sociedad de la nieve, la taquilla és ja una dada clarament insuficient.
+Això pot haver eixamplat la diferència visible entre el cinema popular i el cinema de festival a la taquilla, sense que la distància entre les seves audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos* continuen acumulant públic després de l’estrena, encara que no disposem de dades completes per mesurar aquest recorregut. En produccions concebudes directament per a plataformes, com La sociedad de la nieve, la taquilla és ja una dada clarament insuficient.
 
 La capacitat del cinema espanyol de produir ‘dobles corones’ no ha desaparegut: ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
 <!-- /punt-3 -->
