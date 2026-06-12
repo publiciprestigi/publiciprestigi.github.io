@@ -17,7 +17,7 @@ Entre tots dos hi ha una zona intermèdia: el cinema d’autor més industrial c
 <!-- punt-2 -->
 ## 2. Més prestigi internacional, menys mercat de sala
 
-<span style="color:#999">La 'doble corona' no és un model: és l’excepció que deixa al descobert els límits dels dos sistemes.</span><br>
+<span style="color:#999">*El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.*</span>
 
 El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
 
