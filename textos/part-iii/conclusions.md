@@ -5,7 +5,8 @@ Les dades de públic i prestigi no ofereixen una única història del cinema esp
 <!-- punt-1 -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
-<span style="color:#999; font-size:1.15rem; font-weight:400">La 'doble corona' no és un model: és l’excepció que deixa al descobert els límits dels dos sistemes.</span><br>
+<span style="color:#999">La 'doble corona' no és un model: és l’excepció que deixa al descobert els límits dels dos sistemes.</span>
+
 
 Dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Si hi afegim els quinze títols del ‘segon cercle’, la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
 
@@ -17,7 +18,7 @@ Entre tots dos hi ha una zona intermèdia: el cinema d’autor més industrial c
 <!-- punt-2 -->
 ## 2. Més prestigi internacional, menys mercat de sala
 
-<span style="color:#999">*El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.*</span>
+<span style="color:#999">El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.</span>
 
 El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
 
@@ -29,8 +30,9 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 <!-- punt-3 -->
 ## 3. Més finestres i menys dades
 
-*La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.*
+<span style="color:#999">La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.</span>
 
+La 'doble corona' no és un model: és l’excepció que deixa al descobert els límits dels dos sistemes.
 La taquilla continua sent l’única dada pública comparable al llarg de tot el període, però ja no explica per si sola l’abast d’una pel·lícula. La sala ha passat de ser el centre gairebé exclusiu de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions, el vídeo sota demanda i les plataformes.
 
 Això pot haver eixamplat la diferència visible entre el cinema popular i el cinema de festival a la taquilla, sense que la distància entre les seves audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos* continuen acumulant públic després de l’estrena, encara que no disposem de dades completes per mesurar aquest recorregut. En produccions concebudes directament per a plataformes, com La sociedad de la nieve, la taquilla és ja una dada clarament insuficient.
@@ -41,7 +43,7 @@ La capacitat del cinema espanyol de produir ‘dobles corones’ no ha desapareg
 <!-- punt-4 -->
 ## 4. Més públic potencial, menys experiència compartida
 
-*Tenim més públic potencial i menys dades comunes; més consum, però una experiència menys compartida.*
+<span style="color:#999">Tenim més públic potencial i menys dades comunes; més consum, però una experiència menys compartida.</span>
 
 Durant els anys noranta i dos mil, les televisions generalistes finançaven i amplificaven l’audiència a gran escala. Una pel·lícula podia passar de les sales a una emissió televisiva vista simultàniament per milions de persones i convertir-se en una experiència col·lectiva. (film-esdeveniment)
 
@@ -55,7 +57,7 @@ El cinema disposa avui d’un sistema de distribució potencialment global, per�
 <!-- punt-5 -->
 ## 5. Prestigi equivalent, mercat incomparable
 
-*La generació actual ha assolit reconeixements comparables als de les grans generacions anteriors, però dins d’un mercat de sala que ja no és comparable.*
+<span style="color:#999">La generació actual ha assolit reconeixements comparables als de les grans generacions anteriors, però dins d’un mercat de sala que ja no és comparable.</span>
 
 Simón, Ruiz de Azúa, Sorogoyen o Laxe han aconseguit premis màxims als grans festivals, però operen en un mercat quatre o cinc vegades més petit que el de les generacions precedents. Comparar directament les seves xifrs amb les de Saura o Almodóvar pot ocultar més coses de les que revela.
 
@@ -69,7 +71,7 @@ La paradoxa és que la principal excepció a la bretxa també permet mesurar-ne 
 <!-- punt-6 -->
 ## 6. Més accés, menys recursos
 
-*La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència de profundes desigualtats materials.*
+<span style="color:#999">La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència d'evidents desigualtats materials.</span>
 
 El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es produeix, qui pot produir-ho, com circulen les pel·lícules i quines tenen accés als recursos.
 
@@ -82,7 +84,7 @@ L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, pe
 <!-- punt-7 -->
 ## 7. El cinema més vist no és sempre el cinema més recordat
 
-*El públic i el cànon conserven memòries diferents del mateix període.*
+<span style="color:#999">El públic i el cànon conserven memòries diferents del mateix període.</span>
 
 Quan pensem en el gran cinema espanyol de les darreres dècades, pensem sobretot en els autors legitimats pels festivals, la crítica i l’acadèmia. El cinema popular ocupa un lloc central en la memòria personal de milions d’espectadors, però sovint un lloc secundari en la història cultural.
 
