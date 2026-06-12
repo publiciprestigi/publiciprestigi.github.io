@@ -15,11 +15,15 @@ Entre tots dos hi ha una zona intermèdia: el cinema d’autor més industrial c
 <!-- /punt-1 -->
 
 <!-- punt-2 -->
-### 2. La bretxa s'ha eixamplat dràsticament als anys 2010
+## 2. Més prestigi internacional, menys mercat de sala
 
-La ràtio de bretxa (mitjana d'espectadors de les pel·lícules de festival vs. les del Top 100) era de 0,28 als anys 70 (el moment de coincidència més alta) i ha caigut fins al 0,08 als anys 2010. Mai el cinema de festival no havia estat tan lluny del Top 100.
+*El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.*
 
-L'explicació no és només la irrupció de les plataformes, sinó un procés més profund: la professionalització del cinema d'autor. Als 60s i 70s, un director com Saura treballava en un circuit internacional encara poc especialitzat. Entre els 80 i els 2000 es consolida un ecosistema amb regles pròpies: productors especialitzats, festivals-trampolí, coproduccions europees, subvencions específiques, escoles i laboratoris orientats a aquest mercat. Molts directors actuals no fan els seus films "i ja veurem si van a festivals": els construeixen des del principi pensant en aquest circuit. El resultat és doble: el reconeixement internacional del cinema d'autor espanyol ha crescut precisament perquè s'ha especialitzat, però aquesta especialització ha aixecat una barrera d'entrada per al gran públic que abans no existia de la mateixa manera. Les plataformes, després, han accelerat la separació en oferir un circuit de distribució alternatiu a la sala massiva. El lleuger repunt de la ràtio als 2020–25 (0,14) és massa recent per treure'n conclusions.
+El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
+
+Moltes pel·lícules ja no es produeixen primer i arriben després als festivals, sinó que es desenvolupen des de l’inici pensant en les seves regles, calendaris i espais de circulació. Aquesta especialització ha reforçat la presència exterior del cinema espanyol, però també ha augmentat la distància respecte del gran públic.
+
+Les plataformes, després, han accelerat la separació en oferir un circuit de distribució alternatiu a la sala massiva. L’èxit exterior i la distància interior poden ser, en part, dues conseqüències del mateix procés.
 <!-- /punt-2 -->
 
 <!-- punt-3 -->
