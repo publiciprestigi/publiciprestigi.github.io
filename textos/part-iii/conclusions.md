@@ -1,5 +1,5 @@
 <!-- intro -->
-Les dades de públic i prestigi no ofereixen una única història del cinema espanyol, sinó dues trajectòries que només coincideixen excepcionalment. Encreuar-les permet identificar set paradoxes que resumeixen les principals transformacions recents.
+Les dades de públic i prestigi no ofereixen una única història del cinema espanyol, sinó dues trajectòries que només coincideixen excepcionalment. Encreuar-les permet identificar set paradoxes que resumeixen les principals transformacions actuals del període estudiat.
 <!-- /intro -->
 
 <!-- punt-1 -->
