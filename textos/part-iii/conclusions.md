@@ -30,7 +30,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 <!-- /punt-2 -->
 
 <!-- punt-3 -->
-## 3. Més finestres i menys dades
+## 3. Més finestres, menys dades
 
 <span style="color:#999">La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.</span>
 
