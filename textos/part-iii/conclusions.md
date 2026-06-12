@@ -11,7 +11,7 @@ El balanç quantitatiu és inequívoc: dels 264 films espanyols documentats a le
 
 El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica van ser els anys de la Transició, quan el cinema crític va trobar també un públic ampli a les sales.
 
-Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més industrial, que combina una veu reconeixible, els gèneres populars i una ambició a gran escala. Aquesta categoria demostra que la frontera no és absoluta.
+Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més industrial, que combina una veu reconeixible, els gèneres populars i una ambició a gran escala. Aquesta categoria demostra, des del vessant més comercial, que la frontera no és absoluta.
 <!-- /punt-1 -->
 
 <!-- punt-2 -->
