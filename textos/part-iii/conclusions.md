@@ -1,13 +1,17 @@
 <!-- intro -->
-Seixanta anys de cinema espanyol en dades. Cent pel·lícules al Top 100 d'espectadors, 264 films als festivals, cinc directors analitzats a fons i quatre de la generació actual. El que segueix no és un resum, sinó el marc interpretatiu que ordena tot l'estudi i les conclusions que se'n deriven: algunes prou sòlides, d'altres encara obertes com a hipòtesi per a investigació posterior.
+Les dades de públic i prestigi no ofereixen una única història del cinema espanyol, sinó dues trajectòries que només coincideixen excepcionalment. Encreuar-les permet identificar set paradoxes que resumeixen les principals transformacions recents.
 <!-- /intro -->
 
 <!-- punt-1 -->
-### 1. Tres categories, dos sistemes gairebé independents
+### 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
-El conjunt de l'estudi permet distingir tres grans categories dins el cinema espanyol dels darrers seixanta anys. El cinema popular de consum (Lazaga, Ozores, Segura, Martínez-Lázaro): films concebuts per arribar al públic més ampli, sovint poc atesos per la crítica, però que constitueixen la columna vertebral del Top 100. El cinema d'autor de circuit (Saura, Erice, Lacuesta, Serra, Simón): films que circulen dins un ecosistema internacional de festivals amb regles, públic i economia propis. I, en una zona intermèdia, el cinema d'autor industrial (Amenábar, Bayona, De la Iglesia): directors amb una ambició formal poc habitual en el cinema de vocació popular, però que no fan dels festivals europeus el seu objectiu.
+**Públic i prestigi comparteixen una mateixa cinematografia, però només excepcionalment comparteixen les mateixes pel·lícules.**
 
-No són compartiments estancs, però la frontera entre el primer i el segon és la dada més contundent de l'estudi: dels 264 films espanyols documentats als quatre grans festivals entre 1965 i 2025, només 10 apareixen al Top 100 d'espectadors, i 25 en total tenen audiència popular real. Menys d'un 10%. Els anys de la Transició (1975–1985) van ser l'únic moment en què el cinema crític tenia un públic polititzat disposat a anar a les sales a veure Saura, Borau o Gutiérrez Aragón. La resta del període, els espectadors han acudit massivament a gèneres (la comèdia costumista, el *thriller* popular, el cinema televisiu) que rarament passen pels grans festivals. El cinema que guanya premis i el cinema que omple sales responen a lògiques radicalment diferents; la "doble corona" només en marca el límit.
+Dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Si hi afegim els quinze títols del ‘segon cercle’, la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
+
+La ‘doble corona’ no és, per tant, el model habitual, sinó l’excepció que permet veure amb més claredat el funcionament dels dos circuits. El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents.
+
+Entre tots dos hi ha una zona intermèdia: el cinema d’autor més industrial capaç de combinar una veu reconeixible, els gèneres populars i una ambició a gran escala. La seva existència matisa la divisió, però no la desfà: tampoc aquest cinema necessita habitualment els festivals europeus com a principal via de legitimació.
 <!-- /punt-1 -->
 
 <!-- punt-2 -->
