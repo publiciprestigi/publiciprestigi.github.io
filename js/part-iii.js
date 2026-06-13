@@ -1356,7 +1356,6 @@ function construirGraficDobleCorona() {
   const COL_PREST = '#9B2335';
   const COL_OR = '#c8a000';
 
-  // Dades dobles corones amb posició Top 100
   const dobles = [
     { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null,           premiat:false },
     { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null,           premiat:false },
@@ -1371,18 +1370,83 @@ function construirGraficDobleCorona() {
   ];
   const doblesAnys = new Set(dobles.map(d => d.any));
 
-  const pub = [1964,1965,1965,1966,1966,1666,1966,1966,1967,1967,1967,1968,1968,1968,
-    1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
-    1981,1984,1988,1991,1995,1997,1998,1999,
-    2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
-    2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
+  // Dades completes: un valor per film, anys reals del Top 100
+  const pubFilms = [
+    {any:1965,titol:'La ciudad no es para mí'},{any:1966,titol:'El golfo'},{any:1966,titol:'Sopa de ganso'},
+    {any:1966,titol:'El arte de vivir'},{any:1966,titol:'La pandilla'},{any:1967,titol:'Crónica de 9 meses'},
+    {any:1967,titol:'Abuelo made in Spain'},{any:1967,titol:'La familia y uno más'},{any:1968,titol:'No somos de piedra'},
+    {any:1968,titol:'Cantando a la vida'},{any:1968,titol:'La vida sigue igual'},{any:1969,titol:'Hay que matar a B'},
+    {any:1969,titol:'El astronauta'},{any:1970,titol:'Vente a Alemania Pepe'},{any:1971,titol:'No firmes más letras Ramón'},
+    {any:1972,titol:'Mi querida señorita'},{any:1974,titol:'Tormento'},{any:1975,titol:'Furtivos'},
+    {any:1975,titol:'El casto Susanito'},{any:1976,titol:'El puente'},{any:1977,titol:'La guerra de papá'},
+    {any:1977,titol:'El anillo de nibelungo'},{any:1978,titol:'El soltero'},{any:1981,titol:'La colmena'},
+    {any:1984,titol:'Los santos inocentes'},{any:1988,titol:'Mujeres al borde de un ataque de nervios'},
+    {any:1991,titol:'Tacones lejanos'},{any:1995,titol:'Boca a boca'},{any:1997,titol:'La buena estrella'},
+    {any:1998,titol:'El abuelo'},{any:1999,titol:'Todo sobre mi madre'},{any:2001,titol:'Juana la Loca'},
+    {any:2001,titol:'El hijo de la novia'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'Soldados de Salamina'},
+    {any:2004,titol:'Mar adentro'},{any:2005,titol:'Habana Blues'},{any:2006,titol:'El laberinto del fauno'},
+    {any:2007,titol:'El orfanato'},{any:2009,titol:'Celda 211'},{any:2009,titol:'Agora'},
+    {any:2011,titol:'No habrá paz para los malvados'},{any:2012,titol:'Blancanieves'},{any:2014,titol:'La isla mínima'},
+    {any:2015,titol:'Truman'},{any:2016,titol:'Un monstruo viene a verme'},{any:2017,titol:'Verano 1993'},
+    {any:2017,titol:'El bar'},{any:2018,titol:'Campeones'},{any:2019,titol:'Dolor y gloria'},
+    {any:2022,titol:'El buen patrón'},{any:2024,titol:'Padre no hay más que uno 4'},{any:2025,titol:'Padre no hay más que uno 5'},
+  ];
 
-  const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
-    1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
-    2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
+  const prestFilms = [
+    {any:1965,titol:'La caza'},{any:1966,titol:'Nueve cartas a Berta'},{any:1968,titol:'Stress es tres tres'},
+    {any:1970,titol:'El momento de la verdad'},{any:1973,titol:'El espíritu de la colmena'},
+    {any:1974,titol:'Tormento'},{any:1976,titol:'Pascual Duarte'},{any:1977,titol:'El desencanto'},
+    {any:1978,titol:'Cría cuervos'},{any:1981,titol:'Deprisa deprisa'},{any:1983,titol:'El sur'},
+    {any:1984,titol:'Los santos inocentes'},{any:1985,titol:'El año de las luces'},{any:1986,titol:'El viaje a ninguna parte'},
+    {any:1988,titol:'Mujeres al borde de un ataque de nervios'},{any:1989,titol:'Ay Carmela'},
+    {any:1991,titol:'Las edades de Lulú'},{any:1992,titol:'Belle époque'},{any:1994,titol:'Hola, ¿estás sola?'},
+    {any:1996,titol:'Martín (Hache)'},{any:1997,titol:'La buena estrella'},{any:1999,titol:'Todo sobre mi madre'},
+    {any:2001,titol:'Juana la Loca'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'El pianista'},
+    {any:2004,titol:'Mar adentro'},{any:2006,titol:'Volver'},{any:2007,titol:'El orfanato'},
+    {any:2009,titol:'El secreto de sus ojos'},{any:2010,titol:'Biutiful'},{any:2011,titol:'No habrá paz para los malvados'},
+    {any:2012,titol:'Blancanieves'},{any:2013,titol:'La gran belleza'},{any:2014,titol:'La isla mínima'},
+    {any:2015,titol:'Truman'},{any:2016,titol:'El olivo'},{any:2017,titol:'Verano 1993'},
+    {any:2018,titol:'Entre dos aguas'},{any:2019,titol:'Dolor y gloria'},{any:2021,titol:'El buen patrón'},
+    {any:2022,titol:'Alcarràs'},{any:2023,titol:'Cerrar los ojos'},{any:2024,titol:'Marco'},
+    {any:2025,titol:'La infiltrada'},
+  ];
 
-  const A0=1964, A1=2025, W=860, YP=72, YF=128, R=4, RD=6;
+  // Stacking: per cada any, distribueix verticalment els dots
+  // cap avall des de la línia central (alterna: 0, -S, +S, -2S, +2S...)
+  function stackDots(films, baseY, R, step) {
+    const byYear = {};
+    films.forEach(f => {
+      if (!byYear[f.any]) byYear[f.any] = [];
+      byYear[f.any].push(f);
+    });
+    const result = [];
+    Object.entries(byYear).forEach(([anyStr, arr]) => {
+      const n = arr.length;
+      arr.forEach((f, i) => {
+        // Distribució: 0, +step, -step, +2*step, -2*step...
+        const offset = Math.ceil(i / 2) * (i % 2 === 0 ? 1 : -1) * step;
+        result.push({ ...f, cy: baseY + offset });
+      });
+    });
+    return result;
+  }
+
+  const A0=1964, A1=2025, W=860;
+  const STEP = 9; // separació vertical entre dots solapats
+  const YP_BASE = 80, YF_BASE = 180;
+  const R = 4, RD = 6;
   const ns='http://www.w3.org/2000/svg';
+
+  const pubStacked   = stackDots(pubFilms,  YP_BASE, R, STEP);
+  const prestStacked = stackDots(prestFilms, YF_BASE, R, STEP);
+
+  // Altura total dinàmica
+  const maxYP = Math.max(...pubStacked.map(f => f.cy));
+  const maxYF = Math.max(...prestStacked.map(f => f.cy));
+  const minYP = Math.min(...pubStacked.map(f => f.cy));
+  const minYF = Math.min(...prestStacked.map(f => f.cy));
+  const PAD_TOP = 30, PAD_BOT = 50;
+  const H = Math.max(maxYP, maxYF) + PAD_BOT;
 
   // Títol
   const titolEl = document.createElement('p');
@@ -1391,7 +1455,7 @@ function construirGraficDobleCorona() {
   wrap.appendChild(titolEl);
 
   const svg = document.createElementNS(ns,'svg');
-  svg.setAttribute('viewBox',`0 0 ${W} ${YF+52}`);
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
   svg.setAttribute('width','100%');
   svg.setAttribute('preserveAspectRatio','xMidYMid meet');
   svg.style.cssText='display:block;width:100%;overflow:visible;';
@@ -1401,71 +1465,73 @@ function construirGraficDobleCorona() {
     for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);
     if(par)par.appendChild(e);return e;
   }
-  function x(a){return 8+(a-A0)/(A1-A0)*(W-16);}
+  function x(a){ return 8 + (a - A0) / (A1 - A0) * (W - 16); }
 
-  // Eix anys
+  // Línies verticals dècada
   [1965,1975,1985,1995,2005,2015,2025].forEach(a=>{
-    el('line',{x1:x(a),y1:42,x2:x(a),y2:YF+10,stroke:'#eeeeee','stroke-width':'0.6'},svg);
-    el('line',{x1:x(a),y1:42,x2:x(a),y2:46,stroke:'#ccc','stroke-width':'0.5'},svg);
-    const t=el('text',{x:x(a),y:36,'font-size':'9.5',fill:'#bbb','text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
+    el('line',{x1:x(a),y1:PAD_TOP,x2:x(a),y2:H-PAD_BOT+10,stroke:'#f0f0f0','stroke-width':'1'},svg);
+    const t=el('text',{x:x(a),y:H-PAD_BOT+22,'font-size':'9',fill:'#bbb','text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
     t.textContent=a;
   });
 
-  // Etiquetes carrils
-  function cLabel(label,sub,y,col){
-    const t=el('text',{x:6,y:y+2,'font-size':'10',fill:col,'font-weight':'700','font-family':'system-ui,sans-serif'},svg);
-    t.textContent=label;
-    const s=el('text',{x:6,y:y+14,'font-size':'8.5',fill:'#bbb','font-family':'system-ui,sans-serif'},svg);
-    s.textContent=sub;
-  }
-  cLabel('PÚBLIC','Top 100',YP,COL_PUB);
-  cLabel('PRESTIGI','Festivals',YF,COL_PREST);
+  // Línia horitzontal separadora al centre
+  const ySep = (YP_BASE + YF_BASE) / 2;
+  el('line',{x1:8,y1:ySep,x2:W-8,y2:ySep,stroke:'#e8e8e8','stroke-width':'1'},svg);
 
-  // Connexions dobles
+  // Etiquetes carrils
+  el('text',{x:8,y:PAD_TOP+2,'font-size':'10',fill:COL_PUB,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent='PÚBLIC';
+  el('text',{x:8,y:ySep+14,'font-size':'10',fill:COL_PREST,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent='PRESTIGI';
+
+  // Connexions dobles corones
   dobles.forEach(d=>{
-    el('line',{x1:x(d.any),y1:YP,x2:x(d.any),y2:YF,stroke:'#ccc','stroke-width':'0.8','stroke-dasharray':'2,2'},svg);
+    const pubDot  = pubStacked.find(f  => f.any === d.any && (f.titol === d.titol || doblesAnys.has(f.any)));
+    const prestDot= prestStacked.find(f => f.any === d.any && (f.titol === d.titol || doblesAnys.has(f.any)));
+    const y1 = pubDot  ? pubDot.cy  : YP_BASE;
+    const y2 = prestDot? prestDot.cy: YF_BASE;
+    el('line',{x1:x(d.any),y1:y1,x2:x(d.any),y2:y2,stroke:'#ddd','stroke-width':'0.8','stroke-dasharray':'3,2'},svg);
   });
 
-  // Punts normals
-  pub.forEach(a=>{if(!doblesAnys.has(a))el('circle',{cx:x(a),cy:YP,r:R,fill:COL_PUB},svg);});
-  prest.forEach(a=>{if(!doblesAnys.has(a))el('circle',{cx:x(a),cy:YF,r:R,fill:COL_PREST},svg);});
-
-  // Dobles corones — cercles buits
+  // Punts PÚBLIC
   const cerclesDobles = [];
-  dobles.forEach(d=>{
-    if(pub.includes(d.any)){
-      const c=el('circle',{cx:x(d.any),cy:YP,r:RD,fill:'white',stroke:COL_PUB,'stroke-width':'2',cursor:'pointer'},svg);
-      cerclesDobles.push({el:c,data:d,y:YP});
+  pubStacked.forEach(f=>{
+    const isDC = doblesAnys.has(f.any) && dobles.some(d=>d.any===f.any && (d.titol===f.titol||pubFilms.filter(p=>p.any===f.any).length===1));
+    const esDC = doblesAnys.has(f.any) && dobles.find(d=>d.any===f.any && d.titol===f.titol);
+    if (esDC) {
+      const c=el('circle',{cx:x(f.any),cy:f.cy,r:RD,fill:'white',stroke:COL_PUB,'stroke-width':'2',style:'cursor:pointer'},svg);
+      cerclesDobles.push({el:c,data:{...esDC,cy:f.cy}});
+    } else {
+      el('circle',{cx:x(f.any),cy:f.cy,r:R,fill:COL_PUB,opacity:'0.85'},svg);
     }
-    const c2=el('circle',{cx:x(d.any),cy:YF,r:RD,fill:'white',stroke:COL_PREST,'stroke-width':'2',cursor:'pointer'},svg);
-    cerclesDobles.push({el:c2,data:d,y:YF});
-    if(d.premiat){
-      const t=el('text',{x:x(d.any),y:YF+RD+13,'font-size':'10',fill:COL_OR,'text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
-      t.textContent='★';
+  });
+
+  // Punts PRESTIGI
+  prestStacked.forEach(f=>{
+    const esDC = doblesAnys.has(f.any) && dobles.find(d=>d.any===f.any && d.titol===f.titol);
+    if (esDC) {
+      const c=el('circle',{cx:x(f.any),cy:f.cy,r:RD,fill:'white',stroke:COL_PREST,'stroke-width':'2',style:'cursor:pointer'},svg);
+      cerclesDobles.push({el:c,data:{...esDC,cy:f.cy}});
+    } else {
+      el('circle',{cx:x(f.any),cy:f.cy,r:R,fill:COL_PREST,opacity:'0.85'},svg);
     }
   });
 
   // Llegenda
-  const legY=YF+38;
+  const legY = H - PAD_BOT + 34;
   const legItems=[
-    {col:COL_PUB,  label:'Públic — Top 100', buit:false},
-    {col:COL_PREST,label:'Prestigi — Festivals', buit:false},
-    {col:COL_PUB,  label:'Doble corona', buit:true},
-    {col:COL_OR,   label:'Premiat al festival', estrella:true},
+    {col:COL_PUB,  label:'Públic — Top 100 (100 films)', buit:false},
+    {col:COL_PREST,label:'Prestigi — Festivals (264 films)', buit:false},
+    {col:COL_PUB,  label:'Doble corona (10 films)', buit:true},
   ];
-  let lx=W/2-230;
+  let lx = W/2 - 270;
   legItems.forEach(item=>{
-    if(item.estrella){
-      const t=el('text',{x:lx,y:legY+5,'font-size':'12',fill:COL_OR,'font-family':'system-ui,sans-serif'},svg);
-      t.textContent='★';lx+=18;
-    }else if(item.buit){
-      el('circle',{cx:lx+6,cy:legY,r:'5.5',fill:'white',stroke:item.col,'stroke-width':'1.8'},svg);lx+=18;
+    if(item.buit){
+      el('circle',{cx:lx+6,cy:legY,r:'5.5',fill:'white',stroke:item.col,'stroke-width':'1.8'},svg);
     }else{
-      el('circle',{cx:lx+6,cy:legY,r:'5',fill:item.col},svg);lx+=18;
+      el('circle',{cx:lx+6,cy:legY,r:'5',fill:item.col},svg);
     }
-    const t=el('text',{x:lx,y:legY+5,'font-size':'11',fill:'#555','font-family':'system-ui,sans-serif'},svg);
+    const t=el('text',{x:lx+16,y:legY+4,'font-size':'11',fill:'#555','font-family':'system-ui,sans-serif'},svg);
     t.textContent=item.label;
-    lx+=item.label.length*6+22;
+    lx+=item.label.length*5.8+28;
   });
 
   wrap.appendChild(svg);
@@ -1473,24 +1539,22 @@ function construirGraficDobleCorona() {
   // Tooltip
   const tooltip=document.createElement('div');
   tooltip.style.cssText='position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:10px 13px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.6;max-width:220px;font-family:system-ui,sans-serif;';
+  wrap.style.position='relative';
   wrap.appendChild(tooltip);
 
   cerclesDobles.forEach(({el:c,data:d})=>{
     c.addEventListener('mouseenter',e=>{
-      const rect=wrap.getBoundingClientRect();
       const svgRect=svg.getBoundingClientRect();
       const cx=parseFloat(c.getAttribute('cx'));
       const cy=parseFloat(c.getAttribute('cy'));
       const svgW=svgRect.width;
       const svgH=svgRect.height;
       const px=(cx/W)*svgW;
-      const py=(cy/(YF+52))*svgH;
-
+      const py=(cy/H)*svgH;
       let html=`<strong>${d.titol}</strong><br>${d.any}`;
-      html+=`<br>${d.top100} al Top 100`;
+      if(d.top100)html+=`<br>${d.top100} al Top 100`;
       html+=`<br>${d.festival}`;
       if(d.premi)html+=` · ${d.premi}`;
-
       tooltip.innerHTML=html;
       tooltip.style.display='block';
       const tw=220;
@@ -1514,130 +1578,195 @@ function construirGraficConclusions1() {
   const wrap = document.getElementById('grafic-conclusions-1');
   if (!wrap) return;
 
-  const W = 720, H = 200;
-  const PAD_L = 40, PAD_R = 20, PAD_T = 50, PAD_B = 30;
-  const ANY_MIN = 1965, ANY_MAX = 2025;
-  const FILA_PUB = PAD_T + 30, FILA_FEST = PAD_T + 110;
-  const R = 5;
-
   const COL_BLAU = '#2a5582';
   const COL_VERMELL = '#9B2335';
-  const COL_OR = '#e8b84b';
 
-  function xPos(any) {
-    return PAD_L + ((any - ANY_MIN) / (ANY_MAX - ANY_MIN)) * (W - PAD_L - PAD_R);
+  const dobles = [
+    { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null },
+    { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null },
+    { any:1975, titol:'Furtivos',            top100:'#16', festival:'Sant Sebastià', premi:'Conxa d\'Or' },
+    { any:1977, titol:'La guerra de papá',   top100:'#18', festival:'Sant Sebastià', premi:null },
+    { any:1984, titol:'Los santos inocentes',top100:'#62', festival:'Cannes',        premi:'Millor actor' },
+    { any:1988, titol:'Mujeres al borde de un ataque de nervios', top100:'#22', festival:'Venècia', premi:'Millor guió' },
+    { any:1999, titol:'Todo sobre mi madre', top100:'#52', festival:'Cannes',        premi:'Millor direcció' },
+    { any:2001, titol:'Juana la Loca',       top100:'#68', festival:'Sant Sebastià', premi:'Millor actriu' },
+    { any:2002, titol:'Los lunes al sol',    top100:'#70', festival:'Sant Sebastià', premi:'Conxa d\'Or' },
+    { any:2004, titol:'Mar adentro',         top100:'#12', festival:'Venècia',       premi:'Lleó de Plata' },
+  ];
+  const doblesAnys = new Set(dobles.map(d => d.any));
+
+  const pubFilms = [
+    {any:1965,titol:'La ciudad no es para mí'},{any:1966,titol:'El golfo'},{any:1966,titol:'Sopa de ganso'},
+    {any:1966,titol:'El arte de vivir'},{any:1966,titol:'La pandilla'},{any:1967,titol:'Crónica de 9 meses'},
+    {any:1967,titol:'Abuelo made in Spain'},{any:1967,titol:'La familia y uno más'},{any:1968,titol:'No somos de piedra'},
+    {any:1968,titol:'Cantando a la vida'},{any:1968,titol:'La vida sigue igual'},{any:1969,titol:'Hay que matar a B'},
+    {any:1969,titol:'El astronauta'},{any:1970,titol:'Vente a Alemania Pepe'},{any:1971,titol:'No firmes más letras Ramón'},
+    {any:1972,titol:'Mi querida señorita'},{any:1974,titol:'Tormento'},{any:1975,titol:'Furtivos'},
+    {any:1975,titol:'El casto Susanito'},{any:1976,titol:'El puente'},{any:1977,titol:'La guerra de papá'},
+    {any:1977,titol:'El anillo de nibelungo'},{any:1978,titol:'El soltero'},{any:1981,titol:'La colmena'},
+    {any:1984,titol:'Los santos inocentes'},{any:1988,titol:'Mujeres al borde de un ataque de nervios'},
+    {any:1991,titol:'Tacones lejanos'},{any:1995,titol:'Boca a boca'},{any:1997,titol:'La buena estrella'},
+    {any:1998,titol:'El abuelo'},{any:1999,titol:'Todo sobre mi madre'},{any:2001,titol:'Juana la Loca'},
+    {any:2001,titol:'El hijo de la novia'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'Soldados de Salamina'},
+    {any:2004,titol:'Mar adentro'},{any:2005,titol:'Habana Blues'},{any:2006,titol:'El laberinto del fauno'},
+    {any:2007,titol:'El orfanato'},{any:2009,titol:'Celda 211'},{any:2009,titol:'Agora'},
+    {any:2011,titol:'No habrá paz para los malvados'},{any:2012,titol:'Blancanieves'},{any:2014,titol:'La isla mínima'},
+    {any:2015,titol:'Truman'},{any:2016,titol:'Un monstruo viene a verme'},{any:2017,titol:'Verano 1993'},
+    {any:2017,titol:'El bar'},{any:2018,titol:'Campeones'},{any:2019,titol:'Dolor y gloria'},
+    {any:2022,titol:'El buen patrón'},{any:2024,titol:'Padre no hay más que uno 4'},{any:2025,titol:'Padre no hay más que uno 5'},
+  ];
+
+  const prestFilms = [
+    {any:1965,titol:'La caza'},{any:1966,titol:'Nueve cartas a Berta'},{any:1968,titol:'Stress es tres tres'},
+    {any:1970,titol:'El momento de la verdad'},{any:1973,titol:'El espíritu de la colmena'},
+    {any:1974,titol:'Tormento'},{any:1976,titol:'Pascual Duarte'},{any:1977,titol:'El desencanto'},
+    {any:1978,titol:'Cría cuervos'},{any:1981,titol:'Deprisa deprisa'},{any:1983,titol:'El sur'},
+    {any:1984,titol:'Los santos inocentes'},{any:1985,titol:'El año de las luces'},{any:1986,titol:'El viaje a ninguna parte'},
+    {any:1988,titol:'Mujeres al borde de un ataque de nervios'},{any:1989,titol:'Ay Carmela'},
+    {any:1991,titol:'Las edades de Lulú'},{any:1992,titol:'Belle époque'},{any:1994,titol:'Hola, ¿estás sola?'},
+    {any:1996,titol:'Martín (Hache)'},{any:1997,titol:'La buena estrella'},{any:1999,titol:'Todo sobre mi madre'},
+    {any:2001,titol:'Juana la Loca'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'El pianista'},
+    {any:2004,titol:'Mar adentro'},{any:2006,titol:'Volver'},{any:2007,titol:'El orfanato'},
+    {any:2009,titol:'El secreto de sus ojos'},{any:2010,titol:'Biutiful'},{any:2011,titol:'No habrá paz para los malvados'},
+    {any:2012,titol:'Blancanieves'},{any:2013,titol:'La gran belleza'},{any:2014,titol:'La isla mínima'},
+    {any:2015,titol:'Truman'},{any:2016,titol:'El olivo'},{any:2017,titol:'Verano 1993'},
+    {any:2018,titol:'Entre dos aguas'},{any:2019,titol:'Dolor y gloria'},{any:2021,titol:'El buen patrón'},
+    {any:2022,titol:'Alcarràs'},{any:2023,titol:'Cerrar los ojos'},{any:2024,titol:'Marco'},
+    {any:2025,titol:'La infiltrada'},
+  ];
+
+  function stackDots(films, baseY, step) {
+    const byYear = {};
+    films.forEach(f => {
+      if (!byYear[f.any]) byYear[f.any] = [];
+      byYear[f.any].push(f);
+    });
+    const result = [];
+    Object.entries(byYear).forEach(([anyStr, arr]) => {
+      arr.forEach((f, i) => {
+        const offset = Math.ceil(i / 2) * (i % 2 === 0 ? 1 : -1) * step;
+        result.push({ ...f, cy: baseY + offset });
+      });
+    });
+    return result;
   }
 
+  const A0 = 1964, A1 = 2025, W = 860;
+  const STEP = 9;
+  const YP_BASE = 75, YF_BASE = 185;
+  const R = 4, RD = 6;
   const ns = 'http://www.w3.org/2000/svg';
-  function el(tag, attrs, parent) {
+
+  const pubStacked  = stackDots(pubFilms,  YP_BASE, STEP);
+  const prestStacked= stackDots(prestFilms, YF_BASE, STEP);
+
+  const maxY = Math.max(...pubStacked.map(f=>f.cy), ...prestStacked.map(f=>f.cy));
+  const PAD_BOT = 50;
+  const H = maxY + PAD_BOT;
+
+  function xPos(any) { return 8 + (any - A0) / (A1 - A0) * (W - 16); }
+
+  function el(tag, attrs, par) {
     const e = document.createElementNS(ns, tag);
-    Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
-    if (parent) parent.appendChild(e);
+    Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
+    if (par) par.appendChild(e);
     return e;
   }
 
+  wrap.style.position = 'relative';
+
   const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%', style: 'overflow:visible;display:block;' }, wrap);
 
-  // Línies de referència dècada
+  // Línies verticals dècada
   [1965,1975,1985,1995,2005,2015,2025].forEach(any => {
     const x = xPos(any);
-    el('line', { x1:x, y1:PAD_T, x2:x, y2:H-PAD_B, stroke:'#e8e8e8', 'stroke-width':'1' }, svg);
-    el('text', { x:x, y:H-PAD_B+14, 'text-anchor':'middle', 'font-size':'10', fill:'#aaa', 'font-family':'system-ui,sans-serif' }, svg).textContent = any;
+    el('line', { x1:x, y1:20, x2:x, y2:H-PAD_BOT+10, stroke:'#f0f0f0', 'stroke-width':'1' }, svg);
+    el('text', { x, y:H-PAD_BOT+22, 'text-anchor':'middle', 'font-size':'9', fill:'#bbb', 'font-family':'system-ui,sans-serif' }, svg).textContent = any;
   });
 
-  // Etiquetes files
-  el('text', { x:PAD_L-8, y:FILA_PUB+4, 'text-anchor':'end', 'font-size':'10', fill:COL_BLAU, 'font-family':'system-ui,sans-serif', 'font-weight':'600' }, svg).textContent = 'PÚBLIC';
-  el('text', { x:PAD_L-8, y:FILA_FEST+4, 'text-anchor':'end', 'font-size':'10', fill:COL_VERMELL, 'font-family':'system-ui,sans-serif', 'font-weight':'600' }, svg).textContent = 'PRESTIGI';
+  // Línia horitzontal separadora
+  const ySep = (YP_BASE + YF_BASE) / 2;
+  el('line', { x1:8, y1:ySep, x2:W-8, y2:ySep, stroke:'#e8e8e8', 'stroke-width':'1' }, svg);
 
-  const puntsInteractius = [];
+  // Etiquetes carrils
+  el('text', { x:8, y:22, 'font-size':'10', fill:COL_BLAU, 'font-weight':'700', 'font-family':'system-ui,sans-serif' }, svg).textContent = 'PÚBLIC';
+  el('text', { x:8, y:ySep+14, 'font-size':'10', fill:COL_VERMELL, 'font-weight':'700', 'font-family':'system-ui,sans-serif' }, svg).textContent = 'PRESTIGI';
 
-  // Films Top 100 (blau)
-  const top100 = window._filmsData ? window._filmsData.filter(f => f.in_top100) : [];
-  // Jitter vertical per evitar solapament
-  const jitterPub = {};
-  top100.forEach(f => {
-    const x = xPos(f.any);
-    const key = Math.round(f.any / 2) * 2;
-    jitterPub[key] = (jitterPub[key] || 0);
-    const jy = (jitterPub[key] % 3) * 11 - 11;
-    jitterPub[key]++;
-
-    const esDC = window._festivalsData && window._festivalsData.some(ff => ff.in_top100 && ff.titol === f.titol && ff.any === f.any);
-    const c = el('circle', {
-      cx: x, cy: FILA_PUB + jy, r: R,
-      fill: esDC ? 'white' : COL_BLAU,
-      stroke: esDC ? COL_OR : 'none',
-      'stroke-width': esDC ? '2' : '0',
-      style: 'cursor:pointer'
-    }, svg);
-    puntsInteractius.push({ el: c, data: { titol: f.titol, any: f.any, tipus: esDC ? 'corona' : 'public', esp: f.espectadors } });
+  // Connexions dobles corones
+  dobles.forEach(d => {
+    const pd = pubStacked.find(f => f.titol === d.titol);
+    const fd = prestStacked.find(f => f.titol === d.titol);
+    const y1 = pd ? pd.cy : YP_BASE;
+    const y2 = fd ? fd.cy : YF_BASE;
+    el('line', { x1:xPos(d.any), y1, x2:xPos(d.any), y2, stroke:'#ddd', 'stroke-width':'0.8', 'stroke-dasharray':'3,2' }, svg);
   });
 
-  // Films festivals (vermell)
-  const festivals = window._festivalsData || [];
-  const jitterFest = {};
-  festivals.forEach(f => {
-    const x = xPos(f.any);
-    const key = Math.round(f.any / 2) * 2;
-    jitterFest[key] = (jitterFest[key] || 0);
-    const jy = (jitterFest[key] % 3) * 11 - 11;
-    jitterFest[key]++;
+  const cerclesDobles = [];
 
-    const esDC = f.in_top100;
-    const c = el('circle', {
-      cx: x, cy: FILA_FEST + jy, r: R,
-      fill: esDC ? 'white' : COL_VERMELL,
-      stroke: esDC ? COL_OR : 'none',
-      'stroke-width': esDC ? '2' : '0',
-      style: 'cursor:pointer'
-    }, svg);
-    puntsInteractius.push({ el: c, data: { titol: f.titol, any: f.any, tipus: esDC ? 'corona' : 'festival', festival: f.festival } });
+  // Punts PÚBLIC
+  pubStacked.forEach(f => {
+    const esDC = dobles.find(d => d.titol === f.titol);
+    if (esDC) {
+      const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_BLAU, 'stroke-width':'2', style:'cursor:pointer' }, svg);
+      cerclesDobles.push({ el:c, data:esDC });
+    } else {
+      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_BLAU, opacity:'0.85' }, svg);
+    }
+  });
+
+  // Punts PRESTIGI
+  prestStacked.forEach(f => {
+    const esDC = dobles.find(d => d.titol === f.titol);
+    if (esDC) {
+      const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_VERMELL, 'stroke-width':'2', style:'cursor:pointer' }, svg);
+      cerclesDobles.push({ el:c, data:esDC });
+    } else {
+      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_VERMELL, opacity:'0.85' }, svg);
+    }
   });
 
   // Llegenda
-  const legY = 18;
+  const legY = H - PAD_BOT + 34;
   const llegenda = [
-    { col: COL_BLAU, label: 'Públic — Top 100 (100 films)', buit: false },
-    { col: COL_VERMELL, label: 'Prestigi — Festivals (264 films)', buit: false },
-    { col: COL_OR, label: 'Doble corona (10 films)', buit: true },
+    { col:COL_BLAU,    label:'Públic — Top 100 (100 films)',   buit:false },
+    { col:COL_VERMELL, label:'Prestigi — Festivals (264 films)', buit:false },
+    { col:COL_BLAU,    label:'Doble corona (10 films)',          buit:true  },
   ];
-  let lx = PAD_L;
+  let lx = W/2 - 270;
   llegenda.forEach(item => {
     if (item.buit) {
-      el('circle', { cx:lx+5, cy:legY, r:'5', fill:'white', stroke:item.col, 'stroke-width':'2' }, svg);
+      el('circle', { cx:lx+6, cy:legY, r:'5.5', fill:'white', stroke:item.col, 'stroke-width':'1.8' }, svg);
     } else {
-      el('circle', { cx:lx+5, cy:legY, r:'5', fill:item.col }, svg);
+      el('circle', { cx:lx+6, cy:legY, r:'5', fill:item.col }, svg);
     }
-    const t = el('text', { x:lx+14, y:legY+4, 'font-size':'10', fill:'#555', 'font-family':'system-ui,sans-serif' }, svg);
+    const t = el('text', { x:lx+16, y:legY+4, 'font-size':'11', fill:'#555', 'font-family':'system-ui,sans-serif' }, svg);
     t.textContent = item.label;
-    lx += item.label.length * 5.8 + 26;
+    lx += item.label.length * 5.8 + 28;
   });
 
   // Tooltip
   const tooltip = document.createElement('div');
-  tooltip.style.cssText = 'position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.5;max-width:200px;font-family:system-ui,sans-serif;';
-  wrap.style.position = 'relative';
+  tooltip.style.cssText = 'position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.5;max-width:220px;font-family:system-ui,sans-serif;';
   wrap.appendChild(tooltip);
 
-  puntsInteractius.forEach(({ el: c, data: d }) => {
-    c.addEventListener('mouseenter', e => {
+  cerclesDobles.forEach(({ el:c, data:d }) => {
+    c.addEventListener('mouseenter', () => {
+      const svgRect = svg.getBoundingClientRect();
       const wRect = wrap.getBoundingClientRect();
       const cx = parseFloat(c.getAttribute('cx'));
       const cy = parseFloat(c.getAttribute('cy'));
-      const svgEl = svg.getBoundingClientRect();
-      const scaleX = svgEl.width / W;
-      const scaleY = svgEl.height / H;
+      const px = (cx / W) * svgRect.width;
+      const py = (cy / H) * svgRect.height;
       let html = `<strong>${d.titol}</strong><br>${d.any}`;
-      if (d.festival) html += `<br>${d.festival}`;
-      if (d.tipus === 'corona') html += `<br>⭕ Doble corona`;
+      if (d.top100) html += `<br>${d.top100} al Top 100`;
+      html += `<br>${d.festival}`;
+      if (d.premi) html += ` · ${d.premi}`;
       tooltip.innerHTML = html;
       tooltip.style.display = 'block';
-      const px = cx * scaleX;
-      const py = cy * scaleY;
       let left = px + 10;
-      if (left + 200 > svgEl.width) left = px - 210;
+      if (left + 220 > svgRect.width) left = px - 230;
       tooltip.style.left = left + 'px';
-      tooltip.style.top = (py + svgEl.top - wRect.top - 10) + 'px';
+      tooltip.style.top = (py - 10 + svgRect.top - wRect.top) + 'px';
       c.setAttribute('opacity', '0.7');
     });
     c.addEventListener('mouseleave', () => {
@@ -1654,87 +1783,143 @@ function construirGraficConclusions2() {
   const wrap = document.getElementById('grafic-conclusions-2');
   if (!wrap) return;
 
-  const decades = ['60s','70s','80s','90s','2000s','2010s','2020s'];
+  const decades =  ['1965–69', '70s', '80s', '90s', '2000s', '2010s', '2020s'];
   const premiats = [2, 9, 3, 9, 4, 15, 11];
   const mitjanes = [346323, 515710, 320613, 238790, 186546, 202150, 172584];
 
-  const W = 680, H = 200;
-  const PAD_L = 42, PAD_R = 20, PAD_T = 20, PAD_B = 40;
-  const barW = (W - PAD_L - PAD_R) / decades.length;
+  const W = 760, H = 240;
+  const PAD_L = 52, PAD_R = 60, PAD_T = 30, PAD_B = 48;
+  const plotW = W - PAD_L - PAD_R;
+  const plotH = H - PAD_T - PAD_B;
+  const barW = plotW / decades.length;
 
   const maxPrem = Math.max(...premiats);
-  const maxMit = Math.max(...mitjanes);
+  const maxMit  = Math.max(...mitjanes);
 
+  // Colors coherents amb la web
   const COL_BARRA = '#c8d4e3';
-  const COL_LINIA = '#2a5582';
+  const COL_BARRA_STROKE = '#a8b8d0';
+  const COL_LINIA = '#9B2335';   // vermell prestigi
+  const COL_PUNT  = '#9B2335';
 
   const ns = 'http://www.w3.org/2000/svg';
-  function el(tag, attrs, parent) {
+  function el(tag, attrs, par) {
     const e = document.createElementNS(ns, tag);
-    Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
-    if (parent) parent.appendChild(e);
+    Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
+    if (par) par.appendChild(e);
     return e;
   }
 
-  function yBar(val) { return PAD_T + (1 - val / maxPrem) * (H - PAD_T - PAD_B); }
-  function yLin(val) { return PAD_T + (1 - val / maxMit) * (H - PAD_T - PAD_B); }
+  function yBar(val) { return PAD_T + plotH - (val / maxPrem) * plotH; }
+  function yLin(val) { return PAD_T + plotH - (val / maxMit)  * plotH; }
 
-  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%', style: 'overflow:visible;display:block;' }, wrap);
+  const svg = el('svg', { viewBox:`0 0 ${W} ${H}`, width:'100%', style:'overflow:visible;display:block;' }, wrap);
 
-  // Grid horitzontal lleuger
+  // Grid horitzontal
   [0, 0.25, 0.5, 0.75, 1].forEach(frac => {
-    const y = PAD_T + frac * (H - PAD_T - PAD_B);
-    el('line', { x1: PAD_L, y1: y, x2: W - PAD_R, y2: y, stroke: '#f0f0f0', 'stroke-width': '1' }, svg);
+    const y = PAD_T + frac * plotH;
+    el('line', { x1:PAD_L, y1:y, x2:W-PAD_R, y2:y, stroke:'#f2f2f2', 'stroke-width':'1' }, svg);
+  });
+
+  // Eix base
+  el('line', { x1:PAD_L, y1:PAD_T+plotH, x2:W-PAD_R, y2:PAD_T+plotH, stroke:'#e0e0e0', 'stroke-width':'1' }, svg);
+
+  // Eix Y esquerra — escala premiats
+  [0, 5, 10, 15].forEach(v => {
+    if (v > maxPrem) return;
+    const y = yBar(v);
+    el('text', { x:PAD_L-6, y:y+4, 'text-anchor':'end', 'font-size':'9', fill:'#bbb', 'font-family':'system-ui,sans-serif' }, svg).textContent = v;
+  });
+
+  // Eix Y dret — escala espectadors (en milers)
+  [0, 100, 200, 300, 400, 500].forEach(v => {
+    const val = v * 1000;
+    if (val > maxMit * 1.05) return;
+    const y = yLin(val);
+    el('text', { x:W-PAD_R+6, y:y+4, 'text-anchor':'start', 'font-size':'9', fill:COL_LINIA, 'font-family':'system-ui,sans-serif', opacity:'0.7' }, svg).textContent = v + 'k';
   });
 
   // Barres i etiquetes eix X
   decades.forEach((dec, i) => {
-    const x = PAD_L + i * barW;
-    const bh = (premiats[i] / maxPrem) * (H - PAD_T - PAD_B);
-    const by = PAD_T + (H - PAD_T - PAD_B) - bh;
+    const cx = PAD_L + i * barW + barW / 2;
+    const bh = (premiats[i] / maxPrem) * plotH;
+    const by = PAD_T + plotH - bh;
 
-    el('rect', { x: x + barW * 0.15, y: by, width: barW * 0.7, height: bh, fill: COL_BARRA, rx: '2' }, svg);
+    el('rect', {
+      x: PAD_L + i * barW + barW * 0.18,
+      y: by,
+      width: barW * 0.64,
+      height: bh,
+      fill: COL_BARRA,
+      stroke: COL_BARRA_STROKE,
+      'stroke-width': '0.5',
+      rx: '2'
+    }, svg);
 
-    // Valor barra
+    // Valor sobre la barra
     el('text', {
-      x: x + barW / 2, y: by - 4,
+      x: cx, y: by - 5,
       'text-anchor': 'middle', 'font-size': '10', fill: '#888', 'font-family': 'system-ui,sans-serif'
     }, svg).textContent = premiats[i];
 
     // Etiqueta dècada
     el('text', {
-      x: x + barW / 2, y: H - PAD_B + 14,
+      x: cx, y: H - PAD_B + 16,
       'text-anchor': 'middle', 'font-size': '10', fill: '#aaa', 'font-family': 'system-ui,sans-serif'
     }, svg).textContent = dec;
   });
 
-  // Línia mitjana espectadors
-  let pathD = '';
-  const puntsLinia = decades.map((_, i) => ({
+  // Línia espectadors
+  const punts = decades.map((_, i) => ({
     x: PAD_L + i * barW + barW / 2,
     y: yLin(mitjanes[i])
   }));
 
-  puntsLinia.forEach((p, i) => {
-    pathD += (i === 0 ? `M ${p.x} ${p.y}` : ` L ${p.x} ${p.y}`);
+  let pathD = punts.map((p,i) => (i===0?'M':'L') + ` ${p.x} ${p.y}`).join(' ');
+  el('path', { d:pathD, fill:'none', stroke:COL_LINIA, 'stroke-width':'2', 'stroke-linejoin':'round', opacity:'0.85' }, svg);
+
+  punts.forEach((p, i) => {
+    el('circle', { cx:p.x, cy:p.y, r:'3.5', fill:COL_PUNT, opacity:'0.85' }, svg);
   });
 
-  el('path', { d: pathD, fill: 'none', stroke: COL_LINIA, 'stroke-width': '2', 'stroke-linejoin': 'round' }, svg);
-
-  // Punts de la línia
-  puntsLinia.forEach((p, i) => {
-    el('circle', { cx: p.x, cy: p.y, r: '3.5', fill: COL_LINIA }, svg);
+  // Etiquetes de la línia (valor en k sobre cada punt)
+  punts.forEach((p, i) => {
+    const kVal = Math.round(mitjanes[i] / 1000);
+    el('text', {
+      x: p.x, y: p.y - 8,
+      'text-anchor': 'middle', 'font-size': '9', fill: COL_LINIA, 'font-family': 'system-ui,sans-serif', opacity:'0.8'
+    }, svg).textContent = kVal + 'k';
   });
 
-  // Eix Y esquerra (premiats)
-  el('text', { x: PAD_L - 6, y: PAD_T + 4, 'text-anchor': 'end', 'font-size': '9', fill: '#bbb', 'font-family': 'system-ui,sans-serif' }, svg).textContent = maxPrem;
-  el('text', { x: PAD_L - 6, y: H - PAD_B, 'text-anchor': 'end', 'font-size': '9', fill: '#bbb', 'font-family': 'system-ui,sans-serif' }, svg).textContent = '0';
+  // Etiquetes eixos
+  el('text', {
+    x: PAD_L - 6, y: PAD_T - 10,
+    'text-anchor': 'end', 'font-size': '9.5', fill: '#aaa', 'font-family': 'system-ui,sans-serif'
+  }, svg).textContent = 'Premiats';
 
-  wrap.appendChild(svg);
+  el('text', {
+    x: W - PAD_R + 6, y: PAD_T - 10,
+    'text-anchor': 'start', 'font-size': '9.5', fill: COL_LINIA, 'font-family': 'system-ui,sans-serif', opacity:'0.7'
+  }, svg).textContent = 'Esp. (mit.)';
 
-  // Peu de gràfic en cursiva
-  const peu = document.createElement('p');
-  peu.style.cssText = 'font-size:0.82rem;color:#999;font-style:italic;margin-top:8px;margin-bottom:0;';
-  peu.textContent = 'Barres (gris): films premiats als quatre festivals per dècada. Línia (blau): mitjana d\'espectadors en sala dels films de festival.';
-  wrap.appendChild(peu);
+  // Llegenda
+  const legY = H - PAD_B + 32;
+  const legItems = [
+    { tipus: 'rect', col: COL_BARRA, stroke: COL_BARRA_STROKE, label: 'Films premiats als 4 festivals' },
+    { tipus: 'line', col: COL_LINIA, label: 'Mitjana espectadors films de festival' },
+  ];
+  let lx = W / 2 - 220;
+  legItems.forEach(item => {
+    if (item.tipus === 'rect') {
+      el('rect', { x:lx, y:legY-6, width:14, height:10, fill:item.col, stroke:item.stroke, 'stroke-width':'0.5', rx:'1' }, svg);
+      lx += 20;
+    } else {
+      el('line', { x1:lx, y1:legY-1, x2:lx+14, y2:legY-1, stroke:item.col, 'stroke-width':'2', opacity:'0.85' }, svg);
+      el('circle', { cx:lx+7, cy:legY-1, r:'3', fill:item.col, opacity:'0.85' }, svg);
+      lx += 20;
+    }
+    const t = el('text', { x:lx, y:legY+3, 'font-size':'10', fill:'#777', 'font-family':'system-ui,sans-serif' }, svg);
+    t.textContent = item.label;
+    lx += item.label.length * 5.5 + 24;
+  });
 }
