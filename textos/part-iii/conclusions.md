@@ -41,7 +41,7 @@ L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi inten
 
 La bretxa de taquilla pot haver-se eixamplat sense que la distància entre les audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos*  continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
 
-La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
+La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i molt difícil de verificar.
 <!-- /punt-3 -->
 
 <!-- punt-4 -->
