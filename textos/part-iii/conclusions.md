@@ -23,9 +23,9 @@ Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més indu
 <!-- /punt-2-cap -->
 
 <!-- punt-2-cos -->
-El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
+La ràtio de bretxa (la relació entre la mitjana d’espectadors de les pel·lícules de festival i la del Top 100) era de 0,28 als anys 70, el moment de coincidència més clara, i cau fins al 0,08 als anys 2010. Mai el cinema de festival no havia estat tan lluny del públic.
 
-Moltes pel·lícules ja no es produeixen primer i arriben després als festivals, sinó que es desenvolupen des de l’inici pensant en les seves regles, calendaris i espais de circulació. Aquesta especialització ha reforçat la presència exterior del cinema espanyol, però també ha augmentat la distància respecte del gran públic.
+Entre els 80s i els 2000s el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, subvencions específiques, escoles, laboratoris i residències que actuen com a vies d’accés al circuit de festivals. Moltes pel·lícules es desenvolupen des de l’inici pensant en les seves regles, calendaris i espais de circulació. El resultat és doble: el reconeixement internacional del cinema d'autor ha crescut precisament perquè s'ha especialitzat, però aquesta especialització ha augmentat la distància respecte del gran públic.
 
 Les plataformes, després, han accelerat la separació en oferir un circuit de distribució alternatiu a la sala massiva. L’èxit exterior i la distància interior poden ser, en part, dues conseqüències del mateix procés.
 <!-- /punt-2-cos -->
