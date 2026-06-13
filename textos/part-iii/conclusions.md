@@ -37,9 +37,11 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 
 La taquilla continua sent l’única dada pública comparable al llarg de tot el període, però ja no explica per si sola l’abast d’una pel·lícula. La sala ha passat de ser el centre gairebé exclusiu de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions, el vídeo sota demanda i les plataformes.
 
-Això pot haver eixamplat la diferència visible entre el cinema popular i el cinema de festival a la taquilla, sense que la distància entre les seves audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos* continuen acumulant públic després de l’estrena, encara que no disposem de dades completes per mesurar aquest recorregut. En produccions concebudes directament per a plataformes, com La sociedad de la nieve, la taquilla és ja una dada clarament insuficient.
+L’IIC i l’IAA són les dues eines d’aproximació amb què aquest estudi intenta comparar realitats que les dades disponibles no permeten equiparar directament. L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada durant els primers anys d’explotació, sumant les finestres disponibles en cada context. El seu valor no és la precisió, sinó la direcció: fan visibles diferències que les xifres brutes oculten.
 
-La capacitat del cinema espanyol de produir ‘dobles corones’ no ha desaparegut: ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
+La bretxa observada a la taquilla pot haver-se eixamplat sense que la distància entre les audiències totals del cinema popular i el cinema de festival hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos* continuen acumulant públic després de l’estrena a sales, encara que no disposem de dades completes per mesurar aquest recorregut. En produccions concebudes directament per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
+
+La capacitat del cinema espanyol de produir «dobles corones» no ha desaparegut: ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
 <!-- /punt-3 -->
 
 <!-- punt-4 -->
