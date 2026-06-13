@@ -5,11 +5,10 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 <!-- punt-1-cap -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
+<span class="subtitol-punt">La 'doble corona' és l'excepció que deixa al descobert els límits dels dos sistemes.</span>
 <!-- /punt-1-cap -->
 
 <!-- punt-1-cos -->
-<span class="subtitol-punt">La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.</span>
-
 El balanç quantitatiu és inequívoc: dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Fins i tot incorporant-hi els quinze títols del «segon cercle», la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
 
 El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica van ser els anys de la Transició, quan el cinema crític va trobar també un públic ampli a les sales i la frontera entre autoria i mercat es va fer més porosa.
@@ -20,11 +19,10 @@ Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més indu
 <!-- punt-2-cap -->
 ## 2. Més prestigi internacional, menys mercat de sala
 
+<span class="subtitol-punt">El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.</span>
 <!-- /punt-2-cap -->
 
 <!-- punt-2-cos -->
-<span class="subtitol-punt">El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.</span>
-
 El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
 
 Moltes pel·lícules ja no es produeixen primer i arriben després als festivals, sinó que es desenvolupen des de l’inici pensant en les seves regles, calendaris i espais de circulació. Aquesta especialització ha reforçat la presència exterior del cinema espanyol, però també ha augmentat la distància respecte del gran públic.
