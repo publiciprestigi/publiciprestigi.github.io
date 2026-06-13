@@ -216,6 +216,17 @@ th.col-iic-header {
   margin-top: 16px;
 }
 
+/* ── Subtítol de punt a les conclusions (i futurs capítols similars) ── */
+.subtitol-punt {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888;
+  margin-top: -0.25rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
 /* ── H2/H3 dins blocs Markdown — uniforme a tota la web ── */
 .contingut-text .text-md h2,
 .contingut-text .text-md-intro h2,
