@@ -35,13 +35,13 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 
 <p class="subtitol-punt">La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.</p>
 
-La taquilla continua sent l’única dada pública comparable al llarg de tot el període, però ja no explica per si sola l’abast d’una pel·lícula. La sala ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes.
+La taquilla continua sent l’única dada pública comparable al llarg de tot el període. La sala, però, ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes. Mai no havia estat tan fàcil accedir a una pel·lícula després de l’estrena, ni tan difícil reconstruir-ne l’audiència real.
 
 L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació. L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. El seu valor no és la precisió, sinó la direcció: fan visibles diferències que les xifres brutes oculten.
 
-La bretxa de taquilla pot haver-se eixamplat sense que la distància entre les audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos*  continuen acumulant públic després de l’estrena a sales, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
+La bretxa de taquilla pot haver-se eixamplat sense que la distància entre les audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos*  continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
 
-La capacitat del cinema espanyol de produir 'dobles corones' no ha desaparegut: ha canviat d’escala. Avui, la coincidència entre el cinema popular i el cinema de festival pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
+La capacitat del cinema espanyol de produir 'dobles corones' no ha desaparegut: ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i difícil de verificar.
 <!-- /punt-3 -->
 
 <!-- punt-4 -->
