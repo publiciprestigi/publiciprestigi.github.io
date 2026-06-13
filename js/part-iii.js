@@ -31,12 +31,16 @@ async function carregarDades() {
     festivalsData = await rf.json();
     filmsData = await ri.json();
     marketData = await rm.json();
+    window._filmsData = films;
+    window._festivalsData = festivals;
     construirDobleCorona();
     construirSegonCercle();
     construirBretxa();
     construirCazaAlcarras();
     construirDuesGeneracions();
     construirLleis();
+    construirGraficConclusions1();
+    construirGraficConclusions2();
   } catch(e) { console.error('Error:', e); }
 }
 
@@ -1501,4 +1505,236 @@ function construirGraficDobleCorona() {
       c.setAttribute('opacity','1');
     });
   });
+}
+
+// ============================================================
+// GRÀFIC PUNT-1 CONCLUSIONS: Diagrama de dots públic/prestigi
+// ============================================================
+function construirGraficConclusions1() {
+  const wrap = document.getElementById('grafic-conclusions-1');
+  if (!wrap) return;
+
+  const W = 720, H = 200;
+  const PAD_L = 40, PAD_R = 20, PAD_T = 50, PAD_B = 30;
+  const ANY_MIN = 1965, ANY_MAX = 2025;
+  const FILA_PUB = PAD_T + 30, FILA_FEST = PAD_T + 110;
+  const R = 5;
+
+  const COL_BLAU = '#2a5582';
+  const COL_VERMELL = '#9B2335';
+  const COL_OR = '#e8b84b';
+
+  function xPos(any) {
+    return PAD_L + ((any - ANY_MIN) / (ANY_MAX - ANY_MIN)) * (W - PAD_L - PAD_R);
+  }
+
+  const ns = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%', style: 'overflow:visible;display:block;' }, wrap);
+
+  // Línies de referència dècada
+  [1965,1975,1985,1995,2005,2015,2025].forEach(any => {
+    const x = xPos(any);
+    el('line', { x1:x, y1:PAD_T, x2:x, y2:H-PAD_B, stroke:'#e8e8e8', 'stroke-width':'1' }, svg);
+    el('text', { x:x, y:H-PAD_B+14, 'text-anchor':'middle', 'font-size':'10', fill:'#aaa', 'font-family':'system-ui,sans-serif' }, svg).textContent = any;
+  });
+
+  // Etiquetes files
+  el('text', { x:PAD_L-8, y:FILA_PUB+4, 'text-anchor':'end', 'font-size':'10', fill:COL_BLAU, 'font-family':'system-ui,sans-serif', 'font-weight':'600' }, svg).textContent = 'PÚBLIC';
+  el('text', { x:PAD_L-8, y:FILA_FEST+4, 'text-anchor':'end', 'font-size':'10', fill:COL_VERMELL, 'font-family':'system-ui,sans-serif', 'font-weight':'600' }, svg).textContent = 'PRESTIGI';
+
+  const puntsInteractius = [];
+
+  // Films Top 100 (blau)
+  const top100 = window._filmsData ? window._filmsData.filter(f => f.in_top100) : [];
+  // Jitter vertical per evitar solapament
+  const jitterPub = {};
+  top100.forEach(f => {
+    const x = xPos(f.any);
+    const key = Math.round(f.any / 2) * 2;
+    jitterPub[key] = (jitterPub[key] || 0);
+    const jy = (jitterPub[key] % 3) * 11 - 11;
+    jitterPub[key]++;
+
+    const esDC = window._festivalsData && window._festivalsData.some(ff => ff.in_top100 && ff.titol === f.titol && ff.any === f.any);
+    const c = el('circle', {
+      cx: x, cy: FILA_PUB + jy, r: R,
+      fill: esDC ? 'white' : COL_BLAU,
+      stroke: esDC ? COL_OR : 'none',
+      'stroke-width': esDC ? '2' : '0',
+      style: 'cursor:pointer'
+    }, svg);
+    puntsInteractius.push({ el: c, data: { titol: f.titol, any: f.any, tipus: esDC ? 'corona' : 'public', esp: f.espectadors } });
+  });
+
+  // Films festivals (vermell)
+  const festivals = window._festivalsData || [];
+  const jitterFest = {};
+  festivals.forEach(f => {
+    const x = xPos(f.any);
+    const key = Math.round(f.any / 2) * 2;
+    jitterFest[key] = (jitterFest[key] || 0);
+    const jy = (jitterFest[key] % 3) * 11 - 11;
+    jitterFest[key]++;
+
+    const esDC = f.in_top100;
+    const c = el('circle', {
+      cx: x, cy: FILA_FEST + jy, r: R,
+      fill: esDC ? 'white' : COL_VERMELL,
+      stroke: esDC ? COL_OR : 'none',
+      'stroke-width': esDC ? '2' : '0',
+      style: 'cursor:pointer'
+    }, svg);
+    puntsInteractius.push({ el: c, data: { titol: f.titol, any: f.any, tipus: esDC ? 'corona' : 'festival', festival: f.festival } });
+  });
+
+  // Llegenda
+  const legY = 18;
+  const llegenda = [
+    { col: COL_BLAU, label: 'Públic — Top 100 (100 films)', buit: false },
+    { col: COL_VERMELL, label: 'Prestigi — Festivals (264 films)', buit: false },
+    { col: COL_OR, label: 'Doble corona (10 films)', buit: true },
+  ];
+  let lx = PAD_L;
+  llegenda.forEach(item => {
+    if (item.buit) {
+      el('circle', { cx:lx+5, cy:legY, r:'5', fill:'white', stroke:item.col, 'stroke-width':'2' }, svg);
+    } else {
+      el('circle', { cx:lx+5, cy:legY, r:'5', fill:item.col }, svg);
+    }
+    const t = el('text', { x:lx+14, y:legY+4, 'font-size':'10', fill:'#555', 'font-family':'system-ui,sans-serif' }, svg);
+    t.textContent = item.label;
+    lx += item.label.length * 5.8 + 26;
+  });
+
+  // Tooltip
+  const tooltip = document.createElement('div');
+  tooltip.style.cssText = 'position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.5;max-width:200px;font-family:system-ui,sans-serif;';
+  wrap.style.position = 'relative';
+  wrap.appendChild(tooltip);
+
+  puntsInteractius.forEach(({ el: c, data: d }) => {
+    c.addEventListener('mouseenter', e => {
+      const wRect = wrap.getBoundingClientRect();
+      const cx = parseFloat(c.getAttribute('cx'));
+      const cy = parseFloat(c.getAttribute('cy'));
+      const svgEl = svg.getBoundingClientRect();
+      const scaleX = svgEl.width / W;
+      const scaleY = svgEl.height / H;
+      let html = `<strong>${d.titol}</strong><br>${d.any}`;
+      if (d.festival) html += `<br>${d.festival}`;
+      if (d.tipus === 'corona') html += `<br>⭕ Doble corona`;
+      tooltip.innerHTML = html;
+      tooltip.style.display = 'block';
+      const px = cx * scaleX;
+      const py = cy * scaleY;
+      let left = px + 10;
+      if (left + 200 > svgEl.width) left = px - 210;
+      tooltip.style.left = left + 'px';
+      tooltip.style.top = (py + svgEl.top - wRect.top - 10) + 'px';
+      c.setAttribute('opacity', '0.7');
+    });
+    c.addEventListener('mouseleave', () => {
+      tooltip.style.display = 'none';
+      c.setAttribute('opacity', '1');
+    });
+  });
+}
+
+// ============================================================
+// GRÀFIC PUNT-2 CONCLUSIONS: Premiats vs mitjana espectadors
+// ============================================================
+function construirGraficConclusions2() {
+  const wrap = document.getElementById('grafic-conclusions-2');
+  if (!wrap) return;
+
+  const decades = ['60s','70s','80s','90s','2000s','2010s','2020s'];
+  const premiats = [2, 9, 3, 9, 4, 15, 11];
+  const mitjanes = [346323, 515710, 320613, 238790, 186546, 202150, 172584];
+
+  const W = 680, H = 200;
+  const PAD_L = 42, PAD_R = 20, PAD_T = 20, PAD_B = 40;
+  const barW = (W - PAD_L - PAD_R) / decades.length;
+
+  const maxPrem = Math.max(...premiats);
+  const maxMit = Math.max(...mitjanes);
+
+  const COL_BARRA = '#c8d4e3';
+  const COL_LINIA = '#2a5582';
+
+  const ns = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent) {
+    const e = document.createElementNS(ns, tag);
+    Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v));
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+
+  function yBar(val) { return PAD_T + (1 - val / maxPrem) * (H - PAD_T - PAD_B); }
+  function yLin(val) { return PAD_T + (1 - val / maxMit) * (H - PAD_T - PAD_B); }
+
+  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%', style: 'overflow:visible;display:block;' }, wrap);
+
+  // Grid horitzontal lleuger
+  [0, 0.25, 0.5, 0.75, 1].forEach(frac => {
+    const y = PAD_T + frac * (H - PAD_T - PAD_B);
+    el('line', { x1: PAD_L, y1: y, x2: W - PAD_R, y2: y, stroke: '#f0f0f0', 'stroke-width': '1' }, svg);
+  });
+
+  // Barres i etiquetes eix X
+  decades.forEach((dec, i) => {
+    const x = PAD_L + i * barW;
+    const bh = (premiats[i] / maxPrem) * (H - PAD_T - PAD_B);
+    const by = PAD_T + (H - PAD_T - PAD_B) - bh;
+
+    el('rect', { x: x + barW * 0.15, y: by, width: barW * 0.7, height: bh, fill: COL_BARRA, rx: '2' }, svg);
+
+    // Valor barra
+    el('text', {
+      x: x + barW / 2, y: by - 4,
+      'text-anchor': 'middle', 'font-size': '10', fill: '#888', 'font-family': 'system-ui,sans-serif'
+    }, svg).textContent = premiats[i];
+
+    // Etiqueta dècada
+    el('text', {
+      x: x + barW / 2, y: H - PAD_B + 14,
+      'text-anchor': 'middle', 'font-size': '10', fill: '#aaa', 'font-family': 'system-ui,sans-serif'
+    }, svg).textContent = dec;
+  });
+
+  // Línia mitjana espectadors
+  let pathD = '';
+  const puntsLinia = decades.map((_, i) => ({
+    x: PAD_L + i * barW + barW / 2,
+    y: yLin(mitjanes[i])
+  }));
+
+  puntsLinia.forEach((p, i) => {
+    pathD += (i === 0 ? `M ${p.x} ${p.y}` : ` L ${p.x} ${p.y}`);
+  });
+
+  el('path', { d: pathD, fill: 'none', stroke: COL_LINIA, 'stroke-width': '2', 'stroke-linejoin': 'round' }, svg);
+
+  // Punts de la línia
+  puntsLinia.forEach((p, i) => {
+    el('circle', { cx: p.x, cy: p.y, r: '3.5', fill: COL_LINIA }, svg);
+  });
+
+  // Eix Y esquerra (premiats)
+  el('text', { x: PAD_L - 6, y: PAD_T + 4, 'text-anchor': 'end', 'font-size': '9', fill: '#bbb', 'font-family': 'system-ui,sans-serif' }, svg).textContent = maxPrem;
+  el('text', { x: PAD_L - 6, y: H - PAD_B, 'text-anchor': 'end', 'font-size': '9', fill: '#bbb', 'font-family': 'system-ui,sans-serif' }, svg).textContent = '0';
+
+  wrap.appendChild(svg);
+
+  // Peu de gràfic en cursiva
+  const peu = document.createElement('p');
+  peu.style.cssText = 'font-size:0.82rem;color:#999;font-style:italic;margin-top:8px;margin-bottom:0;';
+  peu.textContent = 'Barres (gris): films premiats als quatre festivals per dècada. Línia (blau): mitjana d\'espectadors en sala dels films de festival.';
+  wrap.appendChild(peu);
 }
