@@ -1578,9 +1578,12 @@ function construirGraficConclusions1() {
   const wrap = document.getElementById('grafic-conclusions-1');
   if (!wrap) return;
 
-  const COL_BLAU = '#2a5582';
+  // Colors: accent web per blau, vermell festivals, verd segon cercle
+  const COL_BLAU    = '#1a75c4';
   const COL_VERMELL = '#9B2335';
+  const COL_VERD    = '#2d7a4f';
 
+  // 10 dobles corones
   const dobles = [
     { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null },
     { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null },
@@ -1595,6 +1598,28 @@ function construirGraficConclusions1() {
   ];
   const doblesAnys = new Set(dobles.map(d => d.any));
 
+  // 15 films del segon cercle (≥1M espectadors, no al Top 100)
+  const segonCercle = [
+    { any:1966, titol:'La caza' },
+    { any:1973, titol:'El espíritu de la colmena' },
+    { any:1976, titol:'Pascual Duarte' },
+    { any:1978, titol:'Cría cuervos' },
+    { any:1981, titol:'Deprisa deprisa' },
+    { any:1983, titol:'El sur' },
+    { any:1986, titol:'El viaje a ninguna parte' },
+    { any:1989, titol:'Ay Carmela' },
+    { any:1992, titol:'Belle époque' },
+    { any:1996, titol:'Martín (Hache)' },
+    { any:2003, titol:'El pianista' },
+    { any:2006, titol:'Volver' },
+    { any:2009, titol:'El secreto de sus ojos' },
+    { any:2010, titol:'Biutiful' },
+    { any:2013, titol:'La gran belleza' },
+  ];
+  const segonCercleAnys = new Set(segonCercle.map(f => f.any));
+  const segonCercleTitols = new Set(segonCercle.map(f => f.titol));
+
+  // Top 100 — un film per entrada
   const pubFilms = [
     {any:1965,titol:'La ciudad no es para mí'},{any:1966,titol:'El golfo'},{any:1966,titol:'Sopa de ganso'},
     {any:1966,titol:'El arte de vivir'},{any:1966,titol:'La pandilla'},{any:1967,titol:'Crónica de 9 meses'},
@@ -1616,6 +1641,7 @@ function construirGraficConclusions1() {
     {any:2022,titol:'El buen patrón'},{any:2024,titol:'Padre no hay más que uno 4'},{any:2025,titol:'Padre no hay más que uno 5'},
   ];
 
+  // Festivals — films seleccionats (inclou dobles corones i segon cercle)
   const prestFilms = [
     {any:1965,titol:'La caza'},{any:1966,titol:'Nueve cartas a Berta'},{any:1968,titol:'Stress es tres tres'},
     {any:1970,titol:'El momento de la verdad'},{any:1973,titol:'El espíritu de la colmena'},
@@ -1642,7 +1668,7 @@ function construirGraficConclusions1() {
       byYear[f.any].push(f);
     });
     const result = [];
-    Object.entries(byYear).forEach(([anyStr, arr]) => {
+    Object.entries(byYear).forEach(([, arr]) => {
       arr.forEach((f, i) => {
         const offset = Math.ceil(i / 2) * (i % 2 === 0 ? 1 : -1) * step;
         result.push({ ...f, cy: baseY + offset });
@@ -1653,18 +1679,18 @@ function construirGraficConclusions1() {
 
   const A0 = 1964, A1 = 2025, W = 860;
   const STEP = 9;
-  const YP_BASE = 75, YF_BASE = 185;
+  const YP_BASE = 60, YF_BASE = 160;
+  const PAD_TOP = 28, PAD_BOT = 60;
   const R = 4, RD = 6;
   const ns = 'http://www.w3.org/2000/svg';
 
-  const pubStacked  = stackDots(pubFilms,  YP_BASE, STEP);
-  const prestStacked= stackDots(prestFilms, YF_BASE, STEP);
+  const pubStacked   = stackDots(pubFilms,   YP_BASE, STEP);
+  const prestStacked = stackDots(prestFilms,  YF_BASE, STEP);
 
   const maxY = Math.max(...pubStacked.map(f=>f.cy), ...prestStacked.map(f=>f.cy));
-  const PAD_BOT = 50;
   const H = maxY + PAD_BOT;
 
-  function xPos(any) { return 8 + (any - A0) / (A1 - A0) * (W - 16); }
+  function xPos(any) { return 12 + (any - A0) / (A1 - A0) * (W - 24); }
 
   function el(tag, attrs, par) {
     const e = document.createElementNS(ns, tag);
@@ -1675,92 +1701,117 @@ function construirGraficConclusions1() {
 
   wrap.style.position = 'relative';
 
-  const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, width: '100%', style: 'overflow:visible;display:block;' }, wrap);
+  const svg = el('svg', { viewBox:`0 0 ${W} ${H}`, width:'100%', style:'overflow:visible;display:block;' }, wrap);
 
-  // Línies verticals dècada
+  // Anys a la part SUPERIOR
   [1965,1975,1985,1995,2005,2015,2025].forEach(any => {
     const x = xPos(any);
-    el('line', { x1:x, y1:20, x2:x, y2:H-PAD_BOT+10, stroke:'#f0f0f0', 'stroke-width':'1' }, svg);
-    el('text', { x, y:H-PAD_BOT+22, 'text-anchor':'middle', 'font-size':'9', fill:'#bbb', 'font-family':'system-ui,sans-serif' }, svg).textContent = any;
+    // Línies verticals lleugeríssimes (fons, no destacades)
+    el('line', { x1:x, y1:PAD_TOP, x2:x, y2:maxY+8, stroke:'#f0f0f0', 'stroke-width':'1' }, svg);
+    // Etiqueta a dalt
+    el('text', { x, y:PAD_TOP-6, 'text-anchor':'middle', 'font-size':'9', fill:'#bbb', 'font-family':'system-ui,sans-serif' }, svg).textContent = any;
   });
 
-  // Línia horitzontal separadora
-  const ySep = (YP_BASE + YF_BASE) / 2;
-  el('line', { x1:8, y1:ySep, x2:W-8, y2:ySep, stroke:'#e8e8e8', 'stroke-width':'1' }, svg);
-
-  // Etiquetes carrils
-  el('text', { x:8, y:22, 'font-size':'10', fill:COL_BLAU, 'font-weight':'700', 'font-family':'system-ui,sans-serif' }, svg).textContent = 'PÚBLIC';
-  el('text', { x:8, y:ySep+14, 'font-size':'10', fill:COL_VERMELL, 'font-weight':'700', 'font-family':'system-ui,sans-serif' }, svg).textContent = 'PRESTIGI';
-
-  // Connexions dobles corones
+  // Línies verticals NOMÉS per a dobles corones (grises, destacades)
   dobles.forEach(d => {
     const pd = pubStacked.find(f => f.titol === d.titol);
     const fd = prestStacked.find(f => f.titol === d.titol);
     const y1 = pd ? pd.cy : YP_BASE;
     const y2 = fd ? fd.cy : YF_BASE;
-    el('line', { x1:xPos(d.any), y1, x2:xPos(d.any), y2, stroke:'#ddd', 'stroke-width':'0.8', 'stroke-dasharray':'3,2' }, svg);
+    el('line', { x1:xPos(d.any), y1, x2:xPos(d.any), y2, stroke:'#ccc', 'stroke-width':'1', 'stroke-dasharray':'3,2' }, svg);
   });
 
-  const cerclesDobles = [];
+  const puntsInteractius = [];
 
-  // Punts PÚBLIC
+  // ── Fila PÚBLIC ──
   pubStacked.forEach(f => {
     const esDC = dobles.find(d => d.titol === f.titol);
     if (esDC) {
+      // Doble corona: cercle blau buit
       const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_BLAU, 'stroke-width':'2', style:'cursor:pointer' }, svg);
-      cerclesDobles.push({ el:c, data:esDC });
+      puntsInteractius.push({ el:c, data:{ ...esDC, tipus:'corona-pub' } });
     } else {
-      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_BLAU, opacity:'0.85' }, svg);
+      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_BLAU, opacity:'0.9' }, svg);
     }
   });
 
-  // Punts PRESTIGI
+  // ── Fila PRESTIGI ──
   prestStacked.forEach(f => {
     const esDC = dobles.find(d => d.titol === f.titol);
+    const eSC  = segonCercleTitols.has(f.titol);
     if (esDC) {
+      // Doble corona: cercle vermell buit
       const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_VERMELL, 'stroke-width':'2', style:'cursor:pointer' }, svg);
-      cerclesDobles.push({ el:c, data:esDC });
+      puntsInteractius.push({ el:c, data:{ ...esDC, tipus:'corona-prest' } });
+    } else if (eSC) {
+      // Segon cercle: cercle verd buit
+      const sc = segonCercle.find(s => s.titol === f.titol);
+      const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_VERD, 'stroke-width':'1.5', style:'cursor:pointer' }, svg);
+      puntsInteractius.push({ el:c, data:{ ...f, ...sc, tipus:'segon-cercle' } });
     } else {
-      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_VERMELL, opacity:'0.85' }, svg);
+      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_VERMELL, opacity:'0.9' }, svg);
     }
   });
 
-  // Llegenda
-  const legY = H - PAD_BOT + 34;
-  const llegenda = [
-    { col:COL_BLAU,    label:'Públic — Top 100 (100 films)',   buit:false },
-    { col:COL_VERMELL, label:'Prestigi — Festivals (264 films)', buit:false },
-    { col:COL_BLAU,    label:'Doble corona (10 films)',          buit:true  },
+  // ── Llegenda (sota el gràfic, mida adequada, ben separada) ──
+  const legY = maxY + 28;
+  const LEG_R = 6;
+  const LEG_FS = '12.5';
+  const LEG_GAP = 14;
+
+  const legItems = [
+    { tipus:'ple',   col:COL_BLAU,    label:'Públic — Top 100' },
+    { tipus:'ple',   col:COL_VERMELL, label:'Prestigi — Festivals' },
+    { tipus:'doble', label:'Doble corona' },
+    { tipus:'buit',  col:COL_VERD,    label:'Segon cercle' },
   ];
-  let lx = W/2 - 270;
-  llegenda.forEach(item => {
-    if (item.buit) {
-      el('circle', { cx:lx+6, cy:legY, r:'5.5', fill:'white', stroke:item.col, 'stroke-width':'1.8' }, svg);
+
+  // Calcular amplada total per centrar
+  const textW = { 'Públic — Top 100': 120, 'Prestigi — Festivals': 140, 'Doble corona': 110, 'Segon cercle': 100 };
+  const itemW = legItems.map(item => LEG_R*2 + LEG_GAP + (textW[item.label] || 110) + 24);
+  const totalW = itemW.reduce((a,b) => a+b, 0);
+  let lx = (W - totalW) / 2;
+
+  legItems.forEach((item, i) => {
+    const cx = lx + LEG_R;
+    const cy = legY;
+    if (item.tipus === 'ple') {
+      el('circle', { cx, cy, r:LEG_R, fill:item.col }, svg);
+    } else if (item.tipus === 'doble') {
+      // Cercle blau buit + cercle vermell buit junts
+      el('circle', { cx:cx-4, cy, r:LEG_R, fill:'white', stroke:COL_BLAU, 'stroke-width':'2' }, svg);
+      el('circle', { cx:cx+4, cy, r:LEG_R, fill:'white', stroke:COL_VERMELL, 'stroke-width':'2' }, svg);
     } else {
-      el('circle', { cx:lx+6, cy:legY, r:'5', fill:item.col }, svg);
+      el('circle', { cx, cy, r:LEG_R, fill:'white', stroke:item.col, 'stroke-width':'1.5' }, svg);
     }
-    const t = el('text', { x:lx+16, y:legY+4, 'font-size':'11', fill:'#555', 'font-family':'system-ui,sans-serif' }, svg);
+    const tx = item.tipus === 'doble' ? cx + LEG_R + 6 : cx + LEG_R + 6;
+    const t = el('text', { x:tx, y:cy+4, 'font-size':LEG_FS, fill:'#555', 'font-family':'system-ui,sans-serif' }, svg);
     t.textContent = item.label;
-    lx += item.label.length * 5.8 + 28;
+    lx += itemW[i];
   });
 
-  // Tooltip
+  // ── Tooltip ──
   const tooltip = document.createElement('div');
   tooltip.style.cssText = 'position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.5;max-width:220px;font-family:system-ui,sans-serif;';
   wrap.appendChild(tooltip);
 
-  cerclesDobles.forEach(({ el:c, data:d }) => {
+  puntsInteractius.forEach(({ el:c, data:d }) => {
     c.addEventListener('mouseenter', () => {
       const svgRect = svg.getBoundingClientRect();
-      const wRect = wrap.getBoundingClientRect();
+      const wRect   = wrap.getBoundingClientRect();
       const cx = parseFloat(c.getAttribute('cx'));
       const cy = parseFloat(c.getAttribute('cy'));
       const px = (cx / W) * svgRect.width;
       const py = (cy / H) * svgRect.height;
       let html = `<strong>${d.titol}</strong><br>${d.any}`;
-      if (d.top100) html += `<br>${d.top100} al Top 100`;
-      html += `<br>${d.festival}`;
-      if (d.premi) html += ` · ${d.premi}`;
+      if (d.tipus === 'corona-pub' || d.tipus === 'corona-prest') {
+        if (d.top100) html += `<br>${d.top100} al Top 100`;
+        html += `<br>${d.festival}`;
+        if (d.premi) html += ` · ${d.premi}`;
+        html += `<br><span style="color:#aaa">Doble corona</span>`;
+      } else if (d.tipus === 'segon-cercle') {
+        html += `<br><span style="color:#aaa">Segon cercle — ≥1M espectadors</span>`;
+      }
       tooltip.innerHTML = html;
       tooltip.style.display = 'block';
       let left = px + 10;
