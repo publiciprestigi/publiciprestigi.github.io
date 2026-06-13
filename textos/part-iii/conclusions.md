@@ -88,7 +88,7 @@ L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, pe
 <!-- punt-7 -->
 ## 7. El cinema més vist no és sempre el cinema més recordat
 
-<p class="subtitol-punt">El públic i el cànon conserven memòries diferents del mateix període.</p>
+<p class="subtitol-punt">El públic i el cànon construeixen memòries diferents d’una mateixa història.</p>
 
 Quan pensem en el gran cinema espanyol de les darreres dècades, pensem sobretot en els autors legitimats pels festivals, la crítica i l’acadèmia. El cinema popular ocupa un lloc central en la memòria personal de milions d’espectadors, però sovint un lloc secundari en la història cultural.
 
