@@ -5,7 +5,7 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 <!-- punt-1 -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
-*La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.*
+<span style="color:#555555">La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.</span>
 
 El balanç quantitatiu és inequívoc: dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Fins i tot incorporant-hi els quinze títols del «segon cercle», la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
 
@@ -17,7 +17,7 @@ Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més indu
 <!-- punt-2 -->
 ## 2. Més prestigi internacional, menys mercat de sala
 
-<span style="color:#999">El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.</span>
+<span style="color:#555555">El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.</span>
 
 El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
 
