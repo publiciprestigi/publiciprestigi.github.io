@@ -65,13 +65,11 @@ El resultat és un sistema de distribució més ampli, però també més opac. L
 
 El mercat espanyol ha passat dels prop de 400 milions d’entrades anuals dels anys 60 als 65–90 milions dels anys 2020. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial: el cinema de gran consum sembla conservar capacitat de convocatòria, mentre que el cinema mitjà i d’autor opera encara amb xifres bastant inferiors.
 
-En aquest context, Simón, Ruiz de Azúa, Laxe o Sorogoyen han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Però treballen en un mercat quatre o cinc vegades més petit. Comparar directament les seves xifres d’espectadors pot ocultar més coses de les que revela.
+En aquest context, Simón, Ruiz de Azúa, Laxe o Sorogoyen han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Ho fan, però, en un mercat quatre o cinc vegades més petit. Comparar directament les seves xifres d’espectadors pot ocultar més coses de les que revela.
 
-Dins la generació actual conviuen relacions molt diferents amb el mercat. Si Sorogoyen amb *As bestas* prova que públic i prestigi encara poden conviure, Albert Serra amb *Pacifiction* (2022, Secció Oficial de Cannes, 14.921 espectadors) i Isaki Lacuesta amb *Entre dos aguas* (2018, Conxa d’Or de Sant Sebastià, 27.466 espectadors) mostren que el prestigi també pot existir gairebé sense mercat de sala.
+Entre els autors contemporanis conviuen relacions molt diferents amb el mercat. Si Sorogoyen amb *As bestas* mostra que el reconeixement internacional encara pot anar acompanyat d’una audiència important, Albert Serra amb *Pacifiction* (2022, Secció Oficial de Cannes, 14.921 espectadors) i Isaki Lacuesta amb *Entre dos aguas* (2018, Conxa d’Or de Sant Sebastià, 27.466 espectadors) mostren que el prestigi també pot existir gairebé sense mercat de sala.
 
-Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altre director del període ha mantingut durant tant de temps una combinació comparable de públic, prestigi internacional i centralitat cultural. Però els seus films recents també operen dins l’escala actual del cinema d’autor.
-
-La principal excepció històrica a la bretxa permet així mesurar-ne la profunditat: fins i tot Almodóvar, el pont més resistent entre públic i prestigi, treballa avui dins un mercat que ja no és el que va construir la seva excepcionalitat.
+Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altre director del període ha mantingut durant tant de temps una combinació comparable de públic, prestigi internacional i centralitat cultural. Però els seus films recents també operen dins l’escala actual del cinema d’autor. La principal excepció històrica a la bretxa permet així mesurar-ne la profunditat: fins i tot Almodóvar treballa avui dins un mercat que ja no és el que va construir la seva excepcionalitat.
 <!-- /punt-5 -->
 
 <!-- punt-6 -->
