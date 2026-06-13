@@ -4,7 +4,7 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 
 <!-- punt-1-cap -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
-
+ 
 <p class="subtitol-punt">La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.</p>
 <!-- /punt-1-cap -->
 
