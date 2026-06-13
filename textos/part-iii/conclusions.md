@@ -37,7 +37,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 
 La taquilla continua sent l’única dada pública plenament comparable al llarg de tot el període. La sala, però, ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes. Mai no havia estat tan fàcil accedir a una pel·lícula després de l’estrena, ni tan difícil reconstruir-ne l’audiència real.
 
-L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació. L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. El seu valor no és la precisió, sinó la direcció: fan visibles diferències que les xifres brutes oculten.
+L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser mètriques oficials ni models científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. El seu valor no és la precisió, sinó la direcció, fan visibles diferències que les xifres brutes oculten.
 
 La bretxa de taquilla pot haver-se eixamplat sense que la distància entre les audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos*  continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
 
