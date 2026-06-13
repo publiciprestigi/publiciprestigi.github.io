@@ -31,16 +31,16 @@ async function carregarDades() {
     festivalsData = await rf.json();
     filmsData = await ri.json();
     marketData = await rm.json();
-    window._filmsData = films;
-    window._festivalsData = festivals;
+    window._filmsData = filmsData;
+    window._festivalsData = festivalsData;
     construirDobleCorona();
     construirSegonCercle();
     construirBretxa();
     construirCazaAlcarras();
     construirDuesGeneracions();
     construirLleis();
-    construirGraficConclusions1();
-    construirGraficConclusions2();
+    window.PiP_graficConclusions1 = construirGraficConclusions1;
+    window.PiP_graficConclusions2 = construirGraficConclusions2;
   } catch(e) { console.error('Error:', e); }
 }
 
