@@ -39,7 +39,7 @@ La taquilla continua sent l’única dada pública plenament comparable al llarg
 
 L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser mètriques oficials ni models científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. El seu valor no és la precisió, sinó la direcció, fan visibles diferències que les xifres brutes oculten.
 
-La bretxa de taquilla pot haver-se eixamplat sense que la distància entre les audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs*, *As bestas* o *Los domingos*  continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
+La bretxa de taquilla pot haver-se eixamplat sense que la distància entre les audiències totals hagi crescut en la mateixa proporció. Films com *Alcarràs* o *Los domingos* continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
 
 La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’escala. Avui, la coincidència entre públic i prestigi pot produir-se amb menys entrades de sala i una audiència posterior més àmplia, però fragmentada entre finestres i molt difícil de verificar.
 <!-- /punt-3 -->
