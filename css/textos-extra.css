@@ -218,11 +218,11 @@ th.col-iic-header {
 
 /* ── Subtítol de punt a les conclusions (i futurs capítols similars) ── */
 .subtitol-punt {
-  display: block;
   font-size: 1rem;
   font-weight: 400;
   color: #888;
-  margin-top: -0.25rem;
+  font-style: italic;
+  margin-top: -0.5rem;
   margin-bottom: 0;
   line-height: 1.4;
 }
