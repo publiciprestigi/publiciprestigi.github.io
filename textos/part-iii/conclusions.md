@@ -92,7 +92,7 @@ L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, pe
 
 Quan pensem en el gran cinema espanyol de les darreres dècades, pensem sobretot en els autors legitimats pels festivals, la crítica i l’acadèmia. El cinema popular ocupa un lloc central en la memòria personal de milions d’espectadors, però sovint un lloc secundari en la història cultural.
 
-Aquesta diferència no respon només al pas del temps. El prestigi disposa d’institucions que seleccionen, interpreten, estudien i transmeten unes obres; la memòria del públic és més dispersa i deixa menys rastre organitzat. Això no obliga a equiparar l’èxit popular amb el valor artístic, però sí a reconèixer que el cànon no conserva totes les experiències amb la mateixa intensitat.
+Les dues memòries es construeixen de manera diferent. El prestigi disposa d’institucions que seleccionen, interpreten, estudien i transmeten determinades pel·lícules. La memòria popular opera per vies socials, afectives i quotidianes: perdura en el llenguatge, els personatges, les escenes i els referents compartits. Això no obliga a equiparar l’èxit popular amb el valor artístic, però sí a reconèixer que el cànon no conserva totes les experiències amb la mateixa intensitat.
 
 L’última paradoxa és, potser, la que dona sentit a tot l’estudi: el cinema que més espectadors van veure no sempre és el cinema que millor recordem, i el cinema que ocupa el centre de la memòria cultural no sempre va ocupar el centre de l’experiència popular. Entre aquestes dues memòries es troba la història completa que aquest estudi ha intentat explicar.
 <!-- /punt-7 -->
