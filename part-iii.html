@@ -231,6 +231,8 @@
     let graficSAInit = false;
     let graficGAInit = false;
     let graficAIInit = false;
+    let graficConc1Init = false;
+    let graficConc2Init = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -269,6 +271,16 @@
       if (s.id === 'autor' && !graficAIInit && window.PiP_graficAutorIndustrial) {
         graficAIInit = true;
         setTimeout(window.PiP_graficAutorIndustrial, 50);
+      }
+      if (s.id === 'conclusions') {
+        if (!graficConc1Init && window.PiP_graficConclusions1) {
+          graficConc1Init = true;
+          setTimeout(window.PiP_graficConclusions1, 50);
+        }
+        if (!graficConc2Init && window.PiP_graficConclusions2) {
+          graficConc2Init = true;
+          setTimeout(window.PiP_graficConclusions2, 100);
+        }
       }
     }
 
