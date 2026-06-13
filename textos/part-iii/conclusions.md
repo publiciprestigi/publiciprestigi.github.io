@@ -65,7 +65,7 @@ El resultat és un sistema de distribució més ampli, però també més opac. L
 
 El mercat espanyol ha passat dels prop de 400 milions d’entrades anuals dels anys 60 als 65–90 milions dels anys 2020. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial: el cinema de gran espectacle conserva capacitat de convocatòria, mentre que el cinema mitjà i d’autor opera amb xifres molt inferiors a les d’etapes anteriors.
 
-En aquest context, Simón, Ruiz de Azúa, Sorogoyen o Laxe han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Camus o Erice en els seus millors moments. Però treballen en un mercat quatre o cinc vegades més petit. Comparar directament les seves xifres d’espectadors pot ocultar més coses de les que revela.
+En aquest context, Simón, Ruiz de Azúa, Sorogoyen o Laxe han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Però treballen en un mercat quatre o cinc vegades més petit. Comparar directament les seves xifres d’espectadors pot ocultar més coses de les que revela.
 
 Dins la generació actual conviuen relacions molt diferents amb el mercat. Si Sorogoyen amb *As bestas* prova que mercat i prestigi encara poden conviure, Albert Serra amb *Pacifiction* (2022, Secció Oficial de Cannes, 14.921 espectadors) i Isaki Lacuesta amb *Entre dos aguas* (2018, Conxa d’Or de Sant Sebastià, 27.466 espectadors) mostren que el prestigi també pot existir gairebé sense mercat de sala.
 
