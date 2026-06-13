@@ -49,13 +49,13 @@ La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’esca
 
 <p class="subtitol-punt">Tenim més públic potencial i menys dades comunes; més consum, però una experiència menys compartida.</p>
 
-Durant els anys noranta i dos mil, les televisions generalistes finançaven i amplificaven l’audiència a gran escala. Una pel·lícula podia passar de les sales a una emissió televisiva vista simultàniament per milions de persones i convertir-se en una experiència col·lectiva. (film-esdeveniment)
+Des dels 90s, les televisions van assumir una funció decisiva: finançaven el cinema i, alhora, n’amplificaven l’audiència. Aquell model va sostenir un cinema mitjà i gran capaç de circular entre les sales, la televisió i el consum domèstic. Als 2010, la concentració de finançament, promoció i estrena va arribar al seu màxim amb el *film-esdeveniment*, capaç de convertir una pel·lícula en un fenomen col·lectiu.
 
-Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una bona part del finançament i del poder de distribució ha passat a les plataformes, que tenen una lògica diferent: ampliar i retenir subscriptors, més que crear fenòmens col·lectius d’audiència.
+Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una part creixent del finançament i del poder de distribució ha passat a les plataformes, que operen amb una lògica diferent: ampliar i retenir subscriptors, més que concentrar milions d’espectadors en un mateix moment.
 
-Una pel·lícula pot arribar avui a espectadors de molts països, durant mesos o anys i a través de dispositius diferents, sense generar necessàriament un moment compartit. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat.
+Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents, sense generar necessàriament una experiència compartida. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat.
 
-El cinema disposa avui d’un sistema de distribució potencialment global, però més opac i menys compartit. La tecnologia amplia l’accés mentre debilita els instruments públics per mesurar-lo; les polítiques obren noves portes, però ho fan dins d’una indústria cada vegada més dependent de decisions empresarials que queden fora de l’escrutini públic.
+El cinema disposa avui d’un sistema de distribució potencialment global, però més opac i menys compartit. La tecnologia amplia l’accés mentre debilita els instruments públics per mesurar-lo. La regulació intenta seguir el ritme d’un ecosistema que canvia més de pressa i concentra en mans privades les dades d’audiència i les decisions sobre què es produeix, què es promociona i què arriba al públic, sovint fora de l’escrutini públic.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
