@@ -63,7 +63,7 @@ El resultat és un sistema de distribució més ampli, però també més opac. L
 
 <p class="subtitol-punt">La generació actual ha assolit reconeixements comparables als de les generacions anteriors, però dins d’un mercat de sala que ja no és comparable.</p>
 
-El mercat espanyol ha passat dels prop de 400 milions d’entrades anuals dels anys 60 als 65–90 milions dels anys 2020. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial: el cinema de gran espectacle conserva capacitat de convocatòria, mentre que el cinema mitjà i d’autor opera amb xifres molt inferiors a les d’etapes anteriors.
+El mercat espanyol ha passat dels prop de 400 milions d’entrades anuals dels anys 60 als 65–90 milions dels anys 2020. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial: el cinema de gran consum sembla conservar capacitat de convocatòria, mentre que el cinema mitjà i d’autor opera encara amb xifres bastant inferiors a les d’etapes anteriors.
 
 En aquest context, Simón, Ruiz de Azúa, Sorogoyen o Laxe han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Però treballen en un mercat quatre o cinc vegades més petit. Comparar directament les seves xifres d’espectadors pot ocultar més coses de les que revela.
 
