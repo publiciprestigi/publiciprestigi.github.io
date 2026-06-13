@@ -47,7 +47,7 @@ La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’esca
 <!-- punt-4 -->
 ## 4. Més públic potencial, menys experiència compartida
 
-<p class="subtitol-punt">Tenim més públic potencial i menys dades comunes; més consum, però una experiència menys compartida.</p>
+<p class="subtitol-punt">L’audiència s’amplia i arriba més lluny, però genera menys dades públiques i dilueix l’experiència col·lectiva.</p>
 
 Des dels 90s, les televisions van assumir una funció decisiva: finançaven el cinema i, alhora, n’amplificaven l’audiència. Aquell model va sostenir un cinema mitjà i gran capaç de circular entre les sales, la televisió i el consum domèstic. Als 2010, la concentració de finançament, promoció i estrena va arribar al seu màxim amb el *film-esdeveniment*, capaç de convertir una pel·lícula en un fenomen col·lectiu.
 
@@ -55,7 +55,7 @@ Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centrali
 
 Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents, sense generar necessàriament una experiència compartida. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat.
 
-El cinema disposa avui d’un sistema de distribució potencialment global, però més opac i menys compartit. La tecnologia amplia l’accés mentre debilita els instruments públics per mesurar-lo. La regulació intenta seguir el ritme d’un ecosistema que canvia més de pressa i imposa a les plataformes obligacions de finançament i promoció, però no resol el problema central: les dades d’audiència no són públiques i es calculen amb criteris que no són homogenis ni comparables.
+El cinema disposa avui d’un sistema de distribució potencialment global, però més opac i menys compartit. La tecnologia amplia l’accés mentre debilita els instruments públics per mesurar-lo. La regulació intenta seguir el ritme d’un ecosistema que canvia més de pressa i imposa a les plataformes obligacions de finançament i promoció, però no resol el problema central: les audiències es calculen amb criteris que no són homogenis ni comparables i, sobretot, les dades no són públiques.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
