@@ -5,7 +5,7 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 <!-- punt-1 -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
-<span style="color:#999">La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.</span>
+*La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.*
 
 El balanç quantitatiu és inequívoc: dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Fins i tot incorporant-hi els quinze títols del «segon cercle», la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
 
