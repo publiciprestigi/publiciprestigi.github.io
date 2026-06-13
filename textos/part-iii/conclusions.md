@@ -55,7 +55,7 @@ Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centrali
 
 Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents, sense generar necessàriament una experiència compartida. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat.
 
-El resultat és un sistema de distribució més global, però també més opac. La tecnologia facilita l’accés mentre debilita els instruments públics per mesurar-lo. La regulació intenta seguir el ritme d’un ecosistema que canvia més de pressa i imposa a les plataformes obligacions de finançament i promoció, però no resol el problema central: les audiències es calculen amb criteris que no són homogenis ni comparables i, sobretot, les dades no són públiques.
+El resultat és un sistema de distribució més ampli, però també més opac. La tecnologia facilita l’accés mentre debilita els instruments públics per mesurar-lo. La regulació intenta seguir el ritme d’un ecosistema que canvia més de pressa i imposa a les plataformes obligacions de finançament i promoció, però no resol el problema central: les audiències es calculen amb criteris que no són homogenis ni comparables i, sobretot, les dades no són públiques.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
