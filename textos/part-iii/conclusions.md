@@ -2,9 +2,12 @@
 Les dades del públic i del prestigi no ofereixen una única història del cinema espanyol, sinó dues trajectòries que només coincideixen excepcionalment. Encreuar-les permet identificar set paradoxes que resumeixen les principals transformacions recents del període estudiat.
 <!-- /intro -->
 
-<!-- punt-1 -->
+<!-- punt-1-cap -->
 ## 1. Una mateixa cinematografia, dos sistemes gairebé independents
 
+<!-- /punt-1-cap -->
+
+<!-- punt-1-cos -->
 <span style="color:#777">La 'doble corona' és l’excepció que deixa al descobert els límits dels dos sistemes.</span>
 
 El balanç quantitatiu és inequívoc: dels 264 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 10 formen part també del Top 100 històric d’espectadors. Fins i tot incorporant-hi els quinze títols del «segon cercle», la zona de contacte queda limitada a 25 pel·lícules: menys d’un 10% del conjunt.
@@ -12,11 +15,14 @@ El balanç quantitatiu és inequívoc: dels 264 films espanyols documentats a le
 El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica van ser els anys de la Transició, quan el cinema crític va trobar també un públic ampli a les sales i la frontera entre autoria i mercat es va fer més porosa.
 
 Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més industrial, que parteix dels gèneres populars i de la vocació comercial, però hi incorpora autoria i ambició formal. Aquest cinema mostra, des de l’altre vessant, que la frontera no és absoluta.
-<!-- /punt-1 -->
+<!-- /punt-1-cos -->
 
-<!-- punt-2 -->
+<!-- punt-2-cap -->
 ## 2. Més prestigi internacional, menys mercat de sala
 
+<!-- /punt-2-cap -->
+
+<!-- punt-2-cos -->
 <span style="color:#777">El cinema d’autor s’ha fet internacionalment més fort precisament quan la seva connexió amb el gran mercat de sala es feia més feble.</span>
 
 El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cinema d’autor s’ha professionalitzat dins un ecosistema propi: productores especialitzades, coproduccions europees, ajudes selectives, escoles, laboratoris, residències i festivals que actuen com a vies d’accés al circuit internacional.
@@ -24,7 +30,7 @@ El trencament decisiu arriba als anys 2010. Durant les darreres dècades, el cin
 Moltes pel·lícules ja no es produeixen primer i arriben després als festivals, sinó que es desenvolupen des de l’inici pensant en les seves regles, calendaris i espais de circulació. Aquesta especialització ha reforçat la presència exterior del cinema espanyol, però també ha augmentat la distància respecte del gran públic.
 
 Les plataformes, després, han accelerat la separació en oferir un circuit de distribució alternatiu a la sala massiva. L’èxit exterior i la distància interior poden ser, en part, dues conseqüències del mateix procés.
-<!-- /punt-2 -->
+<!-- /punt-2-cos -->
 
 <!-- punt-3 -->
 ## 3. Més finestres, menys dades
