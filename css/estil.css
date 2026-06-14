@@ -873,8 +873,8 @@ sup {
   top: -0.1em;
 }
 sup a {
-  color: #888;
-  text-decoration: none;
+  color: #888 !important;
+  text-decoration: none !important;
   font-weight: 500;
 }
 sup a:hover { color: var(--color-text); opacity: 1; }
