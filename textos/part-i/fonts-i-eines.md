@@ -10,7 +10,7 @@ També s'han consultat la resta d'[anuaris publicats des de 1968](https://www.cu
 
 ## Abast cronològic
 
-L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del Top 100. És per això que totes les dades de l'estudi parteixen d'aquest any, tant per la Part I d'espectadors a sales de cinema com per la Part II de festivals i premis. <sup><a href="notes.html#n1”>[1]</a></sup>
+L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors a aquesta data (existents però fragmentàries) no permeten establir comparatives sòlides amb la resta del Top 100. És per això que totes les dades de l'estudi parteixen d'aquest any, tant per la Part I d'espectadors a sales de cinema com per la Part II de festivals i premis. <sup>[1]</sup>
 
 ## Coproduccions i directors no espanyols
 
@@ -22,7 +22,7 @@ Les xifres d'espectadors de l'ICAA per als films anteriors als anys 80 són tota
 
 ## El problema del rang brut d'espectadors
 
-Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys 60, els espanyols anaven al cinema de mitjana 10 o 12 vegades l'any en un país de 32 milions d'habitants. El 2025, van al cinema menys d'una vegada i mitja l'any, en un país de 48 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup><a href="notes.html#n2”>[2]</a></sup>
+Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys 60, els espanyols anaven al cinema de mitjana 10 o 12 vegades l'any en un país de 32 milions d'habitants. El 2025, van al cinema menys d'una vegada i mitja l'any, en un país de 48 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup>[2]</sup>
 
 *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espectadors en un mercat total de 370 milions d'entrades (una quota de l'1,16%). *Mujeres al borde de un ataque de nervios* (1988) va fer 3,3 milions en un mercat de 85 milions (una quota del 3,94%). En espectadors bruts guanya Pedro Lazaga. En quota de mercat, Almodóvar quasi quadruplica la seva marca. L'Índex d'Impacte Cultural (IIC) proposa respondre quina de les dues va impactar més realment la societat del seu temps.
 
@@ -39,7 +39,7 @@ A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna expli
 
 ## Sobre la quota de mercat i el símbol ≈
 
-Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern, *Historia del cine español*, Cátedra) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore. <sup><a href="notes.html#n3”>[3]</a></sup>
+Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern, *Historia del cine español*, Cátedra) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore. <sup>[3]</sup>
 
 ## Sobre els textos de 'Context'
 
