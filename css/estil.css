@@ -864,11 +864,6 @@ body.pag-inici .inici-xifra-n {
 
 
 /* ── Color antetítol per part ── */
-/* ── Notes: offset scroll per header+nav fixos (72+45px) ── */
-.nota {
-  scroll-margin-top: 132px;
-}
-
 /* ── Notes: superscript sense trencar interlineat ── */
 sup {
   font-size: 0.72em;
@@ -883,6 +878,15 @@ sup a {
   font-weight: 500;
 }
 sup a:hover { color: var(--color-text); opacity: 1; }
+
+/* ── Links dins el tooltip de notes ── */
+#nota-tooltip a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+#nota-tooltip a:hover {
+  opacity: 0.75;
+}
 
 body.part-iii .titol-sticky-sup { color: #5a4a8a; }
 body.part-iii .titol-sticky-sup { color: #5a4a8a; }
