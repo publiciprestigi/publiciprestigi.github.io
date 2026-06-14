@@ -53,9 +53,7 @@ A partir dels 90s, les televisions van assumir una funció decisiva: finançaven
 
 Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una part creixent del finançament i la distribució ha passat a les plataformes, que operen amb una lògica diferent: ampliar i retenir subscriptors, més que concentrar milions d’espectadors en un mateix moment.
 
-Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents, sense generar necessàriament una experiència compartida. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat.
-
-El resultat és un sistema de distribució més global, però menys compartit. La tecnologia amplia l’accés i multiplica els recorreguts d’una pel·lícula, però dilueix els moments col·lectius que abans es concentraven a les sales i en les grans emissions televisives. El consum pot ser massiu sense arribar a convertir-se en una experiència comuna.
+Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. El consum s’amplia, però dilueix els moments col·lectius que abans concentraven les sales i les grans emissions televisives.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
