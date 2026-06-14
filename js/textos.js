@@ -58,7 +58,12 @@
       return;
     }
 
-    div.innerHTML = marked.parse(contingut);
+    // Convertir <sup>[N]</sup> en <sup><a href="notes.html#nN">[N]</a></sup>
+    const html = marked.parse(contingut).replace(
+      /<sup>\[(\d+)\]<\/sup>/g,
+      '<sup><a href="notes.html#n$1">[$1]</a></sup>'
+    );
+    div.innerHTML = html;
     div.classList.add('text-md-carregat');
   }
 
