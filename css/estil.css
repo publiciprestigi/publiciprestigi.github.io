@@ -738,6 +738,8 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
 
 /* --- Sobre el projecte: sense línies separadores entre seccions --- */
 .contingut-text h2 {
+  scroll-margin-top: 132px;
+}
   border-bottom: none;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
