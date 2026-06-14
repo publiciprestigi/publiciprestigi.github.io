@@ -2,7 +2,7 @@ L'estudi treballa exclusivament amb nombre d'entrades venudes, no amb xifres de 
 
 ## L'ICAA com a font principal
 
-Aquesta primera part de l'estudi recull les 100 pel·lícules espanyoles amb més espectadors acumulats des de l'estrena, basant-se en el rànquing oficial de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura publicat a l'[Anuari 2023](https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html), últim oficial publicat a dia d'avui.
+Aquesta primera part de l'estudi recull les 100 pel·lícules espanyoles amb més espectadors acumulats des de l'estrena, basant-se en el rànquing oficial de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, últim oficial publicat a dia d'avui.
 
 Les dues últimes posicions del rànquing original: *Una señora estupenda* (1967, d'Eugenio Martín, amb Lola Flores) i *Digan lo que digan* (1968, de Mario Camus, amb Raphael), han estat substituïdes per *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025) de Santiago Segura, les úniques pel·lícules espanyoles estrenades d'aquests darrers anys que han superat el llindar d'espectadors necessari per entrar al Top 100 de tots els temps.
 
