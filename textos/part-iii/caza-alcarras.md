@@ -61,9 +61,9 @@ El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, d
 <!-- /comentari-distribucio -->
 
 <!-- final-distribucio -->
-La transformació no és només tecnològica, sinó de lògica comercial. Als anys 60 i 70, un film podia trigar 2–3 anys a completar el seu recorregut perquè les còpies físiques circulaven pel territori: grans ciutats, capitals de província, cinemes de poble, reestrenes. Avui, en temps digitals, el recorregut també pot durar 2–3 anys, però per una altra raó: cada finestra s’obre quan li toca dins el calendari d’explotació. Abans el temps depenia del territori; ara depèn dels drets.
+La transformació no és només tecnològica, sinó de lògica comercial. Als anys 60 i 70, un film podia trigar 2–3 anys a completar el seu recorregut perquè les còpies físiques circulaven pel territori: grans ciutats, capitals de província, cinemes de poble, reestrenes. Avui, en temps digitals, el recorregut també pot durar 2–3 anys, però per una altra raó: cada finestra s’obre quan li toca dins el calendari d’explotació. Abans el temps depenia del territori, ara depèn dels drets.
 
-La durada pot ser semblant, però la lògica de distribució és completament diferent. El gràfic següent ho quantifica:
+El calendari pot semblar comparable, però la lògica de distribució és completament diferent. El gràfic següent ho quantifica:
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
