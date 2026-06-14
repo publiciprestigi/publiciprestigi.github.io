@@ -37,7 +37,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 
 La taquilla continua sent l’única dada pública plenament comparable al llarg de tot el període. La sala, però, ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes. Mai no havia estat tan fàcil accedir a una pel·lícula després de l’estrena, ni tan difícil reconstruir-ne l’audiència real.
 
-L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser mètriques oficials ni models científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. Serveixen per orientar la comparació i fer visibles diferències que les xifres brutes oculten. Malgrat les obligacions de finançament i promoció, les plataformes continuen sense oferir dades d’audiència públiques i comparables. <sup>[N]</sup>
+L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser mètriques oficials ni models científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. Serveixen per orientar la comparació i fer visibles diferències que les xifres brutes oculten. Malgrat les obligacions de finançament i promoció, les plataformes continuen sense oferir dades d’audiència públiques i comparables. <sup>[20]</sup>
 
 Les xifres de taquilla poden fer pensar que el cinema popular i el cinema de festival s’han allunyat més del que realment ho han fet en audiència total. Films com *Sirât* o *Los domingos* continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
 
@@ -81,7 +81,7 @@ El mercat cinematogràfic és també una construcció política i tecnològica. 
 
 En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení, en paral·lel a les polítiques actives d’igualtat. Aquesta renovació té lloc dins d’una indústria audiovisual en expansió (amb gran activitat en sèries i cinema de plataformes), però just quan el mercat de sala es contrau i el cinema mitjà i d’autor hi perd espai. Les dones accedeixen així al centre simbòlic d’un territori històricament masculí, curiosament, quan deixa de ser el centre industrial.
 
-L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. <sup>[N]</sup>
+L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. <sup>[16]</sup>
 
 <!-- /punt-6 -->
 
