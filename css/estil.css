@@ -356,6 +356,43 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
    PÀGINES ESTÀTIQUES (Notes, Sobre, Legal)
    ============================================================ */
 .part-capcalera { max-width: var(--amplada-text); margin: 0 auto 48px; padding-bottom: 32px; border-bottom: 1px solid var(--color-linia); }
+.part-capcalera h1 { font-size: 1.7rem; }
+.part-subtitol { font-size: 0.95rem; color: #888; margin-top: 6px; margin-bottom: 0; line-height: 1.55; }
+
+/* ── Pàgina de versions ── */
+.versio-item {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-linia);
+}
+.versio-item:last-child { border-bottom: none; }
+.versio-cap {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+.versio-num {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.versio-data {
+  font-size: 0.82rem;
+  color: #888;
+}
+.versio-resum {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 8px 0;
+}
+.versio-actual {
+  font-size: 0.82rem;
+  color: #888;
+  font-style: italic;
+  margin: 0;
+}
+.versio-pendent .versio-num { color: #aaa; }
 .part-etiqueta { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-text-suau); margin-bottom: 8px; }
 .seccio { max-width: var(--amplada-text); margin: 0 auto 64px; }
 .seccio h2 { margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--color-linia); }
