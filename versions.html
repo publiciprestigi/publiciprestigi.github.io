@@ -45,12 +45,29 @@
 
     <div class="part-capcalera">
       <h1>Versions</h1>
-      <p class="part-subtitol">Historial de totes les versions publicades de l'estudi, amb el detall dels canvis de cada una. Qualsevol versió anterior és accessible i comparable.</p>
+      <p class="part-subtitol">Historial de totes les versions publicades de l'estudi. Cada versió és un snapshot complet i permanent, accessible a la seva URL pròpia.</p>
     </div>
 
-    <section class="seccio" id="llista-versions">
-      <!-- Les versions es carreguen des de metadata.json -->
-    </section>
+    <div class="contingut-text">
+
+      <div class="versio-item" id="v1">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1 (1965–2025)</span>
+          <span class="versio-data">Publicació: juny de 2026</span>
+        </div>
+        <p class="versio-resum">Primera versió pública de l'estudi. Inclou la Part I (Top 100 de pel·lícules espanyoles per espectadors a sales), la Part II (presència i premis als quatre grans festivals internacionals: Cannes, Berlín, Venècia i Sant Sebastià) i la Part III (anàlisi comparativa, mètriques pròpies IIC i IAA, i interpretació de la bretxa entre públic i prestigi).</p>
+        <p class="versio-actual">← Versió actual</p>
+      </div>
+
+      <div class="versio-item versio-pendent" id="v1-1">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1.1 (1965–2025)</span>
+          <span class="versio-data">Pendent de publicació</span>
+        </div>
+        <p class="versio-resum">Correcció de dades de mercat 2024 (xifra Comscore verificada: 71M d'espectadors). Actualització de les mètriques IIC i quota afectades. Incorporació de correccions menors als textos.</p>
+      </div>
+
+    </div>
 
   </main>
 
@@ -72,19 +89,7 @@
   <script>
     fetch('data/metadata.json').then(r=>r.json()).then(data=>{
       document.getElementById('versio-label').textContent = data.versio_label;
-      const contenidor = document.getElementById('llista-versions');
-      const versionsOrdenades = [...data.versions].reverse();
-      contenidor.innerHTML = versionsOrdenades.map(v => `
-        <div class="versio-item">
-          <div class="versio-cap">
-            <span class="versio-num">${v.label}</span>
-            <span class="versio-data">${v.publicat}</span>
-          </div>
-          <p class="versio-resum">${v.resum}</p>
-        </div>
-      `).join('');
     }).catch(()=>{});
-
     function toggleBuscador(){
       const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
       if(o.style.display==='none'){o.style.display='flex';i.focus();}
