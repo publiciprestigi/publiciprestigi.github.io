@@ -1,5 +1,5 @@
 <!-- intro -->
-Dos films espanyols premiats a Berlín, separats per 56 anys. *La caza* arriba en ple franquisme: tercer llargmetratge de Carlos Saura, amb 34 anys, i Ós de Plata a millor direcció el 1966. És el primer gran premi de direcció per a un director espanyol en un dels festivals europeus de referència amb una producció espanyola, amb l’excepció prèvia, parcialment comparable, de Buñuel a Cannes per *Los olvidados* (1951), de producció mexicana. <sup>[N]</sup>
+Dos films espanyols premiats a Berlín, separats per 56 anys. *La caza* arriba en ple franquisme: tercer llargmetratge de Carlos Saura, amb 34 anys, i Ós de Plata a millor direcció el 1966. És el primer gran premi de direcció per a un director espanyol en un dels festivals europeus de referència amb una producció espanyola, amb l’excepció prèvia, parcialment comparable, de Buñuel a Cannes per *Los olvidados* (1951), de producció mexicana. <sup>[10]</sup>
 
 *Alcarràs*, en canvi, neix en un moment cultural i industrial molt diferent: segon llargmetratge de Carla Simón, amb 36 anys, i Ós d’Or el 2022. El premi marca una doble fita: la directora es converteix en la primera cineasta espanyola que guanya el màxim guardó d’un dels grans festivals internacionals, i el film, en el primer en llengua catalana a aconseguir-ho.
 
@@ -32,7 +32,7 @@ El factor multiplicador varia segons el període i s'expressa com a forquilla pe
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
-- L'IAA no és un recompte de finestres: estima la capacitat real de cada ecosistema de distribució per afegir públic. Per això no creix de manera lineal: puja amb el primer cicle TVE/VHS, baixa quan l’audiència es fragmenta entre més canals i formats, i torna a créixer amb les plataformes digitals, on l’accés s’amplia però la verificació es fa més difícil. <sup>[N]</sup>
+- L'IAA no és un recompte de finestres: estima la capacitat real de cada ecosistema de distribució per afegir públic. Per això no creix de manera lineal: puja amb el primer cicle TVE/VHS, baixa quan l’audiència es fragmenta entre més canals i formats, i torna a créixer amb les plataformes digitals, on l’accés s’amplia però la verificació es fa més difícil. <sup>[11]</sup>
 
 També cal marcar una diferència de fons. Les entrades de sala mesuren una experiència col·lectiva: gent reunida en un mateix espai i en un mateix moment. L’IAA mesura una altra cosa: quantes persones han vist el film en total, sumant totes les vies disponibles durant els primers anys comercials. Les dues preguntes no són intercanviables. Un milió de visualitzacions individuals no és el mateix fenomen cultural que cent mil entrades de cinema.
 
@@ -46,7 +46,7 @@ També cal marcar una diferència de fons. Les entrades de sala mesuren una expe
 
 En el cas de *La caza*, l’emissió televisiva va arribar gairebé tretze anys després de l’estrena, fora de qualsevol estratègia planificada. *Alcarràs*, en canvi, neix dins un altre esquema: TVE, TV3/3Cat i Movistar+ formen part del projecte des de l’inici, com a coproductores i futures finestres d’emissió.
 
-El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, fa l’estrena televisiva només 19 mesos després de fer-ho al cinema: <sup>[N]</sup>
+El quadre següent mostra el contrast. *La ciudad no es para mí* i *La caza*, dos pols oposats, van arribar a la televisió molts anys després de l’estrena, quan el seu cicle comercial ja estava tancat. *Alcarràs*, en canvi, fa l’estrena televisiva només 19 mesos després de fer-ho al cinema: <sup>[12]</sup>
 
 
 | Títol | Estrena a sales | Estrena a TV | Diferència | Canal i franja | IAA |
@@ -67,7 +67,7 @@ El calendari pot semblar comparable, però la lògica de distribució és comple
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
-- *La caza* queda reduïda a la seva xifra de sala, 341k espectadors, perquè no té altres finestres computables. *Alcarràs*, en canvi, parteix d’una xifra semblant, 403k, però hi suma uns 530k espectadors calculats a partir del *share* habitual dels espais on es va emetre a TV3/3Cat i La 2/TVE, i dues capes estimades: televisió de pagament (Movistar+) i plataformes digitals. En total, el gràfic situa el punt mitjà de l’IAA estimat al voltant d’1,31M. <sup>[N]</sup>
+- *La caza* queda reduïda a la seva xifra de sala, 341k espectadors, perquè no té altres finestres computables. *Alcarràs*, en canvi, parteix d’una xifra semblant, 403k, però hi suma uns 530k espectadors calculats a partir del *share* habitual dels espais on es va emetre a TV3/3Cat i La 2/TVE, i dues capes estimades: televisió de pagament (Movistar+) i plataformes digitals. En total, el gràfic situa el punt mitjà de l’IAA estimat al voltant d’1,31M. <sup>[13]</sup>
 
 Aquesta és la part més opaca del sistema actual. Les plataformes no publiquen dades individuals de visualització per títol, i ni l’ICAA ni la SGAE recullen aquesta informació de manera desagregada. La capa digital existeix, però queda fora de la mesura pública. Per això l’audiència acumulada d’*Alcarràs* és clarament superior a la xifra de sala, encara que només la puguem estimar.
 <!-- /comentari-final -->
