@@ -511,7 +511,7 @@ function construirRànquingDirectors() {
         (aliasClau ? f.director.includes(aliasClau) : f.director === d.nom))
       .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
       .join(' · ');
-    const nota = d.nom === 'Aitor Arregi' ? '<sup><a href="notes.html#n7">[7]</a></sup>' : '';
+    const nota = d.nom === 'Aitor Arregi' ? '&nbsp;<sup><a href="notes.html#n7">[7]</a></sup>' : '';
     return `<td>${d.nom}${nota}${pr}
       <div id="${id}" class="top3-dir-films" style="display:none">${films}</div>
     </td>`;
