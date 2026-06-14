@@ -864,6 +864,11 @@ body.pag-inici .inici-xifra-n {
 
 
 /* ── Color antetítol per part ── */
+/* ── Notes: offset scroll per header+nav fixos (72+45px) ── */
+.nota {
+  scroll-margin-top: 132px;
+}
+
 /* ── Notes: superscript sense trencar interlineat ── */
 sup {
   font-size: 0.72em;
