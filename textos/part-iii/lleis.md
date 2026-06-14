@@ -13,7 +13,7 @@ El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50%
 
 ### 2. Les televisions privades (1990): canvi de model
 
-L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró, els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades: taquilla, televisió i Estat. <sup>[N]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
+L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró, els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades: taquilla, televisió i Estat. <sup>[14]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
@@ -21,7 +21,7 @@ La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Sempr
 
 ### 4. L'IVA del 21% (2012) i la fragilitat de la sala
 
-El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cultural del 8% al 21% en plena crisi. <sup>[N]</sup> El mercat cau de prop de ~100 milions d’entrades el 2011 a uns ~70 milions el 2013. Després hi haurà una recuperació parcial, però la sala ja queda instal·lada en una fragilitat nova, que la pandèmia acabarà d’exposar. A mesura que la sala perd centralitat, les finestres domèstiques guanyen pes: televisió de pagament primer, plataformes després. Una part del consum no desapareix, es desplaça.
+El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cultural del 8% al 21% en plena crisi. <sup>[15]</sup> El mercat cau de prop de ~100 milions d’entrades el 2011 a uns ~70 milions el 2013. Després hi haurà una recuperació parcial, però la sala ja queda instal·lada en una fragilitat nova, que la pandèmia acabarà d’exposar. A mesura que la sala perd centralitat, les finestres domèstiques guanyen pes: televisió de pagament primer, plataformes després. Una part del consum no desapareix, es desplaça.
 
 ### 5. Netflix i l'explosió de plataformes (2015–2025)
 
@@ -29,11 +29,11 @@ Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el pun
 
 ### 6. Les mesures de paritat (2018–2020): un canvi estructural
 
-La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d’igualtat de gènere, però sense mesures concretes de discriminació positiva. El canvi real arriba el 2018, quan l’ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s’hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L’efecte és mesurable: els films dirigits per dones van passar de representar el 23% dels títols beneficiaris de les ajudes selectives el 2018 al 51% el 2021. La nova presència femenina als festivals de prestigi dels últims anys (Ruiz de Azúa, Simón, Camborda, Palomero, Funes) no s’entén sense aquestes polítiques. Ara bé, els films dirigits per dones tenen de mitjana un cost reconegut un 42% inferior (2023): amb menys recursos, el cinema més personal és sovint l’única opció viable.
+La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d’igualtat de gènere, però sense mesures concretes de discriminació positiva. El canvi real arriba el 2018, quan l’ICAA introdueix punts extra per a projectes amb dones a la direcció; el 2020 s’hi afegeixen reserves de crèdit obligatòries per a films dirigits exclusivament per directores. L’efecte és mesurable: els films dirigits per dones van passar de representar el 23% dels títols beneficiaris de les ajudes selectives el 2018 al 51% el 2021. La nova presència femenina als festivals de prestigi dels últims anys (Ruiz de Azúa, Simón, Camborda, Palomero, Funes) no s’entén sense aquestes polítiques. Ara bé, els films dirigits per dones tenen de mitjana un cost reconegut un 42% inferior (2023): amb menys recursos, el cinema més personal és sovint l’única opció viable. <sup>[16]</sup>
 
 ### 7. La Llei de Comunicació Audiovisual (2022) i la batalla del productor independent
 
-La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions. <sup>[N]</sup> Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cine i la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d’urgència, continua pendent en fase d’esmenes. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
+La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions. <sup>[17]</sup> Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cine i la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d’urgència, continua pendent en fase d’esmenes. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
 <!-- /moments -->
 
 <!-- conclusio -->
