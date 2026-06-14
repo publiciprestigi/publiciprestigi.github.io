@@ -286,7 +286,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
    PÀGINA INICI
    ============================================================ */
 .contingut { max-width: var(--amplada-max); margin: 0 auto; padding: 48px 24px 64px; }
-.contingut-text { max-width: var(--amplada-text); }
+.contingut-text { max-width: var(--amplada-text); margin: 0 auto; }
 
 .inici-portada { max-width: var(--amplada-text); margin: 0 auto; padding-top: 16px; }
 .inici-titol { margin-bottom: 32px; }
@@ -364,6 +364,7 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   padding: 28px 0;
   border-bottom: 1px solid var(--color-linia);
 }
+.versio-item:first-child { border-top: none; padding-top: 0; }
 .versio-item:last-child { border-bottom: none; }
 .versio-cap {
   display: flex;
