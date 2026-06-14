@@ -41,6 +41,8 @@
       position: fixed;
       z-index: 9999;
       max-width: 380px;
+      max-height: 320px;
+      overflow-y: auto;
       background: #fff;
       border: 1px solid #ddd;
       border-radius: 6px;
