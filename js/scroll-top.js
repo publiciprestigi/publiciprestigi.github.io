@@ -8,17 +8,25 @@
   btn.textContent = '↑';
   document.body.appendChild(btn);
 
+  const sidebar = document.querySelector('.contingut-sidebar');
+  const scrollTarget = sidebar || window;
+
   function onScroll() {
-    if (window.scrollY > 300) {
+    const pos = sidebar ? sidebar.scrollTop : window.scrollY;
+    if (pos > 300) {
       btn.classList.add('visible');
     } else {
       btn.classList.remove('visible');
     }
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  scrollTarget.addEventListener('scroll', onScroll, { passive: true });
 
   btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (sidebar) {
+      sidebar.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   });
 })();
