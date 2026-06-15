@@ -182,6 +182,7 @@
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
+      window.scrollTo(0, 0);
     }
 
     function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }

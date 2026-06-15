@@ -243,6 +243,7 @@
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
+      window.scrollTo(0, 0);
 
       // Inicialitza el gràfic de bretxa la primera vegada que es visita
       if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
