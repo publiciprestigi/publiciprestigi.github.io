@@ -47,7 +47,7 @@
       <div class="sidebar-spacer"></div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Context</div>
-        <a href="#" class="sidebar-link" data-seccio="dades">Fonts i eines</a>
+        <a href="#" class="sidebar-link" data-seccio="intro">Fonts i eines</a>
         <a href="#" class="sidebar-link" data-seccio="mercat">Mercat i població</a>
       </div>
       <div class="sidebar-grup">
@@ -79,7 +79,7 @@
       </div>
 
       <!-- MODEL A: només text editorial -->
-      <div class="seccio-contingut" id="seccio-dades">
+      <div class="seccio-contingut" id="seccio-intro">
         <div class="contingut-text">
           <div class="text-md" data-text="part-i/fonts-i-eines"></div>
         </div>
@@ -196,7 +196,7 @@
 
   <script>
     const seccions = [
-      { id: 'dades',       titol: 'Fonts i eines',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'intro',       titol: 'Fonts i eines',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: 'mercat',      titol: 'Mercat i població',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: 'decades',     titol: 'Resum per dècada',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: '60s',         titol: 'Anys 1965–1969',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '1 de 7' },
@@ -236,6 +236,7 @@
       btnSeg.textContent = next ? next.titol + ' →' : '';
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = s.pos || ((idx + 1) + ' de ' + seccions.length);
+      history.pushState({ idx }, '', '#' + s.id);
       document.querySelector('.contingut-sidebar').scrollTop = 0;
       document.documentElement.scrollTop = 0;
 
@@ -261,7 +262,31 @@
       document.getElementById('versio-label').textContent = data.versio_label;
     }).catch(() => {});
 
-    mostraSeccio(0);
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      mostraSeccio(idx >= 0 ? idx : 0);
+    })();
+
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+        document.getElementById('titol-principal').textContent = s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
 
     function toggleBuscador() {
       const o = document.getElementById('buscador-overlay');

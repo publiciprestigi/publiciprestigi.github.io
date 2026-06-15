@@ -49,10 +49,10 @@
         <div class="sidebar-grup-titol">Capítols</div>
         <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona</a>
         <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa</a>
-        <a href="#" class="sidebar-link" data-seccio="la-caza">La caza vs. Alcarràs</a>
+        <a href="#" class="sidebar-link" data-seccio="caza-alcarras">La caza vs. Alcarràs</a>
         <a href="#" class="sidebar-link" data-seccio="lleis">Cinema, lleis i tecnologia</a>
         <a href="#" class="sidebar-link" data-seccio="generacions">Dues generacions, dos mercats i un prestigi</a>
-        <a href="#" class="sidebar-link" data-seccio="autor">Cinema d'autor industrial</a>
+        <a href="#" class="sidebar-link" data-seccio="autor-industrial">Cinema d'autor industrial</a>
         <a href="#" class="sidebar-link" data-seccio="conclusions">Conclusions</a>
       </div>
       <div class="sidebar-separador"></div>
@@ -88,7 +88,7 @@
         </div>
       </div>
 
-      <div class="seccio-contingut" id="seccio-la-caza">
+      <div class="seccio-contingut" id="seccio-caza-alcarras">
         <div class="text-md text-md-intro" data-text="part-iii/caza-alcarras" data-bloc="intro"></div>
         <div id="taula-caza-comparativa"></div>
         <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-taula"></div>
@@ -144,7 +144,7 @@
         </div>
       </div>
 
-      <div class="seccio-contingut" id="seccio-autor">
+      <div class="seccio-contingut" id="seccio-autor-industrial">
         <div class="text-md text-md-intro" data-text="part-iii/autor-industrial" data-bloc="intro"></div>
         <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-iglesia"></div>
         <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-amenabar"></div>
@@ -206,10 +206,10 @@
     const seccions = [
       { id: 'doble-corona', titol: 'La doble corona',                           sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'la-caza',      titol: 'La caza vs. Alcarràs',  titolHTML: '<em>La caza</em> vs. <em>Alcarràs</em>',  sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'caza-alcarras',      titol: 'La caza vs. Alcarràs',  titolHTML: '<em>La caza</em> vs. <em>Alcarràs</em>',  sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'autor',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'autor-industrial',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'conclusions',  titol: 'Conclusions: de les mètriques a les paradoxes', sup: 'Cruïlles, comparatives i interpretacions' },
     ];
 
@@ -241,6 +241,7 @@
       btnSeg.textContent = next ? next.titol + ' →' : '';
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
+      history.pushState({ idx }, '', '#' + s.id);
       document.querySelector('.contingut-sidebar').scrollTop = 0;
       document.documentElement.scrollTop = 0;
 
@@ -286,7 +287,31 @@
     });
 
     fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
-    mostraSeccio(0);
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      mostraSeccio(idx >= 0 ? idx : 0);
+    })();
+
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+        document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
 
     function toggleBuscador() {
       const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
