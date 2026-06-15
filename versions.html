@@ -6,6 +6,92 @@
   <meta name="description" content="Historial de versions — Públic i Prestigi.">
   <title>Versions · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
+  <style>
+    /* ── Etiquetes d'estat ── */
+    .versio-etiqueta {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-left: 10px;
+      position: relative;
+      top: -1px;
+    }
+    .etiqueta-actual  { background: #e8f5ec; color: #2a7a3b; }
+    .etiqueta-prevista { background: #fef3e8; color: #c46a00; }
+    .etiqueta-anterior { background: #f0f0f0; color: #888; }
+    .etiqueta-seleccionada { background: #e8f0fb; color: #1a5ba8; }
+
+    /* ── Data pill ── */
+    .versio-data-pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: #888;
+      background: #f4f4f4;
+      border-radius: 3px;
+      padding: 2px 8px;
+      margin-top: 10px;
+    }
+
+    /* ── Item versió ── */
+    .versio-item {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--color-linia);
+    }
+    .versio-item:last-child { border-bottom: none; }
+
+    .versio-cap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .versio-num {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .versio-resum {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 6px 0;
+    }
+
+    /* ── Versió seleccionada ── */
+    .versio-item.seleccionada {
+      background: #fafcff;
+      border-left: 3px solid #1a5ba8;
+      padding-left: 16px;
+      margin-left: -19px;
+    }
+
+    /* ── Versió anterior: cursor pointer ── */
+    .versio-item.anterior {
+      cursor: pointer;
+    }
+    .versio-item.anterior:hover .versio-num {
+      color: #1a5ba8;
+    }
+
+    /* ── Versió pendent: lleugera opacitat ── */
+    .versio-item.prevista {
+      opacity: 0.7;
+    }
+
+    /* ── Nota seleccionada ── */
+    .versio-nota-seleccionada {
+      font-size: 0.78rem;
+      color: #1a5ba8;
+      margin-top: 6px;
+      font-style: italic;
+    }
+  </style>
 </head>
 <body>
 
@@ -45,45 +131,47 @@
       <p class="part-subtitol">Historial de les versions publicades i previstes. Les versions anteriors es mantenen accessibles per facilitar-ne la consulta i la comparació.</p>
     </div>
 
-    <div class="contingut-text">
+    <div class="contingut-text" id="llista-versions">
 
-      <div class="versio-item" id="v1">
+      <!-- ── ACTUAL ── -->
+      <div class="versio-item actual" id="v1" data-label="Versió 1 (1965–2025)" data-url="">
         <div class="versio-cap">
           <span class="versio-num">Versió 1 (1965–2025)</span>
-          <span class="versio-data">ACTUAL</span>
+          <span class="versio-etiqueta etiqueta-actual">Actual</span>
         </div>
         <p class="versio-resum">Primera versió pública de l'estudi, inclou Part I (Top 100 pel·lícules amb més espectadors a sales de cinema, 15 articles), Part II (Presència i premis als festivals internacionals, 8 articles) i Part III (Cruïlles, comparatives i interpretacions, 7 articles).</p>
-        <span class="versio-data">Publicació: 1 de juny de 2026</span>
+        <span class="versio-data-pill">Publicació: 1 de juny de 2026</span>
       </div>
 
-      <div class="versio-item versio-pendent" id="v1-1">
+      <!-- ── PREVISTES ── -->
+      <div class="versio-item prevista" id="v1-1">
         <div class="versio-cap">
           <span class="versio-num">Versió 1.1 (1965–2025)</span>
-          <span class="versio-data">PREVISTA</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
         </div>
         <p class="versio-resum">Actualització amb dades dels Oscar i d'altres premis d'acadèmies internacionals a la Part II.</p>
-        <span class="versio-data">Publicació: tardor 2026</span>
+        <span class="versio-data-pill">Publicació prevista: tardor 2026</span>
       </div>
 
-      <div class="versio-item versio-pendent" id="v2">
+      <div class="versio-item prevista" id="v2">
         <div class="versio-cap">
           <span class="versio-num">Versió 2 (1965–2026)</span>
-          <span class="versio-data">PREVISTA</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
         </div>
-        <p class="versio-resum">Actualització general de l'estudi amb la introducció de les noves dades de l'any 2026.</p>
-        <span class="versio-data">Publicació: primavera 2027</span>
+        <p class="versio-resum">Actualització general amb les dades de l'any 2026: nous espectadors, nous premis de festival i revisió de tots els índexs i anàlisis.</p>
+        <span class="versio-data-pill">Publicació prevista: primavera 2027</span>
       </div>
 
-      <div class="versio-item versio-pendent" id="v0">
+      <!-- ── ANTERIORS ── -->
+      <div class="versio-item anterior" id="v0" data-label="Versió 0 (1965–2025)" data-url="v0/">
         <div class="versio-cap">
           <span class="versio-num">Versió 0 (1965–2025)</span>
-          <span class="versio-data">ANTERIOR</span>
+          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
         </div>
-        <p class="versio-resum">Versió zero de prova, només amb la Part I i II.</p>
-        <span class="versio-data">Publicació: 1 de maig 2026</span>
+        <p class="versio-resum">Versió de prova interna, amb les Parts I i II.</p>
+        <span class="versio-data-pill">Publicació: 1 de maig de 2026</span>
       </div>
 
-      
     </div>
 
   </main>
@@ -104,15 +192,94 @@
   </div>
 
   <script>
-    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
-      document.getElementById('versio-label').textContent = data.versio_label;
-    }).catch(()=>{});
-    function toggleBuscador(){
-      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
-      if(o.style.display==='none'){o.style.display='flex';i.focus();}
-      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    // ── Sistema de selecció de versió ──
+    const VERSIO_ACTUAL_LABEL = 'Versió 1 (1965–2025)';
+    const VERSIO_ACTUAL_ID = 'v1';
+
+    function getVersioSeleccionada() {
+      return localStorage.getItem('pip_versio_label') || VERSIO_ACTUAL_LABEL;
     }
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+
+    function getVersioSeleccionadaId() {
+      return localStorage.getItem('pip_versio_id') || VERSIO_ACTUAL_ID;
+    }
+
+    function seleccionarVersio(id, label, url) {
+      localStorage.setItem('pip_versio_label', label);
+      localStorage.setItem('pip_versio_id', id);
+      actualitzarUI();
+      if (url) {
+        // Navega al subdirectori de la versió anterior
+        window.location.href = '../' + url;
+      }
+    }
+
+    function actualitzarUI() {
+      const selId = getVersioSeleccionadaId();
+      const selLabel = getVersioSeleccionada();
+
+      // Actualitzar label capçalera
+      document.getElementById('versio-label').textContent = selLabel;
+
+      // Marcar item seleccionat i afegir nota
+      document.querySelectorAll('.versio-item').forEach(el => {
+        el.classList.remove('seleccionada');
+        const nota = el.querySelector('.versio-nota-seleccionada');
+        if (nota) nota.remove();
+      });
+
+      const selEl = document.getElementById(selId);
+      if (selEl) {
+        selEl.classList.add('seleccionada');
+        // Canviar etiqueta si és anterior seleccionada
+        const etiq = selEl.querySelector('.versio-etiqueta');
+        if (selEl.classList.contains('anterior') && etiq) {
+          etiq.className = 'versio-etiqueta etiqueta-seleccionada';
+          etiq.textContent = 'Seleccionada';
+        }
+        // Afegir nota
+        const nota = document.createElement('p');
+        nota.className = 'versio-nota-seleccionada';
+        nota.textContent = selId === VERSIO_ACTUAL_ID
+          ? '← Esteu veient aquesta versió'
+          : '← Esteu veient aquesta versió · Tornar a l\'actual';
+        if (selId !== VERSIO_ACTUAL_ID) {
+          nota.style.cursor = 'pointer';
+          nota.addEventListener('click', () => {
+            seleccionarVersio(VERSIO_ACTUAL_ID, VERSIO_ACTUAL_LABEL, '');
+          });
+        }
+        selEl.appendChild(nota);
+      }
+    }
+
+    // Listeners per a versions anteriors (clicables)
+    document.querySelectorAll('.versio-item.anterior').forEach(el => {
+      el.addEventListener('click', () => {
+        const label = el.dataset.label;
+        const url = el.dataset.url;
+        seleccionarVersio(el.id, label, url);
+      });
+    });
+
+    // Listeners per a versió actual (tornar si estàvem en una anterior)
+    document.querySelectorAll('.versio-item.actual').forEach(el => {
+      el.addEventListener('click', () => {
+        seleccionarVersio(VERSIO_ACTUAL_ID, VERSIO_ACTUAL_LABEL, '');
+      });
+    });
+
+    // Inicialitzar UI
+    actualitzarUI();
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
+    });
   </script>
 
 </body>
