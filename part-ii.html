@@ -47,20 +47,20 @@
       <div class="sidebar-spacer"></div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Context</div>
-        <a href="#" class="sidebar-link" data-seccio="introduccio">Dades i criteri</a>
+        <a href="#" class="sidebar-link" data-seccio="intro">Dades i criteri</a>
       </div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Festivals</div>
         <a href="#" class="sidebar-link" data-seccio="premiades">Premiades per dècada</a>
         <a href="#" class="sidebar-link" data-seccio="cannes">Cannes</a>
         <a href="#" class="sidebar-link" data-seccio="berlin">Berlín</a>
-        <a href="#" class="sidebar-link" data-seccio="venezia">Venècia</a>
+        <a href="#" class="sidebar-link" data-seccio="venecia">Venècia</a>
         <a href="#" class="sidebar-link" data-seccio="sansebastia">Sant Sebastià</a>
       </div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Rànquings</div>
-        <a href="#" class="sidebar-link" data-seccio="ranking-espectadors">Per espectadors</a>
-        <a href="#" class="sidebar-link" data-seccio="ranking-directors">Per directors</a>
+        <a href="#" class="sidebar-link" data-seccio="espectadors">Per espectadors</a>
+        <a href="#" class="sidebar-link" data-seccio="directors">Per directors</a>
       </div>
     </aside>
 
@@ -78,10 +78,9 @@
         <div class="text-md text-md-comentari" data-text="part-ii/premiades-intro" data-bloc="grans-premis"></div>
       </div>
 
-      <div class="seccio-contingut" id="seccio-introduccio">
+      <div class="seccio-contingut" id="seccio-intro">
         <div class="text-md" data-text="part-ii/dades-i-criteri"></div>
-        <div id="seccio-introduccio"></div>
-      </div>
+        </div>
 
       <div class="seccio-contingut" id="seccio-cannes">
         <div class="text-md text-md-intro" data-text="part-ii/festival-cannes" data-bloc="intro"></div>
@@ -95,7 +94,7 @@
         <div class="text-md text-md-comentari" data-text="part-ii/festival-berlin" data-bloc="comentari"></div>
       </div>
 
-      <div class="seccio-contingut" id="seccio-venezia">
+      <div class="seccio-contingut" id="seccio-venecia">
         <div class="text-md text-md-intro" data-text="part-ii/festival-venezia" data-bloc="intro"></div>
         <div id="taula-venezia"></div>
       </div>
@@ -106,13 +105,13 @@
         <div class="text-md text-md-comentari" data-text="part-ii/festival-sansebastia" data-bloc="comentari"></div>
       </div>
 
-      <div class="seccio-contingut" id="seccio-ranking-espectadors">
+      <div class="seccio-contingut" id="seccio-espectadors">
         <div class="text-md text-md-intro" data-text="part-ii/ranking-espectadors" data-bloc="intro"></div>
         <div id="taula-ranking-espectadors"></div>
         <div class="text-md text-md-comentari" data-text="part-ii/ranking-espectadors" data-bloc="comentari"></div>
       </div>
 
-      <div class="seccio-contingut" id="seccio-ranking-directors">
+      <div class="seccio-contingut" id="seccio-directors">
         <div class="text-md text-md-intro" data-text="part-ii/ranking-directors" data-bloc="intro"></div>
         <div id="taula-ranking-directors-top25"></div>
         <div class="text-md text-md-comentari" data-text="part-ii/ranking-directors" data-bloc="comentari-top25"></div>
@@ -146,14 +145,14 @@
 
   <script>
     const seccions = [
-      { id: 'introduccio',          titol: 'Dades i criteri',                                          sup: 'Presència i premis als festivals internacionals' },
+      { id: 'intro',          titol: 'Dades i criteri',                                          sup: 'Presència i premis als festivals internacionals' },
       { id: 'premiades',            titol: 'Premiades per dècada',                         sup: 'Presència i premis als festivals internacionals' },
       { id: 'cannes',               titol: 'Festival de Cannes — En Compétition',              sup: 'Presència i premis als festivals internacionals' },
       { id: 'berlin',               titol: 'Festival de Berlín — Wettbewerb',                         sup: 'Presència i premis als festivals internacionals' },
-      { id: 'venezia',              titol: 'Festival de Venècia — Concorso',                          sup: 'Presència i premis als festivals internacionals' },
+      { id: 'venecia',              titol: 'Festival de Venècia — Concorso',                          sup: 'Presència i premis als festivals internacionals' },
       { id: 'sansebastia',          titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',  sup: 'Presència i premis als festivals internacionals' },
-      { id: 'ranking-espectadors',  titol: 'Rànquing per espectadors',                                sup: 'Presència i premis als festivals internacionals' },
-      { id: 'ranking-directors',    titol: 'Rànquing per directors',                                  sup: 'Presència i premis als festivals internacionals' },
+      { id: 'espectadors',  titol: 'Rànquing per espectadors',                                sup: 'Presència i premis als festivals internacionals' },
+      { id: 'directors',    titol: 'Rànquing per directors',                                  sup: 'Presència i premis als festivals internacionals' },
     ];
 
     let actual = 0;
@@ -178,6 +177,8 @@
       btnAnt.style.visibility = prev ? 'visible' : 'hidden';
       btnSeg.textContent = next ? next.titol + ' →' : '';
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      history.pushState({ idx }, '', '#' + s.id);
+      document.documentElement.scrollTop = 0;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
     }
 
@@ -189,7 +190,31 @@
     });
 
     fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
-    mostraSeccio(0);
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      mostraSeccio(idx >= 0 ? idx : 0);
+    })();
+
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+        document.getElementById('titol-principal').textContent = s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
 
     function toggleBuscador() {
       const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');

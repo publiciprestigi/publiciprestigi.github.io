@@ -241,13 +241,14 @@
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.querySelector('.contingut-sidebar').scrollTop = 0;
       document.documentElement.scrollTop = 0;
+      history.pushState({ idx }, '', '#' + s.id);
 
       // Inicialitza el gràfic de bretxa la primera vegada que es visita
       if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
         graficBretxaInit = true;
         setTimeout(window.PiP_graficBretxa, 50);
       }
-      if (s.id === 'la-caza' && !graficCazaInit && window.PiP_graficCazaIAA) {
+      if (s.id === 'caza-alcarras' && !graficCazaInit && window.PiP_graficCazaIAA) {
         graficCazaInit = true;
         setTimeout(window.PiP_graficCazaIAA, 50);
       }
@@ -255,7 +256,7 @@
         if (!graficSAInit) { graficSAInit = true; setTimeout(window.PiP_graficSauraAlmodovar, 50); }
         if (!graficGAInit) { graficGAInit = true; setTimeout(window.PiP_graficGeneracioActual, 100); }
       }
-      if (s.id === 'autor' && !graficAIInit && window.PiP_graficAutorIndustrial) {
+      if (s.id === 'autor-industrial' && !graficAIInit && window.PiP_graficAutorIndustrial) {
         graficAIInit = true;
         setTimeout(window.PiP_graficAutorIndustrial, 50);
       }
@@ -284,7 +285,32 @@
     });
 
     fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
-    mostraSeccio(0);
+
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      mostraSeccio(idx >= 0 ? idx : 0);
+    })();
+
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+        document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
 
     function toggleBuscador() {
       const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
