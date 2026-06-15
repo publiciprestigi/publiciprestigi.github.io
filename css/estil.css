@@ -962,17 +962,21 @@ body.part-iii .titol-sticky-sup { color: #5a4a8a; }
 body.part-i .titol-sticky-sup { color: #2a5582; }
 body.part-ii .titol-sticky-sup { color: #9B2335; }
 
-/* ── Botó tornar a dalt (estàtic, dins nav-seccions) ── */
+/* ── Botó tornar a dalt (estàtic) — sobreescriu regla anterior ── */
 .btn-top {
-  display: block;
-  text-align: center;
-  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
   color: #bbb;
-  font-size: 0.82rem;
+  font-size: 1rem;
   cursor: pointer;
-  background: none;
-  border: none;
-  padding: 4px;
-  transition: color .15s;
+  margin: 12px auto 0;
+  transition: color .15s, border-color .15s;
+  text-align: center;
 }
-.btn-top:hover { color: var(--color-text); }
+.btn-top:hover { color: var(--color-text); border-color: #bbb; }
