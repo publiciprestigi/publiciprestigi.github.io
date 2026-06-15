@@ -9,21 +9,19 @@
     btn.textContent = '↑';
     document.body.appendChild(btn);
 
-    const sidebar = document.querySelector('.contingut-sidebar');
+    function getScrollTop() {
+      return document.documentElement.scrollTop || document.body.scrollTop || 0;
+    }
 
     function onScroll() {
-      const pos = sidebar ? sidebar.scrollTop : window.scrollY;
-      btn.classList.toggle('visible', pos > 300);
+      btn.classList.toggle('visible', getScrollTop() > 300);
     }
 
-    if (sidebar) {
-      sidebar.addEventListener('scroll', onScroll, { passive: true });
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
+    document.addEventListener('scroll', onScroll, { passive: true });
 
     btn.addEventListener('click', () => {
-      if (sidebar) sidebar.scrollTo({ top: 0, behavior: 'smooth' });
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
+      document.body.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
