@@ -962,26 +962,17 @@ body.part-iii .titol-sticky-sup { color: #5a4a8a; }
 body.part-i .titol-sticky-sup { color: #2a5582; }
 body.part-ii .titol-sticky-sup { color: #9B2335; }
 
-/* ── Botó tornar a dalt ── */
-#btn-top {
-  position: fixed;
-  bottom: 28px;
-  right: 24px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: #fff;
-  border: 1px solid #ddd;
-  color: #aaa;
-  font-size: 1rem;
+/* ── Botó tornar a dalt (estàtic, dins nav-seccions) ── */
+.btn-top {
+  display: block;
+  text-align: center;
+  margin-top: 12px;
+  color: #bbb;
+  font-size: 0.82rem;
   cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s, color .15s;
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: none;
+  border: none;
+  padding: 4px;
+  transition: color .15s;
 }
-#btn-top.visible { opacity: 1; pointer-events: auto; }
-#btn-top:hover { color: var(--color-text); border-color: #bbb; }
+.btn-top:hover { color: var(--color-text); }
