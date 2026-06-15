@@ -127,8 +127,7 @@
         <span class="nav-seccio-pos" id="nav-pos"></span>
         <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
       </div>
-
-    </main>
+      <button class="btn-top" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
   </div>
 
   <footer class="peu">
@@ -182,7 +181,6 @@
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       document.getElementById('nav-pos').textContent = (idx + 1) + ' de ' + seccions.length;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
-      window.scrollTo(0, 0);
     }
 
     function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
@@ -206,6 +204,5 @@
   <script src="js/textos.js"></script>
   <script src="js/part-ii.js"></script>
   <script src="js/notes-tooltip.js"></script>
-  <script src="js/scroll-top.js"></script>
 </body>
 </html>
