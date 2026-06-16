@@ -36,15 +36,6 @@
     }
     .etiqueta-seleccionada .check { color: #2a7a3b; }
 
-    .versio-data {
-      display: block;
-      font-size: 0.68rem;
-      color: #aaa;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      margin-top: 10px;
-    }
-
     .versio-item {
       padding: 20px 16px;
       margin: 0 -16px;
@@ -54,52 +45,49 @@
     }
     .versio-item:last-child { border-bottom: none; }
 
-    .versio-num {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #888;
-    }
-
     .versio-cap {
       display: flex;
       align-items: center;
       margin-bottom: 8px;
     }
 
+    /* No seleccionades: tot gris uniforme */
+    .versio-num {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #999;
+    }
     .versio-resum {
       font-size: 0.95rem;
-      color: #888;
+      color: #999;
       line-height: 1.6;
       margin: 0 0 6px 0;
     }
-
     .versio-data {
       display: block;
-      font-size: 0.68rem;
+      font-size: 0.62rem;
       color: #bbb;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       margin-top: 10px;
     }
 
+    /* Seleccionada */
     .versio-item.seleccionada {
       border-left-color: var(--color-text);
       background: #fafafa;
+      padding-top: 20px;
     }
-    .versio-item.seleccionada .versio-num {
-      color: var(--color-text);
-    }
-    .versio-item.seleccionada .versio-resum {
-      color: #555;
-    }
-    .versio-item.seleccionada .versio-data {
-      color: #aaa;
-    }
+    .versio-item.seleccionada .versio-num  { color: var(--color-text); }
+    .versio-item.seleccionada .versio-resum { color: #555; }
+    .versio-item.seleccionada .versio-data  { color: #aaa; }
 
+    /* Clicables */
     .versio-item.clicable { cursor: pointer; }
     .versio-item.clicable:hover { background: #fafafa; }
 
-    .versio-item.prevista { opacity: 0.65; }
+    /* Previstes: opacitat */
+    .versio-item.prevista { opacity: 0.6; }
   </style>
 </head>
 <body>
@@ -142,6 +130,7 @@
 
     <div class="contingut-text" id="llista-versions">
 
+      <!-- ACTUAL -->
       <div class="versio-item clicable" id="v1"
            data-estat="actual"
            data-label="Versió 1 (1965–2025)"
@@ -154,6 +143,20 @@
         <span class="versio-data">Publicació: 1 de juny de 2026</span>
       </div>
 
+      <!-- ANTERIORS -->
+      <div class="versio-item clicable" id="v0"
+           data-estat="anterior"
+           data-label="Versió 0 (1965–2025)"
+           data-url="v0/">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 0 (1965–2025)</span>
+          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
+        </div>
+        <p class="versio-resum">Versió de prova interna, amb les Parts I i II.</p>
+        <span class="versio-data">Publicació: 1 de maig de 2026</span>
+      </div>
+
+      <!-- PREVISTES -->
       <div class="versio-item prevista" id="v1-1" data-estat="prevista">
         <div class="versio-cap">
           <span class="versio-num">Versió 1.1 (1965–2025)</span>
@@ -170,18 +173,6 @@
         </div>
         <p class="versio-resum">Actualització general amb les dades de l'any 2026: nous espectadors, nous premis de festival i revisió de tots els índexs i anàlisis.</p>
         <span class="versio-data">Publicació prevista: primavera 2027</span>
-      </div>
-
-      <div class="versio-item clicable" id="v0"
-           data-estat="anterior"
-           data-label="Versió 0 (1965–2025)"
-           data-url="v0/">
-        <div class="versio-cap">
-          <span class="versio-num">Versió 0 (1965–2025)</span>
-          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
-        </div>
-        <p class="versio-resum">Versió de prova interna, amb les Parts I i II.</p>
-        <span class="versio-data">Publicació: 1 de maig de 2026</span>
       </div>
 
     </div>
