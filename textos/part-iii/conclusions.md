@@ -31,7 +31,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 <!-- /punt-2-cos -->
 
 <!-- punt-3 -->
-## 3. Prestigi equivalent, mercat incomparable
+## 3. Reconeixement equivalent, mercat incomparable
 
 <p class="subtitol-punt">La generació actual ha assolit reconeixements comparables als de les generacions anteriors, però dins d’un mercat de sala molt més petit.</p>
 
