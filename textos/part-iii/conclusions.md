@@ -31,35 +31,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 <!-- /punt-2-cos -->
 
 <!-- punt-3 -->
-## 3. Més finestres, menys dades
-
-<p class="subtitol-punt">La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.</p>
-
-La taquilla continua sent l’única dada pública plenament comparable al llarg de tot el període. La sala, però, ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes. Mai no havia estat tan fàcil accedir a una pel·lícula després de l’estrena, ni tan difícil reconstruir-ne l’audiència real.
-
-L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser models oficials ni científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. Serveixen per orientar la comparació i fer visibles diferències que les xifres brutes oculten. Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d’audiència públiques i comparables. <sup>[20]</sup>
-
-Les xifres de taquilla poden fer pensar que el cinema popular i el cinema de festival s’han allunyat més del que realment ho han fet en audiència total. Films recents com *Sirât* o *Los domingos* continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
-
-La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’escala: avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull.
-<!-- /punt-3 -->
-
-<!-- punt-4 -->
-## 4. Més públic potencial, menys experiència compartida
-
-<p class="subtitol-punt">L’audiència s’amplia i arriba més lluny, però es fragmenta entre pantalles, territoris i moments diferents.</p>
-
-A partir dels 90s, les televisions van assumir una funció decisiva: finançaven el cinema i, alhora, n’amplificaven l’audiència. Aquell model va sostenir un cinema mitjà i gran capaç de circular entre les sales, la televisió i el consum domèstic. Als 2010s, la concentració de finançament, promoció i estrena va culminar en el film-esdeveniment, capaç de convertir una pel·lícula en un fenomen col·lectiu.
-
-Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una part creixent del finançament i la distribució ha passat a les plataformes, que operen amb una lògica diferent: ampliar i retenir subscriptors, més que concentrar milions d’espectadors en un mateix moment.
-
-Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Aquesta dispersió del consum dilueix els moments col·lectius que abans es concentraven a les sales i al voltant de les grans emissions televisives.
-
-El públic hi és, potencialment més ampli que mai, però dins d’una oferta audiovisual gairebé il·limitada i fragmentada el repte ja no és arribar-hi, sinó fer-lo coincidir de nou en una sala.
-<!-- /punt-4 -->
-
-<!-- punt-5 -->
-## 5. Prestigi equivalent, mercat incomparable
+## 3. Prestigi equivalent, mercat incomparable
 
 <p class="subtitol-punt">La generació actual ha assolit reconeixements comparables als de les generacions anteriors, però dins d’un mercat de sala molt més petit.</p>
 
@@ -70,6 +42,34 @@ En aquest context, Simón, Ruiz de Azúa, Laxe o Sorogoyen han aconseguit recone
 Entre els autors contemporanis conviuen relacions molt diferents amb el mercat. Si Sorogoyen amb *As bestas* confirma que el reconeixement internacional encara pot anar acompanyat d’una audiència important, Albert Serra amb *Pacifiction* (2022, Cannes, 14.921 espectadors) i Isaki Lacuesta amb *Entre dos aguas* (2018, Sant Sebastià, 27.466 espectadors) mostren que el prestigi també pot existir gairebé sense mercat de sala.
 
 Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altre director del període ha mantingut durant tant de temps una combinació comparable de públic, prestigi internacional i centralitat cultural. Però els seus films recents també operen dins l’escala actual del cinema d’autor. La principal excepció històrica a la bretxa permet així mesurar-ne la profunditat: fins i tot Almodóvar treballa avui dins un mercat que ja no és el que va construir la seva excepcionalitat.
+<!-- /punt-3 -->
+
+<!-- punt-4 -->
+## 4. Més finestres, menys dades
+
+<p class="subtitol-punt">La coincidència entre públic i prestigi continua sent possible, però ja no es pot mesurar només amb les entrades de cinema.</p>
+
+La taquilla continua sent l’única dada pública plenament comparable al llarg de tot el període. La sala, però, ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes. Mai no havia estat tan fàcil accedir a una pel·lícula després de l’estrena, ni tan difícil reconstruir-ne l’audiència real.
+
+L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser models oficials ni científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. Serveixen per orientar la comparació i fer visibles diferències que les xifres brutes oculten. Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d’audiència públiques i comparables. <sup>[20]</sup>
+
+Les xifres de taquilla poden fer pensar que el cinema popular i el cinema de festival s’han allunyat més del que realment ho han fet en audiència total. Films recents com *Sirât* o *Los domingos* continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
+
+La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’escala: avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull.
+<!-- /punt-4 -->
+
+<!-- punt-5 -->
+## 5. Més públic potencial, menys experiència compartida
+
+<p class="subtitol-punt">L’audiència s’amplia i arriba més lluny, però es fragmenta entre pantalles, territoris i moments diferents.</p>
+
+A partir dels 90s, les televisions van assumir una funció decisiva: finançaven el cinema i, alhora, n’amplificaven l’audiència. Aquell model va sostenir un cinema mitjà i gran capaç de circular entre les sales, la televisió i el consum domèstic. Als 2010s, la concentració de finançament, promoció i estrena va culminar en el film-esdeveniment, capaç de convertir una pel·lícula en un fenomen col·lectiu.
+
+Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una part creixent del finançament i la distribució ha passat a les plataformes, que operen amb una lògica diferent: ampliar i retenir subscriptors, més que concentrar milions d’espectadors en un mateix moment.
+
+Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Aquesta dispersió del consum dilueix els moments col·lectius que abans es concentraven a les sales i al voltant de les grans emissions televisives.
+
+El públic hi és, potencialment més ampli que mai, però dins d’una oferta audiovisual gairebé il·limitada i fragmentada el repte ja no és arribar-hi, sinó fer-lo coincidir de nou en una sala.
 <!-- /punt-5 -->
 
 <!-- punt-6 -->
