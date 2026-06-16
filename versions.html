@@ -7,7 +7,6 @@
   <title>Versions · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
   <style>
-    /* ── Etiquetes d'estat ── */
     .versio-etiqueta {
       display: inline-block;
       font-size: 0.68rem;
@@ -25,9 +24,8 @@
     .etiqueta-prevista { background: #fef3e8; color: #c46a00; }
     .etiqueta-anterior { background: #f0f0f0; color: #888; }
 
-    /* ── Etiqueta seleccionada: sense fons ni contorn ── */
     .etiqueta-seleccionada {
-      font-size: 0.68rem;
+      font-size: 0.78rem;
       font-weight: 500;
       letter-spacing: 0.04em;
       color: #888;
@@ -38,18 +36,15 @@
     }
     .etiqueta-seleccionada .check { color: #2a7a3b; }
 
-    /* ── Data pill ── */
-    .versio-data-pill {
-      display: inline-block;
-      font-size: 0.78rem;
-      color: #888;
-      background: #f4f4f4;
-      border-radius: 3px;
-      padding: 2px 8px;
+    .versio-data {
+      display: block;
+      font-size: 0.68rem;
+      color: #aaa;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
       margin-top: 10px;
     }
 
-    /* ── Item versió ── */
     .versio-item {
       padding: 20px 16px;
       margin: 0 -16px;
@@ -59,12 +54,10 @@
     }
     .versio-item:last-child { border-bottom: none; }
 
-    /* ── Títol versió: gris per defecte ── */
     .versio-num {
       font-size: 1.05rem;
       font-weight: 600;
       color: #888;
-      transition: color .12s;
     }
 
     .versio-cap {
@@ -80,27 +73,18 @@
       margin: 0 0 6px 0;
     }
 
-    /* ── Seleccionada: barra negra + fons gris + títol negre ── */
     .versio-item.seleccionada {
       border-left-color: var(--color-text);
-      background: #f7f7f7;
+      background: #fafafa;
     }
     .versio-item.seleccionada .versio-num {
       color: var(--color-text);
     }
 
-    /* ── Clicables: hover gris ── */
-    .versio-item.clicable {
-      cursor: pointer;
-    }
-    .versio-item.clicable:hover {
-      background: #f7f7f7;
-    }
+    .versio-item.clicable { cursor: pointer; }
+    .versio-item.clicable:hover { background: #fafafa; }
 
-    /* ── Previstes: opacitat ── */
-    .versio-item.prevista {
-      opacity: 0.65;
-    }
+    .versio-item.prevista { opacity: 0.65; }
   </style>
 </head>
 <body>
@@ -143,7 +127,6 @@
 
     <div class="contingut-text" id="llista-versions">
 
-      <!-- ACTUAL -->
       <div class="versio-item clicable" id="v1"
            data-estat="actual"
            data-label="Versió 1 (1965–2025)"
@@ -153,17 +136,16 @@
           <span class="versio-etiqueta etiqueta-actual">Actual</span>
         </div>
         <p class="versio-resum">Primera versió pública de l'estudi, inclou Part I (Top 100 pel·lícules amb més espectadors a sales de cinema, 15 articles), Part II (Presència i premis als festivals internacionals, 8 articles) i Part III (Cruïlles, comparatives i interpretacions, 7 articles).</p>
-        <span class="versio-data-pill">Publicació: 1 de juny de 2026</span>
+        <span class="versio-data">Publicació: 1 de juny de 2026</span>
       </div>
 
-      <!-- PREVISTES -->
       <div class="versio-item prevista" id="v1-1" data-estat="prevista">
         <div class="versio-cap">
           <span class="versio-num">Versió 1.1 (1965–2025)</span>
           <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
         </div>
         <p class="versio-resum">Actualització amb dades dels Oscar i d'altres premis d'acadèmies internacionals a la Part II.</p>
-        <span class="versio-data-pill">Publicació prevista: tardor 2026</span>
+        <span class="versio-data">Publicació prevista: tardor 2026</span>
       </div>
 
       <div class="versio-item prevista" id="v2" data-estat="prevista">
@@ -172,10 +154,9 @@
           <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
         </div>
         <p class="versio-resum">Actualització general amb les dades de l'any 2026: nous espectadors, nous premis de festival i revisió de tots els índexs i anàlisis.</p>
-        <span class="versio-data-pill">Publicació prevista: primavera 2027</span>
+        <span class="versio-data">Publicació prevista: primavera 2027</span>
       </div>
 
-      <!-- ANTERIORS -->
       <div class="versio-item clicable" id="v0"
            data-estat="anterior"
            data-label="Versió 0 (1965–2025)"
@@ -185,7 +166,7 @@
           <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
         </div>
         <p class="versio-resum">Versió de prova interna, amb les Parts I i II.</p>
-        <span class="versio-data-pill">Publicació: 1 de maig de 2026</span>
+        <span class="versio-data">Publicació: 1 de maig de 2026</span>
       </div>
 
     </div>
@@ -216,18 +197,14 @@
 
     function actualitzarUI() {
       const selId = getSelId();
-
-      // Actualitzar label capçalera
       document.getElementById('versio-label').textContent = getSelLabel();
 
-      // Netejar estat anterior
       document.querySelectorAll('.versio-item').forEach(el => {
         el.classList.remove('seleccionada');
         const etiqSel = el.querySelector('.etiqueta-seleccionada');
         if (etiqSel) etiqSel.remove();
       });
 
-      // Marcar seleccionada
       const selEl = document.getElementById(selId);
       if (selEl) {
         selEl.classList.add('seleccionada');
@@ -246,15 +223,10 @@
       if (url) window.location.href = '../' + url;
     }
 
-    // Listeners versions clicables
     document.querySelectorAll('.versio-item.clicable').forEach(el => {
       el.addEventListener('click', () => {
-        const id    = el.id;
-        const label = el.dataset.label;
-        const url   = el.dataset.url;
-        // Si ja és seleccionada i és l'actual, no fer res
-        if (id === getSelId() && id === VERSIO_ACTUAL_ID) return;
-        seleccionarVersio(id, label, url);
+        if (el.id === getSelId() && el.id === VERSIO_ACTUAL_ID) return;
+        seleccionarVersio(el.id, el.dataset.label, el.dataset.url);
       });
     });
 
