@@ -33,7 +33,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 <!-- punt-3 -->
 ## 3. Reconeixement equivalent, mercat incomparable
 
-<p class="subtitol-punt">La generació actual ha assolit reconeixements comparables als de les generacions anteriors, però dins d’un mercat de sala molt més petit.</p>
+<p class="subtitol-punt">La generació actual ha obtingut guardons comparables als de les generacions anteriors, però dins d’un mercat de sala molt més petit.</p>
 
 El mercat espanyol ha passat dels prop de 400 milions d’entrades anuals dels anys 60 a 65 milions el 2025. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial: el cinema de gran consum sembla conservar capacitat de convocatòria, mentre que el cinema mitjà i d’autor opera encara amb xifres bastant inferiors.
 
