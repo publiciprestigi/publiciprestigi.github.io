@@ -94,5 +94,5 @@ Quan pensem en el gran cinema espanyol de les darreres dècades, pensem sobretot
 
 Aquestes dues memòries es construeixen de manera diferent. El prestigi compta amb institucions que seleccionen, interpreten i transmeten determinades pel·lícules. La memòria popular opera per vies socials, afectives i quotidianes: perdura en el llenguatge, els personatges, les escenes i els referents compartits. Això no obliga a equiparar l’èxit popular amb el valor artístic, però sí a reconèixer que el cànon no conserva totes les experiències amb la mateixa intensitat.
 
-L’última paradoxa és, potser, la que dona sentit a tot l’estudi: les pel·lícules més vistes no sempre són les que millor recordem, i les que ocupen el centre de la memòria cultural no sempre van ocupar el centre de l’experiència popular. Entre aquestes dues memòries es troba la història completa que aquest estudi ha intentat explicar.
+L’última paradoxa és, potser, la que dona sentit a tot l’estudi: les pel·lícules més vistes no sempre són les que millor recordem, i les que ocupen el centre de la memòria cultural no sempre van ocupar el centre de l’experiència popular. Entre la memòria del públic i la del prestigi es troba la història completa que aquest estudi ha intentat explicar.
 <!-- /punt-7 -->
