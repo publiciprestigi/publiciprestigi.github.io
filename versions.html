@@ -68,9 +68,18 @@
 
     .versio-resum {
       font-size: 0.95rem;
-      color: #555;
+      color: #888;
       line-height: 1.6;
       margin: 0 0 6px 0;
+    }
+
+    .versio-data {
+      display: block;
+      font-size: 0.68rem;
+      color: #bbb;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-top: 10px;
     }
 
     .versio-item.seleccionada {
@@ -79,6 +88,12 @@
     }
     .versio-item.seleccionada .versio-num {
       color: var(--color-text);
+    }
+    .versio-item.seleccionada .versio-resum {
+      color: #555;
+    }
+    .versio-item.seleccionada .versio-data {
+      color: #aaa;
     }
 
     .versio-item.clicable { cursor: pointer; }
