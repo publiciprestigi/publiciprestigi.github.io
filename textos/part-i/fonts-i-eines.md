@@ -39,7 +39,7 @@ A les taules d'aquest estudi trobarem quatre columnes de mesura. Cadascuna expli
 
 ## Sobre la quota de mercat i el símbol ≈
 
-Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern, *Historia del cine español*, Cátedra) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore. <sup>[3]</sup>
+Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual dels 60s-80s prové d'estimacions basades en les estadístiques del Ministeri de Cultura, la historiografia del cinema espanyol (principalment Romà Gubern et al., *Historia del cine español*, Cátedra, 1995) i les dades de l'INE sobre hàbits culturals. Per als films dels anys 90 en endavant, el total de mercat prové directament dels anuaris de l'ICAA i de Comscore. <sup>[3]</sup>
 
 ## Sobre els textos de 'Context'
 
