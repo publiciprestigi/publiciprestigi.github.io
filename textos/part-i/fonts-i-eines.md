@@ -43,7 +43,4 @@ Les xifres marcades amb ≈ indiquen dades estimades. El total de mercat anual d
 
 ## Sobre els textos de 'Context'
 
-Els textos de context han estat redactats a partir d'una síntesi de la historiografia del cinema espanyol: *Historia del cine español* de Romà Gubern et al. (Cátedra), *El cine español después de Franco* de John Hopewell (El arquero, 1989), *Del azul al verde: el cine español bajo el franquismo* de Domènec Font (Avance, 1976) i els catàlegs de l'Acadèmia de les Arts i les Ciències Cinematogràfiques d'Espanya. Són valoracions contextuals i interpretatives.
-
-Els textos de context sobre les primeres dècades s'han redactat a partir d'una síntesi de la historiografia clàssica del cinema espanyol, amb especial referència a: *Historia del cine español* de Romà Gubern et al. (Cátedra), *El cine español después de Franco* de John Hopewell (El arquero, 1989) i *Del azul al verde: el cine español bajo el franquismo* de Domènec Font (Avance, 1976). Per a les dècades més recents, les valoracions es basen en una síntesi més àmplia de crítica i periodisme cinematogràfic contemporani. En tots els casos es tracta de valoracions contextuals i interpretatives de l'autor.
-
+Els textos de context sobre les primeres dècades s'han redactat a partir d'una síntesi de la historiografia clàssica del cinema espanyol, amb especial referència a: *Historia del cine español* de Romà Gubern et al. (Cátedra), *El cine español después de Franco* de John Hopewell (El arquero, 1989) i *Del azul al verde: el cine español bajo el franquismo* de Domènec Font (Avance, 1976). Per a les dècades més recents, la síntesi prové de crítica i periodisme cinematogràfic contemporani. En tots els casos es tracta de valoracions contextuals i interpretatives de l'autor.
