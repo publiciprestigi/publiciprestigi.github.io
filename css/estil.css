@@ -1121,4 +1121,37 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   .buscador-interior {
     padding: 16px;
   }
+
+  /* ── Lletra de cos més petita ── */
+  html, body {
+    font-size: 16px;
+  }
+
+  /* ── Taules Markdown: scroll lateral ── */
+  .text-md {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .text-md table {
+    min-width: 480px;
+  }
+}
+
+/* ── Indicador de scroll lateral (fade dret) ── */
+.scroll-fade-wrap {
+  position: relative;
+}
+.scroll-fade-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, #fff);
+  pointer-events: none;
+  transition: opacity .2s;
+}
+.scroll-fade-wrap.scrolled-end::after {
+  opacity: 0;
 }
