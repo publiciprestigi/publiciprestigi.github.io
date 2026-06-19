@@ -129,6 +129,25 @@ strong { font-weight: 600; }
 .capcalera-idioma a { text-decoration: none; color: var(--color-text-suau); }
 .capcalera-idioma a.actiu { color: var(--color-text); font-weight: 600; }
 .capcalera-idioma a:hover { color: var(--color-text); opacity: 1; }
+.capcalera-idioma a.lang-es { position: relative; }
+.capcalera-idioma a.lang-es::after {
+  content: 'Próximamente';
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--color-text);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  padding: 4px 8px;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .15s;
+}
+.capcalera-idioma a.lang-es:hover::after { opacity: 1; }
 
 .capcalera-lupa { cursor: pointer; color: var(--color-text-suau); display: flex; align-items: center; }
 .capcalera-lupa:hover { color: var(--color-text); }
