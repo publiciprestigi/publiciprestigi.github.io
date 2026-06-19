@@ -998,3 +998,127 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   transition: color .15s, border-color .15s;
 }
 .btn-top:hover { color: var(--color-text); border-color: #bbb; }
+
+/* ══════════════════════════════════════════
+   RESPONSIVE MÒBIL — breakpoint 768px
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* ── Capçalera ── */
+  .capcalera-interior {
+    padding: 0 16px;
+    height: 52px;
+  }
+  .capcalera-logo {
+    font-size: 1rem;
+  }
+  .capcalera-versio {
+    display: none;
+  }
+  .capcalera-controls {
+    gap: 12px;
+  }
+
+  /* ── Nav principal: scroll horitzontal silenciós ── */
+  .navegacio {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .navegacio::-webkit-scrollbar { display: none; }
+  .navegacio-interior {
+    padding: 0 16px;
+    gap: 20px;
+    width: max-content;
+    min-width: 100%;
+  }
+  .nav-link {
+    font-size: 0.82rem;
+    white-space: nowrap;
+    padding: 12px 0;
+  }
+
+  /* ── Footer ── */
+  .peu-interior {
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 16px;
+    font-size: 0.78rem;
+    text-align: center;
+  }
+
+  /* ── Contingut general ── */
+  .contingut {
+    padding: 24px 16px 40px;
+  }
+
+  /* ── Taules de dades: scroll lateral ── */
+  .taula-films,
+  .taula-ranking,
+  .taula-festivals,
+  .taula-decades-resum,
+  .text-md table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+
+  /* ── Gràfics: scroll lateral ── */
+  .grafic-mercat-wrap,
+  .grafic-wrap,
+  #grafic-decades {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ── Sidebar + contingut: columna única ── */
+  .layout-sidebar {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--color-linia);
+    padding: 12px 16px;
+    position: static;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .sidebar-spacer { display: none; }
+  .sidebar-grup { margin-bottom: 8px; }
+  .sidebar-grup-titol { font-size: 0.68rem; margin-bottom: 4px; }
+  .sidebar-link { padding: 4px 0; font-size: 0.82rem; }
+  .contingut-sidebar {
+    width: 100%;
+    padding: 16px;
+  }
+
+  /* ── Títol sticky: no sticky a mòbil ── */
+  .titol-sticky {
+    position: static;
+    padding: 16px 0 8px;
+  }
+
+  /* ── Nav seccions (botons anterior/següent) ── */
+  .nav-seccions {
+    margin-top: 32px;
+  }
+  .nav-seccio-btn {
+    font-size: 0.78rem;
+    max-width: 42%;
+  }
+
+  /* ── Part capcalera (notes, legal, versions, sobre) ── */
+  .part-capcalera {
+    padding: 24px 0 16px;
+  }
+  .part-capcalera h1 {
+    font-size: 1.4rem;
+  }
+
+  /* ── Buscador overlay ── */
+  .buscador-interior {
+    padding: 16px;
+  }
+}
