@@ -1056,8 +1056,7 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   .taula-films,
   .taula-ranking,
   .taula-festivals,
-  .taula-decades-resum,
-  .text-md table {
+  .taula-decades-resum {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -1127,12 +1126,13 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
     font-size: 16px;
   }
 
-  /* ── Taules Markdown: scroll lateral ── */
-  .text-md {
+  /* ── Taules Markdown: scroll lateral via .taula-scroll-wrap ── */
+  .taula-scroll-wrap {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    max-width: 100%;
   }
-  .text-md table {
+  .taula-scroll-wrap table {
     min-width: 480px;
   }
 }
@@ -1146,11 +1146,12 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   position: absolute;
   top: 0;
   right: 0;
-  width: 48px;
+  width: 40px;
   height: 100%;
-  background: linear-gradient(to right, transparent, #fff);
+  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
   pointer-events: none;
   transition: opacity .2s;
+  z-index: 1;
 }
 .scroll-fade-wrap.scrolled-end::after {
   opacity: 0;
