@@ -6,7 +6,7 @@
   const selectors = [
     '.taula-films', '.taula-ranking', '.taula-festivals',
     '.taula-decades-resum', '.grafic-mercat-wrap', '.grafic-wrap',
-    '#grafic-decades', '.text-md'
+    '#grafic-decades'
   ];
 
   selectors.forEach(sel => {

@@ -65,6 +65,27 @@
     );
     div.innerHTML = html;
     div.classList.add('text-md-carregat');
+
+    // Embolcalla cada taula amb un div per a scroll lateral independent
+    div.querySelectorAll('table').forEach(taula => {
+      const wrap = document.createElement('div');
+      wrap.className = 'taula-scroll-wrap';
+      taula.parentNode.insertBefore(wrap, taula);
+      wrap.appendChild(taula);
+    });
+
+    // Aplica fade als wraps (mòbil): s'executa just després del render
+    if (window.innerWidth <= 768) {
+      div.querySelectorAll('.taula-scroll-wrap').forEach(el => {
+        if (el.scrollWidth > el.clientWidth + 4) {
+          el.classList.add('scroll-fade-wrap');
+          el.addEventListener('scroll', function() {
+            el.classList.toggle('scrolled-end',
+              el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+          }, { passive: true });
+        }
+      });
+    }
   }
 
   function inicialitza() {

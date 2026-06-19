@@ -72,6 +72,8 @@ async function construirGraficMercat() {
     id: 'decades',
     afterDraw(chart) {
       const { ctx, scales: { x, y } } = chart;
+      const isMobil = window.innerWidth <= 768;
+      const mida = isMobil ? 9 : 11;
       ctx.save();
 
       decades.forEach(({ any, etiqueta }) => {
@@ -90,30 +92,35 @@ async function construirGraficMercat() {
         ctx.stroke();
         ctx.setLineDash([]);
 
-        ctx.fillStyle = 'rgba(100,100,100,0.6)';
-        ctx.font = '11px "Inter", -apple-system, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText(etiqueta, xPos + 4, yTop + 14);
+        if (!isMobil) {
+          ctx.fillStyle = 'rgba(100,100,100,0.6)';
+          ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
+          ctx.textAlign = 'left';
+          ctx.fillText(etiqueta, xPos + 4, yTop + 14);
+        }
       });
 
       const idxMax = 0;
       const xMax = x.getPixelForValue(idxMax);
       const yMax = y.getPixelForValue(entrades[idxMax]);
       ctx.fillStyle = '#363737';
-      ctx.font = 'bold 11px "Inter", -apple-system, sans-serif';
+      ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
       ctx.textAlign = 'left';
-      ctx.fillText('Màxim: ~390M', xMax + 6, yMax - 18);
-      ctx.font = '11px "Inter", -apple-system, sans-serif';
-      ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
+      ctx.fillText('Màxim: ~390M', xMax + 4, yMax - (isMobil ? 10 : 18));
+      if (!isMobil) {
+        ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
+        ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
+      }
 
       const idx2020 = anys.indexOf(2020);
       const x2020 = x.getPixelForValue(idx2020);
-      const y2020 = y.getPixelForValue(entrades[idx2020]);
       ctx.fillStyle = 'rgba(180,50,50,0.9)';
-      ctx.font = 'bold 11px "Inter", -apple-system, sans-serif';
+      ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
       ctx.textAlign = 'right';
-      ctx.fillText('Col·lapse pandèmic', x2020 + 4, y.top + 30);
-      ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
+      ctx.fillText(isMobil ? '2020' : 'Col·lapse pandèmic', x2020 + 4, y.top + (isMobil ? 20 : 30));
+      if (!isMobil) {
+        ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
+      }
 
       ctx.restore();
     }
@@ -152,7 +159,7 @@ async function construirGraficMercat() {
       animation: false,
       responsive: true,
       maintainAspectRatio: true,
-      aspectRatio: 2.8,
+      aspectRatio: window.innerWidth <= 768 ? 1.2 : 2.8,
       interaction: {
         mode: 'index',
         intersect: false,
