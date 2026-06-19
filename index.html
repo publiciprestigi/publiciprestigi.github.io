@@ -141,6 +141,58 @@
       object-position: center 20%;
       display: block;
     }
+
+    /* ── Responsive portada ── */
+    @media (max-width: 768px) {
+      .contingut { padding-top: 24px; }
+
+      .inici-antetitol {
+        font-size: 0.65rem;
+        margin-bottom: 16px;
+      }
+
+      /* Hero: columna única, gràfic sota el titular */
+      .inici-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 8px;
+      }
+      .inici-claim {
+        font-size: 1.8rem;
+      }
+
+      /* Xifres: 2 columnes x 3 files */
+      .inici-xifres {
+        flex-wrap: wrap;
+        gap: 16px 0;
+      }
+      .inici-xifra-bloc {
+        flex: 0 0 50%;
+      }
+      .inici-xifra-n {
+        font-size: 2rem;
+      }
+
+      /* Bloc inferior: columna única */
+      .inici-inferior {
+        grid-template-columns: 1fr;
+      }
+      .inici-parts {
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .inici-part {
+        padding: 16px 0;
+      }
+
+      /* Substack: sense padding lateral */
+      .inici-substack {
+        padding: 0;
+      }
+      .inici-substack-foto {
+        height: 220px;
+      }
+    }
   </style>
 </head>
 <body class="pag-inici">
