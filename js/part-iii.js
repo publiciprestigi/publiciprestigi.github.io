@@ -41,6 +41,7 @@ async function carregarDades() {
     construirLleis();
     window.PiP_graficConclusions1 = construirGraficConclusions1;
     window.PiP_graficConclusions2 = construirGraficConclusions2;
+    if (window.PiP_aplicaFade) window.PiP_aplicaFade();
   } catch(e) { console.error('Error:', e); }
 }
 

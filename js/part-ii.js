@@ -21,6 +21,7 @@ async function carregarFestivals() {
     construirFestival('Sant Sebastià','taula-sansebastia');
     construirRànquingEspectadors();
     construirRànquingDirectors();
+    if (window.PiP_aplicaFade) window.PiP_aplicaFade();
   } catch(e) { console.error('Error:', e); }
 }
 

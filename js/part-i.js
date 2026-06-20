@@ -10,6 +10,7 @@ async function carregarFilms() {
     filmsData = await r.json();
     construirTaulesDècades();
     construirRànquings();
+    if (window.PiP_aplicaFade) window.PiP_aplicaFade();
   } catch(e) { console.error('Error:', e); }
 }
 
@@ -339,3 +340,4 @@ function construirRànquings() {
 }
 
 document.addEventListener('DOMContentLoaded', carregarFilms);
+

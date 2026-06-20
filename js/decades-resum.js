@@ -85,6 +85,7 @@ async function construirResumDecades() {
   }
 
   construirGraficDecades(grups, ordre, etiquetes, total);
+  if (window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
 
 function construirGraficDecades(grups, ordre, etiquetes, total) {
