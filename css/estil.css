@@ -1052,15 +1052,13 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
     padding: 24px 16px 40px;
   }
 
-  /* ── Taules de dades: scroll lateral ── */
-  .taula-films,
-  .taula-ranking,
-  .taula-festivals,
-  .taula-decades-resum {
-    display: block;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    max-width: 100%;
+  /* ── Taules de dades: scroll lateral via .taula-scroll-wrap (gestionat per scroll-fade.js) ── */
+  .taula-scroll-wrap > .taula-films,
+  .taula-scroll-wrap > .taula-ranking,
+  .taula-scroll-wrap > .taula-festivals,
+  .taula-scroll-wrap > .taula-decades-resum {
+    display: table;
+    overflow-x: visible;
   }
 
   /* ── Gràfics: scroll lateral ── */
