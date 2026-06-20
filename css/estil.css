@@ -1013,17 +1013,27 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
 
   /* ── Capçalera ── */
   .capcalera-interior {
-    padding: 0 16px;
+    padding: 0 12px;
     height: 52px;
+  }
+  .capcalera-interior::before {
+    display: none;
+  }
+  .btn-hamburguesa {
+    order: -1;
+    flex-shrink: 0;
   }
   .capcalera-logo {
     font-size: 1rem;
+    flex: 1;
+    text-align: center;
   }
   .capcalera-versio {
     display: none;
   }
   .capcalera-controls {
     gap: 12px;
+    flex: 0;
   }
 
   /* ── Nav principal: amagat a mòbil (substituït per hamburguesa) ── */
