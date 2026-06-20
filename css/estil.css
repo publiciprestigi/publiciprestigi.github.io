@@ -1052,13 +1052,15 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
     padding: 24px 16px 40px;
   }
 
-  /* ── Taules de dades: scroll lateral via .taula-scroll-wrap (gestionat per scroll-fade.js) ── */
-  .taula-scroll-wrap > .taula-films,
-  .taula-scroll-wrap > .taula-ranking,
-  .taula-scroll-wrap > .taula-festivals,
-  .taula-scroll-wrap > .taula-decades-resum {
-    display: table;
-    overflow-x: visible;
+  /* ── Taules de dades: scroll lateral ── */
+  .taula-films,
+  .taula-ranking,
+  .taula-festivals,
+  .taula-decades-resum {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
   }
 
   /* ── Gràfics: scroll lateral ── */
@@ -1135,22 +1137,3 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   }
 }
 
-/* ── Indicador de scroll lateral (fade dret) ── */
-.scroll-fade-wrap {
-  position: relative;
-}
-.scroll-fade-wrap::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1));
-  pointer-events: none;
-  transition: opacity .2s;
-  z-index: 1;
-}
-.scroll-fade-wrap.scrolled-end::after {
-  opacity: 0;
-}
