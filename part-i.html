@@ -14,6 +14,9 @@
 
   <header class="capcalera">
     <div class="capcalera-interior">
+      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú" id="btn-hamburguesa">
+        <span></span><span></span><span></span>
+      </button>
       <a href="/" class="capcalera-logo">Públic i Prestigi</a>
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
@@ -304,5 +307,83 @@
   <script src="js/decades-resum.js"></script>
   <script src="js/part-i.js"></script>
   <script src="js/notes-tooltip.js"></script>  
+
+  <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="/" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
+    </div>
+
+    <div class="drawer-seccio">
+      <a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a>
+    </div>
+
+    <div class="drawer-seccio" id="drawer-part-i">
+      <button class="drawer-seccio-cap" onclick="toggleDrawerSeccio('drawer-part-i')">
+        I — Públic <span class="drawer-arrow">▼</span>
+      </button>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" onclick="navegaDrawer('intro')">Fonts i eines</a>
+        <a class="drawer-link" onclick="navegaDrawer('mercat')">Mercat i població</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" onclick="navegaDrawer('decades')">Resum per dècada</a>
+        <a class="drawer-link" onclick="navegaDrawer('60s')">60s</a>
+        <a class="drawer-link" onclick="navegaDrawer('70s')">70s</a>
+        <a class="drawer-link" onclick="navegaDrawer('80s')">80s</a>
+        <a class="drawer-link" onclick="navegaDrawer('90s')">90s</a>
+        <a class="drawer-link" onclick="navegaDrawer('2000s')">2000s</a>
+        <a class="drawer-link" onclick="navegaDrawer('2010s')">2010s</a>
+        <a class="drawer-link" onclick="navegaDrawer('2020s')">2020s</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" onclick="navegaDrawer('espectadors')">Per espectadors</a>
+        <a class="drawer-link" onclick="navegaDrawer('penetracio')">Per penetració</a>
+        <a class="drawer-link" onclick="navegaDrawer('quota')">Per quota de mercat</a>
+        <a class="drawer-link" onclick="navegaDrawer('iic')">Per IIC</a>
+        <a class="drawer-link" onclick="navegaDrawer('directors')">Per directors</a>
+      </div>
+    </div>
+
+    <div class="drawer-seccio">
+      <a href="part-ii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">II — Prestigi</a>
+    </div>
+
+    <div class="drawer-seccio">
+      <a href="part-iii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">III — Anàlisi</a>
+    </div>
+
+    <div class="drawer-seccio">
+      <a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a>
+    </div>
+
+    <div class="drawer-seccio">
+      <a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a>
+    </div>
+  </nav>
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+    function navegaDrawer(seccioId) {
+      toggleDrawer();
+      const idx = seccions.findIndex(s => s.id === seccioId);
+      if (idx >= 0) mostraSeccio(idx);
+    }
+    // Obrir automàticament la secció activa al drawer
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('drawer-part-i').classList.add('obert');
+    });
+  </script>
+
 </body>
 </html>
