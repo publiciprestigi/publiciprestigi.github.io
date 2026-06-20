@@ -308,6 +308,7 @@
   <script src="js/part-i.js"></script>
   <script src="js/notes-tooltip.js"></script>  
 
+
   <!-- ── Drawer mòbil ── -->
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
   <nav class="drawer" id="drawer" aria-label="Menú principal">
@@ -315,11 +316,9 @@
       <a href="/" class="drawer-logo">Públic i Prestigi</a>
       <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
     </div>
-
     <div class="drawer-seccio">
       <a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a>
     </div>
-
     <div class="drawer-seccio" id="drawer-part-i">
       <button class="drawer-seccio-cap" onclick="toggleDrawerSeccio('drawer-part-i')">
         I — Públic <span class="drawer-arrow">▼</span>
@@ -345,19 +344,15 @@
         <a class="drawer-link" onclick="navegaDrawer('directors')">Per directors</a>
       </div>
     </div>
-
-    <div class="drawer-seccio">
+    <div class="drawer-seccio" id="drawer-part-ii">
       <a href="part-ii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">II — Prestigi</a>
     </div>
-
-    <div class="drawer-seccio">
+    <div class="drawer-seccio" id="drawer-part-iii">
       <a href="part-iii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">III — Anàlisi</a>
     </div>
-
     <div class="drawer-seccio">
       <a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a>
     </div>
-
     <div class="drawer-seccio">
       <a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a>
     </div>
@@ -379,9 +374,10 @@
       const idx = seccions.findIndex(s => s.id === seccioId);
       if (idx >= 0) mostraSeccio(idx);
     }
-    // Obrir automàticament la secció activa al drawer
     document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('drawer-part-i').classList.add('obert');
+      // Obrir automàticament la secció activa
+      const activa = document.querySelector('.drawer-seccio .drawer-subseccions');
+      if (activa) activa.closest('.drawer-seccio').classList.add('obert');
     });
   </script>
 
