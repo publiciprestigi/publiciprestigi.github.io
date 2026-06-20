@@ -180,6 +180,7 @@
       history.pushState({ idx }, '', '#' + s.id);
       document.documentElement.scrollTop = 0;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
+      if (window.PiP_aplicaFade) setTimeout(window.PiP_aplicaFade, 50);
     }
 
     function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
@@ -224,8 +225,9 @@
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
   </script>
 
+  <script src="js/scroll-fade.js"></script>
   <script src="js/textos.js"></script>
   <script src="js/part-ii.js"></script>
   <script src="js/notes-tooltip.js"></script>
-<script src="js/scroll-fade.js"></script> </body>
+</body>
 </html>

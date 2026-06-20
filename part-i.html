@@ -237,6 +237,7 @@
       history.pushState({ idx }, '', '#' + s.id);
       document.documentElement.scrollTop = 0;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
+      if (window.PiP_aplicaFade) setTimeout(window.PiP_aplicaFade, 50);
 
       // Inicialitza el gràfic de mercat la primera vegada que es visita
       if (s.id === 'mercat' && !graficMercatInit && window.PiP_graficMercat) {
@@ -297,10 +298,11 @@
     });
   </script>
 
+  <script src="js/scroll-fade.js"></script>
   <script src="js/textos.js"></script>
   <script src="js/mercat.js"></script>
   <script src="js/decades-resum.js"></script>
   <script src="js/part-i.js"></script>
   <script src="js/notes-tooltip.js"></script>
-<script src="js/scroll-fade.js"></script> </body>
+</body>
 </html>
