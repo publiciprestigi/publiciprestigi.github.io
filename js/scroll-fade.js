@@ -1,39 +1,53 @@
 /* Públic i Prestigi — Indicador de scroll lateral (fade dret) */
 
-// Funció utilitària global: aplica el fade a totes les taules
-// scrollables dins un contenidor donat (o document si no s'especifica)
 window.PiP_aplicaFade = function(arrel) {
   if (window.innerWidth > 768) return;
   const base = arrel || document;
 
-  // Taules JS estàtiques (amb classe pròpia, scroll directe al contenidor)
+  // Taules JS estàtiques: embolcallem la taula amb un div que fa el scroll
+  // (igual que .taula-scroll-wrap per a les Markdown)
   const selectorsDirectes = [
-    '.taula-films', '.taula-ranking', '.taula-festivals',
-    '.taula-decades-resum', '.grafic-mercat-wrap', '.grafic-wrap',
-    '#grafic-decades'
+    '.taula-films', '.taula-ranking', '.taula-festivals', '.taula-decades-resum'
   ];
+
   selectorsDirectes.forEach(sel => {
-    base.querySelectorAll(sel).forEach(el => {
-      if (el.classList.contains('scroll-fade-wrap')) return; // ja aplicat
-      if (el.scrollWidth > el.clientWidth + 4) {
-        el.classList.add('scroll-fade-wrap');
-        el.addEventListener('scroll', function() {
-          el.classList.toggle('scrolled-end',
-            el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
-        }, { passive: true });
-      }
+    base.querySelectorAll(sel).forEach(taula => {
+      // Evitar doble embolcall
+      if (taula.parentNode.classList.contains('taula-scroll-wrap')) return;
+
+      const wrap = document.createElement('div');
+      wrap.className = 'taula-scroll-wrap';
+      taula.parentNode.insertBefore(wrap, taula);
+      wrap.appendChild(taula);
     });
   });
 
-  // Taules Markdown (embolcallades per textos.js amb .taula-scroll-wrap)
+  // Ara apliquem fade a TOTS els .taula-scroll-wrap (Markdown + JS estàtiques)
   base.querySelectorAll('.taula-scroll-wrap').forEach(el => {
     if (el.classList.contains('scroll-fade-wrap')) return;
+    // Forçar reflow per obtenir scrollWidth real
+    void el.offsetWidth;
     if (el.scrollWidth > el.clientWidth + 4) {
       el.classList.add('scroll-fade-wrap');
       el.addEventListener('scroll', function() {
         el.classList.toggle('scrolled-end',
-          el.scrollLeft + el.clientWidth >= el.scrollWidth - 4);
+          el.scrollLeft + el.clientWidth >= el.scrollWidth - 8);
       }, { passive: true });
     }
+  });
+
+  // Gràfics amb scroll propi (no taules)
+  ['.grafic-mercat-wrap', '.grafic-wrap', '#grafic-decades'].forEach(sel => {
+    base.querySelectorAll(sel).forEach(el => {
+      if (el.classList.contains('scroll-fade-wrap')) return;
+      void el.offsetWidth;
+      if (el.scrollWidth > el.clientWidth + 4) {
+        el.classList.add('scroll-fade-wrap');
+        el.addEventListener('scroll', function() {
+          el.classList.toggle('scrolled-end',
+            el.scrollLeft + el.clientWidth >= el.scrollWidth - 8);
+        }, { passive: true });
+      }
+    });
   });
 };
