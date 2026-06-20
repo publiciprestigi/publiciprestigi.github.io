@@ -242,7 +242,7 @@
       document.querySelector('.contingut-sidebar').scrollTop = 0;
       document.documentElement.scrollTop = 0;
       history.pushState({ idx }, '', '#' + s.id);
-      if (window.PiP_aplicaFade) setTimeout(window.PiP_aplicaFade, 50);
+      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
 
       // Inicialitza el gràfic de bretxa la primera vegada que es visita
       if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {

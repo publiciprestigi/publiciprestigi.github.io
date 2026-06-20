@@ -237,7 +237,7 @@
       history.pushState({ idx }, '', '#' + s.id);
       document.documentElement.scrollTop = 0;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
-      if (window.PiP_aplicaFade) setTimeout(window.PiP_aplicaFade, 50);
+      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
 
       // Inicialitza el gràfic de mercat la primera vegada que es visita
       if (s.id === 'mercat' && !graficMercatInit && window.PiP_graficMercat) {

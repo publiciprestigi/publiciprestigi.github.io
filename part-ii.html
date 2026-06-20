@@ -180,7 +180,7 @@
       history.pushState({ idx }, '', '#' + s.id);
       document.documentElement.scrollTop = 0;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
-      if (window.PiP_aplicaFade) setTimeout(window.PiP_aplicaFade, 50);
+      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
     }
 
     function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
