@@ -14,7 +14,7 @@
 
   <header class="capcalera">
     <div class="capcalera-interior">
-      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú" id="btn-hamburguesa">
+      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
         <span></span><span></span><span></span>
       </button>
       <a href="/" class="capcalera-logo">Públic i Prestigi</a>
@@ -309,6 +309,7 @@
   <script src="js/notes-tooltip.js"></script>  
 
 
+
   <!-- ── Drawer mòbil ── -->
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
   <nav class="drawer" id="drawer" aria-label="Menú principal">
@@ -320,9 +321,10 @@
       <a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a>
     </div>
     <div class="drawer-seccio" id="drawer-part-i">
-      <button class="drawer-seccio-cap" onclick="toggleDrawerSeccio('drawer-part-i')">
-        I — Públic <span class="drawer-arrow">▼</span>
-      </button>
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
       <div class="drawer-subseccions">
         <div class="drawer-grup-titol">Context</div>
         <a class="drawer-link" onclick="navegaDrawer('intro')">Fonts i eines</a>
@@ -345,10 +347,42 @@
       </div>
     </div>
     <div class="drawer-seccio" id="drawer-part-ii">
-      <a href="part-ii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">II — Prestigi</a>
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <span class="drawer-link drawer-link-gris">Dades i criteri</span>
+        <div class="drawer-grup-titol">Festivals</div>
+        <span class="drawer-link drawer-link-gris">Premiades per dècada</span>
+        <span class="drawer-link drawer-link-gris">Cannes</span>
+        <span class="drawer-link drawer-link-gris">Berlín</span>
+        <span class="drawer-link drawer-link-gris">Venècia</span>
+        <span class="drawer-link drawer-link-gris">Sant Sebastià</span>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <span class="drawer-link drawer-link-gris">Per espectadors</span>
+        <span class="drawer-link drawer-link-gris">Per directors</span>
+      </div>
     </div>
     <div class="drawer-seccio" id="drawer-part-iii">
-      <a href="part-iii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">III — Anàlisi</a>
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Cruïlles</div>
+        <span class="drawer-link drawer-link-gris">La doble corona</span>
+        <span class="drawer-link drawer-link-gris">El segon cercle</span>
+        <span class="drawer-link drawer-link-gris">La bretxa</span>
+        <div class="drawer-grup-titol">Anàlisi</div>
+        <span class="drawer-link drawer-link-gris">Caza / Alcarràs</span>
+        <span class="drawer-link drawer-link-gris">Dues generacions</span>
+        <span class="drawer-link drawer-link-gris">Cinema d'autor industrial</span>
+        <span class="drawer-link drawer-link-gris">Lleis i finestres</span>
+        <div class="drawer-grup-titol">Conclusions</div>
+        <span class="drawer-link drawer-link-gris">Conclusions</span>
+      </div>
     </div>
     <div class="drawer-seccio">
       <a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a>
@@ -375,7 +409,7 @@
       if (idx >= 0) mostraSeccio(idx);
     }
     document.addEventListener('DOMContentLoaded', function() {
-      // Obrir automàticament la secció activa
+      // Obrir la part activa per defecte
       const activa = document.querySelector('.drawer-seccio .drawer-subseccions');
       if (activa) activa.closest('.drawer-seccio').classList.add('obert');
     });

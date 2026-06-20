@@ -233,6 +233,7 @@
   <script src="js/part-ii.js"></script>
   <script src="js/notes-tooltip.js"></script>
 
+
   <!-- ── Drawer mòbil ── -->
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
   <nav class="drawer" id="drawer" aria-label="Menú principal">
@@ -244,12 +245,36 @@
       <a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a>
     </div>
     <div class="drawer-seccio" id="drawer-part-i">
-      <a href="part-i.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">I — Públic</a>
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <span class="drawer-link drawer-link-gris">Fonts i eines</span>
+        <span class="drawer-link drawer-link-gris">Mercat i població</span>
+        <div class="drawer-grup-titol">Top 100</div>
+        <span class="drawer-link drawer-link-gris">Resum per dècada</span>
+        <span class="drawer-link drawer-link-gris">60s</span>
+        <span class="drawer-link drawer-link-gris">70s</span>
+        <span class="drawer-link drawer-link-gris">80s</span>
+        <span class="drawer-link drawer-link-gris">90s</span>
+        <span class="drawer-link drawer-link-gris">2000s</span>
+        <span class="drawer-link drawer-link-gris">2010s</span>
+        <span class="drawer-link drawer-link-gris">2020s</span>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <span class="drawer-link drawer-link-gris">Per espectadors</span>
+        <span class="drawer-link drawer-link-gris">Per penetració</span>
+        <span class="drawer-link drawer-link-gris">Per quota de mercat</span>
+        <span class="drawer-link drawer-link-gris">Per IIC</span>
+        <span class="drawer-link drawer-link-gris">Per directors</span>
+      </div>
     </div>
     <div class="drawer-seccio" id="drawer-part-ii">
-      <button class="drawer-seccio-cap" onclick="toggleDrawerSeccio('drawer-part-ii')">
-        II — Prestigi <span class="drawer-arrow">▼</span>
-      </button>
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
       <div class="drawer-subseccions">
         <div class="drawer-grup-titol">Context</div>
         <a class="drawer-link" onclick="navegaDrawer('intro')">Dades i criteri</a>
@@ -265,7 +290,23 @@
       </div>
     </div>
     <div class="drawer-seccio" id="drawer-part-iii">
-      <a href="part-iii.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">III — Anàlisi</a>
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Cruïlles</div>
+        <span class="drawer-link drawer-link-gris">La doble corona</span>
+        <span class="drawer-link drawer-link-gris">El segon cercle</span>
+        <span class="drawer-link drawer-link-gris">La bretxa</span>
+        <div class="drawer-grup-titol">Anàlisi</div>
+        <span class="drawer-link drawer-link-gris">Caza / Alcarràs</span>
+        <span class="drawer-link drawer-link-gris">Dues generacions</span>
+        <span class="drawer-link drawer-link-gris">Cinema d'autor industrial</span>
+        <span class="drawer-link drawer-link-gris">Lleis i finestres</span>
+        <div class="drawer-grup-titol">Conclusions</div>
+        <span class="drawer-link drawer-link-gris">Conclusions</span>
+      </div>
     </div>
     <div class="drawer-seccio">
       <a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a>
@@ -292,7 +333,7 @@
       if (idx >= 0) mostraSeccio(idx);
     }
     document.addEventListener('DOMContentLoaded', function() {
-      // Obrir automàticament la secció activa
+      // Obrir la part activa per defecte
       const activa = document.querySelector('.drawer-seccio .drawer-subseccions');
       if (activa) activa.closest('.drawer-seccio').classList.add('obert');
     });
