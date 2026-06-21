@@ -481,6 +481,9 @@ window.PiP_graficCazaIAA = function() {
     el.parentNode.insertAdjacentElement('afterend', leg);
   }
 
+  // Assegurar que el canvas té dimensions correctes abans de crear el chart
+  el.style.width = '100%';
+
   window._chartCazaIAA = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -554,6 +557,11 @@ window.PiP_graficCazaIAA = function() {
     },
     plugins: [pluginTotals],
   });
+
+  // Forçar redraw per a mòbil
+  setTimeout(function() {
+    if (window._chartCazaIAA) window._chartCazaIAA.resize();
+  }, 100);
 };
 
 /* ============================================================
