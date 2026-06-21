@@ -252,9 +252,10 @@
         graficBretxaInit = true;
         setTimeout(window.PiP_graficBretxa, 50);
       }
-      if (s.id === 'caza-alcarras' && !graficCazaInit && window.PiP_graficCazaIAA) {
+      if (s.id === 'caza-alcarras' && !graficCazaInit) {
         graficCazaInit = true;
-        setTimeout(window.PiP_graficCazaIAA, 50);
+        if (window.PiP_graficCazaIAA) setTimeout(window.PiP_graficCazaIAA, 50);
+        else { var _t = setInterval(function() { if (window.PiP_graficCazaIAA) { clearInterval(_t); window.PiP_graficCazaIAA(); } }, 100); }
       }
       if (s.id === 'generacions' && window.PiP_graficSauraAlmodovar && window.PiP_graficGeneracioActual) {
         if (!graficSAInit) { graficSAInit = true; setTimeout(window.PiP_graficSauraAlmodovar, 50); }
