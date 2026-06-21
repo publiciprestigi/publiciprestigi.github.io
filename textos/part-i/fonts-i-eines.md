@@ -18,7 +18,7 @@ Les coproduccions es comptabilitzen com a espanyoles seguint el criteri oficial 
 
 ## Diferències de models d'estrena 
 
-Les xifres d'espectadors de l'ICAA per als films anteriors als anys 80 són totals acumulats des de l'estrena fins que el film desapareixia definitivament de la cartellera, un procés que podia durar diversos anys. El sistema de distribució de l'època funcionava en cascada: un film s'estrenava primer als grans cinemes de les capitals, després a províncies i als pobles, i finalment a les sales de sessió contínua i als cines de reestrena. Per als films dels anys 90 en endavant, l'impacte es concentra sobretot en les primeres setmanes o mesos d'estrena i les dades reflecteixen un consum molt més immediat i homogeni.
+Les xifres d'espectadors de l'ICAA per als films anteriors als anys 80 són totals acumulats des de l'estrena fins que el film desapareixia definitivament de la cartellera, un procés que podia durar diversos anys. El sistema de distribució de l'època funcionava en cascada: un film s'estrenava primer als grans cinemes de les capitals, després a províncies i als pobles, i finalment a les sales de sessió contínua i als cines de reestrena. Per als films dels anys 90 en endavant, l'impacte es concentra sobretot en les primeres setmanes o mesos d'estrena i les dades reflecteixen un consum molt més immediat i concentrat.
 
 ## El problema del rang brut d'espectadors
 
