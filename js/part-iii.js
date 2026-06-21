@@ -417,7 +417,6 @@ window.PiP_graficCazaIAA = function() {
     el.parentNode.insertBefore(tit, el);
   }
 
-  const isMobil = window.innerWidth <= 900;
   const ctx = el.getContext('2d');
 
   function hatch(color) {
