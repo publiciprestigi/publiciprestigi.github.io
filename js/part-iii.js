@@ -514,10 +514,9 @@ window.PiP_graficCazaIAA = function() {
     options: {
       indexAxis: 'y',
       responsive: true,
-      maintainAspectRatio: true,
-      aspectRatio: window.innerWidth <= 900 ? 1.8 : 3.5,
+      maintainAspectRatio: false,
       animation: false,
-      layout: { padding: { right: window.innerWidth <= 900 ? 110 : 160 } },
+      layout: { padding: { right: 160 } },
       plugins: {
         legend: {
           display: false,
