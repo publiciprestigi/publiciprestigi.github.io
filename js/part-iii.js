@@ -553,6 +553,7 @@ window.PiP_graficCazaIAA = function() {
     },
     plugins: [pluginTotals],
   });
+
 };
 
 /* ============================================================
