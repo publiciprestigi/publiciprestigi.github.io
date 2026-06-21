@@ -417,6 +417,11 @@ window.PiP_graficCazaIAA = function() {
     el.parentNode.insertBefore(tit, el);
   }
 
+  // Alçada adaptativa: mòbil més gran per llegir bé
+  const isMobil = window.innerWidth <= 900;
+  el.style.height = isMobil ? '180px' : '140px';
+  el.style.width = '100%';
+
   const ctx = el.getContext('2d');
 
   function hatch(color) {
@@ -455,11 +460,12 @@ window.PiP_graficCazaIAA = function() {
         const bar = meta.data[i];
         if (!bar) return;
         const y = bar.y;
-        ctx2.font = 'bold 13px "Inter", -apple-system, Arial, sans-serif';
+        const fsMobil = isMobil ? 11 : 13;
+        ctx2.font = `bold ${fsMobil}px "Inter", -apple-system, Arial, sans-serif`;
         ctx2.fillStyle = '#363737';
         ctx2.fillText(et.xifra, x, y);
         const xifraWidth = ctx2.measureText(et.xifra + ' ').width;
-        ctx2.font = '12px "Inter", -apple-system, Arial, sans-serif';
+        ctx2.font = `${fsMobil - 1}px "Inter", -apple-system, Arial, sans-serif`;
         ctx2.fillStyle = '#888';
         ctx2.fillText(et.mult, x + xifraWidth, y);
       });
@@ -516,7 +522,7 @@ window.PiP_graficCazaIAA = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      layout: { padding: { right: 160 } },
+      layout: { padding: { right: isMobil ? 110 : 160 } },
       plugins: {
         legend: {
           display: false,
