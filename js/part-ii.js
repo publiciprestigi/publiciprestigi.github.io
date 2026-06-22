@@ -94,16 +94,64 @@ function construirPremiades() {
   });
   cont.innerHTML = html;
 
-  // Afegir gràfic de resum + cards de totals DESPRÉS del HTML
+  // ── Càlcul automàtic des de festivalsData ──
+  const DECADES = ['60s','70s','80s','90s','2000s','2010s','2020s'];
+  const FESTS   = ['Cannes','Berlín','Venècia','Sant Sebastià'];
+  const COLORS  = { 'Cannes':'#9B2335','Berlín':'#1976D2','Venècia':'#2E7D5E','Sant Sebastià':'#E07B2A' };
+  const HOVER   = { 'Cannes':'rgba(155,35,53,0.5)','Berlín':'rgba(25,118,210,0.5)','Venècia':'rgba(46,125,94,0.5)','Sant Sebastià':'rgba(224,123,42,0.5)' };
+
+  // Màxims guardons
+  const MAXIMS2 = [
+    { nom: "Palma d'Or",  color: '#9B2335', patro: /palma d.or/i },
+    { nom: "Os d'Or",     color: '#1976D2', patro: /os d.or/i },
+    { nom: "Lleó d'Or",   color: '#2E7D5E', patro: /lle[oó] d.or/i },
+    { nom: "Conxa d'Or",  color: '#E07B2A', patro: /conxa d.or/i },
+  ];
+
+  const tPremiades = festivalsData.filter(f => f.premiat);
+
+  // Comptadors per festival
+  const perFest = {};
+  FESTS.forEach(f => { perFest[f] = 0; });
+  tPremiades.forEach(f => { if (perFest[f.festival] !== undefined) perFest[f.festival]++; });
+  const totalPremiades = tPremiades.length;
+
+  // Màxims guardons
+  const comptMaxims = {};
+  MAXIMS2.forEach(m => { comptMaxims[m.nom] = 0; });
+  tPremiades.forEach(f => {
+    MAXIMS2.forEach(m => { if (f.premi && m.patro.test(f.premi)) comptMaxims[m.nom]++; });
+  });
+  const totalMaxims = Object.values(comptMaxims).reduce((s,v) => s+v, 0);
+
+  // Dades gràfic per dècada i festival
+  const graficData = {};
+  FESTS.forEach(fest => {
+    graficData[fest] = DECADES.map(dec =>
+      tPremiades.filter(f => f.festival === fest && getDecada(f.any) === dec).length
+    );
+  });
+
+  // Generar cards festivals
+  const cardsFest = FESTS.map(fest => `
+    <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
+      <div style="font-size:12px;color:${COLORS[fest]};font-weight:500;margin-bottom:4px;">${fest}</div>
+      <div style="font-size:24px;font-weight:500;color:#363737;">${perFest[fest]}</div>
+    </div>`).join('');
+
+  // Generar cards màxims
+  const cardsMaxims = MAXIMS2.map(m => `
+    <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
+      <div style="font-size:12px;color:${m.color};font-weight:500;margin-bottom:4px">${m.nom}</div>
+      <div style="font-size:24px;font-weight:500;color:#363737;">${comptMaxims[m.nom]}</div>
+    </div>`).join('');
+
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
     <div style="margin-top:0;padding-top:0;border-top:none">
       <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:0">Evolució premiades per dècada (1965–2025)</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#9B2335;display:inline-block;"></span>Cannes</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#1976D2;display:inline-block;"></span>Berlín</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#2E7D5E;display:inline-block;"></span>Venècia</span>
-        <span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:#E07B2A;display:inline-block;"></span>Sant Sebastià</span>
+        ${FESTS.map(f => `<span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:${COLORS[f]};display:inline-block;"></span>${f}</span>`).join('')}
       </div>
       <div style="position:relative;width:100%;height:260px;">
         <canvas id="grafic-premis-decades"></canvas>
@@ -112,49 +160,19 @@ function construirPremiades() {
 
       <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Premiades per festival (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
-        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#9B2335;font-weight:500;margin-bottom:4px;">Cannes</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">12</div>
-        </div>
-        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#1976D2;font-weight:500;margin-bottom:4px;">Berlín</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">10</div>
-        </div>
-        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#2E7D5E;font-weight:500;margin-bottom:4px;">Venècia</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">7</div>
-        </div>
-        <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#E07B2A;font-weight:500;margin-bottom:4px;">Sant Sebastià</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">40</div>
-        </div>
+        ${cardsFest}
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
           <div style="font-size:12px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">70</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">${totalPremiades}</div>
         </div>
       </div>
 
       <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">Màxims guardons (1965–2025)</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:8px;">
-        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#9B2335;font-weight:500;margin-bottom:4px">Palma d'Or</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">0</div>
-        </div>
-        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#1976D2;font-weight:500;margin-bottom:4px">Os d'Or</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">5</div>
-        </div>
-        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#2E7D5E;font-weight:500;margin-bottom:4px">Lleó d'Or</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">1</div>
-        </div>
-        <div style="background:#fcefc0;border-radius:6px;padding:12px 10px;text-align:center;">
-          <div style="font-size:12px;color:#E07B2A;font-weight:500;margin-bottom:4px">Conxa d'Or</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">14</div>
-        </div>
+        ${cardsMaxims}
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
           <div style="font-size:12px;color:#888;font-weight:500;margin-bottom:4px;">Total</div>
-          <div style="font-size:24px;font-weight:500;color:#363737;">20</div>
+          <div style="font-size:24px;font-weight:500;color:#363737;">${totalMaxims}</div>
         </div>
       </div>
     </div>`;
@@ -168,13 +186,14 @@ function construirPremiades() {
     new window.Chart(canvas, {
       type: 'bar',
       data: {
-        labels: ['60s','70s','80s','90s','2000s','2010s','2020s'],
-        datasets: [
-          { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.5)',   borderWidth: 0 },
-          { label: 'Berlín',        data: [2,4,2,1,0,0,2],  backgroundColor: '#1976D2', hoverBackgroundColor: 'rgba(25,118,210,0.5)',   borderWidth: 0 },
-          { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', hoverBackgroundColor: 'rgba(46,125,94,0.5)',   borderWidth: 0 },
-          { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#E07B2A', hoverBackgroundColor: 'rgba(224,123,42,0.5)', borderWidth: 0 },
-        ]
+        labels: DECADES,
+        datasets: FESTS.map(fest => ({
+          label: fest,
+          data: graficData[fest],
+          backgroundColor: COLORS[fest],
+          hoverBackgroundColor: HOVER[fest],
+          borderWidth: 0,
+        }))
       },
       options: {
         responsive: true, maintainAspectRatio: false, animation: false,
