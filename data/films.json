@@ -3566,24 +3566,6 @@
   {
     "pos_decade": 14,
     "pos_hist": null,
-    "any": 2018,
-    "titol": "La tribu",
-    "director": "Fernando Colomo",
-    "decada": "2020s",
-    "espectadors": 1003273,
-    "mercat_M": 98.0,
-    "mercat_estimat": false,
-    "penetracio": 2.12,
-    "penetracio_estimat": false,
-    "quota": 1.02,
-    "quota_estimat": false,
-    "iic": 1.0,
-    "in_top100": false,
-    "context_text": "Comèdia generacional de Colomo sobre una família de músics. Un dels últims films notables del gènere prepandèmia."
-  },
-  {
-    "pos_decade": 15,
-    "pos_hist": null,
     "any": 2023,
     "titol": "Momias",
     "director": "Juan J. García Galocha",
@@ -3600,7 +3582,7 @@
     "context_text": "Animació espanyola familiar d'aventures. El mercat infantil com a nínxol estable en la difícil recuperació postpandèmia."
   },
   {
-    "pos_decade": 16,
+    "pos_decade": 15,
     "pos_hist": null,
     "any": 2021,
     "titol": "Way Down",
@@ -3618,7 +3600,7 @@
     "context_text": "Thriller de robatori ambientat a la cambra cuirassada del Banco de España durant la final del Mundial de 2010."
   },
   {
-    "pos_decade": 17,
+    "pos_decade": 16,
     "pos_hist": null,
     "any": 2024,
     "titol": "Buffalo Kids",
@@ -3636,7 +3618,7 @@
     "context_text": "El gènere d'animació infantil-familiar manté xifres modestes però constants. Producció consistent en mercat actual."
   },
   {
-    "pos_decade": 18,
+    "pos_decade": 17,
     "pos_hist": null,
     "any": 2024,
     "titol": "Odio el verano",
@@ -3654,7 +3636,7 @@
     "context_text": "Comèdia estival d'humor familiar. Públic d'estiu en temporada alta. L'entreteniment lleuger que omple els buits del calendari cinematogràfic espanyol."
   },
   {
-    "pos_decade": 19,
+    "pos_decade": 18,
     "pos_hist": null,
     "any": 2025,
     "titol": "El cautivo",
@@ -3672,7 +3654,7 @@
     "context_text": "Amenábar s'endinsa en el drama històric i d'aventures sobre el jove Cervantes. El director confirma la seva vigència i ambició industrial."
   },
   {
-    "pos_decade": 20,
+    "pos_decade": 19,
     "pos_hist": null,
     "any": 2023,
     "titol": "¡Vaya vacaciones!",
@@ -3690,7 +3672,7 @@
     "context_text": "Cinema lleuger d'estiu sense ambicions globals. Un dels títols que aporten base al mercat espanyol amb públic fidel."
   },
   {
-    "pos_decade": 21,
+    "pos_decade": 20,
     "pos_hist": null,
     "any": 2025,
     "titol": "Los domingos",
@@ -3708,7 +3690,7 @@
     "context_text": "Ruiz de Azúa confirma una veu pròpia d'èxit dins el cinema d'autor, guanyant la Conxa d'Or al festival de Sant Sebastià amb molt bona taquilla."
   },
   {
-    "pos_decade": 22,
+    "pos_decade": 21,
     "pos_hist": null,
     "any": 2022,
     "titol": "El cuarto pasajero",
@@ -3726,7 +3708,7 @@
     "context_text": "De la Iglesia a la comèdia de grup en carretera. Fórmula del director basc en format modest."
   },
   {
-    "pos_decade": 23,
+    "pos_decade": 22,
     "pos_hist": null,
     "any": 2024,
     "titol": "El 47",
@@ -3744,7 +3726,7 @@
     "context_text": "Cinema social de qualitat en mercat restringit. La realitat urbana com a matèria cinematogràfica vàlida."
   },
   {
-    "pos_decade": 24,
+    "pos_decade": 23,
     "pos_hist": null,
     "any": 2024,
     "titol": "La familia Benetón",
@@ -3762,7 +3744,7 @@
     "context_text": "Comèdia familiar de producció modesta. Un dels títols de la perifèria que aporten volum al mercat sense aspirar a l'impacte dels blockbusters."
   },
   {
-    "pos_decade": 25,
+    "pos_decade": 24,
     "pos_hist": null,
     "any": 2023,
     "titol": "Mari(dos)",
