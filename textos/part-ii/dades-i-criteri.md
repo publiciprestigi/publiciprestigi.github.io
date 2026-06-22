@@ -1,4 +1,4 @@
-Els festivals com a termòmetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l’estudi recull la presència i els premis obtinguts per pel·lícules espanyoles a les seccions oficials competitives dels quatre festivals internacionals més representatius: <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#1976D2">Berlín</strong>, <strong style="color:#2E7D5E">Venècia</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>.
+Els festivals com a termòmetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l’estudi recull la presència i els premis obtinguts per pel·lícules espanyoles a les seccions oficials competitives dels quatre festivals internacionals més representatius: <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>.
 
 ## Premis i límits del criteri
 
@@ -10,7 +10,7 @@ Que una pel·lícula hagi estat seleccionada a competició oficial en un dels qu
 
 A les taules de cada festival que veurem a continuació, s’hi indica amb el símbol ★ si ha obtingut algun premi, si també forma part del Top 100 d’espectadors de la Part I (i/o la posició documentada dins la dècada corresponent) i el nombre d’espectadors acumulats en sales de cinema segons les xifres de l’ICAA (recollides fins a l’última setmana de febrer del 2026).
 
-L’ordre de presentació (i d’avaluació en els rànquings posteriors) respon a una jerarquia de prestigi àmpliament assumida en l’àmbit cinematogràfic: Cannes, Berlín i Venècia són habitualment considerats, en aquest ordre, els tres grans festivals internacionals de referència.
+L’ordre de presentació (i d’avaluació en els rànquings posteriors) respon a una jerarquia de prestigi àmpliament reconeguda, però no estrictament oficial: Cannes, Venècia i Berlín constitueixen el nucli dels tres grans festivals internacionals de referència, amb Cannes en una primera posició molt consolidada i Venècia i Berlín en posicions properes, sovint intercanviables segons el pes que es doni a la història, la dimensió institucional o la projecció industrial de cada festival.
 
 Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. <sup>[6]</sup> La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als altres festivals europeus.
 
