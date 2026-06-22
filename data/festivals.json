@@ -3178,5 +3178,17 @@
     "top100_pos": null,
     "espectadors": 696722,
     "decada": null
+  },
+  {
+    "festival": "Venècia",
+    "any": 2001,
+    "titol": "Los otros",
+    "director": "Alejandro Amenábar",
+    "premi": null,
+    "premiat": false,
+    "in_top100": true,
+    "top100_pos": null,
+    "espectadors": 6410785,
+    "decada": null
   }
 ]
