@@ -2,11 +2,11 @@ L'estudi treballa exclusivament amb nombre d'entrades venudes, no amb xifres de 
 
 ## L'ICAA com a font principal
 
-Aquesta primera part de l'estudi recull les 100 pel·lícules espanyoles amb més espectadors acumulats des de l'estrena, basant-se en el rànquing oficial de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, últim oficial publicat a dia d'avui.
+Aquesta primera part de l'estudi recull les 100 pel·lícules espanyoles amb més espectadors acumulats des de l'estrena, basant-se en el rànquing oficial de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, últim oficial publicat fins ara.
 
 Les dues últimes posicions del rànquing original: *Una señora estupenda* (1967, d'Eugenio Martín, amb Lola Flores) i *Digan lo que digan* (1968, de Mario Camus, amb Raphael), han estat substituïdes per *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025) de Santiago Segura, les úniques pel·lícules espanyoles estrenades d'aquests darrers anys que han superat el llindar d'espectadors necessari per entrar al Top 100 de tots els temps.
 
-També s'han consultat la resta d'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> del ICAA, per tal de confeccionar la resta de films inclosos més enllà del Top 100, les que apareixen en color gris a continuació de cada dècada, que ajuden a contextualitzar millor cada època i a completar una visió més àmplia de dècades amb poca representació.
+També s'han consultat la resta d'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> del ICAA, per tal de confeccionar la resta de films inclosos més enllà del Top 100, els que apareixen en color gris a continuació de cada dècada, que ajuden a contextualitzar millor cada època i a completar una visió més àmplia de dècades amb poca representació.
 
 ## Abast cronològic
 
