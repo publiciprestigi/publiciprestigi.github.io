@@ -626,6 +626,7 @@ function construirDuesGeneracions() {
     { any:1999, titol:'Todo sobre mi madre', festival:'Cannes', premiat:true, esp:2590699, top100:{globalPos:52}, mercat:'110M', penetr:'6,48%', quota:'2,36%', iic:'2,67', iaa_xifra:'~5,57M', iaa_mult:'', iaa_est:true },
     { any:2002, titol:'Hable con ella', festival:null, premiat:false, esp:1367655, top100:{pos:26,dec:'2000s'}, mercat:'140M≈', penetr:'3,30%≈', quota:'0,97%≈', iic:'1,22', iaa_xifra:'~2,94M', iaa_mult:'', iaa_est:true },
     { any:2006, titol:'Volver', festival:'Cannes', premiat:true, esp:1932119, top100:{pos:16,dec:'2000s'}, mercat:'121M', penetr:'4,37%', quota:'1,59%', iic:'1,80', iaa_xifra:'~4,83M', iaa_mult:'', iaa_est:true },
+    { any:2009, titol:'Los abrazos rotos', festival:'Cannes', premiat:false, esp:696722, top100:null, mercat:'101M≈', penetr:'1,49%≈', quota:'0,69%≈', iic:'0,69', iaa_xifra:'~1,74M', iaa_mult:'', iaa_est:true },
     { any:2011, titol:'La piel que habito', festival:'Cannes', premiat:false, esp:735403, top100:null, mercat:'98M≈', penetr:'1,58%≈', quota:'0,75%≈', iic:'0,74', iaa_xifra:'~1,84M', iaa_mult:'', iaa_est:true },
     { any:2016, titol:'Julieta', festival:'Cannes', premiat:false, esp:355378, top100:null, mercat:'96M≈', penetr:'0,76%≈', quota:'0,37%≈', iic:'0,36', iaa_xifra:'~0,89M', iaa_mult:'', iaa_est:true },
     { any:2019, titol:'Dolor y gloria', festival:'Cannes', premiat:true, esp:964859, top100:null, mercat:'105M≈', penetr:'2,07%≈', quota:'0,92%≈', iic:'0,94', iaa_xifra:'~2,40M', iaa_mult:'', iaa_est:true },
