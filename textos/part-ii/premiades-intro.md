@@ -1,5 +1,5 @@
 <!-- intro -->
-Recull cronològic de tots els premis obtinguts a les seccions oficials competitives dels quatre festivals (Cannes, Berlín, Venècia i Sant Sebastià), organitzat per dècades.
+Recull cronològic de tots els premis obtinguts a les seccions oficials competitives dels quatre festivals (Cannes, Venècia, Berlín i Sant Sebastià), organitzat per dècades.
 
 <!-- /intro -->
 
