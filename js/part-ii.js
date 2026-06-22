@@ -171,7 +171,7 @@ function construirPremiades() {
         labels: ['60s','70s','80s','90s','2000s','2010s','2020s'],
         datasets: [
           { label: 'Cannes',        data: [0,4,2,2,1,2,1],  backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.5)',   borderWidth: 0 },
-          { label: 'Berlín',        data: [4,2,2,1,0,0,1],  backgroundColor: '#1976D2', hoverBackgroundColor: 'rgba(25,118,210,0.5)',   borderWidth: 0 },
+          { label: 'Berlín',        data: [2,4,2,1,0,0,1],  backgroundColor: '#1976D2', hoverBackgroundColor: 'rgba(25,118,210,0.5)',   borderWidth: 0 },
           { label: 'Venècia',       data: [0,0,1,2,1,1,2],  backgroundColor: '#2E7D5E', hoverBackgroundColor: 'rgba(46,125,94,0.5)',   borderWidth: 0 },
           { label: 'Sant Sebastià', data: [0,4,3,6,6,13,8], backgroundColor: '#E07B2A', hoverBackgroundColor: 'rgba(224,123,42,0.5)', borderWidth: 0 },
         ]
