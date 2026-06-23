@@ -160,13 +160,13 @@ let bretxaDades = null;
 function calcularBretxa() {
   const DEC_ORDRE  = ['60s','70s','80s','90s','2000s','2010s','2020s'];
   const DEC_LABELS = {
-    '60s':   'Anys 1965–1969',
-    '70s':   'Anys 70',
-    '80s':   'Anys 80',
-    '90s':   'Anys 90',
-    '2000s': 'Anys 2000–2009',
-    '2010s': 'Anys 2010–2019',
-    '2020s': 'Anys 2020–2025',
+    '60s':   '60s',
+    '70s':   '70s',
+    '80s':   '80s',
+    '90s':   '90s',
+    '2000s': '2000s',
+    '2010s': '2010s',
+    '2020s': '2020s',
   };
 
   return DEC_ORDRE.map(d => {
