@@ -16,8 +16,8 @@ async function carregarFestivals() {
     construirPremiades();
     construirIntroduccio();
     construirFestival('Cannes',       'taula-cannes');
-    construirFestival('Berlín',       'taula-berlin');
     construirFestival('Venècia',      'taula-venezia');
+    construirFestival('Berlín',       'taula-berlin');
     construirFestival('Sant Sebastià','taula-sansebastia');
     construirRànquingEspectadors();
     construirRànquingDirectors();
@@ -96,7 +96,7 @@ function construirPremiades() {
 
   // ── Càlcul automàtic des de festivalsData ──
   const DECADES = ['60s','70s','80s','90s','2000s','2010s','2020s'];
-  const FESTS   = ['Cannes','Berlín','Venècia','Sant Sebastià'];
+  const FESTS   = ['Cannes','Venècia','Berlín','Sant Sebastià'];
   const COLORS  = { 'Cannes':'#9B2335','Berlín':'#1976D2','Venècia':'#2E7D5E','Sant Sebastià':'#E07B2A' };
   const HOVER   = { 'Cannes':'rgba(155,35,53,0.5)','Berlín':'rgba(25,118,210,0.5)','Venècia':'rgba(46,125,94,0.5)','Sant Sebastià':'rgba(224,123,42,0.5)' };
 
@@ -290,7 +290,7 @@ function construirRànquingEspectadors() {
   if (!cont) return;
 
   let html = '';
-  ['Cannes','Berlín','Venècia','Sant Sebastià'].forEach(festival => {
+  ['Cannes','Venècia','Berlín','Sant Sebastià'].forEach(festival => {
     const films = festivalsData.filter(f => f.festival === festival && f.espectadors)
       .sort((a,b) => b.espectadors - a.espectadors);
     const top10  = films.slice(0, 10);
