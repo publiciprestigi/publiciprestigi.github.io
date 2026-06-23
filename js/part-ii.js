@@ -291,10 +291,13 @@ function construirRànquingEspectadors() {
 
   let html = '';
   ['Cannes','Venècia','Berlín','Sant Sebastià'].forEach(festival => {
-    const films = festivalsData.filter(f => f.festival === festival && f.espectadors)
+    const filmsAmbDades = festivalsData.filter(f => f.festival === festival && f.espectadors)
       .sort((a,b) => b.espectadors - a.espectadors);
-    const top10  = films.slice(0, 10);
-    const resta  = films.slice(10);
+    const filmsSenseDades = festivalsData.filter(f => f.festival === festival && !f.espectadors);
+    const films = filmsAmbDades; // per a la mediana i el recompte
+    const totalFilms = filmsAmbDades.length + filmsSenseDades.length;
+    const top10  = filmsAmbDades.slice(0, 10);
+    const resta  = filmsAmbDades.slice(10);
     const cid    = `resp-${festival.replace(/\s/g,'-')}`;
     const color  = FC[festival];
 
@@ -313,6 +316,17 @@ function construirRànquingEspectadors() {
       </tr>`;
     };
 
+    const filaSenseDades = (f) => {
+      return `<tr style="background:#f7f7f7;border-bottom:2px solid #fff;color:#aaa" class="fila-extra-${cid}">
+        <td class="col-pos">—</td>
+        <td>${titolFilm(f)}</td>
+        <td class="col-subtil">${f.director}</td>
+        <td class="col-center">${f.premiat ? '<span class="estrella">★</span>' : ''}</td>
+        <td class="col-center col-subtil">—</td>
+        <td class="col-num col-subtil" style="color:#aaa">s/d</td>
+      </tr>`;
+    };
+
     html += `
       <h2 class="subtitol-festival-ranking" style="margin-top:32px;color:${color}">${festival}</h2>
       <p class="festival-mediana">${medianaTxt}</p>
@@ -327,15 +341,16 @@ function construirRànquingEspectadors() {
         </tr></thead>
         <tbody>
           ${top10.map((f,i) => fila(f,i)).join('')}
-          ${resta.length ? `
+          ${(resta.length || filmsSenseDades.length) ? `
             <tr class="fila-boto-context">
               <td colspan="6">
                 <button class="btn-context" onclick="expandirRankEsp('${cid}',this)">
-                  + Veure tots els ${films.length} films
+                  + Veure tots els ${totalFilms} films
                 </button>
               </td>
             </tr>
             ${resta.map((f,i) => fila(f,i+10).replace('<tr ','<tr style="display:none" class="fila-extra-'+cid+' ')).join('')}
+            ${filmsSenseDades.map(f => filaSenseDades(f)).join('')}
           ` : ''}
         </tbody>
       </table>`;
