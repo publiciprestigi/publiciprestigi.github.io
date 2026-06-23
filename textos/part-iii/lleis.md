@@ -25,7 +25,7 @@ El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cul
 
 ### 5. Netflix i l'explosió de plataformes (2015–2025)
 
-Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el punt de no retorn. La COVID (2020) tanca les sales durant mesos i normalitza el consum domèstic. Disney+, HBO Max i Amazon Prime consoliden l'ecosistema. El factor IAA arriba a ×2,5–4,0: un film actual pot ser vist per 2–4 vegades més persones que les que van a la sala de cinema.
+Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el punt de no retorn. La COVID (2020) tanca les sales durant mesos i normalitza el consum domèstic. Disney+, HBO Max i Amazon Prime consoliden l'ecosistema. En clau espanyola, Filmin, fundada el 2007, havia anticipat aquest model amb un catàleg especialitzat en cinema d'autor i europeu que la converteix en referència per al públic del circuit cultural. El factor IAA arriba a ×2,5–4,0: un film actual pot ser vist per 2–4 vegades més persones que les que van a la sala de cinema.
 
 ### 6. Les mesures de paritat (2018–2020): un canvi estructural
 
