@@ -384,7 +384,7 @@ function construirRànquingDirectors() {
 
   const llista = Object.values(dirs).sort((a,b) =>
     b.total_sel-a.total_sel || b.total_premis-a.total_premis ||
-    b.c_sel-a.c_sel || b.b_sel-a.b_sel || b.v_sel-a.v_sel
+    b.c_sel-a.c_sel || b.v_sel-a.v_sel || b.b_sel-a.b_sel
   );
 
   // CORREGIT: sempre mostra ★N, fins i tot quan N=1
@@ -404,7 +404,7 @@ function construirRànquingDirectors() {
   let _dirCtr = 0;
 
   const filmsDir = (d) => {
-    const fests = ['Cannes','Berlín','Venècia','Sant Sebastià'];
+    const fests = ['Cannes','Venècia','Berlín','Sant Sebastià'];
     let html = '';
     const aliasClau25 = ALIASES_DIRS.find(a => a.nom === d.nom)?.clau;
     fests.forEach(fest => {
@@ -433,8 +433,8 @@ function construirRànquingDirectors() {
       <td class="col-center">${d.total_sel}</td>
       ${celTotal(d.total_premis)}
       ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
-      ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
       ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
+      ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
       ${cel(d.s_sel, d.s_pr, FC['Sant Sebastià'])}
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)">+</button>
@@ -446,12 +446,12 @@ function construirRànquingDirectors() {
   const top10_3 = Object.values(dirs)
     .filter(d => d.c_sel+d.b_sel+d.v_sel > 0)
     .sort((a,b) =>
-      (b.c_sel+b.b_sel+b.v_sel)-(a.c_sel+a.b_sel+a.v_sel) ||
+      (b.c_sel+b.v_sel+b.b_sel)-(a.c_sel+a.v_sel+a.b_sel) ||
       (b.c_pr+b.b_pr+b.v_pr)-(a.c_pr+a.b_pr+a.v_pr)
     ).slice(0, 10);
 
   const filmsDir3 = (d) => {
-    const fests = ['Cannes','Berlín','Venècia'];
+    const fests = ['Cannes','Venècia','Berlín'];
     let html = '';
     fests.forEach(fest => {
       const films = festivalsData.filter(f => f.festival === fest && f.director === d.nom);
@@ -478,8 +478,8 @@ function construirRànquingDirectors() {
       <td class="col-center">${d.c_sel+d.b_sel+d.v_sel}</td>
       ${celTotal(d.c_pr+d.b_pr+d.v_pr)}
       ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
-      ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
       ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
+      ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)">+</button>
       </td>
@@ -546,8 +546,8 @@ function construirRànquingDirectors() {
         <th class="col-center">Total sel.</th>
         <th class="col-center">Total ★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
-        <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
         <th class="col-center" style="color:${FC['Venècia']}">Venècia</th>
+        <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
         <th class="col-center" style="color:${FC['Sant Sebastià']}">Sant Sebastià</th>
         <th class="col-center">Films</th>
       </tr></thead>
@@ -563,8 +563,8 @@ function construirRànquingDirectors() {
         <th class="col-center">Total sel.</th>
         <th class="col-center">Total ★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
-        <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
         <th class="col-center" style="color:${FC['Venècia']}">Venècia</th>
+        <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
       </tr></thead>
       <tbody>${top10_3.map((d,i) => fila3(d,i)).join('')}</tbody>
     </table>`;
@@ -589,15 +589,6 @@ function construirRànquingDirectors() {
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-c',this)">+</button>
           </td>
         </tr>
-        <tr data-fest="top3-b">
-          <td>${nomFest('Berlín')}</td>
-          ${celTop3Exp(top3b[0],'b_pr',FC['Berlín'],'Berlín','top3-b-0')}
-          ${celTop3Exp(top3b[1],'b_pr',FC['Berlín'],'Berlín','top3-b-1')}
-          ${celTop3Exp(top3b[2],'b_pr',FC['Berlín'],'Berlín','top3-b-2')}
-          <td class="col-center">
-            <button class="btn-films-dir" onclick="toggleTop3Films('top3-b',this)">+</button>
-          </td>
-        </tr>
         <tr data-fest="top3-v">
           <td>${nomFest('Venècia')}</td>
           ${celTop3Exp(top3v[0],'v_pr',FC['Venècia'],'Venècia','top3-v-0')}
@@ -605,6 +596,15 @@ function construirRànquingDirectors() {
           ${celTop3Exp(top3v[2],'v_pr',FC['Venècia'],'Venècia','top3-v-2')}
           <td class="col-center">
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-v',this)">+</button>
+          </td>
+        </tr>
+          <tr data-fest="top3-b">
+          <td>${nomFest('Berlín')}</td>
+          ${celTop3Exp(top3b[0],'b_pr',FC['Berlín'],'Berlín','top3-b-0')}
+          ${celTop3Exp(top3b[1],'b_pr',FC['Berlín'],'Berlín','top3-b-1')}
+          ${celTop3Exp(top3b[2],'b_pr',FC['Berlín'],'Berlín','top3-b-2')}
+          <td class="col-center">
+            <button class="btn-films-dir" onclick="toggleTop3Films('top3-b',this)">+</button>
           </td>
         </tr>
         <tr data-fest="top3-s">
