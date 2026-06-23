@@ -1,14 +1,14 @@
 <!-- intro -->
-Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament el reconeixement dels dos circuits: participar en la secció oficial competitiva d’un dels quatre festivals analitzats i entrar al Top 100 històric d’espectadors del cinema espanyol. Només 10 títols formen part d’aquest grup exclusiu:
+Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament el reconeixement dels dos circuits: participar en la secció oficial competitiva d’un dels quatre festivals analitzats i entrar al Top 100 històric d’espectadors del cinema espanyol. Només 11 títols formen part d’aquest grup exclusiu:
 
 <!-- /intro -->
 
 <!-- comentari-corona -->
-- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: concentra 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Cannes i Venècia n’aporten 2 cadascun, mentre que Berlín no té cap, però acumula fins a 5 títols al grup següent, com veurem a continuació.
+- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: concentra 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Venècia aporta 3, Cannes 2, mentre que Berlín no té cap, però acumula fins a 5 títols al grup següent, com veurem a continuació.
 
-- La majoria dels films de la ‘doble corona’ (7 de 10) van obtenir també algun premi, però només dues pel·lícules van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. El gran premi, per tant, no és imprescindible per connectar amb el públic.
+- La majoria dels films de la ‘doble corona’ (7 de 11) van obtenir també algun premi, però només dues pel·lícules van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. El gran premi, per tant, no és imprescindible per connectar amb el públic.
 
-- La ‘doble corona’ és un fenomen concentrat en el passat: 9 dels 10 títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004). Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits amb tanta força.
+- La ‘doble corona’ és un fenomen concentrat en el passat: tots els títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004). Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits.
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
