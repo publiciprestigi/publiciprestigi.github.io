@@ -125,7 +125,7 @@ function construirSegonCercle() {
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
     const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
-      <td class="col-pos">${i+11}</td>
+      <td class="col-pos">${i+12}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
       <td>${nomFest(f.festival)}</td>
