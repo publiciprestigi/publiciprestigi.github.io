@@ -103,8 +103,8 @@ function construirPremiades() {
   // Màxims guardons
   const MAXIMS2 = [
     { nom: "Palma d'Or",  color: '#9B2335', patro: /palma d.or/i },
-    { nom: "Os d'Or",     color: '#1976D2', patro: /os d.or/i },
     { nom: "Lleó d'Or",   color: '#2E7D5E', patro: /lle[oó] d.or/i },
+    { nom: "Os d'Or",     color: '#1976D2', patro: /os d.or/i },
     { nom: "Conxa d'Or",  color: '#E07B2A', patro: /conxa d.or/i },
   ];
 
