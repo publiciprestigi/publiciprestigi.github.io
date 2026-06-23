@@ -4,7 +4,7 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- /intro -->
 
 <!-- comentari-corona -->
-- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: concentra 6 dels 10 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Venècia aporta 3, Cannes 2, mentre que Berlín no té cap, però acumula fins a 5 títols al grup següent, com veurem a continuació.
+- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: concentra 6 dels 11 films d’aquest primer grup i 7 dels 15 del ‘segon cercle’. Venècia aporta 3, Cannes 2, mentre que Berlín no té cap, però acumula fins a 5 títols al grup següent, com veurem a continuació.
 
 - La majoria dels films de la ‘doble corona’ (7 de 11) van obtenir també algun premi, però només dues pel·lícules van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. El gran premi, per tant, no és imprescindible per connectar amb el públic.
 
