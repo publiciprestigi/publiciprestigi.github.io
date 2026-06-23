@@ -1523,7 +1523,7 @@ function construirGraficDobleCorona() {
   const legItems=[
     {col:COL_PUB,  label:'Públic — Top 100 (100 films)', buit:false},
     {col:COL_PREST,label:'Prestigi — Festivals (264 films)', buit:false},
-    {col:COL_PUB,  label:'Doble corona (10 films)', buit:true},
+    {col:COL_PUB,  label:'Doble corona (11 films)', buit:true},
   ];
   let lx = W/2 - 270;
   legItems.forEach(item=>{
@@ -1586,7 +1586,7 @@ function construirGraficConclusions1() {
   const COL_VERMELL = '#9B2335';
   const COL_VERD    = '#2d7a4f';
 
-  // 10 dobles corones
+  // 11 dobles corones
   const dobles = [
     { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null },
     { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null },
