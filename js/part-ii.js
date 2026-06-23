@@ -317,7 +317,7 @@ function construirRànquingEspectadors() {
     };
 
     const filaSenseDades = (f) => {
-      return `<tr style="background:#f7f7f7;border-bottom:2px solid #fff;color:#aaa" class="fila-extra-${cid}">
+      return `<tr style="display:none;background:#f7f7f7;border-bottom:2px solid #fff" class="fila-extra-${cid}">
         <td class="col-pos">—</td>
         <td>${titolFilm(f)}</td>
         <td class="col-subtil">${f.director}</td>
