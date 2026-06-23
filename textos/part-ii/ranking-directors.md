@@ -10,13 +10,13 @@ En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres
 <!-- comentari-top25 -->
 - Saura lidera amb 16 pel·lícules seleccionades i 8 d'elles premiades, Almodóvar el segueix amb 11 i 6. En nombre Saura és dominant, però Almodóvar és pràcticament l'únic pont sòlid entre públic i prestigi que apareix tant al Top 100 per espectadors com al circuit de festivals internacionals de manera sostinguda.
 
-- Dels 25 directors d'aquest rànquing, només 4 coincideixen a la vegada al Top 100 d'espectadors: el citat Almodóvar (*Mujeres al borde…*, *Todo sobre mi madre* i *Tacones lejanos*), Mario Camus (*Los santos inocentes*), Vicente Aranda (*Juana la Loca*) i Pedro Olea (*Tormento*).
+- Dels 25 directors d'aquest rànquing, només 4 coincideixen a la vegada al Top 100 d'espectadors: el citat Almodóvar (*Mujeres al borde…* i *Todo sobre mi madre*), Mario Camus (*Los santos inocentes*), Vicente Aranda (*Juana la Loca*) i Pedro Olea (*Tormento*).
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
 - Com canvia el rànquing: Vicente Aranda (#3 al Top 25), Montxo Armendáriz (#5), Gonzalo Suàrez (#6), Imanol Uribe (#9) e Isaki Lacuesta (#10) desapareixen del Top 10 sense Sant Sebastià. I es mantenen Saura, Almodóvar, Mario Camus, Manuel Gutiérrez Aragón i Bigas Luna.
  
-- En canvi, apareixen: Fernando Trueba (#15→#5), Isabel Coixet (#14→#6), Ricardo Franco (→#8), Víctor Erice (#19→#9) i Carla Simón, la més recent i jove del grup (→10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
+- En canvi, apareixen: Fernando Trueba (#15→#5), Isabel Coixet (#16→#6), Ricardo Franco (→#8), Víctor Erice (#19→#9) i Carla Simón, la més recent i jove del grup (→10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del circuit nacional.
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
