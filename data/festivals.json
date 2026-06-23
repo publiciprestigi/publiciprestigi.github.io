@@ -841,18 +841,6 @@
   },
   {
     "festival": "Venècia",
-    "any": 1965,
-    "titol": "Simón del desierto",
-    "director": "Luis Buñuel",
-    "premi": "(producció mexicana, director espanyol)",
-    "premiat": false,
-    "in_top100": false,
-    "top100_pos": null,
-    "espectadors": 158,
-    "decada": null
-  },
-  {
-    "festival": "Venècia",
     "any": 1966,
     "titol": "La busca",
     "director": "Angelino Fons",
