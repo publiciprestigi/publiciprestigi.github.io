@@ -1,6 +1,5 @@
 <!-- intro -->
-Berlín és l'únic dels quatre festivals sense cap film al Top 100. Cannes i Venècia n'hi aporten dos cadascun, Sant Sebastià, sis. Aquesta sola dada resumeix la diferent relació de cada festival amb el cinema de gran consum.
-
+Berlín és l'únic dels quatre festivals sense cap film al Top 100. Cannes i Venècia n'hi aporten dos cadascun, Sant Sebastià, sis, una xifra que s'explica en part per la seva relació estructural amb la indústria espanyola. Aquesta distribució resumeix la diferent posició de cada festival dins el circuit internacional.
 <!-- /intro -->
 
 <!-- comentari -->
