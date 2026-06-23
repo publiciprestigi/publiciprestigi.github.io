@@ -14,7 +14,7 @@ Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament
 <!-- intro-cercle -->
 ## El segon cercle
 
-A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols que podriem anomenar el 'segon cercle': films amb més d’un milió d'espectadors que no arriben al Top 100, com *Belle Époque* (1992), *La comunidad* (2000), *La colmena* (1983) o *Amantes* (1991), però que combinen reconeixement crític i impacte popular en proporcions més que notables.
+A continuació dels 11 films de la 'doble corona', hi ha un grup de 15 títols que podriem anomenar el 'segon cercle': films amb més d’un milió d'espectadors que no arriben al Top 100, com *Belle Époque* (1992), *La comunidad* (2000), *La colmena* (1983) o *Amantes* (1991), però que combinen reconeixement crític i impacte popular en proporcions més que notables.
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
@@ -22,6 +22,6 @@ A continuació dels 10 films de la 'doble corona', hi ha un grup de 15 títols q
 
 - El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* (2014) d'Alberto Rodríguez i *Mientras dure la guerra* (2019) d'Amenábar; als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
 
-Fins i tot sumant la ‘doble corona’ i el ‘segon cercle’, parlem només de 25 títols sobre els 264 films de festival analitzats: un 9,5%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
+Fins i tot sumant la ‘doble corona’ i el ‘segon cercle’, parlem només de 26 títols sobre els 265 films de festival analitzats: gairebé un 10%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
 
 <!-- /comentari-cercle -->
