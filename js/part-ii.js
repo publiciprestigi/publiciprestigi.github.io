@@ -555,7 +555,7 @@ function construirRànquingDirectors() {
     </table>`;
 
   cont10.innerHTML = `
-    <h3 class="subtitol-ranking-gran">Top 10 — Només Cannes, Berlín i Venècia</h3>
+    <h3 class="subtitol-ranking-gran">Top 10 — Només Cannes, Venècia i Berlín</h3>
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
