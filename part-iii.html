@@ -248,9 +248,10 @@
       if (window.PiP_aplicaFade) window.PiP_aplicaFade();
 
       // Inicialitza el gràfic de bretxa la primera vegada que es visita
-      if (s.id === 'bretxa' && !graficBretxaInit && window.PiP_graficBretxa) {
+      if (s.id === 'bretxa' && !graficBretxaInit) {
         graficBretxaInit = true;
-        setTimeout(window.PiP_graficBretxa, 50);
+        if (window.PiP_graficBretxa && bretxaDades) setTimeout(window.PiP_graficBretxa, 50);
+        else { var _tb = setInterval(function() { if (window.PiP_graficBretxa && bretxaDades) { clearInterval(_tb); window.PiP_graficBretxa(); } }, 100); }
       }
       if (s.id === 'caza-alcarras' && !graficCazaInit) {
         graficCazaInit = true;
@@ -378,8 +379,8 @@
         <div class="drawer-grup-titol">Festivals</div>
         <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
         <a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
-        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
         <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
+        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
         <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
         <div class="drawer-grup-titol">Rànquings</div>
         <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
