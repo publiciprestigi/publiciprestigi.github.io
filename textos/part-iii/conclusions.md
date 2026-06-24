@@ -69,6 +69,8 @@ Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centrali
 
 Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Aquesta dispersió del consum dilueix els moments col·lectius que abans es concentraven a les sales i al voltant de les grans emissions televisives.
 
+Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Ara bé, una audiència acumulada no implica necessàriament un impacte social comparable: milions d’entrades concentrades a les sales no deixen la mateixa empremta en la memòria col·lectiva, la conversa social i el relat crític i cultural posterior que una audiència semblant, però atomitzada entre finestres, pantalles i experiències de consum menys compartides. Aquesta dispersió del consum dilueix els moments col·lectius que abans es concentraven a les sales i al voltant de les grans emissions televisives.
+
 El públic hi és, potencialment més ampli que mai, però dins d’una oferta audiovisual gairebé il·limitada i fragmentada el repte ja no és arribar-hi, sinó fer-lo coincidir de nou en una sala.
 <!-- /punt-5 -->
 
