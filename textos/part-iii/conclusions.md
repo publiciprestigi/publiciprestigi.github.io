@@ -9,7 +9,7 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 <!-- /punt-1-cap -->
 
 <!-- punt-1-cos -->
-El balanç quantitatiu és inequívoc: dels 285 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 11 formen part també del Top 100 històric d'espectadors. Fins i tot incorporant-hi els quinze títols del 'segon cercle', la zona de contacte queda limitada a 36 pel·lícules: poc més d'un 12% del conjunt.
+El balanç quantitatiu és inequívoc: dels 285 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 11 formen part també del Top 100 històric d'espectadors. Fins i tot incorporant-hi els vint-i-cinc títols del 'segon cercle', la zona de contacte queda limitada a 36 pel·lícules: poc més d'un 12% del conjunt.
 
 El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica es va produir durant els anys de la Transició, quan el cinema crític va trobar també un públic ampli a les sales i la frontera entre autoria i mercat es va fer més porosa.
 
