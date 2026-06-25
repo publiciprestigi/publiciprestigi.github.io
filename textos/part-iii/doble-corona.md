@@ -22,6 +22,5 @@ A continuació dels 11 films de la 'doble corona', hi ha un grup de 15 títols q
 
 - El ‘segon cercle’ es concentra sobretot entre els 70s i els 90s: 11 dels 15 títols pertanyen a aquest període. Als 2010s només hi apareixen *La isla mínima* (2014) d'Alberto Rodríguez i *Mientras dure la guerra* (2019) d'Amenábar; als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
 
-Fins i tot sumant la ‘doble corona’ i el ‘segon cercle’, parlem només de 26 títols sobre els 265 films de festival analitzats: gairebé un 10%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
-
+Fins i tot sumant la ‘doble corona’ i el ‘segon cercle’, parlem només de 26 títols sobre els 281 films de festival analitzats: poc més d'un 9%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
 <!-- /comentari-cercle -->
