@@ -698,18 +698,6 @@
   {
     "festival": "Berlín",
     "any": 2004,
-    "titol": "El abrazo partido",
-    "director": "Daniel Burman",
-    "premi": "(dir. argentí, coproducció espanyola)",
-    "premiat": false,
-    "in_top100": false,
-    "top100_pos": null,
-    "espectadors": 138513,
-    "decada": null
-  },
-  {
-    "festival": "Berlín",
-    "any": 2004,
     "titol": "La vida que te espera",
     "director": "Manuel Gutiérrez Aragón",
     "premi": null,
@@ -717,18 +705,6 @@
     "in_top100": false,
     "top100_pos": null,
     "espectadors": 167829,
-    "decada": null
-  },
-  {
-    "festival": "Berlín",
-    "any": 2009,
-    "titol": "La teta asustada",
-    "director": "Claudia Llosa",
-    "premi": "(dir. peruana, coproducció espanyola)",
-    "premiat": false,
-    "in_top100": false,
-    "top100_pos": null,
-    "espectadors": 34663,
     "decada": null
   },
   {
@@ -741,30 +717,6 @@
     "in_top100": false,
     "top100_pos": null,
     "espectadors": 61711,
-    "decada": null
-  },
-  {
-    "festival": "Berlín",
-    "any": 2014,
-    "titol": "No llores, vuela (Aloft)",
-    "director": "Claudia Llosa",
-    "premi": "(dir. peruana, coproducció espanyola)",
-    "premiat": false,
-    "in_top100": false,
-    "top100_pos": null,
-    "espectadors": 56293,
-    "decada": null
-  },
-  {
-    "festival": "Berlín",
-    "any": 2015,
-    "titol": "El botón de nácar",
-    "director": "Patricio Guzmán",
-    "premi": "(dir. xilè, coproducció espanyola)",
-    "premiat": false,
-    "in_top100": false,
-    "top100_pos": null,
-    "espectadors": 4298,
     "decada": null
   },
   {
