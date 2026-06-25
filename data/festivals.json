@@ -796,8 +796,8 @@
     "any": 1966,
     "titol": "La busca",
     "director": "Angelino Fons",
-    "premi": null,
-    "premiat": false,
+    "premi": "Millor actor (Jacques Perrin)",
+    "premiat": true,
     "in_top100": false,
     "top100_pos": null,
     "espectadors": 333227,
@@ -3405,6 +3405,18 @@
     "in_top100": false,
     "top100_pos": null,
     "espectadors": 1687800,
+    "decada": null
+  },
+  {
+    "festival": "Venècia",
+    "any": 2021,
+    "titol": "Competencia oficial",
+    "director": "Gastón Duprat i Mariano Cohn",
+    "premi": "(directors argentins, coproducció espanyola)",
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 117467,
     "decada": null
   }
 ]
