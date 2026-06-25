@@ -14,7 +14,7 @@ L'estudi cobreix des de 1965, any a partir del qual l'ICAA disposa de registres 
 
 ## Coproduccions i directors no espanyols
 
-En aquesta part, les coproduccions es comptabilitzen com a espanyoles seguint el criteri oficial de l’ICAA: compten com a tals si compleixen els requisits legals de participació espanyola, sigui quina sigui la nacionalitat del director. Per això hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen: no és una llicència de l’estudi, sinó l’aplicació de la definició administrativa que regula les dades de taquilla utilitzades.
+Les coproduccions es comptabilitzen com a espanyoles seguint el criteri oficial de l’ICAA: compten com a tals si compleixen els requisits legals de participació espanyola, sigui quina sigui la nacionalitat del director. Per això hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen: no és una llicència de l’estudi, sinó l’aplicació de la definició administrativa que regula les dades de taquilla utilitzades.
 
 ## Diferències de models d'estrena 
 
