@@ -507,27 +507,37 @@ function construirRànquingDirectors() {
     { clau: 'Arregi', nom: 'Aitor Arregi' },
   ];
 
-  const top3PerFest = (festival, key_sel, key_pr) => {
+  // Pes dels premis: màxim guardó = 10, altres = 1
+  const PES_PREMI = (premi) => {
+    if (!premi) return 0;
+    if (/palma d.or|lle[oó] d.or|os d.or|conxa d.or/i.test(premi)) return 10;
+    return 1;
+  };
+
+  const top3PerFest = (festival, key_sel, key_pr, key_pes) => {
     const dirsAlies = {};
     festivalsData.filter(f => f.festival === festival).forEach(f => {
       let nomDir = f.director;
       for (const alias of ALIASES_TOP3) {
         if (f.director.includes(alias.clau)) { nomDir = alias.nom; break; }
       }
-      if (!dirsAlies[nomDir]) dirsAlies[nomDir] = { nom: nomDir, [key_sel]: 0, [key_pr]: 0 };
+      if (!dirsAlies[nomDir]) dirsAlies[nomDir] = { nom: nomDir, [key_sel]: 0, [key_pr]: 0, [key_pes]: 0 };
       dirsAlies[nomDir][key_sel]++;
-      if (f.premiat) dirsAlies[nomDir][key_pr]++;
+      if (f.premiat) {
+        dirsAlies[nomDir][key_pr]++;
+        dirsAlies[nomDir][key_pes] += PES_PREMI(f.premi);
+      }
     });
     return Object.values(dirsAlies)
       .filter(d => d[key_pr] > 0)
-      .sort((a,b) => b[key_pr]-a[key_pr] || b[key_sel]-a[key_sel])
+      .sort((a,b) => b[key_pr]-a[key_pr] || b[key_pes]-a[key_pes] || b[key_sel]-a[key_sel])
       .slice(0, 3);
   };
 
-  const top3c = top3PerFest('Cannes','c_sel','c_pr');
-  const top3b = top3PerFest('Berlín','b_sel','b_pr');
-  const top3v = top3PerFest('Venècia','v_sel','v_pr');
-  const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr');
+  const top3c = top3PerFest('Cannes','c_sel','c_pr','c_pes');
+  const top3b = top3PerFest('Berlín','b_sel','b_pr','b_pes');
+  const top3v = top3PerFest('Venècia','v_sel','v_pr','v_pes');
+  const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr','s_pes');
 
   // CORREGIT: sempre mostra ★N fins i tot quan N=1
   const celTop3 = (d, key_pr, color) => {
