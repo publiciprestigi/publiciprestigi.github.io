@@ -27,14 +27,12 @@ async function carregarFestivals() {
 
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
 
-function calcularMediana(films) {
+function calcularMitjana(films) {
   const valors = films
     .map(f => f.espectadors)
-    .filter(v => v != null && v > 0)
-    .sort((a, b) => a - b);
+    .filter(v => v != null && v > 0);
   if (!valors.length) return null;
-  const mid = Math.floor(valors.length / 2);
-  return valors.length % 2 !== 0 ? valors[mid] : Math.round((valors[mid-1] + valors[mid]) / 2);
+  return Math.round(valors.reduce((a, b) => a + b, 0) / valors.length);
 }
 
 function titolFilm(f) {
@@ -294,15 +292,15 @@ function construirRànquingEspectadors() {
     const filmsAmbDades = festivalsData.filter(f => f.festival === festival && f.espectadors)
       .sort((a,b) => b.espectadors - a.espectadors);
     const filmsSenseDades = festivalsData.filter(f => f.festival === festival && !f.espectadors);
-    const films = filmsAmbDades; // per a la mediana i el recompte
+    const films = filmsAmbDades; // per a la mitjana i el recompte
     const totalFilms = filmsAmbDades.length + filmsSenseDades.length;
     const top10  = filmsAmbDades.slice(0, 10);
     const resta  = filmsAmbDades.slice(10);
     const cid    = `resp-${festival.replace(/\s/g,'-')}`;
     const color  = FC[festival];
 
-    const mediana = calcularMediana(films);
-    const medianaTxt = mediana ? `Mediana de tots els films seleccionats: ${fmt(mediana)} espectadors` : '';
+    const mitjana = calcularMitjana(films);
+    const medianaTxt = mitjana ? `Mitjana de tots els films seleccionats: ${fmt(mitjana)} espectadors` : '';
 
     const fila = (f, i) => {
       const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
