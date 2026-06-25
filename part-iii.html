@@ -262,9 +262,10 @@
         if (!graficSAInit) { graficSAInit = true; setTimeout(window.PiP_graficSauraAlmodovar, 50); }
         if (!graficGAInit) { graficGAInit = true; setTimeout(window.PiP_graficGeneracioActual, 100); }
       }
-      if (s.id === 'autor-industrial' && !graficAIInit && window.PiP_graficAutorIndustrial) {
+      if (s.id === 'autor-industrial' && !graficAIInit) {
         graficAIInit = true;
-        setTimeout(window.PiP_graficAutorIndustrial, 50);
+        if (window.PiP_graficAutorIndustrial) setTimeout(window.PiP_graficAutorIndustrial, 50);
+        else { var _tai = setInterval(function() { if (window.PiP_graficAutorIndustrial) { clearInterval(_tai); window.PiP_graficAutorIndustrial(); } }, 100); }
       }
       if (s.id === 'conclusions') {
         if (!graficConc1Init && window.PiP_graficConclusions1) {
