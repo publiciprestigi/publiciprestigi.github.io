@@ -3310,5 +3310,101 @@
     "top100_pos": null,
     "espectadors": 1516,
     "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1965,
+    "titol": "Los pianos mecánicos",
+    "director": "Juan Antonio Bardem",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 1112381,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1968,
+    "titol": "Peppermint Frappé",
+    "director": "Carlos Saura",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 669165,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1969,
+    "titol": "España otra vez",
+    "director": "Jaime Camino",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 187972,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1973,
+    "titol": "La otra imagen",
+    "director": "Antoni Ribas",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 78893,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1980,
+    "titol": "Dedicatoria",
+    "director": "Jaime Chávarri",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": null,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1988,
+    "titol": "El Lute II: Mañana seré libre",
+    "director": "Vicente Aranda",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 382766,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 1995,
+    "titol": "Historias del Kronen",
+    "director": "Montxo Armendáriz",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 772003,
+    "decada": null
+  },
+  {
+    "festival": "Cannes",
+    "any": 2006,
+    "titol": "El laberinto del fauno",
+    "director": "Guillermo del Toro",
+    "premi": null,
+    "premiat": false,
+    "in_top100": false,
+    "top100_pos": null,
+    "espectadors": 1687800,
+    "decada": null
   }
 ]
