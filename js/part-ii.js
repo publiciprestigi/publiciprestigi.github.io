@@ -530,7 +530,7 @@ function construirRànquingDirectors() {
     });
     return Object.values(dirsAlies)
       .filter(d => d[key_pr] > 0)
-      .sort((a,b) => b[key_pr]-a[key_pr] || b[key_pes]-a[key_pes] || b[key_sel]-a[key_sel])
+      .sort((a,b) => b[key_pr]-a[key_pr] || b[key_sel]-a[key_sel] || b[key_pes]-a[key_pes])
       .slice(0, 3);
   };
 
