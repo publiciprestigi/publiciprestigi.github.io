@@ -1,4 +1,4 @@
-[ 
+[
   {
     "festival": "Cannes",
     "any": 1965,
@@ -460,8 +460,8 @@
     "any": 1985,
     "titol": "Stico",
     "director": "Jaime de Armiñán",
-    "premi": null,
-    "premiat": false,
+    "premi": "Millor actor (Fernando Fernán-Gómez)",
+    "premiat": true,
     "in_top100": false,
     "top100_pos": null,
     "espectadors": 194435,
@@ -556,8 +556,8 @@
     "any": 1991,
     "titol": "Beltenebros",
     "director": "Pilar Miró",
-    "premi": null,
-    "premiat": false,
+    "premi": "Premi a la Contribució Artística",
+    "premiat": true,
     "in_top100": false,
     "top100_pos": null,
     "espectadors": 348767,
