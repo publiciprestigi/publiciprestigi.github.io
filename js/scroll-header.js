@@ -12,12 +12,15 @@
         if (y < 80) {
           if (cap) cap.classList.remove('capcalera--hidden');
           if (nav) nav.classList.remove('navegacio--hidden');
+          document.body.classList.remove('cap-hidden');
         } else if (y > lastY) {
           if (cap) cap.classList.add('capcalera--hidden');
           if (nav) nav.classList.add('navegacio--hidden');
+          document.body.classList.add('cap-hidden');
         } else {
           if (cap) cap.classList.remove('capcalera--hidden');
           if (nav) nav.classList.remove('navegacio--hidden');
+          document.body.classList.remove('cap-hidden');
         }
         lastY = y;
         ticking = false;
