@@ -411,6 +411,42 @@ body.cap-hidden .sidebar {
 .buscador-tancar { position: absolute; right: 24px; top: 12px; background: none; border: none; font-size: 1rem; cursor: pointer; color: var(--color-text-suau); }
 #buscador-resultats { margin-top: 24px; font-size: 0.95rem; }
 
+.buscador-resultat {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-linia);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: padding .1s;
+  cursor: pointer;
+}
+.buscador-resultat:hover { background: #f7f7f7; padding-left: 8px; }
+.buscador-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.buscador-resultat-titol {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+.buscador-resultat-sub {
+  font-size: 0.82rem;
+  color: var(--color-text-suau);
+  line-height: 1.4;
+}
+.buscador-buit {
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+  margin-top: 16px;
+  font-style: italic;
+}
+
 /* ============================================================
    PÀGINA DE VERSIONS
    ============================================================ */
