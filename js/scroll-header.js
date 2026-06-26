@@ -1,23 +1,23 @@
-/* Públic i Prestigi — Amaga capçalera en scroll avall, mostra en scroll amunt */
+/* Públic i Prestigi — Amaga capçalera i nav en scroll avall, mostra en scroll amunt */
 (function() {
   var lastY = 0;
   var ticking = false;
   var cap = document.querySelector('.capcalera');
-  if (!cap) return;
+  var nav = document.querySelector('.navegacio');
 
   window.addEventListener('scroll', function() {
     if (!ticking) {
       window.requestAnimationFrame(function() {
         var y = window.scrollY;
         if (y < 80) {
-          // Prop del top: sempre visible
-          cap.classList.remove('capcalera--hidden');
+          if (cap) cap.classList.remove('capcalera--hidden');
+          if (nav) nav.classList.remove('navegacio--hidden');
         } else if (y > lastY) {
-          // Scroll avall: amagar
-          cap.classList.add('capcalera--hidden');
+          if (cap) cap.classList.add('capcalera--hidden');
+          if (nav) nav.classList.add('navegacio--hidden');
         } else {
-          // Scroll amunt: mostrar
-          cap.classList.remove('capcalera--hidden');
+          if (cap) cap.classList.remove('capcalera--hidden');
+          if (nav) nav.classList.remove('navegacio--hidden');
         }
         lastY = y;
         ticking = false;
