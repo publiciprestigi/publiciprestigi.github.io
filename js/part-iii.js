@@ -279,7 +279,7 @@ window.PiP_graficBretxa = function() {
         },
         {
           label: 'Ràtio bretxa',
-          data: bretxaDades.map(r => +r.ratio.toFixed(3)),
+          data: bretxaDades.map(r => +r.ratio.toFixed(2)),
           borderColor: '#363737',
           backgroundColor: 'transparent',
           borderWidth: 2.5,
