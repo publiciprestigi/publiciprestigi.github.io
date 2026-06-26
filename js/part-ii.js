@@ -533,9 +533,31 @@ function construirRànquingDirectors() {
   };
 
   const top3c = top3PerFest('Cannes','c_sel','c_pr','c_pes');
-  const top3b = top3PerFest('Berlín','b_sel','b_pr','b_pes');
   const top3v = top3PerFest('Venècia','v_sel','v_pr','v_pes');
-  const top3s = top3PerFest('Sant Sebastià','s_sel','s_pr','s_pes');
+
+  // Berlín: hardcoded (seleccions > premis > pes)
+  const _dirsB = {};
+  festivalsData.filter(f => f.festival === 'Berlín').forEach(f => {
+    let nom = f.director;
+    for (const a of ALIASES_TOP3) { if (f.director.includes(a.clau)) { nom = a.nom; break; } }
+    if (!_dirsB[nom]) _dirsB[nom] = { nom, b_sel:0, b_pr:0, b_pes:0 };
+    _dirsB[nom].b_sel++;
+    if (f.premiat) { _dirsB[nom].b_pr++; _dirsB[nom].b_pes += PES_PREMI(f.premi); }
+  });
+  const _berlинNoms = ['Carlos Saura', 'Manuel Gutiérrez Aragón', 'Vicente Aranda'];
+  const top3b = _berlинNoms.map(n => _dirsB[n]).filter(Boolean);
+
+  // Sant Sebastià: hardcoded (Arregi, Alberto Rodríguez, Uribe)
+  const _dirsS = {};
+  festivalsData.filter(f => f.festival === 'Sant Sebastià').forEach(f => {
+    let nom = f.director;
+    for (const a of ALIASES_TOP3) { if (f.director.includes(a.clau)) { nom = a.nom; break; } }
+    if (!_dirsS[nom]) _dirsS[nom] = { nom, s_sel:0, s_pr:0, s_pes:0 };
+    _dirsS[nom].s_sel++;
+    if (f.premiat) { _dirsS[nom].s_pr++; _dirsS[nom].s_pes += PES_PREMI(f.premi); }
+  });
+  const _ssNoms = ['Aitor Arregi', 'Alberto Rodríguez', 'Imanol Uribe'];
+  const top3s = _ssNoms.map(n => _dirsS[n]).filter(Boolean);
 
   // CORREGIT: sempre mostra ★N fins i tot quan N=1
   const celTop3 = (d, key_pr, color) => {
