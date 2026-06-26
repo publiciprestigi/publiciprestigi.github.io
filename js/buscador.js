@@ -38,7 +38,7 @@
     { ruta: 'textos/part-iii/conclusions.md',       titol: 'Conclusions',              part: 'III', seccio: 'conclusions',     url: 'part-iii.html#conclusions' },
   ];
 
-  const PART_COLOR = { 'I': '#2a5582', 'II': '#9B2335', 'III': '#5a4a8a' };
+  const PART_COLOR = { 'I': '#2a5582', 'II': '#9B2335', 'III': '#6B3FA0' };
 
   let index = [];
   let indexat = false;
@@ -92,11 +92,13 @@
         // Dividir en fragments de ~200 paraules per a millors resultats
         const paragrafs = net.split(/\n{2,}/).filter(p => p.trim().length > 30);
         paragrafs.forEach(p => {
+          const pNet = p.trim();
           index.push({
             tipus: 'text',
-            text: p.toLowerCase(),
+            text: pNet.toLowerCase(),
             titol: md.titol,
-            subtitol: p.trim().slice(0, 100) + (p.trim().length > 100 ? '…' : ''),
+            subtitol: pNet.slice(0, 100) + (pNet.length > 100 ? '…' : ''),
+            subtitolRaw: pNet,
             part: md.part,
             url: md.url,
           });
@@ -136,6 +138,27 @@
     return resultats.slice(0, 12);
   }
 
+  function destacaText(text, query) {
+    // Troba el fragment més rellevant i posa la query en negreta
+    const q = query.toLowerCase();
+    const idx = text.toLowerCase().indexOf(q.split(' ')[0]);
+    let fragment;
+    if (idx >= 0) {
+      const start = Math.max(0, idx - 60);
+      const end = Math.min(text.length, idx + q.length + 120);
+      fragment = (start > 0 ? '…' : '') + text.slice(start, end) + (end < text.length ? '…' : '');
+    } else {
+      fragment = text.slice(0, 180) + (text.length > 180 ? '…' : '');
+    }
+    // Remarcar cada terme de la query
+    const termes = query.split(/\s+/).filter(t => t.length > 1);
+    termes.forEach(t => {
+      const re = new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+      fragment = fragment.replace(re, '<mark>$1</mark>');
+    });
+    return fragment;
+  }
+
   function renderResultats(resultats, query) {
     const cont = document.getElementById('buscador-resultats');
     if (!cont) return;
@@ -147,11 +170,13 @@
 
     cont.innerHTML = resultats.map(r => {
       const color = PART_COLOR[r.part] || '#555';
-      const badge = `<span class="buscador-badge" style="color:${color}">Part ${r.part}</span>`;
+      const badge = `<span class="buscador-badge" style="color:${color}">Part ${r.part} · ${r.titol}</span>`;
+      const sub = r.tipus === 'text'
+        ? destacaText(r.subtitolRaw || r.subtitol, query)
+        : r.subtitol;
       return `<a href="${r.url}" class="buscador-resultat" onclick="document.getElementById('buscador-overlay').style.display='none'">
         ${badge}
-        <span class="buscador-resultat-titol">${r.titol}</span>
-        <span class="buscador-resultat-sub">${r.subtitol}</span>
+        <span class="buscador-resultat-sub">${sub}</span>
       </a>`;
     }).join('');
   }
