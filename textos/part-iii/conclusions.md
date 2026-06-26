@@ -51,9 +51,11 @@ Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altr
 
 La taquilla continua sent l’única dada pública plenament comparable al llarg de tot el període. La sala, però, ha passat de ser el centre de l’explotació a convertir-se en la primera finestra d’un recorregut que continua a les televisions i les plataformes. Mai no havia estat tan fàcil accedir a una pel·lícula després de l’estrena, ni tan difícil reconstruir-ne l’audiència real.
 
-L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser models oficials ni científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. Serveixen per orientar la comparació i fer visibles diferències que les xifres brutes oculten. Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d’audiència públiques i comparables. <sup>[20]</sup>
+L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta corregir aquesta limitació (no pretenen ser models oficials ni científicament validats). L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA aproxima l’audiència acumulada a través de les finestres disponibles en cada context. Serveixen per orientar la comparació i fer visibles diferències que les xifres brutes oculten.
 
-Les xifres de taquilla poden fer pensar que el cinema popular i el cinema de festival s’han allunyat més del que realment ho han fet en audiència total. Films recents com *Sirât* o *Los domingos* continuen acumulant públic després de l’estrena, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla és ja una dada clarament insuficient.
+Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d’audiència públiques i comparables. 
+
+Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d'audiència públiques i comparables. <sup>[20]</sup> Films recents com Sirât o Los domingos continuen acumulant públic després de l'estrena, mentre que en produccions concebudes per a plataformes, com La sociedad de la nieve, la taquilla és ja una dada clarament insuficient. Les xifres de sala, doncs, poden fer pensar que el cinema popular i el de festival s'han allunyat més del que realment ho han fet en audiència total.
 
 La capacitat del cinema espanyol de produir 'dobles corones' ha canviat d’escala: avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull.
 <!-- /punt-4 -->
