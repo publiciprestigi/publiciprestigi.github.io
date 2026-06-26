@@ -578,7 +578,7 @@ body.cap-hidden .sidebar {
 
 /* --- Sidebar spacer: alinea el primer ítem amb el supertítol --- */
 .sidebar-spacer {
-  height: 40px;
+  height: 56px;
 }
 
 /* --- Films context: gris, mateix tamany --- */
@@ -952,6 +952,7 @@ body.cap-hidden .sidebar {
    PORTADA — pàgina d'inici (sense capçalera, menú visible)
    ============================================================ */
 body.pag-inici .navegacio { top: 72px; }
+body.pag-inici .navegacio--hidden { top: -48px; }
 
 
 /* Xifres: número més gran, sense redisseny del bloc */
