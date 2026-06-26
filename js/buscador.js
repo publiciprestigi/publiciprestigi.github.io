@@ -135,7 +135,7 @@
       return prio[a.tipus] - prio[b.tipus];
     });
 
-    return resultats.slice(0, 12);
+    return resultats;
   }
 
   function destacaText(text, query) {
