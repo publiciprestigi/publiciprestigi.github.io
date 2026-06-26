@@ -250,6 +250,11 @@ body.amb-sidebar { display: flex; flex-direction: column; min-height: 100vh; }
   height: calc(100vh - 117px);
   overflow-y: auto;
   align-self: flex-start;
+  transition: top 0.25s ease, height 0.25s ease;
+}
+body.cap-hidden .sidebar {
+  top: 0;
+  height: 100vh;
 }
 
 .sidebar-grup { margin-bottom: 24px; }
