@@ -16,7 +16,7 @@ Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocu
 
 ## Coproduccions internacionals
 
-A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han representat els seus països als Oscars o que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, queden fora del corpus.
+A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han representat els seus països als Oscar o que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, queden fora del corpus.
 
 ## Sobre les fonts
 
