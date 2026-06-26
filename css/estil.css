@@ -578,7 +578,7 @@ body.cap-hidden .sidebar {
 
 /* --- Sidebar spacer: alinea el primer ítem amb el supertítol --- */
 .sidebar-spacer {
-  height: 54px;
+  height: 50px;
 }
 
 /* --- Films context: gris, mateix tamany --- */
