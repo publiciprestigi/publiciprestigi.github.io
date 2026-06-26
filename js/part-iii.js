@@ -118,7 +118,7 @@ function construirSegonCercle() {
     });
   const films = [...seen.values()]
     .sort((a,b) => (b.espectadors||0) - (a.espectadors||0))
-    .slice(0, 25);
+    .slice(0, 24);
 
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
@@ -1601,7 +1601,7 @@ function construirGraficConclusions1() {
   ];
   const doblesAnys = new Set(dobles.map(d => d.any));
 
-  // 25 films del segon cercle (≥1M espectadors, no al Top 100)
+  // 24 films del segon cercle (≥1M espectadors, no al Top 100)
   const segonCercle = [
     { any:1966, titol:'La caza' },
     { any:1973, titol:'El espíritu de la colmena' },
