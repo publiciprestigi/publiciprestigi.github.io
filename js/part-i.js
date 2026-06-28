@@ -14,6 +14,8 @@ async function carregarFilms() {
   } catch(e) { console.error('Error:', e); }
 }
 
+const md2html = s => s ? s.replace(/\*([^*]+)\*/g, '<em>$1</em>') : '';
+
 const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
 const fmtPct = (n, e) => n == null ? '—' : n.toFixed(2) + '%' + (e ? '≈' : '');
 const fmtIIC = n => n == null ? '—' : n.toFixed(2);
@@ -36,7 +38,7 @@ function construirFila(film, decada, hidden) {
     <td class="col-num col-gris">${fmtPct(film.penetracio, film.penetracio_estimat)}</td>
     <td class="col-num col-gris">${fmtPct(film.quota, film.quota_estimat)}</td>
     <td class="col-num col-iic">${fmtIIC(film.iic)}</td>
-    <td class="col-context-doc">${film.context_text || ''}</td>
+    <td class="col-context-doc">${md2html(film.context_text)}</td>
   </tr>`;
 }
 
