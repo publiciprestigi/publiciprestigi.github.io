@@ -3597,7 +3597,7 @@
     "quota_estimat": false,
     "iic": 1.27,
     "in_top100": false,
-    "context_text": "Thriller de robatori ambientat a la cambra cuirassada del Banco de España durant la final del Mundial de 2010."
+    "context_text": "*Thriller* de robatori ambientat a la cambra cuirassada del Banco de España durant la final del Mundial de 2010."
   },
   {
     "pos_decade": 16,
@@ -3723,7 +3723,7 @@
     "quota_estimat": false,
     "iic": 0.76,
     "in_top100": false,
-    "context_text": "Cinema social de qualitat en mercat restringit. La realitat urbana com a matèria cinematogràfica vàlida."
+    "context_text": "La història real del conductor que va portar el bus 47 al barri de Torre Baró. Cinema social ben rebut en taquilla i multipremiat."
   },
   {
     "pos_decade": 23,
@@ -3741,7 +3741,7 @@
     "quota_estimat": false,
     "iic": 0.72,
     "in_top100": false,
-    "context_text": "Comèdia familiar de producció modesta. Un dels títols de la perifèria que aporten volum al mercat sense aspirar a l'impacte dels blockbusters."
+    "context_text": "Comèdia familiar amb Leo Harlem. Humor de fórmula per al públic fidel."
   },
   {
     "pos_decade": 24,
@@ -3759,6 +3759,6 @@
     "quota_estimat": false,
     "iic": 0.69,
     "in_top100": false,
-    "context_text": "Comèdia de parelles, format modest però amb públic fidel. El cinema espanyol de consum intern sense ambicions globals però necessari per al mercat local."
+    "context_text": "Comèdia de situació amb Paco León i Ernesto Alterio, sense ambicions globals però necessari per al mercat local."
   }
 ]
