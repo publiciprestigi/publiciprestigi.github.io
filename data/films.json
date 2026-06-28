@@ -2373,7 +2373,7 @@
     "quota_estimat": false,
     "iic": 4.7,
     "in_top100": true,
-    "context_text": "La seqüela supera l'original. Segura crea el model del blockbuster de comèdia popular espanyol."
+    "context_text": "La seqüela supera l'original. Segura crea el model del *blockbuster* de comèdia popular espanyol."
   },
   {
     "pos_decade": 3,
@@ -2409,7 +2409,7 @@
     "quota_estimat": false,
     "iic": 4.15,
     "in_top100": true,
-    "context_text": "Debut de Bayona. Terror que funciona globalment. Inici d'una de les carreres espanyoles més internacionals."
+    "context_text": "Debut de Bayona. Terror dramàtic que funciona globalment. Inici d'una de les carreres espanyoles més internacionals."
   },
   {
     "pos_decade": 5,
@@ -2553,7 +2553,7 @@
     "quota_estimat": false,
     "iic": 1.7,
     "in_top100": true,
-    "context_text": "Thriller carcerari. Goya 2010. Luis Tosar en una interpretació àmpliament reconeguda."
+    "context_text": "*Thriller* carcerari. Un funcionari atrapat en un motí que fingeix ser pres, amb Luis Tosar i Alberto Ammann. Goya 2010."
   },
   {
     "pos_decade": 13,
