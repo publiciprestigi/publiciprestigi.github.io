@@ -648,7 +648,7 @@ function construirDuesGeneracions() {
     { any:2022, titol:'Alcarràs', director:'Carla Simón', festival:'Berlín', premiat:true, esp:403195, top100:null, mercat:'71M', penetr:'0,86%', quota:'0,57%', iic:'0,48', iaa_xifra:'~1,31M', iaa_mult:'', iaa_est:true },
     { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:281749, top100:null, mercat:'65M≈', penetr:'0,57%≈', quota:'0,33%≈', iic:'0,30≈', iaa_xifra:'~0,92M', iaa_mult:'', iaa_est:true },
     { any:2022, titol:'Cinco lobitos', director:'Alauda Ruiz de Azúa', festival:null, premiat:false, esp:154708, top100:null, mercat:'71M≈', penetr:'0,33%≈', quota:'0,22%≈', iic:'0,18≈', iaa_xifra:'~504.000', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:688335, top100:{pos:21,dec:'2020s'}, mercat:'65M', penetr:'1,45%', quota:'1,06%', iic:'0,85', iaa_xifra:'~2,24M', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:688335, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,45%', quota:'1,06%', iic:'0,85', iaa_xifra:'~2,24M', iaa_mult:'', iaa_est:true },
   ];
 
   renderTaulaGen(FILMS_SAURA, 'taula-saura', 'Carlos Saura');
