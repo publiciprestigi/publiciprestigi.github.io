@@ -1,5 +1,5 @@
 <!-- intro -->
-El cas de *La caza* i *Alcarràs* no és un exemple puntual, sinó el símptoma de dues èpoques radicalment diferents. El que va ser possible entre els anys 60 i 90, amb mercats molt més grans i una centralitat encara decisiva de la sala, i el que és possible ara, amb un mercat d’entrades postpandèmia bastant més petit i sis o més finestres simultànies, són realitats incomparables en xifres brutes, però comparables quan s’apliquen les mètriques adequades.
+El cas de *La caza* i *Alcarràs* no és un exemple puntual, sinó el símptoma de dues èpoques radicalment diferents. El que va ser possible entre els anys 60 i 90, amb mercats molt més grans i una centralitat encara decisiva de la sala, i el que és possible ara, amb un mercat d’entrades postpandèmia bastant més petit i sis o més finestres simultànies, són realitats incomparables en xifres brutes, però que les mètriques adequades permeten, almenys, posar en diàleg.
 
 El que segueix és una mirada a dues carreres emblemàtiques de la generació anterior, Saura i Almodóvar, i a quatre directors de la generació actual que s’han convertit en referents del cinema espanyol als festivals internacionals.
 <!-- /intro -->
