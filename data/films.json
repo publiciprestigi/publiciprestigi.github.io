@@ -105,7 +105,7 @@
     "quota_estimat": true,
     "iic": 2.09,
     "in_top100": true,
-    "context_text": "Comèdia de costums sobre les relacions entre sexes en una Espanya que comença a canviar."
+    "context_text": "Comèdia musical amb Concha Velasco com a advocada que defensa un camioner (Manolo Escobar) acusat de violació."
   },
   {
     "pos_decade": 7,
@@ -141,7 +141,7 @@
     "quota_estimat": true,
     "iic": 1.94,
     "in_top100": true,
-    "context_text": "Comèdia taurina amb Paco Martínez Soria. Lazaga i Martínez Soria: la parella més taquillera de la dècada."
+    "context_text": "Biopic taurí, Palomo Linares s'interpreta a si mateix en el relat del seu ascens des de la misèria fins a les Ventas."
   },
   {
     "pos_decade": 9,
@@ -159,7 +159,7 @@
     "quota_estimat": true,
     "iic": 1.92,
     "in_top100": true,
-    "context_text": "Comèdia religiosa popular. El capellà bonàs de barri com a figura entranyable en plena dictadura."
+    "context_text": "Comèdia musical amb Manolo Escobar de capellà cantant i mag aficionat a la investigació criminal."
   },
   {
     "pos_decade": 10,
@@ -202,7 +202,7 @@
     "pos_hist": 34,
     "any": 1968,
     "titol": "Relaciones casi públicas",
-    "director": "José María Forqué",
+    "director": "J.L. Sáenz de Heredia",
     "decada": "60s",
     "espectadors": 2860334,
     "mercat_M": 330.0,
@@ -213,7 +213,7 @@
     "quota_estimat": true,
     "iic": 1.71,
     "in_top100": true,
-    "context_text": "Comèdia de costums urbans. Forqué retrata les noves classes mitjanes en ple *boom* econòmic."
+    "context_text": "Comèdia musical amb Manolo Escobar i Concha Velasco: ell cantant sense sort, ella la seva representant de televisió."
   },
   {
     "pos_decade": 13,
@@ -285,7 +285,7 @@
     "quota_estimat": true,
     "iic": 1.62,
     "in_top100": true,
-    "context_text": "Thriller de robatori amb repartiment internacional. Isasi, especialista en cinema d'acció de projecció exterior."
+    "context_text": "*Thriller* de robatori amb repartiment internacional. Isasi, especialista en cinema d'acció de projecció exterior."
   },
   {
     "pos_decade": 17,
@@ -303,7 +303,7 @@
     "quota_estimat": true,
     "iic": 1.59,
     "in_top100": true,
-    "context_text": "Drama religiós. La monja com a personatge complex, inusual en el cinema popular de l'època."
+    "context_text": "Drama de coproducció hispano-italiana. Una monja violada al Congo belga afronta un dilema moral entre la maternitat i la vocació religiosa."
   },
   {
     "pos_decade": 18,
@@ -339,14 +339,14 @@
     "quota_estimat": true,
     "iic": 1.56,
     "in_top100": true,
-    "context_text": "Comèdia juvenil musical amb Los Brincos i Massiel. El *beat* espanyol a la pantalla gran."
+    "context_text": "Comèdia musical amb Los Bravos com a protagonistes. Vehicle de promoció del grup en el moment de màxima popularitat."
   },
   {
     "pos_decade": 20,
     "pos_hist": 51,
     "any": 1966,
     "titol": "Buenos días, condesita",
-    "director": "Luis Marquina",
+    "director": "L.C. Amadori",
     "decada": "60s",
     "espectadors": 2603729,
     "mercat_M": 370.0,
@@ -357,7 +357,7 @@
     "quota_estimat": true,
     "iic": 1.55,
     "in_top100": true,
-    "context_text": "Drama romàntic vehicle per a Marisol. Marquina, especialista en estrelles femenines."
+    "context_text": "Comèdia musical amb Rocío Dúrcal. Una noia del Rastro que s'ha de fer passar per noble per ajudar un jove adinerat."
   },
   {
     "pos_decade": 21,
@@ -400,7 +400,7 @@
     "pos_hist": 58,
     "any": 1967,
     "titol": "El halcón y la presa",
-    "director": "J.A. de la Loma",
+    "director": "Sergio Sollima",
     "decada": "60s",
     "espectadors": 2421387,
     "mercat_M": 350.0,
@@ -411,14 +411,14 @@
     "quota_estimat": true,
     "iic": 1.44,
     "in_top100": true,
-    "context_text": "*Western* de coproducció. L'escola espanyola a l'estela de Leone."
+    "context_text": "*Spaghetti western* de coproducció ítalo-espanyola amb Lee Van Cleef a l'estela de Leone."
   },
   {
     "pos_decade": 24,
     "pos_hist": 59,
     "any": 1969,
     "titol": "Las Leandras",
-    "director": "J.L. Sáenz de Heredia",
+    "director": "Eugenio Martín",
     "decada": "60s",
     "espectadors": 2412993,
     "mercat_M": 310.0,
@@ -429,14 +429,14 @@
     "quota_estimat": true,
     "iic": 1.44,
     "in_top100": true,
-    "context_text": "Adaptació de la sarsuela clàssica. El teatre popular musical al cinema."
+    "context_text": "Comèdia musical amb Rocío Dúrcal i Alfredo Landa en l'adaptació cinematogràfica de la cèlebre revista de Celia Gámez."
   },
   {
     "pos_decade": 25,
     "pos_hist": 62,
     "any": 1966,
     "titol": "El primer cuartel",
-    "director": "Pedro Lazaga",
+    "director": "Ignacio F. Iquino",
     "decada": "60s",
     "espectadors": 2387163,
     "mercat_M": 370.0,
@@ -447,7 +447,7 @@
     "quota_estimat": true,
     "iic": 1.42,
     "in_top100": true,
-    "context_text": "Comèdia militar. El servei militar com a tema de l'humor popular."
+    "context_text": "Drama d'aventures històric sobre les guerres carlines i la fundació de la Guàrdia Civil."
   },
   {
     "pos_decade": 26,
