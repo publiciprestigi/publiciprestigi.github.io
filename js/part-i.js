@@ -217,7 +217,7 @@ function construirRànquingDirectors() {
   let ctrDir = 0;
 
   const llista1 = Object.values(dirs).filter(d => d.top100 > 0)
-    .sort((a, b) => b.top100 - a.top100 || b.espTop - a.espTop);
+    .sort((a, b) => b.espTop - a.espTop || b.top100 - a.top100);
 
   const posR1 = {};
   llista1.forEach((d, i) => { posR1[d.nom] = i + 1; });
