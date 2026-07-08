@@ -25,7 +25,7 @@ El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) e
 
 <!-- post-grafic1 -->
 
-La bretxa, per tant, no indica només una menor presència del cinema de festival en el mercat de sales. També es pot llegir com un desplaçament: una part de la seva visibilitat i del seu valor ja no passa només per la taquilla espanyola, sinó també per la distribució internacional i, sobretot en les últimes dècades, per les plataformes i altres formes de circulació posterior.
+La bretxa, per tant, no indica només una menor presència del cinema de festival en el mercat de sales. També es pot llegir com un canvi d’escala: una part de la seva visibilitat i del seu valor ja no passa només per la taquilla espanyola, sinó per formes de circulació més internacionals, digitals i disperses, accelerades per internet, la globalització del sector i, en les últimes dècades, per les plataformes.
 
-La ràtio funciona així com un indicador de separació i com un símptoma d’un canvi més profund: el públic no desapareix necessàriament, però es fragmenta, es dispersa i deixa menys rastre mesurable.
+La ràtio funciona així com un indicador de separació i com un símptoma d’un canvi més profund: el públic no desapareix necessàriament, però es fragmenta, es desplaça i deixa menys rastre mesurable.
 <!-- /post-grafic1 -->
