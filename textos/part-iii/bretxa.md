@@ -23,7 +23,7 @@ La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mitjana anual d’entrades del mercat (línia grisa).
 <!-- /intro-grafic1 -->
 
-
 <!-- post-grafic1 -->
+
 La bretxa, per tant, no indica només una pèrdua de públic del cinema de prestigi en sales. També assenyala un desplaçament: una part creixent de la seva visibilitat i del seu valor es construeix fora de la taquilla espanyola, en un circuit més ampli fet de festivals, distribució internacional, plataformes i altres finestres. Aquest impacte existeix, però queda menys ben reflectit en les dades disponibles. La ràtio de bretxa funciona així com un indicador de separació i, alhora, com un símptoma d'un canvi més profund: el públic no desapareix necessàriament, però es fragmenta, es desplaça i deixa menys rastre mesurable.
 <!-- /post-grafic1 -->
