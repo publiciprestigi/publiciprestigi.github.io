@@ -22,4 +22,4 @@ La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 <!-- intro-grafic1 -->
 El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mitjana anual d’entrades del mercat (línia grisa).
 <!-- /intro-grafic1 -->
-xxxx
+
