@@ -25,6 +25,6 @@ El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) e
 
 <!-- post-grafic1 -->
 
-La bretxa, per tant, no indica només una menor presència del cinema de festival en el mercat de sales. També es pot llegir com un canvi d’escala: una part de la seva visibilitat i del seu valor ja no passa només per la taquilla espanyola, sinó per formes de circulació més internacionals, digitals i disperses, accelerades per internet, la globalització del sector i l’expansió de les plataformes.
+Vist així, la bretxa no indica només una menor presència del cinema de festival en el mercat de sales. També es pot llegir com un canvi d’escala: una part de la seva visibilitat i del seu valor ja no passa només per la taquilla espanyola, sinó per formes de circulació més internacionals, digitals i disperses, accelerades per internet, la globalització del sector i l’expansió de les plataformes.
 
 <!-- /post-grafic1 -->
