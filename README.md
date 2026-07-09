@@ -1,2 +1,2 @@
 ## Públic i Prestigi
-### Métricas y paradojas del cine español en dos circuitos (1965-2025)
+### Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)
