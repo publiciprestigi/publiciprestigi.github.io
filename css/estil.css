@@ -68,7 +68,7 @@ h2 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; }
 h3 { font-size: 1.25rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
 p { margin-bottom: 1.25rem; }
 a { color: var(--color-text); text-decoration: underline; text-underline-offset: 3px; }
-a:hover { opacity: 0.65; }
+a:hover { }
 strong { font-weight: 600; }
 
 /* ============================================================
@@ -223,7 +223,6 @@ strong { font-weight: 600; }
 .seccio-contingut a:hover,
 .inici-intro a:hover,
 .inici-intro-text a:hover {
-  opacity: 0.65;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1039,7 +1038,6 @@ sup a:hover { color: var(--color-text); opacity: 1; }
   text-decoration: underline;
 }
 #nota-tooltip a:hover {
-  opacity: 0.65;
 }
 
 body.part-iii .titol-sticky-sup { color: #5a4a8a; }
