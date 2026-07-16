@@ -341,16 +341,26 @@
   </div>
 
   <script>
-    // ── CARRUSSEL FOTO PORTADA ──
+    // ── CARRUSSEL FOTO PORTADA (loop infinit) ──
     (function() {
       const pista = document.getElementById('substack-pista');
       if (!pista) return;
       const total = pista.children.length;
-      let actual = Math.floor(Math.random() * total); // comença en una foto aleatòria
-      pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+      // Clona la primera foto i posa-la al final per al loop sense salt visible
+      pista.appendChild(pista.children[0].cloneNode(true));
+      let actual = 0;
       setInterval(function() {
-        actual = (actual + 1) % total;
+        actual++;
+        pista.style.transition = 'transform 0.6s ease';
         pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+        if (actual === total) {
+          // Quan arriba al clon, reposiciona a la primera sense transició
+          setTimeout(function() {
+            pista.style.transition = 'none';
+            pista.style.transform = 'translateX(0)';
+            actual = 0;
+          }, 650);
+        }
       }, 5000);
     })();
 
