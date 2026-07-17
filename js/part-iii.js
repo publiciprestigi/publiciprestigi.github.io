@@ -2046,7 +2046,7 @@ window.PiP_graficMapaCanon = function() {
   ];
 
   let html = `
-    <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors</p>
+    <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)</p>
     <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:8px;justify-content:center">`;
   blocs.forEach(b => {
     html += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${b.nom.charAt(0) + b.nom.slice(1).toLowerCase()}</span>`;
