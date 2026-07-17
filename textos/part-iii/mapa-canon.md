@@ -15,7 +15,7 @@ L'ordre dels cinc blocs no és arbitrari: el mapa es llegeix com una escala d'es
 <!-- /criteri -->
 
 <!-- nucli -->
-**El nucli central**
+*El nucli central*
 
 Setze films de *La caza* (1966) a *La isla mínima* (2014), i una constant que cap altre bloc comparteix: el públic mai no hi és residual. Cap film per sota dels 220.000 espectadors, cap per sobre dels 3,6 milions: 5 títols es mouen per sota del mig milió, 10 superen el milió i només 2 passen dels tres milions (*Furtivos* i *Mujeres al borde de un ataque de nervios*, casualment dos 'dobles corones'). El nucli no viu als extrems: és la zona on el consens crític i una audiència àmplia han coincidit.
 
@@ -27,7 +27,7 @@ La resta del nucli el completen títols de trajectòries molt diverses: hi convi
 <!-- /nucli -->
 
 <!-- intermedis -->
-**Els dos espais intermedis**
+*Els dos espais intermedis*
 
 A banda i banda del nucli, dos grups comparteixen posició intermèdia: el cànon en construcció de la generació actual, i el cinema popular de gènere, el territori del cinema d'autor industrial ja tractat a l'estudi, ara mirat des del cànon.
 
@@ -39,7 +39,7 @@ El patró, a més, té precedents. Narciso Ibáñez Serrador (el gran padrí d'a
 <!-- /intermedis -->
 
 <!-- extrems -->
-**Els extrems**
+*Els extrems*
 
 Als marges del mapa, les dues situacions límit: el cànon gairebé sense públic i el públic sense cap cànon.
 
