@@ -2011,7 +2011,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'Alcarràs', any: 2022, dir: 'Simón', c: '·', ca: '·', b: '8', esp: 403195 },
       { t: 'Cinco lobitos', any: 2022, dir: 'Ruiz de Azúa', c: '·', ca: '·', b: '45', esp: 154708 },
       { t: 'As bestas', any: 2022, dir: 'Sorogoyen', c: '·', ca: '·', b: '13', esp: 1112098 },
-      { t: 'La Maternal', any: 2022, dir: 'Palomero', c: '·', ca: '·', b: '38', esp: 43200 },
+      { t: 'La maternal', any: 2022, dir: 'Palomero', c: '·', ca: '·', b: '38', esp: 43200 },
     ]},
     { nom: 'NUCLI CENTRAL DEL CÀNON', color: C_NUC, mitjana: '1,4M', films: [
       { t: 'La caza', any: 1966, dir: 'Saura', c: '✓', ca: '6', b: '·', esp: 341377 },
