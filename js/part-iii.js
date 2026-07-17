@@ -2052,8 +2052,8 @@ window.PiP_graficMapaCanon = function() {
   if (bloc && !document.getElementById('mapa-capçalera')) {
     const nomsCurts = ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
     let cap = `<div id="mapa-capçalera">
-      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)</p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:8px;justify-content:center">`;
+      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:22px;justify-content:center">`;
     blocs.forEach((b, i) => {
       cap += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${nomsCurts[i]}</span>`;
     });
@@ -2065,11 +2065,11 @@ window.PiP_graficMapaCanon = function() {
     <table style="width:100%;border-collapse:collapse;font-size:.8em">
       <tr style="color:#888;font-size:.88em">
         <td></td>
-        <td style="text-align:center;width:52px;padding:2px 8px">Cent.</td>
-        <td style="text-align:center;width:60px;padding:2px 8px">Caimán</td>
-        <td style="text-align:center;width:60px;padding:2px 8px">Babelia</td>
-        <td style="text-align:right;width:88px;white-space:nowrap;padding:2px 8px">Espectadors</td>
-        <td style="width:180px"></td>
+        <td style="text-align:center;width:52px;padding:2px 8px 8px">Cent.</td>
+        <td style="text-align:center;width:60px;padding:2px 8px 8px">Caimán</td>
+        <td style="text-align:center;width:60px;padding:2px 8px 8px">Babelia</td>
+        <td style="text-align:right;width:88px;white-space:nowrap;padding:2px 8px 8px">Espectadors</td>
+        <td style="width:150px"></td>
       </tr>`;
 
   blocs.forEach((b, bi) => {
@@ -2078,7 +2078,7 @@ window.PiP_graficMapaCanon = function() {
     b.films.forEach(f => {
       const w = Math.max((f.esp / MAX) * 100, 0.35);
       html += `<tr>
-        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px;color:#363737"><em>${f.t}</em> (${f.any}) · ${f.dir}</td>
+        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:330px;color:#363737"><em>${f.t}</em> (${f.any}) · ${f.dir}</td>
         <td style="text-align:center;color:#999">${f.c}</td>
         <td style="text-align:center;color:#999">${f.ca}</td>
         <td style="text-align:center;color:#999">${f.b}</td>
@@ -2089,7 +2089,7 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent | <b>·</b> fora de l'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent / <b>·</b> fora de l'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona</p>`;
 
   el.innerHTML = html;
 
