@@ -870,7 +870,9 @@ window.PiP_graficSauraAlmodovar = function() {
 // GRÀFIC 2: Generació actual — Barres horitzontals
 window.PiP_graficGeneracioActual = function() {
   const el = document.getElementById('grafic-generacio-actual');
-  if (!el || typeof Chart === 'undefined' || !FILMS_ACTUAL) return;
+  if (!el) return;
+  if (typeof Chart === 'undefined') { setTimeout(window.PiP_graficGeneracioActual, 150); return; }
+  if (!FILMS_ACTUAL) return;
   if (window._chartGenActual) window._chartGenActual.destroy();
 
   // Títol
