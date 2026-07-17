@@ -1983,49 +1983,6 @@ function construirGraficConclusions2() {
    ============================================================ */
 window.PiP_graficMapaCanon = function() {
 
-  /* ---- Gràfic 1: taula de fonts ---- */
-  const elFonts = document.getElementById('grafic-mapa-fonts');
-  if (elFonts && !elFonts.innerHTML.trim()) {
-    elFonts.innerHTML = `
-      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px">Les tres llistes del cànon — fonts del mapa</p>
-      <table style="width:100%;min-width:640px;border-collapse:collapse;font-size:.82em;color:#555">
-        <tr style="border-bottom:1px solid #ccc;color:#363737">
-          <th style="text-align:left;padding:6px 8px;font-weight:700;width:90px"></th>
-          <th style="text-align:left;padding:6px 8px;font-weight:700">Centenari</th>
-          <th style="text-align:left;padding:6px 8px;font-weight:700">Caimán</th>
-          <th style="text-align:left;padding:6px 8px;font-weight:700">Babelia</th>
-        </tr>
-        <tr style="border-bottom:1px solid #eee">
-          <td style="padding:6px 8px;font-weight:600;color:#363737">Any</td>
-          <td style="padding:6px 8px">1995</td><td style="padding:6px 8px">2016</td><td style="padding:6px 8px">2025</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee">
-          <td style="padding:6px 8px;font-weight:600;color:#363737">Perfil</td>
-          <td style="padding:6px 8px">Institucional (Comissió del Centenari, ICAA)</td>
-          <td style="padding:6px 8px">Cinèfil (Caimán Cuadernos de Cine)</td>
-          <td style="padding:6px 8px">Periodístic (suplement Babelia, El País)</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee">
-          <td style="padding:6px 8px;font-weight:600;color:#363737">Votants</td>
-          <td style="padding:6px 8px">Acadèmia, actors, historiadors, directors, guionistes i crítica</td>
-          <td style="padding:6px 8px">350 crítics, historiadors, investigadors, periodistes i altres especialistes</td>
-          <td style="padding:6px 8px">53 periodistes, crítics i col·laboradors de l'àrea cultural del diari</td>
-        </tr>
-        <tr style="border-bottom:1px solid #eee">
-          <td style="padding:6px 8px;font-weight:600;color:#363737">Abast</td>
-          <td style="padding:6px 8px">Tot el cinema espanyol fins al 1995</td>
-          <td style="padding:6px 8px">Tot, fins al 2016</td>
-          <td style="padding:6px 8px">Només 1975–2025</td>
-        </tr>
-        <tr>
-          <td style="padding:6px 8px;font-weight:600;color:#363737">Format</td>
-          <td style="padding:6px 8px">42 títols, ordre cronològic, sense rànquing</td>
-          <td style="padding:6px 8px">455 títols votats, jerarquitzats per punts</td>
-          <td style="padding:6px 8px">50 títols, jerarquitzats</td>
-        </tr>
-      </table>`;
-  }
-
   /* ---- Gràfic 2: el mapa ---- */
   const el = document.getElementById('grafic-mapa-canon');
   if (!el || el.innerHTML.trim()) return;
@@ -2048,7 +2005,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'Honor de cavalleria', any: 2006, dir: 'Serra', c: '—', ca: '53', b: '—', esp: 22503 },
     ]},
     { nom: 'INTERMEDI GENERACIÓ ACTUAL', color: C_GEN, mitjana: '354K', films: [
-      { t: 'Magical Girl', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
+      { t: 'Magical Girl ‡', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
       { t: 'Alcarràs', any: 2022, dir: 'Simón', c: '·', ca: '·', b: '8', esp: 403195 },
       { t: 'Cinco lobitos', any: 2022, dir: 'Ruiz de Azúa', c: '·', ca: '·', b: '45', esp: 154708 },
       { t: 'As bestas', any: 2022, dir: 'Sorogoyen', c: '·', ca: '·', b: '13', esp: 1112098 },
@@ -2060,7 +2017,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'El espíritu de la colmena', any: 1973, dir: 'Erice', c: '✓', ca: '2', b: '·', esp: 535512 },
       { t: 'Furtivos', any: 1975, dir: 'Borau', c: '✓', ca: '19', b: '20', esp: 3581914 },
       { t: 'El desencanto', any: 1976, dir: 'Chávarri', c: '✓', ca: '10', b: '7', esp: 220265 },
-      { t: 'La escopeta nacional', any: 1978, dir: 'Berlanga', c: '—', ca: '52', b: '2', esp: 2062527 },
+      { t: 'La escopeta nacional †', any: 1978, dir: 'Berlanga', c: '—', ca: '52', b: '2', esp: 2062527 },
       { t: 'El sur', any: 1983, dir: 'Erice', c: '✓', ca: '7', b: '3', esp: 437581 },
       { t: 'Los santos inocentes', any: 1984, dir: 'Camus', c: '✓', ca: '20', b: '4', esp: 2033586 },
       { t: '¿Qué he hecho yo para merecer esto?', any: 1984, dir: 'Almodóvar', c: '✓', ca: '27', b: '17', esp: 424869 },
@@ -2121,7 +2078,7 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · † excepció Berlanga (absent del Centenari) · ‡ Magical Girl: present a Caimán (2016), absent de Babelia (2025) · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
 
   el.innerHTML = html;
 
