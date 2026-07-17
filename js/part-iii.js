@@ -912,7 +912,7 @@ window.PiP_graficGeneracioActual = function() {
   // Ordenat per director (Sorogoyen, Laxe, Simón, Ruiz de Azúa) i any
   const orden = [...FILMS_ACTUAL];
 
-  const labels = orden.map(f => `${f.titol} — ${f.director.split(' ').slice(-1)[0]} (${f.any})`);
+  const labels = orden.map(f => `${f.titol} (${f.any}) · ${f.director.split(' ').slice(-1)[0]}`);
   const sala = orden.map(f => f.esp);
   const iaaAdd = orden.map(f => Math.max(0, rangMig(f.iaa_xifra) - f.esp));
   const colorsFort = orden.map(f => COLORS_DIR[f.director].fort);
@@ -2045,13 +2045,21 @@ window.PiP_graficMapaCanon = function() {
     ]},
   ];
 
+  // Títol i llegenda fora del contenidor amb scroll (no es difuminen ni es mouen)
+  const bloc = document.getElementById('grafic-mapa-bloc');
+  if (bloc && !document.getElementById('mapa-capçalera')) {
+    const nomsCurts = ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
+    let cap = `<div id="mapa-capçalera">
+      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:8px;justify-content:center">`;
+    blocs.forEach((b, i) => {
+      cap += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${nomsCurts[i]}</span>`;
+    });
+    cap += `</div></div>`;
+    bloc.insertAdjacentHTML('afterbegin', cap);
+  }
+
   let html = `
-    <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:8px;justify-content:center">`;
-  blocs.forEach(b => {
-    html += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${b.nom.charAt(0) + b.nom.slice(1).toLowerCase()}</span>`;
-  });
-  html += `</div>
     <table style="width:100%;border-collapse:collapse;font-size:.8em">
       <tr style="color:#888;font-size:.92em">
         <td></td>
