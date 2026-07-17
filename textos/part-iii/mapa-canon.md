@@ -6,6 +6,15 @@ Aquest capítol les creua per dibuixar-ne un possible consens compartit i el sit
 El resultat és un mapa amb un nucli central de consens i quatre zones al voltant: un extrem radical gairebé sense taquilla, un extrem popular sense cap presència a les llistes, i dos espais intermedis, la generació actual i el cinema popular de gènere. Cinc zones que reuneixen, en un sol gràfic, tots els territoris que l'estudi ha anat recorrent.
 <!-- /intro -->
 
+<!-- fonts -->
+| | Centenari (1995) | Caimán (2016) | Babelia (2025) |
+| --- | --- | --- | --- |
+| **Perfil** | Institucional (Comissió del Centenari, ICAA) | Cinèfil (Caimán Cuadernos de Cine) | Periodístic (suplement Babelia, El País) |
+| **Votants** | Acadèmia, actors, historiadors, directors, guionistes i crítica | 350 crítics, historiadors, investigadors, periodistes i altres especialistes | 53 periodistes, crítics i col·laboradors de l'àrea cultural del diari |
+| **Abast** | Tot el cinema espanyol fins al 1995 | Tot, fins al 2016 | Només 1975–2025 |
+| **Format** | 42 títols, ordre cronològic, sense rànquing | 455 títols votats, jerarquitzats per punts | 50 títols, jerarquitzats |
+<!-- /fonts -->
+
 <!-- criteri -->
 El criteri general d’entrada al nucli central és la presència a totes les llistes que cronològicament poden incloure cada film: les tres per al període 1975–1995, i les dues disponibles per als trams anterior (la llista de Babelia comença el 1975) i posterior (la del Centenari acaba el 1995). Per als films posteriors a 1995 s’hi afegeix una condició coherent amb el mapa mateix: un lloc rellevant en aquest estudi, per gran taquilla i/o reconeixement a festivals. El mapa només admet una excepció a aquest criteri.
 
