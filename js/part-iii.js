@@ -2063,17 +2063,18 @@ window.PiP_graficMapaCanon = function() {
 
   let html = `
     <table style="width:100%;border-collapse:collapse;font-size:.8em">
-      <tr style="color:#888;font-size:.92em">
+      <tr style="color:#888;font-size:.88em">
         <td></td>
-        <td style="text-align:center;width:38px">Cent.</td>
-        <td style="text-align:center;width:44px">Caimán</td>
-        <td style="text-align:center;width:44px">Babelia</td>
-        <td style="text-align:right;width:80px;white-space:nowrap">Espectadors</td>
+        <td style="text-align:center;width:52px;padding:2px 8px">Cent.</td>
+        <td style="text-align:center;width:60px;padding:2px 8px">Caimán</td>
+        <td style="text-align:center;width:60px;padding:2px 8px">Babelia</td>
+        <td style="text-align:right;width:88px;white-space:nowrap;padding:2px 8px">Espectadors</td>
         <td style="width:180px"></td>
       </tr>`;
 
-  blocs.forEach(b => {
-    html += `<tr><td colspan="6" style="font-size:.9em;font-weight:700;letter-spacing:.04em;color:${b.color};padding:16px 6px 4px;border-bottom:1px solid #ddd">${b.nom} <span style="font-weight:400;color:#999">· mitjana ${b.mitjana}</span></td></tr>`;
+  blocs.forEach((b, bi) => {
+    const padTop = bi === 0 ? '6px' : '16px';
+    html += `<tr><td colspan="6" style="font-size:.9em;font-weight:700;letter-spacing:.04em;color:${b.color};padding:${padTop} 6px 4px;border-bottom:1px solid #ddd">${b.nom} <span style="font-weight:400;color:#999">· mitjana ${b.mitjana}</span></td></tr>`;
     b.films.forEach(f => {
       const w = Math.max((f.esp / MAX) * 100, 0.35);
       html += `<tr>
