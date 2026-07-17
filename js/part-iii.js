@@ -2065,11 +2065,11 @@ window.PiP_graficMapaCanon = function() {
     <table style="width:100%;border-collapse:collapse;font-size:.8em">
       <tr style="color:#888;font-size:.88em">
         <td></td>
-        <td style="text-align:center;width:52px;padding:2px 8px 8px">Cent.</td>
-        <td style="text-align:center;width:60px;padding:2px 8px 8px">Caimán</td>
-        <td style="text-align:center;width:60px;padding:2px 8px 8px">Babelia</td>
-        <td style="text-align:right;width:88px;white-space:nowrap;padding:2px 8px 8px">Espectadors</td>
-        <td style="width:150px"></td>
+        <td style="text-align:center;width:44px;padding:2px 6px 8px">Cent.</td>
+        <td style="text-align:center;width:52px;padding:2px 6px 8px">Caimán</td>
+        <td style="text-align:center;width:52px;padding:2px 6px 8px">Babelia</td>
+        <td style="text-align:right;width:84px;white-space:nowrap;padding:2px 6px 8px">Espectadors</td>
+        <td style="width:140px"></td>
       </tr>`;
 
   blocs.forEach((b, bi) => {
@@ -2078,7 +2078,7 @@ window.PiP_graficMapaCanon = function() {
     b.films.forEach(f => {
       const w = Math.max((f.esp / MAX) * 100, 0.35);
       html += `<tr>
-        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:330px;color:#363737"><em>${f.t}</em> (${f.any}) · ${f.dir}</td>
+        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:310px;font-size:.94em;color:#363737"><em>${f.t}</em> (${f.any}) · ${f.dir}</td>
         <td style="text-align:center;color:#999">${f.c}</td>
         <td style="text-align:center;color:#999">${f.ca}</td>
         <td style="text-align:center;color:#999">${f.b}</td>
