@@ -1977,3 +1977,159 @@ function construirGraficConclusions2() {
     lx += item.label.length * 5.5 + 24;
   });
 }
+
+/* ============================================================
+   EL MAPA DEL CÀNON — taula de fonts + mapa de 36 films
+   ============================================================ */
+window.PiP_graficMapaCanon = function() {
+
+  /* ---- Gràfic 1: taula de fonts ---- */
+  const elFonts = document.getElementById('grafic-mapa-fonts');
+  if (elFonts && !elFonts.innerHTML.trim()) {
+    elFonts.innerHTML = `
+      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px">Les tres llistes del cànon — fonts del mapa</p>
+      <table style="width:100%;min-width:640px;border-collapse:collapse;font-size:.82em;color:#555">
+        <tr style="border-bottom:1px solid #ccc;color:#363737">
+          <th style="text-align:left;padding:6px 8px;font-weight:700;width:90px"></th>
+          <th style="text-align:left;padding:6px 8px;font-weight:700">Centenari</th>
+          <th style="text-align:left;padding:6px 8px;font-weight:700">Caimán</th>
+          <th style="text-align:left;padding:6px 8px;font-weight:700">Babelia</th>
+        </tr>
+        <tr style="border-bottom:1px solid #eee">
+          <td style="padding:6px 8px;font-weight:600;color:#363737">Any</td>
+          <td style="padding:6px 8px">1995</td><td style="padding:6px 8px">2016</td><td style="padding:6px 8px">2025</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee">
+          <td style="padding:6px 8px;font-weight:600;color:#363737">Perfil</td>
+          <td style="padding:6px 8px">Institucional (Comissió del Centenari, ICAA)</td>
+          <td style="padding:6px 8px">Cinèfil (Caimán Cuadernos de Cine)</td>
+          <td style="padding:6px 8px">Periodístic (suplement Babelia, El País)</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee">
+          <td style="padding:6px 8px;font-weight:600;color:#363737">Votants</td>
+          <td style="padding:6px 8px">Acadèmia, Unió d'Actors, historiadors, directors, crítica</td>
+          <td style="padding:6px 8px">350 especialistes</td>
+          <td style="padding:6px 8px">53 periodistes del diari</td>
+        </tr>
+        <tr style="border-bottom:1px solid #eee">
+          <td style="padding:6px 8px;font-weight:600;color:#363737">Abast</td>
+          <td style="padding:6px 8px">Tot el cinema espanyol fins al 1995</td>
+          <td style="padding:6px 8px">Tot, fins al 2016</td>
+          <td style="padding:6px 8px">Només 1975–2025</td>
+        </tr>
+        <tr>
+          <td style="padding:6px 8px;font-weight:600;color:#363737">Format</td>
+          <td style="padding:6px 8px">42 títols, ordre cronològic, sense rànquing</td>
+          <td style="padding:6px 8px">455 títols votats, jerarquitzats per punts</td>
+          <td style="padding:6px 8px">50 títols, jerarquitzats</td>
+        </tr>
+      </table>`;
+  }
+
+  /* ---- Gràfic 2: el mapa ---- */
+  const el = document.getElementById('grafic-mapa-canon');
+  if (!el || el.innerHTML.trim()) return;
+
+  const C_RAD  = '#9B2335';                                    // vermell prestigi del projecte
+  const C_GEN  = '#c56a45';                                    // terracota suau (generació actual)
+  const C_NUC  = '#c8a000';                                    // or del projecte
+  const C_GEN2 = '#1e6b5c';                                    // verd (popular de gènere)
+  const C_POP  = '#2a5582';                                    // blau públic del projecte
+
+  const MAX = 9562891;
+  const fmtN = n => n.toLocaleString('ca-ES');
+
+  const blocs = [
+    { nom: 'EXTREM RADICAL', color: C_RAD, mitjana: '24K', films: [
+      { t: 'Vampir-Cuadecuc', any: 1970, dir: 'Portabella', c: '—', ca: '37', b: '—', esp: 3351 },
+      { t: 'Arrebato', any: 1979, dir: 'Zulueta', c: '—', ca: '5', b: '1', esp: 77838 },
+      { t: 'Tren de sombras', any: 1997, dir: 'Guerín', c: '—', ca: '21', b: '—', esp: 11995 },
+      { t: 'De nens', any: 2003, dir: 'Jordà', c: '—', ca: '57', b: '34', esp: 5446 },
+      { t: 'Honor de cavalleria', any: 2006, dir: 'Serra', c: '—', ca: '53', b: '—', esp: 22503 },
+    ]},
+    { nom: 'INTERMEDI GENERACIÓ ACTUAL', color: C_GEN, mitjana: '354K', films: [
+      { t: 'Magical Girl ‡', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
+      { t: 'Alcarràs', any: 2022, dir: 'Simón', c: '·', ca: '·', b: '8', esp: 403195 },
+      { t: 'Cinco lobitos', any: 2022, dir: 'Ruiz de Azúa', c: '·', ca: '·', b: '45', esp: 154708 },
+      { t: 'As bestas', any: 2022, dir: 'Sorogoyen', c: '·', ca: '·', b: '13', esp: 1112098 },
+      { t: 'La Maternal', any: 2022, dir: 'Palomero', c: '·', ca: '·', b: '38', esp: 43200 },
+    ]},
+    { nom: 'NUCLI CENTRAL DEL CÀNON', color: C_NUC, mitjana: '1,4M', films: [
+      { t: 'La caza', any: 1966, dir: 'Saura', c: '✓', ca: '6', b: '·', esp: 341377 },
+      { t: 'Tristana', any: 1970, dir: 'Buñuel', c: '✓', ca: '16', b: '·', esp: 1801968 },
+      { t: 'El espíritu de la colmena', any: 1973, dir: 'Erice', c: '✓', ca: '2', b: '·', esp: 535512 },
+      { t: 'Furtivos', any: 1975, dir: 'Borau', c: '✓', ca: '19', b: '20', esp: 3581914 },
+      { t: 'El desencanto', any: 1976, dir: 'Chávarri', c: '✓', ca: '10', b: '7', esp: 220265 },
+      { t: 'La escopeta nacional †', any: 1978, dir: 'Berlanga', c: '—', ca: '52', b: '2', esp: 2062527 },
+      { t: 'El sur', any: 1983, dir: 'Erice', c: '✓', ca: '7', b: '3', esp: 437581 },
+      { t: 'Los santos inocentes', any: 1984, dir: 'Camus', c: '✓', ca: '20', b: '4', esp: 2033586 },
+      { t: '¿Qué he hecho yo para merecer esto?', any: 1984, dir: 'Almodóvar', c: '✓', ca: '27', b: '17', esp: 424869 },
+      { t: 'El viaje a ninguna parte', any: 1986, dir: 'Fernán Gómez', c: '✓', ca: '36', b: '12', esp: 327993 },
+      { t: 'Mujeres al borde de un ataque de nervios', any: 1988, dir: 'Almodóvar', c: '✓', ca: '26', b: '5', esp: 3348457 },
+      { t: 'Amantes', any: 1991, dir: 'Aranda', c: '✓', ca: '63', b: '39', esp: 1368265 },
+      { t: 'Belle Époque', any: 1992, dir: 'Trueba', c: '✓', ca: '82', b: '21', esp: 1707308 },
+      { t: 'Todo sobre mi madre', any: 1999, dir: 'Almodóvar', c: '·', ca: '31', b: '11', esp: 2590699 },
+      { t: 'Te doy mis ojos', any: 2003, dir: 'Bollaín', c: '·', ca: '61', b: '23', esp: 1063945 },
+      { t: 'La isla mínima', any: 2014, dir: 'A. Rodríguez', c: '·', ca: '76', b: '24', esp: 1291487 },
+    ]},
+    { nom: 'INTERMEDI POPULAR DE GÈNERE', color: C_GEN2, mitjana: '3,2M', films: [
+      { t: 'El día de la bestia', any: 1995, dir: 'De la Iglesia', c: '·', ca: '42', b: '31', esp: 1419191 },
+      { t: 'Tesis', any: 1996, dir: 'Amenábar', c: '·', ca: '78', b: '18', esp: 855713 },
+      { t: 'Los otros', any: 2001, dir: 'Amenábar', c: '·', ca: '—', b: '—', esp: 6410785 },
+      { t: 'REC', any: 2007, dir: 'Balagueró i Plaza', c: '·', ca: '—', b: '26', esp: 1430450 },
+      { t: 'Lo imposible', any: 2012, dir: 'Bayona', c: '·', ca: '—', b: '—', esp: 6129976 },
+    ]},
+    { nom: 'EXTREM POPULAR', color: C_POP, mitjana: '5,1M', films: [
+      { t: 'La ciudad no es para mí', any: 1966, dir: 'Lazaga', c: '—', ca: '—', b: '·', esp: 4296288 },
+      { t: 'Pero... ¿en qué país vivimos?', any: 1967, dir: 'Sáenz de Heredia', c: '—', ca: '—', b: '·', esp: 4054235 },
+      { t: 'No desearás al vecino del quinto', any: 1970, dir: 'R. Fernández', c: '—', ca: '—', b: '·', esp: 4371624 },
+      { t: 'Torrente, el brazo tonto de la ley', any: 1998, dir: 'Segura', c: '·', ca: '—', b: '—', esp: 3010736 },
+      { t: 'Ocho apellidos vascos', any: 2014, dir: 'Martínez-Lázaro', c: '·', ca: '—', b: '—', esp: 9562891 },
+    ]},
+  ];
+
+  let html = `
+    <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors</p>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:8px;justify-content:center">`;
+  blocs.forEach(b => {
+    html += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${b.nom.charAt(0) + b.nom.slice(1).toLowerCase()}</span>`;
+  });
+  html += `</div>
+    <table style="width:100%;border-collapse:collapse;font-size:.8em">
+      <tr style="color:#888;font-size:.92em">
+        <td></td>
+        <td style="text-align:center;width:38px">Cent.</td>
+        <td style="text-align:center;width:44px">Caimán</td>
+        <td style="text-align:center;width:44px">Babelia</td>
+        <td style="text-align:right;width:80px;white-space:nowrap">Espectadors</td>
+        <td style="width:180px"></td>
+      </tr>`;
+
+  blocs.forEach(b => {
+    html += `<tr><td colspan="6" style="font-size:.9em;font-weight:700;letter-spacing:.04em;color:${b.color};padding:16px 6px 4px;border-bottom:1px solid #ddd">${b.nom} <span style="font-weight:400;color:#999">· mitjana ${b.mitjana}</span></td></tr>`;
+    b.films.forEach(f => {
+      const w = Math.max((f.esp / MAX) * 100, 0.35);
+      html += `<tr>
+        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:230px;color:#363737"><em>${f.t}</em> (${f.any}) · ${f.dir}</td>
+        <td style="text-align:center;color:#999">${f.c}</td>
+        <td style="text-align:center;color:#999">${f.ca}</td>
+        <td style="text-align:center;color:#999">${f.b}</td>
+        <td style="text-align:right;color:#555;font-variant-numeric:tabular-nums;white-space:nowrap;padding-right:8px">${fmtN(f.esp)}</td>
+        <td style="padding:4px 0"><div style="width:${w}%;height:11px;background:${b.color};border-radius:0 3px 3px 0"></div></td>
+      </tr>`;
+    });
+  });
+
+  html += `</table>
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · † excepció Berlanga (absent del Centenari) · ‡ Magical Girl: present a Caimán (2016), absent de Babelia (2025) · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
+
+  el.innerHTML = html;
+
+  // Scroll hint com als altres gràfics amples
+  const wrap = document.getElementById('mapa-scroll-wrap');
+  const hint = document.getElementById('mapa-scroll-hint');
+  if (wrap && hint) {
+    const upd = () => { hint.style.opacity = (wrap.scrollLeft + wrap.clientWidth >= wrap.scrollWidth - 5) ? '0' : '1'; };
+    wrap.addEventListener('scroll', upd); upd();
+  }
+};
