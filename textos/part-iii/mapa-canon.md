@@ -27,7 +27,7 @@ La resta del nucli el completen títols de trajectòries molt diverses: hi convi
 <!-- /nucli -->
 
 <!-- intermedis -->
-## Els dos espais intermedis
+## Els espais intermedis
 
 A banda i banda del nucli, dos grups comparteixen posició intermèdia: el cànon en construcció de la generació actual, i el cinema popular de gènere, el territori del cinema d'autor industrial ja tractat a l'estudi, ara mirat des del cànon.
 
