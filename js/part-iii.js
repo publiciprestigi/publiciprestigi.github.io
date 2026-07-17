@@ -2005,7 +2005,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'Honor de cavalleria', any: 2006, dir: 'Serra', c: '—', ca: '53', b: '—', esp: 22503 },
     ]},
     { nom: 'INTERMEDI GENERACIÓ ACTUAL', color: C_GEN, mitjana: '354K', films: [
-      { t: 'Magical Girl ‡', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
+      { t: 'Magical Girl', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
       { t: 'Alcarràs', any: 2022, dir: 'Simón', c: '·', ca: '·', b: '8', esp: 403195 },
       { t: 'Cinco lobitos', any: 2022, dir: 'Ruiz de Azúa', c: '·', ca: '·', b: '45', esp: 154708 },
       { t: 'As bestas', any: 2022, dir: 'Sorogoyen', c: '·', ca: '·', b: '13', esp: 1112098 },
@@ -2017,7 +2017,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'El espíritu de la colmena', any: 1973, dir: 'Erice', c: '✓', ca: '2', b: '·', esp: 535512 },
       { t: 'Furtivos', any: 1975, dir: 'Borau', c: '✓', ca: '19', b: '20', esp: 3581914 },
       { t: 'El desencanto', any: 1976, dir: 'Chávarri', c: '✓', ca: '10', b: '7', esp: 220265 },
-      { t: 'La escopeta nacional †', any: 1978, dir: 'Berlanga', c: '—', ca: '52', b: '2', esp: 2062527 },
+      { t: 'La escopeta nacional', any: 1978, dir: 'Berlanga', c: '—', ca: '52', b: '2', esp: 2062527 },
       { t: 'El sur', any: 1983, dir: 'Erice', c: '✓', ca: '7', b: '3', esp: 437581 },
       { t: 'Los santos inocentes', any: 1984, dir: 'Camus', c: '✓', ca: '20', b: '4', esp: 2033586 },
       { t: '¿Qué he hecho yo para merecer esto?', any: 1984, dir: 'Almodóvar', c: '✓', ca: '27', b: '17', esp: 424869 },
@@ -2078,7 +2078,7 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · † excepció Berlanga (absent del Centenari) · ‡ Magical Girl: present a Caimán (2016), absent de Babelia (2025) · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
 
   el.innerHTML = html;
 
