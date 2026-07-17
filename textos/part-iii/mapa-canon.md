@@ -39,7 +39,7 @@ El patró, a més, té precedents. Narciso Ibáñez Serrador (el gran padrí d'a
 <!-- /intermedis -->
 
 <!-- extrems -->
-**Els dos extrems**
+**Els extrems**
 
 Als marges del mapa, les dues situacions límit: el cànon gairebé sense públic i el públic sense cap cànon.
 
