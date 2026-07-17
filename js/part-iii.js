@@ -2007,9 +2007,9 @@ window.PiP_graficMapaCanon = function() {
         </tr>
         <tr style="border-bottom:1px solid #eee">
           <td style="padding:6px 8px;font-weight:600;color:#363737">Votants</td>
-          <td style="padding:6px 8px">Acadèmia, Unió d'Actors, historiadors, directors, crítica</td>
-          <td style="padding:6px 8px">350 especialistes</td>
-          <td style="padding:6px 8px">53 periodistes del diari</td>
+          <td style="padding:6px 8px">Acadèmia i associacions d’actors, historiadors, directors, guionistes i crítica</td>
+          <td style="padding:6px 8px">350 crítics, historiadors, investigadors, periodistes i altres especialistes</td>
+          <td style="padding:6px 8px">53 periodistes, crítics i col·laboradors de l'àrea cultural del diari</td>
         </tr>
         <tr style="border-bottom:1px solid #eee">
           <td style="padding:6px 8px;font-weight:600;color:#363737">Abast</td>
