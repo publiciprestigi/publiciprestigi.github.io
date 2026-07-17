@@ -2086,7 +2086,7 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) / — absent / <b>·</b> fora de l'abast temporal de la llista / Barres proporcionals als espectadors (màx. 9,56M) / Ordre cronològic dins de cada zona</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent / <b>·</b> fora de l'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona</p>`;
 
   el.innerHTML = html;
 
