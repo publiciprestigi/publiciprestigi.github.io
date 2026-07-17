@@ -2121,7 +2121,7 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · † excepció Berlanga (absent del Centenari) · ‡ Magical Girl: present a Caimán (2016), absent de Babelia (2025) · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) · — absent · <b>·</b> fora de l'abast temporal de la llista · Barres proporcionals als espectadors (màx. 9,56M) · Ordre cronològic dins de cada zona</p>`;
 
   el.innerHTML = html;
 
