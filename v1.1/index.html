@@ -221,10 +221,31 @@
       align-items: baseline;
       gap: 28px;
       padding: 16px 18px;
-      margin-bottom: 28px;
+      margin: 10px 0 20px;
       background: #fbfbfa;
-      border-bottom: 1px solid #eeeeec;
       white-space: nowrap;
+      position: relative;
+    }
+
+    .inici-novetats.tancat {
+      display: none;
+    }
+
+    .inici-novetats-tanca {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: #888;
+      font-size: 1rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0;
+      margin: 0 6px 0 0;
+      flex: 0 0 auto;
+    }
+
+    .inici-novetats-tanca:hover {
+      color: #1a1a1a;
     }
 
     .inici-novetats-cap {
@@ -266,8 +287,8 @@
     }
 
     .inici-novetat-badge.nou {
-      background: #fde7e4;
-      color: #c52d22;
+      background: #e8f5ec;
+      color: #2a7a3b;
     }
 
     .inici-novetat-grup a {
@@ -387,7 +408,8 @@
   <main class="contingut">
     <div class="inici-portada">
 
-      <section class="inici-novetats" aria-label="Novetats de la versió 1.1">
+      <section class="inici-novetats" id="inici-novetats" aria-label="Novetats de la versió 1.1">
+        <button class="inici-novetats-tanca" type="button" aria-label="Tancar novetats" title="Tancar">×</button>
         <h2 class="inici-novetats-cap">
           <span>Novetats</span><span class="inici-novetats-arrow">→</span>
         </h2>
@@ -758,6 +780,30 @@
     <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
   </nav>
 
+
+  <script>
+    (function() {
+      const STORAGE_KEY = 'pip_novetats_v11_tancades';
+      const bloc = document.getElementById('inici-novetats');
+      if (!bloc) return;
+
+      try {
+        if (localStorage.getItem(STORAGE_KEY) === '1') {
+          bloc.classList.add('tancat');
+        }
+      } catch (e) {}
+
+      const boto = bloc.querySelector('.inici-novetats-tanca');
+      if (boto) {
+        boto.addEventListener('click', function() {
+          bloc.classList.add('tancat');
+          try {
+            localStorage.setItem(STORAGE_KEY, '1');
+          } catch (e) {}
+        });
+      }
+    })();
+  </script>
   <script>
     function toggleDrawer() {
       const drawer = document.getElementById('drawer');
