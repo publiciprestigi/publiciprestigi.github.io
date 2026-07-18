@@ -7,7 +7,7 @@
   <title>Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits</title>
   <link rel="stylesheet" href="css/estil.css">
   <style>
-    .contingut { padding-top: 40px; padding-bottom: 0; }
+    .contingut { padding-top: 0; padding-bottom: 0; }
     .inici-portada { max-width: var(--amplada-max); padding: 0; }
 
     .inici-antetitol {
@@ -59,7 +59,9 @@
       gap: 0;
     }
 
-    .inici-xifra-bloc { flex: 1; }
+    .inici-xifra-bloc {
+      flex: 1;
+    }
 
     .inici-xifra-n {
       display: block;
@@ -71,8 +73,8 @@
 
     .inici-xifra-l {
       display: block;
-      font-size: 0.75rem;
-      color: #aaa;
+      font-size: 0.82rem;
+      color: #888;
       letter-spacing: .02em;
     }
 
@@ -100,18 +102,29 @@
 
     .inici-substack {
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto 1fr auto;
       padding: 0 0 0 40px;
-      text-decoration: none;
       color: inherit;
+    }
+
+    .inici-substack-header,
+    .inici-substack-foto-link {
+      color: inherit;
+      text-decoration: none;
       transition: opacity .15s;
     }
-    .inici-substack:hover { opacity: 0.88; text-decoration: none; }
+
+    .inici-substack-header:hover,
+    .inici-substack-foto-link:hover {
+      opacity: 0.88;
+      text-decoration: none;
+    }
 
     .inici-substack-header {
-      display: grid;
-      grid-template-columns: 1fr 24px;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
+      gap: 8px;
       padding: 18px 0;
     }
 
@@ -121,22 +134,56 @@
       color: #1a1a1a;
     }
 
-    .inici-substack-arrow {
-      font-size: 0.85rem;
-      color: #ccc;
-      text-align: right;
-    }
 
     .inici-substack-foto {
       border-radius: 4px;
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       height: 300px;
       position: relative;
     }
 
+    .inici-substack-foto-link {
+      display: block;
+    }
+
+    .inici-substack-peu {
+      display: flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 12px 0 18px;
+    }
+
+    .inici-substack-punts {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .inici-substack-punt {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: #d6d6d6;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+    }
+
+    .inici-substack-punt:hover {
+      background: #999;
+    }
+
+    .inici-substack-punt.actiu {
+      background: #363737;
+      transform: scale(1.12);
+    }
+
     .inici-substack-pista {
+      display: flex;
       height: 100%;
+      transition: transform 0.6s ease;
     }
 
     .inici-substack-foto img {
@@ -148,13 +195,94 @@
       flex-shrink: 0;
     }
 
+
+    .enllac-secundari {
+      font-size: 0.82rem;
+      color: #888 !important;
+      text-decoration: none !important;
+      white-space: nowrap;
+      margin-left: 6px;
+    }
+
+    .enllac-secundari:hover {
+      color: #363737 !important;
+      text-decoration: none !important;
+    }
+
+    /* Novetats de la versió */
+    .inici-novetats {
+      display: flex;
+      justify-content: center;
+      align-items: baseline;
+      gap: 28px;
+      padding: 16px 18px;
+      margin: 0 0 28px;
+      background: #fbfbfa;
+      border-bottom: 1px solid #eeeeec;
+      white-space: nowrap;
+      position: relative;
+    }
+    .inici-novetat-grup {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
+      font-size: 0.82rem;
+      color: #555;
+    }
+
+    .inici-novetat-badge {
+      flex: 0 0 auto;
+      font-size: 0.60rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      padding: 4px 6px;
+      background: #ececec;
+      color: #777;
+    }
+
+    .inici-novetat-badge.nou {
+      background: #e8f5ec;
+      color: #2a7a3b;
+    }
+
+    .inici-novetat-grup a {
+      color: #888;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(0,0,0,.3);
+    }
+
+    .inici-novetat-grup a:hover {
+      color: #1a1a1a;
+    }
+
     /* ── Responsive portada ── */
     @media (max-width: 768px) {
-      .contingut { padding-top: 24px; }
+      .contingut { padding-top: 0; }
+
+      .inici-novetats {
+        padding: 14px 16px;
+      }
 
       .inici-antetitol {
         font-size: 0.65rem;
         margin-bottom: 16px;
+      }
+
+      .inici-novetats {
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px 22px;
+        white-space: normal;
+      }
+
+      .inici-novetat-grup {
+        flex-wrap: wrap;
       }
 
       /* Hero: columna única, gràfic sota el titular */
@@ -215,7 +343,7 @@
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 (1965–2025)</a>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
         <div class="capcalera-idioma">
           <a href="#" class="actiu">CA</a>
           <a href="#" class="lang-es">ES</a>
@@ -238,6 +366,21 @@
   <main class="contingut">
     <div class="inici-portada">
 
+      <section class="inici-novetats" id="inici-novetats" aria-label="Novetats de la versió 1.1">
+        <span class="inici-novetat-grup">
+          <span class="inici-novetat-badge nou">Nou</span>
+          <a href="part-iii.html#mapa-canon">El mapa del cànon</a>
+        </span>
+
+        <span class="inici-novetat-grup">
+          <span class="inici-novetat-badge">Actualitzat</span>
+          <span>
+            <a href="part-iii.html#conclusions">Conclusions</a> i
+            <a href="sobre.html">Sobre el projecte</a>
+          </span>
+        </span>
+      </section>
+
       <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
       <div class="inici-hero">
@@ -252,7 +395,7 @@
       <!-- Text + xifres: bloc únic sense separador intern -->
       <div class="inici-text-xifres">
         <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
-        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts!
+        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari">Sobre el projecte →</a></p>
         <div class="inici-xifres">
           <div class="inici-xifra-bloc">
             <span class="inici-xifra-n" style="color:#2a5582">294M</span>
@@ -304,17 +447,27 @@
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
-        <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
-          <div class="inici-substack-header">
+        <div class="inici-substack">
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-header" target="_blank" rel="noopener">
             <span class="inici-substack-titol">Subscriu-te</span>
-            <span class="inici-substack-arrow">→</span>
-          </div>
-          <div class="inici-substack-foto">
-            <div class="inici-substack-pista">
-              <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+            <span class="inici-part-arrow">→</span>
+          </a>
+
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-foto-link" target="_blank" rel="noopener" aria-label="Subscriu-te a Públic i Prestigi">
+            <div class="inici-substack-foto">
+              <div class="inici-substack-pista" id="substack-pista">
+                <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+                <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
+                <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
+                <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
+              </div>
             </div>
+          </a>
+
+          <div class="inici-substack-peu">
+            <div class="inici-substack-punts" id="substack-punts" aria-label="Selecciona una imatge del carrusel"></div>
           </div>
-        </a>
+        </div>
       </div>
 
     </div>
@@ -336,6 +489,70 @@
   </div>
 
   <script>
+    // ── CARRUSSEL FOTO PORTADA ──
+    (function() {
+      const pista = document.getElementById('substack-pista');
+      const puntsWrap = document.getElementById('substack-punts');
+      if (!pista || !puntsWrap) return;
+
+      const total = pista.children.length;
+      pista.appendChild(pista.children[0].cloneNode(true));
+
+      let actual = 0;
+      let temporitzador;
+
+      const punts = Array.from({ length: total }, function(_, index) {
+        const punt = document.createElement('button');
+        punt.type = 'button';
+        punt.className = 'inici-substack-punt';
+        punt.setAttribute('aria-label', 'Mostra la imatge ' + (index + 1) + ' de ' + total);
+
+        punt.addEventListener('click', function() {
+          actual = index;
+          pista.style.transition = 'transform 0.6s ease';
+          pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+          actualitzaPunts();
+          reinicia();
+        });
+
+        puntsWrap.appendChild(punt);
+        return punt;
+      });
+
+      function actualitzaPunts() {
+        const visible = actual % total;
+        punts.forEach(function(punt, index) {
+          const actiu = index === visible;
+          punt.classList.toggle('actiu', actiu);
+          punt.setAttribute('aria-current', actiu ? 'true' : 'false');
+        });
+      }
+
+      function avanca() {
+        actual++;
+        pista.style.transition = 'transform 0.6s ease';
+        pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+        actualitzaPunts();
+
+        if (actual === total) {
+          setTimeout(function() {
+            pista.style.transition = 'none';
+            pista.style.transform = 'translateX(0)';
+            actual = 0;
+            actualitzaPunts();
+          }, 650);
+        }
+      }
+
+      function reinicia() {
+        clearInterval(temporitzador);
+        temporitzador = setInterval(avanca, 8000);
+      }
+
+      actualitzaPunts();
+      reinicia();
+    })();
+
     fetch('data/metadata.json')
       .then(r => r.json())
       .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
@@ -514,6 +731,7 @@
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
     <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
   </nav>
+
 
   <script>
     function toggleDrawer() {

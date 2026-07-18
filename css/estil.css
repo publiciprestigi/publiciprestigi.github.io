@@ -1338,3 +1338,38 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   }
 }
 
+/* ============================================================
+   ETIQUETES DE NOVETATS DE VERSIÓ (menús laterals)
+   ============================================================ */
+.sidebar-link-badge,
+.drawer-link-badge {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.chapter-badge {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 0.54rem;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.chapter-badge-new {
+  color: #2a7a3b;
+  background: #e8f5ec;
+}
+
+.chapter-badge-updated {
+  color: #666;
+  background: #ededed;
+}
+

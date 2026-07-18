@@ -24,7 +24,7 @@
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 (1965–2025)</a>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
         <div class="capcalera-idioma">
           <a href="#" class="actiu">CA</a>
           <a href="#" class="lang-es">ES</a>
@@ -56,7 +56,8 @@
         <a href="#" class="sidebar-link" data-seccio="lleis">Cinema, lleis i tecnologia</a>
         <a href="#" class="sidebar-link" data-seccio="generacions">Dues generacions, dos mercats i un prestigi</a>
         <a href="#" class="sidebar-link" data-seccio="autor-industrial">Cinema d'autor industrial</a>
-        <a href="#" class="sidebar-link" data-seccio="conclusions">Conclusions</a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="conclusions"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
       <div class="sidebar-separador"></div>
       <div class="sidebar-grup">
@@ -169,6 +170,31 @@
         <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="paradoxa"></div>
       </div>
 
+      <div class="seccio-contingut" id="seccio-mapa-canon">
+        <div class="text-md text-md-intro" data-text="part-iii/mapa-canon" data-bloc="intro"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="fonts"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="criteri"></div>
+
+        <div id="grafic-mapa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="mapa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div id="grafic-mapa-canon" style="min-width:720px"></div>
+            </div>
+            <div id="mapa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="nucli"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="intermedis"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="extrems"></div>
+        <div class="text-md text-md-intermedi"
+             style="border-top:1px solid #e0e0e0; padding-top:20px; margin-top:24px"
+             data-text="part-iii/mapa-canon"
+             data-bloc="tancament"></div>
+      </div>
+
       <div class="seccio-contingut" id="seccio-conclusions">
         <div class="text-md text-md-intro" data-text="part-iii/conclusions" data-bloc="intro"></div>
         <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cap"></div>
@@ -213,6 +239,7 @@
       { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'autor-industrial',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'mapa-canon',   titol: 'El mapa del cànon',                             sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'conclusions',  titol: 'Conclusions: de les mètriques a les paradoxes', sup: 'Cruïlles, comparatives i interpretacions' },
     ];
 
@@ -224,6 +251,7 @@
     let graficAIInit = false;
     let graficConc1Init = false;
     let graficConc2Init = false;
+    let graficMapaInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -275,6 +303,11 @@
         graficAIInit = true;
         if (window.PiP_graficAutorIndustrial) setTimeout(window.PiP_graficAutorIndustrial, 50);
         else { var _tai = setInterval(function() { if (window.PiP_graficAutorIndustrial) { clearInterval(_tai); window.PiP_graficAutorIndustrial(); } }, 100); }
+      }
+      if (s.id === 'mapa-canon' && !graficMapaInit) {
+        graficMapaInit = true;
+        if (window.PiP_graficMapaCanon) setTimeout(window.PiP_graficMapaCanon, 50);
+        else { var _tmc = setInterval(function() { if (window.PiP_graficMapaCanon) { clearInterval(_tmc); window.PiP_graficMapaCanon(); } }, 100); }
       }
       if (s.id === 'conclusions') {
         if (!graficConc1Init && window.PiP_graficConclusions1) {
@@ -412,7 +445,8 @@
         <a class="drawer-link" onclick="navegaDrawer('lleis')">Cinema, lleis i tecnologia</a>
         <a class="drawer-link" onclick="navegaDrawer('generacions')">Dues generacions</a>
         <a class="drawer-link" onclick="navegaDrawer('autor-industrial')">Cinema d'autor industrial</a>
-        <a class="drawer-link" onclick="navegaDrawer('conclusions')">Conclusions</a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('conclusions')"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
