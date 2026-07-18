@@ -102,13 +102,23 @@
 
     .inici-substack {
       display: grid;
-      grid-template-rows: auto 1fr;
+      grid-template-rows: auto 1fr auto;
       padding: 0 0 0 40px;
-      text-decoration: none;
       color: inherit;
+    }
+
+    .inici-substack-header,
+    .inici-substack-foto-link {
+      color: inherit;
+      text-decoration: none;
       transition: opacity .15s;
     }
-    .inici-substack:hover { opacity: 0.88; text-decoration: none; }
+
+    .inici-substack-header:hover,
+    .inici-substack-foto-link:hover {
+      opacity: 0.88;
+      text-decoration: none;
+    }
 
     .inici-substack-header {
       display: flex;
@@ -133,9 +143,46 @@
     .inici-substack-foto {
       border-radius: 4px;
       overflow: hidden;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       height: 300px;
       position: relative;
+    }
+
+    .inici-substack-foto-link {
+      display: block;
+    }
+
+    .inici-substack-peu {
+      display: flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 12px 0 18px;
+    }
+
+    .inici-substack-punts {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .inici-substack-punt {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: #d6d6d6;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+    }
+
+    .inici-substack-punt:hover {
+      background: #999;
+    }
+
+    .inici-substack-punt.actiu {
+      background: #363737;
+      transform: scale(1.12);
     }
 
     .inici-substack-pista {
@@ -426,20 +473,27 @@
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
-        <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
-          <div class="inici-substack-header">
+        <div class="inici-substack">
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-header" target="_blank" rel="noopener">
             <span class="inici-substack-titol">Subscriu-te</span>
             <span class="inici-substack-arrow">→</span>
-          </div>
-          <div class="inici-substack-foto">
-            <div class="inici-substack-pista" id="substack-pista">
-              <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
-              <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
-              <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
-              <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
+          </a>
+
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-foto-link" target="_blank" rel="noopener" aria-label="Subscriu-te a Públic i Prestigi">
+            <div class="inici-substack-foto">
+              <div class="inici-substack-pista" id="substack-pista">
+                <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+                <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
+                <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
+                <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
+              </div>
             </div>
+          </a>
+
+          <div class="inici-substack-peu">
+            <div class="inici-substack-punts" id="substack-punts" aria-label="Selecciona una imatge del carrusel"></div>
           </div>
-        </a>
+        </div>
       </div>
 
     </div>
@@ -461,27 +515,68 @@
   </div>
 
   <script>
-    // ── CARRUSSEL FOTO PORTADA (loop infinit) ──
+    // ── CARRUSSEL FOTO PORTADA ──
     (function() {
       const pista = document.getElementById('substack-pista');
-      if (!pista) return;
+      const puntsWrap = document.getElementById('substack-punts');
+      if (!pista || !puntsWrap) return;
+
       const total = pista.children.length;
-      // Clona la primera foto i posa-la al final per al loop sense salt visible
       pista.appendChild(pista.children[0].cloneNode(true));
+
       let actual = 0;
-      setInterval(function() {
+      let temporitzador;
+
+      const punts = Array.from({ length: total }, function(_, index) {
+        const punt = document.createElement('button');
+        punt.type = 'button';
+        punt.className = 'inici-substack-punt';
+        punt.setAttribute('aria-label', 'Mostra la imatge ' + (index + 1) + ' de ' + total);
+
+        punt.addEventListener('click', function() {
+          actual = index;
+          pista.style.transition = 'transform 0.6s ease';
+          pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+          actualitzaPunts();
+          reinicia();
+        });
+
+        puntsWrap.appendChild(punt);
+        return punt;
+      });
+
+      function actualitzaPunts() {
+        const visible = actual % total;
+        punts.forEach(function(punt, index) {
+          const actiu = index === visible;
+          punt.classList.toggle('actiu', actiu);
+          punt.setAttribute('aria-current', actiu ? 'true' : 'false');
+        });
+      }
+
+      function avanca() {
         actual++;
         pista.style.transition = 'transform 0.6s ease';
         pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+        actualitzaPunts();
+
         if (actual === total) {
-          // Quan arriba al clon, reposiciona a la primera sense transició
           setTimeout(function() {
             pista.style.transition = 'none';
             pista.style.transform = 'translateX(0)';
             actual = 0;
+            actualitzaPunts();
           }, 650);
         }
-      }, 8000);
+      }
+
+      function reinicia() {
+        clearInterval(temporitzador);
+        temporitzador = setInterval(avanca, 8000);
+      }
+
+      actualitzaPunts();
+      reinicia();
     })();
 
     fetch('data/metadata.json')
