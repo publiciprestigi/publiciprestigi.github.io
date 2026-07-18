@@ -138,7 +138,7 @@
           <span class="versio-num">Versió 1 (1965–2025)</span>
           <span class="versio-etiqueta etiqueta-actual">Publicada</span>
         </div>
-        <p class="versio-resum">Primera versió pública, amb les parts Públic, Prestigi i Anàlisi.</p>
+        <p class="versio-resum">Primera versió pública, inclou Part I (15 articles), Part II (8 articles) i Part III (7 articles), i les pàgines notes, sobre, versions i legal.</p>
         <span class="versio-data">Publicació: 14 de juny de 2026</span>
       </div>
 
@@ -149,10 +149,19 @@
           <span class="versio-num">Versió 1.1 (1965–2025)</span>
           <span class="versio-etiqueta etiqueta-prevista">En preparació</span>
         </div>
-        <p class="versio-resum">Versió de treball accessible per revisar els continguts nous i actualitzats abans de la publicació definitiva.</p>
+        <p class="versio-resum">Actualització amb nou capítol sobre la construcció del cànon a la Part III i revisió de les conclusions a partir de les seves aportacions. Inclou també ajustos de text, dades i presentació.</p>
         <span class="versio-data">Publicació prevista: tardor de 2026</span>
       </div>
 
+      <div class="versio-item prevista" id="v2" data-estat="prevista">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1.2 (1965–2026)</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
+        </div>
+        <p class="versio-resum">Actualització amb dades dels Oscar i d'altres premis d'acadèmies internacionals a la Part II i anàlisi comparatiu a la Part III.</p>
+        <span class="versio-data">Publicació prevista: tardor de 2027</span>
+      </div>
+      
       <div class="versio-item prevista" id="v2" data-estat="prevista">
         <div class="versio-cap">
           <span class="versio-num">Versió 2 (1965–2026)</span>
@@ -182,7 +191,7 @@
   </div>
 
   <script>
-    const VERSIO_ACTUAL_ID = 'v1-1';
+    const VERSIO_ACTUAL_ID = 'v1';
 
     function actualitzarUI() {
       document.querySelectorAll('.versio-item').forEach(el => {
