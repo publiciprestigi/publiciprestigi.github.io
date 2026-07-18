@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)">
+  <title>Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits</title>
+  <link rel="stylesheet" href="css/estil.css">
+  <style>
+    .contingut { padding-top: 40px; padding-bottom: 0; }
+    .inici-portada { max-width: var(--amplada-max); padding: 0; }
+
+    .inici-antetitol {
+      font-size: 0.72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Hero */
+    .inici-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.45fr;
+      gap: 56px;
+      align-items: center;
+      padding-bottom: 16px;
+    }
+
+    .inici-claim {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.08;
+      color: #1a1a1a;
+      letter-spacing: -0.025em;
+      margin: 0;
+    }
+
+    .inici-hero-grafic svg { width: 100%; display: block; }
+
+    /* Text + xifres: un sol bloc sense separador */
+    .inici-text-xifres {
+      padding: 16px 0 36px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .inici-intro-text {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0 0 32px 0;
+      max-width: 90%;
+    }
+
+    .inici-xifres {
+      display: flex;
+      gap: 0;
+    }
+
+    .inici-xifra-bloc { flex: 1; }
+
+    .inici-xifra-n {
+      display: block;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .inici-xifra-l {
+      display: block;
+      font-size: 0.75rem;
+      color: #aaa;
+      letter-spacing: .02em;
+    }
+
+    /* Bloc inferior */
+    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
+    .inici-part {
+      display: grid;
+      grid-template-columns: 48px 1fr 24px;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px 0 0;
+      border-bottom: 1px solid #e5e5e5;
+      text-decoration: none;
+      color: inherit;
+      transition: background .12s;
+      flex: 1;
+    }
+    .inici-part:last-child { border-bottom: none; }
+    .inici-part:hover { background: #f9f9f7; }
+    .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
+    .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+    .inici-part-info .sub { font-size: 0.82rem; color: #888; }
+    .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
+
+    .inici-substack {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      padding: 0 0 0 40px;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity .15s;
+    }
+    .inici-substack:hover { opacity: 0.88; text-decoration: none; }
+
+    .inici-substack-header {
+      display: grid;
+      grid-template-columns: 1fr 24px;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .inici-substack-titol {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .inici-substack-arrow {
+      font-size: 0.85rem;
+      color: #ccc;
+      text-align: right;
+    }
+
+    .inici-substack-foto {
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      height: 300px;
+      position: relative;
+    }
+
+    .inici-substack-pista {
+      height: 100%;
+    }
+
+    .inici-substack-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* ── Responsive portada ── */
+    @media (max-width: 768px) {
+      .contingut { padding-top: 24px; }
+
+      .inici-antetitol {
+        font-size: 0.65rem;
+        margin-bottom: 16px;
+      }
+
+      /* Hero: columna única, gràfic sota el titular */
+      .inici-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 8px;
+      }
+      .inici-claim {
+        font-size: 1.8rem;
+      }
+
+      /* Xifres: 2 columnes x 3 files */
+      .inici-xifres {
+        flex-wrap: wrap;
+        gap: 16px 0;
+      }
+      .inici-xifra-bloc {
+        flex: 0 0 50%;
+      }
+      .inici-xifra-n {
+        font-size: 2rem;
+      }
+
+      /* Bloc inferior: columna única */
+      .inici-inferior {
+        grid-template-columns: 1fr;
+      }
+      .inici-parts {
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .inici-part {
+        padding: 16px 0;
+      }
+
+      /* Substack: sense padding lateral */
+      .inici-substack {
+        padding: 0;
+      }
+      .inici-substack-foto {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body class="pag-inici">
+
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="/v1/" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 (1965–2025)</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#" class="lang-es">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="/v1/" class="nav-link actiu">Inici</a>
+      <a href="part-i.html" class="nav-link">I — Públic</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">III — Anàlisi</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link nav-link-substack" target="_blank" rel="noopener">Substack ↗</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+    <div class="inici-portada">
+
+      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
+
+      <div class="inici-hero">
+        <div>
+          <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
+        </div>
+        <div class="inici-hero-grafic">
+          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+
+      <!-- Text + xifres: bloc únic sense separador intern -->
+      <div class="inici-text-xifres">
+        <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
+        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts!
+        <div class="inici-xifres">
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#2a5582">294M</span>
+            <span class="inici-xifra-l">espectadors acumulats</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">285</span>
+            <span class="inici-xifra-l">films a seccions oficials</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">99</span>
+            <span class="inici-xifra-l">films premiats</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#5a4a8a">11</span>
+            <span class="inici-xifra-l">dobles corones</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n">60</span>
+            <span class="inici-xifra-l">anys documentats</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inici-inferior">
+        <div class="inici-parts">
+          <a href="part-i.html" class="inici-part">
+            <div class="inici-part-num" style="color:#2a5582">I</div>
+            <div class="inici-part-info">
+              <div class="nom">Públic</div>
+              <div class="sub">Top 100 pel·lícules amb més espectadors</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+          <a href="part-ii.html" class="inici-part">
+            <div class="inici-part-num" style="color:#9B2335">II</div>
+            <div class="inici-part-info">
+              <div class="nom">Prestigi</div>
+              <div class="sub">Cannes, Berlín, Venècia, Sant Sebastià</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+          <a href="part-iii.html" class="inici-part">
+            <div class="inici-part-num" style="color:#5a4a8a">III</div>
+            <div class="inici-part-info">
+              <div class="nom">Anàlisi</div>
+              <div class="sub">Cruïlles, comparatives i interpretacions</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+        </div>
+        <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
+          <div class="inici-substack-header">
+            <span class="inici-substack-titol">Subscriu-te</span>
+            <span class="inici-substack-arrow">→</span>
+          </div>
+          <div class="inici-substack-foto">
+            <div class="inici-substack-pista">
+              <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · <a href="legal.html#propietat">Llicència CC BY-NC 4.0</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  <script>
+    fetch('data/metadata.json')
+      .then(r => r.json())
+      .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
+      .catch(() => {});
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.getElementById('buscador-overlay').style.display !== 'none') toggleBuscador();
+    });
+
+    // Només el bloc del gràfic — substitueix l'IIFE anterior
+(function() {
+  const svg = document.getElementById('grafic-circuits');
+  const ns = 'http://www.w3.org/2000/svg';
+  const W = 600, ML = 130, MR = 12;
+  const YP = 60, YF = 110;
+  const A0 = 1965, A1 = 2025;
+  const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
+
+  function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
+  function el(tag, attrs, par) {
+    const e = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (par) par.appendChild(e);
+    return e;
+  }
+
+  // Anys — només text, sense línies
+  [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
+    const t = el('text', { x: x(a), y: 22, 'font-size': '10', fill: '#ccc', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = a;
+  });
+
+  // Etiquetes de carril
+  function cLabel(label, sub, y, col) {
+    const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = label;
+    const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    s.textContent = sub;
+  }
+  cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
+  cLabel('PRESTIGI', 'Festivals', YF, COL_PREST);
+
+  // Pelis emblemàtiques
+  const emblematiques = [1975, 1988, 2004];
+
+  // Punts públic — plens, excepte les emblemàtiques
+  const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+    1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
+    1981,1984,1988,1991,1995,1997,1998,1999,
+    2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
+    2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
+
+  const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
+    1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
+    2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
+
+  // Primer les línies verticals de les 3 pelis (sota els punts)
+  emblematiques.forEach(a => {
+    el('line', { x1: x(a), y1: YP - 10, x2: x(a), y2: YF + 10, stroke: '#ccc', 'stroke-width': '1' }, svg);
+  });
+
+  // Punts públic plens (no emblemàtiques)
+  pub.filter(a => !emblematiques.includes(a)).forEach(a =>
+    el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg)
+  );
+
+  // Punts prestigi plens (no emblemàtiques)
+  prest.filter(a => !emblematiques.includes(a)).forEach(a =>
+    el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg)
+  );
+
+  // Cercles buits per a les emblemàtiques (damunt les línies)
+  emblematiques.forEach(a => {
+    el('circle', { cx: x(a), cy: YP, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+    el('circle', { cx: x(a), cy: YF, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+  });
+
+  // 3 etiquetes escalonades cap avall
+  const etiq = [
+    { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
+    { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
+    { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
+  ];
+
+  etiq.forEach(e => {
+    const cx = x(e.any);
+    // línia continua cap avall des del carril prestigi fins a l'etiqueta
+    el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
+    const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+    tany.textContent = e.any;
+    const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+    ttit.textContent = e.titol;
+  });
+})();
+  </script>
+
+<script src="js/scroll-header.js"></script>
+<script src="js/buscador.js"></script>
+<script src="js/scroll-fade.js"></script> 
+
+
+  <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="/v1/" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
+    </div>
+    <div class="drawer-seccio"><a href="/v1/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fonts i eines</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercat i població</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resum per dècada</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Per penetració</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Per quota de mercat</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Per IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" href="part-ii.html#intro" onclick="toggleDrawer()">Dades i criteri</a>
+        <div class="drawer-grup-titol">Festivals</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
+        <a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
+        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
+        <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
+        <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítols</div>
+        <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolució de la bretxa</a>
+        <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cinema, lleis i tecnologia</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dues generacions</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cinema d'autor industrial</a>
+        <a class="drawer-link" href="part-iii.html#conclusions" onclick="toggleDrawer()">Conclusions</a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
+    <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
+  </nav>
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+  </script>
+
+</body>
+</html>

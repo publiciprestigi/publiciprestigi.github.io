@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Historial de versions — Públic i Prestigi.">
+  <title>Versions · Públic i Prestigi</title>
+  <link rel="stylesheet" href="css/estil.css">
+  <style>
+    .versio-etiqueta {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-left: 10px;
+      position: relative;
+      top: -1px;
+    }
+    .etiqueta-actual   { background: #e8f5ec; color: #2a7a3b; }
+    .etiqueta-prevista { background: #fef3e8; color: #c46a00; }
+    .etiqueta-anterior { background: #f0f0f0; color: #888; }
+
+    .etiqueta-seleccionada {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #888;
+      margin-left: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    .etiqueta-seleccionada .check { color: #2a7a3b; }
+
+    .versio-item {
+      padding: 20px 16px;
+      margin: 0 -16px;
+      border-bottom: 1px solid var(--color-linia);
+      border-left: 3px solid transparent;
+      transition: background .12s;
+    }
+    .versio-item:last-child { border-bottom: none; }
+
+    .versio-cap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    /* No seleccionades: tot gris uniforme */
+    .versio-num {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #999;
+    }
+    .versio-resum {
+      font-size: 0.95rem;
+      color: #999;
+      line-height: 1.6;
+      margin: 0 0 6px 0;
+    }
+    .versio-data {
+      display: block;
+      font-size: 0.62rem;
+      color: #bbb;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    /* Seleccionada */
+    .versio-item.seleccionada {
+      border-left-color: var(--color-text);
+      background: #fafafa;
+      padding-top: 20px;
+    }
+    .versio-item.seleccionada .versio-num  { color: var(--color-text); }
+    .versio-item.seleccionada .versio-resum { color: #555; }
+    .versio-item.seleccionada .versio-data  { color: #aaa; }
+
+    /* Clicables */
+    .versio-item.clicable { cursor: pointer; }
+    .versio-item.clicable:hover { background: #fafafa; }
+
+    /* Previstes: no clicables */
+    .versio-item.prevista { cursor: default; }
+  </style>
+</head>
+<body>
+
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <a href="/v1/" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1 (1965–2025)</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#" class="lang-es">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="/v1/" class="nav-link">Inici</a>
+      <a href="part-i.html" class="nav-link">I — Públic</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">III — Anàlisi</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link nav-link-substack" target="_blank" rel="noopener">Substack ↗</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+
+    <div class="part-capcalera">
+      <h1>Versions</h1>
+      <p class="part-subtitol">Historial de les versions publicades i previstes de l’estudi.</p>
+    </div>
+
+    <div class="contingut-text" id="llista-versions">
+
+      <div class="versio-item clicable" id="v1-1"
+           data-label="Versió 1.1 (1965–2025)"
+           data-url="/">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1.1 (1965–2025)</span>
+          <span class="versio-etiqueta etiqueta-actual">Publicada</span>
+        </div>
+        <p class="versio-resum">Actualització amb nou capítol sobre la construcció del cànon a la Part III i revisió de les conclusions a partir de les seves aportacions. Inclou també ajustos de text, dades i presentació.</p>
+        <span class="versio-data">Publicació: 18 de juliol de 2026</span>
+      </div>
+
+      <div class="versio-item clicable" id="v1"
+           data-label="Versió 1 (1965–2025)"
+           data-url="/v1/">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1 (1965–2025)</span>
+          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
+        </div>
+        <p class="versio-resum">Primera versió pública, inclou Part I (15 articles), Part II (8 articles) i Part III (7 articles), i les pàgines notes, sobre, versions i legal.</p>
+        <span class="versio-data">Publicació: 14 de juny de 2026</span>
+      </div>
+
+      <div class="versio-item prevista" id="v1-2" data-estat="prevista">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1.2 (1965–2026)</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
+        </div>
+        <p class="versio-resum">Actualització amb dades dels Oscar i d'altres premis d'acadèmies internacionals a la Part II i anàlisi comparatiu a la Part III.</p>
+        <span class="versio-data">Publicació prevista: tardor de 2027</span>
+      </div>
+      
+      <div class="versio-item prevista" id="v2" data-estat="prevista">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 2 (1965–2026)</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
+        </div>
+        <p class="versio-resum">Segona edició amb la incorporació de les dades de 2026 i una revisió general dels textos.</p>
+        <span class="versio-data">Publicació prevista: primavera de 2027</span>
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · <a href="legal.html#propietat">Llicència CC BY-NC 4.0</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  <script>
+    const VERSIO_ACTUAL_ID = 'v1';
+
+    function actualitzarUI() {
+      document.querySelectorAll('.versio-item').forEach(el => {
+        el.classList.remove('seleccionada');
+        const etiqueta = el.querySelector('.etiqueta-seleccionada');
+        if (etiqueta) etiqueta.remove();
+      });
+
+      const actual = document.getElementById(VERSIO_ACTUAL_ID);
+      if (actual) {
+        actual.classList.add('seleccionada');
+        const etiqueta = document.createElement('span');
+        etiqueta.className = 'etiqueta-seleccionada';
+        etiqueta.innerHTML = '<span class="check">✓</span> Seleccionada';
+        actual.querySelector('.versio-cap').appendChild(etiqueta);
+      }
+    }
+
+    document.querySelectorAll('.versio-item.clicable').forEach(el => {
+      el.addEventListener('click', () => {
+        if (el.id === VERSIO_ACTUAL_ID) return;
+        window.location.href = el.dataset.url;
+      });
+    });
+
+    actualitzarUI();
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
+    });
+  </script>
+
+<script src="js/scroll-header.js"></script>
+<script src="js/buscador.js"></script>
+<script src="js/scroll-fade.js"></script> </body>
+</html>
