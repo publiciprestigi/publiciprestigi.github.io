@@ -9,7 +9,7 @@ El resultat és un mapa amb un nucli central de consens i quatre zones al voltan
 <!-- fonts -->
 | | Centenari (1995) | Caimán (2016) | Babelia (2025) |
 | --- | --- | --- | --- |
-| **Perfil** | Institucional (Comissió del Centenari, ICAA) | Cinèfil (*Caimán Cuadernos de Cine*) | Periodístic (suplement *Babelia*, *El País*) |
+| **Perfil** | Institucional (Comissió del Centenari del Cinema) | Cinèfil (*Caimán Cuadernos de Cine*) | Periodístic (suplement *Babelia*, *El País*) |
 | **Votants** | Acadèmia, actors, historiadors, directors, guionistes i crítica | 350 crítics, historiadors, investigadors, periodistes i altres especialistes | 53 periodistes, crítics i col·laboradors de l'àrea cultural del diari |
 | **Abast** | Tot el cinema espanyol fins al 1995 | Tot, fins al 2016 | Només 1975–2025 |
 | **Format** | 42 títols, ordre cronològic, sense rànquing | 455 títols votats, jerarquitzats per punts | 50 títols, jerarquitzats |
