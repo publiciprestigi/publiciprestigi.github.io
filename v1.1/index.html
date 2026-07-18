@@ -20,17 +20,14 @@
       font-weight: 400;
     }
 
-    /* Hero: dues meitats, claim i carrusel alineats a dalt */
-    .inici-hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: start;
-      padding-bottom: 16px;
+    /* Capçalera principal */
+    .inici-capcalera {
+      padding-bottom: 30px;
     }
 
     .inici-claim {
-      font-size: 2.5rem;
+      max-width: 900px;
+      font-size: 2.6rem;
       font-weight: 700;
       line-height: 1.08;
       color: #1a1a1a;
@@ -38,12 +35,51 @@
       margin: 0;
     }
 
+    /* Presentació: text 55% + carrusel 45% */
+    .inici-presentacio {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 56px;
+      align-items: start;
+      padding-bottom: 36px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .inici-presentacio-text {
+      min-width: 0;
+    }
+
+    .inici-intro-text {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0 0 28px 0;
+    }
+
+    .inici-intro-text:last-child {
+      margin-bottom: 0;
+    }
+
+    .enllac-secundari {
+      font-size: 0.82rem;
+      color: #888 !important;
+      text-decoration: none !important;
+      white-space: nowrap;
+      margin-left: 6px;
+    }
+
+    .enllac-secundari:hover {
+      color: #363737 !important;
+      text-decoration: none !important;
+    }
+
+    /* Carrusel */
     .inici-carrusel {
       min-width: 0;
     }
 
     .inici-carrusel-foto {
-      height: 300px;
+      height: 260px;
       border-radius: 4px;
       overflow: hidden;
       position: relative;
@@ -110,43 +146,22 @@
       opacity: .72;
     }
 
-    /* Text + xifres */
-    .inici-text-xifres {
-      padding: 16px 0 36px;
+    /* Xifres: bloc complet centrat */
+    .inici-xifres-seccio {
+      padding: 34px 0 36px;
       border-bottom: 1px solid #e5e5e5;
-    }
-
-    .inici-intro-text {
-      font-size: 1rem;
-      color: #555;
-      line-height: 1.7;
-      margin: 0 0 32px 0;
-      max-width: 90%;
-    }
-
-    .inici-intro-text:last-of-type {
-      margin-bottom: 32px;
-    }
-
-    .enllac-secundari {
-      font-size: 0.82rem;
-      color: #888 !important;
-      text-decoration: none !important;
-      white-space: nowrap;
-      margin-left: 6px;
-    }
-
-    .enllac-secundari:hover {
-      color: #363737 !important;
-      text-decoration: none !important;
     }
 
     .inici-xifres {
       display: flex;
-      gap: 0;
+      justify-content: center;
+      width: min(100%, 980px);
+      margin: 0 auto;
     }
 
-    .inici-xifra-bloc { flex: 1; }
+    .inici-xifra-bloc {
+      flex: 0 1 196px;
+    }
 
     .inici-xifra-n {
       display: block;
@@ -163,9 +178,10 @@
       letter-spacing: .02em;
     }
 
-    /* Novetats: una sola línia, amb el mateix gest que Subscriu-te */
+    /* Novetats: una sola peça centrada */
     .inici-novetats {
       display: flex;
+      justify-content: center;
       align-items: baseline;
       gap: 28px;
       padding: 20px 0;
@@ -185,8 +201,8 @@
     }
 
     .inici-novetats-fletxa {
-      color: #ccc;
-      font-weight: 400;
+      color: #1a1a1a;
+      font-weight: 600;
     }
 
     .inici-novetat-grup {
@@ -227,10 +243,10 @@
       color: #1a1a1a;
     }
 
-    /* Bloc inferior: accessos a l'esquerra, gràfic a la dreta */
+    /* Bloc inferior: accessos 40% + gràfic 60% */
     .inici-inferior {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 2fr 3fr;
       align-items: stretch;
     }
 
@@ -264,7 +280,7 @@
       min-width: 0;
       display: flex;
       align-items: center;
-      padding: 24px 0 20px 40px;
+      padding: 20px 0 16px 28px;
     }
 
     .inici-grafic svg {
@@ -281,25 +297,40 @@
         margin-bottom: 16px;
       }
 
-      .inici-hero {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding-bottom: 8px;
+      .inici-capcalera {
+        padding-bottom: 24px;
       }
 
-      .inici-claim { font-size: 1.8rem; }
-      .inici-carrusel-foto { height: 220px; }
-      .inici-intro-text { max-width: 100%; }
+      .inici-claim {
+        font-size: 1.8rem;
+      }
+
+      .inici-presentacio {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 28px;
+      }
+
+      .inici-carrusel-foto {
+        height: 220px;
+      }
 
       .inici-xifres {
         flex-wrap: wrap;
+        justify-content: flex-start;
         gap: 16px 0;
       }
 
-      .inici-xifra-bloc { flex: 0 0 50%; }
-      .inici-xifra-n { font-size: 2rem; }
+      .inici-xifra-bloc {
+        flex: 0 0 50%;
+      }
+
+      .inici-xifra-n {
+        font-size: 2rem;
+      }
 
       .inici-novetats {
+        justify-content: flex-start;
         align-items: flex-start;
         flex-wrap: wrap;
         gap: 12px 22px;
@@ -368,9 +399,15 @@
 
       <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
-      <div class="inici-hero">
-        <div>
-          <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
+      <div class="inici-capcalera">
+        <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
+      </div>
+
+      <div class="inici-presentacio">
+        <div class="inici-presentacio-text">
+          <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
+
+          <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari">Sobre el projecte →</a></p>
         </div>
 
         <div class="inici-carrusel">
@@ -382,6 +419,7 @@
               <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
             </div>
           </div>
+
           <div class="inici-carrusel-peu">
             <div class="inici-carrusel-punts" id="portada-punts" aria-label="Selecciona una imatge del carrusel"></div>
             <a href="https://publiciprestigi.substack.com" class="inici-carrusel-substack" target="_blank" rel="noopener">Subscriu-te →</a>
@@ -389,10 +427,7 @@
         </div>
       </div>
 
-      <div class="inici-text-xifres">
-        <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
-        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari">Sobre el projecte →</a></p>
-
+      <div class="inici-xifres-seccio">
         <div class="inici-xifres">
           <div class="inici-xifra-bloc">
             <span class="inici-xifra-n" style="color:#2a5582">294M</span>
