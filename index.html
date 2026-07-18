@@ -182,17 +182,25 @@
 
     .inici-substack-pista {
       display: flex;
+      width: 100%;
       height: 100%;
       transition: transform 0.6s ease;
     }
 
-    .inici-substack-foto img {
+    .inici-substack-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .inici-substack-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center 20%;
       display: block;
-      flex-shrink: 0;
     }
 
 
@@ -456,13 +464,30 @@
           <a href="https://publiciprestigi.substack.com" class="inici-substack-foto-link" target="_blank" rel="noopener" aria-label="Subscriu-te a Públic i Prestigi">
             <div class="inici-substack-foto">
               <div class="inici-substack-pista" id="substack-pista">
-                <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
-                <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
-                <img src="img/rabal-landa.jpg" alt="Francisco Rabal i Alfredo Landa" style="object-position:center 40%" />
-                <img src="img/segura-iglesia.jpg" alt="Santiago Segura i Álex de la Iglesia" style="object-position:center 20%" />
-                <img src="img/zamora-simon.jpg" alt="María Zamora i Carla Simón" style="object-position:center 30%" />
-                <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%; transform:scale(1.02); transform-origin:center;" />                <img src="img/bayona-serra.jpg" alt="J.A. Bayona i Albert Serra" style="transform:scale(1.05) translateY(-6%); transform-origin:center;" />
-                <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%; transform:scale(1.02); transform-origin:center;" />
+                <div class="inici-substack-slide">
+                  <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/rabal-landa.jpg" alt="Francisco Rabal i Alfredo Landa" style="object-position:center 40%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/segura-iglesia.jpg" alt="Santiago Segura i Álex de la Iglesia" style="object-position:center 20%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/zamora-simon.jpg" alt="María Zamora i Carla Simón" style="object-position:center 30%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%; transform:scale(1.02); transform-origin:center;" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/bayona-serra.jpg" alt="J.A. Bayona i Albert Serra" style="transform:scale(1.05) translateY(-6%); transform-origin:center;" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%; transform:scale(1.02); transform-origin:center;" />
+                </div>
               </div>
             </div>
           </a>
