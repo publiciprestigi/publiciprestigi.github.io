@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Part III — Anàlisi. Cruïlles, comparatives i interpretacions (1965–2025).">
+  <title>Part III — Anàlisi · Públic i Prestigi</title>
+  <link rel="stylesheet" href="css/estil.css">
+  <link rel="stylesheet" href="css/textos-extra.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="amb-sidebar part-iii">
+
+  <header class="capcalera">
+    <div class="capcalera-interior">
+      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="/" class="capcalera-logo">Públic i Prestigi</a>
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1 (1965–2025)</a>
+        <div class="capcalera-idioma">
+          <a href="#" class="actiu">CA</a>
+          <a href="#" class="lang-es">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="/" class="nav-link">Inici</a>
+      <a href="part-i.html" class="nav-link">I — Públic</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link actiu">III — Anàlisi</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+      <a href="https://publiciprestigi.substack.com" class="nav-link nav-link-substack" target="_blank" rel="noopener">Substack ↗</a>
+    </div>
+  </nav>
+
+  <div class="layout-sidebar">
+
+    <aside class="sidebar">
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Capítols</div>
+        <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona</a>
+        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa</a>
+        <a href="#" class="sidebar-link" data-seccio="caza-alcarras">La caza vs. Alcarràs</a>
+        <a href="#" class="sidebar-link" data-seccio="lleis">Cinema, lleis i tecnologia</a>
+        <a href="#" class="sidebar-link" data-seccio="generacions">Dues generacions, dos mercats i un prestigi</a>
+        <a href="#" class="sidebar-link" data-seccio="autor-industrial">Cinema d'autor industrial</a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="conclusions"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+      </div>
+      <div class="sidebar-separador"></div>
+      <div class="sidebar-grup">
+        <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notes</a>
+      </div>
+    </aside>
+
+    <main class="contingut-sidebar">
+      <div class="titol-sticky">
+        <p class="titol-sticky-sup" id="titol-sup"></p>
+        <h1 id="titol-principal"></h1>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-doble-corona">
+        <div class="text-md text-md-intro" data-text="part-iii/doble-corona" data-bloc="intro"></div>
+        <div id="taula-doble-corona"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-corona"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/doble-corona" data-bloc="intro-cercle"></div>
+        <div id="taula-segon-cercle"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-cercle"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-bretxa">
+        <div class="text-md text-md-intro" data-text="part-iii/bretxa" data-bloc="intro"></div>
+        <div id="taula-bretxa"></div>
+        <div class="text-md text-md-llegenda" data-text="part-iii/bretxa" data-bloc="llegenda-taula" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/bretxa" data-bloc="comentari"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/bretxa" data-bloc="intro-grafic1"></div>
+        <div class="grafic-wrap" style="height:340px;position:relative;margin-top:18px">
+          <canvas id="grafic-bretxa"></canvas>
+        </div>
+          <div class="text-md" data-text="part-iii/bretxa" data-bloc="post-grafic1" style="margin-top:28px"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-caza-alcarras">
+        <div class="text-md text-md-intro" data-text="part-iii/caza-alcarras" data-bloc="intro"></div>
+        <div id="taula-caza-comparativa"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-taula"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-iaa"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-iaa"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-distribucio"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-distribucio"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="final-distribucio"></div>
+        <div class="grafic-wrap" style="height:270px;position:relative;margin-top:24px;margin-bottom:0;border-bottom:none">
+          <canvas id="grafic-caza-iaa"></canvas>
+        </div>
+        <div class="text-md text-md-comentari" style="border-top:1px solid #e5e5e5;padding-top:20px;margin-top:24px" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-lleis">
+        <div class="text-md text-md-intro" data-text="part-iii/lleis" data-bloc="intro"></div>
+        <div id="grafic-lleis"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/lleis" data-bloc="moments"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/lleis" data-bloc="conclusio"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-generacions">
+        <div class="text-md text-md-intro" data-text="part-iii/dues-generacions" data-bloc="intro"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-saura"></div>
+        <div id="taula-saura"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-saura"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-almodovar"></div>
+        <div id="taula-almodovar"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-almodovar"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="text-grafic1"></div>
+        <div id="grafic-sa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="sa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div style="min-width:1700px;height:520px;position:relative">
+                <canvas id="grafic-saura-almodovar"></canvas>
+              </div>
+            </div>
+            <div id="sa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-actual"></div>
+        <div id="taula-actual"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-actual"></div>
+
+        <div id="grafic-ga-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0">
+          <div class="grafic-wrap" style="height:720px;position:relative;border-top:none;border-bottom:none">
+            <canvas id="grafic-generacio-actual"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-autor-industrial">
+        <div class="text-md text-md-intro" data-text="part-iii/autor-industrial" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-iglesia"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-amenabar"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-bayona"></div>
+
+        <div id="grafic-ai-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="ai-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div style="min-width:1700px;height:480px;position:relative">
+                <canvas id="grafic-autor-industrial"></canvas>
+              </div>
+            </div>
+            <div id="ai-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="conclusio"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="paradoxa"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-mapa-canon">
+        <div class="text-md text-md-intro" data-text="part-iii/mapa-canon" data-bloc="intro"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="fonts"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="criteri"></div>
+
+        <div id="grafic-mapa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="mapa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div id="grafic-mapa-canon" style="min-width:720px"></div>
+            </div>
+            <div id="mapa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="nucli"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="intermedis"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="extrems"></div>
+        <div class="text-md text-md-intermedi"
+             style="border-top:1px solid #e0e0e0; padding-top:20px; margin-top:24px"
+             data-text="part-iii/mapa-canon"
+             data-bloc="tancament"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-conclusions">
+        <div class="text-md text-md-intro" data-text="part-iii/conclusions" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cap"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cos"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2-cap"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2-cos"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-3"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-4"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-5"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-6"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-7"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-8"></div>
+      </div>
+
+      <div class="nav-seccions">
+        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+        <button class="btn-top" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
+        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+      </div>
+  </div>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · <a href="legal.html#propietat">Llicència CC BY-NC 4.0</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  <script>
+    const seccions = [
+      { id: 'doble-corona', titol: 'La doble corona',                           sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'caza-alcarras',      titol: 'La caza vs. Alcarràs',  titolHTML: '<em>La caza</em> vs. <em>Alcarràs</em>',  sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'autor-industrial',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'mapa-canon',   titol: 'El mapa del cànon',                             sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'conclusions',  titol: 'Conclusions: de les mètriques a les paradoxes', sup: 'Cruïlles, comparatives i interpretacions' },
+    ];
+
+    let actual = 0;
+    let graficBretxaInit = false;
+    let graficCazaInit = false;
+    let graficSAInit = false;
+    let graficGAInit = false;
+    let graficAIInit = false;
+    let graficConc1Init = false;
+    let graficConc2Init = false;
+    let graficMapaInit = false;
+
+    function mostraSeccio(idx) {
+      actual = idx;
+      const s = seccions[idx];
+      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+      document.getElementById('seccio-' + s.id).style.display = 'block';
+      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
+      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+      if (lnk) lnk.classList.add('actiu');
+      const prev = seccions[idx - 1];
+      const next = seccions[idx + 1];
+      const btnAnt = document.getElementById('btn-anterior');
+      const btnSeg = document.getElementById('btn-seguent');
+      btnAnt.textContent = prev ? '← ' + prev.titol : '';
+      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
+      btnSeg.textContent = next ? next.titol + ' →' : '';
+      btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      document.querySelector('.contingut-sidebar').scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      history.pushState({ idx }, '', '#' + s.id);
+      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
+
+      // Inicialitza el gràfic de bretxa la primera vegada que es visita
+      if (s.id === 'bretxa' && !graficBretxaInit) {
+        graficBretxaInit = true;
+        if (window.PiP_graficBretxa && bretxaDades) setTimeout(window.PiP_graficBretxa, 50);
+        else { var _tb = setInterval(function() { if (window.PiP_graficBretxa && bretxaDades) { clearInterval(_tb); window.PiP_graficBretxa(); } }, 100); }
+      }
+      if (s.id === 'caza-alcarras' && !graficCazaInit) {
+        graficCazaInit = true;
+        if (window.PiP_graficCazaIAA) setTimeout(window.PiP_graficCazaIAA, 50);
+        else { var _t = setInterval(function() { if (window.PiP_graficCazaIAA) { clearInterval(_t); window.PiP_graficCazaIAA(); } }, 100); }
+      }
+      if (s.id === 'generacions') {
+        if (!graficSAInit) {
+          graficSAInit = true;
+          if (window.PiP_graficSauraAlmodovar) setTimeout(window.PiP_graficSauraAlmodovar, 50);
+          else { var _tsa = setInterval(function() { if (window.PiP_graficSauraAlmodovar) { clearInterval(_tsa); window.PiP_graficSauraAlmodovar(); } }, 100); }
+        }
+        if (!graficGAInit) {
+          graficGAInit = true;
+          if (window.PiP_graficGeneracioActual) setTimeout(window.PiP_graficGeneracioActual, 100);
+          else { var _tga = setInterval(function() { if (window.PiP_graficGeneracioActual) { clearInterval(_tga); window.PiP_graficGeneracioActual(); } }, 100); }
+        }
+      }
+      if (s.id === 'autor-industrial' && !graficAIInit) {
+        graficAIInit = true;
+        if (window.PiP_graficAutorIndustrial) setTimeout(window.PiP_graficAutorIndustrial, 50);
+        else { var _tai = setInterval(function() { if (window.PiP_graficAutorIndustrial) { clearInterval(_tai); window.PiP_graficAutorIndustrial(); } }, 100); }
+      }
+      if (s.id === 'mapa-canon' && !graficMapaInit) {
+        graficMapaInit = true;
+        if (window.PiP_graficMapaCanon) setTimeout(window.PiP_graficMapaCanon, 50);
+        else { var _tmc = setInterval(function() { if (window.PiP_graficMapaCanon) { clearInterval(_tmc); window.PiP_graficMapaCanon(); } }, 100); }
+      }
+      if (s.id === 'conclusions') {
+        if (!graficConc1Init && window.PiP_graficConclusions1) {
+          graficConc1Init = true;
+          setTimeout(window.PiP_graficConclusions1, 50);
+        }
+        if (!graficConc2Init && window.PiP_graficConclusions2) {
+          graficConc2Init = true;
+          setTimeout(window.PiP_graficConclusions2, 100);
+        }
+      }
+    }
+
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
+
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.addEventListener('click', e => {
+        if (a.dataset.extern) return;
+        e.preventDefault();
+        const idx = seccions.findIndex(s => s.id === a.dataset.seccio);
+        if (idx >= 0) mostraSeccio(idx);
+      });
+    });
+
+    fetch('data/metadata.json').then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
+
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      mostraSeccio(idx >= 0 ? idx : 0);
+    })();
+
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+        document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
+  </script>
+
+  <script src="js/scroll-header.js"></script>
+<script src="js/buscador.js"></script>
+<script src="js/scroll-fade.js"></script>
+  <script src="js/textos.js"></script>
+  <script src="js/part-iii.js"></script>
+  <script src="js/notes-tooltip.js"></script>
+
+
+
+
+  <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="/" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
+    </div>
+    <div class="drawer-seccio"><a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fonts i eines</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercat i població</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resum per dècada</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Per penetració</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Per quota de mercat</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Per IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" href="part-ii.html#intro" onclick="toggleDrawer()">Dades i criteri</a>
+        <div class="drawer-grup-titol">Festivals</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
+        <a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
+        <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
+        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
+        <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítols</div>
+        <a class="drawer-link" onclick="navegaDrawer('doble-corona')">La doble corona</a>
+        <a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolució de la bretxa</a>
+        <a class="drawer-link" onclick="navegaDrawer('caza-alcarras')">La caza vs. Alcarràs</a>
+        <a class="drawer-link" onclick="navegaDrawer('lleis')">Cinema, lleis i tecnologia</a>
+        <a class="drawer-link" onclick="navegaDrawer('generacions')">Dues generacions</a>
+        <a class="drawer-link" onclick="navegaDrawer('autor-industrial')">Cinema d'autor industrial</a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('conclusions')"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
+    <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
+  </nav>
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+    function navegaDrawer(seccioId) {
+      toggleDrawer();
+      const idx = seccions.findIndex(s => s.id === seccioId);
+      if (idx >= 0) mostraSeccio(idx);
+    }
+  </script>
+
+</body>
+</html>
