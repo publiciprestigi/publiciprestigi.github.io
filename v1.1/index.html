@@ -20,13 +20,13 @@
       font-weight: 400;
     }
 
-    /* Hero */
+    /* Hero: claim 1/3 + carrusel 2/3 */
     .inici-hero {
       display: grid;
-      grid-template-columns: 1fr 1.45fr;
+      grid-template-columns: 1fr 2fr;
       gap: 56px;
       align-items: center;
-      padding-bottom: 16px;
+      padding-bottom: 24px;
     }
 
     .inici-claim {
@@ -38,9 +38,77 @@
       margin: 0;
     }
 
-    .inici-hero-grafic svg { width: 100%; display: block; }
+    .inici-carrusel {
+      min-width: 0;
+    }
 
-    /* Text + xifres: un sol bloc sense separador */
+    .inici-carrusel-foto {
+      border-radius: 4px;
+      overflow: hidden;
+      height: 330px;
+      position: relative;
+      background: #f5f5f5;
+    }
+
+    .inici-carrusel-pista {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .inici-carrusel-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      flex: 0 0 100%;
+    }
+
+    .inici-carrusel-peu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 12px;
+    }
+
+    .inici-carrusel-punts {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .inici-carrusel-punt {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: #d6d6d6;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+    }
+
+    .inici-carrusel-punt:hover { background: #999; }
+    .inici-carrusel-punt.actiu {
+      background: #363737;
+      transform: scale(1.12);
+    }
+
+    .inici-carrusel-substack {
+      font-size: 0.82rem;
+      color: #888;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .inici-carrusel-substack:hover {
+      color: #363737;
+      text-decoration: none;
+    }
+
+    /* Text + xifres: un sol bloc sense separador intern */
     .inici-text-xifres {
       padding: 16px 0 36px;
       border-bottom: 1px solid #e5e5e5;
@@ -76,79 +144,118 @@
       letter-spacing: .02em;
     }
 
-    /* Bloc inferior */
-    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
-    .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
+    /* Novetats */
+    .inici-novetats {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 56px;
+      padding: 30px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .inici-novetats-cap {
+      margin: 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .inici-novetats-llista {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 32px;
+      row-gap: 10px;
+    }
+
+    .inici-novetat {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
+      font-size: 0.86rem;
+      color: #555;
+      text-decoration: none;
+    }
+
+    .inici-novetat:hover {
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    .inici-novetat-badge {
+      flex: 0 0 auto;
+      font-size: 0.62rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      padding: 4px 6px;
+      background: #ececec;
+      color: #777;
+    }
+
+    .inici-novetat-badge.nou {
+      background: #fde7e4;
+      color: #c52d22;
+    }
+
+    .inici-novetats-historial {
+      grid-column: 1 / -1;
+      margin-top: 4px;
+      font-size: 0.78rem;
+      color: #999;
+      text-decoration: none;
+    }
+
+    .inici-novetats-historial:hover {
+      color: #363737;
+      text-decoration: none;
+    }
+
+    /* Bloc inferior: gràfic 2/3 + accessos 1/3 */
+    .inici-inferior {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      align-items: stretch;
+    }
+
+    .inici-grafic {
+      min-width: 0;
+      padding: 32px 40px 24px 0;
+      border-right: 1px solid #e5e5e5;
+    }
+
+    .inici-grafic svg {
+      width: 100%;
+      display: block;
+    }
+
+    .inici-parts {
+      display: flex;
+      flex-direction: column;
+      padding-left: 40px;
+    }
+
     .inici-part {
       display: grid;
-      grid-template-columns: 48px 1fr 24px;
+      grid-template-columns: 40px 1fr 20px;
       align-items: center;
       gap: 8px;
-      padding: 0 24px 0 0;
+      padding: 20px 0;
       border-bottom: 1px solid #e5e5e5;
       text-decoration: none;
       color: inherit;
       transition: background .12s;
       flex: 1;
     }
+
     .inici-part:last-child { border-bottom: none; }
     .inici-part:hover { background: #f9f9f7; }
     .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
     .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
-    .inici-part-info .sub { font-size: 0.82rem; color: #888; }
+    .inici-part-info .sub { font-size: 0.78rem; color: #888; line-height: 1.4; }
     .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
-
-    .inici-substack {
-      display: grid;
-      grid-template-rows: auto 1fr;
-      padding: 0 0 0 40px;
-      text-decoration: none;
-      color: inherit;
-      transition: opacity .15s;
-    }
-    .inici-substack:hover { opacity: 0.88; text-decoration: none; }
-
-    .inici-substack-header {
-      display: grid;
-      grid-template-columns: 1fr 24px;
-      align-items: center;
-      padding: 18px 0;
-    }
-
-    .inici-substack-titol {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #1a1a1a;
-    }
-
-    .inici-substack-arrow {
-      font-size: 0.85rem;
-      color: #ccc;
-      text-align: right;
-    }
-
-    .inici-substack-foto {
-      border-radius: 4px;
-      overflow: hidden;
-      margin-bottom: 20px;
-      height: 300px;
-      position: relative;
-    }
-
-    .inici-substack-pista {
-      display: flex;
-      height: 100%;
-      transition: transform 0.6s ease;
-    }
-
-    .inici-substack-foto img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 20%;
-      display: block;
-      flex-shrink: 0;
-    }
 
     /* ── Responsive portada ── */
     @media (max-width: 768px) {
@@ -159,46 +266,52 @@
         margin-bottom: 16px;
       }
 
-      /* Hero: columna única, gràfic sota el titular */
       .inici-hero {
         grid-template-columns: 1fr;
         gap: 24px;
         padding-bottom: 8px;
       }
-      .inici-claim {
-        font-size: 1.8rem;
-      }
 
-      /* Xifres: 2 columnes x 3 files */
+      .inici-claim { font-size: 1.8rem; }
+
+      .inici-carrusel-foto { height: 220px; }
+
+      .inici-intro-text { max-width: 100%; }
+
       .inici-xifres {
         flex-wrap: wrap;
         gap: 16px 0;
       }
-      .inici-xifra-bloc {
-        flex: 0 0 50%;
-      }
-      .inici-xifra-n {
-        font-size: 2rem;
+
+      .inici-xifra-bloc { flex: 0 0 50%; }
+      .inici-xifra-n { font-size: 2rem; }
+
+      .inici-novetats {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 26px 0;
       }
 
-      /* Bloc inferior: columna única */
+      .inici-novetats-llista {
+        grid-template-columns: 1fr;
+      }
+
       .inici-inferior {
         grid-template-columns: 1fr;
       }
-      .inici-parts {
+
+      .inici-grafic {
+        padding: 28px 0;
         border-right: none;
         border-bottom: 1px solid #e5e5e5;
       }
-      .inici-part {
-        padding: 16px 0;
+
+      .inici-parts {
+        padding-left: 0;
       }
 
-      /* Substack: sense padding lateral */
-      .inici-substack {
-        padding: 0;
-      }
-      .inici-substack-foto {
-        height: 220px;
+      .inici-part {
+        padding: 16px 0;
       }
     }
   </style>
@@ -246,8 +359,20 @@
         <div>
           <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
         </div>
-        <div class="inici-hero-grafic">
-          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+
+        <div class="inici-carrusel">
+          <div class="inici-carrusel-foto">
+            <div class="inici-carrusel-pista" id="portada-pista">
+              <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+              <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
+              <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
+              <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
+            </div>
+          </div>
+          <div class="inici-carrusel-peu">
+            <div class="inici-carrusel-punts" id="portada-punts" aria-label="Selecciona una imatge del carrusel"></div>
+            <a href="https://publiciprestigi.substack.com" class="inici-carrusel-substack" target="_blank" rel="noopener">Subscriu-te →</a>
+          </div>
         </div>
       </div>
 
@@ -279,7 +404,34 @@
         </div>
       </div>
 
+      <section class="inici-novetats" aria-labelledby="novetats-v11">
+        <h2 class="inici-novetats-cap" id="novetats-v11">Novetats de la versió 1.1</h2>
+        <div class="inici-novetats-llista">
+          <a href="part-iii.html#mapa-canon" class="inici-novetat">
+            <span class="inici-novetat-badge nou">Nou</span>
+            <span>El mapa del cànon</span>
+          </a>
+          <a href="part-iii.html#conclusions" class="inici-novetat">
+            <span class="inici-novetat-badge">Actualitzat</span>
+            <span>Conclusions</span>
+          </a>
+          <a href="sobre.html" class="inici-novetat">
+            <span class="inici-novetat-badge">Actualitzat</span>
+            <span>Portada i Sobre el projecte</span>
+          </a>
+          <a href="versions.html" class="inici-novetat">
+            <span class="inici-novetat-badge">Corregit</span>
+            <span>Ajustos de dades i textos</span>
+          </a>
+          <a href="versions.html" class="inici-novetats-historial">Veure l’historial de versions →</a>
+        </div>
+      </section>
+
       <div class="inici-inferior">
+        <div class="inici-grafic">
+          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+
         <div class="inici-parts">
           <a href="part-i.html" class="inici-part">
             <div class="inici-part-num" style="color:#2a5582">I</div>
@@ -306,20 +458,6 @@
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
-        <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
-          <div class="inici-substack-header">
-            <span class="inici-substack-titol">Subscriu-te</span>
-            <span class="inici-substack-arrow">→</span>
-          </div>
-          <div class="inici-substack-foto">
-            <div class="inici-substack-pista" id="substack-pista">
-              <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
-              <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
-              <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
-              <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
-            </div>
-          </div>
-        </a>
       </div>
 
     </div>
@@ -341,27 +479,47 @@
   </div>
 
   <script>
-    // ── CARRUSSEL FOTO PORTADA (loop infinit) ──
+    // ── CARRUSEL FOTO PORTADA ──
     (function() {
-      const pista = document.getElementById('substack-pista');
-      if (!pista) return;
+      const pista = document.getElementById('portada-pista');
+      const puntsWrap = document.getElementById('portada-punts');
+      if (!pista || !puntsWrap) return;
+
       const total = pista.children.length;
-      // Clona la primera foto i posa-la al final per al loop sense salt visible
-      pista.appendChild(pista.children[0].cloneNode(true));
       let actual = 0;
-      setInterval(function() {
-        actual++;
-        pista.style.transition = 'transform 0.6s ease';
+      let temporitzador;
+
+      const punts = Array.from({ length: total }, function(_, index) {
+        const punt = document.createElement('button');
+        punt.type = 'button';
+        punt.className = 'inici-carrusel-punt';
+        punt.setAttribute('aria-label', 'Mostra la imatge ' + (index + 1) + ' de ' + total);
+        punt.addEventListener('click', function() {
+          mostra(index);
+          reinicia();
+        });
+        puntsWrap.appendChild(punt);
+        return punt;
+      });
+
+      function mostra(index) {
+        actual = (index + total) % total;
         pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
-        if (actual === total) {
-          // Quan arriba al clon, reposiciona a la primera sense transició
-          setTimeout(function() {
-            pista.style.transition = 'none';
-            pista.style.transform = 'translateX(0)';
-            actual = 0;
-          }, 650);
-        }
-      }, 8000);
+        punts.forEach(function(punt, i) {
+          punt.classList.toggle('actiu', i === actual);
+          punt.setAttribute('aria-current', i === actual ? 'true' : 'false');
+        });
+      }
+
+      function reinicia() {
+        clearInterval(temporitzador);
+        temporitzador = setInterval(function() {
+          mostra(actual + 1);
+        }, 8000);
+      }
+
+      mostra(0);
+      reinicia();
     })();
 
     fetch('data/metadata.json')
