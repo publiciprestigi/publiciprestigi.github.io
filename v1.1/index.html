@@ -227,26 +227,6 @@
       position: relative;
     }
 
-    .inici-novetats.tancat {
-      display: none;
-    }
-
-    .inici-novetats-tanca {
-      appearance: none;
-      border: 0;
-      background: transparent;
-      color: #888;
-      font-size: 1rem;
-      line-height: 1;
-      cursor: pointer;
-      padding: 0;
-      margin: 0 6px 0 0;
-      flex: 0 0 auto;
-    }
-
-    .inici-novetats-tanca:hover {
-      color: #1a1a1a;
-    }
 
     .inici-novetats-cap {
       display: inline-flex;
@@ -409,7 +389,6 @@
     <div class="inici-portada">
 
       <section class="inici-novetats" id="inici-novetats" aria-label="Novetats de la versió 1.1">
-        <button class="inici-novetats-tanca" type="button" aria-label="Tancar novetats" title="Tancar">×</button>
         <h2 class="inici-novetats-cap">
           <span>Novetats</span><span class="inici-novetats-arrow">→</span>
         </h2>
@@ -781,29 +760,6 @@
   </nav>
 
 
-  <script>
-    (function() {
-      const STORAGE_KEY = 'pip_novetats_v11_tancades';
-      const bloc = document.getElementById('inici-novetats');
-      if (!bloc) return;
-
-      try {
-        if (localStorage.getItem(STORAGE_KEY) === '1') {
-          bloc.classList.add('tancat');
-        }
-      } catch (e) {}
-
-      const boto = bloc.querySelector('.inici-novetats-tanca');
-      if (boto) {
-        boto.addEventListener('click', function() {
-          bloc.classList.add('tancat');
-          try {
-            localStorage.setItem(STORAGE_KEY, '1');
-          } catch (e) {}
-        });
-      }
-    })();
-  </script>
   <script>
     function toggleDrawer() {
       const drawer = document.getElementById('drawer');
