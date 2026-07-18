@@ -7,7 +7,7 @@
   <title>Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits</title>
   <link rel="stylesheet" href="css/estil.css">
   <style>
-    .contingut { padding-top: 40px; padding-bottom: 0; }
+    .contingut { padding-top: 0; padding-bottom: 0; }
     .inici-portada { max-width: var(--amplada-max); padding: 0; }
 
     .inici-antetitol {
@@ -114,9 +114,10 @@
     .inici-substack:hover { opacity: 0.88; text-decoration: none; }
 
     .inici-substack-header {
-      display: grid;
-      grid-template-columns: 1fr 24px;
-      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      align-items: baseline;
+      gap: 5px;
       padding: 18px 0;
     }
 
@@ -129,7 +130,7 @@
     .inici-substack-arrow {
       font-size: 0.85rem;
       color: #ccc;
-      text-align: right;
+      font-weight: 400;
     }
 
     .inici-substack-foto {
@@ -155,24 +156,46 @@
       flex-shrink: 0;
     }
 
+
+    .enllac-secundari {
+      font-size: 0.82rem;
+      color: #888 !important;
+      text-decoration: none !important;
+      white-space: nowrap;
+      margin-left: 6px;
+    }
+
+    .enllac-secundari:hover {
+      color: #363737 !important;
+      text-decoration: none !important;
+    }
+
     /* Novetats de la versió */
     .inici-novetats {
       display: flex;
       justify-content: center;
       align-items: baseline;
       gap: 28px;
-      padding: 0 0 20px;
+      padding: 20px 0;
       margin-bottom: 28px;
       border-bottom: 1px solid #e5e5e5;
       white-space: nowrap;
     }
 
     .inici-novetats-cap {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 5px;
       flex: 0 0 auto;
       margin: 0;
       font-size: 0.95rem;
       font-weight: 600;
       color: #1a1a1a;
+    }
+
+    .inici-novetats-arrow {
+      color: #ccc;
+      font-weight: 400;
     }
 
     .inici-novetat-grup {
@@ -215,7 +238,12 @@
 
     /* ── Responsive portada ── */
     @media (max-width: 768px) {
-      .contingut { padding-top: 24px; }
+      .contingut { padding-top: 0; }
+
+      .inici-novetats {
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
 
       .inici-antetitol {
         font-size: 0.65rem;
@@ -316,7 +344,9 @@
     <div class="inici-portada">
 
       <section class="inici-novetats" aria-label="Novetats de la versió 1.1">
-        <h2 class="inici-novetats-cap">Novetats →</h2>
+        <h2 class="inici-novetats-cap">
+          <span>Novetats</span><span class="inici-novetats-arrow">→</span>
+        </h2>
 
         <span class="inici-novetat-grup">
           <span class="inici-novetat-badge nou">Nou</span>
@@ -347,7 +377,7 @@
       <!-- Text + xifres: bloc únic sense separador intern -->
       <div class="inici-text-xifres">
         <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
-        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html">Sobre el projecte →</a></p>
+        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari">Sobre el projecte →</a></p>
         <div class="inici-xifres">
           <div class="inici-xifra-bloc">
             <span class="inici-xifra-n" style="color:#2a5582">294M</span>
