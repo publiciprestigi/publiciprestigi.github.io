@@ -131,38 +131,44 @@
 
     <div class="contingut-text" id="llista-versions">
 
-      <!-- ACTUAL -->
       <div class="versio-item clicable" id="v1"
-           data-estat="actual"
            data-label="Versió 1 (1965–2025)"
-           data-url="">
+           data-url="/">
         <div class="versio-cap">
           <span class="versio-num">Versió 1 (1965–2025)</span>
-          <span class="versio-etiqueta etiqueta-actual">Actual</span>
+          <span class="versio-etiqueta etiqueta-actual">Publicada</span>
         </div>
         <p class="versio-resum">Primera versió pública, inclou Part I (15 articles), Part II (8 articles) i Part III (7 articles), i les pàgines notes, sobre, versions i legal.</p>
         <span class="versio-data">Publicació: 14 de juny de 2026</span>
       </div>
 
-      <!-- ANTERIORS -->
-
-      <!-- PREVISTES -->
-      <div class="versio-item prevista" id="v1-1" data-estat="prevista">
+      <div class="versio-item clicable" id="v1-1"
+           data-label="Versió 1.1 (1965–2025)"
+           data-url="/v1.1/">
         <div class="versio-cap">
           <span class="versio-num">Versió 1.1 (1965–2025)</span>
+          <span class="versio-etiqueta etiqueta-prevista">En preparació</span>
+        </div>
+        <p class="versio-resum">Actualització amb nou capítol sobre la construcció del cànon a la Part III i revisió de les conclusions a partir de les seves aportacions. Inclou també ajustos de text, dades i presentació.</p>
+        <span class="versio-data">Publicació prevista: tardor de 2026</span>
+      </div>
+
+      <div class="versio-item prevista" id="v2" data-estat="prevista">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1.2 (1965–2026)</span>
           <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
         </div>
         <p class="versio-resum">Actualització amb dades dels Oscar i d'altres premis d'acadèmies internacionals a la Part II i anàlisi comparatiu a la Part III.</p>
-        <span class="versio-data">Publicació: tardor 2026</span>
+        <span class="versio-data">Publicació prevista: tardor de 2027</span>
       </div>
-
+      
       <div class="versio-item prevista" id="v2" data-estat="prevista">
         <div class="versio-cap">
           <span class="versio-num">Versió 2 (1965–2026)</span>
           <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
         </div>
-        <p class="versio-resum">Segona versió amb la incorporació de les dades de l'any 2026 i revisió general dels textos.</p>
-        <span class="versio-data">Publicació: primavera 2027</span>
+        <p class="versio-resum">Segona edició amb la incorporació de les dades de 2026 i una revisió general dels textos.</p>
+        <span class="versio-data">Publicació prevista: primavera de 2027</span>
       </div>
 
     </div>
@@ -185,44 +191,29 @@
   </div>
 
   <script>
-    const VERSIO_ACTUAL_ID    = 'v1';
-    const VERSIO_ACTUAL_LABEL = 'Versió 1 (1965–2025)';
-
-    function getSelId()    { return localStorage.getItem('pip_versio_id')    || VERSIO_ACTUAL_ID; }
-    function getSelLabel() { return localStorage.getItem('pip_versio_label') || VERSIO_ACTUAL_LABEL; }
+    const VERSIO_ACTUAL_ID = 'v1';
 
     function actualitzarUI() {
-      const selId = getSelId();
-      document.getElementById('versio-label').textContent = getSelLabel();
-
       document.querySelectorAll('.versio-item').forEach(el => {
         el.classList.remove('seleccionada');
-        const etiqSel = el.querySelector('.etiqueta-seleccionada');
-        if (etiqSel) etiqSel.remove();
+        const etiqueta = el.querySelector('.etiqueta-seleccionada');
+        if (etiqueta) etiqueta.remove();
       });
 
-      const selEl = document.getElementById(selId);
-      if (selEl) {
-        selEl.classList.add('seleccionada');
-        const cap = selEl.querySelector('.versio-cap');
-        const etiq = document.createElement('span');
-        etiq.className = 'etiqueta-seleccionada';
-        etiq.innerHTML = '<span class="check">✓</span> Seleccionada';
-        cap.appendChild(etiq);
+      const actual = document.getElementById(VERSIO_ACTUAL_ID);
+      if (actual) {
+        actual.classList.add('seleccionada');
+        const etiqueta = document.createElement('span');
+        etiqueta.className = 'etiqueta-seleccionada';
+        etiqueta.innerHTML = '<span class="check">✓</span> Seleccionada';
+        actual.querySelector('.versio-cap').appendChild(etiqueta);
       }
-    }
-
-    function seleccionarVersio(id, label, url) {
-      localStorage.setItem('pip_versio_id',    id);
-      localStorage.setItem('pip_versio_label', label);
-      actualitzarUI();
-      if (url) window.location.href = '../' + url;
     }
 
     document.querySelectorAll('.versio-item.clicable').forEach(el => {
       el.addEventListener('click', () => {
-        if (el.id === getSelId() && el.id === VERSIO_ACTUAL_ID) return;
-        seleccionarVersio(el.id, el.dataset.label, el.dataset.url);
+        if (el.id === VERSIO_ACTUAL_ID) return;
+        window.location.href = el.dataset.url;
       });
     });
 
