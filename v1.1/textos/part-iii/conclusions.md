@@ -67,7 +67,7 @@ A partir dels 90s, les televisions van assumir una funció decisiva: finançaven
 
 Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una part creixent del finançament i la distribució ha passat a les plataformes, que operen amb una lògica diferent: ampliar i retenir subscriptors, més que concentrar milions d’espectadors en un mateix moment.
 
-Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Ara bé, una audiència acumulada no equival necessàriament a un impacte social comparable: milions d’entrades concentrades a les sales no deixen la mateixa empremta en la memòria col·lectiva, la conversa social i el relat cultural posterior que una audiència similar, però atomitzada entre finestres, pantalles i experiències de consum menys compartides.
+Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Ara bé, una audiència acumulada no equival necessàriament a un impacte social comparable: milions d’entrades concentrades a les sales no generen la mateixa intensitat de conversa simultània, presència pública i experiència compartida que una audiència similar, però atomitzada entre finestres, pantalles i moments de consum.
 
 El públic hi és, potencialment més ampli que mai, però dins d’una oferta audiovisual gairebé il·limitada i fragmentada, el repte ja no és arribar-hi, sinó fer-lo coincidir de nou en una sala.
 <!-- /punt-5 -->
@@ -75,11 +75,11 @@ El públic hi és, potencialment més ampli que mai, però dins d’una oferta a
 <!-- punt-6 -->
 ## 6. Més accés, menys recursos
 
-<p class="subtitol-punt">La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència d'evidents desigualtats.</p>
+<p class="subtitol-punt">La renovació femenina del cinema d’autor coincideix amb una obertura real de l’accés, però també amb la persistència de desigualtats estructurals.</p>
 
 El mercat cinematogràfic és també una construcció política i tecnològica. Les dades no descriuen l’evolució d’un sistema autònom: les lleis, les ajudes, la fiscalitat, les obligacions d’inversió de les televisions, la digitalització i les polítiques de paritat han modificat successivament què es pot i qui pot produir, com circulen les pel·lícules i quines tenen accés als recursos.
 
-En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení, en paral·lel a les polítiques actives d’igualtat. Aquesta renovació té lloc dins d’una indústria audiovisual en expansió (amb gran activitat en sèries i cinema de plataformes), però just quan el mercat de sala es contrau i el cinema mitjà i d’autor hi perd espai. Les dones accedeixen així al centre simbòlic d’un territori històricament masculí, curiosament, quan deixa de ser el centre industrial.
+En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení, en paral·lel a les polítiques actives d’igualtat. Aquesta renovació té lloc dins d’una indústria audiovisual en expansió (amb gran activitat en sèries i cinema de plataformes), però just quan el mercat de sala es contrau i el cinema mitjà i d’autor hi perd espai. Les dones accedeixen així al centre simbòlic d’un territori històricament masculí, precisament, quan deixa de ser el centre industrial.
 
 L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. <sup>[16]</sup>
 
@@ -96,5 +96,5 @@ Aquestes dues memòries es construeixen de manera diferent, però no viuen sempr
 
 La memòria popular opera per vies socials, afectives i quotidianes: perdura en el llenguatge, els personatges, les escenes i els referents compartits. Les reposicions televisives i altres circuits secundaris de difusió la reactiven periòdicament, però no hi ha estructures equivalents que n’assegurin una continuïtat comparable a la del prestigi. Això no obliga a equiparar l’èxit popular amb el valor artístic, però sí a reconèixer que el cànon no conserva totes les experiències amb la mateixa intensitat.
 
-L’última paradoxa és, potser, la que dona sentit a tot l’estudi: les pel·lícules més vistes no sempre són les que millor recordem, i les que ocupen el centre de la memòria cultural no sempre van ocupar el centre de l’experiència popular. Entre la memòria del públic massiu i la del prestigi crític es troba la història completa que aquest estudi ha intentat analitzar.
+L’última paradoxa és, potser, la que dona sentit a tot l’estudi: les pel·lícules més vistes no sempre són les més recordades, i les que ocupen el centre de la memòria cultural no sempre van ocupar el centre de l’experiència popular. Entre la memòria del públic massiu i la del prestigi crític es dibuixa una història més completa, que aquest estudi ha intentat analitzar.
 <!-- /punt-7 -->
