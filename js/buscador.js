@@ -35,6 +35,7 @@
     { ruta: 'textos/part-iii/lleis.md',             titol: 'Cinema, lleis i tecnologia',part: 'III',seccio: 'lleis',            url: 'part-iii.html#lleis' },
     { ruta: 'textos/part-iii/dues-generacions.md',  titol: 'Dues generacions',         part: 'III', seccio: 'generacions',     url: 'part-iii.html#generacions' },
     { ruta: 'textos/part-iii/autor-industrial.md',  titol: "Cinema d'autor industrial",part: 'III', seccio: 'autor-industrial',url: 'part-iii.html#autor-industrial' },
+    { ruta: 'textos/part-iii/mapa-canon.md',        titol: 'El mapa del cànon',        part: 'III', seccio: 'mapa-canon',      url: 'part-iii.html#mapa-canon' },
     { ruta: 'textos/part-iii/conclusions.md',       titol: 'Conclusions',              part: 'III', seccio: 'conclusions',     url: 'part-iii.html#conclusions' },
   ];
 
@@ -193,7 +194,25 @@
 
   document.addEventListener('DOMContentLoaded', () => {
     const overlay = document.getElementById('buscador-overlay');
-    if (overlay) observer.observe(overlay, { attributes: true, attributeFilter: ['style'] });
+    if (overlay) {
+      observer.observe(overlay, { attributes: true, attributeFilter: ['style'] });
+      // Restaurar última cerca quan s'obre
+      const origToggle = window.toggleBuscador;
+      if (origToggle) {
+        window.toggleBuscador = function() {
+          origToggle();
+          const o = document.getElementById('buscador-overlay');
+          const inp = document.getElementById('buscador-input');
+          if (o && o.style.display !== 'none' && inp) {
+            const q = sessionStorage.getItem('pip_cerca') || '';
+            if (q && !inp.value) {
+              inp.value = q;
+              inp.dispatchEvent(new Event('input'));
+            }
+          }
+        };
+      }
+    }
 
     const input = document.getElementById('buscador-input');
     if (input) {
@@ -202,6 +221,7 @@
         clearTimeout(timer);
         timer = setTimeout(() => {
           const q = input.value.trim();
+          sessionStorage.setItem('pip_cerca', q);
           if (q.length < 2) {
             const cont = document.getElementById('buscador-resultats');
             if (cont) cont.innerHTML = '';
@@ -211,6 +231,25 @@
         }, 200);
       });
     }
+    // Restaurar buscador quan l'usuari torna enrere al navegador
+    window.addEventListener('popstate', function() {
+      const q = sessionStorage.getItem('pip_cerca') || '';
+      if (q.length >= 2) {
+        setTimeout(function() {
+          const toggleFn = window.toggleBuscador;
+          const overlay = document.getElementById('buscador-overlay');
+          const inp = document.getElementById('buscador-input');
+          if (overlay && overlay.style.display === 'none' && toggleFn) {
+            toggleFn();
+          }
+          if (inp && !inp.value) {
+            inp.value = q;
+            inp.dispatchEvent(new Event('input'));
+          }
+        }, 100);
+      }
+    });
+
   });
 
 })();
