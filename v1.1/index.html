@@ -20,20 +20,17 @@
       font-weight: 400;
     }
 
-    /* Bloc principal: claim + text + carrusel en una sola composició */
-    .inici-principal {
-      border-bottom: 1px solid #e5e5e5;
-    }
-
-    .inici-hero-triple {
+    /* Hero */
+    .inici-hero {
       display: grid;
-      grid-template-columns: 31fr 37fr 32fr;
-      gap: 34px;
-      align-items: start;
+      grid-template-columns: 1fr 1.45fr;
+      gap: 56px;
+      align-items: center;
+      padding-bottom: 16px;
     }
 
     .inici-claim {
-      font-size: 2.15rem;
+      font-size: 2.5rem;
       font-weight: 700;
       line-height: 1.08;
       color: #1a1a1a;
@@ -41,119 +38,20 @@
       margin: 0;
     }
 
-    .inici-presentacio-text {
-      min-width: 0;
+    .inici-hero-grafic svg { width: 100%; display: block; }
+
+    /* Text + xifres: un sol bloc sense separador */
+    .inici-text-xifres {
+      padding: 16px 0 36px;
+      border-bottom: 1px solid #e5e5e5;
     }
 
     .inici-intro-text {
-      font-size: 0.93rem;
+      font-size: 1rem;
       color: #555;
-      line-height: 1.62;
-      margin: 0 0 20px 0;
-    }
-
-    .inici-intro-text:last-child {
-      margin-bottom: 0;
-      font-size: 0.9rem;
-    }
-
-    .enllac-secundari {
-      font-size: 0.79rem;
-      color: #888 !important;
-      text-decoration: none !important;
-      margin-left: 5px;
-      white-space: nowrap;
-    }
-
-    .enllac-secundari:hover {
-      color: #363737 !important;
-      text-decoration: none !important;
-    }
-
-    /* Carrusel */
-    .inici-carrusel {
-      width: 100%;
-      min-width: 0;
-    }
-
-    .inici-carrusel-cap {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      min-height: 24px;
-      margin-bottom: 10px;
-    }
-
-    .inici-carrusel-substack {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .inici-carrusel-substack:hover {
-      color: #1a1a1a;
-      text-decoration: none;
-      opacity: .72;
-    }
-
-    .inici-carrusel-foto {
-      height: 250px;
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-      background: #f5f5f5;
-    }
-
-    .inici-carrusel-pista {
-      display: flex;
-      height: 100%;
-      transition: transform 0.6s ease;
-    }
-
-    .inici-carrusel-foto img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      flex: 0 0 100%;
-    }
-
-    .inici-carrusel-peu {
-      display: flex;
-      align-items: center;
-      min-height: 20px;
-      padding-top: 11px;
-    }
-
-    .inici-carrusel-punts {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .inici-carrusel-punt {
-      width: 7px;
-      height: 7px;
-      padding: 0;
-      border: none;
-      border-radius: 50%;
-      background: #d6d6d6;
-      cursor: pointer;
-      transition: background .15s, transform .15s;
-    }
-
-    .inici-carrusel-punt:hover { background: #999; }
-
-    .inici-carrusel-punt.actiu {
-      background: #363737;
-      transform: scale(1.12);
-    }
-
-    /* Xifres: apèndix del bloc principal, sense línia superior */
-    .inici-xifres-seccio {
-      padding: 30px 0 34px;
+      line-height: 1.7;
+      margin: 0 0 32px 0;
+      max-width: 90%;
     }
 
     .inici-xifres {
@@ -161,6 +59,7 @@
       justify-content: center;
       width: min(100%, 980px);
       margin: 0 auto;
+      gap: 0;
     }
 
     .inici-xifra-bloc {
@@ -182,13 +81,88 @@
       letter-spacing: .02em;
     }
 
-    /* Novetats */
+    /* Bloc inferior */
+    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
+    .inici-part {
+      display: grid;
+      grid-template-columns: 48px 1fr 24px;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px 0 0;
+      border-bottom: 1px solid #e5e5e5;
+      text-decoration: none;
+      color: inherit;
+      transition: background .12s;
+      flex: 1;
+    }
+    .inici-part:last-child { border-bottom: none; }
+    .inici-part:hover { background: #f9f9f7; }
+    .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
+    .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+    .inici-part-info .sub { font-size: 0.82rem; color: #888; }
+    .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
+
+    .inici-substack {
+      display: grid;
+      grid-template-rows: auto 1fr;
+      padding: 0 0 0 40px;
+      text-decoration: none;
+      color: inherit;
+      transition: opacity .15s;
+    }
+    .inici-substack:hover { opacity: 0.88; text-decoration: none; }
+
+    .inici-substack-header {
+      display: grid;
+      grid-template-columns: 1fr 24px;
+      align-items: center;
+      padding: 18px 0;
+    }
+
+    .inici-substack-titol {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+    .inici-substack-arrow {
+      font-size: 0.85rem;
+      color: #ccc;
+      text-align: right;
+    }
+
+    .inici-substack-foto {
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      height: 300px;
+      position: relative;
+    }
+
+    .inici-substack-pista {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .inici-substack-foto img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    /* Novetats de la versió */
     .inici-novetats {
       display: flex;
       justify-content: center;
       align-items: baseline;
       gap: 28px;
-      padding: 19px 0;
+      padding: 0 0 20px;
+      margin-bottom: 28px;
       border-bottom: 1px solid #e5e5e5;
       white-space: nowrap;
     }
@@ -239,53 +213,6 @@
       color: #1a1a1a;
     }
 
-    /* Bloc inferior: tres accessos en fila + gràfic centrat */
-    .inici-inferior {
-      display: block;
-    }
-
-    .inici-parts {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-bottom: 1px solid #e5e5e5;
-    }
-
-    .inici-part {
-      display: grid;
-      grid-template-columns: 40px 1fr 20px;
-      align-items: center;
-      gap: 8px;
-      min-height: 112px;
-      padding: 20px 22px;
-      border-right: 1px solid #e5e5e5;
-      text-decoration: none;
-      color: inherit;
-      transition: background .12s;
-    }
-
-    .inici-part:first-child { padding-left: 0; }
-    .inici-part:last-child {
-      border-right: none;
-      padding-right: 0;
-    }
-
-    .inici-part:hover { background: #f9f9f7; }
-    .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
-    .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
-    .inici-part-info .sub { font-size: 0.8rem; color: #888; line-height: 1.4; }
-    .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
-
-    .inici-grafic {
-      display: flex;
-      justify-content: center;
-      padding: 26px 0 18px;
-    }
-
-    .inici-grafic svg {
-      width: min(100%, 900px);
-      display: block;
-    }
-
     /* ── Responsive portada ── */
     @media (max-width: 768px) {
       .contingut { padding-top: 24px; }
@@ -293,33 +220,6 @@
       .inici-antetitol {
         font-size: 0.65rem;
         margin-bottom: 16px;
-      }
-
-      .inici-hero-triple {
-        grid-template-columns: 1fr;
-        gap: 24px;
-      }
-
-      .inici-claim {
-        font-size: 1.8rem;
-      }
-
-      .inici-carrusel-foto {
-        height: 220px;
-      }
-
-      .inici-xifres {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 16px 0;
-      }
-
-      .inici-xifra-bloc {
-        flex: 0 0 50%;
-      }
-
-      .inici-xifra-n {
-        font-size: 2rem;
       }
 
       .inici-novetats {
@@ -334,25 +234,46 @@
         flex-wrap: wrap;
       }
 
-      .inici-parts {
+      /* Hero: columna única, gràfic sota el titular */
+      .inici-hero {
         grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 8px;
+      }
+      .inici-claim {
+        font-size: 1.8rem;
       }
 
-      .inici-part,
-      .inici-part:first-child,
-      .inici-part:last-child {
-        min-height: auto;
-        padding: 16px 0;
+      /* Xifres: 2 columnes x 3 files */
+      .inici-xifres {
+        flex-wrap: wrap;
+        gap: 16px 0;
+      }
+      .inici-xifra-bloc {
+        flex: 0 0 50%;
+      }
+      .inici-xifra-n {
+        font-size: 2rem;
+      }
+
+      /* Bloc inferior: columna única */
+      .inici-inferior {
+        grid-template-columns: 1fr;
+      }
+      .inici-parts {
         border-right: none;
         border-bottom: 1px solid #e5e5e5;
       }
-
-      .inici-part:last-child {
-        border-bottom: none;
+      .inici-part {
+        padding: 16px 0;
       }
 
-      .inici-grafic {
-        padding: 28px 0;
+      /* Substack: sense padding lateral */
+      .inici-substack {
+        padding: 0;
+      }
+      .inici-substack-foto {
+        height: 220px;
       }
     }
   </style>
@@ -394,67 +315,6 @@
   <main class="contingut">
     <div class="inici-portada">
 
-      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
-
-      <section class="inici-principal">
-        <div class="inici-hero-triple">
-
-          <div>
-            <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
-          </div>
-
-          <div class="inici-presentacio-text">
-            <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
-
-            <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari">Sobre el projecte →</a></p>
-          </div>
-
-          <div class="inici-carrusel">
-            <div class="inici-carrusel-cap">
-              <a href="https://publiciprestigi.substack.com" class="inici-carrusel-substack" target="_blank" rel="noopener">Subscriu-te →</a>
-            </div>
-
-            <div class="inici-carrusel-foto">
-              <div class="inici-carrusel-pista" id="portada-pista">
-                <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
-                <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
-                <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
-                <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
-              </div>
-            </div>
-
-            <div class="inici-carrusel-peu">
-              <div class="inici-carrusel-punts" id="portada-punts" aria-label="Selecciona una imatge del carrusel"></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="inici-xifres-seccio">
-          <div class="inici-xifres">
-            <div class="inici-xifra-bloc">
-              <span class="inici-xifra-n" style="color:#2a5582">294M</span>
-              <span class="inici-xifra-l">espectadors acumulats</span>
-            </div>
-            <div class="inici-xifra-bloc">
-              <span class="inici-xifra-n" style="color:#9B2335">285</span>
-              <span class="inici-xifra-l">films a seccions oficials</span>
-            </div>
-            <div class="inici-xifra-bloc">
-              <span class="inici-xifra-n" style="color:#9B2335">99</span>
-              <span class="inici-xifra-l">films premiats</span>
-            </div>
-            <div class="inici-xifra-bloc">
-              <span class="inici-xifra-n" style="color:#5a4a8a">11</span>
-              <span class="inici-xifra-l">dobles corones</span>
-            </div>
-            <div class="inici-xifra-bloc">
-              <span class="inici-xifra-n">60</span>
-              <span class="inici-xifra-l">anys documentats</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="inici-novetats" aria-label="Novetats de la versió 1.1">
         <h2 class="inici-novetats-cap">Novetats →</h2>
 
@@ -473,6 +333,45 @@
         </span>
       </section>
 
+      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
+
+      <div class="inici-hero">
+        <div>
+          <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
+        </div>
+        <div class="inici-hero-grafic">
+          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+
+      <!-- Text + xifres: bloc únic sense separador intern -->
+      <div class="inici-text-xifres">
+        <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
+        <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html">Sobre el projecte →</a></p>
+        <div class="inici-xifres">
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#2a5582">294M</span>
+            <span class="inici-xifra-l">espectadors acumulats</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">285</span>
+            <span class="inici-xifra-l">films a seccions oficials</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">99</span>
+            <span class="inici-xifra-l">films premiats</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#5a4a8a">11</span>
+            <span class="inici-xifra-l">dobles corones</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n">60</span>
+            <span class="inici-xifra-l">anys documentats</span>
+          </div>
+        </div>
+      </div>
+
       <div class="inici-inferior">
         <div class="inici-parts">
           <a href="part-i.html" class="inici-part">
@@ -483,7 +382,6 @@
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
-
           <a href="part-ii.html" class="inici-part">
             <div class="inici-part-num" style="color:#9B2335">II</div>
             <div class="inici-part-info">
@@ -492,7 +390,6 @@
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
-
           <a href="part-iii.html" class="inici-part">
             <div class="inici-part-num" style="color:#5a4a8a">III</div>
             <div class="inici-part-info">
@@ -502,10 +399,20 @@
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
-
-        <div class="inici-grafic">
-          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
-        </div>
+        <a href="https://publiciprestigi.substack.com" class="inici-substack" target="_blank" rel="noopener">
+          <div class="inici-substack-header">
+            <span class="inici-substack-titol">Subscriu-te</span>
+            <span class="inici-substack-arrow">→</span>
+          </div>
+          <div class="inici-substack-foto">
+            <div class="inici-substack-pista" id="substack-pista">
+              <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
+              <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
+              <img src="img/almodovar-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 50%" />
+              <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%" />
+            </div>
+          </div>
+        </a>
       </div>
 
     </div>
@@ -527,51 +434,27 @@
   </div>
 
   <script>
-    // ── CARRUSEL FOTO PORTADA ──
+    // ── CARRUSSEL FOTO PORTADA (loop infinit) ──
     (function() {
-      const pista = document.getElementById('portada-pista');
-      const puntsWrap = document.getElementById('portada-punts');
-      if (!pista || !puntsWrap) return;
-
+      const pista = document.getElementById('substack-pista');
+      if (!pista) return;
       const total = pista.children.length;
+      // Clona la primera foto i posa-la al final per al loop sense salt visible
+      pista.appendChild(pista.children[0].cloneNode(true));
       let actual = 0;
-      let temporitzador;
-
-      const punts = Array.from({ length: total }, function(_, index) {
-        const punt = document.createElement('button');
-        punt.type = 'button';
-        punt.className = 'inici-carrusel-punt';
-        punt.setAttribute('aria-label', 'Mostra la imatge ' + (index + 1) + ' de ' + total);
-
-        punt.addEventListener('click', function() {
-          mostra(index);
-          reinicia();
-        });
-
-        puntsWrap.appendChild(punt);
-        return punt;
-      });
-
-      function mostra(index) {
-        actual = (index + total) % total;
+      setInterval(function() {
+        actual++;
+        pista.style.transition = 'transform 0.6s ease';
         pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
-
-        punts.forEach(function(punt, i) {
-          const actiu = i === actual;
-          punt.classList.toggle('actiu', actiu);
-          punt.setAttribute('aria-current', actiu ? 'true' : 'false');
-        });
-      }
-
-      function reinicia() {
-        clearInterval(temporitzador);
-        temporitzador = setInterval(function() {
-          mostra(actual + 1);
-        }, 8000);
-      }
-
-      mostra(0);
-      reinicia();
+        if (actual === total) {
+          // Quan arriba al clon, reposiciona a la primera sense transició
+          setTimeout(function() {
+            pista.style.transition = 'none';
+            pista.style.transform = 'translateX(0)';
+            actual = 0;
+          }, 650);
+        }
+      }, 8000);
     })();
 
     fetch('data/metadata.json')
@@ -592,7 +475,7 @@
 (function() {
   const svg = document.getElementById('grafic-circuits');
   const ns = 'http://www.w3.org/2000/svg';
-  const W = 600, ML = 118, MR = 10;
+  const W = 600, ML = 130, MR = 12;
   const YP = 60, YF = 110;
   const A0 = 1965, A1 = 2025;
   const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
