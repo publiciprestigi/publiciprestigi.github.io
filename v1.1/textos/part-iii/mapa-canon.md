@@ -26,7 +26,7 @@ L'ordre dels cinc blocs no és arbitrari: el mapa es llegeix com una escala d'es
 <!-- nucli -->
 ## El nucli central
 
-Setze films de *La caza* (1966) a *La isla mínima* (2014), i una constant que cap altre bloc comparteix: el públic mai no hi és residual. Cap film per sota dels 220.000 espectadors, cap per sobre dels 3,6 milions: 5 títols es mouen per sota del mig milió, 10 superen el milió i només 2 passen dels tres milions (*Furtivos* i *Mujeres al borde de un ataque de nervios*, casualment dos 'dobles corones'). El nucli no viu als extrems: és la zona on el consens crític i una audiència àmplia han coincidit.
+Setze films de *La caza* (1966) a *La isla mínima* (2014), i una constant que cap altre bloc comparteix: el públic mai no hi és residual. Cap film per sota dels 220.000 espectadors, cap per sobre dels 3,6 milions: 5 títols es mouen per sota del mig milió, 10 superen el milió i només 2 passen dels tres milions (*Furtivos* i *Mujeres al borde de un ataque de nervios*, curiosament dos 'dobles corones'). El nucli no viu als extrems: és la zona on el consens crític i una audiència àmplia han coincidit.
 
 La seva columna vertebral són els cinc directors de màxim consens: Buñuel, Berlanga, Saura, Erice i Almodóvar, tots amb almenys un film al nucli. Les proporcions internes també parlen: Erice hi té dos títols amb només quatre llargmetratges de filmografia, el màxim consens amb el mínim volum d'obra, i Almodóvar tres, el màxim de qualsevol director del mapa. I podrien ser més: té 7 títols al top 100 de *Caimán* i 7 al top 50 de *Babelia*, i dos d'ells, *Hable con ella* i *La ley del deseo*, apareixen a totes dues llistes i queden fora del nucli només per l'absència a la llista del Centenari.
 
