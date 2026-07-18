@@ -1,5 +1,5 @@
 <!-- intro -->
-Tres grans intents en les últimes tres dècades han volgut fixar per consens quines són les millors pel·lícules del cinema espanyol: la llista del Centenari (1995), impulsada per l'ICAA amb motiu dels cent anys del naixement del cinema; l'enquesta de *Caimán Cuadernos de Cine* (2016), d'arrel cinèfila; i la del suplement *Babelia* de *El País* (2025), de perfil periodístic. Tres prescriptors de naturalesa diferent, tres moments, tres fotografies del cànon. <sup>[20]</sup>
+Tres grans intents en les últimes tres dècades han volgut fixar per consens quines són les millors pel·lícules del cinema espanyol: la llista del Centenari (1995), impulsada per l'ICAA amb motiu dels cent anys del naixement del cinema; l'enquesta de *Caimán Cuadernos de Cine* (2016), d'arrel cinèfila; i la del suplement *Babelia* de *El País* (2025), de perfil periodístic. Tres prescriptors de naturalesa diferent, tres moments, tres fotografies del cànon. <sup>[21]</sup>
 
 Aquest capítol les creua per dibuixar-ne un possible consens compartit i el situa davant del públic real del període estudiat. Després dels festivals i els seus premis, el cànon és una forma de prestigi i legitimitat que l'estudi encara no havia tractat, i la pregunta és directa: quants espectadors té al darrere?
 
