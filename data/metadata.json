@@ -2,7 +2,7 @@
   "versio_activa": "v1",
   "edicio_activa": "1965-2025",
   "versio_label": "Versió 1 (1965–2025)",
-  "publicat": "2026-06-01",
+  "publicat": "2026-06-14",
   "dades_fins": "2025",
   "idiomes": [
     "ca",
@@ -14,8 +14,15 @@
       "versio": "v1",
       "edicio": "1965-2025",
       "label": "Versió 1 (1965–2025)",
-      "publicat": "2026-06-01",
-      "resum": "Primera edició. Part I (Públic), Part II (Prestigi) i Part III (Anàlisi)."
+      "publicat": "2026-06-14",
+      "resum": "Primera versió pública."
+    },
+    {
+      "versio": "v1.1",
+      "edicio": "1965-2025",
+      "label": "Versió 1.1 (1965–2025)",
+      "publicat": null,
+      "resum": "Versió en preparació, accessible per revisar-ne els canvis."
     }
   ]
 }
