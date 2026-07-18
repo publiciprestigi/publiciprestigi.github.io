@@ -38,7 +38,7 @@ La resta del nucli el completen títols de trajectòries molt diverses: hi convi
 <!-- intermedis -->
 ## Els espais intermedis
 
-A banda i banda del nucli, dos grups comparteixen posició intermèdia: el cànon en construcció de la generació actual, i el cinema popular de gènere, el territori del cinema d'autor industrial ja tractat a l'estudi, ara mirat des del cànon.
+A banda i banda del nucli, dos grups comparteixen una posició intermèdia: el cànon en construcció de la generació actual i el cinema popular de gènere, territori del cinema d’autor industrial ja tractat a l’estudi, ara mirat des del cànon.
 
 Per una banda, la generació actual: quatre films del 2022 i un precedent del 2014. La fotografia és nítida: tres directores i dos directors, la primera zona del mapa amb majoria femenina, en coherència amb el canvi estructural documentat. La seva escala de públic va dels 43K espectadors de *La maternal* al 1,1M d'*As bestas*. *Magical Girl*, Conxa d'Or el 2014, és el precedent i alhora l'avís: present a la llista de *Caimán* el 2016, absent de la de *Babelia* el 2025, potser condicionada també per les acusacions contra el seu director publicades l’any anterior pel mateix diari. <sup>[22]</sup> El cànon en construcció també es pot refredar. I fora del mapa per pura cronologia queda *Los domingos*, estrenada quatre mesos després de l'enquesta de *Babelia*: la primera candidata de la propera llista, i probablement la que substituirà *Cinco lobitos*, de la mateixa directora.
 
