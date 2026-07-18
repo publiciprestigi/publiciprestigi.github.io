@@ -95,14 +95,14 @@
 
   <header class="capcalera">
     <div class="capcalera-interior">
-      <a href="/" class="capcalera-logo">Públic i Prestigi</a>
+      <a href="/v1.1/" class="capcalera-logo">Públic i Prestigi</a>
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
-        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1 (1965–2025)</a>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.1 (1965–2025)</a>
         <div class="capcalera-idioma">
           <a href="#" class="actiu">CA</a>
           <a href="#" class="lang-es">ES</a>
@@ -113,7 +113,7 @@
 
   <nav class="navegacio">
     <div class="navegacio-interior">
-      <a href="/" class="nav-link">Inici</a>
+      <a href="/v1.1/" class="nav-link">Inici</a>
       <a href="part-i.html" class="nav-link">I — Públic</a>
       <a href="part-ii.html" class="nav-link">II — Prestigi</a>
       <a href="part-iii.html" class="nav-link">III — Anàlisi</a>
@@ -131,29 +131,29 @@
 
     <div class="contingut-text" id="llista-versions">
 
-      <div class="versio-item clicable" id="v1"
-           data-label="Versió 1 (1965–2025)"
+      <div class="versio-item clicable" id="v1-1"
+           data-label="Versió 1.1 (1965–2025)"
            data-url="/">
         <div class="versio-cap">
-          <span class="versio-num">Versió 1 (1965–2025)</span>
+          <span class="versio-num">Versió 1.1 (1965–2025)</span>
           <span class="versio-etiqueta etiqueta-actual">Publicada</span>
+        </div>
+        <p class="versio-resum">Actualització amb nou capítol sobre la construcció del cànon a la Part III i revisió de les conclusions a partir de les seves aportacions. Inclou també ajustos de text, dades i presentació.</p>
+        <span class="versio-data">Publicació: 18 de juliol de 2026</span>
+      </div>
+
+      <div class="versio-item clicable" id="v1"
+           data-label="Versió 1 (1965–2025)"
+           data-url="/v1/">
+        <div class="versio-cap">
+          <span class="versio-num">Versió 1 (1965–2025)</span>
+          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
         </div>
         <p class="versio-resum">Primera versió pública, inclou Part I (15 articles), Part II (8 articles) i Part III (7 articles), i les pàgines notes, sobre, versions i legal.</p>
         <span class="versio-data">Publicació: 14 de juny de 2026</span>
       </div>
 
-      <div class="versio-item clicable" id="v1-1"
-           data-label="Versió 1.1 (1965–2025)"
-           data-url="/v1.1/">
-        <div class="versio-cap">
-          <span class="versio-num">Versió 1.1 (1965–2025)</span>
-          <span class="versio-etiqueta etiqueta-prevista">En preparació</span>
-        </div>
-        <p class="versio-resum">Actualització amb nou capítol sobre la construcció del cànon a la Part III i revisió de les conclusions a partir de les seves aportacions. Inclou també ajustos de text, dades i presentació.</p>
-        <span class="versio-data">Publicació prevista: estiu de 2026</span>
-      </div>
-
-      <div class="versio-item prevista" id="v2" data-estat="prevista">
+      <div class="versio-item prevista" id="v1-2" data-estat="prevista">
         <div class="versio-cap">
           <span class="versio-num">Versió 1.2 (1965–2026)</span>
           <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
@@ -170,6 +170,7 @@
         <p class="versio-resum">Segona edició amb la incorporació de les dades de 2026 i una revisió general dels textos.</p>
         <span class="versio-data">Publicació prevista: primavera de 2027</span>
       </div>
+
 
     </div>
 
@@ -191,7 +192,7 @@
   </div>
 
   <script>
-    const VERSIO_ACTUAL_ID = 'v1';
+    const VERSIO_ACTUAL_ID = 'v1-1';
 
     function actualitzarUI() {
       document.querySelectorAll('.versio-item').forEach(el => {
