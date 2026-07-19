@@ -69,5 +69,7 @@ El calendari pot semblar comparable, però la lògica de distribució és comple
 <!-- comentari-final -->
 - *La caza* queda reduïda a la seva xifra de sala, 341k espectadors, perquè no té altres finestres computables. *Alcarràs*, en canvi, parteix d’una xifra semblant, 403k, però hi suma uns 530k espectadors calculats a partir del *share* habitual dels espais on es va emetre a TV3/3Cat i La 2/TVE, i dues capes estimades: televisió de pagament (Movistar+) i plataformes digitals. En total, el gràfic situa el punt mitjà de l’IAA estimat al voltant d’1,31M. <sup>[13]</sup>
 
-Aquesta és la part més opaca del sistema actual. Les plataformes no publiquen dades individuals de visualització per títol, i ni l’ICAA ni la SGAE recullen aquesta informació de manera desagregada. La capa digital existeix, però queda fora de la mesura pública. Per això l’audiència acumulada d’*Alcarràs* és clarament superior a la xifra de sala, encara que només la puguem estimar.
+Berlín és el punt de continuïtat entre *La caza* i *Alcarràs*, la diferència de fons és la manera com cada film arriba al públic i com aquest públic es compta. En el cas d’*Alcarràs*, la capa digital existeix, però queda fora de la mesura pública: les plataformes no publiquen dades individuals de visualització per títol, i ni l’ICAA ni la SGAE les recullen de manera desagregada. Sabem, doncs, que la seva audiència acumulada és clarament superior a la xifra de sala, però només podem estimar-ne l’ordre de magnitud.
+
+Per entendre aquesta diferència, cal ampliar el focus cap a les lleis, les tecnologies i els models de finançament i distribució que han condicionat com es produeixen, circulen i arriben al públic les pel·lícules.
 <!-- /comentari-final -->
