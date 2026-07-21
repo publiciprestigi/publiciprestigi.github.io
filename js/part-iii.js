@@ -4,6 +4,26 @@ let festivalsData = [];
 let filmsData = [];
 let marketData = [];
 
+const PIP_III_ES = document.documentElement.lang === 'es';
+const pip3T = (ca, es) => PIP_III_ES ? es : ca;
+const FEST_LABEL_III = { 'Cannes':'Cannes', 'Venècia':'Venecia', 'Berlín':'Berlín', 'Sant Sebastià':'San Sebastián' };
+const festivalLabel3 = festival => PIP_III_ES ? (FEST_LABEL_III[festival] || festival) : festival;
+const decadaLabel3 = f => PIP_III_ES ? (f.decada_es || f.decada) : f.decada;
+const AWARD_LABEL_III = {
+  "Conxa d'Or": 'Concha de Oro',
+  'Conxa d’Or': 'Concha de Oro',
+  'Conxa de Plata': 'Concha de Plata',
+  "Lleó d'Or": 'León de Oro',
+  'Lleó de Plata': 'León de Plata',
+  "Os d'Or": 'Oso de Oro',
+  'Millor actor': 'Mejor actor',
+  'Millor actriu': 'Mejor actriz',
+  'Millor direcció': 'Mejor dirección',
+  'Millor director': 'Mejor dirección',
+  'Millor guió': 'Mejor guion',
+};
+const awardLabel3 = premi => PIP_III_ES ? (AWARD_LABEL_III[premi] || premi) : premi;
+
 const FC = {
   'Cannes':       '#9B2335',
   'Berlín':       '#1976D2',
@@ -11,22 +31,22 @@ const FC = {
   'Sant Sebastià':'#E07B2A',
 };
 
-const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
+const fmt = n => n == null ? '—' : n.toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES');
 
 function titolFilm(f) {
   return `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`;
 }
 
 function nomFest(festival) {
-  return `<strong style="color:${FC[festival]}">${festival}</strong>`;
+  return `<strong style="color:${FC[festival]}">${festivalLabel3(festival)}</strong>`;
 }
 
 async function carregarDades() {
   try {
     const [rf, ri, rm] = await Promise.all([
-      fetch('data/festivals.json'),
-      fetch('data/films.json'),
-      fetch('data/market.json'),
+      fetch(pipPath('data/festivals.json')),
+      fetch(pipPath('data/films.json')),
+      fetch(pipPath('data/market.json')),
     ]);
     festivalsData = await rf.json();
     filmsData = await ri.json();
@@ -73,7 +93,8 @@ function construirDobleCorona() {
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
-    const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
+    const decadaValor = decadaLabel3(f);
+    const decada = (decadaValor && decadaValor !== '—') ? decadaValor : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td>${titolFilm(f)}</td>
@@ -90,13 +111,13 @@ function construirDobleCorona() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:40%">Títol</th>
-        <th class="col-subtil" style="width:12%">Director</th>
+        <th style="width:40%">${pip3T('Títol','Título')}</th>
+        <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
         <th style="width:100px">Festival</th>
-        <th class="col-center" style="width:55px">Premi</th>
+        <th class="col-center" style="width:55px">${pip3T('Premi','Premio')}</th>
         <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-subtil" style="width:75px">Dècada</th>
-        <th class="col-num" style="width:110px">Espectadors</th>
+        <th class="col-subtil" style="width:75px">${pip3T('Dècada','Década')}</th>
+        <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -123,7 +144,8 @@ function construirSegonCercle() {
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
-    const decada = (f.decada && f.decada !== '—') ? f.decada : '—';
+    const decadaValor = decadaLabel3(f);
+    const decada = (decadaValor && decadaValor !== '—') ? decadaValor : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td class="col-pos">${i+12}</td>
       <td>${titolFilm(f)}</td>
@@ -140,13 +162,13 @@ function construirSegonCercle() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:40%">Títol</th>
-        <th class="col-subtil" style="width:12%">Director</th>
+        <th style="width:40%">${pip3T('Títol','Título')}</th>
+        <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
         <th style="width:100px">Festival</th>
-        <th class="col-center" style="width:55px">Premi</th>
+        <th class="col-center" style="width:55px">${pip3T('Premi','Premio')}</th>
         <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-subtil" style="width:75px">Dècada</th>
-        <th class="col-num" style="width:110px">Espectadors</th>
+        <th class="col-subtil" style="width:75px">${pip3T('Dècada','Década')}</th>
+        <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -231,11 +253,11 @@ function construirBretxa() {
   taula.innerHTML = `
     <table class="taula-festivals">
       <thead><tr>
-        <th class="col-center" style="width:80px">Dècada</th>
+        <th class="col-center" style="width:80px">${pip3T('Dècada','Década')}</th>
         <th class="col-center" style="width:110px">Doble corona</th>
-        <th class="col-num" style="width:140px">Mitjana festivals</th>
-        <th class="col-num" style="width:140px">Mitjana Top 100</th>
-        <th class="col-center" style="width:110px">Ràtio bretxa</th>
+        <th class="col-num" style="width:140px">${pip3T('Mitjana festivals','Media festivales')}</th>
+        <th class="col-num" style="width:140px">${pip3T('Mitjana Top 100','Media Top 100')}</th>
+        <th class="col-center" style="width:110px">${pip3T('Ràtio bretxa','Ratio de brecha')}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -262,7 +284,7 @@ window.PiP_graficBretxa = function() {
       labels: bretxaDades.map(r => r.label),
       datasets: [
         {
-          label: 'Mercat anual mitjà (M entrades)',
+          label: pip3T('Mercat anual mitjà (M entrades)','Mercado anual medio (M entradas)'),
           data: bretxaDades.map(r => +r.mercatMit.toFixed(1)),
           borderColor: '#b8b8b8',
           backgroundColor: 'rgba(184,184,184,0.10)',
@@ -278,7 +300,7 @@ window.PiP_graficBretxa = function() {
           order: 2,
         },
         {
-          label: 'Ràtio bretxa',
+          label: pip3T('Ràtio bretxa','Ratio de brecha'),
           data: bretxaDades.map(r => +r.ratio.toFixed(2)),
           borderColor: '#363737',
           backgroundColor: 'transparent',
@@ -310,8 +332,8 @@ window.PiP_graficBretxa = function() {
           callbacks: {
             label: ctx => {
               if (ctx.dataset.yAxisID === 'yRatio')
-                return `Ràtio bretxa: ${ctx.parsed.y.toFixed(2)}`;
-              return `Mercat: ${ctx.parsed.y.toFixed(0)} M entrades`;
+                return `${pip3T('Ràtio bretxa','Ratio de brecha')}: ${ctx.parsed.y.toFixed(2)}`;
+              return `${pip3T('Mercat','Mercado')}: ${ctx.parsed.y.toFixed(0)} ${pip3T('M entrades','M entradas')}`;
             },
           },
         },
@@ -324,7 +346,7 @@ window.PiP_graficBretxa = function() {
           max: 0.4,
           ticks: { callback: v => v.toFixed(2), color: '#363737', font: { size: 11 } },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Ràtio bretxa', font: { size: 12 }, color: '#363737' },
+          title: { display: true, text: pip3T('Ràtio bretxa','Ratio de brecha'), font: { size: 12 }, color: '#363737' },
         },
         yMercat: {
           type: 'linear',
@@ -333,7 +355,7 @@ window.PiP_graficBretxa = function() {
           max: 400,
           ticks: { callback: v => v + ' M', color: '#888', font: { size: 11 } },
           grid: { display: false },
-          title: { display: true, text: 'Mercat anual (M entrades)', font: { size: 12 }, color: '#888' },
+          title: { display: true, text: pip3T('Mercat anual (M entrades)','Mercado anual (M entradas)'), font: { size: 12 }, color: '#888' },
         },
         x: {
           ticks: { color: '#363737', font: { size: 11 } },
@@ -413,7 +435,7 @@ window.PiP_graficCazaIAA = function() {
     const tit = document.createElement('p');
     tit.id = 'caza-iaa-tit';
     tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin-bottom:10px';
-    tit.innerHTML = 'IAA estimat: <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)';
+    tit.innerHTML = pip3T('IAA estimat','IAA estimado') + ': <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)';
     el.parentNode.insertBefore(tit, el);
   }
 
@@ -475,8 +497,8 @@ window.PiP_graficCazaIAA = function() {
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>`;
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>${pip3T('TV pagament (estimació)','TV de pago (estimación)')}</span>
+      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>${pip3T('Plataformes (estimació)','Plataformas (estimación)')}</span>`;
     el.parentNode.insertAdjacentElement('afterend', leg);
   }
 
@@ -498,13 +520,13 @@ window.PiP_graficCazaIAA = function() {
           borderWidth: 0,
         },
         {
-          label: 'TV pagament (estimació)',
+          label: pip3T('TV pagament (estimació)','TV de pago (estimación)'),
           data: [150000, 0],
           backgroundColor: hatch('#d4a017'),
           borderWidth: 0,
         },
         {
-          label: 'Plataformes (estimació)',
+          label: pip3T('Plataformes (estimació)','Plataformas (estimación)'),
           data: [227000, 0],
           backgroundColor: hatch('#6B3FA0'),
           borderWidth: 0,
@@ -539,7 +561,7 @@ window.PiP_graficCazaIAA = function() {
             color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Espectadors', font: { size: 12 } },
+          title: { display: true, text: pip3T('Espectadors','Espectadores'), font: { size: 12 } },
         },
         y: {
           stacked: true,
@@ -581,17 +603,17 @@ const COLORS_DIRECTOR = {
 };
 
 const TAULA_PELI_HEADER = `
-  <th style="width:30%">Títol</th>
-  <th class="col-subtil" style="width:12%">Director</th>
+  <th style="width:30%">${pip3T('Títol','Título')}</th>
+  <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
   <th style="width:70px">Festival</th>
   <th class="col-center" style="width:30px">★</th>
   <th class="col-center" style="width:60px">Top 100</th>
-  <th class="col-num" style="width:100px">Espectadors</th>
-  <th class="col-num" style="width:65px">Mercat</th>
-  <th class="col-num" style="width:65px">Penetr.</th>
-  <th class="col-num" style="width:55px">Quota</th>
+  <th class="col-num" style="width:100px">${pip3T('Espectadors','Espectadores')}</th>
+  <th class="col-num" style="width:65px">${pip3T('Mercat','Mercado')}</th>
+  <th class="col-num" style="width:65px">${pip3T('Penetr.','Penetr.')}</th>
+  <th class="col-num" style="width:55px">${pip3T('Quota','Cuota')}</th>
   <th class="col-center" style="width:40px">IIC</th>
-  <th class="col-num" style="width:95px;text-align:right">IAA estimat</th>
+  <th class="col-num" style="width:95px;text-align:right">${pip3T('IAA estimat','IAA estimado')}</th>
 `;
 
 function construirDuesGeneracions() {
@@ -713,7 +735,7 @@ window.PiP_graficSauraAlmodovar = function() {
     const tit = document.createElement('p');
     tit.id = 'sa-tit';
     tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = 'Saura i Almodóvar — Trajectòria d\'espectadors a sala per film (1966–2024)';
+    tit.innerHTML = pip3T('Saura i Almodóvar — Trajectòria d\'espectadors a sala per film (1966–2024)','Saura y Almodóvar — Trayectoria de espectadores en salas por film (1966–2024)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
@@ -774,7 +796,7 @@ window.PiP_graficSauraAlmodovar = function() {
       c.fillStyle = '#888';
       c.textAlign = 'right';
       c.textBaseline = 'bottom';
-      c.fillText('Llindar Top 100', chart.scales.x.right - 6, y - 3);
+      c.fillText(pip3T('Llindar Top 100','Umbral Top 100'), chart.scales.x.right - 6, y - 3);
       c.restore();
     },
   };
@@ -819,7 +841,7 @@ window.PiP_graficSauraAlmodovar = function() {
         tooltip: {
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => fmt(ctx.parsed.y) + ' espectadors',
+            label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
           },
         },
       },
@@ -837,7 +859,7 @@ window.PiP_graficSauraAlmodovar = function() {
             color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Espectadors a sala', font: { size: 12 } },
+          title: { display: true, text: pip3T('Espectadors a sala','Espectadores en salas'), font: { size: 12 } },
         },
       },
     },
@@ -852,7 +874,7 @@ window.PiP_graficSauraAlmodovar = function() {
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
 
@@ -881,7 +903,7 @@ window.PiP_graficGeneracioActual = function() {
     const tit = document.createElement('p');
     tit.id = 'ga-tit';
     tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = 'Generació actual — Espectadors a sala (barra sòlida) vs. IAA estimat (barra clara)';
+    tit.innerHTML = pip3T('Generació actual — Espectadors a sala (barra sòlida) vs. IAA estimat (barra clara)','Generación actual — Espectadores en salas (barra sólida) vs. IAA estimado (barra clara)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
@@ -969,7 +991,7 @@ window.PiP_graficGeneracioActual = function() {
       c.fillStyle = '#888';
       c.textAlign = 'left';
       c.textBaseline = 'top';
-      c.fillText('Llindar Top 100', x + 4, chart.scales.y.top + 4);
+      c.fillText(pip3T('Llindar Top 100','Umbral Top 100'), x + 4, chart.scales.y.top + 4);
       c.restore();
     },
   };
@@ -981,8 +1003,8 @@ window.PiP_graficGeneracioActual = function() {
     data: {
       labels,
       datasets: [
-        { label: 'Espectadors a sala', data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
-        { label: 'IAA estimat (valor mig)', data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
+        { label: pip3T('Espectadors a sala','Espectadores en salas'), data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
+        { label: pip3T('IAA estimat (valor mig)','IAA estimado (valor medio)'), data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
       ],
     },
     options: {
@@ -998,8 +1020,8 @@ window.PiP_graficGeneracioActual = function() {
             title: items => orden[items[0].dataIndex].titol + ' (' + orden[items[0].dataIndex].any + ')',
             label: ctx => {
               const f = orden[ctx.dataIndex];
-              if (ctx.datasetIndex === 0) return 'Sala: ' + fmt(f.esp) + ' esp.';
-              return 'IAA estimat: ' + rangText(f);
+              if (ctx.datasetIndex === 0) return pip3T('Sala','Salas') + ': ' + fmt(f.esp) + ' esp.';
+              return pip3T('IAA estimat','IAA estimado') + ': ' + rangText(f);
             },
           },
         },
@@ -1012,7 +1034,7 @@ window.PiP_graficGeneracioActual = function() {
             color: '#363737', font: { size: 12 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Espectadors (sala + IAA estimat)', font: { size: 13 } },
+          title: { display: true, text: pip3T('Espectadors (sala + IAA estimat)','Espectadores (salas + IAA estimado)'), font: { size: 13 } },
         },
         y: {
           stacked: true,
@@ -1033,7 +1055,7 @@ window.PiP_graficGeneracioActual = function() {
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0d4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Oliver Laxe</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0c4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Carla Simón</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0b4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Alauda Ruiz de Azúa</span>
-      <span style="display:flex;align-items:center;gap:5px;margin-left:8px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px;margin-left:8px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
 };
@@ -1077,7 +1099,7 @@ window.PiP_graficAutorIndustrial = function() {
     const tit = document.createElement('p');
     tit.id = 'ai-tit';
     tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = 'De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala per film (1995–2025)';
+    tit.innerHTML = pip3T('De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala per film (1995–2025)','De la Iglesia, Amenábar y Bayona — Trayectoria de espectadores en salas por film (1995–2025)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
@@ -1131,7 +1153,7 @@ window.PiP_graficAutorIndustrial = function() {
       c.fillStyle = '#888';
       c.textAlign = 'right';
       c.textBaseline = 'bottom';
-      c.fillText('Llindar Top 100', chart.scales.x.right - 6, y - 3);
+      c.fillText(pip3T('Llindar Top 100','Umbral Top 100'), chart.scales.x.right - 6, y - 3);
       c.restore();
     },
   };
@@ -1191,7 +1213,7 @@ window.PiP_graficAutorIndustrial = function() {
         tooltip: {
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => fmt(ctx.parsed.y) + ' espectadors',
+            label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
           },
         },
       },
@@ -1209,7 +1231,7 @@ window.PiP_graficAutorIndustrial = function() {
             color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: 'Espectadors a sala', font: { size: 12 } },
+          title: { display: true, text: pip3T('Espectadors a sala','Espectadores en salas'), font: { size: 12 } },
         },
       },
     },
@@ -1225,7 +1247,7 @@ window.PiP_graficAutorIndustrial = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
 
@@ -1258,7 +1280,7 @@ function construirLleis() {
   }
 
   cont.innerHTML = `
-<p class="ll-tit">Context de distribució, legislació i factor IAA (1965–2025)</p>
+<p class="ll-tit">${pip3T('Context de distribució, legislació i factor IAA (1965–2025)','Contexto de distribución, legislación y factor IAA (1965–2025)')}</p>
 <div class="ll-outer">
 <div class="ll-hint" id="ll-scroll-hint"></div>
 <div class="ll-wrap" id="ll-scroll-wrap"><div class="ll-g">
@@ -1273,8 +1295,8 @@ function construirLleis() {
 <div class="ll-lm cl" style="left:95%;z-index:5"></div>
 
 <div class="ll-gov">
-  <div class="ll-gb gf" style="width:16.7%">Franquisme</div>
-  <div class="ll-gb gt" style="width:11.6%">Transició</div>
+  <div class="ll-gb gf" style="width:16.7%">${pip3T('Franquisme','Franquismo')}</div>
+  <div class="ll-gb gt" style="width:11.6%">${pip3T('Transició','Transición')}</div>
   <div class="ll-gb gps" style="width:23.3%">PSOE</div>
   <div class="ll-gb gpp" style="width:13.3%">PP</div>
   <div class="ll-gb gps" style="width:11.7%">PSOE</div>
@@ -1282,32 +1304,32 @@ function construirLleis() {
   <div class="ll-gb gps" style="flex:1">PSOE</div>
 </div>
 
-<div class="ll-ef">Períodes</div>
+<div class="ll-ef">${pip3T('Períodes','Periodos')}</div>
 <div class="ll-g6 ll-per">
   <div class="c c1">1965–1984</div><div class="c c2">1984–1989</div>
   <div class="c c3">1990–1994</div><div class="c c4">1994–2005</div>
   <div class="c c5">2005–2019</div><div class="c c6">2020–2025</div>
 </div>
 
-<div class="ll-ef">Moments clau</div>
+<div class="ll-ef">${pip3T('Moments clau','Momentos clave')}</div>
 <div class="ll-mom">
-  <div class="ll-mp" style="left:30%"><div class="ll-ml"></div><div class="ll-mc">1</div><div class="ll-ma">1983</div><div class="ll-mn">Decret Miró</div></div>
-  <div class="ll-mp" style="left:41.7%"><div class="ll-ml"></div><div class="ll-mc">2</div><div class="ll-ma">1990</div><div class="ll-mn">TV privades</div></div>
-  <div class="ll-mp" style="left:70%"><div class="ll-ml"></div><div class="ll-mc">3</div><div class="ll-ma">2007</div><div class="ll-mn">Llei Cinema</div></div>
+  <div class="ll-mp" style="left:30%"><div class="ll-ml"></div><div class="ll-mc">1</div><div class="ll-ma">1983</div><div class="ll-mn">${pip3T('Decret Miró','Decreto Miró')}</div></div>
+  <div class="ll-mp" style="left:41.7%"><div class="ll-ml"></div><div class="ll-mc">2</div><div class="ll-ma">1990</div><div class="ll-mn">${pip3T('TV privades','TV privadas')}</div></div>
+  <div class="ll-mp" style="left:70%"><div class="ll-ml"></div><div class="ll-mc">3</div><div class="ll-ma">2007</div><div class="ll-mn">${pip3T('Llei Cinema','Ley del Cine')}</div></div>
   <div class="ll-mp" style="left:78.3%"><div class="ll-ml"></div><div class="ll-mc">4</div><div class="ll-ma">2012</div><div class="ll-mn">IVA 21%</div></div>
   <div class="ll-mp" style="left:83.3%"><div class="ll-ml"></div><div class="ll-mc">5</div><div class="ll-ma">2015</div><div class="ll-mn">Netflix</div></div>
-  <div class="ll-mp" style="left:90%"><div class="ll-ml"></div><div class="ll-mc">6</div><div class="ll-ma">2018</div><div class="ll-mn">Paritat</div></div>
-  <div class="ll-mp" style="left:95%"><div class="ll-ml"></div><div class="ll-mc">7</div><div class="ll-ma">2022</div><div class="ll-mn">Llei Audiovisual</div></div>
+  <div class="ll-mp" style="left:90%"><div class="ll-ml"></div><div class="ll-mc">6</div><div class="ll-ma">2018</div><div class="ll-mn">${pip3T('Paritat','Paridad')}</div></div>
+  <div class="ll-mp" style="left:95%"><div class="ll-ml"></div><div class="ll-mc">7</div><div class="ll-ma">2022</div><div class="ll-mn">${pip3T('Llei Audiovisual','Ley Audiovisual')}</div></div>
 </div>
 
-<div class="ll-ef">Finestres disponibles</div>
+<div class="ll-ef">${pip3T('Finestres disponibles','Ventanas disponibles')}</div>
 <div class="ll-g6 ll-fin">
-  <div class="c c1"><span class="nf">1 finestra</span>Sala de cinema</div>
-  <div class="c c2"><span class="nf">3 finestres</span>Sala + TVE + VHS</div>
-  <div class="c c3"><span class="nf">4 finestres</span>Sala + TVE + VHS + TV autonòmiques</div>
-  <div class="c c4"><span class="nf">5 finestres</span>Sala + TVE + TV privades/pagament + TV autonòmiques + DVD</div>
-  <div class="c c5"><span class="nf">6 finestres</span>Sala + TVE + TV privades/pagament + TV autonòmiques + DVD + plataformes</div>
-  <div class="c c6"><span class="nf">6+ finestres</span>Sala + TVE + TV priv./pag. + TV auton. + plataformes en expansió</div>
+  <div class="c c1"><span class="nf">${pip3T('1 finestra','1 ventana')}</span>${pip3T('Sala de cinema','Salas de cine')}</div>
+  <div class="c c2"><span class="nf">${pip3T('3 finestres','3 ventanas')}</span>${pip3T('Sala','Salas')} + TVE + VHS</div>
+  <div class="c c3"><span class="nf">${pip3T('4 finestres','4 ventanas')}</span>${pip3T('Sala','Salas')} + TVE + VHS + ${pip3T('TV autonòmiques','TV autonómicas')}</div>
+  <div class="c c4"><span class="nf">${pip3T('5 finestres','5 ventanas')}</span>${pip3T('Sala','Salas')} + TVE + ${pip3T('TV privades/pagament','TV privadas/de pago')} + ${pip3T('TV autonòmiques','TV autonómicas')} + DVD</div>
+  <div class="c c5"><span class="nf">${pip3T('6 finestres','6 ventanas')}</span>${pip3T('Sala','Salas')} + TVE + ${pip3T('TV privades/pagament','TV privadas/de pago')} + ${pip3T('TV autonòmiques','TV autonómicas')} + DVD + ${pip3T('plataformes','plataformas')}</div>
+  <div class="c c6"><span class="nf">${pip3T('6+ finestres','6+ ventanas')}</span>${pip3T('Sala','Salas')} + TVE + ${pip3T('TV priv./pag.','TV priv./pago')} + ${pip3T('TV auton.','TV auton.')} + ${pip3T('plataformes en expansió','plataformas en expansión')}</div>
 </div>
 
 <div class="ll-ef">Factor IAA</div>
@@ -1333,7 +1355,7 @@ function construirLleis() {
 
 </div></div>
 </div>
-<p class="ll-leg">Franja superior: context polític. Franges centrals: períodes, moments clau i finestres disponibles. Franja inferior: factor multiplicador IAA.</p>`;
+<p class="ll-leg">${pip3T('Franja superior: context polític. Franges centrals: períodes, moments clau i finestres disponibles. Franja inferior: factor multiplicador IAA.','Franja superior: contexto político. Franjas centrales: periodos, momentos clave y ventanas disponibles. Franja inferior: factor multiplicador IAA.')}</p>`;
 
   // Degradat scroll: desapareix quan s'arriba al final
   const hint = document.getElementById('ll-scroll-hint');
@@ -1456,7 +1478,7 @@ function construirGraficDobleCorona() {
   // Títol
   const titolEl = document.createElement('p');
   titolEl.style.cssText = 'font-size:0.82em;font-weight:600;color:#363737;margin-bottom:16px;text-align:center;font-family:system-ui,sans-serif;';
-  titolEl.textContent = 'Dobles corones: films al Top 100 i a secció oficial competitiva de festival (1965–2025)';
+  titolEl.textContent = pip3T('Dobles corones: films al Top 100 i a secció oficial competitiva de festival (1965–2025)','Dobles coronas: films en el Top 100 y en sección oficial competitiva de festival (1965–2025)');
   wrap.appendChild(titolEl);
 
   const svg = document.createElementNS(ns,'svg');
@@ -1484,8 +1506,8 @@ function construirGraficDobleCorona() {
   el('line',{x1:8,y1:ySep,x2:W-8,y2:ySep,stroke:'#e8e8e8','stroke-width':'1'},svg);
 
   // Etiquetes carrils
-  el('text',{x:8,y:PAD_TOP+2,'font-size':'10',fill:COL_PUB,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent='PÚBLIC';
-  el('text',{x:8,y:ySep+14,'font-size':'10',fill:COL_PREST,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent='PRESTIGI';
+  el('text',{x:8,y:PAD_TOP+2,'font-size':'10',fill:COL_PUB,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent=pip3T('PÚBLIC','PÚBLICO');
+  el('text',{x:8,y:ySep+14,'font-size':'10',fill:COL_PREST,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent=pip3T('PRESTIGI','PRESTIGIO');
 
   // Connexions dobles corones
   dobles.forEach(d=>{
@@ -1523,9 +1545,9 @@ function construirGraficDobleCorona() {
   // Llegenda
   const legY = H - PAD_BOT + 34;
   const legItems=[
-    {col:COL_PUB,  label:'Públic — Top 100 (100 films)', buit:false},
-    {col:COL_PREST,label:'Prestigi — Festivals (264 films)', buit:false},
-    {col:COL_PUB,  label:'Doble corona (11 films)', buit:true},
+    {col:COL_PUB,  label:pip3T('Públic — Top 100 (100 films)','Público — Top 100 (100 films)'), buit:false},
+    {col:COL_PREST,label:pip3T('Prestigi — Festivals (264 films)','Prestigio — Festivales (264 films)'), buit:false},
+    {col:COL_PUB,  label:pip3T('Doble corona (11 films)','Doble corona (11 films)'), buit:true},
   ];
   let lx = W/2 - 270;
   legItems.forEach(item=>{
@@ -1557,9 +1579,9 @@ function construirGraficDobleCorona() {
       const px=(cx/W)*svgW;
       const py=(cy/H)*svgH;
       let html=`<strong>${d.titol}</strong><br>${d.any}`;
-      if(d.top100)html+=`<br>${d.top100} al Top 100`;
-      html+=`<br>${d.festival}`;
-      if(d.premi)html+=` · ${d.premi}`;
+      if(d.top100)html+=`<br>${d.top100} ${pip3T('al Top 100','en el Top 100')}`;
+      html+=`<br>${festivalLabel3(d.festival)}`;
+      if(d.premi)html+=` · ${awardLabel3(d.premi)}`;
       tooltip.innerHTML=html;
       tooltip.style.display='block';
       const tw=220;
@@ -1765,14 +1787,14 @@ function construirGraficConclusions1() {
   const LEG_GAP = 14;
 
   const legItems = [
-    { tipus:'ple',   col:COL_BLAU,    label:'Públic — Top 100' },
-    { tipus:'ple',   col:COL_VERMELL, label:'Prestigi — Festivals' },
-    { tipus:'doble', label:'Doble corona' },
-    { tipus:'buit',  col:COL_VERD,    label:'Segon cercle' },
+    { tipus:'ple',   col:COL_BLAU,    label:pip3T('Públic — Top 100','Público — Top 100') },
+    { tipus:'ple',   col:COL_VERMELL, label:pip3T('Prestigi — Festivals','Prestigio — Festivales') },
+    { tipus:'doble', label:pip3T('Doble corona','Doble corona') },
+    { tipus:'buit',  col:COL_VERD,    label:pip3T('Segon cercle','Segundo círculo') },
   ];
 
   // Calcular amplada total per centrar
-  const textW = { 'Públic — Top 100': 120, 'Prestigi — Festivals': 140, 'Doble corona': 110, 'Segon cercle': 100 };
+  const textW = PIP_III_ES ? { 'Público — Top 100': 120, 'Prestigio — Festivales': 140, 'Doble corona': 110, 'Segundo círculo': 110 } : { 'Públic — Top 100': 120, 'Prestigi — Festivals': 140, 'Doble corona': 110, 'Segon cercle': 100 };
   const itemW = legItems.map(item => LEG_R*2 + LEG_GAP + (textW[item.label] || 110) + 24);
   const totalW = itemW.reduce((a,b) => a+b, 0);
   let lx = (W - totalW) / 2;
@@ -1810,12 +1832,12 @@ function construirGraficConclusions1() {
       const py = (cy / H) * svgRect.height;
       let html = `<strong>${d.titol}</strong><br>${d.any}`;
       if (d.tipus === 'corona-pub' || d.tipus === 'corona-prest') {
-        if (d.top100) html += `<br>${d.top100} al Top 100`;
-        html += `<br>${d.festival}`;
-        if (d.premi) html += ` · ${d.premi}`;
-        html += `<br><span style="color:#aaa">Doble corona</span>`;
+        if (d.top100) html += `<br>${d.top100} ${pip3T('al Top 100','en el Top 100')}`;
+        html += `<br>${festivalLabel3(d.festival)}`;
+        if (d.premi) html += ` · ${awardLabel3(d.premi)}`;
+        html += `<br><span style="color:#aaa">${pip3T('Doble corona','Doble corona')}</span>`;
       } else if (d.tipus === 'segon-cercle') {
-        html += `<br><span style="color:#aaa">Segon cercle — ≥1M espectadors</span>`;
+        html += `<br><span style="color:#aaa">${pip3T('Segon cercle — ≥1M espectadors','Segundo círculo — ≥1M espectadores')}</span>`;
       }
       tooltip.innerHTML = html;
       tooltip.style.display = 'block';
@@ -1951,18 +1973,18 @@ function construirGraficConclusions2() {
   el('text', {
     x: PAD_L - 6, y: PAD_T - 10,
     'text-anchor': 'end', 'font-size': '9.5', fill: '#aaa', 'font-family': 'system-ui,sans-serif'
-  }, svg).textContent = 'Premiats';
+  }, svg).textContent = pip3T('Premiats','Premiados');
 
   el('text', {
     x: W - PAD_R + 6, y: PAD_T - 10,
     'text-anchor': 'start', 'font-size': '9.5', fill: COL_LINIA, 'font-family': 'system-ui,sans-serif', opacity:'0.7'
-  }, svg).textContent = 'Esp. (mit.)';
+  }, svg).textContent = pip3T('Esp. (mit.)','Esp. (media)');
 
   // Llegenda
   const legY = H - PAD_B + 32;
   const legItems = [
-    { tipus: 'rect', col: COL_BARRA, stroke: COL_BARRA_STROKE, label: 'Films premiats als 4 festivals' },
-    { tipus: 'line', col: COL_LINIA, label: 'Mitjana espectadors films de festival' },
+    { tipus: 'rect', col: COL_BARRA, stroke: COL_BARRA_STROKE, label: pip3T('Films premiats als 4 festivals','Films premiados en los 4 festivales') },
+    { tipus: 'line', col: COL_LINIA, label: pip3T('Mitjana espectadors films de festival','Media de espectadores de films de festival') },
   ];
   let lx = W / 2 - 220;
   legItems.forEach(item => {
@@ -1996,24 +2018,24 @@ window.PiP_graficMapaCanon = function() {
   const C_POP  = '#2a5582';                                    // blau públic del projecte
 
   const MAX = 9562891;
-  const fmtN = n => n.toLocaleString('ca-ES');
+  const fmtN = n => n.toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES');
 
   const blocs = [
-    { nom: 'EXTREM RADICAL', color: C_RAD, mitjana: '24K', films: [
+    { nom: pip3T('EXTREM RADICAL','EXTREMO RADICAL'), color: C_RAD, mitjana: '24K', films: [
       { t: 'Vampir-Cuadecuc', any: 1970, dir: 'Portabella', c: '—', ca: '37', b: '—', esp: 3351 },
       { t: 'Arrebato', any: 1979, dir: 'Zulueta', c: '—', ca: '5', b: '1', esp: 77838 },
       { t: 'Tren de sombras', any: 1997, dir: 'Guerín', c: '—', ca: '21', b: '—', esp: 11995 },
       { t: 'De nens', any: 2003, dir: 'Jordà', c: '—', ca: '57', b: '34', esp: 5446 },
       { t: 'Honor de cavalleria', any: 2006, dir: 'Serra', c: '—', ca: '53', b: '—', esp: 22503 },
     ]},
-    { nom: 'INTERMEDI GENERACIÓ ACTUAL', color: C_GEN, mitjana: '354K', films: [
+    { nom: pip3T('INTERMEDI GENERACIÓ ACTUAL','INTERMEDIO GENERACIÓN ACTUAL'), color: C_GEN, mitjana: '354K', films: [
       { t: 'Magical Girl', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
       { t: 'Alcarràs', any: 2022, dir: 'Simón', c: '·', ca: '·', b: '8', esp: 403195 },
       { t: 'Cinco lobitos', any: 2022, dir: 'Ruiz de Azúa', c: '·', ca: '·', b: '45', esp: 154708 },
       { t: 'As bestas', any: 2022, dir: 'Sorogoyen', c: '·', ca: '·', b: '13', esp: 1112098 },
       { t: 'La maternal', any: 2022, dir: 'Palomero', c: '·', ca: '·', b: '38', esp: 43200 },
     ]},
-    { nom: 'NUCLI CENTRAL DEL CÀNON', color: C_NUC, mitjana: '1,4M', films: [
+    { nom: pip3T('NUCLI CENTRAL DEL CÀNON','NÚCLEO CENTRAL DEL CANON'), color: C_NUC, mitjana: '1,4M', films: [
       { t: 'La caza', any: 1966, dir: 'Saura', c: '✓', ca: '6', b: '·', esp: 341377 },
       { t: 'Tristana', any: 1970, dir: 'Buñuel', c: '✓', ca: '16', b: '·', esp: 1801968 },
       { t: 'El espíritu de la colmena', any: 1973, dir: 'Erice', c: '✓', ca: '2', b: '·', esp: 535512 },
@@ -2031,14 +2053,14 @@ window.PiP_graficMapaCanon = function() {
       { t: 'Te doy mis ojos', any: 2003, dir: 'Bollaín', c: '·', ca: '61', b: '23', esp: 1063945 },
       { t: 'La isla mínima', any: 2014, dir: 'A. Rodríguez', c: '·', ca: '76', b: '24', esp: 1291487 },
     ]},
-    { nom: 'INTERMEDI POPULAR DE GÈNERE', color: C_GEN2, mitjana: '3,2M', films: [
+    { nom: pip3T('INTERMEDI POPULAR DE GÈNERE','INTERMEDIO POPULAR DE GÉNERO'), color: C_GEN2, mitjana: '3,2M', films: [
       { t: 'El día de la bestia', any: 1995, dir: 'De la Iglesia', c: '·', ca: '42', b: '31', esp: 1419191 },
       { t: 'Tesis', any: 1996, dir: 'Amenábar', c: '·', ca: '78', b: '18', esp: 855713 },
       { t: 'Los otros', any: 2001, dir: 'Amenábar', c: '·', ca: '—', b: '—', esp: 6410785 },
       { t: 'REC', any: 2007, dir: 'Balagueró i Plaza', c: '·', ca: '—', b: '26', esp: 1430450 },
       { t: 'Lo imposible', any: 2012, dir: 'Bayona', c: '·', ca: '—', b: '—', esp: 6129976 },
     ]},
-    { nom: 'EXTREM POPULAR', color: C_POP, mitjana: '5,1M', films: [
+    { nom: pip3T('EXTREM POPULAR','EXTREMO POPULAR'), color: C_POP, mitjana: '5,1M', films: [
       { t: 'La ciudad no es para mí', any: 1966, dir: 'Lazaga', c: '—', ca: '—', b: '·', esp: 4296288 },
       { t: 'Pero... ¿en qué país vivimos?', any: 1967, dir: 'Sáenz de Heredia', c: '—', ca: '—', b: '·', esp: 4054235 },
       { t: 'No desearás al vecino del quinto', any: 1970, dir: 'R. Fernández', c: '—', ca: '—', b: '·', esp: 4371624 },
@@ -2050,9 +2072,9 @@ window.PiP_graficMapaCanon = function() {
   // Títol i llegenda fora del contenidor amb scroll (no es difuminen ni es mouen)
   const bloc = document.getElementById('grafic-mapa-bloc');
   if (bloc && !document.getElementById('mapa-capçalera')) {
-    const nomsCurts = ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
+    const nomsCurts = PIP_III_ES ? ['Radical', 'Generación actual', 'Núcleo central', 'Popular de género', 'Popular'] : ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
     let cap = `<div id="mapa-capçalera">
-      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px">El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)</p>
+      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965-2025)')}</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:22px;justify-content:center">`;
     blocs.forEach((b, i) => {
       cap += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${nomsCurts[i]}</span>`;
@@ -2068,13 +2090,13 @@ window.PiP_graficMapaCanon = function() {
         <td style="text-align:center;width:44px;padding:2px 6px 8px">Cent.</td>
         <td style="text-align:center;width:52px;padding:2px 6px 8px">Caimán</td>
         <td style="text-align:center;width:52px;padding:2px 6px 8px">Babelia</td>
-        <td style="text-align:right;width:84px;white-space:nowrap;padding:2px 6px 8px">Espectadors</td>
+        <td style="text-align:right;width:84px;white-space:nowrap;padding:2px 6px 8px">${pip3T('Espectadors','Espectadores')}</td>
         <td style="width:140px"></td>
       </tr>`;
 
   blocs.forEach((b, bi) => {
     const padTop = bi === 0 ? '6px' : '16px';
-    html += `<tr><td colspan="6" style="font-size:.9em;font-weight:700;letter-spacing:.04em;color:${b.color};padding:${padTop} 6px 4px;border-bottom:1px solid #ddd">${b.nom} <span style="font-weight:400;color:#999">· mitjana ${b.mitjana}</span></td></tr>`;
+    html += `<tr><td colspan="6" style="font-size:.9em;font-weight:700;letter-spacing:.04em;color:${b.color};padding:${padTop} 6px 4px;border-bottom:1px solid #ddd">${b.nom} <span style="font-weight:400;color:#999">· ${pip3T('mitjana','media')} ${b.mitjana}</span></td></tr>`;
     b.films.forEach(f => {
       const w = Math.max((f.esp / MAX) * 100, 0.35);
       html += `<tr>
@@ -2089,7 +2111,7 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent | <b>·</b> fora de l'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">${pip3T('✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent | <b>·</b> fora de l\'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona','✓ presente en la lista del Centenario (orden cronológico, sin ranking) | — ausente | <b>·</b> fuera del alcance temporal de la lista | Barras proporcionales a los espectadores (máx. 9,56M) | Orden cronológico dentro de cada zona')}</p>`;
 
   el.innerHTML = html;
 

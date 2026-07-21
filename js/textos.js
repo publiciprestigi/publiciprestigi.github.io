@@ -4,6 +4,7 @@
   'use strict';
 
   const cache = {};
+  const ES = document.documentElement.lang === 'es';
 
   async function carregaFitxer(ruta) {
     if (cache[ruta]) return cache[ruta];
@@ -14,7 +15,7 @@
       cache[ruta] = text;
       return text;
     } catch (e) {
-      console.error('No s\'ha pogut carregar', ruta, e);
+      console.error(ES ? 'No se ha podido cargar' : 'No s\'ha pogut carregar', ruta, e);
       return null;
     }
   }
@@ -28,7 +29,7 @@
     );
     const m = md.match(re);
     if (!m) {
-      console.warn('Bloc "' + nomBloc + '" no trobat al fitxer');
+      console.warn((ES ? 'Bloque' : 'Bloc') + ' "' + nomBloc + '" ' + (ES ? 'no encontrado en el archivo' : 'no trobat al fitxer'));
       return '';
     }
     return m[1].trim();
@@ -40,7 +41,7 @@
 
     const md = await carregaFitxer(ruta);
     if (md == null) {
-      div.innerHTML = '<p class="text-md-error">[Text no disponible]</p>';
+      div.innerHTML = '<p class="text-md-error">' + (ES ? '[Texto no disponible]' : '[Text no disponible]') + '</p>';
       return;
     }
 
@@ -53,7 +54,7 @@
     }
 
     if (typeof marked === 'undefined') {
-      console.error('marked.js no s\'ha carregat');
+      console.error(ES ? 'marked.js no se ha cargado' : 'marked.js no s\'ha carregat');
       div.textContent = contingut;
       return;
     }

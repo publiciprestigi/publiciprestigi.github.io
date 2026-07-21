@@ -1,0 +1,3 @@
+<!-- intro -->
+La concentración extrema y el récord absoluto. El mercado se mantiene relativamente estable, entre 101 y 105 millones de entradas. *8 apellidos vascos*, de Emilio Martínez-Lázaro, alcanza el máximo IIC posible, 10: 9,4 millones de espectadores, el equivalente a 1 de cada 5 españoles. Irrepetible. Bayona también logra cifras extraordinarias con *Lo imposible* (IIC 6,28, segundo valor más alto), mientras la comedia popular vuelve a demostrar su capacidad de conexión masiva y el cine de animación irrumpe con ambición internacional. En total, 13 películas entran en el Top 100.
+<!-- /intro -->

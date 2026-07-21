@@ -4,9 +4,19 @@
 
 let filmsData = [];
 
+const PIP_ES = document.documentElement.lang === 'es';
+const pipT = (ca, es) => PIP_ES ? es : ca;
+const pipShowContext = n => PIP_ES
+  ? `+ Mostrar ${n} films de contexto (Continuación del ranking de la década)`
+  : `+ Mostrar ${n} pel·lícules de context (Continuació del rànquing de la dècada)`;
+const pipHideContext = () => pipT('− Amagar pel·lícules de context', '− Ocultar films de contexto');
+const pipViewFullList = () => pipT('+ Veure llista completa', '+ Ver lista completa');
+const pipHide = () => pipT('− Amagar', '− Ocultar');
+
+
 async function carregarFilms() {
   try {
-    const r = await fetch('data/films.json');
+    const r = await fetch(pipPath('data/films.json'));
     filmsData = await r.json();
     construirTaulesDècades();
     construirRànquings();
@@ -16,7 +26,7 @@ async function carregarFilms() {
 
 const md2html = s => s ? s.replace(/\*([^*]+)\*/g, '<em>$1</em>') : '';
 
-const fmt = n => n == null ? '—' : n.toLocaleString('ca-ES');
+const fmt = n => n == null ? '—' : n.toLocaleString(PIP_ES ? 'es-ES' : 'ca-ES');
 const fmtPct = (n, e) => n == null ? '—' : n.toFixed(2) + '%' + (e ? '≈' : '');
 const fmtIIC = n => n == null ? '—' : n.toFixed(2);
 const fmtMercat = (n, e) => n == null ? '—' : n.toFixed(1) + 'M' + (e ? '≈' : '');
@@ -38,7 +48,7 @@ function construirFila(film, decada, hidden) {
     <td class="col-num col-gris">${fmtPct(film.penetracio, film.penetracio_estimat)}</td>
     <td class="col-num col-gris">${fmtPct(film.quota, film.quota_estimat)}</td>
     <td class="col-num col-iic">${fmtIIC(film.iic)}</td>
-    <td class="col-context-doc">${md2html(film.context_text)}</td>
+    <td class="col-context-doc">${md2html(PIP_ES ? (film.context_text_es || film.context_text) : film.context_text)}</td>
   </tr>`;
 }
 
@@ -46,14 +56,14 @@ function capcalera() {
   return `<thead><tr>
     <th>#</th>
     <th class="col-subtil col-center">T100</th>
-    <th>Títol</th>
-    <th class="col-subtil">Director</th>
-    <th class="col-num">Espectadors</th>
-    <th class="col-num col-gris">Mercat</th>
-    <th class="col-num col-gris">Penetració</th>
-    <th class="col-num col-gris">Quota</th>
+    <th>${pipT('Títol','Título')}</th>
+    <th class="col-subtil">${pipT('Director','Dirección')}</th>
+    <th class="col-num">${pipT('Espectadors','Espectadores')}</th>
+    <th class="col-num col-gris">${pipT('Mercat','Mercado')}</th>
+    <th class="col-num col-gris">${pipT('Penetració','Penetración')}</th>
+    <th class="col-num col-gris">${pipT('Quota','Cuota')}</th>
     <th class="col-num col-iic">IIC</th>
-    <th class="col-context-doc col-context-header">Context</th>
+    <th class="col-context-doc col-context-header">${pipT('Context','Contexto')}</th>
   </tr></thead>`;
 }
 
@@ -72,7 +82,7 @@ function construirTaulaDècada(decadaId, cont) {
           <tr class="fila-boto-context">
             <td colspan="10">
               <button class="btn-context" onclick="toggleContext('${decadaId}', this)">
-                + Mostrar ${context.length} pel·lícules de context (Continuació del rànquing de la dècada)
+                ${pipShowContext(context.length)}
               </button>
             </td>
           </tr>
@@ -90,8 +100,8 @@ window.toggleContext = function(decadaId, btn) {
   const visible = files[0] && files[0].style.display !== 'none';
   files.forEach(tr => tr.style.display = visible ? 'none' : '');
   btn.textContent = visible
-    ? `+ Mostrar ${count} pel·lícules de context (Continuació del rànquing de la dècada)`
-    : `− Amagar pel·lícules de context`;
+    ? pipShowContext(count)
+    : pipHideContext();
 };
 
 function construirTaulesDècades() {
@@ -153,10 +163,10 @@ function construirRànquing(metrica, contenidorId, label) {
   const thead = `<thead><tr>
     <th class="col-pos">#</th>
     ${esEsp ? '' : '<th class="col-center col-subtil">T100</th>'}
-    <th>Títol</th>
-    <th class="col-subtil">Director</th>
+    <th>${pipT('Títol','Título')}</th>
+    <th class="col-subtil">${pipT('Director','Dirección')}</th>
     <th class="col-num col-iic">${label}</th>
-    ${esEsp ? '' : '<th class="col-var" title="Variació respecte al rànquing per espectadors">Var.</th>'}
+    ${esEsp ? '' : `<th class="col-var" title="${pipT('Variació respecte al rànquing per espectadors','Variación respecto al ranking por espectadores')}">Var.</th>`}
   </tr></thead>`;
 
   cont.innerHTML = `<table class="taula-ranking">
@@ -167,7 +177,7 @@ function construirRànquing(metrica, contenidorId, label) {
         <tr class="fila-boto-context">
           <td colspan="${esEsp ? 4 : 6}">
             <button class="btn-context" onclick="expandirRanking('${contenidorId}', this)">
-              + Veure Top 100 complet
+              ${pipT('+ Veure Top 100 complet', '+ Ver Top 100 completo')}
             </button>
           </td>
         </tr>
@@ -181,7 +191,7 @@ window.expandirRanking = function(cid, btn) {
   const files = document.querySelectorAll(`#${cid} .fila-extra`);
   const visible = files[0] && files[0].style.display !== 'none';
   files.forEach(tr => tr.style.display = visible ? 'none' : '');
-  btn.textContent = visible ? '+ Veure Top 100 complet' : '− Amagar';
+  btn.textContent = visible ? pipT('+ Veure Top 100 complet', '+ Ver Top 100 completo') : pipHide();
   // Amaga/mostra el comentari editorial segons si estem al Top 10 o Top 100
   const seccio = document.getElementById(cid)?.closest('.seccio-contingut');
   if (seccio) {
@@ -235,7 +245,7 @@ function construirRànquingDirectors() {
       <td class="col-num">${fmt(d.espTop)}</td>
       <td class="col-num col-gris">${(d.espTop/totalEsp*100).toFixed(1)}%</td>
       <td class="col-center">
-        <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="Veure films">+</button>
+        <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="${pipT('Veure films','Ver films')}">+</button>
       </td>
     </tr>`;
   };
@@ -250,14 +260,14 @@ function construirRànquingDirectors() {
     const posActual = i + 1;
     let vHtml;
     if (!posRef) {
-      vHtml = '<span class="var-nou">NOU</span>';
+      vHtml = `<span class="var-nou">${pipT('NOU','NUEVO')}</span>`;
     } else {
       vHtml = varHtml(posActual, posRef);
     }
     const add = d.filmsContext.length;
     let filmsHtml = '';
     if (d.filmsTop100.length) filmsHtml += `<span class="dir-films-grup">Top 100</span>${d.filmsTop100.join(' · ')}`;
-    if (d.filmsContext.length) filmsHtml += `<span class="dir-films-grup" style="margin-top:6px">Addicionals</span>${d.filmsContext.join(' · ')}`;
+    if (d.filmsContext.length) filmsHtml += `<span class="dir-films-grup" style="margin-top:6px">${pipT('Addicionals','Adicionales')}</span>${d.filmsContext.join(' · ')}`;
     return `<tr${i>=10?' style="display:none" class="fila-extra-d2"':''}>
       <td class="col-pos">${posActual}</td>
       <td class="col-var">${vHtml}</td>
@@ -269,47 +279,47 @@ function construirRànquingDirectors() {
       <td class="col-center">${add > 0 ? '+'+add : '—'}</td>
       <td class="col-num">${fmt(d.espTotal)}</td>
       <td class="col-center">
-        <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="Veure films">+</button>
+        <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="${pipT('Veure films','Ver films')}">+</button>
       </td>
     </tr>`;
   };
 
   cont1.innerHTML = `
-    <h3 class="subtitol-ranking-gran">Només films del Top 100</h3>
+    <h3 class="subtitol-ranking-gran">${pipT('Només films del Top 100','Solo films del Top 100')}</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
         <th>Director</th>
-        <th class="col-center">Núm. films</th>
-        <th class="col-num" style="text-align:right">Espectadors acumulats</th>
-        <th class="col-num col-gris">% total</th>
+        <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
+        <th class="col-num" style="text-align:right">${pipT('Espectadors acumulats','Espectadores acumulados')}</th>
+        <th class="col-num col-gris">${pipT('% total','% total')}</th>
         <th class="col-center">Films</th>
       </tr></thead>
       <tbody>
         ${llista1.slice(0,10).map((d,i) => filaR1(d,i)).join('')}
         <tr class="fila-boto-context">
-          <td colspan="6"><button class="btn-context" onclick="expandirD1(this)">+ Veure llista completa</button></td>
+          <td colspan="6"><button class="btn-context" onclick="expandirD1(this)">${pipViewFullList()}</button></td>
         </tr>
         ${llista1.slice(10).map((d,i) => filaR1(d,i+10)).join('')}
       </tbody>
     </table>`;
 
   cont2.innerHTML = `
-    <h3 class="subtitol-ranking-gran">De tots els films citats (Top 100 + context)</h3>
+    <h3 class="subtitol-ranking-gran">${pipT('De tots els films citats (Top 100 + context)','De todos los films citados (Top 100 + contexto)')}</h3>
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
         <th>Director</th>
-        <th class="col-center">Núm. films</th>
+        <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-center">Add.</th>
-        <th class="col-num" style="text-align:right">Espectadors totals</th>
+        <th class="col-num" style="text-align:right">${pipT('Espectadors totals','Espectadores totales')}</th>
         <th class="col-center">Films</th>
       </tr></thead>
       <tbody>
         ${llista2.slice(0,10).map((d,i) => filaR2(d,i)).join('')}
         <tr class="fila-boto-context">
-          <td colspan="7"><button class="btn-context" onclick="expandirD2(this)">+ Veure llista completa</button></td>
+          <td colspan="7"><button class="btn-context" onclick="expandirD2(this)">${pipViewFullList()}</button></td>
         </tr>
         ${llista2.slice(10).map((d,i) => filaR2(d,i+10)).join('')}
       </tbody>
@@ -326,17 +336,17 @@ window.toggleDirFilms = function(id, btn) {
 
 window.expandirD1 = function(btn) {
   document.querySelectorAll('.fila-extra-d1').forEach(tr => tr.style.display = tr.style.display !== 'none' ? 'none' : '');
-  btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure llista completa';
+  btn.textContent = btn.textContent.startsWith('+') ? pipHide() : pipViewFullList();
 };
 window.expandirD2 = function(btn) {
   document.querySelectorAll('.fila-extra-d2').forEach(tr => tr.style.display = tr.style.display !== 'none' ? 'none' : '');
-  btn.textContent = btn.textContent.startsWith('+') ? '− Amagar' : '+ Veure llista completa';
+  btn.textContent = btn.textContent.startsWith('+') ? pipHide() : pipViewFullList();
 };
 
 function construirRànquings() {
-  construirRànquing('espectadors', 'taula-espectadors', 'Espectadors');
-  construirRànquing('penetracio',  'taula-penetracio',  'Penetració');
-  construirRànquing('quota',       'taula-quota',       'Quota de mercat');
+  construirRànquing('espectadors', 'taula-espectadors', pipT('Espectadors','Espectadores'));
+  construirRànquing('penetracio',  'taula-penetracio',  pipT('Penetració','Penetración'));
+  construirRànquing('quota',       'taula-quota',       pipT('Quota de mercat','Cuota de mercado'));
   construirRànquing('iic',         'taula-iic',         'IIC');
   construirRànquingDirectors();
 }

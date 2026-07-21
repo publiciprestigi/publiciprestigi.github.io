@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" data-base="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Avís legal — Públic i Prestigi.">
+  <link rel="canonical" href="https://publiciprestigi.com/legal.html">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/legal.html">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/legal.html">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/legal.html">
   <title>Avís legal · Públic i Prestigi</title>
   <link rel="stylesheet" href="css/estil.css">
+
+  <script>
+    window.pipPath = function (path) {
+      var base = document.documentElement.getAttribute('data-base') || '';
+      return base + path;
+    };
+  </script>
 </head>
 <body>
 
@@ -15,8 +26,8 @@
       <div class="capcalera-controls">
         <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
         <div class="capcalera-idioma">
-          <a href="#" class="actiu">CA</a>
-          <a href="#" class="lang-es">ES</a>
+          <a href="#" class="actiu" lang="ca" aria-current="page">CA</a>
+          <a href="es/legal.html" class="lang-es" lang="es" hreflang="es">ES</a>
         </div>
       </div>
     </div>
@@ -91,7 +102,7 @@
   </footer>
 
   <script>
-    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
+    fetch(pipPath('data/metadata.json')).then(r=>r.json()).then(data=>{
       document.getElementById('versio-label').textContent = data.versio_label;
     }).catch(()=>{});
   </script>

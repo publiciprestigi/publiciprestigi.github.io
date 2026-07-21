@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html>
-<html lang="ca">
+<!DOCTYPE html>
+<html lang="ca" data-base="">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -82,6 +82,13 @@
     }
     .notes-seccio:first-of-type { margin-top: 0; }
   </style>
+
+  <script>
+    window.pipPath = function (path) {
+      var base = document.documentElement.getAttribute('data-base') || '';
+      return base + path;
+    };
+  </script>
 </head>
 <body>
 
@@ -91,13 +98,17 @@
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <circle cx="11" cy="11" r="8"/>
+  <link rel="canonical" href="https://publiciprestigi.com/notes.html">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/notes.html">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/notes.html">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/notes.html"><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
         <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
         <div class="capcalera-idioma">
-          <a href="#" class="actiu">CA</a>
-          <a href="#" class="lang-es">ES</a>
+          <a href="#" class="actiu" lang="ca" aria-current="page">CA</a>
+          <a href="es/notes.html" class="lang-es" lang="es" hreflang="es">ES</a>
         </div>
       </div>
     </div>
@@ -295,7 +306,7 @@
   </div>
 
   <script>
-    fetch('data/metadata.json').then(r=>r.json()).then(data=>{
+    fetch(pipPath('data/metadata.json')).then(r=>r.json()).then(data=>{
       document.getElementById('versio-label').textContent = data.versio_label;
     }).catch(()=>{});
     function toggleBuscador(){

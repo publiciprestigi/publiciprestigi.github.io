@@ -2,16 +2,19 @@
  * Carrega data/market.json i renderitza el gràfic a #grafic-mercat-canvas
  */
 
+const PIP_MERCAT_ES = document.documentElement.lang === 'es';
+const pipMercatT = (ca, es) => PIP_MERCAT_ES ? es : ca;
+
 async function construirGraficMercat() {
   const cont = document.getElementById('seccio-mercat-grafic');
   if (!cont) return;
 
   let dades;
   try {
-    const r = await fetch('data/market.json');
+    const r = await fetch(pipPath('data/market.json'));
     dades = await r.json();
   } catch(e) {
-    cont.innerHTML = '<p class="text-md-error">Error carregant les dades del mercat.</p>';
+    cont.innerHTML = `<p class="text-md-error">${pipMercatT('Error carregant les dades del mercat.','Error al cargar los datos del mercado.')}</p>`;
     return;
   }
 
@@ -54,16 +57,16 @@ async function construirGraficMercat() {
 
   // Límits de dècades per a les línies verticals
   const decades = [
-    { any: 1980, etiqueta: 'Anys 80' },
-    { any: 1990, etiqueta: 'Anys 90' },
-    { any: 2000, etiqueta: 'Anys 2000' },
-    { any: 2010, etiqueta: 'Anys 2010' },
+    { any: 1980, etiqueta: pipMercatT('Anys 80','Años 80') },
+    { any: 1990, etiqueta: pipMercatT('Anys 90','Años 90') },
+    { any: 2000, etiqueta: pipMercatT('Anys 2000','Años 2000') },
+    { any: 2010, etiqueta: pipMercatT('Anys 2010','Años 2010') },
   ];
 
   cont.innerHTML = `
     <div class="grafic-mercat-wrap">
       <canvas id="grafic-mercat-canvas"></canvas>
-      <p class="grafic-peu">Entrades venudes a Espanya (barres blaves) i població (línia taronja), 1965–2025.</p>
+      <p class="grafic-peu">${pipMercatT('Entrades venudes a Espanya (barres blaves) i població (línia taronja), 1965–2025.','Entradas vendidas en España (barras azules) y población (línea naranja), 1965–2025.')}</p>
     </div>`;
 
   const ctx = document.getElementById('grafic-mercat-canvas').getContext('2d');
@@ -106,7 +109,7 @@ async function construirGraficMercat() {
       ctx.fillStyle = '#363737';
       ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
       ctx.textAlign = 'left';
-      ctx.fillText('Màxim: ~390M', xMax + 4, yMax - (isMobil ? 10 : 18));
+      ctx.fillText(pipMercatT('Màxim: ~390M','Máximo: ~390M'), xMax + 4, yMax - (isMobil ? 10 : 18));
       if (!isMobil) {
         ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
         ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
@@ -117,7 +120,7 @@ async function construirGraficMercat() {
       ctx.fillStyle = 'rgba(180,50,50,0.9)';
       ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
       ctx.textAlign = 'right';
-      ctx.fillText(isMobil ? '2020' : 'Col·lapse pandèmic', x2020 + 4, y.top + (isMobil ? 20 : 30));
+      ctx.fillText(isMobil ? '2020' : pipMercatT('Col·lapse pandèmic','Colapso pandémico'), x2020 + 4, y.top + (isMobil ? 20 : 30));
       if (!isMobil) {
         ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
       }
@@ -132,7 +135,7 @@ async function construirGraficMercat() {
       labels: anys,
       datasets: [
         {
-          label: 'Entrades venudes (M)',
+          label: pipMercatT('Entrades venudes (M)','Entradas vendidas (M)'),
           data: entrades,
           backgroundColor: colorsBarres,
           hoverBackgroundColor: colorsHover,
@@ -141,7 +144,7 @@ async function construirGraficMercat() {
           order: 2,
         },
         {
-          label: 'Població (M habitants)',
+          label: pipMercatT('Població (M habitants)','Población (M habitantes)'),
           data: poblacio,
           type: 'line',
           borderColor: 'rgba(190, 110, 30, 0.9)',
@@ -177,16 +180,16 @@ async function construirGraficMercat() {
         },
         title: {
           display: true,
-          text: 'Entrades venudes a Espanya i evolució de la població (1965–2025)',
+          text: pipMercatT('Entrades venudes a Espanya i evolució de la població (1965–2025)','Entradas vendidas en España y evolución de la población (1965–2025)'),
           color: '#363737',
           font: { size: 15, weight: '700', family: '"Inter", -apple-system, sans-serif' },
           padding: { bottom: 16 },
         },
         tooltip: {
           callbacks: {
-            title: ctx => `Any ${ctx[0].label}`,
+            title: ctx => `${pipMercatT('Any','Año')} ${ctx[0].label}`,
             label: ctx => {
-              const u = ctx.datasetIndex === 0 ? 'M entrades' : 'M habitants';
+              const u = ctx.datasetIndex === 0 ? pipMercatT('M entrades','M entradas') : pipMercatT('M habitants','M habitantes');
               const est = ctx.datasetIndex === 0 && estimats[ctx.dataIndex] ? ' (est.)' : '';
               return ` ${ctx.dataset.label.split('(')[0].trim()}: ${ctx.parsed.y.toFixed(1)}${u}${est}`;
             }

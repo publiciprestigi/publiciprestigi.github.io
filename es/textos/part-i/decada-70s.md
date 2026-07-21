@@ -1,0 +1,3 @@
+<!-- intro -->
+Década de transición y crisis progresiva. El mercado cae de 305 a 195 millones de entradas. Aparece el 'destape' y, por primera vez, un cine menos convencional y más arriesgado conecta con el gran público: *Furtivos*, de José Luis Borau (la vio 1 de cada 10 españoles), *La guerra de papá*, de Antonio Mercero, *Asignatura pendiente*, de José Luis Garci, y *La escopeta nacional*, de Luis García Berlanga, entran en el Top 100, en una década con 18 títulos en total. El IIC sube respecto al periodo anterior porque el mercado se ha reducido: el mismo número de espectadores en un mercado menor vale mucho más.
+<!-- /intro -->

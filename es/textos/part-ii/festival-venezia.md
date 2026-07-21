@@ -1,0 +1,3 @@
+<!-- intro -->
+El festival con la presencia española más irregular, pero con hitos importantes. Fue donde comenzó la gran proyección internacional de Almodóvar con *Mujeres al borde de un ataque de nervios* (1988), culminada 36 años después con *La habitación de al lado* (2024), primer y único León de Oro para el cine español (Buñuel ganó uno en 1967 con *Belle de jour*, pero, al ser una producción francesa, queda fuera del corpus). Alejandro Amenábar causó un impacto similar con *Mar adentro* (2004) y su posterior Oscar. Bigas Luna y Álex de la Iglesia también obtuvieron allí reconocimientos clave por primera vez.
+<!-- /intro -->

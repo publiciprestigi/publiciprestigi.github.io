@@ -1380,3 +1380,15 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   background: #ededed;
 }
 
+
+/* Ajust ES: l’etiqueta "Nuevo" acompanya la segona línia de "El mapa del canon" */
+html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] {
+  display: block;
+}
+html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] > span:first-child {
+  display: inline;
+}
+html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
+  margin-left: 4px;
+  vertical-align: baseline;
+}

@@ -1,5 +1,8 @@
 /* Públic i Prestigi — Taula resum per dècades + gràfic de distribució */
 
+const PIP_DEC_ES = document.documentElement.lang === 'es';
+const pipDecT = (ca, es) => PIP_DEC_ES ? es : ca;
+
 const COLORS_DECADES = {
   '60s':   { fons: '#f4f7fa', text: '#4a6070' },
   '70s':   { fons: '#edf2f7', text: '#3a5568' },
@@ -18,10 +21,10 @@ async function construirResumDecades() {
 
   let films;
   try {
-    const r = await fetch('data/films.json');
+    const r = await fetch(pipPath('data/films.json'));
     films = await r.json();
   } catch(e) {
-    cont.innerHTML = '<p class="text-md-error">Error carregant les dades.</p>';
+    cont.innerHTML = `<p class="text-md-error">${pipDecT('Error carregant les dades.','Error al cargar los datos.')}</p>`;
     return;
   }
 
@@ -39,7 +42,7 @@ async function construirResumDecades() {
   ordre.forEach(d => { grups[d] = []; });
   top100.forEach(f => { if (grups[f.decada]) grups[f.decada].push(f); });
 
-  const fmt  = n => n == null ? '—' : n.toLocaleString('ca-ES');
+  const fmt  = n => n == null ? '—' : n.toLocaleString(PIP_DEC_ES ? 'es-ES' : 'ca-ES');
   const fmtP = (n, e) => n == null ? '—' : n.toFixed(2) + '%' + (e ? '≈' : '');
   const fmtM = (n, e) => n == null ? '—' : Math.round(n) + 'M' + (e ? '≈' : '');
   const fmtI = n => n == null ? '—' : n.toFixed(2);
@@ -67,12 +70,12 @@ async function construirResumDecades() {
     <table class="taula-films taula-decades-resum">
       <thead>
         <tr>
-          <th>Dècada</th>
-          <th>Líder de la dècada</th>
-          <th class="col-subtil">Director</th>
-          <th class="col-num">Espectadors</th>
-          <th class="col-num col-gris">Mercat</th>
-          <th class="col-num col-gris">Penetració</th>
+          <th>${pipDecT('Dècada','Década')}</th>
+          <th>${pipDecT('Líder de la dècada','Líder de la década')}</th>
+          <th class="col-subtil">${pipDecT('Director','Dirección')}</th>
+          <th class="col-num">${pipDecT('Espectadors','Espectadores')}</th>
+          <th class="col-num col-gris">${pipDecT('Mercat','Mercado')}</th>
+          <th class="col-num col-gris">${pipDecT('Penetració','Penetración')}</th>
           <th class="col-num col-iic">IIC</th>
         </tr>
       </thead>
@@ -113,7 +116,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
 
   cont.innerHTML = `
     <canvas id="grafic-decades-canvas"></canvas>
-    <p class="grafic-peu">Nombre de pel·lícules del Top 100 per dècada i percentatge que representen sobre el total de 100 films.</p>`;
+    <p class="grafic-peu">${pipDecT('Nombre de pel·lícules del Top 100 per dècada i percentatge que representen sobre el total de 100 films.','Número de films del Top 100 por década y porcentaje que representan sobre el total de 100 films.')}</p>`;
   const ctx = document.getElementById('grafic-decades-canvas').getContext('2d');
 
   new Chart(ctx, {
@@ -136,7 +139,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
         legend: { display: false },
         title: {
           display: true,
-          text: 'Distribució del Top 100 per dècada (1965–2025)',
+          text: pipDecT('Distribució del Top 100 per dècada (1965–2025)','Distribución del Top 100 por década (1965–2025)'),
           color: '#363737',
           font: { size: 13, weight: '600', family: '-apple-system, SF Pro Text, sans-serif' },
           padding: { bottom: 16 },
@@ -170,7 +173,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
               <div style="font-weight:600;margin-bottom:4px">${etiquetes[ordre[i]]}</div>
               <div>${pcts[i]}% del Top 100 · ${counts[i]} films</div>
               <div style="margin-top:6px;font-size:0.78rem;color:#555">
-                Líder: <em><strong>${lider.titol}</strong></em> (${lider.any})
+                ${pipDecT('Líder','Líder')}: <em><strong>${lider.titol}</strong></em> (${lider.any})
               </div>`;
             const pos = context.chart.canvas.getBoundingClientRect();
             tooltipEl.style.opacity = '1';
