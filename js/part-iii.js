@@ -698,7 +698,9 @@ function renderTaulaGen(films, contId, directorFix) {
     if (f.top100) {
       topText = f.top100.globalPos
         ? `#${f.top100.globalPos}`
-        : `${f.top100.pos}a als ${f.top100.dec}`;
+        : (PIP_III_ES
+          ? `${f.top100.pos}a en ${f.top100.dec}`
+          : `${f.top100.pos}a als ${f.top100.dec}`);
     }
     const top = `<span class="col-subtil" style="font-size:.9em">${topText}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
