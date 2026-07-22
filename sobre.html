@@ -18,6 +18,9 @@
 
   <header class="capcalera">
     <div class="capcalera-interior">
+      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
       <a href="/" class="capcalera-logo">Públic i Prestigi</a>
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
@@ -112,5 +115,94 @@
 
 <script src="js/scroll-header.js"></script>
 <script src="js/buscador.js"></script>
-<script src="js/scroll-fade.js"></script> </body>
+<script src="js/scroll-fade.js"></script>   <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="/" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
+    </div>
+    <div class="drawer-seccio drawer-versio-seccio"><a href="versions.html" class="drawer-versio" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
+    <div class="drawer-seccio"><a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fonts i eines</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercat i població</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resum per dècada</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Per penetració</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Per quota de mercat</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Per IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link" href="part-ii.html#intro" onclick="toggleDrawer()">Dades i criteri</a>
+        <div class="drawer-grup-titol">Festivals</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
+        <a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
+        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
+        <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
+        <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítols</div>
+        <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolució de la bretxa</a>
+        <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cinema, lleis i tecnologia</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dues generacions</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cinema d'autor industrial</a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
+    <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
+  </nav>
+
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+  </script>
+
+</body>
 </html>
