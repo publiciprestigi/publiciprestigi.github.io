@@ -55,7 +55,7 @@ El IIC y el IAA son las dos herramientas de aproximación con las que el estudio
 
 Pese a las obligaciones de financiación, las plataformas siguen sin ofrecer datos de audiencia públicos y comparables. <sup>[20]</sup> Films recientes como *Sirât* o *Los domingos* continúan acumulando público después del estreno, mientras que en producciones concebidas para plataformas, como *La sociedad de la nieve*, la taquilla es ya un dato claramente insuficiente. Las cifras de sala, por tanto, pueden hacer pensar que el cine popular y el de festival se han alejado más de lo que realmente lo han hecho en audiencia total.
 
-La capacidad del cine español para producir «dobles coronas» parece haber cambiado de escala: hoy, una película puede reunir público y prestigio con menos entradas de sala y una audiencia posterior más amplia que la taquilla no recoge.
+La capacidad del cine español para producir 'dobles coronas' parece haber cambiado de escala: hoy, una película puede reunir público y prestigio con menos entradas de sala y una audiencia posterior más amplia que la taquilla no recoge.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
