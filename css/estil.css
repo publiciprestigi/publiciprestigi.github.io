@@ -1174,22 +1174,6 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
     font-size: 0.92rem;
     font-weight: 400;
   }
-  /* Indicador de versió dins del menú mòbil */
-  .drawer-versio-seccio {
-    background: #fafafa;
-  }
-  .drawer-versio {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: var(--color-text-suau);
-    font-size: 0.76rem;
-    font-weight: 500;
-  }
-  .drawer-versio:hover {
-    color: var(--color-text);
-    opacity: 1;
-  }
   /* Fila amb nom + toggle per a les parts amb seccions */
   .drawer-seccio-fila {
     display: flex;
