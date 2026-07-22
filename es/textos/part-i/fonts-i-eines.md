@@ -1,4 +1,4 @@
-El estudio trabaja exclusivamente con el número de entradas vendidas, no con cifras de recaudación en euros. La razón es de fondo: lo que nos interesa es cuántas personas entraron en una sala de cine y formaron parte de un momento cultural compartido. La recaudación mide un retorno económico; las entradas, un impacto social.
+El estudio trabaja exclusivamente con el número de entradas vendidas, no con cifras de recaudación en euros. La razón es de fondo: lo que nos interesa es cuántas personas entraron en una sala de cine y formaron parte de un momento cultural compartido. La recaudación mide un retorno económico, las entradas un impacto social.
 
 ## El ICAA como fuente principal
 
@@ -37,6 +37,6 @@ En las tablas de este estudio encontraremos cuatro columnas de medición. Cada u
 
 Las cifras marcadas con ≈ indican datos estimados. El total del mercado anual de los 60s-80s procede de estimaciones basadas en las estadísticas del Ministerio de Cultura, la historiografía del cine español, principalmente Romà Gubern et al., *Historia del cine español* (Cátedra, 1995), y los datos del INE sobre hábitos culturales. Para los films de los años 90 en adelante, el total del mercado procede directamente de los anuarios del ICAA y de Comscore. <sup>[3]</sup>
 
-## Sobre los textos de «Contexto»
+## Sobre los textos de 'Contexto'
 
 Los textos de contexto sobre las primeras décadas se han redactado a partir de una síntesis de la historiografía clásica del cine español, con especial referencia a *Historia del cine español*, de Romà Gubern et al. (Cátedra, 1995), *El cine español después de Franco*, de John Hopewell (El arquero, 1989), y *Del azul al verde: el cine español bajo el franquismo*, de Domènec Font (Avance, 1976). Para las décadas más recientes, la síntesis procede de la crítica y el periodismo cinematográfico contemporáneos. En todos los casos se trata de valoraciones contextuales e interpretativas del autor.
