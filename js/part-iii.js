@@ -244,8 +244,8 @@ function construirBretxa() {
     return `<tr style="background:${c.fons};border-bottom:2px solid #fff">
       <td class="col-center"><strong>${ETIQ_CURTA[r.decada]}</strong></td>
       <td class="col-center" style="color:#6b6b6b">${r.dc}</td>
-      <td class="col-num">${fmt(r.mitF)}</td>
-      <td class="col-num">${fmt(r.mit20)}</td>
+      <td class="col-num col-center">${fmt(r.mitF)}</td>
+      <td class="col-num col-center">${fmt(r.mit20)}</td>
       <td class="col-center"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
     </tr>`;
   }).join('');
@@ -255,8 +255,8 @@ function construirBretxa() {
       <thead><tr>
         <th class="col-center" style="width:80px">${pip3T('Dècada','Década')}</th>
         <th class="col-center" style="width:110px">Doble corona</th>
-        <th class="col-num" style="width:140px">${pip3T('Mitjana festivals','Media festivales')}</th>
-        <th class="col-num" style="width:140px">${pip3T('Mitjana Top 100','Media Top 100')}</th>
+        <th class="col-num col-center" style="width:140px">${pip3T('Mitjana festivals','Media festivales')}</th>
+        <th class="col-num col-center" style="width:140px">${pip3T('Mitjana Top 100','Media Top 100')}</th>
         <th class="col-center" style="width:110px">${pip3T('Ràtio bretxa','Ratio de brecha')}</th>
       </tr></thead>
       <tbody>${files}</tbody>
