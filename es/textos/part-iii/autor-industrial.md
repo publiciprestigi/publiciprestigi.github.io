@@ -9,7 +9,7 @@ Bayona, Amenábar y De la Iglesia no encajan ni con Saura ni con Segura. Operan 
 
 Y el caso más complejo de los tres. *El día de la bestia* (1995), *Muertos de risa* (1999), *La comunidad* (2000): cine de género con una mirada social y política que ninguno de los otros posee. Es un modernizador de públicos y, directa o indirectamente, el gran descubridor de Santiago Segura. *El día de la bestia* abre un espacio para un cine popular con conciencia de género, grotesco y satírico, que Segura llevará después a una escala de taquilla extraordinaria con la saga *Torrente*. <sup>[19]</sup>
 
-Es el menos industrial del grupo, el que más se parece a un autor en el sentido europeo, pero nunca ha jugado demasiado en el circuito de los grandes festivales. Su presencia en Venecia en 2010 con *Balada triste de trompeta*, León de Plata al mejor director, es prácticamente la única incursión significativa en este circuito. *Perfectos desconocidos* (2017, 3,28 M) es su pico de taquilla y, curiosamente, su film menos autoral, al tratarse de una adaptación de un reciente éxito italiano.
+Es el menos industrial del grupo, el que más se parece a un autor en el sentido europeo, pero nunca ha jugado demasiado en el circuito de los grandes festivales. Su presencia en Venecia en 2010 con *Balada triste de trompeta*, León de Plata al mejor director, es prácticamente la única incursión significativa en este circuito. *Perfectos desconocidos* (2017, 3,28M) es su pico de taquilla y, curiosamente, su film menos autoral, al tratarse de una adaptación de un reciente éxito italiano.
 <!-- /bloc-iglesia -->
 
 <!-- bloc-amenabar -->
@@ -23,7 +23,7 @@ Amenábar desempeña una función comparable a la de Almodóvar en los años 80�
 <!-- bloc-bayona -->
 ## J.A. Bayona: el más espectacular
 
-Es quien ha llevado la lógica de esta categoría hasta sus últimas consecuencias. *El orfanato* (2007, debut, 4,4 M), *Lo imposible* (2012, 6,1 M, #3 del Top 100), *Un monstruo viene a verme* (2016, 4,6 M): tres films de género de gran formato que han conectado con el público español de una manera que ningún director de su generación ha igualado. Y después, el salto a Hollywood con la franquicia *Jurassic*, de la mano, precisamente, de Spielberg.
+Es quien ha llevado la lógica de esta categoría hasta sus últimas consecuencias. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100), *Un monstruo viene a verme* (2016, 4,6M): tres films de género de gran formato que han conectado con el público español de una manera que ningún director de su generación ha igualado. Y después, el salto a Hollywood con la franquicia *Jurassic*, de la mano, precisamente, de Spielberg.
 
 Bayona nunca ha necesitado los festivales; ha participado en ellos, pero nunca en sección oficial a competición. Su circuito es otro. Es el director español que más se ha aproximado al modelo industrial internacional, pero lo ha hecho desde una base de autor (*El orfanato* no es precisamente una producción de género anónima), con una exigencia técnica y de producción y una voluntad de conexión con el público incomparables.
 <!-- /bloc-bayona -->
