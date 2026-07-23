@@ -21,5 +21,5 @@ A continuación de los 11 films de la 'doble corona' existe un grupo de 24 títu
 
 - El 'segundo círculo' se concentra sobre todo en los 70s y 80s: 13 de los 24 títulos pertenecen a este periodo. En los 2000s hay 5, con films como *Te doy mis ojos* (2003) o *El laberinto del fauno* (2006). En los 2010s solo aparecen *La isla mínima* (2014) y *Mientras dure la guerra* (2019). En los 2020s, ninguno. La brecha reciente entre festivales y público queda así todavía más marcada.
 
-Incluso sumando la 'doble corona' y el 'segundo círculo', hablamos solo de 35 títulos sobre los 285 films de festival analizados: poco más de un 12 %. La zona de contacto entre público y prestigio existe, pero es muy estrecha.
+Incluso sumando la 'doble corona' y el 'segundo círculo', hablamos solo de 35 títulos sobre los 285 films de festival analizados: poco más de un 12%. La zona de contacto entre público y prestigio existe, pero es muy estrecha.
 <!-- /comentari-cercle -->
