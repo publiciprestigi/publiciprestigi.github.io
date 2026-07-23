@@ -9,7 +9,7 @@ Los datos del público y del prestigio no ofrecen una única historia del cine e
 <!-- /punt-1-cap -->
 
 <!-- punt-1-cos -->
-El balance cuantitativo es inequívoco: de los 285 films españoles documentados en las secciones oficiales competitivas de los cuatro festivales, solo 11 forman parte también del Top 100 histórico de espectadores. Incluso incorporando los 24 títulos del 'segundo círculo', la zona de contacto queda limitada a 35 películas: poco más de un 12 % del conjunto.
+El balance cuantitativo es inequívoco: de los 285 films españoles documentados en las secciones oficiales competitivas de los cuatro festivales, solo 11 forman parte también del Top 100 histórico de espectadores. Incluso incorporando los 24 títulos del 'segundo círculo', la zona de contacto queda limitada a 35 películas: poco más de un 12% del conjunto.
 
 El cine que llena las salas y el cine que obtiene legitimación en los festivales responden generalmente a públicos, lenguajes, sistemas de producción y formas de distribución distintos. Las grandes audiencias se han concentrado sobre todo en la comedia popular, el *thriller* y otras formas de cine de género, o en las producciones vinculadas a la televisión. La principal excepción histórica se produjo durante los años de la Transición, cuando el cine crítico encontró también un público amplio en las salas y la frontera entre autoría y mercado se volvió más porosa.
 
