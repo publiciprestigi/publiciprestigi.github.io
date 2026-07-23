@@ -8,7 +8,7 @@ El cine español de los últimos sesenta años no se entendería sin las leyes q
 
 ### 1. El Decreto Miró (1983) y la televisión pública
 
-El Decreto Miró crea el primer sistema de subvenciones anticipadas de hasta el 50 % del presupuesto y nace el ICAA. Eleva la calidad del cine español, pero elimina prácticamente el cine de género popular. En esta primera etapa, la sala sigue siendo el centro absoluto del modelo; para los films anteriores a 1984, el factor multiplicador es ×1,0: quien no veía el film en la sala casi no lo veía. A finales de los 80, TVE y el VHS empiezan a funcionar como ventanas posteriores reales: los films comienzan a llegar pocos años después del estreno, todavía sin una estrategia planificada desde el origen, pero ya con capacidad para ampliar la audiencia.
+El Decreto Miró crea el primer sistema de subvenciones anticipadas de hasta el 50% del presupuesto y nace el ICAA. Eleva la calidad del cine español, pero elimina prácticamente el cine de género popular. En esta primera etapa, la sala sigue siendo el centro absoluto del modelo; para los films anteriores a 1984, el factor multiplicador es ×1,0: quien no veía el film en la sala casi no lo veía. A finales de los 80, TVE y el VHS empiezan a funcionar como ventanas posteriores reales: los films comienzan a llegar pocos años después del estreno, todavía sin una estrategia planificada desde el origen, pero ya con capacidad para ampliar la audiencia.
 
 ### 2. Las televisiones privadas (1990): cambio de modelo
 
@@ -20,7 +20,7 @@ La Ley 55/2007 es el resultado de un largo proceso de reformas: la Reforma Sempr
 
 ### 4. El IVA del 21 % (2012) y la fragilidad de la sala
 
-El golpe más duro para las salas en democracia: el gobierno de Rajoy eleva el IVA cultural del 8 % al 21 % en plena crisis. <sup>[15]</sup> El mercado cae de cerca de ~100 millones de entradas en 2011 a unas ~70 millones en 2013. Después habrá una recuperación parcial, pero la sala queda instalada en una nueva fragilidad, que la pandemia terminará de exponer. A medida que la sala pierde centralidad, las ventanas domésticas ganan peso: primero la televisión de pago, después las plataformas. Una parte del consumo no desaparece, sino que se desplaza.
+El golpe más duro para las salas en democracia: el gobierno de Rajoy eleva el IVA cultural del 8% al 21% en plena crisis. <sup>[15]</sup> El mercado cae de cerca de ~100 millones de entradas en 2011 a unas ~70 millones en 2013. Después habrá una recuperación parcial, pero la sala queda instalada en una nueva fragilidad, que la pandemia terminará de exponer. A medida que la sala pierde centralidad, las ventanas domésticas ganan peso: primero la televisión de pago, después las plataformas. Una parte del consumo no desaparece, sino que se desplaza.
 
 ### 5. Netflix y la explosión de las plataformas (2015–2025)
 
