@@ -1,5 +1,5 @@
 <!-- intro -->
-La medida bruta: qué películas han vendido más entradas, sin ningún ajuste temporal, demográfico ni de mercado a lo largo de estos sesenta años. Vemos primero el Top 10; el ranking completo puede desplegarse a continuación:
+La medida bruta: qué películas han vendido más entradas, sin ningún ajuste temporal, demográfico ni de mercado a lo largo de estos sesenta años. Vemos primero el Top 10, el ranking completo puede desplegarse a continuación:
 
 <!-- /intro -->
 
