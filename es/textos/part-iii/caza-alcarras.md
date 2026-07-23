@@ -58,7 +58,7 @@ El cuadro siguiente muestra el contraste. *La ciudad no es para mí* y *La caza*
 <!-- /comentari-distribucio -->
 
 <!-- final-distribucio -->
-La transformación no es solo tecnológica, sino también de lógica comercial. En los años 60 y 70, un film podía tardar 2–3 años en completar su recorrido porque las copias físicas circulaban por el territorio: grandes ciudades, capitales de provincia, cines de pueblo, reestrenos. Hoy, en tiempos digitales, el recorrido también puede durar 2–3 años, pero por otra razón: cada ventana se abre cuando le corresponde dentro del calendario de explotación. Antes el tiempo dependía del territorio; ahora depende de los derechos.
+La transformación no es solo tecnológica, sino también de lógica comercial. En los años 60 y 70, un film podía tardar 2–3 años en completar su recorrido porque las copias físicas circulaban por el territorio: grandes ciudades, capitales de provincia, cines de pueblo, reestrenos. Hoy, en tiempos digitales, el recorrido también puede durar 2–3 años, pero por otra razón: cada ventana se abre cuando le corresponde dentro del calendario de explotación. Antes el tiempo dependía del territorio, ahora depende de los derechos.
 
 El calendario puede parecer comparable, pero la lógica de distribución es completamente distinta. El gráfico siguiente lo cuantifica:
 <!-- /final-distribucio -->
