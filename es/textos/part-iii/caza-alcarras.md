@@ -9,7 +9,7 @@ La comparación no pretende equiparar las dos películas, sino observar qué cam
 <!-- /intro -->
 
 <!-- comentari-taula -->
-- La tabla resume el equívoco central: dos cifras de sala próximas pueden tener un peso muy distinto según la época. *La caza* compite en un mercado de unos 370 M de entradas; *Alcarràs*, en un mercado de 71 M. La diferencia se aprecia en las métricas: *La caza* tiene una cuota del 0,09 % y un IIC de 0,21; *Alcarràs* sube hasta el 0,57 % de cuota y un IIC de 0,47.
+- La tabla resume el equívoco central: dos cifras de sala próximas pueden tener un peso muy distinto según la época. *La caza* compite en un mercado de unos 370 M de entradas; *Alcarràs*, en un mercado de 71M. La diferencia se aprecia en las métricas: *La caza* tiene una cuota del 0,09% y un IIC de 0,21; *Alcarràs* sube hasta el 0,57% de cuota y un IIC de 0,47.
 
 - Las cifras absolutas de sala parecen casi iguales: 341.377 espectadores para *La caza*, 403.195 para *Alcarràs*. Como si, 56 años después, el público receptor de un film de autor premiado en Berlín fuera prácticamente el mismo. Pero tras esta aparente simetría existen modelos de distribución radicalmente distintos: el impacto de *Alcarràs* es superior a lo que revela la sala, como ya apunta el IIC y como veremos con el IAA.
 <!-- /comentari-taula -->
@@ -64,7 +64,7 @@ El calendario puede parecer comparable, pero la lógica de distribución es comp
 <!-- /final-distribucio -->
 
 <!-- comentari-final -->
-- *La caza* queda reducida a su cifra de sala, 341 k espectadores, porque no tiene otras ventanas computables. *Alcarràs*, en cambio, parte de una cifra similar, 403 k, pero suma unos 530 k espectadores calculados a partir del *share* habitual de los espacios en los que se emitió en TV3/3Cat y La 2/TVE, y dos capas estimadas: televisión de pago (Movistar+) y plataformas digitales. En total, el gráfico sitúa el punto medio del IAA estimado alrededor de 1,31 M. <sup>[13]</sup>
+- *La caza* queda reducida a su cifra de sala, 341 k espectadores, porque no tiene otras ventanas computables. *Alcarràs*, en cambio, parte de una cifra similar, 403K, pero suma unos 530K espectadores calculados a partir del *share* habitual de los espacios en los que se emitió en TV3/3Cat y La 2/TVE, y dos capas estimadas: televisión de pago (Movistar+) y plataformas digitales. En total, el gráfico sitúa el punto medio del IAA estimado alrededor de 1,31M. <sup>[13]</sup>
 
 Berlín es el punto de continuidad entre *La caza* y *Alcarràs*; la diferencia de fondo es la manera en que cada film llega al público y cómo se mide su audiencia. En el caso de *Alcarràs*, la capa digital existe, pero queda fuera de la medición pública: las plataformas no publican datos individuales de visualización por título, y ni el ICAA ni la SGAE los recogen de forma desagregada. Sabemos, por tanto, que su audiencia acumulada es claramente superior a la cifra de sala, pero solo podemos estimar su orden de magnitud.
 
