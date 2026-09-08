@@ -10,10 +10,10 @@
   <meta name="description" content="Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)">
   <title>Públic i Prestigi — Mètriques i paradoxes del cinema espanyol en dos circuits</title>
   <link rel="stylesheet" href="css/estil.css">
+  <link rel="stylesheet" href="css/capcalera-subscripcio.css">
   <style>
     .contingut { padding-top: 0; padding-bottom: 0; }
     .inici-portada { max-width: var(--amplada-max); padding: 0; }
-
     .inici-antetitol {
       font-size: 0.72rem;
       letter-spacing: .1em;
@@ -32,7 +32,6 @@
       align-items: center;
       padding-bottom: 16px;
     }
-
     .inici-claim {
       font-size: 2.5rem;
       font-weight: 700;
@@ -49,7 +48,6 @@
       padding: 16px 0 36px;
       border-bottom: 1px solid #e5e5e5;
     }
-
     .inici-intro-text {
       font-size: 1rem;
       color: #555;
@@ -63,9 +61,7 @@
       gap: 0;
     }
 
-    .inici-xifra-bloc {
-      flex: 1;
-    }
+    .inici-xifra-bloc { flex: 1; }
 
     .inici-xifra-n {
       display: block;
@@ -74,7 +70,6 @@
       line-height: 1;
       margin-bottom: 6px;
     }
-
     .inici-xifra-l {
       display: block;
       font-size: 0.82rem;
@@ -138,7 +133,6 @@
       color: #1a1a1a;
     }
 
-
     .inici-substack-foto {
       border-radius: 4px;
       overflow: hidden;
@@ -147,9 +141,7 @@
       position: relative;
     }
 
-    .inici-substack-foto-link {
-      display: block;
-    }
+    .inici-substack-foto-link { display: block; }
 
     .inici-substack-peu {
       display: flex;
@@ -174,10 +166,7 @@
       cursor: pointer;
       transition: background .15s, transform .15s;
     }
-
-    .inici-substack-punt:hover {
-      background: #999;
-    }
+    .inici-substack-punt:hover { background: #999; }
 
     .inici-substack-punt.actiu {
       background: #363737;
@@ -207,7 +196,6 @@
       display: block;
     }
 
-
     .enllac-secundari {
       font-size: 0.82rem;
       color: #888 !important;
@@ -234,6 +222,7 @@
       white-space: nowrap;
       position: relative;
     }
+
     .inici-novetat-grup {
       display: inline-flex;
       align-items: baseline;
@@ -268,17 +257,13 @@
       text-decoration-color: rgba(0,0,0,.3);
     }
 
-    .inici-novetat-grup a:hover {
-      color: #1a1a1a;
-    }
+    .inici-novetat-grup a:hover { color: #1a1a1a; }
 
     /* ── Responsive portada ── */
     @media (max-width: 768px) {
       .contingut { padding-top: 0; }
 
-      .inici-novetats {
-        padding: 14px 16px;
-      }
+      .inici-novetats { padding: 14px 16px; }
 
       .inici-antetitol {
         font-size: 0.65rem;
@@ -293,9 +278,7 @@
         white-space: normal;
       }
 
-      .inici-novetat-grup {
-        flex-wrap: wrap;
-      }
+      .inici-novetat-grup { flex-wrap: wrap; }
 
       /* Hero: columna única, gràfic sota el titular */
       .inici-hero {
@@ -303,49 +286,36 @@
         gap: 24px;
         padding-bottom: 8px;
       }
-      .inici-claim {
-        font-size: 1.8rem;
-      }
+
+      .inici-claim { font-size: 1.8rem; }
 
       /* Centrat visual del gràfic només en pantalles estretes */
-      .inici-hero-grafic {
-        transform: translateX(-4%);
-      }
+      .inici-hero-grafic { transform: translateX(-4%); }
 
       /* Xifres: 2 columnes x 3 files */
       .inici-xifres {
         flex-wrap: wrap;
         gap: 16px 0;
       }
-      .inici-xifra-bloc {
-        flex: 0 0 50%;
-      }
-      .inici-xifra-n {
-        font-size: 2rem;
-      }
+
+      .inici-xifra-bloc { flex: 0 0 50%; }
+      .inici-xifra-n { font-size: 2rem; }
 
       /* Bloc inferior: columna única */
-      .inici-inferior {
-        grid-template-columns: 1fr;
-      }
+      .inici-inferior { grid-template-columns: 1fr; }
+
       .inici-parts {
         border-right: none;
         border-bottom: 1px solid #e5e5e5;
       }
-      .inici-part {
-        padding: 16px 0;
-      }
+
+      .inici-part { padding: 16px 0; }
 
       /* Substack: sense padding lateral */
-      .inici-substack {
-        padding: 0;
-      }
-      .inici-substack-foto {
-        height: 220px;
-      }
+      .inici-substack { padding: 0; }
+      .inici-substack-foto { height: 220px; }
     }
   </style>
-
   <script>
     window.pipPath = function (path) {
       var base = document.documentElement.getAttribute('data-base') || '';
@@ -355,19 +325,27 @@
 </head>
 <body class="pag-inici">
 
-  <header class="capcalera">
+  <!-- ── Capçalera CA: prova v2 ── -->
+  <header class="capcalera capcalera-v2">
     <div class="capcalera-interior">
-      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
+      </div>
+
       <a href="/" class="capcalera-logo">Públic i Prestigi</a>
+
       <div class="capcalera-controls">
-        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar" role="button" tabindex="0" aria-label="Cercar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Subscriure's</button>
+
         <div class="capcalera-idioma">
           <a href="#" class="actiu" lang="ca" aria-current="page">CA</a>
           <a href="es/" class="lang-es" lang="es" hreflang="es">ES</a>
@@ -395,12 +373,9 @@
           <span class="inici-novetat-badge nou">Nou</span>
           <a href="part-iii.html#mapa-canon">El mapa del cànon</a>
         </span>
-
         <span class="inici-novetat-grup">
           <span class="inici-novetat-badge">Actualitzat</span>
-          <span>
-            <a href="part-iii.html#conclusions">Conclusions</a>
-          </span>
+          <span><a href="part-iii.html#conclusions">Conclusions</a></span>
         </span>
       </section>
 
@@ -419,6 +394,7 @@
       <div class="inici-text-xifres">
         <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
         <p class="inici-intro-text">Un estudi viu i actualitzable que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari">Sobre el projecte →</a></p>
+
         <div class="inici-xifres">
           <div class="inici-xifra-bloc">
             <span class="inici-xifra-n" style="color:#2a5582">294M</span>
@@ -453,6 +429,7 @@
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
+
           <a href="part-ii.html" class="inici-part">
             <div class="inici-part-num" style="color:#9B2335">II</div>
             <div class="inici-part-info">
@@ -461,6 +438,7 @@
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
+
           <a href="part-iii.html" class="inici-part">
             <div class="inici-part-num" style="color:#5a4a8a">III</div>
             <div class="inici-part-info">
@@ -470,12 +448,13 @@
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
+
+        <!-- Es manté intacte en aquesta primera prova -->
         <div class="inici-substack">
           <a href="https://publiciprestigi.substack.com" class="inici-substack-header" target="_blank" rel="noopener">
             <span class="inici-substack-titol">Subscriu-te</span>
             <span class="inici-part-arrow">→</span>
           </a>
-
           <a href="https://publiciprestigi.substack.com" class="inici-substack-foto-link" target="_blank" rel="noopener" aria-label="Subscriu-te a Públic i Prestigi">
             <div class="inici-substack-foto">
               <div class="inici-substack-pista" id="substack-pista">
@@ -491,7 +470,6 @@
               </div>
             </div>
           </a>
-
           <div class="inici-substack-peu">
             <div class="inici-substack-punts" id="substack-punts" aria-label="Selecciona una imatge del carrusel"></div>
           </div>
@@ -516,6 +494,32 @@
     </div>
   </div>
 
+  <!-- ── Modal de subscripció ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <h2 id="subscripcio-titol">Subscriu-te</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="5" y="9" width="38" height="30" rx="4"></rect>
+          <path d="M7 12l17 13 17-13"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Les novetats i actualitzacions de Públic i Prestigi es publiquen a Substack, el canal de comunicació del projecte.</p>
+        <p>En continuar, aniràs a la pàgina de subscripció, on podràs introduir el teu correu i completar el procés.</p>
+      </div>
+
+      <div class="subscripcio-accions">
+        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancel·lar</button>
+      </div>
+
+      <p class="subscripcio-gracies">Gràcies per seguir Públic i Prestigi.</p>
+    </div>
+  </div>
+
   <script>
     // ── CARRUSSEL FOTO PORTADA ──
     (function() {
@@ -528,13 +532,11 @@
 
       let actual = 0;
       let temporitzador;
-
       const punts = Array.from({ length: total }, function(_, index) {
         const punt = document.createElement('button');
         punt.type = 'button';
         punt.className = 'inici-substack-punt';
         punt.setAttribute('aria-label', 'Mostra la imatge ' + (index + 1) + ' de ' + total);
-
         punt.addEventListener('click', function() {
           actual = index;
           pista.style.transition = 'transform 0.6s ease';
@@ -561,7 +563,6 @@
         pista.style.transition = 'transform 0.6s ease';
         pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
         actualitzaPunts();
-
         if (actual === total) {
           setTimeout(function() {
             pista.style.transition = 'none';
@@ -591,101 +592,138 @@
       if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
       else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
     }
+
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && document.getElementById('buscador-overlay').style.display !== 'none') toggleBuscador();
     });
 
+    // ── MODAL SUBSCRIPCIÓ ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const continuar = document.getElementById('subscripcio-continuar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => continuar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Lupa accessible amb teclat
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+
     // Només el bloc del gràfic — substitueix l'IIFE anterior
-(function() {
-  const svg = document.getElementById('grafic-circuits');
-  const ns = 'http://www.w3.org/2000/svg';
-  const W = 600, ML = 130, MR = 12;
-  const YP = 60, YF = 110;
-  const A0 = 1965, A1 = 2025;
-  const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
+    (function() {
+      const svg = document.getElementById('grafic-circuits');
+      const ns = 'http://www.w3.org/2000/svg';
+      const W = 600, ML = 130, MR = 12;
+      const YP = 60, YF = 110;
+      const A0 = 1965, A1 = 2025;
+      const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
 
-  function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
-  function el(tag, attrs, par) {
-    const e = document.createElementNS(ns, tag);
-    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
-    if (par) par.appendChild(e);
-    return e;
-  }
+      function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
 
-  // Anys — només text, sense línies
-  [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
-    const t = el('text', { x: x(a), y: 22, 'font-size': '10', fill: '#ccc', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
-    t.textContent = a;
-  });
+      function el(tag, attrs, par) {
+        const e = document.createElementNS(ns, tag);
+        for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+        if (par) par.appendChild(e);
+        return e;
+      }
 
-  // Etiquetes de carril
-  function cLabel(label, sub, y, col) {
-    const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
-    t.textContent = label;
-    const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
-    s.textContent = sub;
-  }
-  cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
-  cLabel('PRESTIGI', 'Festivals', YF, COL_PREST);
+      // Anys — només text, sense línies
+      [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
+        const t = el('text', { x: x(a), y: 22, 'font-size': '10', fill: '#ccc', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+        t.textContent = a;
+      });
 
-  // Pelis emblemàtiques
-  const emblematiques = [1975, 1988, 2004];
+      // Etiquetes de carril
+      function cLabel(label, sub, y, col) {
+        const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        t.textContent = label;
+        const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        s.textContent = sub;
+      }
 
-  // Punts públic — plens, excepte les emblemàtiques
-  const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
-    1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
-    1981,1984,1988,1991,1995,1997,1998,1999,
-    2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
-    2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
+      cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
+      cLabel('PRESTIGI', 'Festivals', YF, COL_PREST);
 
-  const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
-    1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
-    2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
+      // Pelis emblemàtiques
+      const emblematiques = [1975, 1988, 2004];
 
-  // Primer les línies verticals de les 3 pelis (sota els punts)
-  emblematiques.forEach(a => {
-    el('line', { x1: x(a), y1: YP - 10, x2: x(a), y2: YF + 10, stroke: '#ccc', 'stroke-width': '1' }, svg);
-  });
+      // Punts públic — plens, excepte les emblemàtiques
+      const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+        1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
+        1981,1984,1988,1991,1995,1997,1998,1999,
+        2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
+        2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
 
-  // Punts públic plens (no emblemàtiques)
-  pub.filter(a => !emblematiques.includes(a)).forEach(a =>
-    el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg)
-  );
+      const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
+        1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
+        2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
 
-  // Punts prestigi plens (no emblemàtiques)
-  prest.filter(a => !emblematiques.includes(a)).forEach(a =>
-    el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg)
-  );
+      // Primer les línies verticals de les 3 pelis (sota els punts)
+      emblematiques.forEach(a => {
+        el('line', { x1: x(a), y1: YP - 10, x2: x(a), y2: YF + 10, stroke: '#ccc', 'stroke-width': '1' }, svg);
+      });
 
-  // Cercles buits per a les emblemàtiques (damunt les línies)
-  emblematiques.forEach(a => {
-    el('circle', { cx: x(a), cy: YP, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
-    el('circle', { cx: x(a), cy: YF, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
-  });
+      // Punts públic plens (no emblemàtiques)
+      pub.filter(a => !emblematiques.includes(a)).forEach(a =>
+        el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg)
+      );
 
-  // 3 etiquetes escalonades cap avall
-  const etiq = [
-    { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
-    { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
-    { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
-  ];
+      // Punts prestigi plens (no emblemàtiques)
+      prest.filter(a => !emblematiques.includes(a)).forEach(a =>
+        el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg)
+      );
 
-  etiq.forEach(e => {
-    const cx = x(e.any);
-    // línia continua cap avall des del carril prestigi fins a l'etiqueta
-    el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
-    const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
-    tany.textContent = e.any;
-    const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
-    ttit.textContent = e.titol;
-  });
-})();
+      // Cercles buits per a les emblemàtiques (damunt les línies)
+      emblematiques.forEach(a => {
+        el('circle', { cx: x(a), cy: YP, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+        el('circle', { cx: x(a), cy: YF, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+      });
+
+      // 3 etiquetes escalonades cap avall
+      const etiq = [
+        { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
+        { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
+        { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
+      ];
+
+      etiq.forEach(e => {
+        const cx = x(e.any);
+        el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
+        const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+        tany.textContent = e.any;
+        const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        ttit.textContent = e.titol;
+      });
+    })();
   </script>
 
-<script src="js/scroll-header.js"></script>
-<script src="js/buscador.js"></script>
-<script src="js/scroll-fade.js"></script> 
-
+  <script src="js/scroll-header.js"></script>
+  <script src="js/buscador.js"></script>
+  <script src="js/scroll-fade.js"></script>
 
   <!-- ── Drawer mòbil ── -->
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
@@ -694,7 +732,9 @@
       <a href="/" class="drawer-logo">Públic i Prestigi</a>
       <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
     </div>
+
     <div class="drawer-seccio"><a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+
     <div class="drawer-seccio" id="drawer-part-i">
       <div class="drawer-seccio-fila">
         <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
@@ -721,6 +761,7 @@
         <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
       </div>
     </div>
+
     <div class="drawer-seccio" id="drawer-part-ii">
       <div class="drawer-seccio-fila">
         <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
@@ -740,6 +781,7 @@
         <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
       </div>
     </div>
+
     <div class="drawer-seccio" id="drawer-part-iii">
       <div class="drawer-seccio-fila">
         <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
@@ -757,11 +799,11 @@
         <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
     </div>
+
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
     <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
     <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
   </nav>
-
 
   <script>
     function toggleDrawer() {
@@ -771,6 +813,7 @@
       overlay.classList.toggle('obert', obert);
       document.body.style.overflow = obert ? 'hidden' : '';
     }
+
     function toggleDrawerSeccio(id) {
       document.getElementById(id).classList.toggle('obert');
     }
