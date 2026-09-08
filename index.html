@@ -497,12 +497,21 @@
   <!-- ── Modal de subscripció ── -->
   <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
     <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Tancar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
       <h2 id="subscripcio-titol">Subscriu-te</h2>
 
       <div class="subscripcio-icona" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="5" y="9" width="38" height="30" rx="4"></rect>
-          <path d="M7 12l17 13 17-13"></path>
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
         </svg>
       </div>
 
@@ -515,8 +524,6 @@
         <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
         <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancel·lar</button>
       </div>
-
-      <p class="subscripcio-gracies">Gràcies per seguir Públic i Prestigi.</p>
     </div>
   </div>
 
