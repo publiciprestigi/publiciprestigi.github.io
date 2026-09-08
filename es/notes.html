@@ -11,6 +11,7 @@
 <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/notes.html"/>
 <title>Notas · Públic i Prestigi</title>
 <link href="../css/estil.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
 <style>
     .notes-portada {
       max-width: var(--amplada-text);
@@ -96,26 +97,34 @@
 <!-- Versión española: borrador completo pendiente de revisión editorial final. -->
 </head>
 <body>
-<header class="capcalera">
-<div class="capcalera-interior">
-<button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
-      <a class="capcalera-logo" href="./">Públic i Prestigi</a>
-<div class="capcalera-controls">
-<span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar">
-<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
-<circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line>
-</svg>
-</span>
-<a class="capcalera-versio" href="versions.html" id="versio-label">Versión 1.1 (1965–2025)</a>
-<div class="capcalera-idioma">
-<a href="../notes.html" hreflang="ca" lang="ca">CA</a>
-<a aria-current="page" class="actiu lang-es" href="#" lang="es">ES</a>
-</div>
-</div>
-</div>
-</header>
+<!-- ── Cabecera ES ── -->
+  <header class="capcalera capcalera-v2">
+    <div class="capcalera-interior">
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
+      </div>
+
+      <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+
+        <div class="capcalera-idioma">
+          <a href="../notes.html" lang="ca" hreflang="ca">CA</a>
+          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
 <nav class="navegacio">
 <div class="navegacio-interior">
 <a class="nav-link" href="./">Inicio</a>
@@ -123,7 +132,6 @@
 <a class="nav-link" href="part-ii.html">II — Prestigio</a>
 <a class="nav-link" href="part-iii.html">III — Análisis</a>
 <a class="nav-link" href="sobre.html">Sobre el proyecto</a>
-<a class="nav-link nav-link-substack" href="https://publiciprestigi.substack.com" rel="noopener" target="_blank">Substack ↗</a>
 </div>
 </nav>
 <main class="contingut">
@@ -262,6 +270,95 @@
 <div id="buscador-resultats"></div>
 </div>
 </div>
+  <!-- ── Modal de suscripción ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
+      <h2 id="subscripcio-titol">Suscríbete</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
+        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+      </div>
+
+      <div class="subscripcio-accions">
+        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── MODAL SUSCRIPCIÓN ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const continuar = document.getElementById('subscripcio-continuar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => continuar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    if (typeof window.toggleBuscador !== 'function') {
+      window.toggleBuscador = function() {
+        const o = document.getElementById('buscador-overlay');
+        const i = document.getElementById('buscador-input');
+        if (!o || !i) return;
+        if (o.style.display === 'none') {
+          o.style.display = 'flex';
+          i.focus();
+        } else {
+          o.style.display = 'none';
+          i.value = '';
+          const r = document.getElementById('buscador-resultats');
+          if (r) r.innerHTML = '';
+        }
+      };
+    }
+
+    // Lupa accesible con teclado.
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+  </script>
+
 <script>
     fetch(pipPath('data/metadata.json')).then(r=>r.json()).then(data=>{
       document.getElementById('versio-label').textContent = data.versio_label_es || data.versio_label;
@@ -346,7 +443,6 @@
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
-    <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
     <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
   </nav>
 

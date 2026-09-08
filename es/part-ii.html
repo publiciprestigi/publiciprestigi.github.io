@@ -11,6 +11,7 @@
   <title>II — Prestigio · Públic i Prestigi</title>
   <link rel="stylesheet" href="../css/estil.css">
   <link rel="stylesheet" href="../css/textos-extra.css">
+  <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -24,19 +25,27 @@
 </head>
 <body class="amb-sidebar part-ii">
 
-  <header class="capcalera">
+  <!-- ── Cabecera ES ── -->
+  <header class="capcalera capcalera-v2">
     <div class="capcalera-interior">
-      <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
+      </div>
+
       <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+
       <div class="capcalera-controls">
-        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+
         <div class="capcalera-idioma">
           <a href="../part-ii.html" lang="ca" hreflang="ca">CA</a>
           <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
@@ -52,7 +61,6 @@
       <a href="part-ii.html" class="nav-link actiu">II — Prestigio</a>
       <a href="part-iii.html" class="nav-link">III — Análisis</a>
       <a href="sobre.html" class="nav-link">Sobre el proyecto</a>
-      <a href="https://publiciprestigi.substack.com" class="nav-link nav-link-substack" target="_blank" rel="noopener">Substack ↗</a>
     </div>
   </nav>
 
@@ -157,7 +165,96 @@
     </div>
   </div>
 
+    <!-- ── Modal de suscripción ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
+      <h2 id="subscripcio-titol">Suscríbete</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
+        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+      </div>
+
+      <div class="subscripcio-accions">
+        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
   <script>
+    // ── MODAL SUSCRIPCIÓN ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const continuar = document.getElementById('subscripcio-continuar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => continuar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    if (typeof window.toggleBuscador !== 'function') {
+      window.toggleBuscador = function() {
+        const o = document.getElementById('buscador-overlay');
+        const i = document.getElementById('buscador-input');
+        if (!o || !i) return;
+        if (o.style.display === 'none') {
+          o.style.display = 'flex';
+          i.focus();
+        } else {
+          o.style.display = 'none';
+          i.value = '';
+          const r = document.getElementById('buscador-resultats');
+          if (r) r.innerHTML = '';
+        }
+      };
+    }
+
+    // Lupa accesible con teclado.
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+  </script>
+
+<script>
     const seccions = [
       { id: 'intro',          titol: 'Datos y criterio',                                          sup: 'Presencia y premios en los festivales internacionales' },
       { id: 'premiades',            titol: 'Premiadas por década',                         sup: 'Presencia y premios en los festivales internacionales' },
@@ -319,7 +416,6 @@
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
-    <div class="drawer-seccio"><a href="https://publiciprestigi.substack.com" class="drawer-seccio-cap es-link" target="_blank" rel="noopener" onclick="toggleDrawer()">Substack ↗</a></div>
     <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
   </nav>
 
