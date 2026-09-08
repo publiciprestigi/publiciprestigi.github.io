@@ -151,24 +151,6 @@ strong { font-weight: 600; }
 .capcalera-lupa { cursor: pointer; color: var(--color-text-suau); display: flex; align-items: center; }
 .capcalera-lupa:hover { color: var(--color-text); }
 
-/* ── Botó Subscriu-te (estil Substack) ── */
-.capcalera-subscriu {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #6B4FBB;
-  color: #fff;
-  font-size: .82rem;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 7px 16px;
-  border-radius: 20px;
-  white-space: nowrap;
-  transition: background .15s;
-}
-.capcalera-subscriu:hover { background: #5a3fa8; opacity: 1; color: #fff; }
-.capcalera-subscriu-icon { display: none; }
-
 /* ============================================================
    NAVEGACIÓ PRINCIPAL
    ============================================================ */
@@ -1096,15 +1078,6 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
   .capcalera-versio {
     display: none;
   }
-  .capcalera-subscriu {
-    padding: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    justify-content: center;
-  }
-  .capcalera-subscriu-text { display: none; }
-  .capcalera-subscriu-icon { display: flex; }
   .capcalera-controls {
     gap: 12px;
     flex: 0;
