@@ -160,12 +160,23 @@
 .subscripcio-text p {
   margin: 0 0 16px;
   color: #444;
-  font-size: 0.88rem;
-  line-height: 1.55;
+  font-size: var(--mida-cos);
+  line-height: var(--interlineat);
 }
 
 .subscripcio-text p:last-child {
   margin-bottom: 0;
+}
+
+.subscripcio-text a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(0, 0, 0, 0.3);
+}
+
+.subscripcio-text a:hover {
+  text-decoration-color: currentColor;
 }
 
 .subscripcio-accions {
@@ -185,7 +196,7 @@
   box-sizing: border-box;
   border-radius: 6px;
   font-family: var(--font-principal);
-  font-size: 0.9rem;
+  font-size: 1.02rem;
   font-weight: 600;
   text-decoration: none;
   cursor: pointer;
@@ -258,7 +269,7 @@
     flex: 0 0 auto;
     margin-left: 6px;
     margin-right: auto;
-    font-size: 1rem;
+    font-size: 1.18rem;
     text-align: left;
   }
 
@@ -299,8 +310,8 @@
   }
 
   .subscripcio-icona {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     margin: 18px auto 20px;
   }
 
@@ -326,7 +337,7 @@
 
   .capcalera-v2 .capcalera-logo {
     margin-left: 3px;
-    font-size: 0.9rem;
+    font-size: 1.06rem;
   }
 
   .capcalera-v2 .capcalera-controls {
@@ -354,7 +365,8 @@
   }
 
   .subscripcio-text p {
-    font-size: 0.86rem;
+    font-size: var(--mida-cos);
+    line-height: var(--interlineat);
   }
 }
 
