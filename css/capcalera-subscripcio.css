@@ -139,8 +139,8 @@
 }
 
 .subscripcio-icona {
-  width: 62px;
-  height: 62px;
+  width: 78px;
+  height: 78px;
   margin: 20px auto 22px;
   color: #7c7c82;
 }
@@ -160,7 +160,7 @@
 .subscripcio-text p {
   margin: 0 0 16px;
   color: #444;
-  font-size: var(--mida-cos);
+  font-size: 0.96rem;
   line-height: var(--interlineat);
 }
 
@@ -310,8 +310,8 @@
   }
 
   .subscripcio-icona {
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
     margin: 18px auto 20px;
   }
 
@@ -365,7 +365,7 @@
   }
 
   .subscripcio-text p {
-    font-size: var(--mida-cos);
+    font-size: 0.96rem;
     line-height: var(--interlineat);
   }
 }
