@@ -157,6 +157,7 @@
       touch-action: pan-y;
       user-select: none;
       -webkit-user-select: none;
+      -webkit-user-drag: none;
     }
 
     .inici-substack-foto-link.arrossegant { cursor: grabbing; }
@@ -641,6 +642,9 @@
       const foto = document.querySelector('.inici-substack-foto');
       if (!pista || !puntsWrap || !fotoLink || !foto) return;
 
+      fotoLink.setAttribute('draggable', 'false');
+      fotoLink.querySelectorAll('img').forEach(function(img) { img.draggable = false; });
+
       const slidesOriginals = Array.from(pista.children);
       const total = slidesOriginals.length;
       if (total < 2) return;
@@ -779,6 +783,7 @@
       foto.addEventListener('pointerup', acabaArrossegament);
       foto.addEventListener('pointercancel', acabaArrossegament);
       foto.addEventListener('dragstart', function(e) { e.preventDefault(); });
+      fotoLink.addEventListener('dragstart', function(e) { e.preventDefault(); });
 
       fotoLink.addEventListener('click', function(e) {
         if (bloquejaClic) e.preventDefault();
