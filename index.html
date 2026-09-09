@@ -229,12 +229,14 @@
     .inici-novetats {
       display: flex;
       justify-content: center;
-      align-items: baseline;
+      align-items: center;
       gap: 28px;
-      padding: 16px 18px;
+      min-height: 50px;
+      padding: 0 18px;
       margin: 0 0 28px;
       background: #fbfbfa;
       border-bottom: 1px solid #eeeeec;
+      box-sizing: border-box;
       white-space: nowrap;
       position: relative;
     }
@@ -279,7 +281,7 @@
     @media (max-width: 768px) {
       .contingut { padding-top: 0; }
 
-      .inici-novetats { padding: 14px 16px; }
+      .inici-novetats { min-height: 46px; padding: 0 16px; }
 
       .inici-antetitol {
         font-size: 0.65rem;
@@ -288,7 +290,7 @@
 
       .inici-novetats {
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         flex-wrap: wrap;
         gap: 12px 22px;
         white-space: normal;
