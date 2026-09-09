@@ -251,7 +251,7 @@
       background: #fbfbfa;
       box-shadow: 0 0 0 100vmax #fbfbfa;
       clip-path: inset(0 -100vmax);
-      border-bottom: none;
+      border-bottom: 1px solid #eeeeec;
       box-sizing: border-box;
       white-space: nowrap;
       position: relative;
@@ -700,27 +700,51 @@
         });
       }
 
+      let normalitzacioFallback;
+
       function normalitzaExtrems() {
-        if (actual === 0) {
+        let calReposicionar = false;
+
+        // Fem servir <= / >= per recuperar també qualsevol estat fora de rang.
+        if (actual <= 0) {
           actual = total;
-          senseTransicio();
-          posiciona(actual);
-        } else if (actual === total + 1) {
+          calReposicionar = true;
+        } else if (actual >= total + 1) {
           actual = 1;
+          calReposicionar = true;
+        }
+
+        if (calReposicionar) {
           senseTransicio();
           posiciona(actual);
+          // Força el navegador a aplicar la posició abans d'una nova animació.
+          void pista.offsetWidth;
         }
       }
 
+      function programaNormalitzacio() {
+        clearTimeout(normalitzacioFallback);
+        // transitionend pot no disparar-se si la pestanya queda en segon pla
+        // o el navegador interromp l'animació. Aquest fallback evita que
+        // el carrusel acabi posicionat fora dels slides.
+        normalitzacioFallback = setTimeout(normalitzaExtrems, 750);
+      }
+
       pista.addEventListener('transitionend', function(e) {
-        if (e.propertyName === 'transform') normalitzaExtrems();
+        if (e.propertyName === 'transform') {
+          clearTimeout(normalitzacioFallback);
+          normalitzaExtrems();
+        }
       });
 
       function mou(direccio) {
+        // Recupera primer qualsevol extrem que no s'hagi normalitzat.
+        normalitzaExtrems();
         actual += direccio;
         ambTransicio();
         posiciona(actual);
         actualitzaPunts();
+        programaNormalitzacio();
       }
 
       function avanca() {
@@ -734,6 +758,7 @@
 
       function iniciaArrossegament(e) {
         if (e.pointerType === 'mouse' && e.button !== 0) return;
+        normalitzaExtrems();
         iniciX = e.clientX;
         deltaX = 0;
         arrossegant = true;
@@ -770,6 +795,7 @@
 
         posiciona(actual);
         actualitzaPunts();
+        programaNormalitzacio();
         bloquejaClic = haArrossegat;
         setTimeout(function() { bloquejaClic = false; }, 0);
         reinicia();
@@ -791,6 +817,23 @@
       posiciona(actual);
       actualitzaPunts();
       reinicia();
+
+      // Evita estats desincronitzats quan la pestanya queda en segon pla
+      // o quan la pàgina torna des de la memòria bfcache del navegador.
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          clearInterval(temporitzador);
+          clearTimeout(normalitzacioFallback);
+        } else {
+          normalitzaExtrems();
+          reinicia();
+        }
+      });
+
+      window.addEventListener('pageshow', function() {
+        normalitzaExtrems();
+        reinicia();
+      });
     })();
 
     fetch(pipPath('data/metadata.json'))
