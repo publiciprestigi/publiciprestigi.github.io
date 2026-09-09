@@ -386,3 +386,40 @@
     font-size: 0.68rem;
   }
 }
+
+/* ============================================================
+   Peu de pàgina — alineació amb la capçalera v2
+   ============================================================ */
+.peu {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.peu .peu-interior {
+  max-width: none;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1100px) {
+  .peu .peu-interior {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .peu .peu-interior {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .peu .peu-interior {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
