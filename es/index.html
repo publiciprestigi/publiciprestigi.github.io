@@ -243,12 +243,14 @@
     .inici-novetats {
       display: flex;
       justify-content: center;
-      align-items: baseline;
+      align-items: center;
       gap: 28px;
-      padding: 16px 18px;
+      min-height: 50px;
+      padding: 0 18px;
       margin: 0 0 28px;
       background: #fbfbfa;
       border-bottom: 1px solid #eeeeec;
+      box-sizing: border-box;
       white-space: nowrap;
       position: relative;
     }
@@ -305,7 +307,7 @@
 
       .inici-novetats {
         justify-content: flex-start;
-        align-items: flex-start;
+        align-items: center;
         flex-wrap: wrap;
         gap: 12px 22px;
         white-space: normal;
