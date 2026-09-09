@@ -141,7 +141,22 @@
       position: relative;
     }
 
-    .inici-substack-foto-link { display: block; }
+    .inici-substack-foto-link {
+      display: block;
+      cursor: grab;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .inici-substack-foto-link.arrossegant { cursor: grabbing; }
+
+    .inici-substack-foto-link img {
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
 
     .inici-substack-peu {
       display: flex;
@@ -372,6 +387,10 @@
           <span class="inici-novetat-badge nou">Nou</span>
           <a href="part-iii.html#mapa-canon">El mapa del cànon</a>
         </span>
+        <span class="inici-novetat-grup">
+          <span class="inici-novetat-badge">Actualitzat</span>
+          <span><a href="part-iii.html#conclusions">Conclusions</a></span>
+        </span>
       </section>
 
       <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
@@ -526,32 +545,61 @@
     (function() {
       const pista = document.getElementById('substack-pista');
       const puntsWrap = document.getElementById('substack-punts');
-      if (!pista || !puntsWrap) return;
+      const fotoLink = document.querySelector('.inici-substack-foto-link');
+      const foto = document.querySelector('.inici-substack-foto');
+      if (!pista || !puntsWrap || !fotoLink || !foto) return;
 
-      const total = pista.children.length;
-      pista.appendChild(pista.children[0].cloneNode(true));
+      const slidesOriginals = Array.from(pista.children);
+      const total = slidesOriginals.length;
+      if (total < 2) return;
 
-      let actual = 0;
+      // Clons als dos extrems per permetre arrossegar en qualsevol direcció.
+      pista.insertBefore(slidesOriginals[total - 1].cloneNode(true), pista.firstChild);
+      pista.appendChild(slidesOriginals[0].cloneNode(true));
+
+      let actual = 1;
       let temporitzador;
+      let iniciX = 0;
+      let deltaX = 0;
+      let arrossegant = false;
+      let haArrossegat = false;
+      let bloquejaClic = false;
+
+      function senseTransicio() {
+        pista.style.transition = 'none';
+      }
+
+      function ambTransicio() {
+        pista.style.transition = 'transform 0.6s ease';
+      }
+
+      function posiciona(index, deltaPx) {
+        const extra = deltaPx || 0;
+        pista.style.transform = 'translate3d(calc(-' + (index * 100) + '% + ' + extra + 'px), 0, 0)';
+      }
+
+      function indexVisible() {
+        return ((actual - 1) % total + total) % total;
+      }
+
       const punts = Array.from({ length: total }, function(_, index) {
         const punt = document.createElement('button');
         punt.type = 'button';
         punt.className = 'inici-substack-punt';
         punt.setAttribute('aria-label', 'Mostra la imatge ' + (index + 1) + ' de ' + total);
         punt.addEventListener('click', function() {
-          actual = index;
-          pista.style.transition = 'transform 0.6s ease';
-          pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
+          actual = index + 1;
+          ambTransicio();
+          posiciona(actual);
           actualitzaPunts();
           reinicia();
         });
-
         puntsWrap.appendChild(punt);
         return punt;
       });
 
       function actualitzaPunts() {
-        const visible = actual % total;
+        const visible = indexVisible();
         punts.forEach(function(punt, index) {
           const actiu = index === visible;
           punt.classList.toggle('actiu', actiu);
@@ -559,19 +607,31 @@
         });
       }
 
-      function avanca() {
-        actual++;
-        pista.style.transition = 'transform 0.6s ease';
-        pista.style.transform = 'translateX(-' + (actual * 100) + '%)';
-        actualitzaPunts();
-        if (actual === total) {
-          setTimeout(function() {
-            pista.style.transition = 'none';
-            pista.style.transform = 'translateX(0)';
-            actual = 0;
-            actualitzaPunts();
-          }, 650);
+      function normalitzaExtrems() {
+        if (actual === 0) {
+          actual = total;
+          senseTransicio();
+          posiciona(actual);
+        } else if (actual === total + 1) {
+          actual = 1;
+          senseTransicio();
+          posiciona(actual);
         }
+      }
+
+      pista.addEventListener('transitionend', function(e) {
+        if (e.propertyName === 'transform') normalitzaExtrems();
+      });
+
+      function mou(direccio) {
+        actual += direccio;
+        ambTransicio();
+        posiciona(actual);
+        actualitzaPunts();
+      }
+
+      function avanca() {
+        mou(1);
       }
 
       function reinicia() {
@@ -579,6 +639,62 @@
         temporitzador = setInterval(avanca, 8000);
       }
 
+      function iniciaArrossegament(e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        iniciX = e.clientX;
+        deltaX = 0;
+        arrossegant = true;
+        haArrossegat = false;
+        clearInterval(temporitzador);
+        senseTransicio();
+        fotoLink.classList.add('arrossegant');
+        if (foto.setPointerCapture) foto.setPointerCapture(e.pointerId);
+      }
+
+      function arrossega(e) {
+        if (!arrossegant) return;
+        deltaX = e.clientX - iniciX;
+        if (Math.abs(deltaX) > 6) haArrossegat = true;
+        posiciona(actual, deltaX);
+      }
+
+      function acabaArrossegament(e) {
+        if (!arrossegant) return;
+        arrossegant = false;
+        fotoLink.classList.remove('arrossegant');
+        if (foto.releasePointerCapture && foto.hasPointerCapture && foto.hasPointerCapture(e.pointerId)) {
+          foto.releasePointerCapture(e.pointerId);
+        }
+
+        const llindar = Math.max(45, foto.clientWidth * 0.12);
+        ambTransicio();
+
+        if (deltaX <= -llindar) {
+          actual += 1;
+        } else if (deltaX >= llindar) {
+          actual -= 1;
+        }
+
+        posiciona(actual);
+        actualitzaPunts();
+        bloquejaClic = haArrossegat;
+        setTimeout(function() { bloquejaClic = false; }, 0);
+        reinicia();
+      }
+
+      foto.addEventListener('pointerdown', iniciaArrossegament);
+      foto.addEventListener('pointermove', arrossega);
+      foto.addEventListener('pointerup', acabaArrossegament);
+      foto.addEventListener('pointercancel', acabaArrossegament);
+      foto.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+      fotoLink.addEventListener('click', function(e) {
+        if (bloquejaClic) e.preventDefault();
+      });
+
+      // Posició inicial: primer slide real, després del clon del final.
+      senseTransicio();
+      posiciona(actual);
       actualitzaPunts();
       reinicia();
     })();
