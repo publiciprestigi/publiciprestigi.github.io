@@ -424,31 +424,14 @@
   }
 }
 
-
 /* ============================================================
-   Navegació principal — una mica més present i espaiada
-   ============================================================ */
-.navegacio .navegacio-interior {
-  gap: 32px;
-}
-
-.navegacio .nav-link {
-  font-size: 15px;
-}
-
-@media (max-width: 1100px) {
-  .navegacio .navegacio-interior {
-    gap: 28px;
-  }
-
-  .navegacio .nav-link {
-    font-size: 15px;
-  }
-}
-
-/* ============================================================
-   Portada — banda de novetat full-width i sense línia inferior
+   Portada — banda de novetat full-width, sense línia inferior
+   i text amb la mida original del menú principal
    ============================================================ */
 .inici-novetats {
   border-bottom: none !important;
+}
+
+.inici-novetat-grup a {
+  font-size: 14px;
 }
