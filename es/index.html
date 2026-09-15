@@ -226,18 +226,6 @@
     }
 
 
-    .enllac-secundari {
-      font-size: 0.82rem;
-      color: #888 !important;
-      text-decoration: none !important;
-      white-space: nowrap;
-    }
-
-    .enllac-secundari:hover {
-      color: #363737 !important;
-      text-decoration: none !important;
-    }
-
     /* Novetats de la versió */
     .inici-novetats {
       display: flex;
@@ -398,6 +386,8 @@
           </svg>
         </span>
 
+        <a href="sobre.html" class="capcalera-sobre">Sobre el proyecto</a>
+
         <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
 
         <div class="capcalera-idioma">
@@ -442,7 +432,7 @@
       <!-- Text + xifres: bloc únic sense separador intern -->
       <div class="inici-text-xifres">
         <p class="inici-intro-text">¿Qué películas han llegado a más espectadores? ¿Cuáles han obtenido más reconocimiento? ¿Y cuándo, excepcionalmente, coinciden? A partir de este juego inicial, surgen otras preguntas más hondas: ¿qué ocurre cuando las salas ya no explican todo el impacto de una película? ¿Hasta qué punto el cine de autor se ha alejado del gran público? ¿Cómo cambian la memoria, el canon y las narrativas cuando también cambian las formas de ver cine?</p>
-        <p class="inici-intro-text">Un estudio vivo que mide y analiza la tensión entre público masivo y prestigio crítico, y todo lo que revela. ¡Bienvenidos! <a href="sobre.html" class="enllac-secundari">Sobre el proyecto →</a></p>
+        <p class="inici-intro-text">Un estudio vivo que mide y analiza la tensión entre público masivo y prestigio crítico, y todo lo que revela. ¡Bienvenidos!</p>
         <div class="inici-xifres">
           <div class="inici-xifra-bloc">
             <span class="inici-xifra-n" style="color:#2a5582">294M</span>
@@ -949,6 +939,7 @@
       <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
     </div>
     <div class="drawer-seccio"><a href="./" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
+    <div class="drawer-seccio"><a href="#" class="drawer-seccio-cap" onclick="toggleDrawer(); toggleBuscador(); return false;">Buscar</a></div>
     <div class="drawer-seccio" id="drawer-part-i">
       <div class="drawer-seccio-fila">
         <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
@@ -1011,7 +1002,6 @@
         <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
       </div>
     </div>
-    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
     <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
   </nav>
 
