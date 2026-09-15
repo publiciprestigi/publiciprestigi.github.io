@@ -212,25 +212,6 @@
       display: block;
     }
 
-    .enllac-secundari {
-      font-size: 0.82rem;
-      text-decoration: none !important;
-      white-space: nowrap;
-    }
-
-    .enllac-secundari-text {
-      color: #1a1a1a;
-      font-weight: 500;
-    }
-
-    .enllac-secundari-fletxa {
-      color: #ccc;
-    }
-
-    .enllac-secundari:hover {
-      text-decoration: none !important;
-    }
-
     /* Novetats de la versió */
     .inici-novetats {
       display: flex;
@@ -370,6 +351,8 @@
           </svg>
         </span>
 
+        <a href="sobre.html" class="capcalera-sobre">Sobre</a>
+
         <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Subscriure's</button>
 
         <div class="capcalera-idioma">
@@ -414,7 +397,7 @@
       <!-- Text + xifres: bloc únic sense separador intern -->
       <div class="inici-text-xifres">
         <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
-        <p class="inici-intro-text">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts! <a href="sobre.html" class="enllac-secundari"><span class="enllac-secundari-text">Sobre el projecte</span> <span class="enllac-secundari-fletxa">→</span></a></p>
+        <p class="inici-intro-text">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts!</p>
 
         <div class="inici-xifres">
           <div class="inici-xifra-bloc">
@@ -905,6 +888,7 @@
     </div>
 
     <div class="drawer-seccio"><a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+    <div class="drawer-seccio"><a href="#" class="drawer-seccio-cap" onclick="toggleDrawer(); toggleBuscador(); return false;">Cercar</a></div>
 
     <div class="drawer-seccio" id="drawer-part-i">
       <div class="drawer-seccio-fila">
