@@ -151,6 +151,16 @@ strong { font-weight: 600; }
 .capcalera-lupa { cursor: pointer; color: var(--color-text-suau); display: flex; align-items: center; }
 .capcalera-lupa:hover { color: var(--color-text); }
 
+.capcalera-sobre {
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3a3a3a;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.capcalera-sobre:hover { color: var(--color-text); opacity: 1; }
+
 /* ============================================================
    NAVEGACIÓ PRINCIPAL
    ============================================================ */
@@ -1082,6 +1092,15 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
     gap: 12px;
     flex: 0;
     margin-left: auto;
+  }
+
+  /* A la home, "Sobre" substitueix la lupa en la capçalera mòbil */
+  body.pag-inici .capcalera-lupa {
+    display: none;
+  }
+  body.pag-inici .capcalera-sobre {
+    display: inline-flex;
+    align-items: center;
   }
 
   /* ── Nav principal: amagat (substituït per hamburguesa) ── */
