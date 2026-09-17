@@ -387,6 +387,65 @@
   }
 }
 
+
+/* ── Etiqueta responsive de «Sobre» a la portada ── */
+.capcalera-sobre-curt {
+  display: none;
+}
+
+/* En mòbils estrets, escurcem només l'etiqueta «Sobre el projecte/proyecto».
+   La resta de la capçalera conserva les mides aprovades. */
+@media (max-width: 430px) {
+  .capcalera-v2 .capcalera-sobre-complet {
+    display: none;
+  }
+
+  .capcalera-v2 .capcalera-sobre-curt {
+    display: inline;
+  }
+
+  .capcalera-v2 .capcalera-controls {
+    gap: 5px;
+    margin-left: 4px;
+  }
+}
+
+/* Ajust final només per a pantalles realment molt estretes. */
+@media (max-width: 380px) {
+  .capcalera-v2 .capcalera-interior {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .capcalera-v2 .btn-hamburguesa {
+    width: 30px;
+  }
+
+  .capcalera-v2 .btn-hamburguesa span {
+    width: 19px;
+  }
+
+  .capcalera-v2 .capcalera-logo {
+    margin-left: 2px;
+    font-size: 1.10rem;
+  }
+
+  .capcalera-v2 .capcalera-controls {
+    gap: 3px;
+    margin-left: 3px;
+  }
+
+  .capcalera-v2 .capcalera-subscripcio {
+    padding: 7px 8px;
+    font-size: 0.71rem;
+  }
+
+  .capcalera-v2 .capcalera-idioma {
+    gap: 3px;
+    font-size: 0.69rem;
+  }
+}
+
 /* ============================================================
    Peu de pàgina — alineació amb la capçalera v2
    ============================================================ */
