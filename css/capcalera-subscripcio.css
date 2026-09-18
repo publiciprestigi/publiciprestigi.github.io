@@ -286,8 +286,7 @@
   }
 
   .capcalera-v2 .capcalera-idioma {
-    gap: 5px;
-    font-size: 0.72rem;
+    display: none;
   }
 
   .capcalera-v2 .capcalera-lupa svg {
@@ -351,11 +350,6 @@
     font-size: 0.74rem;
   }
 
-  .capcalera-v2 .capcalera-idioma {
-    font-size: 0.72rem;
-    gap: 4px;
-  }
-
   .capcalera-v2 .capcalera-lupa svg {
     width: 17px;
     height: 17px;
@@ -371,7 +365,7 @@
   }
 }
 
-/* Pantalles molt estretes: prioritzem logo + CTA i mantenim CA/ES. */
+/* Pantalles molt estretes: prioritzem logo + Sobre + CTA. */
 @media (max-width: 420px) {
   .capcalera-v2 .capcalera-lupa {
     display: none;
@@ -415,9 +409,6 @@
     margin-left: 2px;
   }
 
-  .capcalera-v2 .capcalera-idioma {
-    flex: 0 0 auto;
-  }
 }
 
 /* Ajust final només per a pantalles realment molt estretes. */
@@ -450,10 +441,6 @@
     font-size: 0.71rem;
   }
 
-  .capcalera-v2 .capcalera-idioma {
-    gap: 3px;
-    font-size: 0.69rem;
-  }
 }
 
 /* ============================================================

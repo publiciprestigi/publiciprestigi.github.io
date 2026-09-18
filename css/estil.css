@@ -1194,6 +1194,33 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
     font-size: 0.92rem;
     font-weight: 400;
   }
+
+  /* Selector d'idioma dins del menú mòbil */
+  .drawer-idioma-fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 20px;
+    font-size: 0.92rem;
+  }
+  .drawer-idioma-label {
+    color: var(--color-text-suau);
+    font-weight: 400;
+  }
+  .drawer-idioma-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .drawer-idioma-links a {
+    color: var(--color-text-suau);
+    text-decoration: none;
+  }
+  .drawer-idioma-links a.actiu {
+    color: var(--color-text);
+    font-weight: 600;
+  }
   /* Fila amb nom + toggle per a les parts amb seccions */
   .drawer-seccio-fila {
     display: flex;
