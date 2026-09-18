@@ -285,8 +285,9 @@
     border-radius: 6px;
   }
 
+  /* En mòbil ample / horitzontal, l’idioma continua visible a la capçalera. */
   .capcalera-v2 .capcalera-idioma {
-    display: none;
+    display: flex;
   }
 
   .capcalera-v2 .capcalera-lupa svg {
@@ -350,6 +351,15 @@
     font-size: 0.74rem;
   }
 
+  /* Només en mòbil realment estret, CA/ES passa al menú hamburguesa. */
+  .capcalera-v2 .capcalera-idioma {
+    display: none;
+  }
+
+  .drawer-idioma-fila {
+    display: flex;
+  }
+
   .capcalera-v2 .capcalera-lupa svg {
     width: 17px;
     height: 17px;
@@ -382,6 +392,14 @@
   }
 }
 
+
+
+/* Quan CA/ES ja és visible a la capçalera, no el dupliquem al drawer. */
+@media (min-width: 521px) and (max-width: 900px) {
+  .drawer-idioma-fila {
+    display: none;
+  }
+}
 
 /* ── Etiqueta responsive de «Sobre» a la portada ── */
 .capcalera-sobre-curt {
