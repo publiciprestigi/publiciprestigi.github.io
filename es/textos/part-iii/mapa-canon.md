@@ -1,5 +1,5 @@
 <!-- intro -->
-Tres grandes intentos en las últimas tres décadas han querido fijar por consenso cuáles son las mejores películas del cine español: la lista del Centenario (1995), impulsada por el ICAA con motivo de los cien años del nacimiento del cine; la encuesta de *Caimán Cuadernos de Cine* (2016), de raíz cinéfila; y la del suplemento *Babelia* de *El País* (2025), de perfil periodístico. Tres prescriptores de distinta naturaleza, tres momentos, tres fotografías del canon. <sup>[21]</sup>
+Tres intentos en las últimas tres décadas han querido fijar por consenso cuáles son las mejores películas del cine español: la lista del Centenario (1995), impulsada por el ICAA con motivo de los cien años del nacimiento del cine; la encuesta de *Caimán Cuadernos de Cine* (2016), de raíz cinéfila; y la del suplemento *Babelia* de *El País* (2025), de perfil periodístico. Tres prescriptores de distinta naturaleza, tres momentos, tres fotografías del canon. <sup>[21]</sup>
 
 Este capítulo las cruza para dibujar un posible consenso compartido y lo sitúa frente al público real del periodo estudiado. Después de los festivales y sus premios, el canon es una forma de prestigio y legitimidad que el estudio todavía no había abordado, y la pregunta es directa: ¿cuántos espectadores tiene detrás?
 
