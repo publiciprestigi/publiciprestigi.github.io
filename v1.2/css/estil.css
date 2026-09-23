@@ -1378,10 +1378,13 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
    ============================================================ */
 .sidebar-link-badge,
 .drawer-link-badge {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
+  display: block;
+}
+
+.sidebar-link-badge .chapter-badge,
+.drawer-link-badge .chapter-badge {
+  margin-left: 6px;
+  vertical-align: 0.08em;
 }
 
 .chapter-badge {
@@ -1494,17 +1497,4 @@ html[lang="ca"] #drawer-part-iii .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
   display: none;
-}
-
-
-/* Reforç: fora de competició = context, sempre blanc + gris */
-.taula-festivals-context .film-context-festival,
-.taula-festivals-context .film-context-festival td,
-.taula-festivals-context .film-context-festival strong,
-.taula-festivals-context .film-context-festival em,
-.taula-festivals-context .film-context-festival .film-any,
-.taula-festivals-context .film-context-festival .col-subtil,
-.taula-festivals-context .film-context-festival .col-premi {
-  background: #fff !important;
-  color: #888 !important;
 }
