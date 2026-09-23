@@ -333,7 +333,7 @@ function construirForaCompeticio(festival, seccioId) {
       <button class="btn-context fora-competicio-toggle" type="button" aria-expanded="false" aria-controls="${cid}" onclick="toggleForaCompeticio('${cid}', this, ${films.length})">
         + ${pipT(
           `Altres participacions a la secció oficial fora de competició (${films.length} pel·lícules)`,
-           `Otras participaciones en la sección oficial fuera de competición (${n} películas)`
+          `Otras participaciones en la sección oficial fuera de competición (${films.length} películas)`
         )}
       </button>
       <div id="${cid}" class="fora-competicio-contingut" hidden>
