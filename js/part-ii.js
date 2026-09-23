@@ -1,7 +1,6 @@
 /* Públic i Prestigi — Part II: Prestigi */
 
 let festivalsData = [];
-let foraCompeticioData = [];
 
 const PIP_ES = document.documentElement.lang === 'es';
 const pipT = (ca, es) => PIP_ES ? es : ca;
@@ -20,22 +19,14 @@ const FC = {
 
 async function carregarFestivals() {
   try {
-    const [rFestivals, rForaCompeticio] = await Promise.all([
-      fetch(pipPath('data/festivals.json')),
-      fetch(pipPath('data/fora-competicio.json')),
-    ]);
-    festivalsData = await rFestivals.json();
-    foraCompeticioData = await rForaCompeticio.json();
+    const r = await fetch(pipPath('data/festivals.json'));
+    festivalsData = await r.json();
     construirPremiades();
     construirIntroduccio();
     construirFestival('Cannes',       'taula-cannes');
     construirFestival('Venècia',      'taula-venezia');
     construirFestival('Berlín',       'taula-berlin');
     construirFestival('Sant Sebastià','taula-sansebastia');
-    construirForaCompeticio('Cannes',        'fora-competicio-cannes');
-    construirForaCompeticio('Venècia',       'fora-competicio-venezia');
-    construirForaCompeticio('Berlín',        'fora-competicio-berlin');
-    construirForaCompeticio('Sant Sebastià', 'fora-competicio-sansebastia');
     construirRànquingEspectadors();
     construirRànquingDirectors();
     if (window.PiP_aplicaFade) window.PiP_aplicaFade();
@@ -297,78 +288,6 @@ function construirFestival(festival, seccioId) {
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
-}
-
-/* ============================================================
-   FORA DE COMPETICIÓ — CONTEXT, FORA DEL CORPUS PRINCIPAL
-   ============================================================ */
-function construirForaCompeticio(festival, seccioId) {
-  const cont = document.getElementById(seccioId);
-  if (!cont) return;
-
-  const films = foraCompeticioData
-    .filter(f => f.festival === festival)
-    .sort((a,b) => a.any - b.any);
-  if (!films.length) return;
-
-  const cid = `fora-${festival.replace(/\s/g,'-').replace(/è/g,'e').replace(/í/g,'i')}`;
-  const files = films.map((f, i) => {
-    const nota = PIP_ES ? (f.nota_es || f.nota || '—') : (f.nota || '—');
-    const decada = PIP_ES ? (f.decada_es || f.decada || '—') : (f.decada || '—');
-    const top100 = f.top100 || '—';
-    const espectadors = f.espectadors || '—';
-    return `<tr class="film-context-festival">
-      <td class="col-subtil col-pos">${i+1}</td>
-      <td>${titolFilm(f)}</td>
-      <td class="col-subtil">${f.director}</td>
-      <td class="col-premi">${nota}</td>
-      <td class="col-center col-subtil">${top100}</td>
-      <td class="col-subtil col-decada">${decada}</td>
-      <td class="col-num col-subtil">${espectadors}</td>
-    </tr>`;
-  }).join('');
-
-  cont.innerHTML = `
-    <div class="fora-competicio-bloc">
-      <button class="btn-context fora-competicio-toggle" type="button" aria-expanded="false" aria-controls="${cid}" onclick="toggleForaCompeticio('${cid}', this, ${films.length})">
-        + ${pipT(
-          `Altres participacions de la secció oficial fora de competició (${films.length} pel·lícules)`,
-          `Mostrar ${films.length} películas fuera de competición (de la sección oficial)`
-        )}
-      </button>
-      <div id="${cid}" class="fora-competicio-contingut" hidden>
-        <table class="taula-festivals taula-festivals-context">
-          <thead><tr>
-            <th class="col-pos">#</th>
-            <th style="width:40%">${pipT('Títol','Título')}</th>
-            <th class="col-subtil" style="width:12%">${pipT('Director/a','Dirección')}</th>
-            <th style="width:22%">${pipT('Premi / nota','Premio / nota')}</th>
-            <th class="col-center" style="width:60px">Top 100</th>
-            <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
-            <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')}</th>
-          </tr></thead>
-          <tbody>${files}</tbody>
-        </table>
-      </div>
-    </div>`;
-}
-
-function toggleForaCompeticio(id, boto, n) {
-  const cont = document.getElementById(id);
-  if (!cont) return;
-  const obre = cont.hidden;
-  cont.hidden = !obre;
-  boto.setAttribute('aria-expanded', String(obre));
-  boto.textContent = obre
-    ? `− ${pipT(
-        `Altres participacions de la secció oficial fora de competició (${n} pel·lícules)`,
-        'Ocultar películas fuera de competición (de la sección oficial)'
-      )}`
-    : `+ ${pipT(
-        `Altres participacions de la secció oficial fora de competició (${n} pel·lícules)`,
-        `Mostrar ${n} películas fuera de competición (de la sección oficial)`
-      )}`;
-  if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
 
 /* ============================================================
