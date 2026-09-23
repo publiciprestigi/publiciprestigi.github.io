@@ -330,13 +330,11 @@ function construirForaCompeticio(festival, seccioId) {
 
   cont.innerHTML = `
     <div class="fora-competicio-bloc">
-      <h2 class="fora-competicio-titol">${pipT('Fora de competició','Fuera de competición')}</h2>
-      <p class="fora-competicio-intro">${pipT(
-        'Pel·lícules dins el nucli de la selecció oficial però fora de competició, ja sigui com a inauguració, clausura o presentació especial. Només estrenes de cinema. Es mostren com a context i no formen part del corpus principal.',
-        'Películas dentro del núcleo de la selección oficial pero fuera de competición, ya sea como inauguración, clausura o presentación especial. Solo estrenos de cine. Se muestran como contexto y no forman parte del corpus principal.'
-      )}</p>
       <button class="btn-context fora-competicio-toggle" type="button" aria-expanded="false" aria-controls="${cid}" onclick="toggleForaCompeticio('${cid}', this, ${films.length})">
-        + ${pipT('Mostrar','Mostrar')} ${films.length} ${pipT('participacions','participaciones')}
+        + ${pipT(
+          `Mostrar ${films.length} pel·lícules fora de competició (de la secció oficial)`,
+          `Mostrar ${films.length} películas fuera de competición (de la sección oficial)`
+        )}
       </button>
       <div id="${cid}" class="fora-competicio-contingut" hidden>
         <table class="taula-festivals taula-festivals-context">
@@ -362,8 +360,14 @@ function toggleForaCompeticio(id, boto, n) {
   cont.hidden = !obre;
   boto.setAttribute('aria-expanded', String(obre));
   boto.textContent = obre
-    ? `− ${pipT('Amagar fora de competició','Ocultar fuera de competición')}`
-    : `+ ${pipT('Mostrar','Mostrar')} ${n} ${pipT('participacions','participaciones')}`;
+    ? `− ${pipT(
+        'Amagar pel·lícules fora de competició (de la secció oficial)',
+        'Ocultar películas fuera de competición (de la sección oficial)'
+      )}`
+    : `+ ${pipT(
+        `Mostrar ${n} pel·lícules fora de competició (de la secció oficial)`,
+        `Mostrar ${n} películas fuera de competición (de la sección oficial)`
+      )}`;
   if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
 
