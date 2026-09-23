@@ -1378,13 +1378,10 @@ body.part-ii .titol-sticky-sup { color: #9B2335; }
    ============================================================ */
 .sidebar-link-badge,
 .drawer-link-badge {
-  display: block;
-}
-
-.sidebar-link-badge .chapter-badge,
-.drawer-link-badge .chapter-badge {
-  margin-left: 6px;
-  vertical-align: 0.08em;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 .chapter-badge {
@@ -1466,6 +1463,10 @@ html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
 .taula-festivals-context em,
 .taula-festivals-context .estrella {
   color: #888 !important;
+}
+
+.taula-festivals-context th {
+  border-bottom-color: #aaa !important;
 }
 
 /* Pàgines encara no editades de la v1.2 */
