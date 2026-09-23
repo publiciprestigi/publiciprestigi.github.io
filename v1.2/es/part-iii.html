@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="III — Análisis. Cruces, comparativas e interpretaciones (1965–2025).">
+  <link rel="canonical" href="https://publiciprestigi.com/es/part-iii.html">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/part-iii.html">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/part-iii.html">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/part-iii.html">
+  <title>III — Análisis · Públic i Prestigi</title>
+  <link rel="stylesheet" href="../css/estil.css">
+  <link rel="stylesheet" href="../css/textos-extra.css">
+  <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    window.pipPath = function (path) {
+      var base = document.documentElement.getAttribute('data-base') || '';
+      return base + path;
+    };
+  </script>
+  <!-- Borrador completo en castellano para revisión. -->
+</head>
+<body class="amb-sidebar part-iii">
+
+  <!-- ── Cabecera ES ── -->
+  <header class="capcalera capcalera-v2">
+    <div class="capcalera-interior">
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
+      </div>
+
+      <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+
+        <div class="capcalera-idioma">
+          <a href="../part-iii.html" lang="ca" hreflang="ca">CA</a>
+          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="./" class="nav-link">Inicio</a>
+      <a href="part-i.html" class="nav-link">I — Público</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigio</a>
+      <a href="part-iii.html" class="nav-link actiu">III — Análisis</a>
+      <a href="sobre.html" class="nav-link">Sobre el proyecto</a>
+    </div>
+  </nav>
+
+  <div class="layout-sidebar">
+
+    <aside class="sidebar">
+      <div class="sidebar-spacer"></div>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Capítulos</div>
+        <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona</a>
+        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolución de la brecha</a>
+        <a href="#" class="sidebar-link" data-seccio="caza-alcarras">La caza vs. Alcarràs</a>
+        <a href="#" class="sidebar-link" data-seccio="lleis">Cine, leyes y tecnología</a>
+        <a href="#" class="sidebar-link" data-seccio="generacions">Dos generaciones, dos mercados y un prestigio</a>
+        <a href="#" class="sidebar-link" data-seccio="autor-industrial">Cine de autor industrial</a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="conclusions"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+      </div>
+      <div class="sidebar-separador"></div>
+      <div class="sidebar-grup">
+        <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notas</a>
+      </div>
+    </aside>
+
+    <main class="contingut-sidebar">
+      <div class="titol-sticky">
+        <p class="titol-sticky-sup" id="titol-sup"></p>
+        <h1 id="titol-principal"></h1>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-doble-corona">
+        <div class="text-md text-md-intro" data-text="part-iii/doble-corona" data-bloc="intro"></div>
+        <div id="taula-doble-corona"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-corona"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/doble-corona" data-bloc="intro-cercle"></div>
+        <div id="taula-segon-cercle"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-cercle"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-bretxa">
+        <div class="text-md text-md-intro" data-text="part-iii/bretxa" data-bloc="intro"></div>
+        <div id="taula-bretxa"></div>
+        <div class="text-md text-md-llegenda" data-text="part-iii/bretxa" data-bloc="llegenda-taula" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/bretxa" data-bloc="comentari"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/bretxa" data-bloc="intro-grafic1"></div>
+        <div class="grafic-wrap" style="height:340px;position:relative;margin-top:18px">
+          <canvas id="grafic-bretxa"></canvas>
+        </div>
+          <div class="text-md" data-text="part-iii/bretxa" data-bloc="post-grafic1" style="margin-top:28px"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-caza-alcarras">
+        <div class="text-md text-md-intro" data-text="part-iii/caza-alcarras" data-bloc="intro"></div>
+        <div id="taula-caza-comparativa"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-taula"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-iaa"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-iaa"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-distribucio"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-distribucio"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="final-distribucio"></div>
+        <div class="grafic-wrap" style="height:270px;position:relative;margin-top:24px;margin-bottom:0;border-bottom:none">
+          <canvas id="grafic-caza-iaa"></canvas>
+        </div>
+        <div class="text-md text-md-comentari" style="border-top:1px solid #e5e5e5;padding-top:20px;margin-top:24px" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-lleis">
+        <div class="text-md text-md-intro" data-text="part-iii/lleis" data-bloc="intro"></div>
+        <div id="grafic-lleis"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/lleis" data-bloc="moments"></div>
+        <div class="text-md text-md-comentari" data-text="part-iii/lleis" data-bloc="conclusio"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-generacions">
+        <div class="text-md text-md-intro" data-text="part-iii/dues-generacions" data-bloc="intro"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-saura"></div>
+        <div id="taula-saura"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-saura"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-almodovar"></div>
+        <div id="taula-almodovar"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-almodovar"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="text-grafic1"></div>
+        <div id="grafic-sa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="sa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div style="min-width:1700px;height:520px;position:relative">
+                <canvas id="grafic-saura-almodovar"></canvas>
+              </div>
+            </div>
+            <div id="sa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-actual"></div>
+        <div id="taula-actual"></div>
+        <div class="text-md text-md-comentari" style="border-top-width:0;padding-top:0" data-text="part-iii/dues-generacions" data-bloc="comentari-actual"></div>
+
+        <div id="grafic-ga-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0">
+          <div class="grafic-wrap" style="height:720px;position:relative;border-top:none;border-bottom:none">
+            <canvas id="grafic-generacio-actual"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-autor-industrial">
+        <div class="text-md text-md-intro" data-text="part-iii/autor-industrial" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-iglesia"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-amenabar"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-bayona"></div>
+
+        <div id="grafic-ai-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="ai-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div style="min-width:1700px;height:480px;position:relative">
+                <canvas id="grafic-autor-industrial"></canvas>
+              </div>
+            </div>
+            <div id="ai-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="conclusio"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="paradoxa"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-mapa-canon">
+        <div class="text-md text-md-intro" data-text="part-iii/mapa-canon" data-bloc="intro"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="fonts"></div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="criteri"></div>
+
+        <div id="grafic-mapa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <div style="position:relative">
+            <div id="mapa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div id="grafic-mapa-canon" style="min-width:720px"></div>
+            </div>
+            <div id="mapa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+          </div>
+        </div>
+
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="nucli"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="intermedis"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="extrems"></div>
+        <div class="text-md text-md-intermedi"
+             style="border-top:1px solid #e0e0e0; padding-top:20px; margin-top:24px"
+             data-text="part-iii/mapa-canon"
+             data-bloc="tancament"></div>
+      </div>
+
+      <div class="seccio-contingut" id="seccio-conclusions">
+        <div class="text-md text-md-intro" data-text="part-iii/conclusions" data-bloc="intro"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cap"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cos"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2-cap"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2-cos"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-3"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-4"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-5"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-6"></div>
+        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-7"></div>
+      </div>
+
+      <div class="nav-seccions">
+        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+        <button class="btn-top" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
+        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+      </div>
+  </div>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Buscar en el estudio..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+    <!-- ── Modal de suscripción ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
+      <h2 id="subscripcio-titol">Suscríbete</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
+        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+      </div>
+
+      <div class="subscripcio-accions">
+        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── MODAL SUSCRIPCIÓN ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const continuar = document.getElementById('subscripcio-continuar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => continuar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    if (typeof window.toggleBuscador !== 'function') {
+      window.toggleBuscador = function() {
+        const o = document.getElementById('buscador-overlay');
+        const i = document.getElementById('buscador-input');
+        if (!o || !i) return;
+        if (o.style.display === 'none') {
+          o.style.display = 'flex';
+          i.focus();
+        } else {
+          o.style.display = 'none';
+          i.value = '';
+          const r = document.getElementById('buscador-resultats');
+          if (r) r.innerHTML = '';
+        }
+      };
+    }
+
+    // Lupa accesible con teclado.
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+  </script>
+
+<script>
+    const seccions = [
+      { id: 'doble-corona', titol: 'La doble corona',                           sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'bretxa',       titol: 'Evolución de la brecha público vs. prestigio', sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'caza-alcarras', titol: 'La caza vs. Alcarràs', titolHTML: '<em>La caza</em> vs. <em>Alcarràs</em>', sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'lleis', titol: 'Cine, leyes y tecnología', sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'generacions', titol: 'Dos generaciones, dos mercados y un prestigio', sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'autor-industrial', titol: 'Cine de autor industrial', sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'mapa-canon', titol: 'El mapa del canon', sup: 'Cruces, comparativas e interpretaciones' },
+      { id: 'conclusions', titol: 'Conclusiones: de las métricas a las paradojas', sup: 'Cruces, comparativas e interpretaciones' },
+    ];
+
+    let actual = 0;
+    let graficBretxaInit = false;
+    let graficCazaInit = false;
+    let graficSAInit = false;
+    let graficGAInit = false;
+    let graficAIInit = false;
+    let graficConc1Init = false;
+    let graficConc2Init = false;
+    let graficMapaInit = false;
+
+    function mostraSeccio(idx) {
+      actual = idx;
+      const s = seccions[idx];
+      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+      document.getElementById('seccio-' + s.id).style.display = 'block';
+      document.getElementById('titol-sup').textContent = s.sup;
+      document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
+      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+      if (lnk) lnk.classList.add('actiu');
+      const prev = seccions[idx - 1];
+      const next = seccions[idx + 1];
+      const btnAnt = document.getElementById('btn-anterior');
+      const btnSeg = document.getElementById('btn-seguent');
+      btnAnt.textContent = prev ? '← ' + prev.titol : '';
+      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
+      btnSeg.textContent = next ? next.titol + ' →' : '';
+      btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      document.querySelector('.contingut-sidebar').scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      history.pushState({ idx }, '', '#' + s.id);
+      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
+
+      // Inicialitza el gràfic de bretxa la primera vegada que es visita
+      if (s.id === 'bretxa' && !graficBretxaInit) {
+        graficBretxaInit = true;
+        if (window.PiP_graficBretxa && bretxaDades) setTimeout(window.PiP_graficBretxa, 50);
+        else { var _tb = setInterval(function() { if (window.PiP_graficBretxa && bretxaDades) { clearInterval(_tb); window.PiP_graficBretxa(); } }, 100); }
+      }
+      if (s.id === 'caza-alcarras' && !graficCazaInit) {
+        graficCazaInit = true;
+        if (window.PiP_graficCazaIAA) setTimeout(window.PiP_graficCazaIAA, 50);
+        else { var _t = setInterval(function() { if (window.PiP_graficCazaIAA) { clearInterval(_t); window.PiP_graficCazaIAA(); } }, 100); }
+      }
+      if (s.id === 'generacions') {
+        if (!graficSAInit) {
+          graficSAInit = true;
+          if (window.PiP_graficSauraAlmodovar) setTimeout(window.PiP_graficSauraAlmodovar, 50);
+          else { var _tsa = setInterval(function() { if (window.PiP_graficSauraAlmodovar) { clearInterval(_tsa); window.PiP_graficSauraAlmodovar(); } }, 100); }
+        }
+        if (!graficGAInit) {
+          graficGAInit = true;
+          if (window.PiP_graficGeneracioActual) setTimeout(window.PiP_graficGeneracioActual, 100);
+          else { var _tga = setInterval(function() { if (window.PiP_graficGeneracioActual) { clearInterval(_tga); window.PiP_graficGeneracioActual(); } }, 100); }
+        }
+      }
+      if (s.id === 'autor-industrial' && !graficAIInit) {
+        graficAIInit = true;
+        if (window.PiP_graficAutorIndustrial) setTimeout(window.PiP_graficAutorIndustrial, 50);
+        else { var _tai = setInterval(function() { if (window.PiP_graficAutorIndustrial) { clearInterval(_tai); window.PiP_graficAutorIndustrial(); } }, 100); }
+      }
+      if (s.id === 'mapa-canon' && !graficMapaInit) {
+        graficMapaInit = true;
+        if (window.PiP_graficMapaCanon) setTimeout(window.PiP_graficMapaCanon, 50);
+        else { var _tmc = setInterval(function() { if (window.PiP_graficMapaCanon) { clearInterval(_tmc); window.PiP_graficMapaCanon(); } }, 100); }
+      }
+      if (s.id === 'conclusions') {
+        if (!graficConc1Init && window.PiP_graficConclusions1) {
+          graficConc1Init = true;
+          setTimeout(window.PiP_graficConclusions1, 50);
+        }
+        if (!graficConc2Init && window.PiP_graficConclusions2) {
+          graficConc2Init = true;
+          setTimeout(window.PiP_graficConclusions2, 100);
+        }
+      }
+    }
+
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
+
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.addEventListener('click', e => {
+        if (a.dataset.extern) return;
+        e.preventDefault();
+        const idx = seccions.findIndex(s => s.id === a.dataset.seccio);
+        if (idx >= 0) mostraSeccio(idx);
+      });
+    });
+
+    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label_es || data.versio_label; }).catch(() => {});
+
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      mostraSeccio(idx >= 0 ? idx : 0);
+    })();
+
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+        document.getElementById('titol-principal').innerHTML = s.titolHTML || s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
+  </script>
+
+  <script src="../js/scroll-header.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/scroll-fade.js"></script>
+  <script src="../js/textos.js"></script>
+  <script src="../js/part-iii.js"></script>
+  <script src="../js/notes-tooltip.js"></script>
+
+
+
+
+  <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="./" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer-seccio"><a href="./" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fuentes y herramientas</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercado y población</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resumen por década</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Por penetración</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Por cuota de mercado</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Por IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Por directores</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigio</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <div class="drawer-grup-titol">Festivales</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#paralleles" onclick="toggleDrawer()"><span>Secciones paralelas</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
+        <div class="drawer-grup-titol">Premios de academias</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA y Donatello</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+      </div>
+
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Análisis</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítulos</div>
+        <a class="drawer-link" onclick="navegaDrawer('doble-corona')">La doble corona</a>
+        <a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolución de la brecha</a>
+        <a class="drawer-link" onclick="navegaDrawer('caza-alcarras')">La caza vs. Alcarràs</a>
+        <a class="drawer-link" onclick="navegaDrawer('lleis')">Cine, leyes y tecnología</a>
+        <a class="drawer-link" onclick="navegaDrawer('generacions')">Dos generaciones</a>
+        <a class="drawer-link" onclick="navegaDrawer('autor-industrial')">Cine de autor industrial</a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('conclusions')"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
+  </nav>
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+    function navegaDrawer(seccioId) {
+      toggleDrawer();
+      const idx = seccions.findIndex(s => s.id === seccioId);
+      if (idx >= 0) mostraSeccio(idx);
+    }
+  </script>
+  <script src="../js/idioma.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

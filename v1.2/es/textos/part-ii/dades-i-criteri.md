@@ -1,0 +1,23 @@
+Los festivales como termómetro del reconocimiento crítico especializado del cine español. En esta segunda parte, el estudio recoge la presencia y los premios obtenidos por películas españolas en las secciones oficiales competitivas de los cuatro festivales internacionales más representativos: <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venecia</strong>, <strong style="color:#1976D2">Berlín</strong> y <strong style="color:#E07B2A">San Sebastián</strong>.
+
+## Premios y límites del criterio
+
+El ámbito de los datos se limita estrictamente a la sección oficial a concurso de cada festival: En Compétition, Concorso, Wettbewerb y Sección Oficial a concurso. Quedan excluidas las secciones oficiales no competitivas y todas las secciones paralelas (Un Certain Regard, Orizzonti, Panorama, Quinzaine des Cinéastes, Zabaltegi, etc.). El recuento de premios se limita al máximo galardón de cada festival, los premios especiales del jurado, la mejor dirección, las mejores interpretaciones y el mejor guion; no se incluyen otros premios técnicos o secundarios.
+
+## Presencia en las secciones oficiales
+
+Que una película haya sido seleccionada en competición oficial en uno de los cuatro festivales considerados es, en sí mismo, un reconocimiento de primer nivel: es el festival, como institución, quien valida el film ante la comunidad cinematográfica internacional y lo sitúa en el debate crítico global. Los premios que conceden posteriormente los jurados añaden un reconocimiento adicional, pero de naturaleza distinta: dependen de la composición cambiante del jurado, las tendencias estéticas del momento y los equilibrios geográficos y políticos. No miden una calidad objetiva, sino que reflejan el consenso de un grupo determinado en un momento concreto. Por eso incorporamos todas las películas seleccionadas, premiadas o no, como objeto de análisis relevante.
+
+En las tablas de cada festival que veremos a continuación se indica con el símbolo ★ si la película ha obtenido algún premio, si también forma parte del Top 100 de espectadores de la Parte I, y/o la posición documentada dentro de la década correspondiente, y el número de espectadores acumulados en salas de cine según las cifras del ICAA, recogidas hasta la última semana de febrero de 2026.
+
+El orden de presentación, y de evaluación en los rankings posteriores, responde a una jerarquía de prestigio ampliamente reconocida, aunque no estrictamente oficial: Cannes, Venecia y Berlín constituyen el núcleo de los tres grandes festivales internacionales de referencia, con Cannes en una primera posición muy consolidada y Venecia y Berlín en posiciones cercanas, a menudo intercambiables según el peso que se conceda a la historia, la dimensión institucional o la proyección industrial de cada festival.
+
+San Sebastián, pese a compartir con ellos la acreditación FIAPF de clase A, ocupa una posición distinta dentro del circuito internacional. <sup>[6]</sup> Su proyección global es menor, pero mantiene una relación mucho más directa con la industria cinematográfica española. Esto explica que tenga una presencia muy superior: el festival funciona como una ventana natural para producciones españolas de calidad, lo que genera una *sobrerrepresentación* respecto a los demás festivales europeos.
+
+## Coproducciones internacionales
+
+A diferencia del Top 100 de la Parte I, que sigue el criterio oficial del ICAA, aquí no se incorporan automáticamente todas las coproducciones con participación española. El criterio prioriza las obras con una vinculación clara con la industria española por autoría, producción mayoritaria o reconocimiento institucional. Las coproducciones hispanoamericanas que han optado al Goya a la mejor película iberoamericana, por ejemplo, quedan fuera del corpus.
+
+## Sobre las fuentes
+
+Los datos se han recopilado principalmente a partir de los archivos históricos disponibles en las webs oficiales de cada festival. En los casos de <a href="https://www.festival-cannes.com/retrospective/" target="_blank" rel="noopener">Cannes</a>, <a href="https://www.berlinale.de/de/archiv/archivuebersicht/willkommen.html" target="_blank" rel="noopener">Berlín</a> y <a href="https://www.sansebastianfestival.com/archivo/2/es" target="_blank" rel="noopener">San Sebastián</a>, estos archivos son especialmente exhaustivos. Para <a href="https://www.labiennale.org/it/storia-della-mostra-del-cinema" target="_blank" rel="noopener">Venecia</a>, la web no ofrece el mismo grado de detalle, por lo que determinados datos se han completado con fuentes complementarias como Wikipedia, con las posibles incertidumbres propias de las fuentes no oficiales. Toda corrección de inexactitudes será bienvenida.

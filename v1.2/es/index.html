@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="es" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://publiciprestigi.com/es/">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/">
+  <meta name="description" content="Públic i Prestigi — Métricas y paradojas del cine español en dos circuitos (1965–2025)">
+  <title>Públic i Prestigi — Métricas y paradojas del cine español en dos circuitos</title>
+  <link rel="stylesheet" href="../css/estil.css">
+  <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
+  <style>
+    .contingut { padding-top: 0; padding-bottom: 0; }
+    .inici-portada { max-width: var(--amplada-max); padding: 0; }
+
+    .inici-antetitol {
+      font-size: 0.72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Hero */
+    .inici-hero {
+      display: grid;
+      grid-template-columns: 1fr 1.45fr;
+      gap: 56px;
+      align-items: center;
+      padding-bottom: 16px;
+    }
+
+    .inici-claim {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.08;
+      color: #222222;
+      letter-spacing: -0.025em;
+      margin: 0;
+    }
+    @media (min-width: 769px) {
+      .inici-claim .claim-es-line { display: block; }
+    }
+
+    .inici-hero-grafic svg { width: 100%; display: block; }
+
+    /* Text + xifres: un sol bloc sense separador */
+    .inici-text-xifres {
+      padding: 16px 0 36px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .inici-intro-text {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.7;
+      margin: 0 0 32px 0;
+      max-width: 90%;
+    }
+
+    .inici-xifres {
+      display: flex;
+      gap: 0;
+    }
+
+    .inici-xifra-bloc {
+      flex: 1;
+    }
+
+    .inici-xifra-n {
+      display: block;
+      font-size: 2.6rem;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .inici-xifra-l {
+      display: block;
+      font-size: 0.82rem;
+      color: #888;
+      letter-spacing: .02em;
+    }
+
+    /* Bloc inferior */
+    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
+    .inici-part {
+      display: grid;
+      grid-template-columns: 48px 1fr 24px;
+      align-items: center;
+      gap: 8px;
+      padding: 0 24px 0 0;
+      border-bottom: 1px solid #e5e5e5;
+      text-decoration: none;
+      color: inherit;
+      transition: background .12s;
+      flex: 1;
+    }
+    .inici-part:last-child { border-bottom: none; }
+    .inici-part:hover { background: #f9f9f7; }
+    .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
+    .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
+    .inici-part-info .sub { font-size: 0.82rem; color: #888; }
+    .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
+
+    .inici-substack {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 0 0 0 40px;
+      color: inherit;
+    }
+
+    .inici-substack-header,
+    .inici-substack-foto-link {
+      color: inherit;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+
+    .inici-substack-header:hover,
+    .inici-substack-foto-link:hover {
+      opacity: 0.88;
+      text-decoration: none;
+    }
+
+    .inici-substack-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 18px 0;
+    }
+
+    .inici-substack-titol {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
+    }
+
+
+    .inici-substack-foto {
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 0;
+      height: 300px;
+      position: relative;
+    }
+
+    .inici-substack-foto-link {
+      display: block;
+      cursor: grab;
+      touch-action: pan-y;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    .inici-substack-foto-link.arrossegant { cursor: grabbing; }
+
+    .inici-substack-foto-link img {
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-user-drag: none;
+      pointer-events: none;
+    }
+
+    .inici-substack-peu {
+      display: flex;
+      align-items: center;
+      min-height: 20px;
+      padding: 12px 0 18px;
+    }
+
+    .inici-substack-punts {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .inici-substack-punt {
+      width: 7px;
+      height: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 50%;
+      background: #d6d6d6;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+    }
+
+    .inici-substack-punt:hover {
+      background: #999;
+    }
+
+    .inici-substack-punt.actiu {
+      background: #363737;
+      transform: scale(1.12);
+    }
+
+    .inici-substack-pista {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+
+    .inici-substack-slide {
+      flex: 0 0 100%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .inici-substack-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+
+    /* Novetats de la versió */
+    .inici-novetats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+      min-height: 50px;
+      padding: 0 18px;
+      margin: 0 0 28px;
+      background: #fbfbfa;
+      box-shadow: 0 0 0 100vmax #fbfbfa;
+      clip-path: inset(0 -100vmax);
+      border-bottom: 1px solid #eeeeec;
+      box-sizing: border-box;
+      white-space: nowrap;
+      position: relative;
+    }
+    .inici-novetat-grup {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      min-width: 0;
+      font-size: 0.82rem;
+      color: #555;
+    }
+
+    .inici-novetat-badge {
+      flex: 0 0 auto;
+      font-size: 0.60rem;
+      font-weight: 700;
+      line-height: 1;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      padding: 4px 6px;
+      background: #ececec;
+      color: #777;
+    }
+
+    .inici-novetat-badge.nou {
+      background: #e8f5ec;
+      color: #2a7a3b;
+    }
+
+    .inici-novetat-grup a {
+      color: #888;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(0,0,0,.3);
+    }
+
+    .inici-novetat-grup a:hover {
+      color: #1a1a1a;
+    }
+
+    /* ── Responsive portada ── */
+    @media (max-width: 768px) {
+      .contingut { padding-top: 0; }
+
+      .inici-novetats {
+        padding: 14px 16px;
+      }
+
+      .inici-antetitol {
+        font-size: 0.65rem;
+        margin-bottom: 16px;
+      }
+
+      .inici-novetats {
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px 22px;
+        white-space: normal;
+      }
+
+      .inici-novetat-grup {
+        flex-wrap: wrap;
+      }
+
+      /* Hero: columna única, gràfic sota el titular */
+      .inici-hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 8px;
+      }
+      .inici-claim {
+        font-size: 1.8rem;
+      }
+      .inici-claim .claim-es-line { display: inline; }
+      .inici-claim .claim-es-line + .claim-es-line::before { content: " "; }
+
+      /* Centrat visual del gràfic només en pantalles estretes */
+      .inici-hero-grafic {
+        transform: translateX(-4%);
+      }
+
+      /* Xifres: 2 columnes x 3 files */
+      .inici-xifres {
+        flex-wrap: wrap;
+        gap: 16px 0;
+      }
+      .inici-xifra-bloc {
+        flex: 0 0 50%;
+      }
+      .inici-xifra-n {
+        font-size: 2rem;
+      }
+
+      /* Bloc inferior: columna única */
+      .inici-inferior {
+        grid-template-columns: 1fr;
+      }
+      .inici-parts {
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      .inici-part {
+        padding: 16px 0;
+      }
+
+      /* Substack: sense padding lateral */
+      .inici-substack {
+        padding: 0;
+      }
+      .inici-substack-foto {
+        height: 220px;
+      }
+    }
+  </style>
+
+  <script>
+    window.pipPath = function (path) {
+      var base = document.documentElement.getAttribute('data-base') || '';
+      return base + path;
+    };
+  </script>
+  <!-- Versión española completa para revisión editorial. -->
+</head>
+<body class="pag-inici">
+
+  <!-- ── Cabecera ES ── -->
+  <header class="capcalera capcalera-v2">
+    <div class="capcalera-interior">
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
+      </div>
+
+      <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+
+        <a href="sobre.html" class="capcalera-sobre" aria-label="Sobre el proyecto"><span class="capcalera-sobre-complet" aria-hidden="true">Sobre el proyecto</span><span class="capcalera-sobre-curt" aria-hidden="true">Sobre</span></a>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+
+        <div class="capcalera-idioma">
+          <a href="../" lang="ca" hreflang="ca">CA</a>
+          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="./" class="nav-link actiu">Inicio</a>
+      <a href="part-i.html" class="nav-link">I — Público</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigio</a>
+      <a href="part-iii.html" class="nav-link">III — Análisis</a>
+      <a href="sobre.html" class="nav-link">Sobre el proyecto</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+    <div class="inici-portada">
+
+      <section class="inici-novetats" id="inici-novetats" aria-label="Novedades de la versión 1.1">
+        <span class="inici-novetat-grup">
+          <span class="inici-novetat-badge nou">Nuevo</span>
+          <a href="part-iii.html#mapa-canon">El mapa del canon</a>
+        </span>
+      </section>
+
+      <p class="inici-antetitol">Métricas y paradojas del cine español en dos circuitos (1965–2025)</p>
+
+      <div class="inici-hero">
+        <div>
+          <p class="inici-claim"><span class="claim-es-line">Dos maneras de</span><span class="claim-es-line">entender el éxito.</span><span class="claim-es-line">Una misma</span><span class="claim-es-line">historia.</span></p>
+        </div>
+        <div class="inici-hero-grafic">
+          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+
+      <!-- Text + xifres: bloc únic sense separador intern -->
+      <div class="inici-text-xifres">
+        <p class="inici-intro-text">¿Qué películas han llegado a más espectadores? ¿Cuáles han obtenido más reconocimiento? ¿Y cuándo, excepcionalmente, coinciden? A partir de este juego inicial, surgen otras preguntas más hondas: ¿qué ocurre cuando las salas ya no explican todo el impacto de una película? ¿Hasta qué punto el cine de autor se ha alejado del gran público? ¿Cómo cambian la memoria, el canon y las narrativas cuando también cambian las formas de ver cine?</p>
+        <p class="inici-intro-text">Un estudio vivo que mide y analiza la tensión entre público masivo y prestigio crítico, y todo lo que revela. ¡Bienvenidos!</p>
+        <div class="inici-xifres">
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#2a5582">294M</span>
+            <span class="inici-xifra-l">espectadores acumulados</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">285</span>
+            <span class="inici-xifra-l">films en secciones oficiales</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">99</span>
+            <span class="inici-xifra-l">films premiados</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#5a4a8a">11</span>
+            <span class="inici-xifra-l">dobles coronas</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n">60</span>
+            <span class="inici-xifra-l">años documentados</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="inici-inferior">
+        <div class="inici-parts">
+          <a href="part-i.html" class="inici-part">
+            <div class="inici-part-num" style="color:#2a5582">I</div>
+            <div class="inici-part-info">
+              <div class="nom">Público</div>
+              <div class="sub">Top 100 de películas con más espectadores</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+          <a href="part-ii.html" class="inici-part">
+            <div class="inici-part-num" style="color:#9B2335">II</div>
+            <div class="inici-part-info">
+              <div class="nom">Prestigio</div>
+              <div class="sub">Cannes, Berlín, Venecia, San Sebastián</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+          <a href="part-iii.html" class="inici-part">
+            <div class="inici-part-num" style="color:#5a4a8a">III</div>
+            <div class="inici-part-info">
+              <div class="nom">Análisis</div>
+              <div class="sub">Cruces, comparativas e interpretaciones</div>
+            </div>
+            <div class="inici-part-arrow">→</div>
+          </a>
+        </div>
+        <div class="inici-substack">
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-header" target="_blank" rel="noopener">
+            <span class="inici-substack-titol">Substack</span>
+            <span class="inici-part-arrow">↗</span>
+          </a>
+
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-foto-link" target="_blank" rel="noopener" aria-label="Abre el Substack de Públic i Prestigi">
+            <div class="inici-substack-foto">
+              <div class="inici-substack-pista" id="substack-pista">
+                <div class="inici-substack-slide">
+                  <img src="../img/saura-montiel.jpg" alt="Carlos Saura y Sara Montiel" style="object-position:center 30%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="../img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi y José Luis Borau" style="object-position:center 15%" />
+                </div>
+                <div class="inici-substack-slide">
+                  <img src="../img/pedro-laxe.jpg" alt="Pedro Almodóvar y Oliver Laxe" style="object-position:center 45%; transform:scale(1.02); transform-origin:center;" />
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <div class="inici-substack-peu">
+            <div class="inici-substack-punts" id="substack-punts" aria-label="Selecciona una imagen del carrusel"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Buscar en el estudio..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+    <!-- ── Modal de suscripción ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
+      <h2 id="subscripcio-titol">Suscríbete</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
+        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+      </div>
+
+      <div class="subscripcio-accions">
+        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── MODAL SUSCRIPCIÓN ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const continuar = document.getElementById('subscripcio-continuar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => continuar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    if (typeof window.toggleBuscador !== 'function') {
+      window.toggleBuscador = function() {
+        const o = document.getElementById('buscador-overlay');
+        const i = document.getElementById('buscador-input');
+        if (!o || !i) return;
+        if (o.style.display === 'none') {
+          o.style.display = 'flex';
+          i.focus();
+        } else {
+          o.style.display = 'none';
+          i.value = '';
+          const r = document.getElementById('buscador-resultats');
+          if (r) r.innerHTML = '';
+        }
+      };
+    }
+
+    // Lupa accesible con teclado.
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+  </script>
+
+<script>
+    // ── CARRUSSEL FOTO PORTADA ──
+    (function() {
+      const pista = document.getElementById('substack-pista');
+      const puntsWrap = document.getElementById('substack-punts');
+      const fotoLink = document.querySelector('.inici-substack-foto-link');
+      const foto = document.querySelector('.inici-substack-foto');
+      if (!pista || !puntsWrap || !fotoLink || !foto) return;
+
+      fotoLink.setAttribute('draggable', 'false');
+      fotoLink.querySelectorAll('img').forEach(function(img) { img.draggable = false; });
+
+      const slidesOriginals = Array.from(pista.children);
+      const total = slidesOriginals.length;
+      if (total < 2) return;
+
+      // Clones en ambos extremos para permitir arrastrar en cualquier dirección.
+      pista.insertBefore(slidesOriginals[total - 1].cloneNode(true), pista.firstChild);
+      pista.appendChild(slidesOriginals[0].cloneNode(true));
+
+      let actual = 1;
+      let temporitzador;
+      let iniciX = 0;
+      let deltaX = 0;
+      let arrossegant = false;
+      let haArrossegat = false;
+      let bloquejaClic = false;
+
+      function senseTransicio() {
+        pista.style.transition = 'none';
+      }
+
+      function ambTransicio() {
+        pista.style.transition = 'transform 0.6s ease';
+      }
+
+      function posiciona(index, deltaPx) {
+        const extra = deltaPx || 0;
+        pista.style.transform = 'translate3d(calc(-' + (index * 100) + '% + ' + extra + 'px), 0, 0)';
+      }
+
+      function indexVisible() {
+        return ((actual - 1) % total + total) % total;
+      }
+
+      const punts = Array.from({ length: total }, function(_, index) {
+        const punt = document.createElement('button');
+        punt.type = 'button';
+        punt.className = 'inici-substack-punt';
+        punt.setAttribute('aria-label', 'Muestra la imagen ' + (index + 1) + ' de ' + total);
+        punt.addEventListener('click', function() {
+          actual = index + 1;
+          ambTransicio();
+          posiciona(actual);
+          actualitzaPunts();
+          reinicia();
+        });
+        puntsWrap.appendChild(punt);
+        return punt;
+      });
+
+      function actualitzaPunts() {
+        const visible = indexVisible();
+        punts.forEach(function(punt, index) {
+          const actiu = index === visible;
+          punt.classList.toggle('actiu', actiu);
+          punt.setAttribute('aria-current', actiu ? 'true' : 'false');
+        });
+      }
+
+      let normalitzacioFallback;
+
+      function normalitzaExtrems() {
+        let calReposicionar = false;
+
+        // Fem servir <= / >= per recuperar també qualsevol estat fora de rang.
+        if (actual <= 0) {
+          actual = total;
+          calReposicionar = true;
+        } else if (actual >= total + 1) {
+          actual = 1;
+          calReposicionar = true;
+        }
+
+        if (calReposicionar) {
+          senseTransicio();
+          posiciona(actual);
+          // Força el navegador a aplicar la posició abans d'una nova animació.
+          void pista.offsetWidth;
+        }
+      }
+
+      function programaNormalitzacio() {
+        clearTimeout(normalitzacioFallback);
+        // transitionend pot no disparar-se si la pestanya queda en segon pla
+        // o el navegador interromp l'animació. Aquest fallback evita que
+        // el carrusel acabi posicionat fora dels slides.
+        normalitzacioFallback = setTimeout(normalitzaExtrems, 750);
+      }
+
+      pista.addEventListener('transitionend', function(e) {
+        if (e.propertyName === 'transform') {
+          clearTimeout(normalitzacioFallback);
+          normalitzaExtrems();
+        }
+      });
+
+      function mou(direccio) {
+        // Recupera primer qualsevol extrem que no s'hagi normalitzat.
+        normalitzaExtrems();
+        actual += direccio;
+        ambTransicio();
+        posiciona(actual);
+        actualitzaPunts();
+        programaNormalitzacio();
+      }
+
+      function avanca() {
+        mou(1);
+      }
+
+      function reinicia() {
+        clearInterval(temporitzador);
+        temporitzador = setInterval(avanca, 8000);
+      }
+
+      function iniciaArrossegament(e) {
+        if (e.pointerType === 'mouse' && e.button !== 0) return;
+        normalitzaExtrems();
+        iniciX = e.clientX;
+        deltaX = 0;
+        arrossegant = true;
+        haArrossegat = false;
+        clearInterval(temporitzador);
+        senseTransicio();
+        fotoLink.classList.add('arrossegant');
+        if (foto.setPointerCapture) foto.setPointerCapture(e.pointerId);
+      }
+
+      function arrossega(e) {
+        if (!arrossegant) return;
+        deltaX = e.clientX - iniciX;
+        if (Math.abs(deltaX) > 6) haArrossegat = true;
+        posiciona(actual, deltaX);
+      }
+
+      function acabaArrossegament(e) {
+        if (!arrossegant) return;
+        arrossegant = false;
+        fotoLink.classList.remove('arrossegant');
+        if (foto.releasePointerCapture && foto.hasPointerCapture && foto.hasPointerCapture(e.pointerId)) {
+          foto.releasePointerCapture(e.pointerId);
+        }
+
+        const llindar = Math.max(45, foto.clientWidth * 0.12);
+        ambTransicio();
+
+        if (deltaX <= -llindar) {
+          actual += 1;
+        } else if (deltaX >= llindar) {
+          actual -= 1;
+        }
+
+        posiciona(actual);
+        actualitzaPunts();
+        programaNormalitzacio();
+        bloquejaClic = haArrossegat;
+        setTimeout(function() { bloquejaClic = false; }, 0);
+        reinicia();
+      }
+
+      foto.addEventListener('pointerdown', iniciaArrossegament);
+      foto.addEventListener('pointermove', arrossega);
+      foto.addEventListener('pointerup', acabaArrossegament);
+      foto.addEventListener('pointercancel', acabaArrossegament);
+      foto.addEventListener('dragstart', function(e) { e.preventDefault(); });
+      fotoLink.addEventListener('dragstart', function(e) { e.preventDefault(); });
+
+      fotoLink.addEventListener('click', function(e) {
+        if (bloquejaClic) e.preventDefault();
+      });
+
+      // Posición inicial: primer slide real, después del clon del final.
+      senseTransicio();
+      posiciona(actual);
+      actualitzaPunts();
+      reinicia();
+
+      // Evita estats desincronitzats quan la pestanya queda en segon pla
+      // o quan la pàgina torna des de la memòria bfcache del navegador.
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          clearInterval(temporitzador);
+          clearTimeout(normalitzacioFallback);
+        } else {
+          normalitzaExtrems();
+          reinicia();
+        }
+      });
+
+      window.addEventListener('pageshow', function() {
+        normalitzaExtrems();
+        reinicia();
+      });
+    })();
+
+    fetch(pipPath('data/metadata.json'))
+      .then(r => r.json())
+      .then(data => { document.getElementById('versio-label').textContent = data.versio_label_es || data.versio_label.replace(/^Versió/, 'Versión'); })
+      .catch(() => {});
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.getElementById('buscador-overlay').style.display !== 'none') toggleBuscador();
+    });
+
+    // Només el bloc del gràfic — substitueix l'IIFE anterior
+(function() {
+  const svg = document.getElementById('grafic-circuits');
+  const ns = 'http://www.w3.org/2000/svg';
+  const W = 600, ML = 130, MR = 12;
+  const YP = 60, YF = 110;
+  const A0 = 1965, A1 = 2025;
+  const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
+
+  function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
+  function el(tag, attrs, par) {
+    const e = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+    if (par) par.appendChild(e);
+    return e;
+  }
+
+  // Anys — només text, sense línies
+  [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
+    const t = el('text', { x: x(a), y: 22, 'font-size': '10', fill: '#ccc', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = a;
+  });
+
+  // Etiquetes de carril
+  function cLabel(label, sub, y, col) {
+    const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    t.textContent = label;
+    const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+    s.textContent = sub;
+  }
+  cLabel('PÚBLICO', 'Top 100', YP, COL_PUB);
+  cLabel('PRESTIGIO', 'Festivales', YF, COL_PREST);
+
+  // Pelis emblemàtiques
+  const emblematiques = [1975, 1988, 2004];
+
+  // Punts públic — plens, excepte les emblemàtiques
+  const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+    1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
+    1981,1984,1988,1991,1995,1997,1998,1999,
+    2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
+    2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
+
+  const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
+    1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
+    2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
+
+  // Primer les línies verticals de les 3 pelis (sota els punts)
+  emblematiques.forEach(a => {
+    el('line', { x1: x(a), y1: YP - 10, x2: x(a), y2: YF + 10, stroke: '#ccc', 'stroke-width': '1' }, svg);
+  });
+
+  // Punts públic plens (no emblemàtiques)
+  pub.filter(a => !emblematiques.includes(a)).forEach(a =>
+    el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg)
+  );
+
+  // Punts prestigi plens (no emblemàtiques)
+  prest.filter(a => !emblematiques.includes(a)).forEach(a =>
+    el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg)
+  );
+
+  // Cercles buits per a les emblemàtiques (damunt les línies)
+  emblematiques.forEach(a => {
+    el('circle', { cx: x(a), cy: YP, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+    el('circle', { cx: x(a), cy: YF, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+  });
+
+  // 3 etiquetes escalonades cap avall
+  const etiq = [
+    { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
+    { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
+    { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
+  ];
+
+  etiq.forEach(e => {
+    const cx = x(e.any);
+    // línia continua cap avall des del carril prestigi fins a l'etiqueta
+    el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
+    const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+    tany.textContent = e.any;
+    const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+    ttit.textContent = e.titol;
+  });
+})();
+  </script>
+
+<script src="../js/scroll-header.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/scroll-fade.js"></script> 
+
+
+  <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="./" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer-seccio"><a href="./" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fuentes y herramientas</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercado y población</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resumen por década</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Por penetración</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Por cuota de mercado</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Por IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Por directores</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigio</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <div class="drawer-grup-titol">Festivales</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#paralleles" onclick="toggleDrawer()"><span>Secciones paralelas</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
+        <div class="drawer-grup-titol">Premios de academias</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA y Donatello</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+      </div>
+
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Análisis</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítulos</div>
+        <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolución de la brecha</a>
+        <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cine, leyes y tecnología</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dos generaciones</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cine de autor industrial</a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="#" class="drawer-seccio-cap" onclick="toggleDrawer(); toggleBuscador(); return false;">Buscar</a></div>
+    <div class="drawer-seccio">
+      <div class="drawer-idioma-fila" aria-label="Idioma">
+        <span class="drawer-idioma-label">Idioma</span>
+        <span class="drawer-idioma-links">
+          <a href="../" lang="ca" hreflang="ca">CA</a>
+          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
+        </span>
+      </div>
+    </div>
+
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
+  </nav>
+
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+  </script>
+  <script src="../js/idioma.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

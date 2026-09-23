@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="es" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Historial de versiones — Públic i Prestigi.">
+  <link rel="canonical" href="https://publiciprestigi.com/es/versions.html">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/versions.html">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/versions.html">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/versions.html">
+  <title>Versiones · Públic i Prestigi</title>
+  <link rel="stylesheet" href="../css/estil.css">
+  <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
+  <style>
+    .versio-etiqueta {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border-radius: 3px;
+      vertical-align: middle;
+      margin-left: 10px;
+      position: relative;
+      top: -1px;
+    }
+    .etiqueta-actual   { background: #e8f5ec; color: #2a7a3b; }
+    .etiqueta-prevista { background: #fef3e8; color: #c46a00; }
+    .etiqueta-anterior { background: #f0f0f0; color: #888; }
+
+    .etiqueta-seleccionada {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: #888;
+      margin-left: 8px;
+      vertical-align: middle;
+      position: relative;
+      top: -1px;
+    }
+    .etiqueta-seleccionada .check { color: #2a7a3b; }
+
+    .versio-item {
+      padding: 20px 16px;
+      margin: 0 -16px;
+      border-bottom: 1px solid var(--color-linia);
+      border-left: 3px solid transparent;
+      transition: background .12s;
+    }
+    .versio-item:last-child { border-bottom: none; }
+
+    .versio-cap {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    /* No seleccionades: tot gris uniforme */
+    .versio-num {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #999;
+    }
+    .versio-resum {
+      font-size: 0.95rem;
+      color: #999;
+      line-height: 1.6;
+      margin: 0 0 6px 0;
+    }
+    .versio-data {
+      display: block;
+      font-size: 0.62rem;
+      color: #bbb;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    /* Seleccionada */
+    .versio-item.seleccionada {
+      border-left-color: var(--color-text);
+      background: #fafafa;
+      padding-top: 20px;
+    }
+    .versio-item.seleccionada .versio-num  { color: var(--color-text); }
+    .versio-item.seleccionada .versio-resum { color: #555; }
+    .versio-item.seleccionada .versio-data  { color: #aaa; }
+
+    /* Clicables */
+    .versio-item.clicable { cursor: pointer; }
+    .versio-item.clicable:hover { background: #fafafa; }
+
+    /* Previstes: no clicables */
+    .versio-item.prevista { cursor: default; }
+  </style>
+
+  <script>
+    window.pipPath = function (path) {
+      var base = document.documentElement.getAttribute('data-base') || '';
+      return base + path;
+    };
+  </script>
+  <!-- Versión española: borrador completo pendiente de revisión editorial final. -->
+</head>
+<body>
+
+  <!-- ── Cabecera ES ── -->
+  <header class="capcalera capcalera-v2">
+    <div class="capcalera-interior">
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versión 1.1 (1965–2025)</a>
+      </div>
+
+      <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+
+        <div class="capcalera-idioma">
+          <a href="../versions.html" lang="ca" hreflang="ca">CA</a>
+          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="./" class="nav-link">Inicio</a>
+      <a href="part-i.html" class="nav-link">I — Público</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigio</a>
+      <a href="part-iii.html" class="nav-link">III — Análisis</a>
+      <a href="sobre.html" class="nav-link">Sobre el proyecto</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+
+    <div class="part-capcalera">
+      <h1>Versiones</h1>
+      <p class="part-subtitol">Historial de las versiones publicadas y previstas del estudio.</p>
+    </div>
+
+    <div class="contingut-text" id="llista-versions">
+
+      <div class="versio-item clicable" id="v1-1"
+           data-label="Versión 1.1 (1965–2025)"
+           data-url="/es/">
+        <div class="versio-cap">
+          <span class="versio-num">Versión 1.1</span>
+          <span class="versio-etiqueta etiqueta-actual">Publicada</span>
+        </div>
+        <p class="versio-resum">Actualización con un nuevo capítulo sobre la construcción del canon en la Parte III y revisión de las conclusiones a partir de sus aportaciones. Incluye también ajustes de texto, datos y diseño.</p>
+        <span class="versio-data">Publicación: 18 de julio de 2026</span>
+      </div>
+
+      <div class="versio-item clicable" id="v1"
+           data-label="Versión 1 (1965–2025)"
+           data-url="/v1/">
+        <div class="versio-cap">
+          <span class="versio-num">Versión 1</span>
+          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
+        </div>
+        <p class="versio-resum">Primera versión pública. Incluye la Parte I (15 artículos), la Parte II (8 artículos) y la Parte III (7 artículos), y las páginas de notas, sobre el proyecto, versiones y legal.</p>
+        <span class="versio-data">Publicación: 14 de junio de 2026</span>
+      </div>
+
+      <div class="versio-item prevista" id="v1-2" data-estat="prevista">
+        <div class="versio-cap">
+          <span class="versio-num">Versión 1.2</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
+        </div>
+        <p class="versio-resum">Actualización de la Parte II con datos de las secciones paralelas, otros festivales y premios de las principales academias internacionales.</p>
+        <span class="versio-data">Publicación prevista: otoño de 2027</span>
+      </div>
+      
+      <div class="versio-item prevista" id="v2" data-estat="prevista">
+        <div class="versio-cap">
+          <span class="versio-num">Versión 2</span>
+          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
+        </div>
+        <p class="versio-resum">Segunda edición con la incorporación de los datos de 2026 y una revisión general de los textos.</p>
+        <span class="versio-data">Publicación prevista: primavera de 2027</span>
+      </div>
+
+
+    </div>
+
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Buscar en el estudio..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+    <!-- ── Modal de suscripción ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
+      <h2 id="subscripcio-titol">Suscríbete</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
+        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+      </div>
+
+      <div class="subscripcio-accions">
+        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── MODAL SUSCRIPCIÓN ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const continuar = document.getElementById('subscripcio-continuar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => continuar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    if (typeof window.toggleBuscador !== 'function') {
+      window.toggleBuscador = function() {
+        const o = document.getElementById('buscador-overlay');
+        const i = document.getElementById('buscador-input');
+        if (!o || !i) return;
+        if (o.style.display === 'none') {
+          o.style.display = 'flex';
+          i.focus();
+        } else {
+          o.style.display = 'none';
+          i.value = '';
+          const r = document.getElementById('buscador-resultats');
+          if (r) r.innerHTML = '';
+        }
+      };
+    }
+
+    // Lupa accesible con teclado.
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+  </script>
+
+<script>
+    const VERSIO_ACTUAL_ID = 'v1-1';
+
+    function actualitzarUI() {
+      document.querySelectorAll('.versio-item').forEach(el => {
+        el.classList.remove('seleccionada');
+        const etiqueta = el.querySelector('.etiqueta-seleccionada');
+        if (etiqueta) etiqueta.remove();
+      });
+
+      const actual = document.getElementById(VERSIO_ACTUAL_ID);
+      if (actual) {
+        actual.classList.add('seleccionada');
+        const etiqueta = document.createElement('span');
+        etiqueta.className = 'etiqueta-seleccionada';
+        etiqueta.innerHTML = '<span class="check">✓</span> Seleccionada';
+        actual.querySelector('.versio-cap').appendChild(etiqueta);
+      }
+    }
+
+    document.querySelectorAll('.versio-item.clicable').forEach(el => {
+      el.addEventListener('click', () => {
+        if (el.id === VERSIO_ACTUAL_ID) return;
+        window.location.href = el.dataset.url;
+      });
+    });
+
+    actualitzarUI();
+
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
+    });
+  </script>
+
+<script src="../js/scroll-header.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/scroll-fade.js"></script>   <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="./" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer-seccio"><a href="./" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fuentes y herramientas</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercado y población</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resumen por década</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Por penetración</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Por cuota de mercado</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Por IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Por directores</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigio</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <div class="drawer-grup-titol">Festivales</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#paralleles" onclick="toggleDrawer()"><span>Secciones paralelas</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
+        <div class="drawer-grup-titol">Premios de academias</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA y Donatello</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+      </div>
+
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Análisis</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítulos</div>
+        <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolución de la brecha</a>
+        <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cine, leyes y tecnología</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dos generaciones</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cine de autor industrial</a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
+  </nav>
+
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+  </script>
+  <script src="../js/idioma.js"></script>
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>
