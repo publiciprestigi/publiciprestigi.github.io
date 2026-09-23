@@ -1499,3 +1499,15 @@ html[lang="ca"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
   display: none;
 }
+
+
+/* v1.2 CA — Part II: manté l'scroll lateral però n'amaga la barra visual */
+html[lang="ca"] body.part-ii .sidebar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
