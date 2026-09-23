@@ -1423,55 +1423,49 @@ html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
 
 
 /* ============================================================
-   V1.2 — FORA DE COMPETICIÓ (context, fora del corpus principal)
-   Mateix codi visual que els films de context de la Part I:
-   fons blanc i text gris. Bloc plegable per defecte.
+   v1.2 — Fora de competició
+   Mateix criteri visual que les pel·lícules de context de la Part I:
+   una única caixa desplegable, fons blanc i contingut en gris.
    ============================================================ */
-.fora-competicio {
-  margin-top: 34px;
-  border-top: 1px solid var(--color-linia);
-  padding-top: 18px;
+.fora-competicio-bloc {
+  margin-top: 24px;
 }
-.fora-competicio > summary {
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border: 1px solid var(--color-linia);
-  border-radius: 3px;
-  color: var(--color-text-suau);
-  font-size: 0.84rem;
-  font-weight: 600;
-  background: #fff;
+
+.fora-competicio-toggle {
+  margin: 0;
 }
-.fora-competicio > summary::-webkit-details-marker { display:none; }
-.fora-competicio > summary::after {
-  content: '+';
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: #888;
+
+.fora-competicio-contingut[hidden] {
+  display: none;
 }
-.fora-competicio[open] > summary::after { content: '−'; }
-.fora-competicio > summary:hover { border-color: #aaa; color: var(--color-text); }
-.fora-competicio-contingut { padding-top: 16px; }
-.fora-competicio-nota {
-  margin: 0 0 14px;
-  color: #888;
-  font-size: 0.82rem;
-  line-height: 1.5;
+
+.fora-competicio-contingut {
+  padding-top: 12px;
 }
-.taula-festivals.fora-competicio-taula tbody tr { background:#fff !important; }
-.taula-festivals.fora-competicio-taula tbody td,
-.taula-festivals.fora-competicio-taula tbody td strong,
-.taula-festivals.fora-competicio-taula tbody td em,
-.taula-festivals.fora-competicio-taula tbody .film-any,
-.taula-festivals.fora-competicio-taula tbody .estrella {
-  color:#888 !important;
+
+.taula-festivals-context {
+  background: #fff !important;
 }
+
+.taula-festivals-context thead tr,
+.taula-festivals-context tbody tr,
+.taula-festivals-context th,
+.taula-festivals-context td {
+  background: #fff !important;
+}
+
+.taula-festivals-context th,
+.taula-festivals-context td,
+.taula-festivals-context td.col-subtil,
+.taula-festivals-context td.col-premi,
+.taula-festivals-context .film-any,
+.taula-festivals-context strong,
+.taula-festivals-context em,
+.taula-festivals-context .estrella {
+  color: #888 !important;
+}
+
+/* Pàgines encara no editades de la v1.2 */
 .v12-en-preparacio {
   border-top: 1px solid var(--color-linia);
   padding-top: 22px;
@@ -1500,4 +1494,17 @@ html[lang="ca"] #drawer-part-iii .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
   display: none;
+}
+
+
+/* Reforç: fora de competició = context, sempre blanc + gris */
+.taula-festivals-context .film-context-festival,
+.taula-festivals-context .film-context-festival td,
+.taula-festivals-context .film-context-festival strong,
+.taula-festivals-context .film-context-festival em,
+.taula-festivals-context .film-context-festival .film-any,
+.taula-festivals-context .film-context-festival .col-subtil,
+.taula-festivals-context .film-context-festival .col-premi {
+  background: #fff !important;
+  color: #888 !important;
 }
