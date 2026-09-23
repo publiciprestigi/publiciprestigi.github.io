@@ -332,7 +332,7 @@ function construirForaCompeticio(festival, seccioId) {
     <div class="fora-competicio-bloc">
       <button class="btn-context fora-competicio-toggle" type="button" aria-expanded="false" aria-controls="${cid}" onclick="toggleForaCompeticio('${cid}', this, ${films.length})">
         + ${pipT(
-          `Mostrar ${films.length} pel·lícules de la secció oficial fora de competició`,
+          `Altres participacions de la secció oficial fora de competició (${films.length} pel·lícules)`,
           `Mostrar ${films.length} películas fuera de competición (de la sección oficial)`
         )}
       </button>
@@ -361,11 +361,11 @@ function toggleForaCompeticio(id, boto, n) {
   boto.setAttribute('aria-expanded', String(obre));
   boto.textContent = obre
     ? `− ${pipT(
-        `Amagar les ${n} pel·lícules de la secció oficial fora de competició`,
+        `Altres participacions de la secció oficial fora de competició (${n} pel·lícules)`,
         'Ocultar películas fuera de competición (de la sección oficial)'
       )}`
     : `+ ${pipT(
-        `Mostrar ${n} pel·lícules de la secció oficial fora de competició`,
+        `Altres participacions de la secció oficial fora de competició (${n} pel·lícules)`,
         `Mostrar ${n} películas fuera de competición (de la sección oficial)`
       )}`;
   if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
