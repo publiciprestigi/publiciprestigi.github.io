@@ -1,0 +1,289 @@
+/* Públic i Prestigi — Estils addicionals (textos editorials, taules Markdown, gràfics) */
+
+/* ── Gris secundari més fort a tota la web ── */
+:root {
+  --color-text-suau: #555555;
+}
+
+/* ── Taules generades des de Markdown (textos editorials) ── */
+.text-md table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 24px 0 32px 0;
+  font-size: 0.82em;
+  line-height: 1.4;
+  background: #f8f8f8;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.text-md table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-bottom: 2px solid #c8c8c8;
+  white-space: nowrap;
+  background: #dcdcdc;
+}
+.text-md table td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #ffffff;
+  vertical-align: top;
+}
+.text-md table tbody tr:nth-child(even) td {
+  background: #ececec;
+}
+.text-md table tbody tr:nth-child(odd) td {
+  background: #f8f8f8;
+}
+.text-md table tr:last-child td {
+  border-bottom: none;
+}
+
+/* ── Text introductori abans d'una taula de dades ── */
+.text-md-intro {
+  margin-bottom: 20px;
+}
+
+/* ── Text intermedi entre taula i gràfic ── */
+.text-md-intermedi {
+  margin-top: 28px;
+  margin-bottom: 8px;
+}
+
+/* ── Comentari editorial després d'una taula o gràfic ── */
+.text-md-comentari {
+  margin-top: 32px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+.text-md-comentari ul {
+  padding-left: 20px;
+}
+.text-md-comentari ul li {
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+/* ── Gràfics — separadors i peu ── */
+.grafic-mercat-wrap,
+.grafic-wrap {
+  margin: 0;
+  padding: 28px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+#grafic-decades {
+  padding: 28px 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: none;
+  margin: 0 !important;
+}
+#taula-resum-premis {
+  padding: 28px 0;
+  margin-top: 16px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: none;
+}
+/* Resum premis: eliminar espai extra entre text i gràfic */
+#seccio-premiades .text-md-intro {
+  margin-bottom: 0;
+}
+.grafic-peu {
+  font-size: 0.82em;
+  color: #555555;
+  margin-top: 12px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-style: italic;
+  text-align: center;
+}
+
+/* ── Padding primera columna a totes les taules de dades ── */
+.taula-films td:first-child,
+.taula-films th:first-child,
+.taula-ranking td:first-child,
+.taula-ranking th:first-child,
+.taula-festivals td:first-child,
+.taula-festivals th:first-child {
+  padding-left: 12px;
+}
+
+/* ── Espaiat before/after taules i gràfics ── */
+.taula-films,
+.taula-ranking,
+.taula-festivals {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+/* ── Línies blanques entre files de les taules de dècada ── */
+.taula-films td {
+  border-bottom: 1px solid #ffffff;
+}
+.taula-films th {
+  border-bottom: 2px solid var(--color-text);
+}
+
+/* ── Films de context sempre fons blanc ── */
+.taula-films tr[data-context="true"] {
+  background: #ffffff !important;
+}
+.taula-films .fila-boto-context {
+  background: #ffffff !important;
+}
+.taula-films .fila-boto-context td {
+  border-bottom: none;
+}
+
+/* ── Text context de les files: mateix gris que dades secundàries ── */
+.col-context-doc {
+  color: #555555 !important;
+  font-size: 0.78rem;
+}
+.taula-films .film-top100 td.col-context-doc {
+  color: #555555 !important;
+}
+.taula-films .film-context td {
+  color: #888888 !important;
+}
+
+/* ── Gris dades secundàries (col-gris) més fort ── */
+.col-gris {
+  color: #555555 !important;
+}
+
+/* ── IIC centrat ── */
+.col-iic {
+  text-align: center !important;
+}
+.taula-films th:has(+ th),
+th.col-iic-header {
+  text-align: center !important;
+}
+
+/* ── Zebra striping rànquings (gris neutre, no blau) ── */
+.taula-ranking tbody tr:nth-child(even) {
+  background: #f7f7f7;
+}
+.taula-ranking tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+.taula-ranking td {
+  border-bottom: 2px solid #ffffff;
+}
+.taula-ranking .fila-boto-context {
+  background: transparent !important;
+}
+
+
+
+
+/* ── Taula resum dècades ── */
+.taula-decades-resum {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.subtitol-ranking.sense-ralla { border-top: none; padding-top: 0; margin-top: 28px; }
+
+/* Comentari que segueix un gràfic Part I: sense border-top */
+#seccio-mercat .text-md-comentari,
+#seccio-decades .text-md-comentari,
+#seccio-la-caza .text-md-comentari {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 16px;
+}
+
+/* Part I i II: sense border-top als blocs de comentari de rànquings */
+#seccio-premiades .text-md-comentari,
+#seccio-cannes .text-md-comentari,
+#seccio-berlin .text-md-comentari,
+#seccio-venezia .text-md-comentari,
+#seccio-sansebastia .text-md-comentari,
+#seccio-ranking-espectadors .text-md-comentari,
+#seccio-ranking-directors .text-md-comentari,
+#seccio-directors .text-md-comentari,
+#seccio-espectadors .text-md-comentari,
+#seccio-penetracio .text-md-comentari,
+#seccio-quota .text-md-comentari,
+#seccio-iic .text-md-comentari {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 16px;
+}
+
+/* ── Subtítol de punt a les conclusions (i futurs capítols similars) ── */
+.subtitol-punt {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #777;
+  font-style: regular;
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ── H2/H3 dins blocs Markdown — uniforme a tota la web ── */
+.contingut-text .text-md h2,
+.contingut-text .text-md-intro h2,
+.contingut-text .text-md-comentari h2,
+.contingut-text .text-md-intermedi h2,
+.seccio-contingut .text-md h2,
+.seccio-contingut .text-md-intro h2,
+.seccio-contingut .text-md-comentari h2,
+.seccio-contingut .text-md-intermedi h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.contingut-text .text-md h3,
+.contingut-text .text-md-intro h3,
+.contingut-text .text-md-comentari h3,
+.contingut-text .text-md-intermedi h3,
+.seccio-contingut .text-md h3,
+.seccio-contingut .text-md-intro h3,
+.seccio-contingut .text-md-comentari h3,
+.seccio-contingut .text-md-intermedi h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.4rem;
+  border-bottom: none;
+}
+
+/* ── Títol festival al rànquing per espectadors ── */
+.subtitol-festival-ranking {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  border-bottom: none;
+}
+
+/* ── Línia de mediana sota el títol de festival ── */
+.festival-mediana {
+  font-size: 0.88rem;
+  color: #555555;
+  margin-top: 2px;
+  margin-bottom: 16px;
+}
+
+/* ── Subtítol gran per a seccions amb múltiples rànquings ── */
+.subtitol-ranking-gran {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 36px;
+  margin-bottom: 8px;
+  color: #363737;
+  border-top: none;
+}
+
+/* ── Titol no fixat (sobreescriu position:sticky de estil.css) ── */
+/* Per revertir: elimina aquestes 3 línies */
+.titol-sticky {
+  position: relative;
+  top: auto;
+}

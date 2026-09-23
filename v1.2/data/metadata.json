@@ -1,0 +1,33 @@
+{
+  "versio_activa": "v1.2-dev",
+  "edicio_activa": "1965-2025",
+  "versio_label": "Versió 1.2 (en preparació)",
+  "publicat": "2026-07-18",
+  "dades_fins": "2025",
+  "idiomes": [
+    "ca",
+    "es",
+    "en"
+  ],
+  "versions": [
+    {
+      "versio": "v1",
+      "edicio": "1965-2025",
+      "label": "Versió 1 (1965–2025)",
+      "publicat": "2026-06-14",
+      "resum": "Primera versió pública.",
+      "label_es": "Versión 1 (1965–2025)",
+      "resum_es": "Primera versión pública."
+    },
+    {
+      "versio": "v1.1",
+      "edicio": "1965-2025",
+      "label": "Versió 1.1 (1965–2025)",
+      "publicat": "2026-07-18",
+      "resum": "Actualització amb nou capítol sobre la construcció del cànon i revisió de les conclusions.",
+      "label_es": "Versión 1.1 (1965–2025)",
+      "resum_es": "Actualización con un nuevo capítulo sobre la construcción del canon y una revisión de las conclusiones."
+    }
+  ],
+  "versio_label_es": "Versión 1.2 (en preparación)"
+}
