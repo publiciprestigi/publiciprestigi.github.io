@@ -1423,75 +1423,81 @@ html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
 
 
 /* ============================================================
-   v1.2 — Fora de competició: context fora del corpus principal
-   Mateix codi visual que els films de context de la Part I.
+   V1.2 — FORA DE COMPETICIÓ (context, fora del corpus principal)
+   Mateix codi visual que els films de context de la Part I:
+   fons blanc i text gris. Bloc plegable per defecte.
    ============================================================ */
-.fora-competicio-bloc {
-  margin-top: 38px;
-  padding-top: 28px;
+.fora-competicio {
+  margin-top: 34px;
   border-top: 1px solid var(--color-linia);
-  color: #888;
+  padding-top: 18px;
 }
-
-.fora-competicio-titol {
-  margin: 0 0 10px;
-  color: #888;
-  font-size: 1rem;
-  font-weight: 650;
-}
-
-.fora-competicio-intro {
-  margin: 0 0 16px;
-  max-width: 780px;
-  color: #888;
-  font-size: 0.84rem;
-  line-height: 1.55;
-}
-
-.fora-competicio-toggle {
-  margin-bottom: 16px;
-  color: #888;
-}
-
-.fora-competicio-contingut[hidden] { display: none; }
-
-.taula-festivals-context {
-  background: #fff;
-  margin-top: 2px;
-}
-
-.taula-festivals-context th,
-.taula-festivals-context td,
-.taula-festivals-context td.col-subtil,
-.taula-festivals-context td.col-premi,
-.taula-festivals-context .film-any,
-.taula-festivals-context strong,
-.taula-festivals-context em {
-  color: #888 !important;
-}
-
-.taula-festivals-context tr,
-.taula-festivals-context td {
-  background: #fff !important;
-}
-
-/* Pàgines encara no editades de la v1.2 */
-.v12-placeholder {
-  max-width: 760px;
-  margin-top: 8px;
-  padding: 18px 20px;
+.fora-competicio > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
   border: 1px solid var(--color-linia);
-  border-radius: 4px;
+  border-radius: 3px;
+  color: var(--color-text-suau);
+  font-size: 0.84rem;
+  font-weight: 600;
+  background: #fff;
+}
+.fora-competicio > summary::-webkit-details-marker { display:none; }
+.fora-competicio > summary::after {
+  content: '+';
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #888;
+}
+.fora-competicio[open] > summary::after { content: '−'; }
+.fora-competicio > summary:hover { border-color: #aaa; color: var(--color-text); }
+.fora-competicio-contingut { padding-top: 16px; }
+.fora-competicio-nota {
+  margin: 0 0 14px;
+  color: #888;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.taula-festivals.fora-competicio-taula tbody tr { background:#fff !important; }
+.taula-festivals.fora-competicio-taula tbody td,
+.taula-festivals.fora-competicio-taula tbody td strong,
+.taula-festivals.fora-competicio-taula tbody td em,
+.taula-festivals.fora-competicio-taula tbody .film-any,
+.taula-festivals.fora-competicio-taula tbody .estrella {
+  color:#888 !important;
+}
+.v12-en-preparacio {
+  border-top: 1px solid var(--color-linia);
+  padding-top: 22px;
   color: var(--color-text-suau);
   font-size: 0.9rem;
-  line-height: 1.55;
+  line-height: 1.6;
 }
-.v12-placeholder p { margin: 0; }
-.v12-placeholder-kicker {
-  margin-bottom: 7px !important;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #2a7a3b;
+
+/* ============================================================
+   v1.2 CA — Part II: menú lateral més compacte
+   Manté l’scroll de seguretat, però evita que aparegui en alçades
+   de pantalla normals amb el nou menú de la v1.2.
+   ============================================================ */
+html[lang="ca"] body.part-ii .sidebar-grup {
+  margin-bottom: 18px;
+}
+
+html[lang="ca"] body.part-ii .sidebar-link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* v1.2 CA — El mapa del cànon i Conclusions ja no són novetats.
+   S'oculten les etiquetes antigues a qualsevol menú CA de la còpia de treball. */
+html[lang="ca"] #drawer-part-iii .chapter-badge,
+html[lang="ca"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge,
+html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
+  display: none;
 }
