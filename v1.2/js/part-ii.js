@@ -792,16 +792,17 @@ function oscarReconeixement(f) {
     return `${estrella}${c.text}`;
   }).join(' · ');
 
+  // Amb una única candidatura, el recompte és implícit.
   if (n <= 1) {
     return `<div class="oscar-categories">${categoriesHtml}</div>`;
   }
 
+  // Amb diverses candidatures, el recompte s'integra a la mateixa línia.
   const recompte = p
-    ? `${n} nominacions · ${p} ${p === 1 ? 'premi' : 'premis'}`
+    ? `${p} ${p === 1 ? 'premi' : 'premis'} de ${n} nominacions`
     : `${n} nominacions`;
 
-  return `<div class="oscar-recompte">${recompte}</div>
-          <div class="oscar-categories">${categoriesHtml}</div>`;
+  return `<div class="oscar-categories">${recompte} — ${categoriesHtml}</div>`;
 }
 
 async function construirOscar() {
