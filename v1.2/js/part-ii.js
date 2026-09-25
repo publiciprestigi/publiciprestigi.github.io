@@ -818,7 +818,7 @@ async function construirOscar() {
     cont.innerHTML = `
       <p class="festival-resum oscar-resum">
         <strong>${films.length} participacions documentades</strong> ·
-        <strong>${premiades} premiades</strong> ·
+        <strong>${premiades} premiades</strong>
       </p>
       <table class="taula-festivals taula-oscar-principal">
         <thead><tr>
