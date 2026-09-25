@@ -786,14 +786,6 @@ function oscarReconeixement(f) {
   return oscarMarcaPremi(f.reconeixement || '—');
 }
 
-  // Amb diverses candidatures, el recompte s'integra a la mateixa línia.
-  const recompte = p
-    ? `${n} nominacions, ${p} ${p === 1 ? 'premi' : 'premis'}`
-    : `${n} nominacions`;
-
-  return `<div class="oscar-categories">${recompte}: ${categoriesHtml}</div>`;
-}
-
 async function construirOscar() {
   if (PIP_ES) return; // La versió ES es completarà després.
   const cont = document.getElementById('taula-oscar');
