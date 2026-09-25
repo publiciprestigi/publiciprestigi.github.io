@@ -817,16 +817,15 @@ async function construirOscar() {
 
     cont.innerHTML = `
       <p class="festival-resum oscar-resum">
-        <strong>${films.length} pel·lícules nominades</strong> ·
+        <strong>${films.length} participacions documentades</strong> ·
         <strong>${premiades} premiades</strong> ·
-        <strong>4 Oscars a millor pel·lícula de parla no anglesa</strong>
       </p>
       <table class="taula-festivals taula-oscar-principal">
         <thead><tr>
           <th class="col-pos">#</th>
-          <th style="width:40%">Pel·lícula</th>
+          <th style="width:40%">Títol</th>
           <th class="col-subtil" style="width:12%">Direcció</th>
-          <th style="width:22%">Nominacions / premis</th>
+          <th style="width:22%">Reconeixement</th>
           <th class="col-center" style="width:60px">Top 100</th>
           <th class="col-subtil" style="width:75px">Dècada</th>
           <th class="col-num" style="width:85px">Espectadors</th>
