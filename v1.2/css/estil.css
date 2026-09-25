@@ -1580,8 +1580,8 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 
 #seccio-academies-europa .academia-preview-titol {
   margin: 0 0 0.5rem;
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 600;
   line-height: 1.25;
   color: var(--academia-or);
 }
