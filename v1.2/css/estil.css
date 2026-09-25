@@ -1511,3 +1511,65 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
   height: 0;
   display: none;
 }
+
+
+/* ============================================================
+   v1.2 — OSCAR
+   ============================================================ */
+#seccio-oscar .oscar-resum {
+  border-left: 3px solid #c8a000;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+#seccio-oscar .taula-oscar-principal tbody tr {
+  background: rgba(200, 160, 0, 0.07);
+  border-bottom: 2px solid #fff;
+}
+
+#seccio-oscar .taula-oscar-principal td {
+  border-bottom-color: #fff;
+}
+
+#seccio-oscar .taula-oscar-principal .oscar-col-film {
+  width: 27%;
+}
+
+#seccio-oscar .taula-oscar-principal .oscar-col-dir {
+  width: 15%;
+}
+
+#seccio-oscar .taula-oscar-principal .oscar-col-rec {
+  width: 31%;
+}
+
+#seccio-oscar .oscar-estrella {
+  color: #c8a000;
+  font-weight: 700;
+}
+
+#seccio-oscar .oscar-nota {
+  margin-top: 4px;
+  margin-bottom: 32px;
+  color: var(--color-text-suau);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+#seccio-oscar .oscar-professionals-intro {
+  margin-top: 28px;
+  margin-bottom: 16px;
+}
+
+#seccio-oscar .taula-oscar-professionals tbody tr {
+  background: #f8f8f7;
+  border-bottom: 2px solid #fff;
+}
+
+#seccio-oscar .taula-oscar-professionals td {
+  border-bottom-color: #fff;
+}
+
+#seccio-oscar .taula-oscar-professionals th {
+  border-bottom-color: #bdbdbd;
+}
