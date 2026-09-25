@@ -81,15 +81,15 @@
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="sansebastia"><span>Sant Sebastià</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
       <div class="sidebar-grup">
-        <div class="sidebar-grup-titol">Rànquings</div>
-        <a href="#" class="sidebar-link" data-seccio="espectadors">Per espectadors</a>
-        <a href="#" class="sidebar-link" data-seccio="directors">Per directors</a>
-      </div>
-      <div class="sidebar-grup">
-        <div class="sidebar-grup-titol">Premis d’acadèmies</div>
+        <div class="sidebar-grup-titol">Acadèmies</div>
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="oscar"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="efa"><span>EFA</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="academies-europa"><span>Altres</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+      </div>
+      <div class="sidebar-grup">
+        <div class="sidebar-grup-titol">Rànquings</div>
+        <a href="#" class="sidebar-link" data-seccio="espectadors">Per espectadors</a>
+        <a href="#" class="sidebar-link" data-seccio="directors">Per directors</a>
       </div>
     </aside>
 
@@ -143,16 +143,26 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-efa">
-        <div class="v12-placeholder">
-          <p class="v12-placeholder-kicker">Nova pàgina · v1.2</p>
+        <div class="v12-placeholder academia-preview">
+          <p class="v12-placeholder-kicker academia-preview-kicker">Nova pàgina · v1.2</p>
           <p>European Film Awards. Pàgina en preparació; falta tancar, entre altres criteris, la separació entre vot acadèmic i premis del públic.</p>
         </div>
       </div>
 
       <div class="seccio-contingut" id="seccio-academies-europa">
-        <div class="v12-placeholder">
-          <p class="v12-placeholder-kicker">Nova pàgina · v1.2</p>
-          <p>César, BAFTA i David di Donatello. Pàgina en preparació.</p>
+        <div class="academia-preview">
+          <section class="academia-preview-bloc">
+            <h2 class="academia-preview-titol">César — Académie des Arts et Techniques du Cinéma (França)</h2>
+            <p>Pàgina en preparació.</p>
+          </section>
+          <section class="academia-preview-bloc">
+            <h2 class="academia-preview-titol">BAFTA — British Academy of Film and Television Arts (Regne Unit)</h2>
+            <p>Pàgina en preparació.</p>
+          </section>
+          <section class="academia-preview-bloc">
+            <h2 class="academia-preview-titol">David di Donatello — Accademia del Cinema Italiano (Itàlia)</h2>
+            <p>Pàgina en preparació.</p>
+          </section>
         </div>
       </div>
 
@@ -236,11 +246,11 @@
       { id: 'venecia',            titol: 'Festival de Venècia — Concorso',                          sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
       { id: 'berlin',             titol: 'Festival de Berlín — Wettbewerb',                         sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
       { id: 'sansebastia',        titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',  sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
+      { id: 'oscar',              titol: 'Oscar — Academy of Motion Picture Arts and Sciences (EEUU)', nav: 'Oscar', sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
+      { id: 'efa',                titol: 'EFA — European Film Academy (Europa)',                    nav: 'EFA', sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
+      { id: 'academies-europa',   titol: 'César, BAFTA i David di Donatello',                       nav: 'Altres', sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
       { id: 'espectadors',        titol: 'Rànquing per espectadors',                                sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
       { id: 'directors',          titol: 'Rànquing per directors',                                  sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
-      { id: 'oscar',              titol: 'Oscar — Academy of Motion Picture Arts and Sciences (EEUU)', nav: 'Oscar', sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
-      { id: 'efa',                titol: 'European Film Awards',                                     sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
-      { id: 'academies-europa',   titol: 'César, BAFTA i Donatello',                                sup: 'Reconeixement internacional en festivals i premis d’acadèmies' },
     ];
 
     let actual = 0;
@@ -252,7 +262,7 @@
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
-      const festColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000' };
+      const festColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000', 'efa': '#c8a000', 'academies-europa': '#c8a000' };
       document.getElementById('titol-principal').style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -297,7 +307,7 @@
         document.getElementById('seccio-' + s.id).style.display = 'block';
         document.getElementById('titol-sup').textContent = s.sup;
         document.getElementById('titol-principal').textContent = s.titol;
-        const popColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000' };
+        const popColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000', 'efa': '#c8a000', 'academies-europa': '#c8a000' };
         document.getElementById('titol-principal').style.color = popColors[s.id] || 'var(--color-text)';
         document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
         const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -428,13 +438,13 @@
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('venecia')"><span>Venècia</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('berlin')"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('sansebastia')"><span>Sant Sebastià</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <div class="drawer-grup-titol">Acadèmies</div>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('oscar')"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('efa')"><span>EFA</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('academies-europa')"><span>Altres</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <div class="drawer-grup-titol">Rànquings</div>
         <a class="drawer-link" onclick="navegaDrawer('espectadors')">Per espectadors</a>
         <a class="drawer-link" onclick="navegaDrawer('directors')">Per directors</a>
-        <div class="drawer-grup-titol">Premis d’acadèmies</div>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('oscar')"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('efa')"><span>EFA</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('academies-europa')"><span>César, BAFTA i Donatello</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
       </div>
 
     </div>
