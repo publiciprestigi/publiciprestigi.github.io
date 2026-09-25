@@ -8,7 +8,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 437814
+      "espectadors": 437814,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,7 +26,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": "25a als 70s",
-      "espectadors": 1801968
+      "espectadors": 1801968,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 3,
@@ -28,7 +44,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": "27a als 70s",
-      "espectadors": 1783154
+      "espectadors": 1783154,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 4,
@@ -38,7 +62,19 @@
       "reconeixement": "2 nominacions: millor pel·lícula de parla no anglesa i guió adaptat",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 1076567
+      "espectadors": 1076567,
+      "nominacions": 2,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        },
+        {
+          "text": "Guió adaptat",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 5,
@@ -48,7 +84,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 1120399
+      "espectadors": 1120399,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 6,
@@ -58,7 +102,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 585897
+      "espectadors": 585897,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 7,
@@ -68,7 +120,15 @@
       "reconeixement": "★ Oscar a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 862366
+      "espectadors": 862366,
+      "nominacions": 1,
+      "premis": 1,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": true
+        }
+      ]
     },
     {
       "id": 8,
@@ -78,7 +138,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 427324
+      "espectadors": 427324,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 9,
@@ -88,7 +156,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 211495
+      "espectadors": 211495,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 10,
@@ -98,7 +174,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 240527
+      "espectadors": 240527,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 11,
@@ -108,7 +192,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": 22,
       "decada": "1a als 80s",
-      "espectadors": 3348457
+      "espectadors": 3348457,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 12,
@@ -118,7 +210,15 @@
       "reconeixement": "★ Oscar a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": "8a als 90s",
-      "espectadors": 1707308
+      "espectadors": 1707308,
+      "nominacions": 1,
+      "premis": 1,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": true
+        }
+      ]
     },
     {
       "id": 13,
@@ -128,7 +228,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": "19a als 90s",
-      "espectadors": 1200193
+      "espectadors": 1200193,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 14,
@@ -138,7 +246,15 @@
       "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 1097346
+      "espectadors": 1097346,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 15,
@@ -148,7 +264,15 @@
       "reconeixement": "★ Oscar a millor pel·lícula de parla no anglesa",
       "top100_pos": 52,
       "decada": "2a als 90s",
-      "espectadors": 2590699
+      "espectadors": 2590699,
+      "nominacions": 1,
+      "premis": 1,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": true
+        }
+      ]
     },
     {
       "id": 16,
@@ -158,7 +282,19 @@
       "reconeixement": "2 nominacions · ★ 1 premi: millor guió original. Nominada també a millor direcció",
       "top100_pos": null,
       "decada": "26a als 2000s",
-      "espectadors": 1367655
+      "espectadors": 1367655,
+      "nominacions": 2,
+      "premis": 1,
+      "categories": [
+        {
+          "text": "Guió original",
+          "premi": true
+        },
+        {
+          "text": "Direcció",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 17,
@@ -168,7 +304,15 @@
       "reconeixement": "Nominada a millor llargmetratge documental",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 16870
+      "espectadors": 16870,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor llargmetratge documental",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 18,
@@ -178,7 +322,19 @@
       "reconeixement": "2 nominacions · ★ 1 premi: millor pel·lícula de parla no anglesa. Nominada també a millor maquillatge",
       "top100_pos": 12,
       "decada": "5a als 2000s",
-      "espectadors": 4099475
+      "espectadors": 4099475,
+      "nominacions": 2,
+      "premis": 1,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa",
+          "premi": true
+        },
+        {
+          "text": "Maquillatge",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 19,
@@ -188,7 +344,15 @@
       "reconeixement": "Nominació a millor actriu principal (Penélope Cruz)",
       "top100_pos": null,
       "decada": "16a als 2000s",
-      "espectadors": 1932119
+      "espectadors": 1932119,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Actriu principal (Penélope Cruz)",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 20,
@@ -198,7 +362,35 @@
       "reconeixement": "6 nominacions · ★ 3 premis: millor direcció artística, fotografia i maquillatge. Nominada també a millor pel·lícula de parla no anglesa (en representació de Mèxic), guió original i música original [N]",
       "top100_pos": null,
       "decada": "17a als 2000s",
-      "espectadors": 1687641
+      "espectadors": 1687641,
+      "nominacions": 6,
+      "premis": 3,
+      "categories": [
+        {
+          "text": "Direcció artística",
+          "premi": true
+        },
+        {
+          "text": "Fotografia",
+          "premi": true
+        },
+        {
+          "text": "Maquillatge",
+          "premi": true
+        },
+        {
+          "text": "Millor pel·lícula de parla no anglesa (Mèxic)",
+          "premi": false
+        },
+        {
+          "text": "Guió original",
+          "premi": false
+        },
+        {
+          "text": "Música original",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 21,
@@ -208,7 +400,15 @@
       "reconeixement": "★ Oscar a millor actriu de repartiment (Penélope Cruz)",
       "top100_pos": null,
       "decada": "29a als 2000s",
-      "espectadors": 1295492
+      "espectadors": 1295492,
+      "nominacions": 1,
+      "premis": 1,
+      "categories": [
+        {
+          "text": "Actriu de repartiment (Penélope Cruz)",
+          "premi": true
+        }
+      ]
     },
     {
       "id": 22,
@@ -218,7 +418,19 @@
       "reconeixement": "2 nominacions: millor pel·lícula de parla no anglesa (en representació de Mèxic) i actor principal (Javier Bardem) [N]",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 509316
+      "espectadors": 509316,
+      "nominacions": 2,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula de parla no anglesa (Mèxic)",
+          "premi": false
+        },
+        {
+          "text": "Actor principal (Javier Bardem)",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 23,
@@ -228,7 +440,15 @@
       "reconeixement": "Nominada a millor pel·lícula d’animació",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 156794
+      "espectadors": 156794,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula d’animació",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 24,
@@ -238,7 +458,15 @@
       "reconeixement": "Nominació a actriu principal (Naomi Watts)",
       "top100_pos": 3,
       "decada": "2a als 2010s",
-      "espectadors": 6129976
+      "espectadors": 6129976,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Actriu principal (Naomi Watts)",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 25,
@@ -248,7 +476,15 @@
       "reconeixement": "Nominada a millor pel·lícula d’animació",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 1253
+      "espectadors": 1253,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula d’animació",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 26,
@@ -258,7 +494,19 @@
       "reconeixement": "2 nominacions: millor pel·lícula internacional i actor principal (Antonio Banderas)",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 964859
+      "espectadors": 964859,
+      "nominacions": 2,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula internacional",
+          "premi": false
+        },
+        {
+          "text": "Actor principal (Antonio Banderas)",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 27,
@@ -268,7 +516,19 @@
       "reconeixement": "2 nominacions: millor actriu principal (Penélope Cruz) i música original",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 425643
+      "espectadors": 425643,
+      "nominacions": 2,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Actriu principal (Penélope Cruz)",
+          "premi": false
+        },
+        {
+          "text": "Música original",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 28,
@@ -278,7 +538,15 @@
       "reconeixement": "Nominada a millor pel·lícula d’animació",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 83577
+      "espectadors": 83577,
+      "nominacions": 1,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula d’animació",
+          "premi": false
+        }
+      ]
     },
     {
       "id": 29,
@@ -288,7 +556,19 @@
       "reconeixement": "2 nominacions: millor pel·lícula internacional i maquillatge i perruqueria",
       "top100_pos": null,
       "decada": null,
-      "espectadors": 556976
+      "espectadors": 556976,
+      "nominacions": 2,
+      "premis": 0,
+      "categories": [
+        {
+          "text": "Millor pel·lícula internacional",
+          "premi": false
+        },
+        {
+          "text": "Maquillatge i perruqueria",
+          "premi": false
+        }
+      ]
     }
   ],
   "professionals": [
