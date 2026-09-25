@@ -789,7 +789,10 @@ function oscarReconeixement(f) {
 
   const categoriesHtml = categories.map(c => {
     const estrella = c.premi ? '<span class="estrella oscar-estrella">★</span> ' : '';
-    return `${estrella}${c.text}`;
+    const text = c.premi
+      ? `Millor ${c.text.charAt(0).toLowerCase()}${c.text.slice(1)}`
+      : c.text;
+    return `${estrella}${text}`;
   }).join(' · ');
 
   // Amb una única candidatura, el recompte és implícit.
@@ -802,7 +805,7 @@ function oscarReconeixement(f) {
     ? `${p} ${p === 1 ? 'premi' : 'premis'} de ${n} nominacions`
     : `${n} nominacions`;
 
-  return `<div class="oscar-categories">${recompte} — ${categoriesHtml}</div>`;
+  return `<div class="oscar-categories">${recompte}: ${categoriesHtml}</div>`;
 }
 
 async function construirOscar() {
