@@ -1531,30 +1531,12 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
   border-bottom-color: #fff;
 }
 
-#seccio-oscar .taula-oscar-principal .oscar-col-film {
-  width: 27%;
-}
-
-#seccio-oscar .taula-oscar-principal .oscar-col-dir {
-  width: 15%;
-}
-
-#seccio-oscar .taula-oscar-principal .oscar-col-rec {
-  width: 31%;
-}
 
 #seccio-oscar .oscar-estrella {
   color: #c8a000;
   font-weight: 700;
 }
 
-#seccio-oscar .oscar-nota {
-  margin-top: 4px;
-  margin-bottom: 32px;
-  color: var(--color-text-suau);
-  font-size: 0.82rem;
-  line-height: 1.55;
-}
 
 #seccio-oscar .oscar-professionals-intro {
   margin-top: 28px;
