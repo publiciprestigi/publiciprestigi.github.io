@@ -833,26 +833,50 @@ async function construirOscar() {
         <tbody>${files}</tbody>
       </table>`;
 
-    const filesProf = professionals.map(f => `<tr>
+    const filesProf = professionals.map((f, i) => `<tr>
+      <td class="col-subtil col-pos">${i + 1}</td>
       <td>${f.professional}</td>
       <td><strong><em>${f.pellicula}</em></strong> <span class="film-any">(${f.any})</span></td>
       <td>${oscarMarcaPremi(f.reconeixement)}</td>
     </tr>`).join('');
 
     contProf.innerHTML = `
-      <table class="taula-festivals taula-oscar-professionals">
-        <thead><tr>
-          <th style="width:27%">Professional</th>
-          <th style="width:33%">Pel·lícula</th>
-          <th>Reconeixement</th>
-        </tr></thead>
-        <tbody>${filesProf}</tbody>
-      </table>`;
+      <div class="oscar-professionals-bloc">
+        <button class="btn-context oscar-professionals-toggle" type="button"
+          aria-expanded="false"
+          aria-controls="oscar-professionals-contingut"
+          onclick="toggleOscarProfessionals('oscar-professionals-contingut', this)">
+          + Professionals espanyols reconeguts en produccions estrangeres
+        </button>
+        <div id="oscar-professionals-contingut" class="oscar-professionals-contingut" hidden>
+          <table class="taula-festivals taula-oscar-professionals">
+            <thead><tr>
+              <th class="col-pos">#</th>
+              <th style="width:28%">Professional</th>
+              <th style="width:32%">Títol</th>
+              <th>Reconeixement</th>
+            </tr></thead>
+            <tbody>${filesProf}</tbody>
+          </table>
+        </div>
+      </div>`;
 
     if (window.PiP_aplicaFade) window.PiP_aplicaFade();
   } catch (e) {
     console.error('Error carregant Oscar:', e);
   }
+}
+
+function toggleOscarProfessionals(id, boto) {
+  const cont = document.getElementById(id);
+  if (!cont) return;
+
+  const obre = cont.hidden;
+  cont.hidden = !obre;
+  boto.setAttribute('aria-expanded', String(obre));
+  boto.textContent = `${obre ? '−' : '+'} Professionals espanyols reconeguts en produccions estrangeres`;
+
+  if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
 
 document.addEventListener('DOMContentLoaded', construirOscar);
