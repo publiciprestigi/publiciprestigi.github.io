@@ -782,6 +782,28 @@ function oscarMarcaPremi(text) {
   return (text || '—').replace(/★/g, '<span class="estrella oscar-estrella">★</span>');
 }
 
+function oscarReconeixement(f) {
+  const n = Number(f.nominacions || 0);
+  const p = Number(f.premis || 0);
+  const categories = Array.isArray(f.categories) ? f.categories : [];
+
+  const categoriesHtml = categories.map(c => {
+    const estrella = c.premi ? '<span class="estrella oscar-estrella">★</span> ' : '';
+    return `${estrella}${c.text}`;
+  }).join(' · ');
+
+  if (n <= 1) {
+    return `<div class="oscar-categories">${categoriesHtml}</div>`;
+  }
+
+  const recompte = p
+    ? `${n} nominacions · ${p} ${p === 1 ? 'premi' : 'premis'}`
+    : `${n} nominacions`;
+
+  return `<div class="oscar-recompte">${recompte}</div>
+          <div class="oscar-categories">${categoriesHtml}</div>`;
+}
+
 async function construirOscar() {
   if (PIP_ES) return; // La versió ES es completarà després.
   const cont = document.getElementById('taula-oscar');
@@ -804,7 +826,7 @@ async function construirOscar() {
         <td class="col-subtil col-pos">${i + 1}</td>
         <td>${titolFilm(f)}</td>
         <td class="col-subtil">${f.director}</td>
-        <td class="col-premi">${oscarMarcaPremi(f.reconeixement)}</td>
+        <td class="col-premi">${oscarReconeixement(f)}</td>
         <td class="col-center col-subtil">${top100}</td>
         <td class="col-subtil col-decada">${decada}</td>
         <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
