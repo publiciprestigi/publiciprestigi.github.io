@@ -4,5 +4,5 @@ Al costat dels festivals, les acadèmies cinematogràfiques configuren un altre 
 
 
 <!-- professionals-intro -->
-## Professionals reconeguts pels Oscar en produccions estrangeres
+## Professionals reconeguts en produccions estrangeres
 <!-- /professionals-intro -->
