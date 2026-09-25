@@ -820,9 +820,9 @@ async function construirOscar() {
       <table class="taula-festivals taula-oscar-principal">
         <thead><tr>
           <th class="col-pos">#</th>
-          <th class="oscar-col-film">Pel·lícula</th>
-          <th class="col-subtil oscar-col-dir">Direcció</th>
-          <th class="oscar-col-rec">Nominacions / premis</th>
+          <th style="width:40%">Pel·lícula</th>
+          <th class="col-subtil" style="width:12%">Direcció</th>
+          <th style="width:22%">Nominacions / premis</th>
           <th class="col-center" style="width:60px">Top 100</th>
           <th class="col-subtil" style="width:75px">Dècada</th>
           <th class="col-num" style="width:85px">Espectadors</th>
@@ -831,7 +831,7 @@ async function construirOscar() {
       </table>`;
 
     const filesProf = professionals.map(f => `<tr>
-      <td><strong>${f.professional}</strong></td>
+      <td>${f.professional}</td>
       <td><strong><em>${f.pellicula}</em></strong> <span class="film-any">(${f.any})</span></td>
       <td>${oscarMarcaPremi(f.reconeixement)}</td>
     </tr>`).join('');
