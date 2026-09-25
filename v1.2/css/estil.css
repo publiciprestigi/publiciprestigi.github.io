@@ -1555,3 +1555,16 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 #seccio-oscar .taula-oscar-professionals th {
   border-bottom-color: #bdbdbd;
 }
+
+
+/* Oscar — lectura compacta de nominacions i premis */
+#seccio-oscar .oscar-recompte {
+  margin-bottom: 2px;
+  font-size: 0.82em;
+  line-height: 1.25;
+  color: var(--color-text-suau);
+}
+
+#seccio-oscar .oscar-categories {
+  line-height: 1.35;
+}
