@@ -773,3 +773,83 @@ window.toggleDirFilms = function(id, btn) {
 };
 
 document.addEventListener('DOMContentLoaded', carregarFestivals);
+
+
+/* ============================================================
+   OSCAR — v1.2 (només CA de moment)
+   ============================================================ */
+function oscarMarcaPremi(text) {
+  return (text || '—').replace(/★/g, '<span class="estrella oscar-estrella">★</span>');
+}
+
+async function construirOscar() {
+  if (PIP_ES) return; // La versió ES es completarà després.
+  const cont = document.getElementById('taula-oscar');
+  const contProf = document.getElementById('taula-oscar-professionals');
+  if (!cont || !contProf) return;
+
+  try {
+    const r = await fetch(pipPath('data/oscar.json'));
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    const films = data.films || [];
+    const professionals = data.professionals || [];
+    const premiades = films.filter(f => (f.reconeixement || '').includes('★')).length;
+
+    const files = films.map((f, i) => {
+      const top100 = f.top100_pos ? `#${f.top100_pos}` : '—';
+      const decada = f.decada || '—';
+      return `<tr>
+        <td class="col-subtil col-pos">${i + 1}</td>
+        <td>${titolFilm(f)}</td>
+        <td class="col-subtil">${f.director}</td>
+        <td class="col-premi">${oscarMarcaPremi(f.reconeixement)}</td>
+        <td class="col-center col-subtil">${top100}</td>
+        <td class="col-subtil col-decada">${decada}</td>
+        <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
+      </tr>`;
+    }).join('');
+
+    cont.innerHTML = `
+      <p class="festival-resum oscar-resum">
+        <strong>${films.length} pel·lícules nominades</strong> ·
+        <strong>${premiades} premiades</strong> ·
+        <strong>4 Oscars a millor pel·lícula de parla no anglesa</strong>
+      </p>
+      <table class="taula-festivals taula-oscar-principal">
+        <thead><tr>
+          <th class="col-pos">#</th>
+          <th class="oscar-col-film">Pel·lícula</th>
+          <th class="col-subtil oscar-col-dir">Direcció</th>
+          <th class="oscar-col-rec">Nominacions / premis</th>
+          <th class="col-center" style="width:60px">Top 100</th>
+          <th class="col-subtil" style="width:75px">Dècada</th>
+          <th class="col-num" style="width:85px">Espectadors</th>
+        </tr></thead>
+        <tbody>${files}</tbody>
+      </table>`;
+
+    const filesProf = professionals.map(f => `<tr>
+      <td><strong>${f.professional}</strong></td>
+      <td><strong><em>${f.pellicula}</em></strong> <span class="film-any">(${f.any})</span></td>
+      <td>${oscarMarcaPremi(f.reconeixement)}</td>
+    </tr>`).join('');
+
+    contProf.innerHTML = `
+      <table class="taula-festivals taula-oscar-professionals">
+        <thead><tr>
+          <th style="width:27%">Professional</th>
+          <th style="width:33%">Pel·lícula</th>
+          <th>Reconeixement</th>
+        </tr></thead>
+        <tbody>${filesProf}</tbody>
+      </table>`;
+
+    if (window.PiP_aplicaFade) window.PiP_aplicaFade();
+  } catch (e) {
+    console.error('Error carregant Oscar:', e);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', construirOscar);
