@@ -783,22 +783,8 @@ function oscarMarcaPremi(text) {
 }
 
 function oscarReconeixement(f) {
-  const n = Number(f.nominacions || 0);
-  const p = Number(f.premis || 0);
-  const categories = Array.isArray(f.categories) ? f.categories : [];
-
-  const categoriesHtml = categories.map(c => {
-    const estrella = c.premi ? '<span class="estrella oscar-estrella">★</span> ' : '';
-    const text = c.premi
-      ? `Millor ${c.text.charAt(0).toLowerCase()}${c.text.slice(1)}`
-      : c.text;
-    return `${estrella}${text}`;
-  }).join(' · ');
-
-  // Amb una única candidatura, el recompte és implícit.
-  if (n <= 1) {
-    return `<div class="oscar-categories">${categoriesHtml}</div>`;
-  }
+  return oscarMarcaPremi(f.reconeixement || '—');
+}
 
   // Amb diverses candidatures, el recompte s'integra a la mateixa línia.
   const recompte = p
