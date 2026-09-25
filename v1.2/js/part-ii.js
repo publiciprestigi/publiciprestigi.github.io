@@ -849,7 +849,7 @@ async function construirOscar() {
           + Professionals espanyols reconeguts en produccions estrangeres
         </button>
         <div id="oscar-professionals-contingut" class="oscar-professionals-contingut" hidden>
-          <table class="taula-festivals taula-oscar-professionals">
+          <table class="taula-festivals taula-festivals-context taula-oscar-professionals">
             <thead><tr>
               <th class="col-pos">#</th>
               <th style="width:28%">Professional</th>
