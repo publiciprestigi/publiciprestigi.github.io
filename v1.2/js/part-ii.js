@@ -519,7 +519,7 @@ function construirRànquingDirectors() {
       html += films.map(f => {
         const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
-      }).join(' · ');
+      }).join(' + ');
       html += ' ';
     });
     return html;
@@ -802,7 +802,7 @@ function oscarReconeixement(f) {
 
   // Amb diverses candidatures, el recompte s'integra a la mateixa línia.
   const recompte = p
-    ? `${p} ${p === 1 ? 'premi' : 'premis'} de ${n} nominacions`
+    ? `${n} nominacions, ${p} ${p === 1 ? 'premi' : 'premis'}`
     : `${n} nominacions`;
 
   return `<div class="oscar-categories">${recompte}: ${categoriesHtml}</div>`;
