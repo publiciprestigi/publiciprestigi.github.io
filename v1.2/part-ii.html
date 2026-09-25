@@ -137,10 +137,11 @@
         <div id="fora-competicio-sansebastia"></div>
       </div>
       <div class="seccio-contingut" id="seccio-oscar">
-        <div class="v12-placeholder">
-          <p class="v12-placeholder-kicker">Nova pàgina · v1.2</p>
-          <p>Oscar — Academy of Motion Picture Arts and Sciences. Pàgina en preparació.</p>
-        </div>
+        <div class="text-md text-md-intro" data-text="part-ii/oscar" data-bloc="intro"></div>
+        <div id="taula-oscar"></div>
+        <div class="text-md oscar-nota" data-text="part-ii/oscar" data-bloc="nota"></div>
+        <div class="text-md oscar-professionals-intro" data-text="part-ii/oscar" data-bloc="professionals-intro"></div>
+        <div id="taula-oscar-professionals"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-efa">
@@ -239,7 +240,7 @@
       { id: 'sansebastia',        titol: 'Festival de Sant Sebastià — Sección Oficial a concurso',  sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'espectadors',        titol: 'Rànquing per espectadors',                                sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'directors',          titol: 'Rànquing per directors',                                  sup: 'Reconeixement internacional en festivals i acadèmies' },
-      { id: 'oscar',              titol: 'Oscar',                                                    sup: 'Reconeixement internacional en festivals i acadèmies' },
+      { id: 'oscar',              titol: 'Oscar — Academy of Motion Picture Arts and Sciences (EEUU)', nav: 'Oscar', sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'efa',                titol: 'European Film Awards',                                     sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'academies-europa',   titol: 'César, BAFTA i Donatello',                                sup: 'Reconeixement internacional en festivals i acadèmies' },
     ];
@@ -253,7 +254,7 @@
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
-      const festColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A' };
+      const festColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000' };
       document.getElementById('titol-principal').style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -262,9 +263,9 @@
       const next = seccions[idx + 1];
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
-      btnAnt.textContent = prev ? '← ' + prev.titol : '';
+      btnAnt.textContent = prev ? '← ' + (prev.nav || prev.titol) : '';
       btnAnt.style.visibility = prev ? 'visible' : 'hidden';
-      btnSeg.textContent = next ? next.titol + ' →' : '';
+      btnSeg.textContent = next ? (next.nav || next.titol) + ' →' : '';
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
       history.pushState({ idx }, '', '#' + s.id);
       document.documentElement.scrollTop = 0;
@@ -298,6 +299,8 @@
         document.getElementById('seccio-' + s.id).style.display = 'block';
         document.getElementById('titol-sup').textContent = s.sup;
         document.getElementById('titol-principal').textContent = s.titol;
+        const popColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000' };
+        document.getElementById('titol-principal').style.color = popColors[s.id] || 'var(--color-text)';
         document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
         const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
         if (lnk) lnk.classList.add('actiu');
