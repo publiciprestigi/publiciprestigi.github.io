@@ -1554,9 +1554,39 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
   font-weight: 700;
 }
 
+/* ============================================================
+   v1.2 — PREMIS D'ACADÈMIES: previsualització EFA i Altres
+   ============================================================ */
+#seccio-efa .academia-preview,
+#seccio-academies-europa .academia-preview {
+  --academia-or: #c8a000;
+}
 
+#seccio-efa .academia-preview-kicker {
+  color: var(--academia-or);
+}
 
+#seccio-academies-europa .academia-preview-bloc {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(200, 160, 0, 0.28);
+}
 
+#seccio-academies-europa .academia-preview-bloc:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
 
+#seccio-academies-europa .academia-preview-titol {
+  margin: 0 0 8px;
+  font-size: 1.08rem;
+  line-height: 1.35;
+  color: var(--academia-or);
+}
 
+#seccio-academies-europa .academia-preview-bloc p {
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+}
 
