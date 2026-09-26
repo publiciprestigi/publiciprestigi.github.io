@@ -1003,7 +1003,7 @@ async function construirEfa() {
 
     contTraj.innerHTML = efaBlocDesplegable(
       'efa-trajectoria-contingut',
-      `Distincions personals i de trajectòria (${trajectory.length} distincions)`,
+      `Distincions personals i de trajectòria (${trajectory.length} reconeixements)`,
       `<table class="taula-festivals taula-festivals-context taula-efa-trajectoria">
         <thead><tr>
           <th class="col-pos">#</th>
