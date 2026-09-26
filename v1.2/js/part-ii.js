@@ -846,7 +846,7 @@ async function construirOscar() {
           aria-expanded="false"
           aria-controls="oscar-professionals-contingut"
           onclick="toggleOscarProfessionals('oscar-professionals-contingut', this)">
-          + Professionals reconeguts en produccions estrangeres (23 reconeixements)
+          + Professionals en produccions estrangeres (23 reconeixements)
         </button>
         <div id="oscar-professionals-contingut" class="oscar-professionals-contingut" hidden>
           <table class="taula-festivals taula-festivals-context taula-oscar-professionals">
@@ -874,7 +874,7 @@ function toggleOscarProfessionals(id, boto) {
   const obre = cont.hidden;
   cont.hidden = !obre;
   boto.setAttribute('aria-expanded', String(obre));
-  boto.textContent = `${obre ? '−' : '+'} Professionals reconeguts en produccions estrangeres (23 reconeixements)`;
+  boto.textContent = `${obre ? '−' : '+'} Professionals en produccions estrangeres (23 reconeixements)`;
 
   if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
@@ -970,8 +970,7 @@ async function construirEfa() {
     contPublic.innerHTML = efaBlocDesplegable(
       'efa-public-contingut',
       `Premis del públic i altres votacions (${publicFilms.length} pel·lícules)`,
-      `<p class="efa-context-resum"><strong>${publicFilms.length} participacions documentades</strong> · <strong>${publicPremiades} premiades</strong></p>
-       <table class="taula-festivals taula-festivals-context taula-efa-public">
+      `       <table class="taula-festivals taula-festivals-context taula-efa-public">
          <thead><tr>
            <th class="col-pos">#</th>
            <th style="width:38%">Títol</th>
@@ -984,7 +983,7 @@ async function construirEfa() {
 
     contProf.innerHTML = efaBlocDesplegable(
       'efa-professionals-contingut',
-      `Professionals reconeguts en produccions estrangeres (${professionals.length} reconeixements)`,
+      `Professionals en produccions estrangeres (${professionals.length} reconeixements)`,
       `<table class="taula-festivals taula-festivals-context taula-efa-context-professionals">
         <thead><tr>
           <th class="col-pos">#</th>
@@ -1004,7 +1003,7 @@ async function construirEfa() {
 
     contTraj.innerHTML = efaBlocDesplegable(
       'efa-trajectoria-contingut',
-      `Reconeixements personals i de trajectòria (${trajectory.length} reconeixements)`,
+      `Distincions personals i de trajectòria (${trajectory.length} distincions)`,
       `<table class="taula-festivals taula-festivals-context taula-efa-trajectoria">
         <thead><tr>
           <th class="col-pos">#</th>
