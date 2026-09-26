@@ -846,7 +846,7 @@ async function construirOscar() {
           aria-expanded="false"
           aria-controls="oscar-professionals-contingut"
           onclick="toggleOscarProfessionals('oscar-professionals-contingut', this)">
-          + Professionals espanyols reconeguts en produccions estrangeres
+          + Professionals reconeguts en produccions estrangeres (23 reconeixements)
         </button>
         <div id="oscar-professionals-contingut" class="oscar-professionals-contingut" hidden>
           <table class="taula-festivals taula-festivals-context taula-oscar-professionals">
@@ -874,7 +874,7 @@ function toggleOscarProfessionals(id, boto) {
   const obre = cont.hidden;
   cont.hidden = !obre;
   boto.setAttribute('aria-expanded', String(obre));
-  boto.textContent = `${obre ? '−' : '+'} Professionals espanyols reconeguts en produccions estrangeres`;
+  boto.textContent = `${obre ? '−' : '+'} Professionals reconeguts en produccions estrangeres (23 reconeixements)`;
 
   if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
@@ -944,7 +944,6 @@ async function construirEfa() {
 
     const films = data.films || [];
     const publicFilms = data.public || [];
-    const publicProfessionals = data.publicProfessionals || [];
     const professionals = data.professionals || [];
     const trajectory = data.trajectory || [];
     const premiades = films.filter(f => (f.reconeixement || '').includes('★')).length;
@@ -968,22 +967,10 @@ async function construirEfa() {
       </table>`;
 
     const publicPremiades = publicFilms.filter(f => (f.reconeixement || '').includes('★')).length;
-    const publicProfessionalsHtml = publicProfessionals.length ? `
-      <h3 class="efa-subtitol-context">Professionals reconeguts en produccions estrangeres</h3>
-      <table class="taula-festivals taula-festivals-context taula-efa-context-professionals">
-        <thead><tr>
-          <th class="col-pos">#</th>
-          <th style="width:28%">Professional</th>
-          <th style="width:32%">Títol</th>
-          <th>Reconeixement</th>
-        </tr></thead>
-        <tbody>${publicProfessionals.map(efaFilaProfessional).join('')}</tbody>
-      </table>` : '';
-
     contPublic.innerHTML = efaBlocDesplegable(
       'efa-public-contingut',
-      'Premis del públic i altres votacions',
-      `<p class="efa-context-resum"><strong>${publicFilms.length} pel·lícules</strong> · <strong>${publicPremiades} premiades</strong></p>
+      `Premis del públic i altres votacions (${publicFilms.length} pel·lícules)`,
+      `<p class="efa-context-resum"><strong>${publicFilms.length} participacions documentades</strong> · <strong>${publicPremiades} premiades</strong></p>
        <table class="taula-festivals taula-festivals-context taula-efa-public">
          <thead><tr>
            <th class="col-pos">#</th>
@@ -992,12 +979,12 @@ async function construirEfa() {
            <th>Reconeixement</th>
          </tr></thead>
          <tbody>${publicFilms.map(efaFilaContextFilm).join('')}</tbody>
-       </table>${publicProfessionalsHtml}`
+       </table>`
     );
 
     contProf.innerHTML = efaBlocDesplegable(
       'efa-professionals-contingut',
-      'Professionals reconeguts pels EFA en produccions estrangeres',
+      `Professionals reconeguts en produccions estrangeres (${professionals.length} reconeixements)`,
       `<table class="taula-festivals taula-festivals-context taula-efa-context-professionals">
         <thead><tr>
           <th class="col-pos">#</th>
@@ -1017,7 +1004,7 @@ async function construirEfa() {
 
     contTraj.innerHTML = efaBlocDesplegable(
       'efa-trajectoria-contingut',
-      'Reconeixements personals i de trajectòria',
+      `Reconeixements personals i de trajectòria (${trajectory.length} reconeixements)`,
       `<table class="taula-festivals taula-festivals-context taula-efa-trajectoria">
         <thead><tr>
           <th class="col-pos">#</th>
