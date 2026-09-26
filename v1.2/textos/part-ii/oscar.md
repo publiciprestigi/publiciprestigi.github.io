@@ -1,3 +1,3 @@
 <!-- intro -->
-Al costat dels festivals, les acadèmies cinematogràfiques configuren un altre circuit de reconeixement, determinat pel vot dels professionals del sector. Aquesta primera pàgina recull les pel·lícules espanyoles nominades i reconegudes pels Oscar, els premis cinematogràfics de més impacte del planeta.
+Els premis cinematogràfics amb més projecció internacional del planeta i el principal referent del reconeixement atorgat per una acadèmia professional. Quatre pel·lícules espanyoles han guanyat fins ara l’Oscar a millor pel·lícula de parla no anglesa: *Volver a empezar* (1982) de José Luis Garci, *Belle Époque* (1992) de Fernando Trueba, *Todo sobre mi madre *(1999) de Pedro Almodóvar i *Mar adentro* (2004) d’Alejandro Amenábar.
 <!-- /intro -->
