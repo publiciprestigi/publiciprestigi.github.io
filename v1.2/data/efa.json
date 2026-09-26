@@ -1,0 +1,992 @@
+{
+  "films": [
+    {
+      "titol": "El bosque animado",
+      "any": 1987,
+      "director": "José Luis Cuerda",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i actor europeu (Alfredo Landa)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Mujeres al borde de un ataque de nervios",
+      "any": 1988,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "3 nominacions · ★ 2 premis: millor pel·lícula jove europea i actriu europea (Carmen Maura). Nominada també a direcció artística",
+      "top100_pos": 22,
+      "decada": "1a als 80s",
+      "espectadors": 3348457
+    },
+    {
+      "titol": "La blanca paloma",
+      "any": 1989,
+      "director": "Juan Miñón",
+      "reconeixement": "Nominada a millor pel·lícula jove europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "¡Ay, Carmela!",
+      "any": 1990,
+      "director": "Carlos Saura",
+      "reconeixement": "3 nominacions · ★ 1 premi: millor actriu europea (Carmen Maura). Nominada també a millor pel·lícula europea i actor de repartiment (Gabino Diego)",
+      "top100_pos": null,
+      "decada": "28a als 90s",
+      "espectadors": 907295
+    },
+    {
+      "titol": "Carne trémula",
+      "any": 1997,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada a millor pel·lícula europea",
+      "top100_pos": null,
+      "decada": "12a als 90s",
+      "espectadors": 1433465
+    },
+    {
+      "titol": "La niña de tus ojos",
+      "any": 1998,
+      "director": "Fernando Trueba",
+      "reconeixement": "Nominada a millor actriu europea (Penélope Cruz)",
+      "top100_pos": 57,
+      "decada": "3a als 90s",
+      "espectadors": 2497884
+    },
+    {
+      "titol": "Todo sobre mi madre",
+      "any": 1999,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions · ★ 2 premis: millor pel·lícula europea i actriu europea (Cecilia Roth)",
+      "top100_pos": 52,
+      "decada": "2a als 90s",
+      "espectadors": 2590699
+    },
+    {
+      "titol": "La lengua de las mariposas",
+      "any": 1999,
+      "director": "José Luis Cuerda",
+      "reconeixement": "Nominada a millor guionista europeu",
+      "top100_pos": null,
+      "decada": "20a als 90s",
+      "espectadors": 1182110
+    },
+    {
+      "titol": "Goya en Burdeos",
+      "any": 1999,
+      "director": "Carlos Saura",
+      "reconeixement": "★ EFA a la millor fotografia",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Calle 54",
+      "any": 2000,
+      "director": "Fernando Trueba",
+      "reconeixement": "Nominada a millor documental europeu (Prix Arte)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "El Bola",
+      "any": 2000,
+      "director": "Achero Mañas",
+      "reconeixement": "2 nominacions · ★ 1 premi: Descobriment Europeu de l’Any (Premi Fassbinder). Nominada també a millor guionista europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "You're the one",
+      "any": 2000,
+      "director": "José Luis Garci",
+      "reconeixement": "Nominada a millor director europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Los otros",
+      "any": 2001,
+      "director": "Alejandro Amenábar",
+      "reconeixement": "Nominada a millor pel·lícula europea",
+      "top100_pos": 2,
+      "decada": "1a als 2000s",
+      "espectadors": 6410785
+    },
+    {
+      "titol": "Hable con ella",
+      "any": 2002,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "5 nominacions · ★ 3 premis: millor pel·lícula europea, director europeu i guionista europeu. Nominada també a millor actor europeu (Javier Cámara) i fotografia",
+      "top100_pos": null,
+      "decada": "26a als 2000s",
+      "espectadors": 1367655
+    },
+    {
+      "titol": "Smoking Room",
+      "any": 2002,
+      "director": "Roger Gual i Julio Wallovits",
+      "reconeixement": "Nominada al Descobriment Europeu (Premi Fassbinder)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Los lunes al sol",
+      "any": 2002,
+      "director": "Fernando León de Aranoa",
+      "reconeixement": "Nominada a millor actor europeu (Javier Bardem)",
+      "top100_pos": 86,
+      "decada": "13a als 2000s",
+      "espectadors": 2103601
+    },
+    {
+      "titol": "Mi vida sin mí",
+      "any": 2003,
+      "director": "Isabel Coixet",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i directora europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Las horas del día",
+      "any": 2003,
+      "director": "Jaime Rosales",
+      "reconeixement": "Nominada al Descobriment Europeu (Premi Fassbinder)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Te doy mis ojos",
+      "any": 2003,
+      "director": "Icíar Bollaín",
+      "reconeixement": "Nominada a millor compositor europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La pelota vasca. La piel contra la piedra",
+      "any": 2003,
+      "director": "Julio Medem",
+      "reconeixement": "Nominada a millor documental europeu (Prix Arte)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Mar adentro",
+      "any": 2004,
+      "director": "Alejandro Amenábar",
+      "reconeixement": "5 nominacions · ★ 2 premis: millor director europeu i actor europeu (Javier Bardem). Nominada també a millor pel·lícula europea, guionista europeu i fotografia",
+      "top100_pos": 12,
+      "decada": "5a als 2000s",
+      "espectadors": 4099475
+    },
+    {
+      "titol": "La mala educación",
+      "any": 2004,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "5 nominacions: millor pel·lícula europea, director europeu, guionista europeu, fotografia i compositor europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Crimen ferpecto",
+      "any": 2004,
+      "director": "Álex de la Iglesia",
+      "reconeixement": "Nominada a millor director europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La casa de mi abuela",
+      "any": 2005,
+      "director": "Adán Aliaga",
+      "reconeixement": "Nominada a millor documental europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Volver",
+      "any": 2006,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "6 nominacions · ★ 4 premis: millor director europeu, actriu europea (Penélope Cruz), fotografia i compositor europeu. Nominada també a millor pel·lícula europea i guionista europeu",
+      "top100_pos": null,
+      "decada": "16a als 2000s",
+      "espectadors": 1932119
+    },
+    {
+      "titol": "Alatriste",
+      "any": 2006,
+      "director": "Agustín Díaz Yanes",
+      "reconeixement": "Nominada al Premi a l’Excel·lència pel disseny de vestuari",
+      "top100_pos": 27,
+      "decada": "8a als 2000s",
+      "espectadors": 3182656
+    },
+    {
+      "titol": "El orfanato",
+      "any": 2007,
+      "director": "J. A. Bayona",
+      "reconeixement": "4 nominacions: millor pel·lícula europea, actriu europea (Belén Rueda), fotografia i compositor europeu",
+      "top100_pos": 9,
+      "decada": "4a als 2000s",
+      "espectadors": 4420987
+    },
+    {
+      "titol": "Fados",
+      "any": 2007,
+      "director": "Carlos Saura",
+      "reconeixement": "Nominada a millor documental europeu (Prix Arte)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Los abrazos rotos",
+      "any": 2009,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "3 nominacions · ★ 1 premi: millor compositor europeu. Nominada també a millor director europeu i actriu europea (Penélope Cruz)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Celda 211",
+      "any": 2009,
+      "director": "Daniel Monzón",
+      "reconeixement": "2 nominacions: millor actor europeu (Luis Tosar) i guionista europeu",
+      "top100_pos": 84,
+      "decada": "12a als 2000s",
+      "espectadors": 2129583
+    },
+    {
+      "titol": "Planet 51",
+      "any": 2009,
+      "director": "Jorge Blanco, Javier Abad i Marcos Martínez",
+      "reconeixement": "Nominada a millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": "15a als 2000s",
+      "espectadors": 1957318
+    },
+    {
+      "titol": "Io, Don Giovanni",
+      "any": 2009,
+      "director": "Carlos Saura",
+      "reconeixement": "Nominada a millor direcció artística",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Chico & Rita",
+      "any": 2010,
+      "director": "Fernando Trueba, Javier Mariscal i Tono Errando",
+      "reconeixement": "★ EFA al millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Arrugas",
+      "any": 2011,
+      "director": "Ignacio Ferreras",
+      "reconeixement": "Nominada a millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La piel que habito",
+      "any": 2011,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions: direcció artística i compositor europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Blancanieves",
+      "any": 2012,
+      "director": "Pablo Berger",
+      "reconeixement": "3 nominacions · ★ 1 premi: millor disseny de vestuari. Nominada també a millor pel·lícula europea i director europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Lo imposible",
+      "any": 2012,
+      "director": "J. A. Bayona",
+      "reconeixement": "Nominada a millor actriu europea (Naomi Watts)",
+      "top100_pos": 3,
+      "decada": "2a als 2010s",
+      "espectadors": 6129976
+    },
+    {
+      "titol": "Los amantes pasajeros",
+      "any": 2013,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada a millor comèdia europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La plaga",
+      "any": 2013,
+      "director": "Neus Ballús",
+      "reconeixement": "Nominada al Descobriment Europeu (Prix FIPRESCI)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La herida",
+      "any": 2013,
+      "director": "Fernando Franco",
+      "reconeixement": "2 nominacions: millor actriu europea (Marian Álvarez) i Descobriment Europeu (Prix FIPRESCI)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Carmina y amén",
+      "any": 2014,
+      "director": "Paco León",
+      "reconeixement": "Nominada a millor comèdia europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "10.000 km",
+      "any": 2014,
+      "director": "Carlos Marqués-Marcet",
+      "reconeixement": "Nominada al Descobriment Europeu (Prix FIPRESCI)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Truman",
+      "any": 2015,
+      "director": "Cesc Gay",
+      "reconeixement": "Nominada a millor actor europeu (Javier Cámara)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Psiconautas, los niños olvidados",
+      "any": 2015,
+      "director": "Alberto Vázquez i Pedro Rivero",
+      "reconeixement": "Nominada a millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Julieta",
+      "any": 2016,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "4 nominacions: millor pel·lícula europea, director europeu i dues a actriu europea (Emma Suárez i Adriana Ugarte)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Un monstruo viene a verme",
+      "any": 2016,
+      "director": "J. A. Bayona",
+      "reconeixement": "★ EFA al millor so",
+      "top100_pos": 8,
+      "decada": "4a als 2010s",
+      "espectadors": 4613696
+    },
+    {
+      "titol": "La Chana",
+      "any": 2016,
+      "director": "Lucija Stojevic",
+      "reconeixement": "Nominada a millor documental europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Estiu 1993",
+      "any": 2017,
+      "director": "Carla Simón",
+      "reconeixement": "Nominada al Descobriment Europeu (Prix FIPRESCI)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Un día más con vida",
+      "any": 2018,
+      "director": "Raúl de la Fuente i Damian Nenow",
+      "reconeixement": "★ EFA al millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Petra",
+      "any": 2018,
+      "director": "Jaime Rosales",
+      "reconeixement": "Nominada a millor actriu europea (Bárbara Lennie)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "El silencio de otros",
+      "any": 2018,
+      "director": "Almudena Carracedo i Robert Bahar",
+      "reconeixement": "Nominada a millor documental europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Buñuel en el laberinto de las tortugas",
+      "any": 2018,
+      "director": "Salvador Simó",
+      "reconeixement": "★ EFA al millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Dolor y gloria",
+      "any": 2019,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "5 nominacions · ★ 2 premis: millor actor europeu (Antonio Banderas) i direcció artística. Nominada també a millor pel·lícula europea, director europeu i guionista europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Klaus",
+      "any": 2019,
+      "director": "Sergio Pablos",
+      "reconeixement": "Nominada a millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Madre",
+      "any": 2019,
+      "director": "Rodrigo Sorogoyen",
+      "reconeixement": "Nominada a millor actriu europea (Marta Nieto)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Ventajas de viajar en tren",
+      "any": 2019,
+      "director": "Aritz Moreno",
+      "reconeixement": "Nominada a millor comèdia europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La trinchera infinita",
+      "any": 2019,
+      "director": "Aitor Arregi, Jon Garaño i Jose Mari Goenaga",
+      "reconeixement": "★ EFA al millor maquillatge i perruqueria",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "El hoyo",
+      "any": 2019,
+      "director": "Galder Gaztelu-Urrutia",
+      "reconeixement": "★ EFA als millors efectes visuals",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Sentimental",
+      "any": 2020,
+      "director": "Cesc Gay",
+      "reconeixement": "Nominada a millor comèdia europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "El buen patrón",
+      "any": 2021,
+      "director": "Fernando León de Aranoa",
+      "reconeixement": "★ EFA a la millor comèdia europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Madres paralelas",
+      "any": 2021,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada a millor actriu europea (Penélope Cruz)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Alcarràs",
+      "any": 2022,
+      "director": "Carla Simón",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i guionista europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Robot Dreams",
+      "any": 2023,
+      "director": "Pablo Berger",
+      "reconeixement": "★ EFA al millor llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "20.000 especies de abejas",
+      "any": 2023,
+      "director": "Estíbaliz Urresola Solaguren",
+      "reconeixement": "Nominada al Descobriment Europeu (Prix FIPRESCI)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Dispararon al pianista",
+      "any": 2023,
+      "director": "Fernando Trueba i Javier Mariscal",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "El sueño de la sultana",
+      "any": 2023,
+      "director": "Isabel Herguera",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La sociedad de la nieve",
+      "any": 2023,
+      "director": "J. A. Bayona",
+      "reconeixement": "2 nominacions · ★ 2 premis: millor maquillatge i perruqueria i millors efectes visuals",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La habitación de al lado",
+      "any": 2024,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "4 nominacions: millor pel·lícula europea, director europeu, guionista europeu i actriu europea (Tilda Swinton)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Tardes de soledad",
+      "any": 2024,
+      "director": "Albert Serra",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i documental europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Sirât",
+      "any": 2025,
+      "director": "Oliver Laxe",
+      "reconeixement": "9 nominacions · ★ 5 premis: millor fotografia, muntatge, direcció artística, so i direcció de càsting. Nominada també a millor pel·lícula europea, director europeu, actor europeu (Sergi López) i guionista europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "L'Olívia i el terratrèmol invisible",
+      "any": 2025,
+      "director": "Irene Iborra Rizo",
+      "reconeixement": "2 nominacions: millor pel·lícula europea i llargmetratge d’animació europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    }
+  ],
+  "public": [
+    {
+      "titol": "Carne trémula",
+      "any": 1997,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "★ Premi del Públic al millor actor europeu (Javier Bardem)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Secretos del corazón",
+      "any": 1997,
+      "director": "Montxo Armendáriz",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Todo sobre mi madre",
+      "any": 1999,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "★ Premi del Públic al millor director europeu",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La comunidad",
+      "any": 2000,
+      "director": "Álex de la Iglesia",
+      "reconeixement": "2 nominacions: Premi del Públic i Premi del Públic a la millor actriu europea (Carmen Maura)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Anita no pierde el tren",
+      "any": 2000,
+      "director": "Ventura Pons",
+      "reconeixement": "Nominada al Premi del Públic a la millor actriu europea (Rosa Maria Sardà)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Torrente 2, misión en Marbella",
+      "any": 2001,
+      "director": "Santiago Segura",
+      "reconeixement": "2 nominacions: Premi del Públic i Premi del Públic al millor actor europeu (Santiago Segura)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Sin noticias de Dios",
+      "any": 2001,
+      "director": "Agustín Díaz Yanes",
+      "reconeixement": "Nominada al Premi del Públic a la millor actriu europea (Victoria Abril)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Hable con ella",
+      "any": 2002,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions · ★ 2 premis: Premi del Públic al millor director europeu i al millor actor europeu (Javier Cámara)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Los lunes al sol",
+      "any": 2002,
+      "director": "Fernando León de Aranoa",
+      "reconeixement": "Nominada al Premi del Públic al millor actor europeu (Javier Bardem)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Te doy mis ojos",
+      "any": 2003,
+      "director": "Icíar Bollaín",
+      "reconeixement": "2 nominacions: Premi del Públic a la millor directora i Premi del Públic a la millor actriu (Laia Marull)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Carmen",
+      "any": 2003,
+      "director": "Vicente Aranda",
+      "reconeixement": "Nominada al Premi del Públic a la millor actriu europea (Paz Vega)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La mala educación",
+      "any": 2004,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions: Premi del Públic al millor director i Premi del Públic al millor actor (Fele Martínez)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Crimen ferpecto",
+      "any": 2004,
+      "director": "Álex de la Iglesia",
+      "reconeixement": "3 nominacions: Premi del Públic, Premi del Públic al millor director i Premi del Públic a la millor actriu (Mónica Cervera)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La vida que te espera",
+      "any": 2004,
+      "director": "Manuel Gutiérrez Aragón",
+      "reconeixement": "Nominada al Premi del Públic al millor actor europeu (Luis Tosar)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Volver",
+      "any": 2006,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "★ Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Alatriste",
+      "any": 2006,
+      "director": "Agustín Díaz Yanes",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "El orfanato",
+      "any": 2007,
+      "director": "J. A. Bayona",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "REC",
+      "any": 2007,
+      "director": "Jaume Balagueró i Paco Plaza",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Los abrazos rotos",
+      "any": 2009,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Ágora",
+      "any": 2009,
+      "director": "Alejandro Amenábar",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "También la lluvia",
+      "any": 2010,
+      "director": "Icíar Bollaín",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Lo imposible",
+      "any": 2012,
+      "director": "J. A. Bayona",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Los amantes pasajeros",
+      "any": 2013,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "La isla mínima",
+      "any": 2014,
+      "director": "Alberto Rodríguez",
+      "reconeixement": "★ Premi del Públic a la millor pel·lícula europea",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Julieta",
+      "any": 2016,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Un monstruo viene a verme",
+      "any": 2016,
+      "director": "J. A. Bayona",
+      "reconeixement": "Nominada al Premi del Públic",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Alcarràs",
+      "any": 2022,
+      "director": "Carla Simón",
+      "reconeixement": "2 nominacions: Premi del Públic LUX i Premi Universitari Europeu (EUFA)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "20.000 especies de abejas",
+      "any": 2023,
+      "director": "Estíbaliz Urresola Solaguren",
+      "reconeixement": "Nominada al Premi del Públic LUX",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    },
+    {
+      "titol": "Sorda",
+      "any": 2025,
+      "director": "Eva Libertad",
+      "reconeixement": "★ Premi del Públic LUX",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": null
+    }
+  ],
+  "publicProfessionals": [
+    {
+      "professional": "Antonio Banderas",
+      "pellicula": "La máscara del Zorro",
+      "any": 1998,
+      "reconeixement": "★ Premi del Públic al millor actor europeu"
+    },
+    {
+      "professional": "Penélope Cruz",
+      "pellicula": "La mandolina del capitán Corelli",
+      "any": 2001,
+      "reconeixement": "Nominació al Premi del Públic a la millor actriu europea"
+    },
+    {
+      "professional": "Sergi López",
+      "pellicula": "Dirty Pretty Things",
+      "any": 2002,
+      "reconeixement": "Nominació al Premi del Públic al millor actor europeu"
+    },
+    {
+      "professional": "Penélope Cruz",
+      "pellicula": "Fanfan la Tulipe",
+      "any": 2003,
+      "reconeixement": "Nominació al Premi del Públic a la millor actriu europea"
+    },
+    {
+      "professional": "Penélope Cruz",
+      "pellicula": "Non ti muovere",
+      "any": 2004,
+      "reconeixement": "★ Premi del Públic a la millor actriu europea"
+    }
+  ],
+  "professionals": [
+    {
+      "professional": "Sergi López",
+      "pellicula": "Harry, un ami qui vous veut du bien",
+      "any": 2000,
+      "reconeixement": "Nominació a millor actor europeu"
+    },
+    {
+      "professional": "Penélope Cruz",
+      "pellicula": "Non ti muovere",
+      "any": 2004,
+      "reconeixement": "Nominació a millor actriu europea"
+    },
+    {
+      "professional": "Alberto Iglesias",
+      "pellicula": "Tinker Tailor Soldier Spy",
+      "any": 2011,
+      "reconeixement": "★ EFA al millor compositor europeu"
+    },
+    {
+      "professional": "Laia Costa",
+      "pellicula": "Victoria",
+      "any": 2015,
+      "reconeixement": "Nominació a millor actriu europea"
+    },
+    {
+      "professional": "Karla Sofía Gascón",
+      "pellicula": "Emilia Pérez",
+      "any": 2024,
+      "reconeixement": "★ EFA a la millor actriu europea"
+    }
+  ],
+  "trajectory": [
+    {
+      "professional": "Antonio Banderas",
+      "reconeixement": "★ Premi a la contribució europea al cinema mundial, EFA 1999"
+    },
+    {
+      "professional": "Victoria Abril",
+      "reconeixement": "★ Premi a la contribució europea al cinema mundial, EFA 2002"
+    },
+    {
+      "professional": "Carlos Saura",
+      "reconeixement": "★ Premi a la carrera cinematogràfica, EFA 2004"
+    },
+    {
+      "professional": "Carmen Maura",
+      "reconeixement": "★ Premi a la carrera cinematogràfica, EFA 2018"
+    },
+    {
+      "professional": "Isabel Coixet",
+      "reconeixement": "★ Premi a la contribució europea al cinema mundial, EFA 2023"
+    }
+  ]
+}
