@@ -57,7 +57,7 @@ function capcalera() {
     <th>#</th>
     <th class="col-subtil col-center">T100</th>
     <th>${pipT('Títol','Título')}</th>
-    <th class="col-subtil">${pipT('Director','Dirección')}</th>
+    <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
     <th class="col-num">${pipT('Espectadors','Espectadores')}</th>
     <th class="col-num col-gris">${pipT('Mercat','Mercado')}</th>
     <th class="col-num col-gris">${pipT('Penetració','Penetración')}</th>
@@ -164,7 +164,7 @@ function construirRànquing(metrica, contenidorId, label) {
     <th class="col-pos">#</th>
     ${esEsp ? '' : '<th class="col-center col-subtil">T100</th>'}
     <th>${pipT('Títol','Título')}</th>
-    <th class="col-subtil">${pipT('Director','Dirección')}</th>
+    <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
     <th class="col-num col-iic">${label}</th>
     ${esEsp ? '' : `<th class="col-var" title="${pipT('Variació respecte al rànquing per espectadors','Variación respecto al ranking por espectadores')}">Var.</th>`}
   </tr></thead>`;
@@ -289,7 +289,7 @@ function construirRànquingDirectors() {
     <table class="taula-ranking">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Director</th>
+        <th>Direcció</th>
         <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-num" style="text-align:right">${pipT('Espectadors acumulats','Espectadores acumulados')}</th>
         <th class="col-num col-gris">${pipT('% total','% total')}</th>
@@ -310,7 +310,7 @@ function construirRànquingDirectors() {
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
-        <th>Director</th>
+        <th>Direcció</th>
         <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-center">Add.</th>
         <th class="col-num" style="text-align:right">${pipT('Espectadors totals','Espectadores totales')}</th>

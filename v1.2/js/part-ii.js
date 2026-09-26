@@ -93,7 +93,7 @@ function construirPremiades() {
       <table class="taula-festivals">
         <thead><tr>
           <th style="width:32%">${pipT('Títol','Título')}</th>
-          <th class="col-subtil" style="width:18%">${pipT('Director','Dirección')}</th>
+          <th class="col-subtil" style="width:18%">${pipT('Direcció','Dirección')}</th>
           <th style="width:100px">Festival</th>
           <th style="width:36%">${pipT('Premi','Premio')}</th>
         </tr></thead>
@@ -289,7 +289,7 @@ function construirFestival(festival, seccioId) {
       <thead><tr>
         <th class="col-pos">#</th>
         <th style="width:40%">${pipT('Títol','Título')}</th>
-        <th class="col-subtil" style="width:12%">${pipT('Director','Dirección')}</th>
+        <th class="col-subtil" style="width:12%">${pipT('Direcció','Dirección')}</th>
         <th style="width:22%">${pipT('Premi / Nota','Premio / Nota')}</th>
         <th class="col-center" style="width:60px">Top 100</th>
         <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
@@ -341,7 +341,7 @@ function construirForaCompeticio(festival, seccioId) {
           <thead><tr>
             <th class="col-pos">#</th>
             <th style="width:40%">${pipT('Títol','Título')}</th>
-            <th class="col-subtil" style="width:12%">${pipT('Director/a','Dirección')}</th>
+            <th class="col-subtil" style="width:12%">${pipT('Direcció','Dirección')}</th>
             <th style="width:22%">${pipT('Premi / nota','Premio / nota')}</th>
             <th class="col-center" style="width:60px">Top 100</th>
             <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
@@ -423,7 +423,7 @@ function construirRànquingEspectadors() {
         <thead><tr>
           <th class="col-pos">#</th>
           <th>${pipT('Títol','Título')}</th>
-          <th class="col-subtil">${pipT('Director','Dirección')}</th>
+          <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
           <th class="col-center" style="width:50px">${pipT('Premi','Premio')}</th>
           <th class="col-center" style="width:65px">Top 100</th>
           <th class="col-num" style="text-align:right">${pipT('Espectadors','Espectadores')}</th>
@@ -678,7 +678,7 @@ function construirRànquingDirectors() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>${pipT('Director/a','Dirección')}</th>
+        <th>${pipT('Direcció','Dirección')}</th>
         <th class="col-center">${pipT('Total sel.','Total sel.')}</th>
         <th class="col-center">Total ★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
@@ -695,7 +695,7 @@ function construirRànquingDirectors() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>${pipT('Director/a','Dirección')}</th>
+        <th>${pipT('Direcció','Dirección')}</th>
         <th class="col-center">${pipT('Total sel.','Total sel.')}</th>
         <th class="col-center">Total ★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>

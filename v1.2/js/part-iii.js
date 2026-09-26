@@ -112,7 +112,7 @@ function construirDobleCorona() {
       <thead><tr>
         <th class="col-pos">#</th>
         <th style="width:40%">${pip3T('Títol','Título')}</th>
-        <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
+        <th class="col-subtil" style="width:12%">${pip3T('Direcció','Dirección')}</th>
         <th style="width:100px">Festival</th>
         <th class="col-center" style="width:55px">${pip3T('Premi','Premio')}</th>
         <th class="col-center" style="width:70px">Top 100</th>
@@ -163,7 +163,7 @@ function construirSegonCercle() {
       <thead><tr>
         <th class="col-pos">#</th>
         <th style="width:40%">${pip3T('Títol','Título')}</th>
-        <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
+        <th class="col-subtil" style="width:12%">${pip3T('Direcció','Dirección')}</th>
         <th style="width:100px">Festival</th>
         <th class="col-center" style="width:55px">${pip3T('Premi','Premio')}</th>
         <th class="col-center" style="width:70px">Top 100</th>
@@ -604,7 +604,7 @@ const COLORS_DIRECTOR = {
 
 const TAULA_PELI_HEADER = `
   <th style="width:30%">${pip3T('Títol','Título')}</th>
-  <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
+  <th class="col-subtil" style="width:12%">${pip3T('Direcció','Dirección')}</th>
   <th style="width:70px">Festival</th>
   <th class="col-center" style="width:30px">★</th>
   <th class="col-center" style="width:60px">Top 100</th>
