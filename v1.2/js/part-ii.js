@@ -880,3 +880,171 @@ function toggleOscarProfessionals(id, boto) {
 }
 
 document.addEventListener('DOMContentLoaded', construirOscar);
+
+/* ============================================================
+   EFA — v1.2 (només CA de moment)
+   ============================================================ */
+function efaMarcaPremi(text) {
+  return (text || '—').replace(/★/g, '<span class="estrella efa-estrella">★</span>');
+}
+
+function efaFilaFilm(f, i) {
+  const top100 = f.top100_pos ? `#${f.top100_pos}` : '—';
+  const decada = f.decada || '—';
+  return `<tr>
+    <td class="col-subtil col-pos">${i + 1}</td>
+    <td>${titolFilm(f)}</td>
+    <td class="col-subtil">${f.director}</td>
+    <td class="col-premi">${efaMarcaPremi(f.reconeixement)}</td>
+    <td class="col-center col-subtil">${top100}</td>
+    <td class="col-subtil col-decada">${decada}</td>
+    <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
+  </tr>`;
+}
+
+function efaFilaContextFilm(f, i) {
+  return `<tr>
+    <td class="col-subtil col-pos">${i + 1}</td>
+    <td>${titolFilm(f)}</td>
+    <td class="col-subtil">${f.director}</td>
+    <td class="col-premi">${efaMarcaPremi(f.reconeixement)}</td>
+  </tr>`;
+}
+
+function efaFilaProfessional(f, i) {
+  return `<tr>
+    <td class="col-subtil col-pos">${i + 1}</td>
+    <td>${f.professional}</td>
+    <td><strong><em>${f.pellicula}</em></strong> <span class="film-any">(${f.any})</span></td>
+    <td>${efaMarcaPremi(f.reconeixement)}</td>
+  </tr>`;
+}
+
+function efaBlocDesplegable(id, etiqueta, contingut) {
+  return `<div class="efa-context-bloc">
+    <button class="btn-context efa-context-toggle" type="button"
+      aria-expanded="false" aria-controls="${id}" data-label="${etiqueta}"
+      onclick="toggleEfaBloc('${id}', this)">+ ${etiqueta}</button>
+    <div id="${id}" class="efa-context-contingut" hidden>${contingut}</div>
+  </div>`;
+}
+
+async function construirEfa() {
+  if (PIP_ES) return; // La versió ES es completarà després.
+  const cont = document.getElementById('taula-efa');
+  const contPublic = document.getElementById('taula-efa-public');
+  const contProf = document.getElementById('taula-efa-professionals');
+  const contTraj = document.getElementById('taula-efa-trajectoria');
+  if (!cont || !contPublic || !contProf || !contTraj) return;
+
+  try {
+    const r = await fetch(pipPath('data/efa.json'));
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const data = await r.json();
+
+    const films = data.films || [];
+    const publicFilms = data.public || [];
+    const publicProfessionals = data.publicProfessionals || [];
+    const professionals = data.professionals || [];
+    const trajectory = data.trajectory || [];
+    const premiades = films.filter(f => (f.reconeixement || '').includes('★')).length;
+
+    cont.innerHTML = `
+      <p class="festival-resum efa-resum">
+        <strong>${films.length} participacions documentades</strong> ·
+        <strong>${premiades} premiades</strong>
+      </p>
+      <table class="taula-festivals taula-efa-principal">
+        <thead><tr>
+          <th class="col-pos">#</th>
+          <th style="width:40%">Títol</th>
+          <th class="col-subtil" style="width:12%">Direcció</th>
+          <th style="width:22%">Reconeixement</th>
+          <th class="col-center" style="width:60px">Top 100</th>
+          <th class="col-subtil" style="width:75px">Dècada</th>
+          <th class="col-num" style="width:85px">Espectadors</th>
+        </tr></thead>
+        <tbody>${films.map(efaFilaFilm).join('')}</tbody>
+      </table>`;
+
+    const publicPremiades = publicFilms.filter(f => (f.reconeixement || '').includes('★')).length;
+    const publicProfessionalsHtml = publicProfessionals.length ? `
+      <h3 class="efa-subtitol-context">Professionals reconeguts en produccions estrangeres</h3>
+      <table class="taula-festivals taula-festivals-context taula-efa-context-professionals">
+        <thead><tr>
+          <th class="col-pos">#</th>
+          <th style="width:28%">Professional</th>
+          <th style="width:32%">Títol</th>
+          <th>Reconeixement</th>
+        </tr></thead>
+        <tbody>${publicProfessionals.map(efaFilaProfessional).join('')}</tbody>
+      </table>` : '';
+
+    contPublic.innerHTML = efaBlocDesplegable(
+      'efa-public-contingut',
+      'Premis del públic i altres votacions',
+      `<p class="efa-context-resum"><strong>${publicFilms.length} pel·lícules</strong> · <strong>${publicPremiades} premiades</strong></p>
+       <table class="taula-festivals taula-festivals-context taula-efa-public">
+         <thead><tr>
+           <th class="col-pos">#</th>
+           <th style="width:38%">Títol</th>
+           <th class="col-subtil" style="width:22%">Direcció</th>
+           <th>Reconeixement</th>
+         </tr></thead>
+         <tbody>${publicFilms.map(efaFilaContextFilm).join('')}</tbody>
+       </table>${publicProfessionalsHtml}`
+    );
+
+    contProf.innerHTML = efaBlocDesplegable(
+      'efa-professionals-contingut',
+      'Professionals reconeguts pels EFA en produccions estrangeres',
+      `<table class="taula-festivals taula-festivals-context taula-efa-context-professionals">
+        <thead><tr>
+          <th class="col-pos">#</th>
+          <th style="width:28%">Professional</th>
+          <th style="width:32%">Títol</th>
+          <th>Reconeixement</th>
+        </tr></thead>
+        <tbody>${professionals.map(efaFilaProfessional).join('')}</tbody>
+      </table>`
+    );
+
+    const trajRows = trajectory.map((f, i) => `<tr>
+      <td class="col-subtil col-pos">${i + 1}</td>
+      <td>${f.professional}</td>
+      <td>${efaMarcaPremi(f.reconeixement)}</td>
+    </tr>`).join('');
+
+    contTraj.innerHTML = efaBlocDesplegable(
+      'efa-trajectoria-contingut',
+      'Reconeixements personals i de trajectòria',
+      `<table class="taula-festivals taula-festivals-context taula-efa-trajectoria">
+        <thead><tr>
+          <th class="col-pos">#</th>
+          <th style="width:34%">Professional</th>
+          <th>Reconeixement</th>
+        </tr></thead>
+        <tbody>${trajRows}</tbody>
+      </table>`
+    );
+
+    if (window.PiP_aplicaFade) window.PiP_aplicaFade();
+  } catch (e) {
+    console.error('Error carregant EFA:', e);
+  }
+}
+
+function toggleEfaBloc(id, boto) {
+  const cont = document.getElementById(id);
+  if (!cont) return;
+
+  const obre = cont.hidden;
+  cont.hidden = !obre;
+  boto.setAttribute('aria-expanded', String(obre));
+  boto.textContent = `${obre ? '−' : '+'} ${boto.dataset.label || ''}`;
+
+  if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
+}
+
+document.addEventListener('DOMContentLoaded', construirEfa);
+
