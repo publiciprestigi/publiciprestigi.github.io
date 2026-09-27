@@ -7,3 +7,7 @@ Berlín és l'únic dels quatre festivals sense cap film al Top 100. Cannes apor
 
 - La mitjana d'espectadors revela un contrast clar: Cannes i Venècia (al voltant dels 700k) superen àmpliament Berlín (444k) i Sant Sebastià (386k), i l'ordre gairebé coincideix amb la jerarquia de prestigi internacional que hem establert. No és casual: Cannes és el festival de referència absoluta del cinema d'autor internacional, mentre que Venècia, el més antic dels quatre, ha mantingut històricament una selecció amb major vocació popular, en contrast amb el perfil més polític i social de Berlín.
 <!-- /comentari -->
+
+<!-- comentari-academies -->
+- Les dues acadèmies dibuixen perfils diferents. Els 29 films nominats als Oscar tenen una mitjana d’1.300.661 espectadors, davant dels 932.200 dels 71 films reconeguts als EFA. El recull europeu és més ampli i incorpora més cinema minoritari, documental, animació i reconeixements tècnics, mentre que els Oscar concentren més títols amb recorregut comercial.
+<!-- /comentari-academies -->
