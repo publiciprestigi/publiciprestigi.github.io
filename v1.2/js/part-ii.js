@@ -455,6 +455,101 @@ window.expandirRankEsp = function(cid, btn) {
 };
 
 /* ============================================================
+   RÀNQUING PER ESPECTADORS — ACADÈMIES
+   ============================================================ */
+async function construirRànquingAcademiesEspectadors() {
+  if (PIP_ES) return; // La versió ES es completarà després.
+
+  const cont = document.getElementById('taula-ranking-academies');
+  if (!cont) return;
+
+  try {
+    const [rOscar, rEfa] = await Promise.all([
+      fetch(pipPath('data/oscar.json')),
+      fetch(pipPath('data/efa.json')),
+    ]);
+    if (!rOscar.ok) throw new Error('Oscar HTTP ' + rOscar.status);
+    if (!rEfa.ok) throw new Error('EFA HTTP ' + rEfa.status);
+
+    const [oscarData, efaData] = await Promise.all([rOscar.json(), rEfa.json()]);
+
+    const academies = [
+      { nom: 'Oscar', color: '#c8a000', films: oscarData.films || [] },
+      { nom: 'EFA',   color: '#8C6239', films: efaData.films || [] },
+    ];
+
+    const blocAcademia = ({ nom, color, films }) => {
+      const filmsAmbDades = films
+        .filter(f => f.espectadors != null && f.espectadors > 0)
+        .sort((a,b) => b.espectadors - a.espectadors);
+      const filmsSenseDades = films.filter(f => f.espectadors == null || f.espectadors <= 0);
+      const totalFilms = films.length;
+      const top10 = filmsAmbDades.slice(0, 10);
+      const resta = filmsAmbDades.slice(10);
+      const cid = `resp-acad-${nom.toLowerCase()}`;
+      const mitjana = calcularMitjana(filmsAmbDades);
+      const mitjanaTxt = mitjana
+        ? `Mitjana de tots els films: ${fmt(mitjana)} espectadors`
+        : '';
+
+      const fila = (f, i, extraClass = '') => `<tr${extraClass ? ` class="${extraClass}"` : ''} style="${extraClass ? 'display:none;' : ''}background:${i % 2 === 0 ? '#ffffff' : '#f7f7f7'};border-bottom:2px solid #fff">
+        <td class="col-pos">${i + 1}</td>
+        <td>${titolFilm(f)}</td>
+        <td class="col-subtil">${f.director}</td>
+        <td class="col-center">${(f.reconeixement || '').includes('★') ? '<span class="estrella">★</span>' : ''}</td>
+        <td class="col-center col-subtil">${f.top100_pos ? '#' + f.top100_pos : '—'}</td>
+        <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
+      </tr>`;
+
+      const filaSenseDades = (f) => `<tr style="display:none;background:#f7f7f7;border-bottom:2px solid #fff" class="fila-extra-${cid}">
+        <td class="col-pos">—</td>
+        <td>${titolFilm(f)}</td>
+        <td class="col-subtil">${f.director}</td>
+        <td class="col-center">${(f.reconeixement || '').includes('★') ? '<span class="estrella">★</span>' : ''}</td>
+        <td class="col-center col-subtil">${f.top100_pos ? '#' + f.top100_pos : '—'}</td>
+        <td class="col-num col-subtil" style="color:#aaa">s/d</td>
+      </tr>`;
+
+      return `
+        <h2 class="subtitol-festival-ranking" style="margin-top:32px;color:${color}">${nom}</h2>
+        <p class="festival-mediana">${mitjanaTxt}</p>
+        <table class="taula-festivals">
+          <thead><tr>
+            <th class="col-pos">#</th>
+            <th>Títol</th>
+            <th class="col-subtil">Direcció</th>
+            <th class="col-center" style="width:50px">Premi</th>
+            <th class="col-center" style="width:65px">Top 100</th>
+            <th class="col-num" style="text-align:right">Espectadors</th>
+          </tr></thead>
+          <tbody>
+            ${top10.map((f,i) => fila(f,i)).join('')}
+            ${(resta.length || filmsSenseDades.length) ? `
+              <tr class="fila-boto-context">
+                <td colspan="6">
+                  <button class="btn-context" onclick="expandirRankEsp('${cid}',this)">
+                    + Veure tots els ${totalFilms} films
+                  </button>
+                </td>
+              </tr>
+              ${resta.map((f,i) => fila(f,i+10, `fila-extra-${cid}`)).join('')}
+              ${filmsSenseDades.map(f => filaSenseDades(f)).join('')}
+            ` : ''}
+          </tbody>
+        </table>`;
+    };
+
+    cont.innerHTML = academies.map(blocAcademia).join('');
+
+    if (window.PiP_aplicaFade) window.PiP_aplicaFade();
+  } catch (e) {
+    console.error('Error carregant el rànquing d’acadèmies:', e);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', construirRànquingAcademiesEspectadors);
+
+/* ============================================================
    RÀNQUING DIRECTORS
    ============================================================ */
 function construirRànquingDirectors() {
