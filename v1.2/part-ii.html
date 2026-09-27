@@ -244,7 +244,7 @@
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = s.sup;
       document.getElementById('titol-principal').textContent = s.titol;
-      const festColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000', 'efa': '#c8a000' };
+      const festColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000', 'efa': '#8C6239' };
       document.getElementById('titol-principal').style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -289,7 +289,7 @@
         document.getElementById('seccio-' + s.id).style.display = 'block';
         document.getElementById('titol-sup').textContent = s.sup;
         document.getElementById('titol-principal').textContent = s.titol;
-        const popColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000', 'efa': '#c8a000' };
+        const popColors = { 'cannes': '#9B2335', 'berlin': '#1976D2', 'venecia': '#2E7D5E', 'sansebastia': '#E07B2A', 'oscar': '#c8a000', 'efa': '#8C6239' };
         document.getElementById('titol-principal').style.color = popColors[s.id] || 'var(--color-text)';
         document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
         const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
