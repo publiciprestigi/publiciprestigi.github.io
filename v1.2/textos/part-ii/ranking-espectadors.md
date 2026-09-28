@@ -1,5 +1,5 @@
 <!-- intro -->
-Berlín és l'únic dels quatre festivals sense cap film al Top 100. Cannes aporta dos, Venècia tres, Sant Sebastià sis, una xifra que s'explica en part per la seva relació estructural amb la indústria espanyola. Aquesta distribució resumeix la diferent posició de cada festival en relació al públic.
+La relació amb el públic varia de manera significativa entre els dos circuits de reconeixement internacional analitzats: festivals i acadèmies. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. A les acadèmies, la presència és més alta: els deu primers films dels EFA formen part del Top 100, mentre que entre els deu primers dels Oscar n'hi ha quatre. La incorporació dels Oscar i dels EFA amplia la comparació i permet observar diferències no només d'escala, sinó també en la manera com cada institució reconeix i projecta les pel·lícules.
 <!-- /intro -->
 
 <!-- comentari -->
@@ -9,5 +9,7 @@ Berlín és l'únic dels quatre festivals sense cap film al Top 100. Cannes apor
 <!-- /comentari -->
 
 <!-- comentari-academies -->
-- Les dues acadèmies dibuixen perfils diferents. Els 29 films nominats als Oscar tenen una mitjana d’1.300.661 espectadors, davant dels 932.200 dels 71 films reconeguts als EFA. El recull europeu és més ampli i incorpora més cinema minoritari, documental, animació i reconeixements tècnics, mentre que els Oscar concentren més títols amb recorregut comercial.
+- Oscar i EFA dibuixen dos perfils diferents dins del circuit acadèmic. Els films reconeguts pels Oscar arriben a una mitjana d'uns 1.300k espectadors, davant dels 932k dels EFA. Els EFA treballen amb un univers molt més ampli (71 films davant de 29) i incorporen més documental, animació, comèdia i reconeixements tècnics; els Oscar concentren menys títols i amb una projecció internacional i comercial més elevada. La diferència de mitjanes parla, per tant, tant del públic com de la diferent amplitud i lògica de reconeixement de cada acadèmia.
+
+- Festivals i acadèmies no són mecanismes de reconeixement equivalents: els festivals seleccionen, exhibeixen i legitimen cinema abans o durant la seva circulació internacional; les acadèmies reconeixen entre iguals films que ja han acumulat visibilitat industrial i trajectòria pública, i els premis poden reforçar-ne encara més la projecció i la vida comercial. En els EFA, centrats cronològicament en les darreres dècades, aquesta relació es fa especialment visible: el seu Top 5 està format per tres films de J. A. Bayona i dos d'Alejandro Amenábar, exemples paradigmàtics del cinema d'autor industrial i del film-esdeveniment recent.
 <!-- /comentari-academies -->
