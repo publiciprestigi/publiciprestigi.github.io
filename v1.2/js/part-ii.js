@@ -869,7 +869,7 @@ async function construirRànquingDirectors() {
         <th class="col-var">Var.</th>
         <th>${pipT('Direcció','Dirección')}</th>
         <th class="col-center">Total</th>
-        <th class="col-center">Total ★</th>
+        <th class="col-center">★</th>
         <th class="col-center" style="color:${OSCAR_COLOR}">Oscar</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
         <th class="col-center" style="color:${FC['Venècia']}">${festivalLabel('Venècia')}</th>
