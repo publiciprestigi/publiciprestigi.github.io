@@ -637,6 +637,7 @@ async function construirRànquingDirectors() {
     b.o_sel-a.o_sel || b.c_sel-a.c_sel || b.v_sel-a.v_sel || b.b_sel-a.b_sel || b.s_sel-a.s_sel ||
     a.nom.localeCompare(b.nom, PIP_ES ? 'es' : 'ca')
   );
+  const posicioComposta = new Map(llistaComposta.map((d,i) => [d.nom, i+1]));
 
   // CORREGIT: sempre mostra ★N, fins i tot quan N=1
   const cel = (sel, pr, color) => {
@@ -652,6 +653,17 @@ async function construirRànquingDirectors() {
 
   const varHtml = (nom, posNova) => {
     const posAntiga = posicioFestivals.get(nom);
+    if (!posAntiga || posAntiga > 25) return `<span class="var-nou">NOU</span>`;
+    const dif = posAntiga - posNova;
+    if (dif > 0) return `<span class="var-up">↑${dif}</span>`;
+    if (dif < 0) return `<span class="var-down">↓${Math.abs(dif)}</span>`;
+    return `<span class="var-eq">=</span>`;
+  };
+
+  // Top 10: variació respecte del rànquing compost immediatament anterior.
+  // Si el director era fora del Top 25, apareix com a NOU, igual que al Top 25 compost.
+  const varHtmlTop10 = (nom, posNova) => {
+    const posAntiga = posicioComposta.get(nom);
     if (!posAntiga || posAntiga > 25) return `<span class="var-nou">NOU</span>`;
     const dif = posAntiga - posNova;
     if (dif > 0) return `<span class="var-up">↑${dif}</span>`;
@@ -715,7 +727,7 @@ async function construirRànquingDirectors() {
     </tr>`;
   };
 
-  /* --- TOP 10 TRES GRANS: ES MANTÉ COM FINS ARA --- */
+  /* --- TOP 10 TRES GRANS --- */
   const top10_3 = Object.values(dirs)
     .filter(d => d.c_sel+d.b_sel+d.v_sel > 0)
     .sort((a,b) =>
@@ -744,6 +756,7 @@ async function construirRànquingDirectors() {
     const bg3 = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     return `<tr style="background:${bg3};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
+      <td class="col-var">${varHtmlTop10(d.nom, i+1)}</td>
       <td>
         <strong>${d.nom}</strong>
         <div id="${id}" class="dir-films-list" style="display:none">${filmsDir3(d)}</div>
@@ -885,9 +898,10 @@ async function construirRànquingDirectors() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
+        <th class="col-var">Var.</th>
         <th>${pipT('Direcció','Dirección')}</th>
-        <th class="col-center">${pipT('Total sel.','Total sel.')}</th>
-        <th class="col-center">Total ★</th>
+        <th class="col-center">Total</th>
+        <th class="col-center">★</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
         <th class="col-center" style="color:${FC['Venècia']}">${festivalLabel('Venècia')}</th>
         <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
