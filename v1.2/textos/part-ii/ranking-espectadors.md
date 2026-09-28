@@ -1,5 +1,5 @@
 <!-- intro -->
-La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiques amplia el marc d’anàlisi i permet observar diferències en l’abast de públic i en la manera com cada institució reconeix, legitima i dona visibilitat a les pel·lícules. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. A les acadèmies, la presència és més alta: els deu primers films dels EFA formen part del Top 100, mentre que entre els deu primers dels Oscar n'hi ha quatre.
+La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiques amplia el marc d’anàlisi i permet observar diferències en l’abast de públic i en la manera com cada institució reconeix, legitima i dona visibilitat a les pel·lícules. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els EFA n'aporten onze i els Oscar quatre.
 
 <!-- /intro -->
 
