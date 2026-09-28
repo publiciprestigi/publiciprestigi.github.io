@@ -37,7 +37,7 @@ async function carregarFestivals() {
     construirForaCompeticio('Berlín',        'fora-competicio-berlin');
     construirForaCompeticio('Sant Sebastià', 'fora-competicio-sansebastia');
     construirRànquingEspectadors();
-    construirRànquingDirectors();
+    await construirRànquingDirectors();
     if (window.PiP_aplicaFade) window.PiP_aplicaFade();
   } catch(e) { console.error('Error:', e); }
 }
@@ -552,38 +552,90 @@ document.addEventListener('DOMContentLoaded', construirRànquingAcademiesEspecta
 /* ============================================================
    RÀNQUING DIRECTORS
    ============================================================ */
-function construirRànquingDirectors() {
+async function construirRànquingDirectors() {
   const cont25 = document.getElementById('taula-ranking-directors-top25');
   const cont10 = document.getElementById('taula-ranking-directors-top10');
   const cont3  = document.getElementById('taula-ranking-directors-top3');
   if (!cont25) return;
+
+  const OSCAR_COLOR = '#c8a000';
 
   // Àlies per agrupar membres de col·lectius sota un representant
   const ALIASES_DIRS = [
     { clau: 'Arregi', nom: 'Aitor Arregi' },
   ];
 
+  // Normalitza només els casos en què el nom de l'Oscar no coincideix
+  // exactament amb el que fem servir al corpus de festivals.
+  const normalitzaDirectorOscar = (nom) => {
+    if ((nom || '').includes('Fernando Trueba')) return 'Fernando Trueba';
+    if (nom === 'J. A. Bayona') return 'J.A. Bayona';
+    if (nom === 'Alejandro González Iñárritu') return 'Alejandro G. Iñárritu';
+    return nom;
+  };
+
   const dirs = {};
+  const asseguraDir = (nom) => {
+    if (!dirs[nom]) dirs[nom] = {
+      nom,
+      total_sel: 0, total_premis: 0,
+      o_sel:0, o_pr:0,
+      c_sel:0, c_pr:0, b_sel:0, b_pr:0, v_sel:0, v_pr:0, s_sel:0, s_pr:0,
+    };
+    return dirs[nom];
+  };
+
   festivalsData.forEach(f => {
     let d = f.director;
     for (const alias of ALIASES_DIRS) {
       if (f.director.includes(alias.clau)) { d = alias.nom; break; }
     }
-    if (!dirs[d]) dirs[d] = {
-      nom: d, total_sel: 0, total_premis: 0,
-      c_sel:0, c_pr:0, b_sel:0, b_pr:0, v_sel:0, v_pr:0, s_sel:0, s_pr:0,
-    };
-    dirs[d].total_sel++;
-    if (f.premiat) dirs[d].total_premis++;
-    if      (f.festival==='Cannes')        { dirs[d].c_sel++; if(f.premiat) dirs[d].c_pr++; }
-    else if (f.festival==='Berlín')        { dirs[d].b_sel++; if(f.premiat) dirs[d].b_pr++; }
-    else if (f.festival==='Venècia')       { dirs[d].v_sel++; if(f.premiat) dirs[d].v_pr++; }
-    else if (f.festival==='Sant Sebastià') { dirs[d].s_sel++; if(f.premiat) dirs[d].s_pr++; }
+    const dir = asseguraDir(d);
+    dir.total_sel++;
+    if (f.premiat) dir.total_premis++;
+    if      (f.festival==='Cannes')        { dir.c_sel++; if(f.premiat) dir.c_pr++; }
+    else if (f.festival==='Berlín')        { dir.b_sel++; if(f.premiat) dir.b_pr++; }
+    else if (f.festival==='Venècia')       { dir.v_sel++; if(f.premiat) dir.v_pr++; }
+    else if (f.festival==='Sant Sebastià') { dir.s_sel++; if(f.premiat) dir.s_pr++; }
   });
 
-  const llista = Object.values(dirs).sort((a,b) =>
+  // Baseline v1.2: quatre festivals, abans d'afegir l'Oscar.
+  // És la referència de la columna Var. del Top 25 compost.
+  const llistaFestivals = Object.values(dirs).sort((a,b) =>
     b.total_sel-a.total_sel || b.total_premis-a.total_premis ||
-    b.c_sel-a.c_sel || b.v_sel-a.v_sel || b.b_sel-a.b_sel
+    b.c_sel-a.c_sel || b.v_sel-a.v_sel || b.b_sel-a.b_sel || b.s_sel-a.s_sel ||
+    a.nom.localeCompare(b.nom, PIP_ES ? 'es' : 'ca')
+  );
+  const posicioFestivals = new Map(llistaFestivals.map((d,i) => [d.nom, i+1]));
+
+  // Oscar: cada film reconegut compta una presència; ★ indica que aquell film
+  // va obtenir almenys un Oscar. No comptem el nombre de nominacions o estatuetes.
+  let oscarFilms = [];
+  try {
+    const rOscar = await fetch(pipPath('data/oscar.json'));
+    if (!rOscar.ok) throw new Error('Oscar HTTP ' + rOscar.status);
+    const oscarData = await rOscar.json();
+    oscarFilms = oscarData.films || [];
+    oscarFilms.forEach(f => {
+      const nom = normalitzaDirectorOscar(f.director);
+      const dir = asseguraDir(nom);
+      dir.o_sel++;
+      if ((f.reconeixement || '').includes('★')) dir.o_pr++;
+    });
+  } catch (e) {
+    console.error('Error carregant Oscar per al rànquing de directors:', e);
+  }
+
+  // Índex compost: Oscar + quatre festivals.
+  // Desempat: premis i després jerarquia Oscar > Cannes > Venècia > Berlín > Sant Sebastià.
+  const llistaComposta = Object.values(dirs).map(d => ({
+    ...d,
+    total_comp: d.total_sel + d.o_sel,
+    premis_comp: d.total_premis + d.o_pr,
+  })).sort((a,b) =>
+    b.total_comp-a.total_comp || b.premis_comp-a.premis_comp ||
+    b.o_sel-a.o_sel || b.c_sel-a.c_sel || b.v_sel-a.v_sel || b.b_sel-a.b_sel || b.s_sel-a.s_sel ||
+    a.nom.localeCompare(b.nom, PIP_ES ? 'es' : 'ca')
   );
 
   // CORREGIT: sempre mostra ★N, fins i tot quan N=1
@@ -598,13 +650,33 @@ function construirRànquingDirectors() {
     return `<td class="col-center">★${pr}</td>`;
   };
 
-  /* --- TOP 25 TOTS ELS FESTIVALS --- */
-  const top25 = llista.slice(0, 25);
+  const varHtml = (nom, posNova) => {
+    const posAntiga = posicioFestivals.get(nom);
+    if (!posAntiga || posAntiga > 25) return `<span class="var-nou">NOU</span>`;
+    const dif = posAntiga - posNova;
+    if (dif > 0) return `<span class="var-up">↑${dif}</span>`;
+    if (dif < 0) return `<span class="var-down">↓${Math.abs(dif)}</span>`;
+    return `<span class="var-eq">=</span>`;
+  };
+
+  /* --- TOP 25 OSCAR I TOTS ELS FESTIVALS --- */
+  const top25 = llistaComposta.slice(0, 25);
   let _dirCtr = 0;
 
   const filmsDir = (d) => {
-    const fests = ['Cannes','Venècia','Berlín','Sant Sebastià'];
     let html = '';
+
+    const filmsOscar = oscarFilms.filter(f => normalitzaDirectorOscar(f.director) === d.nom);
+    if (filmsOscar.length) {
+      html += `<span class="dir-films-grup" style="color:${OSCAR_COLOR}">Oscar</span>`;
+      html += filmsOscar.map(f => {
+        const pr = (f.reconeixement || '').includes('★') ? `<span class="estrella">★</span> ` : '';
+        return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
+      }).join(' + ');
+      html += ' ';
+    }
+
+    const fests = ['Cannes','Venècia','Berlín','Sant Sebastià'];
     const aliasClau25 = ALIASES_DIRS.find(a => a.nom === d.nom)?.clau;
     fests.forEach(fest => {
       const films = festivalsData.filter(f => f.festival === fest &&
@@ -625,12 +697,14 @@ function construirRànquingDirectors() {
     const bg25 = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
     return `<tr style="background:${bg25};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
+      <td class="col-var">${varHtml(d.nom, i+1)}</td>
       <td>
         <strong>${d.nom}</strong>
         <div id="${id}" class="dir-films-list" style="display:none">${filmsDir(d)}</div>
       </td>
-      <td class="col-center">${d.total_sel}</td>
-      ${celTotal(d.total_premis)}
+      <td class="col-center">${d.total_comp}</td>
+      ${celTotal(d.premis_comp)}
+      ${cel(d.o_sel, d.o_pr, OSCAR_COLOR)}
       ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
       ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
       ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
@@ -641,7 +715,7 @@ function construirRànquingDirectors() {
     </tr>`;
   };
 
-  /* --- TOP 10 TRES GRANS --- */
+  /* --- TOP 10 TRES GRANS: ES MANTÉ COM FINS ARA --- */
   const top10_3 = Object.values(dirs)
     .filter(d => d.c_sel+d.b_sel+d.v_sel > 0)
     .sort((a,b) =>
@@ -685,7 +759,7 @@ function construirRànquingDirectors() {
     </tr>`;
   };
 
-  /* --- TOP 3 MÉS PREMIATS PER FESTIVAL --- */
+  /* --- TOP 3 MÉS PREMIATS --- */
   // Àlies: agrupa directors d'un col·lectiu sota un representant
   const ALIASES_TOP3 = [
     { clau: 'Arregi', nom: 'Aitor Arregi' },
@@ -721,7 +795,7 @@ function construirRànquingDirectors() {
   const top3c = top3PerFest('Cannes','c_sel','c_pr','c_pes');
   const top3v = top3PerFest('Venècia','v_sel','v_pr','v_pes');
 
-  // Berlín: hardcoded (seleccions > premis > pes)
+  // Berlín: manté l'ordre actual del projecte.
   const _dirsB = {};
   festivalsData.filter(f => f.festival === 'Berlín').forEach(f => {
     let nom = f.director;
@@ -730,10 +804,10 @@ function construirRànquingDirectors() {
     _dirsB[nom].b_sel++;
     if (f.premiat) { _dirsB[nom].b_pr++; _dirsB[nom].b_pes += PES_PREMI(f.premi); }
   });
-  const _berlинNoms = ['Carlos Saura', 'Manuel Gutiérrez Aragón', 'Vicente Aranda'];
-  const top3b = _berlинNoms.map(n => _dirsB[n]).filter(Boolean);
+  const _berlinNoms = ['Carlos Saura', 'Manuel Gutiérrez Aragón', 'Vicente Aranda'];
+  const top3b = _berlinNoms.map(n => _dirsB[n]).filter(Boolean);
 
-  // Sant Sebastià: hardcoded (Arregi, Alberto Rodríguez, Uribe)
+  // Sant Sebastià: manté l'ordre actual del projecte.
   const _dirsS = {};
   festivalsData.filter(f => f.festival === 'Sant Sebastià').forEach(f => {
     let nom = f.director;
@@ -745,17 +819,24 @@ function construirRànquingDirectors() {
   const _ssNoms = ['Aitor Arregi', 'Alberto Rodríguez', 'Imanol Uribe'];
   const top3s = _ssNoms.map(n => _dirsS[n]).filter(Boolean);
 
-  // CORREGIT: sempre mostra ★N fins i tot quan N=1
-  const celTop3 = (d, key_pr, color) => {
-    if (!d) return '<td class="col-subtil">—</td>';
-    const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]}</span>` : '';
-    return `<td>${d.nom}${pr}</td>`;
-  };
+  // Oscar: films premiats > films reconeguts. Cada film premiat compta una vegada,
+  // independentment del nombre d'estatuetes obtingudes.
+  const _dirsOscar = {};
+  oscarFilms.forEach(f => {
+    const nom = normalitzaDirectorOscar(f.director);
+    if (!_dirsOscar[nom]) _dirsOscar[nom] = { nom, o_sel:0, o_pr:0 };
+    _dirsOscar[nom].o_sel++;
+    if ((f.reconeixement || '').includes('★')) _dirsOscar[nom].o_pr++;
+  });
+  const top3o = Object.values(_dirsOscar)
+    .filter(d => d.o_pr > 0)
+    .sort((a,b) => b.o_pr-a.o_pr || b.o_sel-a.o_sel || a.nom.localeCompare(b.nom, PIP_ES ? 'es' : 'ca'))
+    .slice(0, 3);
 
+  // CORREGIT: sempre mostra ★N fins i tot quan N=1
   const celTop3Exp = (d, key_pr, color, fest, id) => {
     if (!d) return '<td class="col-subtil">—</td>';
     const pr = d[key_pr] ? ` <span style="color:${color}">★${d[key_pr]}</span>` : '';
-    // Si és un àlies, buscar per la clau original (ex: "Arregi")
     const aliasClau = ALIASES_TOP3.find(a => a.nom === d.nom)?.clau;
     const films = festivalsData
       .filter(f => f.festival === fest && f.premiat &&
@@ -768,14 +849,28 @@ function construirRànquingDirectors() {
     </td>`;
   };
 
+  const celTop3Oscar = (d, id) => {
+    if (!d) return '<td class="col-subtil">—</td>';
+    const pr = d.o_pr ? ` <span style="color:${OSCAR_COLOR}">★${d.o_pr}</span>` : '';
+    const films = oscarFilms
+      .filter(f => normalitzaDirectorOscar(f.director) === d.nom && (f.reconeixement || '').includes('★'))
+      .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
+      .join(' · ');
+    return `<td>${d.nom}${pr}
+      <div id="${id}" class="top3-dir-films" style="display:none">${films}</div>
+    </td>`;
+  };
+
   cont25.innerHTML = `
-    <h3 class="subtitol-ranking-gran">${pipT('Top 25 — Tots els festivals','Top 25 — Todos los festivales')}</h3>
-    <table class="taula-festivals">
+    <h3 class="subtitol-ranking-gran">${pipT('Top 25 — Oscar i tots els festivals','Top 25 — Oscar y todos los festivales')}</h3>
+    <table class="taula-festivals taula-directors-compost">
       <thead><tr>
         <th class="col-pos">#</th>
+        <th class="col-var">Var.</th>
         <th>${pipT('Direcció','Dirección')}</th>
-        <th class="col-center">${pipT('Total sel.','Total sel.')}</th>
+        <th class="col-center">Total</th>
         <th class="col-center">Total ★</th>
+        <th class="col-center" style="color:${OSCAR_COLOR}">Oscar</th>
         <th class="col-center" style="color:${FC['Cannes']}">Cannes</th>
         <th class="col-center" style="color:${FC['Venècia']}">${festivalLabel('Venècia')}</th>
         <th class="col-center" style="color:${FC['Berlín']}">Berlín</th>
@@ -804,13 +899,22 @@ function construirRànquingDirectors() {
     <h3 class="subtitol-ranking-gran">${pipT('Top 3 — Més premiats','Top 3 — Más premiados')}</h3>
     <table class="taula-festivals">
       <thead><tr>
-        <th style="width:110px">Festival</th>
+        <th style="width:110px">${pipT('Institució','Institución')}</th>
         <th>${pipT('1r','1.º')}</th>
         <th>${pipT('2n','2.º')}</th>
         <th>${pipT('3r','3.º')}</th>
         <th class="col-center" style="width:40px">Films</th>
       </tr></thead>
       <tbody>
+        <tr data-fest="top3-o">
+          <td><strong style="color:${OSCAR_COLOR}">Oscar</strong></td>
+          ${celTop3Oscar(top3o[0],'top3-o-0')}
+          ${celTop3Oscar(top3o[1],'top3-o-1')}
+          ${celTop3Oscar(top3o[2],'top3-o-2')}
+          <td class="col-center">
+            <button class="btn-films-dir" onclick="toggleTop3Films('top3-o',this)">+</button>
+          </td>
+        </tr>
         <tr data-fest="top3-c">
           <td>${nomFest('Cannes')}</td>
           ${celTop3Exp(top3c[0],'c_pr',FC['Cannes'],'Cannes','top3-c-0')}
@@ -829,7 +933,7 @@ function construirRànquingDirectors() {
             <button class="btn-films-dir" onclick="toggleTop3Films('top3-v',this)">+</button>
           </td>
         </tr>
-          <tr data-fest="top3-b">
+        <tr data-fest="top3-b">
           <td>${nomFest('Berlín')}</td>
           ${celTop3Exp(top3b[0],'b_pr',FC['Berlín'],'Berlín','top3-b-0')}
           ${celTop3Exp(top3b[1],'b_pr',FC['Berlín'],'Berlín','top3-b-1')}
@@ -849,6 +953,8 @@ function construirRànquingDirectors() {
         </tr>
       </tbody>
     </table>`;
+
+  if (window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
 
 window.toggleTop3Films = function(key, btn) {
