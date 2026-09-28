@@ -391,7 +391,7 @@ function construirRànquingEspectadors() {
     const color  = FC[festival];
 
     const mitjana = calcularMitjana(films);
-    const medianaTxt = mitjana ? `${pipT('Mitjana de tots els films seleccionats','Media de todos los films seleccionados')}: ${fmt(mitjana)} ${pipT('espectadors','espectadores')}` : '';
+    const medianaTxt = mitjana ? `${pipT('Mitjana de tots els films documentats','Media de todos los films seleccionados')}: ${fmt(mitjana)} ${pipT('espectadors','espectadores')}` : '';
 
     const fila = (f, i) => {
       const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
@@ -489,7 +489,7 @@ async function construirRànquingAcademiesEspectadors() {
       const cid = `resp-acad-${nom.toLowerCase()}`;
       const mitjana = calcularMitjana(filmsAmbDades);
       const mitjanaTxt = mitjana
-        ? `Mitjana de tots els films: ${fmt(mitjana)} espectadors`
+        ? `Mitjana de tots els films documentats: ${fmt(mitjana)} espectadors`
         : '';
 
       const fila = (f, i, extraClass = '') => `<tr${extraClass ? ` class="${extraClass}"` : ''} style="${extraClass ? 'display:none;' : ''}background:${i % 2 === 0 ? '#ffffff' : '#f7f7f7'};border-bottom:2px solid #fff">
