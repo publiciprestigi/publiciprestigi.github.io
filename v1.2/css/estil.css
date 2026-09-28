@@ -1512,6 +1512,12 @@ html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
   padding-top: 24px;
 }
 
+/* Evita sumar el marge superior del primer títol (Oscar)
+   al padding del separador entre festivals i acadèmies. */
+.ranking-academies-bloc > .subtitol-festival-ranking:first-child {
+  margin-top: 0 !important;
+}
+
 /* Als rànquings, l'etiqueta ACTUALITZAT acompanya la segona línia
    en lloc de quedar visualment entre les dues línies del títol. */
 .sidebar-link-badge[data-seccio="espectadors"],
