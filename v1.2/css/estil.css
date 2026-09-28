@@ -1423,61 +1423,76 @@ html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
 
 
 /* ============================================================
-   V1.2 — FORA DE COMPETICIÓ (context, fora del corpus principal)
-   Mateix codi visual que els films de context de la Part I:
-   fons blanc i text gris. Bloc plegable per defecte.
+   v1.2 — Fora de competició
+   Mateix criteri visual que les pel·lícules de context de la Part I:
+   una única caixa desplegable, fons blanc i contingut en gris.
    ============================================================ */
-.fora-competicio {
-  margin-top: 34px;
-  border-top: 1px solid var(--color-linia);
-  padding-top: 18px;
+.fora-competicio-bloc {
+  margin-top: 24px;
 }
-.fora-competicio > summary {
-  list-style: none;
-  cursor: pointer;
-  user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px 14px;
-  border: 1px solid var(--color-linia);
-  border-radius: 3px;
-  color: var(--color-text-suau);
-  font-size: 0.84rem;
-  font-weight: 600;
-  background: #fff;
+
+.fora-competicio-toggle {
+  margin: 0;
 }
-.fora-competicio > summary::-webkit-details-marker { display:none; }
-.fora-competicio > summary::after {
-  content: '+';
-  font-size: 1.05rem;
-  font-weight: 400;
-  color: #888;
+
+.fora-competicio-contingut[hidden] {
+  display: none;
 }
-.fora-competicio[open] > summary::after { content: '−'; }
-.fora-competicio > summary:hover { border-color: #aaa; color: var(--color-text); }
-.fora-competicio-contingut { padding-top: 16px; }
-.fora-competicio-nota {
-  margin: 0 0 14px;
-  color: #888;
-  font-size: 0.82rem;
-  line-height: 1.5;
+
+.fora-competicio-contingut {
+  padding-top: 12px;
 }
-.taula-festivals.fora-competicio-taula tbody tr { background:#fff !important; }
-.taula-festivals.fora-competicio-taula tbody td,
-.taula-festivals.fora-competicio-taula tbody td strong,
-.taula-festivals.fora-competicio-taula tbody td em,
-.taula-festivals.fora-competicio-taula tbody .film-any,
-.taula-festivals.fora-competicio-taula tbody .estrella {
-  color:#888 !important;
+
+.taula-festivals-context {
+  background: #fff !important;
 }
+
+.taula-festivals-context thead tr,
+.taula-festivals-context tbody tr,
+.taula-festivals-context th,
+.taula-festivals-context td {
+  background: #fff !important;
+}
+
+.taula-festivals-context th,
+.taula-festivals-context td,
+.taula-festivals-context td.col-subtil,
+.taula-festivals-context td.col-premi,
+.taula-festivals-context .film-any,
+.taula-festivals-context strong,
+.taula-festivals-context em,
+.taula-festivals-context .estrella {
+  color: #888 !important;
+}
+
+.taula-festivals-context th {
+  border-bottom-color: #aaa !important;
+}
+
+/* Pàgines encara no editades de la v1.2 */
 .v12-en-preparacio {
   border-top: 1px solid var(--color-linia);
   padding-top: 22px;
   color: var(--color-text-suau);
   font-size: 0.9rem;
   line-height: 1.6;
+}
+
+
+#seccio-oscar .oscar-professionals-bloc {
+  margin-top: 24px;
+}
+
+#seccio-oscar .oscar-professionals-toggle {
+  margin: 0;
+}
+
+#seccio-oscar .oscar-professionals-contingut[hidden] {
+  display: none;
+}
+
+#seccio-oscar .oscar-professionals-contingut {
+  padding-top: 12px;
 }
 
 /* ============================================================
@@ -1500,6 +1515,135 @@ html[lang="ca"] #drawer-part-iii .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge,
 html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
   display: none;
+}
+
+
+/* v1.2 CA — Part II: manté l'scroll lateral però n'amaga la barra visual */
+html[lang="ca"] body.part-ii .sidebar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+
+/* ============================================================
+   v1.2 — OSCAR
+   ============================================================ */
+#seccio-oscar .oscar-resum {
+  border-left: 3px solid #c8a000;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+#seccio-oscar .taula-oscar-principal tbody tr {
+  background: rgba(200, 160, 0, 0.07);
+  border-bottom: 2px solid #fff;
+}
+
+#seccio-oscar .taula-oscar-principal td {
+  border-bottom-color: #fff;
+}
+
+
+#seccio-oscar .oscar-estrella {
+  color: #c8a000;
+  font-weight: 700;
+}
+
+/* ============================================================
+   v1.2 — PREMIS D'ACADÈMIES: previsualització EFA i Altres
+   ============================================================ */
+#seccio-efa .academia-preview,
+#seccio-academies-europa .academia-preview {
+  --academia-or: #c8a000;
+}
+
+#seccio-efa .academia-preview-kicker {
+  color: var(--academia-or);
+}
+
+#seccio-academies-europa .academia-preview-bloc {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(200, 160, 0, 0.28);
+}
+
+#seccio-academies-europa .academia-preview-bloc:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+#seccio-academies-europa .academia-preview-titol {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--academia-or);
+}
+
+#seccio-academies-europa .academia-preview-bloc p {
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   v1.2 — EFA / PREMIS DEL CINEMA EUROPEU
+   ============================================================ */
+#seccio-efa .efa-resum {
+  border-left: 3px solid #8C6239;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+#seccio-efa .taula-efa-principal tbody tr {
+  background: rgba(140, 98, 57, 0.07);
+  border-bottom: 2px solid #fff;
+}
+
+#seccio-efa .taula-efa-principal td {
+  border-bottom-color: #fff;
+}
+
+#seccio-efa .efa-estrella {
+  color: #c8a000;
+  font-weight: 700;
+}
+
+#seccio-efa .efa-context-bloc {
+  margin-top: 24px;
+}
+
+#seccio-efa .efa-context-toggle {
+  margin: 0;
+}
+
+#seccio-efa .efa-context-contingut[hidden] {
+  display: none;
+}
+
+#seccio-efa .efa-context-contingut {
+  padding-top: 12px;
+}
+
+#seccio-efa .efa-context-resum {
+  margin: 0 0 12px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+#seccio-efa .efa-subtitol-context {
+  margin: 24px 0 0.5rem;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-linia);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #888;
 }
 
 
