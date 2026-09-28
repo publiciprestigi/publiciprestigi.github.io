@@ -1,5 +1,6 @@
 <!-- intro -->
-La relació amb el públic varia de manera significativa entre els dos circuits de reconeixement internacional analitzats: festivals i acadèmies. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. A les acadèmies, la presència és més alta: els deu primers films dels EFA formen part del Top 100, mentre que entre els deu primers dels Oscar n'hi ha quatre. La incorporació dels Oscar i dels EFA amplia la comparació i permet observar diferències no només d'escala, sinó també en la manera com cada institució reconeix i projecta les pel·lícules.
+La incorporació dels Oscar i dels EFA amplia la comparació entre els dos circuits de reconeixement internacional analitzats i permet observar diferències no només d’escala, sinó també en la seva relació amb el públic i en la manera com cada institució reconeix i projecta les pel·lícules. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. A les acadèmies, la presència és més alta: els deu primers films dels EFA formen part del Top 100, mentre que entre els deu primers dels Oscar n'hi ha quatre.
+
 <!-- /intro -->
 
 <!-- comentari -->
