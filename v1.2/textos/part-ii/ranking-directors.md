@@ -1,5 +1,5 @@
 <!-- intro -->
-El Top 25, amb la incorporació dels Oscar als quatre festivals estudiats, ofereix una visió més completa, tot i combinar mecanismes de reconeixement no equivalents; els EFA, menys consolidats en projecció pública i prestigi, no hi computen. El Top 10 restringeix la mirada a Cannes, Venècia i Berlín i revela quins directors mantenen una veritable projecció internacional en els festivals clau, més enllà de la *sobrerepresentació* de Sant Sebastià. I el Top 3 mostra els directors més premiats en cadascuna de les cinc institucions.
+El Top 25, amb la incorporació dels Oscar als quatre festivals estudiats, ofereix una visió més completa, tot i combinar mecanismes de reconeixement no estrictament equivalents; els EFA, menys consolidats en projecció pública i prestigi, no hi computen. El Top 10 restringeix la mirada a Cannes, Venècia i Berlín i revela quins directors mantenen una veritable projecció internacional en els festivals clau, més enllà de la *sobrerepresentació* de Sant Sebastià. I el Top 3 mostra els directors més premiats en cadascuna de les cinc institucions.
 
 La columna Total suma les seleccions als festivals i els films amb nominacions als Oscar; ★ indica els que han estat premiats. En cas d’empat, preval primer el nombre de premis i després la jerarquia establerta: Oscar > Cannes > Venècia > Berlín > Sant Sebastià.
 
