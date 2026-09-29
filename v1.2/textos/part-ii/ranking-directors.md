@@ -1,19 +1,23 @@
 <!-- intro -->
-El Top 25, amb la incorporació dels Oscar als quatre festivals estudiats, ofereix un mapa més ampli i complet; els EFA, menys consolidats en projecció pública i prestigi, no hi computen. El Top 10 restringeix la mirada a Cannes, Venècia i Berlín i revela quins directors mantenen una veritable projecció internacional en els festivals clau, més enllà de la *sobrerepresentació* de Sant Sebastià. I el Top 3 mostra els directors més premiats en cadascuna de les cinc institucions.
+El **Top 25**, amb la incorporació dels Oscar als quatre festivals estudiats, ofereix **una visió més àmplia i completa**; els **EFA**, menys consolidats en projecció pública i prestigi, no hi computen. El **Top 10** restringeix la mirada a Cannes, Venècia i Berlín i revela quins directors mantenen una veritable projecció internacional en els festivals clau, més enllà de la *sobrerepresentació* de Sant Sebastià. I el **Top 3** mostra els directors més premiats en cadascuna de les cinc institucions.
 
-La columna Total suma les seleccions als festivals i els films amb nominacions als Oscar, ★ indica els que han estat premiats. En cas d’empat, preval primer el nombre de premis i després la jerarquia establerta: Oscar > Cannes > Venècia > Berlín > Sant Sebastià.
+La columna **Total** suma les seleccions als festivals i els films amb nominacions als Oscar; **★** indica els que han estat premiats. En cas d’empat, preval primer el nombre de premis i després **la jerarquia establerta: Oscar > Cannes > Venècia > Berlín > Sant Sebastià**.
 
 <!-- /intro -->
 
-<!-- comentari-top25 -->
-- Saura lidera amb 17 pel·lícules seleccionades —*Peppermint Frappé* (1968) va participar simultàniament a Cannes i Berlín, un cas excepcional de l'època— i 8 d'elles premiades, Almodóvar el segueix amb 11 i 6. En nombre Saura és dominant, però Almodóvar és pràcticament l'únic pont sòlid entre públic i prestigi que apareix tant al Top 100 per espectadors com al circuit de festivals internacionals de manera sostinguda.
+<!-- nota-top25 -->
+**La columna Var.** compara la posició amb el mateix rànquing calculat només amb els quatre festivals (vegeu el rànquing de la [versió anterior](https://publiciprestigi.com/v1.1/part-ii.html#directors) de l’estudi); **NOU** indica l’entrada al **Top 25 actual amb els Oscar**.
+<!-- /nota-top25 -->
 
-- Dels 25 directors d'aquest rànquing, només 5 coincideixen a la vegada al Top 100 d'espectadors: el citat Almodóvar (*Mujeres al borde…* i *Todo sobre mi madre*), Fernando León de Aranoa (*Los lunes al sol*), Vicente Aranda (*Juana la Loca*), Pedro Olea (*Tormento*) i Mario Camus (*Los santos inocentes*).
+<!-- comentari-top25 -->
+- **L’entrada dels Oscar no altera el lideratge, però redueix molt la distància entre els dos primers.** Carlos Saura continua primer, mentre que Pedro Almodóvar s’hi acosta clarament: en el còmput només de festivals, Saura suma 17 films seleccionats i Almodóvar 11; amb les nominacions als Oscar, passen a 19 i 17 respectivament. Tots dos acumulen vuit films premiats. Saura manté el lideratge per volum de presència, però Almodóvar és pràcticament l’únic pont sòlid entre públic i prestigi, amb presència sostinguda tant al Top 100 d’espectadors com al circuit internacional de prestigi.
+
+- **En la resta del rànquing, els Oscar provoquen moviments més visibles:** Fernando Trueba puja sis posicions (#11→#5) i Jaime de Armiñán, nou llocs (#17→#8); Alejandro Amenábar entra al Top 25 i José Luis Garci hi apareix directament al #18 sense cap presència als quatre festivals estudiats. El cas de Garci és especialment significatiu: el director del primer film espanyol que va guanyar l’Oscar a millor pel·lícula estrangera només entra en aquest rànquing quan s’hi incorpora el reconeixement acadèmic. La majoria dels descensos són, per tant, relatius: es deuen a l’ascens dels directors que incorporen aquest reconeixement.
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
 - Com canvia el rànquing: Montxo Armendáriz (#5 al Top 25), Gonzalo Suàrez (#6), Imanol Uribe (#9) i Icíar Bollaín (#10) desapareixen del Top 10 sense Sant Sebastià. I es mantenen Saura, Almodóvar, Mario Camus, Manuel Gutiérrez Aragón, Vicente Aranda i Bigas Luna.
- 
+
 - En canvi, apareixen: Fernando Trueba (#11→#6), Isabel Coixet (#18→#7), Ricardo Franco (→#9), Víctor Erice (#21→#10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del festival de Sant Sebastià.
 <!-- /comentari-top10 -->
 
