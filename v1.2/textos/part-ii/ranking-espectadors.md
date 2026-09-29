@@ -10,7 +10,7 @@ La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiq
 <!-- /comentari -->
 
 <!-- comentari-academies -->
-- Els films reconeguts pels Oscar arriben a una mitjana d'uns 1.300K espectadors, davant dels 932K dels EFA, bastant per sobre de les mitjanes dels quatre festivals. Els EFA treballen amb un univers molt més ampli (71 films davant de 29) i amb un sistema de categories més extens i divers; els Oscar concentren menys títols i una projecció comercial més elevada. La diferència de mitjanes parla tant de la relació amb el públic com de la diferent amplitud i lògica de reconeixement de cada acadèmia.
+- Els films reconeguts pels Oscar arriben a una mitjana d'uns 1.300K espectadors, davant dels 932K dels EFA, bastant per sobre de les mitjanes dels quatre festivals. Els EFA treballen amb un univers molt més ampli (71 films davant de 29) i amb un sistema de categories més extens i divers; els Oscar concentren menys títols i una projecció comercial més elevada.
 
 - Festivals i acadèmies no són mecanismes de reconeixement equivalents: els festivals seleccionen i legitimen cinema abans o durant la seva circulació internacional; les acadèmies reconeixen films que ja han acumulat visibilitat i trajectòria pública, i els premis poden reforçar-ne la vida comercial. En els EFA aquesta relació es fa especialment clara: el seu Top 5 està format per tres films de J. A. Bayona i dos d'Alejandro Amenábar, exemples del que aquí anomenem [cinema d'autor industrial](part-iii.html#autor-industrial) i del film-esdeveniment de les últimes dècades.
 <!-- /comentari-academies -->
