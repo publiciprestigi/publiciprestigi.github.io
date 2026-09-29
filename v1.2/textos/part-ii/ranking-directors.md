@@ -6,7 +6,7 @@ La columna Total suma les seleccions als festivals i els films amb nominacions a
 <!-- /intro -->
 
 <!-- nota-top25 -->
-La columna Var. compara la posició amb el mateix rànquing calculat només amb els quatre festivals (vegeu el rànquing de la [versió anterior](https://publiciprestigi.com/v1.1/part-ii.html#directors) de l’estudi); NOU indica l’entrada al Top 25 actual amb els Oscar.
+La columna Var. compara la posició amb el mateix rànquing calculat només amb els quatre festivals (vegeu el rànquing de la [versió anterior](https://publiciprestigi.com/v1.1/part-ii.html#directors) de l’estudi); «nou» indica l’entrada al Top 25 actual amb els Oscar.
 <!-- /nota-top25 -->
 
 <!-- comentari-top25 -->
@@ -16,7 +16,7 @@ La columna Var. compara la posició amb el mateix rànquing calculat només amb 
 <!-- /comentari-top25 -->
 
 <!-- nota-top10 -->
-La columna Var. compara la posició amb el Top 25 anterior, NOU indica l’entrada al Top 10.
+La columna Var. compara la posició amb el Top 25 anterior, «nou» indica l’entrada al Top 10.
 <!-- /nota-top10 -->
 
 <!-- comentari-top10 -->
