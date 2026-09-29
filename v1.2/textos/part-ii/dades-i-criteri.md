@@ -6,7 +6,7 @@ El corpus principal dels festivals es limita estrictament a la secció oficial a
 
 Als festivals, el primer nivell de reconeixement és la selecció a competició oficial; a les acadèmies, l’equivalent és la nominació, que pot arribar a través de diferents categories. Els corpus dels Oscar i els EFA, a més, no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional.
 
-En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’organisme o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única candidatura, l’estudi compta totes les categories de nominació, incloses les tècniques. Als EFA s’aplica el mateix criteri, mentre que els premis del públic i altres votacions es documenten separadament. En tots dos casos, cada film compta una sola vegada com a presència, independentment del nombre de nominacions o premis.
+En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única candidatura, l’estudi compta totes les categories de nominació, incloses les tècniques. Als EFA s’aplica el mateix criteri, mentre que els premis del públic i altres votacions es documenten separadament. En tots dos casos, cada film compta una sola vegada com a presència, independentment del nombre de nominacions o premis.
 
 ## Presència a les seccions oficials
 
