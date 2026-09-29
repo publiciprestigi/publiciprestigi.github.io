@@ -12,7 +12,7 @@ La columna Var. compara la posició amb el mateix rànquing calculat només amb 
 <!-- comentari-top25 -->
 - Amb l’entrada dels Oscar, Saura continua primer, però Almodóvar li retalla distàncies: dels 17 films seleccionats de Saura i 11 d’Almodóvar als festivals, passen a 19 i 17 respectivament quan s’hi sumen les nominacions als Oscar. Tots dos acumulen vuit films premiats, de manera que la diferència entre els dos queda en el volum de presència. Almodóvar és pràcticament l’únic pont sòlid entre públic i prestigi, amb presència sostinguda tant al Top 100 d’espectadors com al circuit internacional de prestigi.
 
-- En la resta del rànquing, els Oscar provoquen moviments més visibles: Fernando Trueba puja sis posicions (#11→#5) i Jaime de Armiñán, nou llocs (#17→#8); Alejandro Amenábar entra al Top 25 i José Luis Garci hi apareix directament al #18 sense cap presència als quatre festivals estudiats. El cas de Garci és especialment significatiu: el director del primer film espanyol que va guanyar l’Oscar a millor pel·lícula estrangera només entra en aquest rànquing quan s’hi incorpora el reconeixement acadèmic.
+- En la resta del rànquing, els Oscar provoquen moviments més visibles: Fernando Trueba puja sis posicions (#11→#5) i Jaime de Armiñán, nou llocs (#17→#8); Alejandro Amenábar entra al #14 i José Luis Garci hi apareix directament al #18 sense cap presència als quatre festivals estudiats. El cas de Garci és especialment significatiu: el director del primer film espanyol que va guanyar l’Oscar a millor pel·lícula estrangera només entra en aquest rànquing quan s’hi incorpora el reconeixement acadèmic.
 <!-- /comentari-top25 -->
 
 <!-- comentari-top10 -->
