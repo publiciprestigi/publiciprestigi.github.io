@@ -706,14 +706,13 @@ async function construirRànquingDirectors() {
 
   const fila25 = (d, i) => {
     const id = `d25-${++_dirCtr}`;
+    const idMain = `${id}-main`;
+    const idFilms = `${id}-films`;
     const bg25 = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-    return `<tr style="background:${bg25};border-bottom:2px solid #fff">
+    return `<tr id="${idMain}" style="background:${bg25};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td class="col-var">${varHtml(d.nom, i+1)}</td>
-      <td>
-        <strong>${d.nom}</strong>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsDir(d)}</div>
-      </td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.total_comp}</td>
       ${celTotal(d.premis_comp)}
       ${cel(d.o_sel, d.o_pr, OSCAR_COLOR)}
@@ -722,7 +721,13 @@ async function construirRànquingDirectors() {
       ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
       ${cel(d.s_sel, d.s_pr, FC['Sant Sebastià'])}
       <td class="col-center">
-        <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)">+</button>
+        <button class="btn-films-dir" onclick="toggleDirFilms('${idFilms}',this)">+</button>
+      </td>
+    </tr>
+    <tr id="${idFilms}" data-main-row="${idMain}" style="display:none;background:${bg25};border-bottom:2px solid #fff">
+      <td colspan="3" style="padding:0;border:0"></td>
+      <td colspan="8" style="padding-top:2px;padding-bottom:10px;vertical-align:top">
+        <div class="dir-films-list" style="max-width:none;margin-top:0">${filmsDir(d)}</div>
       </td>
     </tr>`;
   };
@@ -753,21 +758,26 @@ async function construirRànquingDirectors() {
 
   const fila3 = (d, i) => {
     const id = `d3-${++_dirCtr}`;
+    const idMain = `${id}-main`;
+    const idFilms = `${id}-films`;
     const bg3 = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-    return `<tr style="background:${bg3};border-bottom:2px solid #fff">
+    return `<tr id="${idMain}" style="background:${bg3};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td class="col-var">${varHtmlTop10(d.nom, i+1)}</td>
-      <td>
-        <strong>${d.nom}</strong>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsDir3(d)}</div>
-      </td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.c_sel+d.b_sel+d.v_sel}</td>
       ${celTotal(d.c_pr+d.b_pr+d.v_pr)}
       ${cel(d.c_sel, d.c_pr, FC['Cannes'])}
       ${cel(d.v_sel, d.v_pr, FC['Venècia'])}
       ${cel(d.b_sel, d.b_pr, FC['Berlín'])}
       <td class="col-center">
-        <button class="btn-films-dir" onclick="toggleDirFilms('${id}',this)">+</button>
+        <button class="btn-films-dir" onclick="toggleDirFilms('${idFilms}',this)">+</button>
+      </td>
+    </tr>
+    <tr id="${idFilms}" data-main-row="${idMain}" style="display:none;background:${bg3};border-bottom:2px solid #fff">
+      <td colspan="3" style="padding:0;border:0"></td>
+      <td colspan="6" style="padding-top:2px;padding-bottom:10px;vertical-align:top">
+        <div class="dir-films-list" style="max-width:none;margin-top:0">${filmsDir3(d)}</div>
       </td>
     </tr>`;
   };
@@ -980,10 +990,12 @@ window.toggleTop3Films = function(key, btn) {
 };
 
 window.toggleDirFilms = function(id, btn) {
-  const div = document.getElementById(id);
-  if (!div) return;
-  const vis = div.style.display !== 'none';
-  div.style.display = vis ? 'none' : 'block';
+  const row = document.getElementById(id);
+  if (!row) return;
+  const vis = row.style.display !== 'none';
+  row.style.display = vis ? 'none' : 'table-row';
+  const mainRow = document.getElementById(row.dataset.mainRow || '');
+  if (mainRow) mainRow.style.borderBottom = vis ? '2px solid #fff' : '0';
   btn.textContent = vis ? '+' : '−';
 };
 
