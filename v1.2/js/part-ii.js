@@ -683,8 +683,8 @@ async function construirRànquingDirectors() {
       const items = filmsOscar.map(f => {
         const pr = (f.reconeixement || '').includes('★') ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
-      }).join(' + ');
-      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${OSCAR_COLOR}">Oscar</span><div>${items}</div></div>`);
+      }).join(' · ');
+      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${OSCAR_COLOR};margin-bottom:2px;line-height:1.2">Oscar</span><div>${items}</div></div>`);
     }
 
     const fests = ['Cannes','Venècia','Berlín','Sant Sebastià'];
@@ -696,8 +696,8 @@ async function construirRànquingDirectors() {
       const items = films.map(f => {
         const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
-      }).join(' + ');
-      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${FC[fest]}">${festivalLabel(fest)}</span><div>${items}</div></div>`);
+      }).join(' · ');
+      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${FC[fest]};margin-bottom:2px;line-height:1.2">${festivalLabel(fest)}</span><div>${items}</div></div>`);
     });
     return `<div style="display:flex;flex-direction:column;gap:10px">${blocs.join('')}</div>`;
   };
@@ -725,7 +725,7 @@ async function construirRànquingDirectors() {
     <tr id="${idFilms}" data-main-row="${idMain}" style="display:none;background:${bg25};border-bottom:2px solid #fff">
       <td colspan="3" style="padding:0;border:0"></td>
       <td colspan="8" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
-        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.55">${filmsDir(d)}</div>
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsDir(d)}</div>
       </td>
     </tr>`;
   };
@@ -748,7 +748,7 @@ async function construirRànquingDirectors() {
         const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
       }).join(' · ');
-      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${FC[fest]}">${festivalLabel(fest)}</span><div>${items}</div></div>`);
+      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${FC[fest]};margin-bottom:2px;line-height:1.2">${festivalLabel(fest)}</span><div>${items}</div></div>`);
     });
     return `<div style="display:flex;flex-direction:column;gap:10px">${blocs.join('')}</div>`;
   };
@@ -774,7 +774,7 @@ async function construirRànquingDirectors() {
     <tr id="${idFilms}" data-main-row="${idMain}" style="display:none;background:${bg3};border-bottom:2px solid #fff">
       <td colspan="3" style="padding:0;border:0"></td>
       <td colspan="6" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
-        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.55">${filmsDir3(d)}</div>
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsDir3(d)}</div>
       </td>
     </tr>`;
   };
