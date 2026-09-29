@@ -16,7 +16,7 @@ La columna Var. compara la posició amb el mateix rànquing calculat només amb 
 <!-- /comentari-top25 -->
 
 <!-- nota-top10 -->
-La columna Var. compara la posició amb el Top 25 anterior; NOU indica l’entrada al Top 10.
+La columna Var. compara la posició amb el Top 25 anterior, NOU indica l’entrada al Top 10.
 <!-- /nota-top10 -->
 
 <!-- comentari-top10 -->
