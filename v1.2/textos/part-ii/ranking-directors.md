@@ -24,5 +24,5 @@ La columna Var. compara la posició amb el Top 25 anterior, NOU indica l’entra
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-**Aclariment**: als festivals, es consideren films premiats els que han rebut el guardó màxim, premis especials del jurat, millor direcció, interpretació o guió. Als Oscar, cada film guanyador compta una sola vegada, independentment del nombre d’estatuetes; en cas d’empat, preval el nombre de films nominats.
+**Recordatori**: als festivals, es consideren films premiats els que han rebut el màxim guardó, premis especials del jurat, millor direcció, interpretació o guió. Als Oscar, es compten totes les categories de nominació, incloses les tècniques; cada film guanyador compta una sola vegada, independentment del nombre d’estatuetes, i en cas d’empat preval el nombre de films nominats.
 <!-- /comentari-top3 -->
