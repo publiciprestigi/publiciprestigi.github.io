@@ -1,9 +1,9 @@
 <!-- intro -->
-El primer Top 25 recull els directors amb més presència acumulada als quatre festivals. Sumant, primer, el total dels films seleccionats i, després, amb el símbol ★ el número dels que han sigut premiats. I a continuació, el resultat de cada festival seguint la mateixa pauta.
+En el cas dels directors, els Oscar amplien l’anàlisi del prestigi més enllà dels quatre festivals estudiats. Els EFA, menys consolidats tant en projecció pública com en prestigi, no s’hi computen.
 
-En cas d'empat, el criteri és el nombre de premis i després el valor del festival, que segueix la jerarquia: Cannes > Venècia > Berlín > Sant Sebastià. Així, un director amb 3 participacions a Cannes es posiciona per davant d'un altre amb 3 a Sant Sebastià.
+El Top 25 ofereix el mapa més ampli i complet. El Top 10 restringeix la mirada a Cannes, Venècia i Berlín i revela quins directors mantenen una veritable projecció internacional en els festivals clau, més enllà de la sobrerepresentació de Sant Sebastià. I el Top 3 mostra els directors més premiats en cadascuna de les cinc institucions.
 
-En el següent Top 10 s'exclou Sant Sebastià per aïllar la projecció als tres festivals històricament més prestigiosos internacionalment. Els empats es resolen amb la mateixa metodologia.
+La columna Total suma les seleccions als festivals i els films amb nominacions als Oscar, ★ indica els que han estat premiats. En cas d’empat, preval primer el nombre de premis i després la jerarquia establerta: Oscar > Cannes > Venècia > Berlín > Sant Sebastià.
 
 <!-- /intro -->
 
