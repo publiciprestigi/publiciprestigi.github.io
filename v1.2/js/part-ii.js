@@ -676,16 +676,15 @@ async function construirRànquingDirectors() {
   let _dirCtr = 0;
 
   const filmsDir = (d) => {
-    let html = '';
+    const blocs = [];
 
     const filmsOscar = oscarFilms.filter(f => normalitzaDirectorOscar(f.director) === d.nom);
     if (filmsOscar.length) {
-      html += `<span class="dir-films-grup" style="color:${OSCAR_COLOR}">Oscar</span>`;
-      html += filmsOscar.map(f => {
+      const items = filmsOscar.map(f => {
         const pr = (f.reconeixement || '').includes('★') ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
       }).join(' + ');
-      html += ' ';
+      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${OSCAR_COLOR}">Oscar</span><div>${items}</div></div>`);
     }
 
     const fests = ['Cannes','Venècia','Berlín','Sant Sebastià'];
@@ -694,14 +693,13 @@ async function construirRànquingDirectors() {
       const films = festivalsData.filter(f => f.festival === fest &&
         (aliasClau25 ? f.director.includes(aliasClau25) : f.director === d.nom));
       if (!films.length) return;
-      html += `<span class="dir-films-grup" style="color:${FC[fest]}">${festivalLabel(fest)}</span>`;
-      html += films.map(f => {
+      const items = films.map(f => {
         const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
       }).join(' + ');
-      html += ' ';
+      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${FC[fest]}">${festivalLabel(fest)}</span><div>${items}</div></div>`);
     });
-    return html;
+    return `<div style="display:flex;flex-direction:column;gap:10px">${blocs.join('')}</div>`;
   };
 
   const fila25 = (d, i) => {
@@ -726,8 +724,8 @@ async function construirRànquingDirectors() {
     </tr>
     <tr id="${idFilms}" data-main-row="${idMain}" style="display:none;background:${bg25};border-bottom:2px solid #fff">
       <td colspan="3" style="padding:0;border:0"></td>
-      <td colspan="8" style="padding-top:2px;padding-bottom:10px;vertical-align:top">
-        <div class="dir-films-list" style="max-width:none;margin-top:0">${filmsDir(d)}</div>
+      <td colspan="8" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.55">${filmsDir(d)}</div>
       </td>
     </tr>`;
   };
@@ -742,18 +740,17 @@ async function construirRànquingDirectors() {
 
   const filmsDir3 = (d) => {
     const fests = ['Cannes','Venècia','Berlín'];
-    let html = '';
+    const blocs = [];
     fests.forEach(fest => {
       const films = festivalsData.filter(f => f.festival === fest && f.director === d.nom);
       if (!films.length) return;
-      html += `<span class="dir-films-grup" style="color:${FC[fest]}">${festivalLabel(fest)}</span>`;
-      html += films.map(f => {
+      const items = films.map(f => {
         const pr = f.premiat ? `<span class="estrella">★</span> ` : '';
         return `<strong><em>${f.titol}</em></strong> ${pr}<span class="film-any">(${f.any})</span>`;
       }).join(' · ');
-      html += ' ';
+      blocs.push(`<div class="dir-films-bloc"><span class="dir-films-grup" style="color:${FC[fest]}">${festivalLabel(fest)}</span><div>${items}</div></div>`);
     });
-    return html;
+    return `<div style="display:flex;flex-direction:column;gap:10px">${blocs.join('')}</div>`;
   };
 
   const fila3 = (d, i) => {
@@ -776,8 +773,8 @@ async function construirRànquingDirectors() {
     </tr>
     <tr id="${idFilms}" data-main-row="${idMain}" style="display:none;background:${bg3};border-bottom:2px solid #fff">
       <td colspan="3" style="padding:0;border:0"></td>
-      <td colspan="6" style="padding-top:2px;padding-bottom:10px;vertical-align:top">
-        <div class="dir-films-list" style="max-width:none;margin-top:0">${filmsDir3(d)}</div>
+      <td colspan="6" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.55">${filmsDir3(d)}</div>
       </td>
     </tr>`;
   };
