@@ -15,12 +15,14 @@ La columna Var. compara la posició amb el mateix rànquing calculat només amb 
 - En la resta del rànquing, els Oscar provoquen moviments més visibles: Fernando Trueba puja sis posicions (#11→#5) i Jaime de Armiñán, nou llocs (#17→#8); Alejandro Amenábar entra al #14 i José Luis Garci hi apareix directament al #18 sense cap presència als quatre festivals estudiats. El cas de Garci és especialment significatiu: el director del primer film espanyol que va guanyar l’Oscar a millor pel·lícula estrangera només entra en aquest rànquing quan s’hi incorpora el reconeixement acadèmic.
 <!-- /comentari-top25 -->
 
-<!-- comentari-top10 -->
-- Com canvia el rànquing: Montxo Armendáriz (#5 al Top 25), Gonzalo Suàrez (#6), Imanol Uribe (#9) i Icíar Bollaín (#10) desapareixen del Top 10 sense Sant Sebastià. I es mantenen Saura, Almodóvar, Mario Camus, Manuel Gutiérrez Aragón, Vicente Aranda i Bigas Luna.
+<!-- nota-top10 -->
+La columna Var. compara la posició amb el Top 25 anterior; NOU indica l’entrada al Top 10.
+<!-- /nota-top10 -->
 
-- En canvi, apareixen: Fernando Trueba (#11→#6), Isabel Coixet (#18→#7), Ricardo Franco (→#9), Víctor Erice (#21→#10). I es revela quins directors han tingut una projecció veritablement internacional més enllà del festival de Sant Sebastià.
+<!-- comentari-top10 -->
+- Com canvia el rànquing: Montxo Armendáriz, Gonzalo Suárez i Jaime de Armiñán desapareixen del Top 10 sense els Oscar i Sant Sebastià. S’hi mantenen Saura, Almodóvar, Manuel Gutiérrez Aragón, Vicente Aranda, Fernando Trueba i Bigas Luna, mentre que Mario Camus puja set posicions i se situa al #3. I hi entren Isabel Coixet al #7, Ricardo Franco al #9 i Víctor Erice al #10.
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-**Recordatori**: es consideren films premiats els que han rebut el guardó màxim del festival, especials del jurat, millor direcció, millors interpretacions o millor guió.
+Als festivals, es consideren films premiats els que han rebut el guardó màxim, premis especials del jurat, millor direcció, interpretació o guió. Als Oscar, cada film guanyador compta una sola vegada, independentment del nombre d’estatuetes; en cas d’empat, preval el nombre de films nominats.
 <!-- /comentari-top3 -->
