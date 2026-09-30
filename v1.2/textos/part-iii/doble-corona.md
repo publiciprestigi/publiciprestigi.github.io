@@ -2,9 +2,17 @@
 Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II —selecció a competició oficial a Cannes, Venècia, Berlín o Sant Sebastià, o nominació als Oscar o als EFA. En total, **17 títols** formen part d’aquest grup.
 <!-- /intro -->
 
+<!-- bloc-corona -->
+## Les 17 dobles corones
+<!-- /bloc-corona -->
+
 <!-- nota-grafic -->
-Cada film computa una sola vegada. Si ha estat seleccionat en una de les quatre competicions de festivals, s’adscriu al festival corresponent; si no hi és i apareix tant als Oscar com als EFA, preval l’Oscar. Aquesta regla serveix només per ordenar el gràfic: la taula conserva totes les presències institucionals de cada pel·lícula.
+*Cada film computa una sola vegada segons la seva via principal de reconeixement.*
 <!-- /nota-grafic -->
+
+<!-- criteri-grafic -->
+Per ordenar el gràfic, els films seleccionats en una de les quatre competicions s’adscriuen al festival corresponent; si no hi són i apareixen tant als Oscar com als EFA, preval l’Oscar. La taula següent conserva, en canvi, totes les presències institucionals de cada pel·lícula.
+<!-- /criteri-grafic -->
 
 <!-- nota-taula -->
 ★ indica que el film ha obtingut almenys un dels premis computats en aquella institució. Les columnes «Festival» i «Acadèmies» mostren totes les presències, independentment de la via principal utilitzada al gràfic.
