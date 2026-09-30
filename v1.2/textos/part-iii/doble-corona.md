@@ -4,7 +4,7 @@ Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans ei
 <!-- /intro -->
 
 <!-- intro-grafic -->
-El següent gràfic mostra la via per la qual entren a la «doble corona» i permet veure d’un cop d’ull el pes dels quatre festivals i les acadèmies dins del grup.
+El següent gràfic mostra la via per la qual entren a la «doble corona» i permet veure d’un cop d’ull el pes dels quatre festivals i les dues acadèmies dins del grup.
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
