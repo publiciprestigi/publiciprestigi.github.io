@@ -1,26 +1,27 @@
 <!-- intro -->
-Anomenem ‘doble corona’ les pel·lícules que han aconseguit simultàniament el reconeixement dels dos circuits: participar en la secció oficial competitiva d’un dels quatre festivals analitzats i entrar al Top 100 històric d’espectadors del cinema espanyol. Només 11 títols formen part d’aquest grup exclusiu:
-
+Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II —selecció a competició oficial a Cannes, Venècia, Berlín o Sant Sebastià, o nominació als Oscar o als EFA. En total, **17 títols** formen part d’aquest grup.
 <!-- /intro -->
 
+<!-- nota-grafic -->
+Cada film computa una sola vegada. Si ha estat seleccionat en una de les quatre competicions de festivals, s’adscriu al festival corresponent; si no hi és i apareix tant als Oscar com als EFA, preval l’Oscar. Aquesta regla serveix només per ordenar el gràfic: la taula conserva totes les presències institucionals de cada pel·lícula.
+<!-- /nota-grafic -->
+
+<!-- nota-taula -->
+★ indica que el film ha obtingut almenys un dels premis computats en aquella institució. Les columnes «Festival» i «Acadèmies» mostren totes les presències, independentment de la via principal utilitzada al gràfic.
+<!-- /nota-taula -->
+
 <!-- comentari-corona -->
-- Sant Sebastià és el festival que més clarament funciona com a punt de contacte entre públic i prestigi: concentra 6 dels 11 films d’aquest primer grup i 10 dels 24 del ‘segon cercle’. Venècia aporta 3, Cannes 2, mentre que Berlín no té cap, però acumula fins a 7 títols al grup següent, com veurem a continuació.
-
-- La majoria dels films de la ‘doble corona’ (7 de 11) van obtenir també algun premi, però només dues pel·lícules van guanyar el màxim guardó del seu festival: *Furtivos* i *Los lunes al sol*, totes dues Conxa d’Or a Sant Sebastià. El gran premi, per tant, no és imprescindible per connectar amb el públic.
-
-- La ‘doble corona’ és un fenomen concentrat en el passat: tots els títols són anteriors al 2005. L’últim cas és *Mar adentro* (2004), fa més de vint anys. Des d’aleshores, cap nova pel·lícula ha entrat alhora als dos circuits.
+**Text provisional — funció del comentari.** Aquí convindrà llegir el gràfic i la taula sense convertir les acadèmies en el centre del capítol: 11 de les 17 dobles corones tenen com a via principal un dels quatre festivals, mentre que les acadèmies n’incorporen 6 més (1 pels Oscar i 5 pels EFA). La taula permet veure després els solapaments entre institucions i assenyala un canvi de perfil rellevant: J. A. Bayona passa a ser el director amb més films dins del grup, tots tres incorporats per la via acadèmica. Amenábar i Almodóvar hi mantenen, en canvi, trajectòries més transversals entre públic, festivals i acadèmies.
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
 ## El segon cercle
 
-A continuació dels 11 films de la 'doble corona', hi ha un grup de 24 títols que podriem anomenar el 'segon cercle': films amb més d’un milió d'espectadors que no arriben al Top 100, com *Belle Époque* (1992), *La comunidad* (2000), *La colmena* (1983) o *Amantes* (1991), però que combinen reconeixement crític i impacte popular en proporcions més que notables.
+Per sota del llindar del Top 100 hi ha **34 pel·lícules** del corpus de prestigi que superen el milió d’espectadors. Formen un «segon cercle» de films que no arriben formalment a la doble corona, però combinen reconeixement internacional i una presència en sales molt significativa. La numeració continua la de la taula anterior per fer visible la gradació entre els dos grups.
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
-- *Volver* (2006), d’Almodóvar, és el cas més evident del grup: un film de primer nivell internacional, premiat a Cannes i amb nominació a l’Oscar per a Penélope Cruz, que arriba gairebé als 2 milions d’espectadors. Que no entri al Top 100 i, per tant, no sigui ‘doble corona’ és una qüestió de llindar, no de manca d’impacte.
+**Text provisional — funció del comentari.** Aquest bloc haurà d’explicar què canvia quan ampliem el focus més enllà del Top 100. Dels 34 films del segon cercle, 24 tenen presència en algun dels quatre festivals i 10 s’hi incorporen exclusivament per les acadèmies; sis dels 24 films de festivals acumulen també reconeixement acadèmic. També caldrà destacar els casos de frontera —especialment *Volver*— i la forta concentració temporal abans de la fragmentació contemporània del mercat.
 
-- El 'segon cercle' es concentra sobretot als 70s i 80s: 13 dels 24 títols pertanyen a aquest període. Als 2000s n'hi ha 5, amb films com *Te doy mis ojos* (2003) o *El laberinto del fauno* (2006). Als 2010s només hi apareixen *La isla mínima* (2014) i *Mientras dure la guerra* (2019). Als 2020s, cap. La bretxa recent entre festivals i públic queda, així, encara més marcada.
-
-Fins i tot sumant la 'doble corona' i el 'segon cercle', parlem només de 35 títols sobre els 285 films de festival analitzats: poc més d'un 12%. La zona de contacte entre públic i prestigi existeix, però és molt estreta.
+Com a dada de tancament, **17 dobles corones + 34 films del segon cercle = 51 títols sobre un corpus de 340 films (15%)**. La coincidència entre una audiència àmplia en sales i el reconeixement internacional existeix, però continua sent minoritària.
 <!-- /comentari-cercle -->
