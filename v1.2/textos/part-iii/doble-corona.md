@@ -35,5 +35,7 @@ Per sota del llindar del Top 100 hi ha 34 pel·lícules del corpus de prestigi q
 <!-- comentari-cercle -->
 - Dels 34 films del segon cercle, 24 tenen presència en algun dels quatre festivals i 10 s’hi incorporen exclusivament per les acadèmies; sis dels 24 films de festivals acumulen també reconeixement acadèmic. *Volver* (2006), amb gairebé dos milions d’espectadors, és un dels casos més clars de frontera: queda fora de la doble corona pel llindar del Top 100, no per manca d’impacte.
 
-- La concentració temporal continua sent molt marcada: 10 films pertanyen als 70s, 6 als 80s, 6 als 90s i 8 als 2000s; als 2010s només n’hi ha 2 i als 2020s, cap. En conjunt, les 17 dobles corones i els 34 films del segon cercle formen una zona de contacte de 51 títols sobre un corpus de 340 films, un 15%. La coincidència entre una audiència àmplia en sales i el reconeixement internacional existeix, però continua sent minoritària.
+- La concentració temporal continua sent molt marcada: 10 films pertanyen als 70s, 6 als 80s, 6 als 90s i 8 als 2000s; als 2010s només n’hi ha 2 i als 2020s, cap.
+
+En conjunt, les 17 dobles corones i els 34 films del segon cercle formen una zona de contacte de 51 títols sobre un corpus de 340 films, un 15%. La coincidència entre una audiència àmplia en sales i el reconeixement internacional existeix, però continua sent minoritària.
 <!-- /comentari-cercle -->
