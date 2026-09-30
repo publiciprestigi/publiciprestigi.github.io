@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
   <meta name="description" content="Part III — Anàlisi. Cruïlles, comparatives i interpretacions (1965–2025).">
   <link rel="canonical" href="https://publiciprestigi.com/part-iii.html">
   <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/part-iii.html">
@@ -35,7 +34,7 @@
         <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
       </div>
 
-      <a href="/v1.2/" class="capcalera-logo">Públic i Prestigi</a>
+      <a href="/" class="capcalera-logo">Públic i Prestigi</a>
 
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar" role="button" tabindex="0" aria-label="Cercar">
@@ -56,7 +55,7 @@
 
   <nav class="navegacio">
     <div class="navegacio-interior">
-      <a href="/v1.2/" class="nav-link">Inici</a>
+      <a href="/" class="nav-link">Inici</a>
       <a href="part-i.html" class="nav-link">I — Públic</a>
       <a href="part-ii.html" class="nav-link">II — Prestigi</a>
       <a href="part-iii.html" class="nav-link actiu">III — Anàlisi</a>
@@ -93,8 +92,19 @@
 
       <div class="seccio-contingut" id="seccio-doble-corona">
         <div class="text-md text-md-intro" data-text="part-iii/doble-corona" data-bloc="intro"></div>
-        <div id="taula-doble-corona"></div>
+
+        <div id="grafic-doble-corona-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:22px 0 18px;margin:24px 0 0">
+          <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 12px">Via principal de reconeixement de les 17 dobles corones</p>
+          <div style="height:285px;position:relative">
+            <canvas id="grafic-doble-corona"></canvas>
+          </div>
+        </div>
+        <div class="text-md text-md-llegenda" data-text="part-iii/doble-corona" data-bloc="nota-grafic" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
+
+        <div id="taula-doble-corona" style="margin-top:22px"></div>
+        <div class="text-md text-md-llegenda" data-text="part-iii/doble-corona" data-bloc="nota-taula" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
         <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-corona"></div>
+
         <div class="text-md text-md-intermedi" data-text="part-iii/doble-corona" data-bloc="intro-cercle"></div>
         <div id="taula-segon-cercle"></div>
         <div class="text-md text-md-comentari" data-text="part-iii/doble-corona" data-bloc="comentari-cercle"></div>
@@ -491,10 +501,10 @@
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
   <nav class="drawer" id="drawer" aria-label="Menú principal">
     <div class="drawer-cap">
-      <a href="/v1.2/" class="drawer-logo">Públic i Prestigi</a>
+      <a href="/" class="drawer-logo">Públic i Prestigi</a>
       <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
     </div>
-    <div class="drawer-seccio"><a href="/v1.2/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+    <div class="drawer-seccio"><a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
     <div class="drawer-seccio" id="drawer-part-i">
       <div class="drawer-seccio-fila">
         <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
@@ -528,22 +538,17 @@
       </div>
       <div class="drawer-subseccions">
         <div class="drawer-grup-titol">Context</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Dades i criteri</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link" href="part-ii.html#intro" onclick="toggleDrawer()">Dades i criteri</a>
         <div class="drawer-grup-titol">Festivals</div>
         <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venècia</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>Sant Sebastià</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
+        <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
+        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
+        <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
         <div class="drawer-grup-titol">Rànquings</div>
         <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
         <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
-        <div class="drawer-grup-titol">Acadèmies</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA i Donatello</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
       </div>
-
     </div>
     <div class="drawer-seccio" id="drawer-part-iii">
       <div class="drawer-seccio-fila">
@@ -584,9 +589,5 @@
     }
   </script>
   <script src="js/idioma.js"></script>
-
-  <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
-  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
