@@ -225,7 +225,23 @@ function construirGraficDobleCorona() {
   const dobles = corpusPrestigiData.filter(f => f.top100_pos != null);
   const ordre = ['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
   const colors = [FC.Cannes, FC['Venècia'], FC['Berlín'], FC['Sant Sebastià'], OSCAR_COLOR, EFA_COLOR];
-  const valors = ordre.map(v => dobles.filter(f => viaPrincipal(f) === v).length);
+  const labels = ordre.map(x => (x === 'Venècia' || x === 'Sant Sebastià') ? festivalLabel3(x) : x);
+  const grups = ordre.map(v => ({
+    via: v,
+    films: dobles
+      .filter(f => viaPrincipal(f) === v)
+      .sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca')),
+  }));
+  const valors = grups.map(g => g.films.length);
+
+  function rgba(hex, alpha) {
+    const h = hex.replace('#','');
+    const n = parseInt(h, 16);
+    const r = (n >> 16) & 255;
+    const g = (n >> 8) & 255;
+    const b = n & 255;
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
 
   const etiquetesValors = {
     id: 'doble-corona-valors',
@@ -233,7 +249,7 @@ function construirGraficDobleCorona() {
       const ctx = chart.ctx;
       const meta = chart.getDatasetMeta(0);
       ctx.save();
-      ctx.font = '600 13px "Inter", -apple-system, Arial, sans-serif';
+      ctx.font = '600 12px "Inter", -apple-system, Arial, sans-serif';
       ctx.fillStyle = '#363737';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'bottom';
@@ -250,28 +266,70 @@ function construirGraficDobleCorona() {
     type: 'bar',
     plugins: [etiquetesValors],
     data: {
-      labels: ordre.map(x => x === 'Venècia' ? festivalLabel3(x) : x === 'Sant Sebastià' ? festivalLabel3(x) : x),
-      datasets: [{ data: valors, backgroundColor: colors, borderWidth: 0 }],
+      labels,
+      datasets: [{
+        data: valors,
+        backgroundColor: colors.map(c => rgba(c, 0.90)),
+        hoverBackgroundColor: colors,
+        borderWidth: 0,
+        hoverBorderColor: '#363737',
+        hoverBorderWidth: 1,
+        categoryPercentage: 0.62,
+        barPercentage: 0.78,
+        maxBarThickness: 52,
+      }],
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      interaction: { mode: 'nearest', intersect: true },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          enabled: true,
+          displayColors: false,
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          titleColor: '#fff',
+          bodyColor: '#fff',
+          padding: 10,
+          cornerRadius: 6,
+          titleFont: { size: 12, weight: '700' },
+          bodyFont: { size: 11 },
+          callbacks: {
+            title(items) {
+              if (!items.length) return '';
+              const i = items[0].dataIndex;
+              const n = valors[i];
+              const unitat = PIP_III_ES ? (n === 1 ? 'película' : 'películas') : (n === 1 ? 'film' : 'films');
+              return `${labels[i]} · ${n} ${unitat}`;
+            },
+            label(ctx) {
+              const films = grups[ctx.dataIndex].films;
+              if (!films.length) return PIP_III_ES ? 'Ninguna película' : 'Cap film';
+              return films.map(f => `${f.titol} (${f.any})`);
+            },
+          },
+        },
+      },
       scales: {
-        x: { grid: { display: false }, ticks: { color:'#363737', font:{ size:12 } } },
+        x: {
+          grid: { display: false },
+          border: { color: '#d9d9d9' },
+          ticks: { color:'#555', font:{ size:11 } },
+        },
         y: {
           beginAtZero: true,
-          suggestedMax: 7,
-          ticks: { stepSize:1, color:'#777', font:{ size:11 } },
+          max: 7,
+          ticks: { stepSize:1, color:'#777', font:{ size:10 } },
           grid: { color:'rgba(0,0,0,0.06)' },
+          border: { display: false },
           title: { display:false },
         },
       },
     },
   });
 }
-
 /* ============================================================
    SEGON CERCLE — ≥1M espectadors, fora del Top 100
    ============================================================ */
