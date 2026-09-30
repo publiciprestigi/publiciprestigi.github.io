@@ -169,9 +169,11 @@ function celAcademies(d) {
   return parts.length ? parts.join(' · ') : '—';
 }
 
-// Regla exclusiva per al gràfic introductori:
-// festival > Oscar > EFA. La taula conserva totes les presències reals.
-function viaPrincipal(d) {
+// Regla exclusiva per al gràfic introductori: via d’entrada a la doble corona.
+// No és una jerarquia de prestigi: els films ja presents als festivals s’adscriuen
+// al festival corresponent; entre els casos que entren només per acadèmies, Oscar > EFA.
+// La taula conserva totes les presències reals.
+function viaEntradaDobleCorona(d) {
   if (d.festivals.length) return d.festivals[0].festival;
   if (d.oscar) return 'Oscar';
   if (d.efa) return 'EFA';
@@ -229,7 +231,7 @@ function construirGraficDobleCorona() {
   const grups = ordre.map(v => ({
     via: v,
     films: dobles
-      .filter(f => viaPrincipal(f) === v)
+      .filter(f => viaEntradaDobleCorona(f) === v)
       .sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca')),
   }));
   const valors = grups.map(g => g.films.length);
