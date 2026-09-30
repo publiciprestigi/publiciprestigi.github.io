@@ -1,5 +1,8 @@
 <!-- intro -->
-Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II —selecció a competició oficial a Cannes, Venècia, Berlín o Sant Sebastià, o nominació als Oscar o als EFA. En total, 17 títols formen part d’aquest grup.
+Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II. En aquesta versió, el grup passa a estar format per 17 títols.
+
+La [versió anterior](https://publiciprestigi.com/v1.1/part-iii.html#doble-corona) del capítol n’identificava 11, tots a partir de la presència en les competicions oficials de Cannes, Venècia, Berlín o Sant Sebastià. La incorporació dels Oscar i els EFA amplia ara el grup amb sis films més.
+
 <!-- /intro -->
 
 <!-- intro-grafic -->
