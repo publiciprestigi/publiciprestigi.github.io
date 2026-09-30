@@ -3,25 +3,25 @@ Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans ei
 <!-- /intro -->
 
 <!-- intro-grafic -->
-Abans d’entrar en cada cas, el gràfic ordena les 17 pel·lícules segons la seva via principal de reconeixement i permet veure d’un cop d’ull el pes dels quatre festivals, els Oscar i els EFA dins del grup.
+Abans d’entrar en cada cas, el gràfic ordena les 17 pel·lícules segons la via per la qual entren a la doble corona i permet veure d’un cop d’ull el pes dels quatre festivals, els Oscar i els EFA dins del grup.
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
-*Cada film computa una sola vegada.*
+*Cada film computa una sola vegada segons la seva via d’entrada a la doble corona.*
 <!-- /nota-grafic -->
 
 <!-- criteri-grafic -->
-Per evitar duplicacions, els films seleccionats en una de les quatre competicions s’adscriuen al festival corresponent; si no hi són i apareixen tant als Oscar com als EFA, preval l’Oscar.
+Els films presents en una de les quatre competicions s’adscriuen al festival corresponent; entre els casos incorporats només a través de les acadèmies, l’Oscar preval sobre els EFA.
 <!-- /criteri-grafic -->
 
 <!-- bloc-corona -->
 ## Les 17 dobles corones
 
-La taula següent mostra tots els reconeixements de cada film, no només la via principal utilitzada al gràfic. ★ indica que la pel·lícula ha obtingut almenys un dels premis computats en aquella institució.
+La taula següent mostra tots els reconeixements de cada film, no només la via d’entrada utilitzada al gràfic. ★ indica que la pel·lícula ha obtingut almenys un dels premis computats en aquella institució.
 <!-- /bloc-corona -->
 
 <!-- comentari-corona -->
-- Els festivals continuen sent la via principal de la doble corona: 11 dels 17 títols hi arriben per una de les quatre competicions, mentre que 6 s’hi incorporen exclusivament per les acadèmies —1 pels Oscar i 5 pels EFA. L’ampliació eixampla, per tant, la zona de contacte entre públic i prestigi sense desplaçar el pes central dels festivals.
+- Onze dels 17 títols entren a la doble corona per una de les quatre competicions de festivals, mentre que 6 s’hi incorporen exclusivament per les acadèmies —1 pels Oscar i 5 pels EFA. L’ampliació eixampla, per tant, la zona de contacte entre públic i prestigi sense desplaçar el pes central dels festivals.
 
 - El perfil del grup, però, canvia. J. A. Bayona passa a ser el director amb més films dins la doble corona —*El orfanato*, *Lo imposible* i *Un monstruo viene a verme*—, tots tres incorporats per la via acadèmica. Amenábar i Almodóvar hi mantenen, en canvi, trajectòries més transversals entre públic, festivals i acadèmies.
 <!-- /comentari-corona -->
