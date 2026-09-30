@@ -287,28 +287,66 @@ function construirGraficDobleCorona() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          enabled: true,
-          displayColors: false,
-          backgroundColor: 'rgba(45,45,45,0.95)',
-          titleColor: '#fff',
-          bodyColor: '#fff',
-          padding: 10,
-          cornerRadius: 6,
-          titleFont: { size: 12, weight: '700' },
-          bodyFont: { size: 11 },
-          callbacks: {
-            title(items) {
-              if (!items.length) return '';
-              const i = items[0].dataIndex;
-              const n = valors[i];
-              const unitat = PIP_III_ES ? (n === 1 ? 'película' : 'películas') : (n === 1 ? 'film' : 'films');
-              return `${labels[i]} · ${n} ${unitat}`;
-            },
-            label(ctx) {
-              const films = grups[ctx.dataIndex].films;
-              if (!films.length) return PIP_III_ES ? 'Ninguna película' : 'Cap film';
-              return films.map(f => `${f.titol} (${f.any})`);
-            },
+          enabled: false,
+          external({ chart, tooltip }) {
+            const parent = chart.canvas.parentNode;
+            let el = parent.querySelector('.doble-corona-tooltip');
+            if (!el) {
+              el = document.createElement('div');
+              el.className = 'doble-corona-tooltip';
+              Object.assign(el.style, {
+                position: 'absolute',
+                opacity: '0',
+                pointerEvents: 'none',
+                zIndex: '10',
+                background: 'rgba(45,45,45,0.95)',
+                color: '#fff',
+                borderRadius: '6px',
+                padding: '9px 10px',
+                fontSize: '11px',
+                lineHeight: '1.45',
+                whiteSpace: 'nowrap',
+                transition: 'opacity .08s ease',
+              });
+              parent.appendChild(el);
+            }
+
+            if (!tooltip || tooltip.opacity === 0 || !tooltip.dataPoints || !tooltip.dataPoints.length) {
+              el.style.opacity = '0';
+              return;
+            }
+
+            const i = tooltip.dataPoints[0].dataIndex;
+            const films = grups[i].films;
+            if (!films.length) {
+              el.style.opacity = '0';
+              return;
+            }
+
+            const esc = (v) => String(v)
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#039;');
+
+            el.innerHTML = films.map(f =>
+              `<div><strong><em>${esc(f.titol)}</em></strong> (${esc(f.any)})</div>`
+            ).join('');
+            el.style.opacity = '1';
+
+            const gap = 12;
+            const caretX = chart.canvas.offsetLeft + tooltip.caretX;
+            const caretY = chart.canvas.offsetTop + tooltip.caretY;
+            const width = el.offsetWidth;
+            const height = el.offsetHeight;
+            let left = caretX + gap;
+            if (left + width > parent.clientWidth) left = caretX - width - gap;
+            left = Math.max(0, Math.min(left, parent.clientWidth - width));
+            let top = caretY - (height / 2);
+            top = Math.max(0, Math.min(top, parent.clientHeight - height));
+            el.style.left = `${left}px`;
+            el.style.top = `${top}px`;
           },
         },
       },
