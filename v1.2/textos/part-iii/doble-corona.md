@@ -3,11 +3,11 @@ Anomenem "doble corona" les pel·lícules que coincideixen en els dos grans eixo
 <!-- /intro -->
 
 <!-- intro-grafic -->
-El gràfic següent mostra la seva distribució entre els quatre festivals i les dues acadèmies segons la via d’entrada.
+El gràfic següent mostra la seva distribució entre els quatre festivals i les dues acadèmies segons la via d’entrada i la situa en el temps.
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
-*Dobles corones segons via d’entrada i any.*
+*Distribució dels films per institució i any.*
 <!-- /nota-grafic -->
 
 <!-- criteri-grafic -->
