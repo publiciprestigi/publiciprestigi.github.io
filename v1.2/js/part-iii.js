@@ -243,42 +243,45 @@ function construirGraficDobleCorona() {
 
   const counts = Object.fromEntries(ordre.map(v => [v, dobles.filter(f => f.via === v).length]));
 
-  function offsets(n) {
-    if (n <= 1) return [0];
-    const seq = [0];
-    let step = 0.18;
-    while (seq.length < n) {
-      seq.push(-step);
-      if (seq.length < n) seq.push(step);
-      step += 0.18;
+  // Separa visualment els films d'una mateixa via quan cauen en anys iguals o molt pròxims.
+  // El tooltip conserva sempre l'any real; només es desplaça lleugerament la posició gràfica.
+  function spreadCloseYears(items, minGap = 2.0) {
+    const sorted = [...items].sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca'));
+    const result = [];
+    let i = 0;
+
+    while (i < sorted.length) {
+      const cluster = [sorted[i]];
+      let j = i + 1;
+      while (j < sorted.length && (sorted[j].any - sorted[j - 1].any) <= minGap) {
+        cluster.push(sorted[j]);
+        j++;
+      }
+
+      if (cluster.length === 1) {
+        result.push({ film: cluster[0], x: cluster[0].any });
+      } else {
+        const mean = cluster.reduce((s, f) => s + f.any, 0) / cluster.length;
+        const start = mean - (minGap * (cluster.length - 1) / 2);
+        cluster.forEach((f, idx) => result.push({ film: f, x: start + idx * minGap }));
+      }
+      i = j;
     }
-    return seq;
+    return result;
   }
 
   const datasets = ordre.map((via, idx) => {
     const y = ordre.length - idx;
     const items = dobles.filter(f => f.via === via);
-    const byYear = new Map();
-    items.forEach(f => {
-      const key = String(f.any);
-      if (!byYear.has(key)) byYear.set(key, []);
-      byYear.get(key).push(f);
-    });
 
-    const points = [];
-    [...byYear.entries()].forEach(([year, arr]) => {
-      const offs = offsets(arr.length);
-      arr.forEach((f, i) => {
-        points.push({
-          x: Number(year) + offs[i],
-          y,
-          any: f.any,
-          titol: f.titol,
-          via,
-          top100_pos: f.top100_pos,
-        });
-      });
-    });
+    const points = spreadCloseYears(items).map(({ film:f, x }) => ({
+      x,
+      y,
+      any: f.any,
+      titol: f.titol,
+      via,
+      top100_pos: f.top100_pos,
+    }));
 
     return {
       label: via,
