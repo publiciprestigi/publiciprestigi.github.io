@@ -7,7 +7,7 @@ El gràfic següent mostra la seva distribució entre els quatre festivals i les
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
-*Nombre de "dobles corones" per festival o acadèmia.*
+*Dobles corones segons via d’entrada i any.*
 <!-- /nota-grafic -->
 
 <!-- criteri-grafic -->
