@@ -25,7 +25,7 @@ Per a cada títol, la taula recull els festivals i acadèmies en què s'ha recon
 
 - *Todo sobre mi madre* (1999) i *Mar adentro* (2004) són els dos casos més complets de la "doble corona": a més de formar part del Top 100, van ser premiats al festival corresponent, als Oscar i als EFA. Al seu costat, *Los otros* (2001), *Mujeres al borde...* (1988) i *Los lunes al sol* (2002) completen una mena de "triple corona": films amb gran públic i reconeixement tant en un dels quatre festivals com en almenys una de les dues acadèmies.
 
-- Amb els festivals, la "doble corona" s’aturava amb *Mar adentro* (2004): des d’aleshores no s’havia tornat a repetir la coincidència entre gran públic i presència als festivals, una absència que explica en part la bretxa que analitzem al capítol següent. La incorporació de les acadèmies trenca aquesta interrupció amb *Alatriste* (2006), *Celda 211* (2009) i els tres films de Bayona citats. Tot i així, des de la pandèmia del 2020 no hi ha cap nou cas de "doble corona".
+- Amb els festivals, la "doble corona" s’aturava amb *Mar adentro* (2004), des d’aleshores no s’havia tornat a repetir la coincidència; una absència que explica en part la bretxa que analitzem al capítol següent. La incorporació de les acadèmies trenca aquesta interrupció amb *Alatriste* (2006), *Celda 211* (2009) i els tres films de Bayona citats. Tot i així, des de la pandèmia del 2020 no hi ha cap nou cas de "doble corona".
 <!-- /comentari-corona -->
 
 <!-- intro-cercle -->
