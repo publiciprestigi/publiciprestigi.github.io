@@ -295,8 +295,8 @@ function construirGraficDobleCorona() {
     };
   });
 
-  const minYear = Math.min(...dobles.map(f => f.any)) - 2;
-  const maxYear = Math.max(...dobles.map(f => f.any)) + 2;
+  const minYear = 1965;
+  const maxYear = 2025;
   const yLabels = {
     6: `${festivalLabel3('Cannes')} (${counts['Cannes']})`,
     5: `${festivalLabel3('Venècia')} (${counts['Venècia']})`,
