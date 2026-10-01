@@ -7,11 +7,11 @@ El gràfic següent mostra la via per la qual entren a la "doble corona" i perme
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
-*Cada film s’adscriu a una única via d’entrada, festival o acadèmia, per evitar duplicacions.*
+*Nombre de "dobles corones" per festival o acadèmia.*
 <!-- /nota-grafic -->
 
 <!-- criteri-grafic -->
-Els films presents en una de les quatre competicions s’adscriuen al festival corresponent; entre els casos incorporats només a través de les acadèmies, l’Oscar preval sobre els EFA.
+Per evitar duplicacions, cada film s’adscriu a una única via d’entrada. Els films presents en una de les quatre seccions oficials competitives s’adscriuen al festival corresponent; entre els casos incorporats només a través de les acadèmies, l’Oscar preval sobre els EFA.
 <!-- /criteri-grafic -->
 
 <!-- bloc-corona -->
