@@ -21,7 +21,7 @@ Per a cada títol, la taula recull els festivals i acadèmies en què s'ha recon
 <!-- /bloc-corona -->
 
 <!-- comentari-corona -->
-- L’ampliació eixampla la zona de contacte entre públic i prestigi i canvia el perfil dels directors representats. J. A. Bayona passa a ser el cineasta amb més films dins la doble corona —*El orfanato*, *Lo imposible* i *Un monstruo viene a verme*—, tots tres incorporats per la via acadèmica. Amenábar i Almodóvar, en canvi, hi combinen públic, festivals i acadèmies.
+- L’ampliació eixampla la zona de contacte entre públic i prestigi i canvia el perfil dels directors representats. J. A. Bayona passa a ser el cineasta amb més films dins la doble corona —*El orfanato* (2007), *Lo imposible* (2012) i *Un monstruo viene a verme* (2016)—, tots tres incorporats per la via acadèmica. Amenábar i Almodóvar, en canvi, hi combinen públic, festivals i acadèmies.
 
 - *Todo sobre mi madre* i *Mar adentro* són els dos casos més complets de la "doble corona": a més de formar part del Top 100, van ser premiats al festival corresponent, als Oscar i als EFA. Al seu costat, *Los otros*, *Mujeres al borde de un ataque de nervios* i *Los lunes al sol* completen una mena de "triple corona": films amb gran públic i reconeixement tant en un dels quatre festivals com en almenys una de les dues acadèmies.
 
