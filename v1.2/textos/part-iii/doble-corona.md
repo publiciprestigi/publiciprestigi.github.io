@@ -1,9 +1,9 @@
 <!-- intro -->
-Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II. La [versió anterior](https://publiciprestigi.com/v1.1/part-iii.html#doble-corona) de l'estudi n’identificava 11, tots a partir de la presència en les competicions oficials de Cannes, Venècia, Berlín o Sant Sebastià. La incorporació dels Oscar i els EFA amplia ara el grup amb sis films més, fins als 17 títols.
+Anomenem "doble corona" les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II. La [versió anterior](https://publiciprestigi.com/v1.1/part-iii.html#doble-corona) de l'estudi n’identificava 11, tots a partir de la presència en les competicions oficials de Cannes, Venècia, Berlín o Sant Sebastià. La incorporació dels Oscar i els EFA amplia ara el grup amb sis films més, fins als 17 títols.
 <!-- /intro -->
 
 <!-- intro-grafic -->
-El gràfic següent mostra la via per la qual entren a la «doble corona» i permet veure d’un cop d’ull com es distribueixen entre els quatre festivals i les dues acadèmies.
+El gràfic següent mostra la via per la qual entren a la "doble corona" i permet veure d’un cop d’ull com es distribueixen entre els quatre festivals i les dues acadèmies.
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
