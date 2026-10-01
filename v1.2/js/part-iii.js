@@ -219,7 +219,205 @@ function construirDobleCorona() {
     </table>`;
 }
 
+
 function construirGraficDobleCorona() {
+  const canvas = document.getElementById('grafic-doble-corona');
+  if (!canvas || typeof Chart === 'undefined' || !corpusPrestigiData.length) return;
+  if (window._chartDobleCorona) window._chartDobleCorona.destroy();
+
+  const ordre = ['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
+  const colors = {
+    'Cannes': FC.Cannes,
+    'Venècia': FC['Venècia'],
+    'Berlín': FC['Berlín'],
+    'Sant Sebastià': FC['Sant Sebastià'],
+    'Oscar': OSCAR_COLOR,
+    'EFA': EFA_COLOR,
+  };
+
+  const dobles = corpusPrestigiData
+    .filter(f => f.top100_pos != null)
+    .map(f => ({ ...f, via: viaEntradaDobleCorona(f) }))
+    .filter(f => !!f.via)
+    .sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca'));
+
+  const counts = Object.fromEntries(ordre.map(v => [v, dobles.filter(f => f.via === v).length]));
+
+  function offsets(n) {
+    if (n <= 1) return [0];
+    const seq = [0];
+    let step = 0.18;
+    while (seq.length < n) {
+      seq.push(-step);
+      if (seq.length < n) seq.push(step);
+      step += 0.18;
+    }
+    return seq;
+  }
+
+  const datasets = ordre.map((via, idx) => {
+    const y = ordre.length - idx;
+    const items = dobles.filter(f => f.via === via);
+    const byYear = new Map();
+    items.forEach(f => {
+      const key = String(f.any);
+      if (!byYear.has(key)) byYear.set(key, []);
+      byYear.get(key).push(f);
+    });
+
+    const points = [];
+    [...byYear.entries()].forEach(([year, arr]) => {
+      const offs = offsets(arr.length);
+      arr.forEach((f, i) => {
+        points.push({
+          x: Number(year) + offs[i],
+          y,
+          any: f.any,
+          titol: f.titol,
+          via,
+          top100_pos: f.top100_pos,
+        });
+      });
+    });
+
+    return {
+      label: via,
+      data: points,
+      showLine: false,
+      pointRadius: 5,
+      pointHoverRadius: 6.5,
+      pointHitRadius: 10,
+      pointBackgroundColor: colors[via],
+      pointBorderColor: '#ffffff',
+      pointBorderWidth: 1.6,
+      pointHoverBorderColor: '#363737',
+      pointHoverBorderWidth: 1.2,
+    };
+  });
+
+  const minYear = Math.min(...dobles.map(f => f.any)) - 2;
+  const maxYear = Math.max(...dobles.map(f => f.any)) + 2;
+  const yLabels = {
+    6: `${festivalLabel3('Cannes')} (${counts['Cannes']})`,
+    5: `${festivalLabel3('Venècia')} (${counts['Venècia']})`,
+    4: `${festivalLabel3('Berlín')} (${counts['Berlín']})`,
+    3: `${festivalLabel3('Sant Sebastià')} (${counts['Sant Sebastià']})`,
+    2: `Oscar (${counts['Oscar']})`,
+    1: `EFA (${counts['EFA']})`,
+  };
+
+  const externalTooltip = {
+    id: 'doble-corona-tooltip-external',
+    afterInit(chart) {
+      const parent = chart.canvas.parentNode;
+      let el = parent.querySelector('.doble-corona-tooltip');
+      if (!el) {
+        el = document.createElement('div');
+        el.className = 'doble-corona-tooltip';
+        Object.assign(el.style, {
+          position: 'absolute',
+          opacity: '0',
+          pointerEvents: 'none',
+          zIndex: '10',
+          background: 'rgba(45,45,45,0.95)',
+          color: '#fff',
+          borderRadius: '6px',
+          padding: '9px 10px',
+          fontSize: '11px',
+          lineHeight: '1.45',
+          whiteSpace: 'nowrap',
+          transition: 'opacity .08s ease',
+        });
+        parent.appendChild(el);
+      }
+    },
+  };
+
+  window._chartDobleCorona = new Chart(canvas.getContext('2d'), {
+    type: 'scatter',
+    plugins: [externalTooltip],
+    data: { datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      layout: { padding: { top: 4, right: 8, bottom: 0, left: 6 } },
+      interaction: { mode: 'nearest', intersect: true },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          enabled: false,
+          external({ chart, tooltip }) {
+            const parent = chart.canvas.parentNode;
+            let el = parent.querySelector('.doble-corona-tooltip');
+            if (!el) return;
+
+            if (!tooltip || tooltip.opacity === 0 || !tooltip.dataPoints || !tooltip.dataPoints.length) {
+              el.style.opacity = '0';
+              return;
+            }
+
+            const raw = tooltip.dataPoints[0].raw || {};
+            const esc = (v) => String(v)
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#039;');
+
+            el.innerHTML = `<div><strong><em>${esc(raw.titol || '')}</em></strong> (${esc(raw.any || '')})</div>`;
+            el.style.opacity = '1';
+
+            const gap = 12;
+            const caretX = chart.canvas.offsetLeft + tooltip.caretX;
+            const caretY = chart.canvas.offsetTop + tooltip.caretY;
+            const width = el.offsetWidth;
+            const height = el.offsetHeight;
+            let left = caretX + gap;
+            if (left + width > parent.clientWidth) left = caretX - width - gap;
+            left = Math.max(0, Math.min(left, parent.clientWidth - width));
+            let top = caretY - (height / 2);
+            top = Math.max(0, Math.min(top, parent.clientHeight - height));
+            el.style.left = `${left}px`;
+            el.style.top = `${top}px`;
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          min: minYear,
+          max: maxYear,
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          border: { color: '#d9d9d9' },
+          ticks: {
+            color: '#777',
+            font: { size: 10 },
+            stepSize: 10,
+            callback(value) {
+              return Number.isInteger(value) ? String(value) : '';
+            },
+          },
+        },
+        y: {
+          min: 0.5,
+          max: 6.5,
+          ticks: {
+            stepSize: 1,
+            color: '#555',
+            font: { size: 11 },
+            callback(value) { return yLabels[value] || ''; },
+          },
+          grid: { color: 'rgba(0,0,0,0.06)' },
+          border: { display: false },
+        },
+      },
+    },
+  });
+}
+
+// Versió preservada del gràfic inicial de barres, per si cal recuperar-la.
+function construirGraficDobleCoronaBarsOld() {
   const canvas = document.getElementById('grafic-doble-corona');
   if (!canvas || typeof Chart === 'undefined' || !corpusPrestigiData.length) return;
   if (window._chartDobleCorona) window._chartDobleCorona.destroy();
@@ -370,6 +568,7 @@ function construirGraficDobleCorona() {
     },
   });
 }
+
 /* ============================================================
    SEGON CERCLE — ≥1M espectadors, fora del Top 100
    ============================================================ */
