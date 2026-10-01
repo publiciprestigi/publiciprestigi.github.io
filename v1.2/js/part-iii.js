@@ -413,7 +413,7 @@ function construirGraficDobleCorona() {
               const via = viaPerY[ctx.tick && ctx.tick.value];
               return via ? colors[via] : '#555';
             },
-            font: { size: 11, weight: '600' },
+            font: { size: 12, weight: '600' },
             callback(value) { return yLabels[value] || ''; },
           },
           grid: { color: 'rgba(0,0,0,0.06)' },
