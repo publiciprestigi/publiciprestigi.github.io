@@ -17,7 +17,7 @@ Per evitar duplicacions, cada film s’adscriu a una única via d’entrada. Els
 <!-- bloc-corona -->
 ## Les 17 dobles corones
 
-Per a cada títol, la taula recull els festivals i acadèmies en què apareix, la seva posició al Top 100 històric i els espectadors acumulats en sales de cinema. ★ indica que el film ha estat premiat en aquella institució.
+Per a cada títol, la taula recull els festivals i acadèmies en què s'ha reconegut, la seva posició al Top 100 històric i els espectadors acumulats en sales de cinema. ★ indica que el film ha estat premiat en aquella institució.
 <!-- /bloc-corona -->
 
 <!-- comentari-corona -->
