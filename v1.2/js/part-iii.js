@@ -284,12 +284,12 @@ function construirGraficDobleCorona() {
       label: via,
       data: points,
       showLine: false,
-      pointRadius: 5,
-      pointHoverRadius: 6.5,
-      pointHitRadius: 10,
+      pointRadius: 7,
+      pointHoverRadius: 9,
+      pointHitRadius: 12,
       pointBackgroundColor: colors[via],
       pointBorderColor: '#ffffff',
-      pointBorderWidth: 1.6,
+      pointBorderWidth: 1.5,
       pointHoverBorderColor: '#363737',
       pointHoverBorderWidth: 1.2,
     };
@@ -297,13 +297,47 @@ function construirGraficDobleCorona() {
 
   const minYear = 1965;
   const maxYear = 2025;
-  const yLabels = {
-    6: `${festivalLabel3('Cannes')} (${counts['Cannes']})`,
-    5: `${festivalLabel3('Venècia')} (${counts['Venècia']})`,
-    4: `${festivalLabel3('Berlín')} (${counts['Berlín']})`,
-    3: `${festivalLabel3('Sant Sebastià')} (${counts['Sant Sebastià']})`,
-    2: `Oscar (${counts['Oscar']})`,
-    1: `EFA (${counts['EFA']})`,
+  const yMeta = {
+    6: { via: 'Cannes', label: festivalLabel3('Cannes'), count: counts['Cannes'] },
+    5: { via: 'Venècia', label: festivalLabel3('Venècia'), count: counts['Venècia'] },
+    4: { via: 'Berlín', label: festivalLabel3('Berlín'), count: counts['Berlín'] },
+    3: { via: 'Sant Sebastià', label: festivalLabel3('Sant Sebastià'), count: counts['Sant Sebastià'] },
+    2: { via: 'Oscar', label: 'Oscar', count: counts['Oscar'] },
+    1: { via: 'EFA', label: 'EFA', count: counts['EFA'] },
+  };
+
+  // Etiquetes de l'eix Y: institució en el seu color i recompte en gris neutre.
+  const yTickSplitLabels = {
+    id: 'doble-corona-y-split-labels',
+    afterDraw(chart) {
+      const scale = chart.scales.y;
+      if (!scale) return;
+      const ctx = chart.ctx;
+      const right = scale.right - 10;
+      const fontFamily = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif';
+
+      ctx.save();
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+
+      [1,2,3,4,5,6].forEach(value => {
+        const meta = yMeta[value];
+        if (!meta) return;
+        const y = scale.getPixelForValue(value);
+        const countText = ` (${meta.count})`;
+
+        ctx.font = `400 13px ${fontFamily}`;
+        ctx.fillStyle = '#666';
+        ctx.fillText(countText, right, y);
+        const countWidth = ctx.measureText(countText).width;
+
+        ctx.font = `600 13px ${fontFamily}`;
+        ctx.fillStyle = colors[meta.via] || '#555';
+        ctx.fillText(meta.label, right - countWidth, y);
+      });
+
+      ctx.restore();
+    },
   };
 
   const externalTooltip = {
@@ -322,9 +356,9 @@ function construirGraficDobleCorona() {
           background: 'rgba(45,45,45,0.95)',
           color: '#fff',
           borderRadius: '6px',
-          padding: '9px 10px',
-          fontSize: '11px',
-          lineHeight: '1.45',
+          padding: '10px 12px',
+          fontSize: '13px',
+          lineHeight: '1.4',
           whiteSpace: 'nowrap',
           transition: 'opacity .08s ease',
         });
@@ -335,7 +369,7 @@ function construirGraficDobleCorona() {
 
   window._chartDobleCorona = new Chart(canvas.getContext('2d'), {
     type: 'scatter',
-    plugins: [externalTooltip],
+    plugins: [externalTooltip, yTickSplitLabels],
     data: { datasets },
     options: {
       responsive: true,
@@ -402,19 +436,17 @@ function construirGraficDobleCorona() {
         y: {
           min: 0.5,
           max: 6.5,
+          afterFit(scale) {
+            // Reserva espai per a la institució + el recompte dibuixats pel plugin.
+            scale.width = 122;
+          },
           afterBuildTicks(scale) {
             scale.ticks = [1,2,3,4,5,6].map(value => ({ value }));
           },
           ticks: {
+            display: false,
             autoSkip: false,
             padding: 10,
-            color(ctx) {
-              const viaPerY = { 6:'Cannes', 5:'Venècia', 4:'Berlín', 3:'Sant Sebastià', 2:'Oscar', 1:'EFA' };
-              const via = viaPerY[ctx.tick && ctx.tick.value];
-              return via ? colors[via] : '#555';
-            },
-            font: { size: 12, weight: '600' },
-            callback(value) { return yLabels[value] || ''; },
           },
           grid: { color: 'rgba(0,0,0,0.06)' },
           border: { display: false },
