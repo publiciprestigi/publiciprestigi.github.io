@@ -402,10 +402,18 @@ function construirGraficDobleCorona() {
         y: {
           min: 0.5,
           max: 6.5,
+          afterBuildTicks(scale) {
+            scale.ticks = [1,2,3,4,5,6].map(value => ({ value }));
+          },
           ticks: {
-            stepSize: 1,
-            color: '#555',
-            font: { size: 11 },
+            autoSkip: false,
+            padding: 10,
+            color(ctx) {
+              const viaPerY = { 6:'Cannes', 5:'Venècia', 4:'Berlín', 3:'Sant Sebastià', 2:'Oscar', 1:'EFA' };
+              const via = viaPerY[ctx.tick && ctx.tick.value];
+              return via ? colors[via] : '#555';
+            },
+            font: { size: 11, weight: '600' },
             callback(value) { return yLabels[value] || ''; },
           },
           grid: { color: 'rgba(0,0,0,0.06)' },
