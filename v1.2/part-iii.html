@@ -70,13 +70,14 @@
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Capítols</div>
         <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona</a>
-        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa</a>
+        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa festivals vs. públic</a>
         <a href="#" class="sidebar-link" data-seccio="caza-alcarras">La caza vs. Alcarràs</a>
-        <a href="#" class="sidebar-link" data-seccio="lleis">Cinema, lleis i tecnologia</a>
-        <a href="#" class="sidebar-link" data-seccio="generacions">Dues generacions, dos mercats i un prestigi</a>
-        <a href="#" class="sidebar-link" data-seccio="autor-industrial">Cinema d'autor industrial</a>
+        <a href="#" class="sidebar-link" data-seccio="lleis">Finestres, lleis i tecnologia</a>
+        <a href="#" class="sidebar-link" data-seccio="generacions">Saura, Almodóvar i la generació actual</a>
+        <a href="#" class="sidebar-link" data-seccio="autor-industrial">De la Iglesia, Amenábar i Bayona</a>
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="conclusions"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="bunuel-franca"><span>Buñuel i el factor francès</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="conclusions"><span>De les mètriques a les paradoxes</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
       <div class="sidebar-separador"></div>
       <div class="sidebar-grup">
@@ -227,6 +228,9 @@
              data-bloc="tancament"></div>
       </div>
 
+      <div class="seccio-contingut" id="seccio-bunuel-franca">
+      </div>
+
       <div class="seccio-contingut" id="seccio-conclusions">
         <div class="text-md text-md-intro" data-text="part-iii/conclusions" data-bloc="intro"></div>
         <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cap"></div>
@@ -299,13 +303,14 @@
 <script>
     const seccions = [
       { id: 'doble-corona', titol: 'La doble corona',                           sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'bretxa',       titol: 'Evolució de la bretxa públic vs. prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'bretxa',       titol: 'Evolució de la bretxa festivals vs. públic', sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'caza-alcarras',      titol: 'La caza vs. Alcarràs',  titolHTML: '<em>La caza</em> vs. <em>Alcarràs</em>',  sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'lleis',        titol: 'Cinema, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'generacions',  titol: 'Dues generacions, dos mercats i un prestigi', sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'autor-industrial',        titol: 'Cinema d\'autor industrial',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'lleis',        titol: 'Finestres, lleis i tecnologia',                sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'generacions',  titol: 'Saura, Almodóvar i la generació actual', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'autor-industrial',        titol: 'De la Iglesia, Amenábar i Bayona',                sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'mapa-canon',   titol: 'El mapa del cànon',                             sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'conclusions',  titol: 'Conclusions: de les mètriques a les paradoxes', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'bunuel-franca', titol: 'Buñuel i el factor francès',                    sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'conclusions',  titol: 'De les mètriques a les paradoxes', sup: 'Cruïlles, comparatives i interpretacions' },
     ];
 
     let actual = 0;
@@ -560,13 +565,14 @@
       <div class="drawer-subseccions">
         <div class="drawer-grup-titol">Capítols</div>
         <a class="drawer-link" onclick="navegaDrawer('doble-corona')">La doble corona</a>
-        <a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolució de la bretxa</a>
+        <a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolució de la bretxa festivals vs. públic</a>
         <a class="drawer-link" onclick="navegaDrawer('caza-alcarras')">La caza vs. Alcarràs</a>
-        <a class="drawer-link" onclick="navegaDrawer('lleis')">Cinema, lleis i tecnologia</a>
-        <a class="drawer-link" onclick="navegaDrawer('generacions')">Dues generacions</a>
-        <a class="drawer-link" onclick="navegaDrawer('autor-industrial')">Cinema d'autor industrial</a>
+        <a class="drawer-link" onclick="navegaDrawer('lleis')">Finestres, lleis i tecnologia</a>
+        <a class="drawer-link" onclick="navegaDrawer('generacions')">Saura, Almodóvar i la generació actual</a>
+        <a class="drawer-link" onclick="navegaDrawer('autor-industrial')">De la Iglesia, Amenábar i Bayona</a>
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('conclusions')"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('bunuel-franca')"><span>Buñuel i el factor francès</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('conclusions')"><span>De les mètriques a les paradoxes</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
