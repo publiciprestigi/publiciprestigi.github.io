@@ -17,7 +17,7 @@ Per evitar duplicacions, cada film s’adscriu a una única via d’entrada. Els
 <!-- bloc-corona -->
 ## Les 17 dobles corones
 
-La taula següent mostra tots els reconeixements de cada film, no només la via d’entrada utilitzada al gràfic, i hi afegeix la posició al Top 100 històric i el nombre d’espectadors acumulats en sales de cinema. ★ indica que la pel·lícula ha estat premiada en aquella institució segons els criteris de l’estudi.
+Les 17 pel·lícules que formen la "doble corona" tenen recorreguts de reconeixement molt diferents. La taula mostra els festivals i acadèmies en què apareixen, la seva posició al Top 100 històric i els espectadors acumulats en sales de cinema. ★ indica que el film ha estat premiat en aquella institució.
 <!-- /bloc-corona -->
 
 <!-- comentari-corona -->
