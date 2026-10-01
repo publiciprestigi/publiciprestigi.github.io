@@ -7,7 +7,7 @@ El gràfic següent mostra la via per la qual entren a la "doble corona" i perme
 <!-- /intro-grafic -->
 
 <!-- nota-grafic -->
-*Cada film computa una sola vegada segons la seva via d’entrada: festival o acadèmia.*
+*Cada film s’adscriu a una única via d’entrada, festival o acadèmia, per evitar duplicacions.*
 <!-- /nota-grafic -->
 
 <!-- criteri-grafic -->
