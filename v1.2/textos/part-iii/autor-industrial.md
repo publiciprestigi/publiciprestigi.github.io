@@ -17,9 +17,9 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més complet del model
 
-*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004), *Ágora* (2009), *Mientras dure la guerra* (2019): gèneres i escales diferents executats amb precisió industrial i una marca d’autor recognoscible. La novetat que introdueixen les acadèmies és que el reconeixement internacional no queda concentrat en *Mar adentro*. *Los otros* (#2 del Top 100) va ser nominada a millor pel·lícula europea als EFA i va obtenir dues nominacions als BAFTA; *Ágora* (#19) va ser nominada al Premi del Públic dels EFA.
+*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004), *Ágora* (2009), *Mientras dure la guerra* (2019): gèneres i escales diferents executats amb precisió industrial i una marca d’autor recognoscible. La novetat que introdueixen les acadèmies és que el reconeixement internacional no queda concentrat en *Mar adentro*. *Los otros* (#2 del Top 100) va ser nominada a millor pel·lícula europea als EFA, i *Ágora* (#19) al Premi del Públic dels EFA.
 
-*Mar adentro* continua sent la intersecció màxima: Lleó de Plata a Venècia, Oscar a millor pel·lícula de parla no anglesa, dos EFA, reconeixement als César i David di Donatello, 4,1 milions d’espectadors i #12 del Top 100. Més que una excepció absoluta, és la culminació més visible d’un recorregut capaç de combinar públic massiu, ambició industrial i prestigi internacional. Amenábar és, dels tres, el cas que mostra de manera més completa que l’autoria pot operar també dins d’un cinema popular, exportable i de gran escala.
+*Mar adentro* continua sent la intersecció màxima: Lleó de Plata a Venècia, Oscar a millor pel·lícula de parla no anglesa, dos EFA, 4,1 milions d’espectadors i #12 del Top 100. Més que una excepció absoluta, és la culminació més visible d’un recorregut capaç de combinar públic massiu, ambició industrial i prestigi internacional. Amenábar és, dels tres, el cas que mostra de manera més completa que l’autoria pot operar també dins d’un cinema popular, exportable i de gran escala.
 
 <!-- /bloc-amenabar -->
 
@@ -38,7 +38,7 @@ La singularitat d’aquest model no consisteix, per tant, a quedar fora del pres
 <!-- /conclusio -->
 
 <!-- paradoxa -->
-Però el model topa avui amb un límit de mesura. *La sociedad de la nieve* (2023) ho il·lustra millor que cap altre film de Bayona: suma 556.976 espectadors a les sales espanyoles, dues nominacions als Oscar, dos premis als EFA i una nominació als BAFTA, però la seva explotació principal passa per Netflix. El film ja és visible dins del corpus de prestigi i també deixa una xifra de taquilla; el que no podem mesurar de manera comparable és la magnitud real del seu públic.
+Però el model topa avui amb un límit de mesura. *La sociedad de la nieve* (2023) ho il·lustra millor que cap altre film de Bayona: suma 556.976 espectadors a les sales espanyoles, dues nominacions als Oscar i dos premis als EFA, però la seva explotació principal passa per Netflix. El film ja és visible dins del corpus de prestigi i també deixa una xifra de taquilla; el que no podem mesurar de manera comparable és la magnitud real del seu públic.
 
 Les plataformes digitals no publiquen dades detallades d’audiència per títol i país que permetin equiparar una visualització amb una entrada de cinema. Per això, una pel·lícula concebuda per arribar a una audiència global pot aparèixer amb una xifra de sala relativament modesta al costat de films molt menys vistos en conjunt. El model d’autor industrial no desapareix necessàriament: una part del seu públic ha canviat de circuit, mentre que les mètriques històriques continuen ancorades a la sala. <sup>[20]</sup>
 <!-- /paradoxa -->
