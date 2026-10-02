@@ -815,7 +815,7 @@
       }
     });
 
-    // ── Gràfic de portada: dos circuits i quatre dobles corones representatives ──
+    // ── Gràfic de portada: dos circuits i cinc dobles corones representatives ──
     (function() {
       const svg = document.getElementById('grafic-circuits');
       const wrap = document.querySelector('.inici-hero-grafic');
@@ -839,7 +839,7 @@
       // Eix temporal: només anys, sense línies de graella.
       [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
         const t = el('text', {
-          x: x(a), y: 24,
+          x: x(a), y: 194,
           'font-size': '10.5',
           fill: '#b8b8b8',
           'text-anchor': 'middle',
@@ -888,6 +888,7 @@
 
       const dobles = [
         { any: 1975, titol: 'Furtivos' },
+        { any: 1984, titol: 'Los santos inocentes' },
         { any: 1988, titol: 'Mujeres al borde de un ataque de nervios' },
         { any: 2004, titol: 'Mar adentro' },
         { any: 2012, titol: 'Lo imposible' },
@@ -897,7 +898,7 @@
       pub.forEach(a => {
         el('circle', {
           cx: x(a), cy: YP, r: '7',
-          fill: COL_PUB, opacity: '0.58',
+          fill: COL_PUB,
           stroke: '#fff', 'stroke-width': '1.5'
         }, svg);
       });
@@ -905,7 +906,7 @@
       prest.forEach(a => {
         el('circle', {
           cx: x(a), cy: YF, r: '7',
-          fill: COL_PREST, opacity: '0.58',
+          fill: COL_PREST,
           stroke: '#fff', 'stroke-width': '1.5'
         }, svg);
       });
@@ -950,7 +951,7 @@
         tooltip.style.opacity = '0';
       }
 
-      // Dobles corones representatives: connector discret + punt opac en els dos circuits.
+      // Cinc dobles corones representatives: connector discret + punt opac en els dos circuits.
       dobles.forEach(d => {
         const cx = x(d.any);
         const g = el('g', {
