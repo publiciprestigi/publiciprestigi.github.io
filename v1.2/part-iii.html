@@ -67,6 +67,16 @@
     left:-10px;
     top:4px;
   }
+
+  .sidebar{
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .sidebar::-webkit-scrollbar{
+    width:0;
+    height:0;
+    display:none;
+  }
 </style>
 
 </head>
@@ -129,7 +139,7 @@
       </div>
       <div class="sidebar-separador"></div>
       <div class="sidebar-grup">
-        <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notes</a>
+        <a href="notes.html" class="sidebar-link sidebar-link-notes sidebar-link-update" data-extern="true"><span>Notes</span><span class="chapter-update-dot" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió"></span></a>
       </div>
       <div class="sidebar-update-key"><span class="chapter-update-dot"></span>actualitzat</div>
     </aside>
