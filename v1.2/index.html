@@ -402,28 +402,29 @@
 
     .inici-landing-presentacio {
       max-width: 850px;
-      margin: 64px auto 0;
+      margin: 48px auto 0;
       text-align: center;
     }
     .inici-benvinguda {
       margin: 0;
-      font-size: clamp(2.25rem, 4vw, 3.8rem);
-      line-height: 1.05;
-      letter-spacing: -0.035em;
+      font-size: clamp(2.05rem, 3.2vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
       font-weight: 700;
       color: #242424;
     }
     .inici-definicio {
       max-width: 760px;
-      margin: 24px auto 0;
-      font-size: 1.08rem;
-      line-height: 1.6;
-      color: #5f5f5f;
+      margin: 22px auto 0;
+      font-size: 1.10rem;
+      line-height: 1.62;
+      font-weight: 400;
+      color: #2b2b2b;
     }
 
     .inici-grafic-central {
       width: min(820px, 100%);
-      margin: 58px auto 0;
+      margin: 48px auto 0;
       transform: none !important;
     }
     .inici-grafic-central svg {
@@ -444,13 +445,30 @@
     }
 
     .inici-preguntes {
-      max-width: 940px;
-      margin: 74px auto 66px;
+      max-width: 800px;
+      margin: 76px auto 72px;
+      text-align: center;
     }
     .inici-preguntes .inici-intro-text {
+      max-width: none;
       margin: 0;
-      font-size: 1.02rem;
-      line-height: 1.68;
+      font-size: 1.10rem;
+      line-height: 1.82;
+      color: #3f3f3f;
+    }
+
+    /* El bloc d'accés torna a quedar clarament delimitat com una unitat. */
+    .inici-inferior {
+      border-top: 1px solid #e5e5e5;
+      padding-top: 32px;
+    }
+
+    /* Moviment molt discret de les dobles corones. */
+    .inici-grafic-central g[role="button"] circle {
+      transition: r .22s ease, stroke-width .22s ease;
+    }
+    .inici-circuits-tooltip {
+      transition: opacity .20s ease;
     }
 
     .inici-part-novetat {
@@ -477,22 +495,30 @@
         margin-top: 22px !important;
       }
       .inici-landing-presentacio {
-        margin-top: 44px;
+        margin-top: 38px;
       }
       .inici-benvinguda {
-        font-size: 2.2rem;
+        font-size: 2.05rem;
       }
       .inici-definicio {
         font-size: 1rem;
       }
       .inici-grafic-central {
-        margin-top: 42px;
+        margin-top: 38px;
       }
       .inici-xifres-landing {
         margin-top: 38px !important;
       }
       .inici-preguntes {
-        margin: 50px auto 46px;
+        margin: 52px auto 50px;
+        text-align: left;
+      }
+      .inici-preguntes .inici-intro-text {
+        font-size: 1.02rem;
+        line-height: 1.72;
+      }
+      .inici-inferior {
+        padding-top: 24px;
       }
     }
 
@@ -1132,6 +1158,10 @@
       }
 
       // Cinc dobles corones representatives: connector discret + cercle blanc amb contorn lila.
+      // A la portada també es recorren automàticament, com una demostració silenciosa
+      // de la interactivitat del gràfic. Qualsevol interacció de l'usuari atura el bucle.
+      const grupsDobles = [];
+
       dobles.forEach(d => {
         const cx = x(d.any);
         const g = el('g', {
@@ -1158,15 +1188,104 @@
           stroke: COL_DOBLE, 'stroke-width': '2'
         }, g);
 
-        g.addEventListener('mouseenter', () => activa(g, d));
-        g.addEventListener('mouseleave', () => desactiva(g));
-        g.addEventListener('focus', () => activa(g, d));
-        g.addEventListener('blur', () => desactiva(g));
+        grupsDobles.push({ g, d });
+
+        g.addEventListener('mouseenter', () => {
+          aturaAuto();
+          activa(g, d);
+        });
+        g.addEventListener('mouseleave', () => {
+          desactiva(g);
+          programaReiniciAuto();
+        });
+        g.addEventListener('focus', () => {
+          aturaAuto();
+          activa(g, d);
+        });
+        g.addEventListener('blur', () => {
+          desactiva(g);
+          programaReiniciAuto();
+        });
         g.addEventListener('click', () => {
+          aturaAuto();
           if (tooltip.style.opacity === '1') desactiva(g);
           else activa(g, d);
         });
       });
+
+      const redueixMoviment = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      let autoTimer = null;
+      let reiniciTimer = null;
+      let autoIndex = 0;
+      let autoActiu = null;
+
+      function netejaAutoActiu() {
+        if (autoActiu) {
+          desactiva(autoActiu.g);
+          autoActiu = null;
+        }
+      }
+
+      function aturaAuto() {
+        if (autoTimer) {
+          clearTimeout(autoTimer);
+          autoTimer = null;
+        }
+        if (reiniciTimer) {
+          clearTimeout(reiniciTimer);
+          reiniciTimer = null;
+        }
+        netejaAutoActiu();
+      }
+
+      function programaReiniciAuto() {
+        if (redueixMoviment) return;
+        if (reiniciTimer) clearTimeout(reiniciTimer);
+        reiniciTimer = setTimeout(() => {
+          reiniciTimer = null;
+          iniciaAuto();
+        }, 3500);
+      }
+
+      function pasAuto() {
+        if (redueixMoviment || !grupsDobles.length) return;
+
+        netejaAutoActiu();
+        autoActiu = grupsDobles[autoIndex];
+        activa(autoActiu.g, autoActiu.d);
+
+        autoTimer = setTimeout(() => {
+          netejaAutoActiu();
+          autoIndex += 1;
+
+          if (autoIndex >= grupsDobles.length) {
+            autoIndex = 0;
+            // Una respiració més llarga en acabar la seqüència completa.
+            autoTimer = setTimeout(pasAuto, 3000);
+          } else {
+            autoTimer = setTimeout(pasAuto, 550);
+          }
+        }, 2200);
+      }
+
+      function iniciaAuto() {
+        if (redueixMoviment || autoTimer || autoActiu) return;
+        pasAuto();
+      }
+
+      // Si l'usuari entra al gràfic, l'animació deixa de competir amb el cursor.
+      wrap.addEventListener('pointerenter', aturaAuto);
+      wrap.addEventListener('pointerleave', programaReiniciAuto);
+
+      // Primera aparició després d'una pausa, perquè la portada pugui assentar-se.
+      if (!redueixMoviment) {
+        autoTimer = setTimeout(() => {
+          autoTimer = null;
+          iniciaAuto();
+        }, 1800);
+      }
     })();
   </script>
 
