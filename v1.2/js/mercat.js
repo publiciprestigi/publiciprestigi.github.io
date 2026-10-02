@@ -172,8 +172,8 @@ async function construirGraficMercat() {
           position: 'top',
           align: 'center',
           labels: {
-            font: { size: 12, family: '"Inter", -apple-system, sans-serif' },
-            color: '#363737',
+            font: { size: 11, family: '"Inter", -apple-system, sans-serif' },
+            color: '#555',
             boxWidth: 14,
             padding: 16,
           }
@@ -182,10 +182,15 @@ async function construirGraficMercat() {
           display: true,
           text: pipMercatT('Entrades venudes a Espanya i evolució de la població (1965–2025)','Entradas vendidas en España y evolución de la población (1965–2025)'),
           color: '#363737',
-          font: { size: 15, weight: '700', family: '"Inter", -apple-system, sans-serif' },
+          font: { size: 16, weight: '600', family: '"Inter", -apple-system, sans-serif' },
           padding: { bottom: 16 },
         },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: ctx => `${pipMercatT('Any','Año')} ${ctx[0].label}`,
             label: ctx => {

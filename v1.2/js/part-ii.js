@@ -164,8 +164,8 @@ function construirPremiades() {
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
     <div style="margin-top:0;padding-top:0;border-top:none">
-      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:0">${pipT('Evolució premiades per dècada (1965–2025)','Evolución de las premiadas por década (1965–2025)')}</p>
-      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:12px;color:#888;">
+      <p style="text-align:center;font-size:16px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:0">${pipT('Evolució premiades per dècada (1965–2025)','Evolución de las premiadas por década (1965–2025)')}</p>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:11px;color:#555;">
         ${FESTS.map(f => `<span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:${COLORS[f]};display:inline-block;"></span>${festivalLabel(f)}</span>`).join('')}
       </div>
       <div style="position:relative;width:100%;height:260px;">
@@ -215,6 +215,12 @@ function construirPremiades() {
         plugins: {
           legend: { display: false },
           tooltip: {
+            backgroundColor: 'rgba(45,45,45,0.95)',
+            cornerRadius: 6,
+            padding: 8,
+            titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+            bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+            footerFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
             filter: (item) => item.raw > 0,
             callbacks: {
               label: (item) => ` ${item.dataset.label}: ${item.raw}`,
@@ -226,10 +232,10 @@ function construirPremiades() {
           }
         },
         scales: {
-          x: { stacked: true, grid: { display: false }, ticks: { font: { size: 12 } } },
+          x: { stacked: true, grid: { display: false }, ticks: { color: '#666', font: { size: 11 } } },
           y: { stacked: true, beginAtZero: true,
                title: { display: false },
-               ticks: { stepSize: 2, font: { size: 12 } }, grid: { color: 'rgba(0,0,0,0.06)' } }
+               ticks: { stepSize: 2, color: '#666', font: { size: 11 } }, grid: { color: 'rgba(0,0,0,0.06)' } }
         }
       }
     });

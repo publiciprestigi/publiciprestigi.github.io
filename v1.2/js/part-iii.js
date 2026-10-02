@@ -429,7 +429,7 @@ function construirGraficDobleCorona() {
           border: { color: '#d9d9d9' },
           ticks: {
             color: '#777',
-            font: { size: 10 },
+            font: { size: 11 },
             stepSize: 10,
             callback(value) {
               return Number.isInteger(value) ? String(value) : '';
@@ -782,9 +782,12 @@ window.PiP_graficBretxa = function() {
           borderWidth: 2.5,
           pointRadius: 7,
           pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointBackgroundColor: colorsPunts,
           pointBorderColor: '#fff',
-          pointBorderWidth: 2,
+          pointBorderWidth: 1.5,
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
           tension: 0.25,
           fill: false,
           yAxisID: 'yRatio',
@@ -801,9 +804,14 @@ window.PiP_graficBretxa = function() {
         legend: {
           display: true,
           position: 'bottom',
-          labels: { boxWidth: 14, font: { size: 11 } },
+          labels: { boxWidth: 14, color: '#555', font: { size: 11 } },
         },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             label: ctx => {
               if (ctx.dataset.yAxisID === 'yRatio')
@@ -909,7 +917,7 @@ window.PiP_graficCazaIAA = function() {
   if (!document.getElementById('caza-iaa-tit')) {
     const tit = document.createElement('p');
     tit.id = 'caza-iaa-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin-bottom:10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin-bottom:10px';
     tit.innerHTML = pip3T('IAA estimat','IAA estimado') + ': <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)';
     el.parentNode.insertBefore(tit, el);
   }
@@ -1019,6 +1027,11 @@ window.PiP_graficCazaIAA = function() {
           display: false,
         },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             label: ctx => {
               const v = ctx.parsed.x;
@@ -1042,7 +1055,7 @@ window.PiP_graficCazaIAA = function() {
           stacked: true,
           ticks: {
             color: '#363737',
-            font: { size: 12 },
+            font: { size: 11 },
           },
           grid: { display: false },
         },
@@ -1211,7 +1224,7 @@ window.PiP_graficSauraAlmodovar = function() {
   if (bloc && !document.getElementById('sa-tit')) {
     const tit = document.createElement('p');
     tit.id = 'sa-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
     tit.innerHTML = pip3T('Saura i Almodóvar — Trajectòria d\'espectadors a sala per film (1966–2024)','Saura y Almodóvar — Trayectoria de espectadores en salas por film (1966–2024)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1290,9 +1303,13 @@ window.PiP_graficSauraAlmodovar = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
         {
           label: 'Pedro Almodóvar',
@@ -1302,9 +1319,13 @@ window.PiP_graficSauraAlmodovar = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
       ],
     },
@@ -1316,6 +1337,11 @@ window.PiP_graficSauraAlmodovar = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
             label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
@@ -1326,7 +1352,7 @@ window.PiP_graficSauraAlmodovar = function() {
         x: {
           type: 'linear',
           min: 1965, max: 2026,
-          ticks: { stepSize: 5, color: '#363737', font: { size: 12 } },
+          ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
           grid: { color: '#eee' },
         },
         y: {
@@ -1379,7 +1405,7 @@ window.PiP_graficGeneracioActual = function() {
   if (bloc && !document.getElementById('ga-tit')) {
     const tit = document.createElement('p');
     tit.id = 'ga-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
     tit.innerHTML = pip3T('Generació actual — Espectadors a sala (barra sòlida) vs. IAA estimat (barra clara)','Generación actual — Espectadores en salas (barra sólida) vs. IAA estimado (barra clara)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1493,6 +1519,11 @@ window.PiP_graficGeneracioActual = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => orden[items[0].dataIndex].titol + ' (' + orden[items[0].dataIndex].any + ')',
             label: ctx => {
@@ -1508,14 +1539,14 @@ window.PiP_graficGeneracioActual = function() {
           stacked: true,
           ticks: {
             callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
-            color: '#363737', font: { size: 12 },
+            color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: pip3T('Espectadors (sala + IAA estimat)','Espectadores (salas + IAA estimado)'), font: { size: 13 } },
+          title: { display: true, text: pip3T('Espectadors (sala + IAA estimat)','Espectadores (salas + IAA estimado)'), font: { size: 12 } },
         },
         y: {
           stacked: true,
-          ticks: { color: '#363737', font: { size: 12 } },
+          ticks: { color: '#363737', font: { size: 11 } },
           grid: { display: false },
         },
       },
@@ -1575,7 +1606,7 @@ window.PiP_graficAutorIndustrial = function() {
   if (bloc && !document.getElementById('ai-tit')) {
     const tit = document.createElement('p');
     tit.id = 'ai-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
     tit.innerHTML = pip3T('De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala per film (1995–2025)','De la Iglesia, Amenábar y Bayona — Trayectoria de espectadores en salas por film (1995–2025)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1647,10 +1678,14 @@ window.PiP_graficAutorIndustrial = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBackgroundColor: COL_IGLESIA,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
         {
           label: 'Alejandro Amenábar',
@@ -1660,10 +1695,14 @@ window.PiP_graficAutorIndustrial = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBackgroundColor: COL_AMENABAR,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
         {
           label: 'J.A. Bayona',
@@ -1673,10 +1712,14 @@ window.PiP_graficAutorIndustrial = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBackgroundColor: COL_BAYONA,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
       ],
     },
@@ -1688,6 +1731,11 @@ window.PiP_graficAutorIndustrial = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
             label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
@@ -1698,7 +1746,7 @@ window.PiP_graficAutorIndustrial = function() {
         x: {
           type: 'linear',
           min: 1994, max: 2027,
-          ticks: { stepSize: 5, color: '#363737', font: { size: 12 } },
+          ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
           grid: { color: '#eee' },
         },
         y: {
@@ -1752,7 +1800,7 @@ function construirLleis() {
   if (!document.getElementById('ll-styles')) {
     const s = document.createElement('style');
     s.id = 'll-styles';
-    s.textContent = `.ll-outer{position:relative;margin:0}.ll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}.ll-hint{position:absolute;top:0;right:0;width:28px;height:calc(100% - 8px);background:linear-gradient(to right,transparent,rgba(255,255,255,.55));pointer-events:none;transition:opacity .4s;z-index:20}.ll-g{position:relative;min-width:1600px;font-size:15px;font-family:-apple-system,"SF Pro Text",BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}.ll-g6{display:grid;grid-template-columns:31.67% 8.33% 6.67% 18.33% 23.33% 11.67%}.ll-lm{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed rgba(255,255,255,.42);z-index:4;pointer-events:none}.ll-lm.cl{border-left-color:rgba(0,0,0,.16)}.ll-gov{display:flex;height:26px;overflow:hidden}.ll-gb{display:flex;align-items:center;padding:0 8px;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;border-right:1px solid rgba(255,255,255,.3);white-space:nowrap;overflow:hidden}.ll-per .c{padding:11px 12px 9px;font-size:.85em;font-weight:700;color:#fff;border-right:1px solid rgba(255,255,255,.18)}.ll-mom{position:relative;height:96px;background:#f5f5f5;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;overflow:visible}.ll-mp{position:absolute;z-index:10;width:0}.ll-ml{position:absolute;left:0;top:0;bottom:0;width:0;border-left:1px dashed #b0b0b0}.ll-mc{position:absolute;left:0;top:10px;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#363737;color:#fff;font-size:.68em;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f5f5;box-shadow:0 1px 3px rgba(0,0,0,.22);z-index:2}.ll-ma{position:absolute;left:0;top:40px;transform:translateX(-50%);font-size:.65em;color:#888;white-space:nowrap;font-style:italic;text-align:center}.ll-mn{position:absolute;left:0;top:56px;transform:translateX(-50%);font-size:.72em;color:#333;white-space:nowrap;font-weight:700;text-align:center}.ll-fin .c{padding:12px 11px;font-size:.82em;color:#fff;font-style:italic;border-right:1px solid rgba(255,255,255,.18);line-height:1.4;min-height:80px}.ll-fin .c .nf{display:block;font-style:normal;font-weight:700;font-size:.9em;opacity:.82;margin-bottom:4px}.ll-iaa .c{display:flex;align-items:center;justify-content:center;height:26px;padding:0 10px;font-size:.68em;font-weight:400;color:#fff;border-right:1px solid rgba(255,255,255,.2)}.ll-eix{position:relative;height:32px;border-top:1px solid #ccc;margin-top:8px;padding-bottom:10px}.ll-ea{position:absolute;font-size:.72em;color:#999;transform:translateX(-50%);padding-top:3px;white-space:nowrap}.ll-ef{font-size:.75em;color:#888;text-transform:uppercase;letter-spacing:.05em;padding:5px 0 2px}.ll-tit{font-size:.82em;color:#363737;font-weight:700;margin-bottom:10px}.ll-leg{font-size:.78em;color:#888;font-style:italic;margin-top:10px;line-height:1.5}.c1{background:#2C3E50}.c2{background:#1A5276}.c3{background:#1E8449}.c4{background:#7D3C98}.c5{background:#B7770D}.c6{background:#922B21}.gf{background:#4E342E}.gt{background:#546E7A}.gps{background:#B71C1C}.gpp{background:#0D47A1}`;
+    s.textContent = `.ll-outer{position:relative;margin:0}.ll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}.ll-hint{position:absolute;top:0;right:0;width:28px;height:calc(100% - 8px);background:linear-gradient(to right,transparent,rgba(255,255,255,.55));pointer-events:none;transition:opacity .4s;z-index:20}.ll-g{position:relative;min-width:1600px;font-size:15px;font-family:"Inter",-apple-system,"SF Pro Text",BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}.ll-g6{display:grid;grid-template-columns:31.67% 8.33% 6.67% 18.33% 23.33% 11.67%}.ll-lm{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed rgba(255,255,255,.42);z-index:4;pointer-events:none}.ll-lm.cl{border-left-color:rgba(0,0,0,.16)}.ll-gov{display:flex;height:26px;overflow:hidden}.ll-gb{display:flex;align-items:center;padding:0 8px;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;border-right:1px solid rgba(255,255,255,.3);white-space:nowrap;overflow:hidden}.ll-per .c{padding:11px 12px 9px;font-size:.85em;font-weight:700;color:#fff;border-right:1px solid rgba(255,255,255,.18)}.ll-mom{position:relative;height:96px;background:#f5f5f5;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;overflow:visible}.ll-mp{position:absolute;z-index:10;width:0}.ll-ml{position:absolute;left:0;top:0;bottom:0;width:0;border-left:1px dashed #b0b0b0}.ll-mc{position:absolute;left:0;top:10px;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#363737;color:#fff;font-size:.68em;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f5f5;box-shadow:0 1px 3px rgba(0,0,0,.22);z-index:2}.ll-ma{position:absolute;left:0;top:40px;transform:translateX(-50%);font-size:.65em;color:#888;white-space:nowrap;font-style:italic;text-align:center}.ll-mn{position:absolute;left:0;top:56px;transform:translateX(-50%);font-size:.72em;color:#333;white-space:nowrap;font-weight:700;text-align:center}.ll-fin .c{padding:12px 11px;font-size:.82em;color:#fff;font-style:italic;border-right:1px solid rgba(255,255,255,.18);line-height:1.4;min-height:80px}.ll-fin .c .nf{display:block;font-style:normal;font-weight:700;font-size:.9em;opacity:.82;margin-bottom:4px}.ll-iaa .c{display:flex;align-items:center;justify-content:center;height:26px;padding:0 10px;font-size:.68em;font-weight:400;color:#fff;border-right:1px solid rgba(255,255,255,.2)}.ll-eix{position:relative;height:32px;border-top:1px solid #ccc;margin-top:8px;padding-bottom:10px}.ll-ea{position:absolute;font-size:.72em;color:#999;transform:translateX(-50%);padding-top:3px;white-space:nowrap}.ll-ef{font-size:.75em;color:#888;text-transform:uppercase;letter-spacing:.05em;padding:5px 0 2px}.ll-tit{font-size:16px;color:#363737;font-weight:600;margin-bottom:10px}.ll-leg{font-size:.78em;color:#888;font-style:italic;margin-top:10px;line-height:1.5}.c1{background:#2C3E50}.c2{background:#1A5276}.c3{background:#1E8449}.c4{background:#7D3C98}.c5{background:#B7770D}.c6{background:#922B21}.gf{background:#4E342E}.gt{background:#546E7A}.gps{background:#B71C1C}.gpp{background:#0D47A1}`;
     document.head.appendChild(s);
   }
 
@@ -2067,7 +2115,7 @@ window.PiP_graficMapaCanon = function() {
   if (bloc && !document.getElementById('mapa-capçalera')) {
     const nomsCurts = PIP_III_ES ? ['Radical', 'Generación actual', 'Núcleo central', 'Popular de género', 'Popular'] : ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
     let cap = `<div id="mapa-capçalera">
-      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965-2025)')}</p>
+      <p style="font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 18px">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965–2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965–2025)')}</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:22px;justify-content:center">`;
     blocs.forEach((b, i) => {
       cap += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${nomsCurts[i]}</span>`;
