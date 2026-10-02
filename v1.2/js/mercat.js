@@ -95,6 +95,13 @@ async function construirGraficMercat() {
         ctx.stroke();
         ctx.setLineDash([]);
 
+        if (!isMobil) {
+          ctx.fillStyle = 'rgba(100,100,100,0.6)';
+          ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
+          ctx.textAlign = 'left';
+          // Etiqueta de dècada amagada per alleugerir el gràfic.
+          // ctx.fillText(etiqueta, xPos + 4, yTop + 14);
+        }
       });
 
       const idxMax = 0;
