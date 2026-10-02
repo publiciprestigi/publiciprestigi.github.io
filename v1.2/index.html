@@ -28,10 +28,10 @@
     /* Hero */
     .inici-hero {
       display: grid;
-      grid-template-columns: 1fr 1.45fr;
-      gap: 56px;
+      grid-template-columns: 0.92fr 1.58fr;
+      gap: 38px;
       align-items: center;
-      padding-bottom: 16px;
+      padding-bottom: 20px;
     }
     .inici-claim {
       font-size: 2.5rem;
@@ -42,7 +42,32 @@
       margin: 0;
     }
 
-    .inici-hero-grafic svg { width: 100%; display: block; }
+    .inici-hero-grafic {
+      position: relative;
+      min-width: 0;
+      transform: translateX(-2%);
+    }
+    .inici-hero-grafic svg {
+      width: 100%;
+      display: block;
+      overflow: visible;
+    }
+    .inici-circuits-tooltip {
+      position: absolute;
+      z-index: 20;
+      opacity: 0;
+      pointer-events: none;
+      transform: translate(-50%, -100%);
+      background: rgba(45,45,45,0.95);
+      color: #fff;
+      border-radius: 6px;
+      padding: 8px 10px;
+      font-size: 12px;
+      line-height: 1.4;
+      white-space: nowrap;
+      transition: opacity .08s ease;
+      font-family: var(--font-principal);
+    }
 
     /* Text + xifres: un sol bloc sense separador */
     .inici-text-xifres {
@@ -297,8 +322,8 @@
 
       .inici-claim { font-size: 1.8rem; }
 
-      /* Centrat visual del gràfic només en pantalles estretes */
-      .inici-hero-grafic { transform: translateX(-4%); }
+      /* En mòbil el gràfic ocupa tota l'amplada disponible */
+      .inici-hero-grafic { transform: none; }
 
       /* Xifres: 2 columnes x 3 files */
       .inici-xifres {
@@ -393,7 +418,7 @@
           <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
         </div>
         <div class="inici-hero-grafic">
-          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+          <svg id="grafic-circuits" viewBox="0 0 660 220" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
         </div>
       </div>
 
@@ -790,14 +815,17 @@
       }
     });
 
-    // Només el bloc del gràfic — substitueix l'IIFE anterior
+    // ── Gràfic de portada: dos circuits i quatre dobles corones representatives ──
     (function() {
       const svg = document.getElementById('grafic-circuits');
+      const wrap = document.querySelector('.inici-hero-grafic');
+      if (!svg || !wrap) return;
+
       const ns = 'http://www.w3.org/2000/svg';
-      const W = 600, ML = 130, MR = 12;
-      const YP = 60, YF = 110;
+      const W = 660, ML = 92, MR = 18;
+      const YP = 72, YF = 132;
       const A0 = 1965, A1 = 2025;
-      const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
+      const COL_PUB = '#2a5582', COL_PREST = '#9B2335', COL_DOBLE = '#5a4a8a';
 
       function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
 
@@ -808,72 +836,155 @@
         return e;
       }
 
-      // Anys — només text, sense línies
+      // Eix temporal: només anys, sense línies de graella.
       [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
-        const t = el('text', { x: x(a), y: 22, 'font-size': '10', fill: '#ccc', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
+        const t = el('text', {
+          x: x(a), y: 24,
+          'font-size': '10.5',
+          fill: '#b8b8b8',
+          'text-anchor': 'middle',
+          'font-family': 'Inter,-apple-system,sans-serif'
+        }, svg);
         t.textContent = a;
       });
 
-      // Etiquetes de carril
-      function cLabel(label, sub, y, col) {
-        const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+      // Etiquetes dels dos circuits: sense els antics subtítols “Top 100” / “Festivals”.
+      function cLabel(label, y, col) {
+        const t = el('text', {
+          x: ML - 18, y: y + 4,
+          'font-size': '13',
+          fill: col,
+          'font-weight': '600',
+          'text-anchor': 'end',
+          'font-family': 'Inter,-apple-system,sans-serif'
+        }, svg);
         t.textContent = label;
-        const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
-        s.textContent = sub;
       }
 
-      cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
-      cLabel('PRESTIGI', 'Festivals', YF, COL_PREST);
+      cLabel('Públic', YP, COL_PUB);
+      cLabel('Prestigi', YF, COL_PREST);
 
-      // Pelis emblemàtiques
-      const emblematiques = [1975, 1988, 2004];
-
-      // Punts públic — plens, excepte les emblemàtiques
-      const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
-        1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
-        1981,1984,1988,1991,1995,1997,1998,1999,
-        2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
-        2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
-
-      const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
-        1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
-        2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
-
-      // Primer les línies verticals de les 3 pelis (sota els punts)
-      emblematiques.forEach(a => {
-        el('line', { x1: x(a), y1: YP - 10, x2: x(a), y2: YF + 10, stroke: '#ccc', 'stroke-width': '1' }, svg);
-      });
-
-      // Punts públic plens (no emblemàtiques)
-      pub.filter(a => !emblematiques.includes(a)).forEach(a =>
-        el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg)
-      );
-
-      // Punts prestigi plens (no emblemàtiques)
-      prest.filter(a => !emblematiques.includes(a)).forEach(a =>
-        el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg)
-      );
-
-      // Cercles buits per a les emblemàtiques (damunt les línies)
-      emblematiques.forEach(a => {
-        el('circle', { cx: x(a), cy: YP, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
-        el('circle', { cx: x(a), cy: YF, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
-      });
-
-      // 3 etiquetes escalonades cap avall
-      const etiq = [
-        { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
-        { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
-        { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
+      // Mostra representativa: menys punts que abans, mantenint la distribució temporal relativa.
+      // No equival a una pel·lícula per punt; és una síntesi visual dels dos volums.
+      const pub = [
+        1965, 1967, 1969,
+        1971, 1974, 1977, 1979,
+        1982, 1986,
+        1991, 1995, 1998,
+        2001, 2003, 2006, 2009,
+        2014, 2016, 2018,
+        2022, 2025
       ];
 
-      etiq.forEach(e => {
-        const cx = x(e.any);
-        el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
-        const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
-        tany.textContent = e.any;
-        const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
-        ttit.textContent = e.titol;
+      const prest = [
+        1967,
+        1972, 1978,
+        1981, 1984, 1986,
+        1993, 1997,
+        2001, 2007, 2009,
+        2010, 2014, 2017, 2019,
+        2022, 2025
+      ];
+
+      const dobles = [
+        { any: 1975, titol: 'Furtivos' },
+        { any: 1988, titol: 'Mujeres al borde de un ataque de nervios' },
+        { any: 2004, titol: 'Mar adentro' },
+        { any: 2012, titol: 'Lo imposible' },
+      ];
+
+      // Punts generals: mateixa mida que els punts analítics, però menys opacs.
+      pub.forEach(a => {
+        el('circle', {
+          cx: x(a), cy: YP, r: '7',
+          fill: COL_PUB, opacity: '0.58',
+          stroke: '#fff', 'stroke-width': '1.5'
+        }, svg);
+      });
+
+      prest.forEach(a => {
+        el('circle', {
+          cx: x(a), cy: YF, r: '7',
+          fill: COL_PREST, opacity: '0.58',
+          stroke: '#fff', 'stroke-width': '1.5'
+        }, svg);
+      });
+
+      const tooltip = document.createElement('div');
+      tooltip.className = 'inici-circuits-tooltip';
+      wrap.appendChild(tooltip);
+
+      function tooltipHtml(d) {
+        const titol = String(d.titol)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+        return `<strong><em>${titol}</em></strong> (${d.any})`;
+      }
+
+      function activa(g, d) {
+        g.querySelectorAll('circle').forEach(c => {
+          c.setAttribute('r', '9');
+          c.setAttribute('stroke', '#363737');
+          c.setAttribute('stroke-width', '1.4');
+        });
+
+        const punt = g.querySelector('circle:last-of-type');
+        const pr = punt.getBoundingClientRect();
+        const wr = wrap.getBoundingClientRect();
+
+        tooltip.innerHTML = tooltipHtml(d);
+        tooltip.style.left = `${pr.left - wr.left + pr.width / 2}px`;
+        tooltip.style.top = `${pr.top - wr.top - 8}px`;
+        tooltip.style.opacity = '1';
+      }
+
+      function desactiva(g) {
+        g.querySelectorAll('circle').forEach(c => {
+          c.setAttribute('r', '7');
+          c.setAttribute('stroke', '#fff');
+          c.setAttribute('stroke-width', '1.5');
+        });
+        tooltip.style.opacity = '0';
+      }
+
+      // Dobles corones representatives: connector discret + punt opac en els dos circuits.
+      dobles.forEach(d => {
+        const cx = x(d.any);
+        const g = el('g', {
+          tabindex: '0',
+          role: 'button',
+          'aria-label': `${d.titol} (${d.any})`,
+          style: 'cursor:pointer;outline:none'
+        }, svg);
+
+        el('line', {
+          x1: cx, y1: YP + 8, x2: cx, y2: YF - 8,
+          stroke: COL_DOBLE, 'stroke-opacity': '0.28', 'stroke-width': '1.2'
+        }, g);
+
+        el('circle', {
+          cx, cy: YP, r: '7',
+          fill: COL_DOBLE,
+          stroke: '#fff', 'stroke-width': '1.5'
+        }, g);
+
+        el('circle', {
+          cx, cy: YF, r: '7',
+          fill: COL_DOBLE,
+          stroke: '#fff', 'stroke-width': '1.5'
+        }, g);
+
+        g.addEventListener('mouseenter', () => activa(g, d));
+        g.addEventListener('mouseleave', () => desactiva(g));
+        g.addEventListener('focus', () => activa(g, d));
+        g.addEventListener('blur', () => desactiva(g));
+        g.addEventListener('click', () => {
+          if (tooltip.style.opacity === '1') desactiva(g);
+          else activa(g, d);
+        });
       });
     })();
   </script>
