@@ -523,42 +523,44 @@
     }
 
   
-    /* Pre-footer editorial inspirat en la lògica visual de Substack */
+    /* Pre-footer editorial: mateixa lògica visual que el bloc final de Substack */
     .inici-prefooter {
       border-top: 1px solid #e5e5e5;
-      padding: 82px 0 88px;
-      text-align: center;
+      margin-left: -40px;
+      margin-right: -40px;
+      padding: 65px 0 64px;
+      text-align: left;
     }
     .inici-prefooter-titol {
       margin: 0;
-      font-size: 2.2rem;
-      line-height: 1.08;
+      font-size: 1.85rem;
+      line-height: 1.15;
       font-weight: 700;
       letter-spacing: -0.02em;
-      color: var(--color-text);
+      color: #343434;
     }
     .inici-prefooter-subtitol {
-      margin: 10px auto 0;
-      max-width: 680px;
-      font-size: 1.05rem;
-      line-height: 1.55;
+      margin: 6px 0 0;
+      max-width: 760px;
+      font-size: 1rem;
+      line-height: 1.5;
       color: #3f3f3f;
     }
     .inici-prefooter-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 22px;
-      margin-top: 26px;
-      font-size: .95rem;
+      justify-content: flex-start;
+      gap: 16px;
+      margin-top: 18px;
+      font-size: .82rem;
       line-height: 1.45;
-      font-weight: 500;
+      font-weight: 400;
     }
     .inici-prefooter-links a {
-      color: #1a1a1a;
+      color: #343434;
       text-decoration: underline;
       text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
+      text-underline-offset: 2px;
     }
     .inici-prefooter-links a:hover {
       color: #000;
@@ -567,18 +569,20 @@
 
     @media (max-width: 900px) {
       .inici-prefooter {
-        padding: 60px 0 66px;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 52px 0 54px;
       }
       .inici-prefooter-titol {
-        font-size: 1.7rem;
+        font-size: 1.55rem;
       }
       .inici-prefooter-subtitol {
-        font-size: .98rem;
+        font-size: .95rem;
       }
       .inici-prefooter-links {
-        gap: 18px;
-        margin-top: 20px;
-        font-size: .92rem;
+        gap: 16px;
+        margin-top: 16px;
+        font-size: .8rem;
       }
     }
 
@@ -1128,92 +1132,75 @@
         { any: 2012, titol: 'Lo imposible' },
       ];
 
-      // Evitem solapaments: distribuïm visualment els punts massa pròxims.
+      // Evitem solapaments: cada fila es distribueix dins dels intervals
+      // delimitats per les dobles corones. Els anys reals es mantenen al tooltip;
+      // el desplaçament és només visual i mínim.
       const dobleYears = dobles.map(d => d.any);
 
-      function spreadYears(years, minGapPx = 17.5) {
-        const items = years
+      function distribueixPunts(years, minGapPx = 17.2) {
+        const generals = years
+          .filter(any => !dobleYears.includes(any))
           .slice()
-          .sort((a, b) => a - b)
-          .map(any => ({ any, base: x(any) }));
+          .sort((a, b) => a - b);
 
-        if (!items.length) return [];
+        const fixedXs = dobles.map(d => x(d.any));
+        const boundaries = [ML, ...fixedXs, W - MR];
+        const resultat = [];
 
-        const groups = [];
-        let current = [items[0]];
+        for (let seg = 0; seg < boundaries.length - 1; seg++) {
+          const left = boundaries[seg];
+          const right = boundaries[seg + 1];
+          const teDobleEsquerra = seg > 0;
+          const teDobleDreta = seg < boundaries.length - 2;
 
-        for (let i = 1; i < items.length; i++) {
-          const prev = current[current.length - 1];
-          const item = items[i];
-          if (item.base - prev.base < minGapPx) current.push(item);
-          else { groups.push(current); current = [item]; }
-        }
-        groups.push(current);
-
-        const spread = [];
-        groups.forEach(group => {
-          if (group.length === 1) {
-            spread.push({ any: group[0].any, cx: group[0].base });
-            return;
-          }
-          const center = group.reduce((s, g) => s + g.base, 0) / group.length;
-          const start = center - ((group.length - 1) * minGapPx) / 2;
-          group.forEach((g, i) => {
-            spread.push({ any: g.any, cx: start + i * minGapPx });
+          const grup = generals.filter(any => {
+            const px = x(any);
+            if (seg === 0) return px >= left && px < right;
+            if (seg === boundaries.length - 2) return px > left && px <= right;
+            return px > left && px < right;
           });
-        });
-        return spread;
+
+          if (!grup.length) continue;
+
+          const minX = left + (teDobleEsquerra ? minGapPx : 0);
+          const maxX = right - (teDobleDreta ? minGapPx : 0);
+
+          let pos = grup.map(any => Math.min(Math.max(x(any), minX), maxX));
+
+          // Passada cap a la dreta.
+          for (let i = 1; i < pos.length; i++) {
+            pos[i] = Math.max(pos[i], pos[i - 1] + minGapPx);
+          }
+
+          // Ajustem al límit dret i fem passada cap a l'esquerra.
+          if (pos[pos.length - 1] > maxX) {
+            pos[pos.length - 1] = maxX;
+          }
+          for (let i = pos.length - 2; i >= 0; i--) {
+            pos[i] = Math.min(pos[i], pos[i + 1] - minGapPx);
+          }
+
+          // Garantim el límit esquerre i fem una última passada estable.
+          if (pos[0] < minX) pos[0] = minX;
+          for (let i = 1; i < pos.length; i++) {
+            pos[i] = Math.max(pos[i], pos[i - 1] + minGapPx);
+          }
+
+          // L'interval és prou ample; aquest petit ajust evita qualsevol
+          // desbordament numèric sense alterar la distribució.
+          if (pos[pos.length - 1] > maxX) {
+            const excés = pos[pos.length - 1] - maxX;
+            pos = pos.map(v => v - excés);
+          }
+
+          grup.forEach((any, i) => resultat.push({ any, cx: pos[i] }));
+        }
+
+        return resultat.sort((a, b) => a.cx - b.cx);
       }
 
-      function separaDeDobles(points, fixedXs, minGapPx = 18.8) {
-        if (!points.length) return [];
-        const sorted = points
-          .slice()
-          .sort((a, b) => a.cx - b.cx)
-          .map(p => ({ ...p }));
-
-        // Primer desplacem només el mínim necessari per evitar que els punts de color
-        // quedin massa enganxats als cercles blancs de les dobles corones.
-        sorted.forEach(p => {
-          fixedXs.forEach(ax => {
-            const dist = p.cx - ax;
-            if (Math.abs(dist) < minGapPx) {
-              if (dist < 0) p.cx = ax - minGapPx;
-              else p.cx = ax + minGapPx;
-            }
-          });
-        });
-
-        // Després tornem a garantir una separació regular entre punts de la mateixa fila.
-        for (let i = 1; i < sorted.length; i++) {
-          const prev = sorted[i - 1];
-          const cur = sorted[i];
-          if (cur.cx - prev.cx < minGapPx) {
-            cur.cx = prev.cx + minGapPx;
-          }
-        }
-
-        // I fem un pas enrere molt suau per no desplaçar-se massa cap a la dreta.
-        for (let i = sorted.length - 2; i >= 0; i--) {
-          const next = sorted[i + 1];
-          const cur = sorted[i];
-          const maxCx = next.cx - minGapPx;
-          if (cur.cx > maxCx) cur.cx = maxCx;
-        }
-
-        const left = ML + 2;
-        const right = W - MR - 2;
-        sorted.forEach(p => {
-          if (p.cx < left) p.cx = left;
-          if (p.cx > right) p.cx = right;
-        });
-
-        return sorted;
-      }
-
-      const fixedDobles = dobles.map(d => x(d.any));
-      const pubSpread = separaDeDobles(spreadYears(pub.filter(a => !dobleYears.includes(a))), fixedDobles);
-      const prestSpread = separaDeDobles(spreadYears(prest.filter(a => !dobleYears.includes(a))), fixedDobles);
+      const pubSpread = distribueixPunts(pub);
+      const prestSpread = distribueixPunts(prest);
 
       // Punts generals.
       pubSpread.forEach(p => {
