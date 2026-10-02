@@ -424,7 +424,7 @@
 
     .inici-grafic-central {
       width: min(820px, 100%);
-      margin: 48px auto 0;
+      margin: 34px auto 0;
       transform: none !important;
     }
     .inici-grafic-central svg {
@@ -435,7 +435,7 @@
 
     .inici-xifres-landing {
       max-width: 1080px;
-      margin: 50px auto 0 !important;
+      margin: 40px auto 0 !important;
       padding-top: 0 !important;
       justify-content: space-between;
       text-align: center;
@@ -445,22 +445,22 @@
     }
 
     .inici-preguntes {
-      max-width: 800px;
-      margin: 76px auto 72px;
+      max-width: 900px;
+      margin: 74px auto 40px;
       text-align: center;
     }
     .inici-preguntes .inici-intro-text {
       max-width: none;
       margin: 0;
       font-size: 1.10rem;
-      line-height: 1.82;
+      line-height: 1.8;
       color: #3f3f3f;
     }
 
     /* El bloc d'accés torna a quedar clarament delimitat com una unitat. */
     .inici-inferior {
       border-top: 1px solid #e5e5e5;
-      padding-top: 32px;
+      padding-top: 0;
     }
 
     /* Moviment molt discret de les dobles corones. */
@@ -504,13 +504,13 @@
         font-size: 1rem;
       }
       .inici-grafic-central {
-        margin-top: 38px;
+        margin-top: 30px;
       }
       .inici-xifres-landing {
         margin-top: 38px !important;
       }
       .inici-preguntes {
-        margin: 52px auto 50px;
+        margin: 50px auto 28px;
         text-align: left;
       }
       .inici-preguntes .inici-intro-text {
@@ -518,7 +518,7 @@
         line-height: 1.72;
       }
       .inici-inferior {
-        padding-top: 24px;
+        padding-top: 0;
       }
     }
 
@@ -583,7 +583,7 @@
       </section>
 
       <div class="inici-hero-grafic inici-grafic-central">
-        <svg id="grafic-circuits" viewBox="0 0 660 220" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
+        <svg id="grafic-circuits" viewBox="0 0 660 208" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
       </div>
 
       <div class="inici-xifres inici-xifres-landing">
@@ -1003,7 +1003,7 @@
       // Eix temporal: només anys, sense línies de graella.
       [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
         const t = el('text', {
-          x: x(a), y: 194,
+          x: x(a), y: 184,
           'font-size': '10.5',
           fill: '#b8b8b8',
           'text-anchor': 'middle',
@@ -1061,7 +1061,7 @@
       // Evitem solapaments: distribuïm visualment els punts massa pròxims.
       const dobleYears = dobles.map(d => d.any);
 
-      function spreadYears(years, minGapPx = 15) {
+      function spreadYears(years, minGapPx = 16.5) {
         const items = years
           .slice()
           .sort((a, b) => a - b)
@@ -1101,15 +1101,15 @@
       // Punts generals.
       pubSpread.forEach(p => {
         el('circle', {
-          cx: p.cx, cy: YP, r: '7',
+          cx: p.cx, cy: YP, r: '6.4',
           fill: COL_PUB,
-          stroke: '#fff', 'stroke-width': '1.5'
+          stroke: '#fff', 'stroke-width': '1.4'
         }, svg);
       });
 
       prestSpread.forEach(p => {
         el('circle', {
-          cx: p.cx, cy: YF, r: '7',
+          cx: p.cx, cy: YF, r: '6.4',
           fill: COL_PREST,
           stroke: '#fff', 'stroke-width': '1.5'
         }, svg);
@@ -1131,7 +1131,7 @@
 
       function activa(g, d) {
         g.querySelectorAll('circle').forEach(c => {
-          c.setAttribute('r', '9');
+          c.setAttribute('r', '8.6');
           c.setAttribute('stroke', COL_DOBLE);
           c.setAttribute('stroke-width', '2.6');
           c.setAttribute('fill', '#fff');
@@ -1149,7 +1149,7 @@
 
       function desactiva(g) {
         g.querySelectorAll('circle').forEach(c => {
-          c.setAttribute('r', '7');
+          c.setAttribute('r', '6.8');
           c.setAttribute('stroke', COL_DOBLE);
           c.setAttribute('stroke-width', '2');
           c.setAttribute('fill', '#fff');
@@ -1177,13 +1177,13 @@
         }, g);
 
         el('circle', {
-          cx, cy: YP, r: '7',
+          cx, cy: YP, r: '6.8',
           fill: '#fff',
           stroke: COL_DOBLE, 'stroke-width': '2'
         }, g);
 
         el('circle', {
-          cx, cy: YF, r: '7',
+          cx, cy: YF, r: '6.8',
           fill: '#fff',
           stroke: COL_DOBLE, 'stroke-width': '2'
         }, g);
@@ -1262,12 +1262,11 @@
 
           if (autoIndex >= grupsDobles.length) {
             autoIndex = 0;
-            // Una respiració més llarga en acabar la seqüència completa.
-            autoTimer = setTimeout(pasAuto, 3000);
+            autoTimer = setTimeout(pasAuto, 650);
           } else {
-            autoTimer = setTimeout(pasAuto, 550);
+            autoTimer = setTimeout(pasAuto, 650);
           }
-        }, 2200);
+        }, 3200);
       }
 
       function iniciaAuto() {
