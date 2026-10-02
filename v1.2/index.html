@@ -446,7 +446,7 @@
 
     .inici-preguntes {
       max-width: 900px;
-      margin: 74px auto 72px;
+      margin: 74px auto 100px;
       text-align: center;
     }
     .inici-preguntes .inici-intro-text {
@@ -510,7 +510,7 @@
         margin-top: 38px !important;
       }
       .inici-preguntes {
-        margin: 50px auto 46px;
+        margin: 50px auto 66px;
         text-align: left;
       }
       .inici-preguntes .inici-intro-text {
@@ -526,33 +526,34 @@
     /* Pre-footer editorial inspirat en la lògica visual de Substack */
     .inici-prefooter {
       border-top: 1px solid #e5e5e5;
-      padding: 52px 0 58px;
+      padding: 72px 0 78px;
     }
     .inici-prefooter-links {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 24px;
-      font-size: 1rem;
+      font-size: var(--mida-petit);
       line-height: 1.4;
+      color: var(--color-text-suau);
     }
     .inici-prefooter-links a {
-      color: #3f3f3f;
+      color: var(--color-text-suau);
       text-decoration: underline;
       text-decoration-thickness: 1px;
       text-underline-offset: 3px;
     }
     .inici-prefooter-links a:hover {
-      color: #111;
+      color: var(--color-text);
       opacity: 1;
     }
 
     @media (max-width: 900px) {
       .inici-prefooter {
-        padding: 38px 0 42px;
+        padding: 52px 0 58px;
       }
       .inici-prefooter-links {
         gap: 20px;
-        font-size: .95rem;
       }
     }
 
@@ -1269,7 +1270,7 @@
               autoTimer = null;
               netejaAutoActiu();
               pasAuto();
-            }, 3200);
+            }, 4700);
           }
         });
       });
@@ -1327,7 +1328,7 @@
           } else {
             autoTimer = setTimeout(pasAuto, 650);
           }
-        }, 3200);
+        }, 4700);
       }
 
       function iniciaAuto() {
