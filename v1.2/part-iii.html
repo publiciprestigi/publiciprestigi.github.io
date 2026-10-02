@@ -30,7 +30,7 @@
     justify-content:space-between;
     gap:8px;
   }
-    .chapter-update-dot{
+  .chapter-update-dot{
     flex:0 0 auto;
     display:inline-block;
     width:5px;
@@ -39,36 +39,32 @@
     background:#a6a6a6;
   }
   .sidebar-update-key{
-    margin:12px 10px 0;
-    padding-top:9px;
+    position:relative;
+    margin:16px 10px 0 18px;
+    padding-top:12px;
     border-top:1px solid #eeeeee;
     font-size:0.68em;
     line-height:1.35;
     color:#999;
   }
-  .sidebar-update-key   .chapter-update-dot{
-    flex:0 0 auto;
-    display:inline-block;
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#a6a6a6;
+  .sidebar-update-key .chapter-update-dot{
+    position:absolute;
+    left:-10px;
+    top:16px;
   }
   .drawer-update-key{
-    margin:10px 0 2px;
-    padding:8px 0 0;
+    position:relative;
+    margin:14px 0 2px 12px;
+    padding:10px 0 0 0;
     border-top:1px solid #eeeeee;
     font-size:0.72em;
     line-height:1.35;
     color:#999;
   }
-  .drawer-update-key   .chapter-update-dot{
-    flex:0 0 auto;
-    display:inline-block;
-    width:5px;
-    height:5px;
-    border-radius:50%;
-    background:#a6a6a6;
+  .drawer-update-key .chapter-update-dot{
+    position:absolute;
+    left:-10px;
+    top:14px;
   }
 </style>
 
@@ -134,7 +130,7 @@
       <div class="sidebar-grup">
         <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notes</a>
       </div>
-      <div class="sidebar-update-key"><span class="chapter-update-dot"></span> actualitzat en aquesta versió</div>
+      <div class="sidebar-update-key"><span class="chapter-update-dot"></span>actualitzat</div>
     </aside>
 
     <main class="contingut-sidebar">
@@ -625,7 +621,7 @@
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('bunuel-franca')"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <a class="drawer-link drawer-link-update" onclick="navegaDrawer('conclusions')"><span>De les mètriques a les paradoxes</span><span class="chapter-update-dot" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió"></span></a>
-        <div class="drawer-update-key"><span class="chapter-update-dot"></span> actualitzat en aquesta versió</div>
+        <div class="drawer-update-key"><span class="chapter-update-dot"></span>actualitzat</div>
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
