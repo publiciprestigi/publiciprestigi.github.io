@@ -21,6 +21,49 @@
       return base + path;
     };
   </script>
+
+<style id="pip-update-mark-style">
+  .sidebar-link-update,
+  .drawer-link-update{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+  }
+  .chapter-update-mark{
+    flex:0 0 auto;
+    font-size:0.78em;
+    line-height:1;
+    font-weight:500;
+    color:#9a9a9a;
+    opacity:.9;
+  }
+  .sidebar-update-key{
+    margin:12px 10px 0;
+    padding-top:9px;
+    border-top:1px solid #eeeeee;
+    font-size:0.68em;
+    line-height:1.35;
+    color:#999;
+  }
+  .sidebar-update-key .chapter-update-mark{
+    margin-right:4px;
+    font-size:1em;
+  }
+  .drawer-update-key{
+    margin:10px 0 2px;
+    padding:8px 0 0;
+    border-top:1px solid #eeeeee;
+    font-size:0.72em;
+    line-height:1.35;
+    color:#999;
+  }
+  .drawer-update-key .chapter-update-mark{
+    margin-right:4px;
+    font-size:1em;
+  }
+</style>
+
 </head>
 <body class="amb-sidebar part-iii">
 
@@ -69,20 +112,21 @@
       <div class="sidebar-spacer"></div>
       <div class="sidebar-grup">
         <div class="sidebar-grup-titol">Capítols</div>
-        <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona</a>
-        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa festivals vs. públic</a>
-        <a href="#" class="sidebar-link" data-seccio="caza-alcarras">La caza vs. Alcarràs</a>
-        <a href="#" class="sidebar-link" data-seccio="lleis">Finestres, lleis i tecnologia</a>
-        <a href="#" class="sidebar-link" data-seccio="generacions">Saura, Almodóvar i la generació actual</a>
-        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="autor-industrial"><span>Model d’autor industrial</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="doble-corona"><span>La doble corona</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="bretxa"><span>Evolució de la bretxa festivals vs. públic</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="caza-alcarras"><span>La caza vs. Alcarràs</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="lleis"><span>Finestres, lleis i tecnologia</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="generacions"><span>Saura, Almodóvar i la generació actual</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="autor-industrial"><span>Model d’autor industrial</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="bunuel-franca"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="conclusions"><span>De les mètriques a les paradoxes</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a href="#" class="sidebar-link sidebar-link-update" data-seccio="conclusions"><span>De les mètriques a les paradoxes</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
       </div>
       <div class="sidebar-separador"></div>
       <div class="sidebar-grup">
         <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notes</a>
       </div>
+      <div class="sidebar-update-key"><span class="chapter-update-mark">↻</span> actualitzat en aquesta versió</div>
     </aside>
 
     <main class="contingut-sidebar">
@@ -309,7 +353,7 @@
       { id: 'generacions',  titol: 'Saura, Almodóvar i la generació actual', sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'autor-industrial',        titol: 'Model d’autor industrial',                         sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'mapa-canon',   titol: 'El mapa del cànon',                             sup: 'Cruïlles, comparatives i interpretacions' },
-      { id: 'bunuel-franca', titol: 'Buñuel i el factor francès',                    sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'bunuel-franca', titol: 'Buñuel i el segon mercat',                    sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'conclusions',  titol: 'De les mètriques a les paradoxes', sup: 'Cruïlles, comparatives i interpretacions' },
     ];
 
@@ -564,15 +608,16 @@
       </div>
       <div class="drawer-subseccions">
         <div class="drawer-grup-titol">Capítols</div>
-        <a class="drawer-link" onclick="navegaDrawer('doble-corona')">La doble corona</a>
-        <a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolució de la bretxa festivals vs. públic</a>
-        <a class="drawer-link" onclick="navegaDrawer('caza-alcarras')">La caza vs. Alcarràs</a>
-        <a class="drawer-link" onclick="navegaDrawer('lleis')">Finestres, lleis i tecnologia</a>
-        <a class="drawer-link" onclick="navegaDrawer('generacions')">Saura, Almodóvar i la generació actual</a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('autor-industrial')"><span>Model d’autor industrial</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('doble-corona')"><span>La doble corona</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('bretxa')"><span>Evolució de la bretxa festivals vs. públic</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('caza-alcarras')"><span>La caza vs. Alcarràs</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('lleis')"><span>Finestres, lleis i tecnologia</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('generacions')"><span>Saura, Almodóvar i la generació actual</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('autor-industrial')"><span>Model d’autor industrial</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
         <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('bunuel-franca')"><span>Buñuel i el factor francès</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('conclusions')"><span>De les mètriques a les paradoxes</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('bunuel-franca')"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-update" onclick="navegaDrawer('conclusions')"><span>De les mètriques a les paradoxes</span><span class="chapter-update-mark" title="Actualitzat en aquesta versió" aria-label="Actualitzat en aquesta versió">↻</span></a>
+        <div class="drawer-update-key"><span class="chapter-update-mark">↻</span> actualitzat en aquesta versió</div>
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
