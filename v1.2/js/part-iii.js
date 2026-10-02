@@ -1590,8 +1590,8 @@ window.PiP_graficAutorIndustrial = function() {
   const FILMS_AMENABAR = [
     { x:1996, y: 855481, titol:'Tesis',                        top100:false, prestigi:null },
     { x:1997, y:1794539, titol:'Abre los ojos',                top100:false, prestigi:null },
-    { x:2001, y:6410785, titol:'Los otros',                    top100:true,  prestigi:'EFA · BAFTA' },
-    { x:2004, y:4099475, titol:'Mar adentro',                  top100:true,  prestigi:'Venècia ★ · Oscar ★ · EFA ★ · César · David di Donatello ★' },
+    { x:2001, y:6410785, titol:'Los otros',                    top100:true,  prestigi:'EFA' },
+    { x:2004, y:4099475, titol:'Mar adentro',                  top100:true,  prestigi:'Venècia ★ · Oscar ★ · EFA ★' },
     { x:2009, y:3492709, titol:'Ágora',                        top100:true,  prestigi:'EFA' },
     { x:2019, y:1888896, titol:'Mientras dure la guerra',      top100:false, prestigi:null },
     { x:2025, y: 797366, titol:'El cautivo',                   top100:false, prestigi:null },
@@ -1600,7 +1600,7 @@ window.PiP_graficAutorIndustrial = function() {
     { x:2007, y:4420987, titol:'El orfanato',                  top100:true,  prestigi:'EFA' },
     { x:2012, y:6129976, titol:'Lo imposible',                 top100:true,  prestigi:'Oscar · EFA' },
     { x:2016, y:4613696, titol:'Un monstruo viene a verme',    top100:true,  prestigi:'EFA ★' },
-    { x:2023, y: 556976, titol:'La sociedad de la nieve',      top100:false, prestigi:'Oscar · EFA ★ · BAFTA · Venècia (clausura)', labelDy:20 },
+    { x:2023, y: 556976, titol:'La sociedad de la nieve',      top100:false, prestigi:'Oscar · EFA ★ · Venècia (clausura)', labelDy:20 },
   ];
 
   // Títol al bloc
@@ -1684,10 +1684,10 @@ window.PiP_graficAutorIndustrial = function() {
           pointHoverRadius: 9,
           pointHitRadius: 12,
           pointStyle: 'circle',
-          pointBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_IGLESIA,
-          pointBorderWidth: ctx => ctx.raw?.prestigi ? 2.4 : 1.5,
-          pointBorderColor: ctx => ctx.raw?.prestigi ? COL_IGLESIA : '#fff',
-          pointHoverBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_IGLESIA,
+          pointBackgroundColor: COL_IGLESIA,
+          pointBorderWidth: 1.5,
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: COL_IGLESIA,
           pointHoverBorderColor: '#363737',
           pointHoverBorderWidth: 1.2,
         },
@@ -1702,10 +1702,10 @@ window.PiP_graficAutorIndustrial = function() {
           pointHoverRadius: 9,
           pointHitRadius: 12,
           pointStyle: 'circle',
-          pointBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_AMENABAR,
-          pointBorderWidth: ctx => ctx.raw?.prestigi ? 2.4 : 1.5,
-          pointBorderColor: ctx => ctx.raw?.prestigi ? COL_AMENABAR : '#fff',
-          pointHoverBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_AMENABAR,
+          pointBackgroundColor: COL_AMENABAR,
+          pointBorderWidth: 1.5,
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: COL_AMENABAR,
           pointHoverBorderColor: '#363737',
           pointHoverBorderWidth: 1.2,
         },
@@ -1720,10 +1720,10 @@ window.PiP_graficAutorIndustrial = function() {
           pointHoverRadius: 9,
           pointHitRadius: 12,
           pointStyle: 'circle',
-          pointBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_BAYONA,
-          pointBorderWidth: ctx => ctx.raw?.prestigi ? 2.4 : 1.5,
-          pointBorderColor: ctx => ctx.raw?.prestigi ? COL_BAYONA : '#fff',
-          pointHoverBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_BAYONA,
+          pointBackgroundColor: COL_BAYONA,
+          pointBorderWidth: 1.5,
+          pointBorderColor: '#fff',
+          pointHoverBackgroundColor: COL_BAYONA,
           pointHoverBorderColor: '#363737',
           pointHoverBorderWidth: 1.2,
         },
@@ -1784,7 +1784,6 @@ window.PiP_graficAutorIndustrial = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
-      <span style="display:flex;align-items:center;gap:5px;margin-left:4px"><span style="width:10px;height:10px;border:2px solid #777;background:#fff;border-radius:50%;display:inline-block;box-sizing:border-box"></span><span>${pip3T('Reconeixement internacional','Reconocimiento internacional')}</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
