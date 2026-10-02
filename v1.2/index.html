@@ -424,7 +424,7 @@
 
     .inici-grafic-central {
       width: min(820px, 100%);
-      margin: 34px auto 0;
+      margin: 20px auto 0;
       transform: none !important;
     }
     .inici-grafic-central svg {
@@ -446,7 +446,7 @@
 
     .inici-preguntes {
       max-width: 900px;
-      margin: 74px auto 40px;
+      margin: 74px auto 72px;
       text-align: center;
     }
     .inici-preguntes .inici-intro-text {
@@ -504,13 +504,13 @@
         font-size: 1rem;
       }
       .inici-grafic-central {
-        margin-top: 30px;
+        margin-top: 20px;
       }
       .inici-xifres-landing {
         margin-top: 38px !important;
       }
       .inici-preguntes {
-        margin: 50px auto 28px;
+        margin: 50px auto 46px;
         text-align: left;
       }
       .inici-preguntes .inici-intro-text {
@@ -519,6 +519,40 @@
       }
       .inici-inferior {
         padding-top: 0;
+      }
+    }
+
+  
+    /* Pre-footer editorial inspirat en la lògica visual de Substack */
+    .inici-prefooter {
+      border-top: 1px solid #e5e5e5;
+      padding: 52px 0 58px;
+    }
+    .inici-prefooter-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .inici-prefooter-links a {
+      color: #3f3f3f;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .inici-prefooter-links a:hover {
+      color: #111;
+      opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+      .inici-prefooter {
+        padding: 38px 0 42px;
+      }
+      .inici-prefooter-links {
+        gap: 20px;
+        font-size: .95rem;
       }
     }
 
@@ -578,12 +612,12 @@
 <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
       <section class="inici-landing-presentacio">
-        <h1 class="inici-benvinguda">Benvinguts a Públic i Prestigi.</h1>
+        <h1 class="inici-benvinguda">Benvinguts a Públic i Prestigi</h1>
         <p class="inici-definicio">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela.</p>
       </section>
 
       <div class="inici-hero-grafic inici-grafic-central">
-        <svg id="grafic-circuits" viewBox="0 0 660 208" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
+        <svg id="grafic-circuits" viewBox="0 28 660 180" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
       </div>
 
       <div class="inici-xifres inici-xifres-landing">
@@ -668,6 +702,14 @@
           <div class="inici-substack-peu">
             <div class="inici-substack-punts" id="substack-punts" aria-label="Selecciona una imatge del carrusel"></div>
           </div>
+        </div>
+      </div>
+
+
+      <div class="inici-prefooter" aria-label="Enllaços del projecte">
+        <div class="inici-prefooter-links">
+          <a href="sobre.html">Sobre el projecte</a>
+          <a href="versions.html">Versions</a>
         </div>
       </div>
 
@@ -1162,7 +1204,7 @@
       // de la interactivitat del gràfic. Qualsevol interacció de l'usuari atura el bucle.
       const grupsDobles = [];
 
-      dobles.forEach(d => {
+      dobles.forEach((d, idxDoble) => {
         const cx = x(d.any);
         const g = el('g', {
           tabindex: '0',
@@ -1207,9 +1249,28 @@
           programaReiniciAuto();
         });
         g.addEventListener('click', () => {
-          aturaAuto();
-          if (tooltip.style.opacity === '1') desactiva(g);
-          else activa(g, d);
+          // El clic no atura el relat automàtic: incorpora la selecció manual
+          // al mateix ritme i continua després amb la corona següent.
+          if (autoTimer) {
+            clearTimeout(autoTimer);
+            autoTimer = null;
+          }
+          if (reiniciTimer) {
+            clearTimeout(reiniciTimer);
+            reiniciTimer = null;
+          }
+          netejaAutoActiu();
+          activa(g, d);
+          autoActiu = { g, d };
+          autoIndex = (idxDoble + 1) % grupsDobles.length;
+
+          if (!redueixMoviment) {
+            autoTimer = setTimeout(() => {
+              autoTimer = null;
+              netejaAutoActiu();
+              pasAuto();
+            }, 3200);
+          }
         });
       });
 
