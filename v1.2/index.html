@@ -894,18 +894,58 @@
         { any: 2012, titol: 'Lo imposible' },
       ];
 
-      // Punts generals: mateixa mida que els punts analítics, però menys opacs.
-      pub.forEach(a => {
+      // Evitem solapaments: distribuïm visualment els punts massa pròxims.
+      const dobleYears = dobles.map(d => d.any);
+
+      function spreadYears(years, minGapPx = 15) {
+        const items = years
+          .slice()
+          .sort((a, b) => a - b)
+          .map(any => ({ any, base: x(any) }));
+
+        if (!items.length) return [];
+
+        const groups = [];
+        let current = [items[0]];
+
+        for (let i = 1; i < items.length; i++) {
+          const prev = current[current.length - 1];
+          const item = items[i];
+          if (item.base - prev.base < minGapPx) current.push(item);
+          else { groups.push(current); current = [item]; }
+        }
+        groups.push(current);
+
+        const spread = [];
+        groups.forEach(group => {
+          if (group.length === 1) {
+            spread.push({ any: group[0].any, cx: group[0].base });
+            return;
+          }
+          const center = group.reduce((s, g) => s + g.base, 0) / group.length;
+          const start = center - ((group.length - 1) * minGapPx) / 2;
+          group.forEach((g, i) => {
+            spread.push({ any: g.any, cx: start + i * minGapPx });
+          });
+        });
+        return spread;
+      }
+
+      const pubSpread = spreadYears(pub.filter(a => !dobleYears.includes(a)));
+      const prestSpread = spreadYears(prest.filter(a => !dobleYears.includes(a)));
+
+      // Punts generals.
+      pubSpread.forEach(p => {
         el('circle', {
-          cx: x(a), cy: YP, r: '7',
+          cx: p.cx, cy: YP, r: '7',
           fill: COL_PUB,
           stroke: '#fff', 'stroke-width': '1.5'
         }, svg);
       });
 
-      prest.forEach(a => {
+      prestSpread.forEach(p => {
         el('circle', {
-          cx: x(a), cy: YF, r: '7',
+          cx: p.cx, cy: YF, r: '7',
           fill: COL_PREST,
           stroke: '#fff', 'stroke-width': '1.5'
         }, svg);
@@ -928,8 +968,9 @@
       function activa(g, d) {
         g.querySelectorAll('circle').forEach(c => {
           c.setAttribute('r', '9');
-          c.setAttribute('stroke', '#363737');
-          c.setAttribute('stroke-width', '1.4');
+          c.setAttribute('stroke', COL_DOBLE);
+          c.setAttribute('stroke-width', '2.6');
+          c.setAttribute('fill', '#fff');
         });
 
         const punt = g.querySelector('circle:last-of-type');
@@ -945,13 +986,14 @@
       function desactiva(g) {
         g.querySelectorAll('circle').forEach(c => {
           c.setAttribute('r', '7');
-          c.setAttribute('stroke', '#fff');
-          c.setAttribute('stroke-width', '1.5');
+          c.setAttribute('stroke', COL_DOBLE);
+          c.setAttribute('stroke-width', '2');
+          c.setAttribute('fill', '#fff');
         });
         tooltip.style.opacity = '0';
       }
 
-      // Cinc dobles corones representatives: connector discret + punt opac en els dos circuits.
+      // Cinc dobles corones representatives: connector discret + cercle blanc amb contorn lila.
       dobles.forEach(d => {
         const cx = x(d.any);
         const g = el('g', {
@@ -963,19 +1005,19 @@
 
         el('line', {
           x1: cx, y1: YP + 8, x2: cx, y2: YF - 8,
-          stroke: COL_DOBLE, 'stroke-opacity': '0.28', 'stroke-width': '1.2'
+          stroke: COL_DOBLE, 'stroke-opacity': '0.24', 'stroke-width': '1.2'
         }, g);
 
         el('circle', {
           cx, cy: YP, r: '7',
-          fill: COL_DOBLE,
-          stroke: '#fff', 'stroke-width': '1.5'
+          fill: '#fff',
+          stroke: COL_DOBLE, 'stroke-width': '2'
         }, g);
 
         el('circle', {
           cx, cy: YF, r: '7',
-          fill: COL_DOBLE,
-          stroke: '#fff', 'stroke-width': '1.5'
+          fill: '#fff',
+          stroke: COL_DOBLE, 'stroke-width': '2'
         }, g);
 
         g.addEventListener('mouseenter', () => activa(g, d));
