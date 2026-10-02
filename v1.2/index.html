@@ -15,6 +15,11 @@
   <style>
     .contingut { padding-top: 0; padding-bottom: 0; }
     .inici-portada { max-width: var(--amplada-max); padding: 0; }
+
+    /* Prova portada com a landing: sense menú principal superior */
+    body.pag-inici .navegacio {
+      display: none;
+    }
     .inici-antetitol {
       font-size: 0.72rem;
       letter-spacing: .1em;
@@ -31,7 +36,7 @@
       grid-template-columns: 0.92fr 1.58fr;
       gap: 38px;
       align-items: center;
-      padding-bottom: 20px;
+      padding-bottom: 0;
     }
     .inici-claim {
       font-size: 2.5rem;
@@ -71,7 +76,7 @@
 
     /* Text + xifres: un sol bloc sense separador */
     .inici-text-xifres {
-      padding: 16px 0 36px;
+      padding: 6px 0 36px;
       border-bottom: 1px solid #e5e5e5;
     }
     .inici-intro-text {
@@ -85,6 +90,8 @@
     .inici-xifres {
       display: flex;
       gap: 0;
+      margin-top: 0;
+      padding-top: 0;
       margin-bottom: 32px;
     }
     .inici-text-xifres .inici-intro-text:last-child {
@@ -333,6 +340,8 @@
       .inici-xifres {
         flex-wrap: wrap;
         gap: 16px 0;
+        margin-top: 0;
+        padding-top: 0;
       }
 
       .inici-xifra-bloc { flex: 0 0 50%; }
