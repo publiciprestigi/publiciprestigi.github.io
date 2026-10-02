@@ -379,6 +379,123 @@
       .inici-substack { padding: 0; }
       .inici-substack-foto { height: 220px; }
     }
+  
+    /* PROVA A — landing centrada */
+    .capcalera-logo-picto {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .capcalera-logo-picto img {
+      width: 42px;
+      height: 42px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .inici-antetitol {
+      margin: 30px 0 0 !important;
+      text-align: center;
+    }
+
+    .inici-landing-presentacio {
+      max-width: 850px;
+      margin: 64px auto 0;
+      text-align: center;
+    }
+    .inici-benvinguda {
+      margin: 0;
+      font-size: clamp(2.25rem, 4vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      font-weight: 700;
+      color: #242424;
+    }
+    .inici-definicio {
+      max-width: 760px;
+      margin: 24px auto 0;
+      font-size: 1.08rem;
+      line-height: 1.6;
+      color: #5f5f5f;
+    }
+
+    .inici-grafic-central {
+      width: min(820px, 100%);
+      margin: 58px auto 0;
+      transform: none !important;
+    }
+    .inici-grafic-central svg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .inici-xifres-landing {
+      max-width: 1080px;
+      margin: 50px auto 0 !important;
+      padding-top: 0 !important;
+      justify-content: space-between;
+      text-align: center;
+    }
+    .inici-xifres-landing .inici-xifra-bloc {
+      flex: 1 1 0;
+    }
+
+    .inici-preguntes {
+      max-width: 940px;
+      margin: 74px auto 66px;
+    }
+    .inici-preguntes .inici-intro-text {
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.68;
+    }
+
+    .inici-part-novetat {
+      margin-top: 8px;
+      min-height: 16px;
+    }
+    .inici-part-novetat .inici-novetat-badge {
+      font-size: 0.55rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 900px) {
+      .capcalera-logo-picto {
+        width: 38px;
+        height: 38px;
+      }
+      .capcalera-logo-picto img {
+        width: 34px;
+        height: 34px;
+      }
+      .inici-antetitol {
+        margin-top: 22px !important;
+      }
+      .inici-landing-presentacio {
+        margin-top: 44px;
+      }
+      .inici-benvinguda {
+        font-size: 2.2rem;
+      }
+      .inici-definicio {
+        font-size: 1rem;
+      }
+      .inici-grafic-central {
+        margin-top: 42px;
+      }
+      .inici-xifres-landing {
+        margin-top: 38px !important;
+      }
+      .inici-preguntes {
+        margin: 50px auto 46px;
+      }
+    }
+
   </style>
   <script>
     window.pipPath = function (path) {
@@ -399,7 +516,7 @@
         <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.2 (en preparació)</a>
       </div>
 
-      <a href="/v1.2/" class="capcalera-logo">Públic i Prestigi</a>
+      <a href="/v1.2/" class="capcalera-logo capcalera-logo-picto" aria-label="Públic i Prestigi"><img src="img/picto-pip.jpg" alt=""></a>
 
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar" role="button" tabindex="0" aria-label="Cercar">
@@ -434,42 +551,40 @@
     <div class="inici-portada">
 <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
-      <div class="inici-hero">
-        <div>
-          <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
+      <section class="inici-landing-presentacio">
+        <h1 class="inici-benvinguda">Benvinguts a Públic i Prestigi.</h1>
+        <p class="inici-definicio">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela.</p>
+      </section>
+
+      <div class="inici-hero-grafic inici-grafic-central">
+        <svg id="grafic-circuits" viewBox="0 0 660 220" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
+      </div>
+
+      <div class="inici-xifres inici-xifres-landing">
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#2a5582">294M</span>
+          <span class="inici-xifra-l">espectadors acumulats</span>
         </div>
-        <div class="inici-hero-grafic">
-          <svg id="grafic-circuits" viewBox="0 0 660 220" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#9B2335">340</span>
+          <span class="inici-xifra-l">films reconeguts</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#9B2335">116</span>
+          <span class="inici-xifra-l">films premiats</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#5a4a8a">17</span>
+          <span class="inici-xifra-l">dobles corones</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n">60</span>
+          <span class="inici-xifra-l">anys documentats</span>
         </div>
       </div>
 
-      <!-- Xifres + text: prova d'ordre invertit -->
-      <div class="inici-text-xifres">
-        <div class="inici-xifres">
-          <div class="inici-xifra-bloc">
-            <span class="inici-xifra-n" style="color:#2a5582">294M</span>
-            <span class="inici-xifra-l">espectadors acumulats</span>
-          </div>
-          <div class="inici-xifra-bloc">
-            <span class="inici-xifra-n" style="color:#9B2335">340</span>
-            <span class="inici-xifra-l">films reconeguts</span>
-          </div>
-          <div class="inici-xifra-bloc">
-            <span class="inici-xifra-n" style="color:#9B2335">116</span>
-            <span class="inici-xifra-l">films premiats</span>
-          </div>
-          <div class="inici-xifra-bloc">
-            <span class="inici-xifra-n" style="color:#5a4a8a">17</span>
-            <span class="inici-xifra-l">dobles corones</span>
-          </div>
-          <div class="inici-xifra-bloc">
-            <span class="inici-xifra-n">60</span>
-            <span class="inici-xifra-l">anys documentats</span>
-          </div>
-        </div>
-
+      <div class="inici-preguntes">
         <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
-        <p class="inici-intro-text">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts!</p>
       </div>
 
       <div class="inici-inferior">
@@ -488,10 +603,7 @@
             <div class="inici-part-info">
               <div class="nom">Prestigi</div>
               <div class="sub">Reconeixement internacional en festivals i acadèmies</div>
-              <div class="inici-part-novetat">
-                <span class="inici-novetat-badge nou">Nou</span>
-                <span>Oscar · EFA</span>
-              </div>
+              <div class="inici-part-novetat"><span class="inici-novetat-badge nou">Noves dades</span></div>
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
@@ -501,10 +613,7 @@
             <div class="inici-part-info">
               <div class="nom">Anàlisi</div>
               <div class="sub">Cruïlles, comparatives i interpretacions</div>
-              <div class="inici-part-novetat">
-                <span class="inici-novetat-badge nou">Nou</span>
-                <span>Buñuel i el segon mercat</span>
-              </div>
+              <div class="inici-part-novetat"><span class="inici-novetat-badge nou">Nou capítol</span></div>
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
