@@ -1569,7 +1569,7 @@ window.PiP_graficGeneracioActual = function() {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// CINEMA D'AUTOR INDUSTRIAL — Gràfic 3 directors
+// MODEL D'AUTOR INDUSTRIAL — Gràfic 3 directors
 // ═══════════════════════════════════════════════════════════════
 
 window.PiP_graficAutorIndustrial = function() {
@@ -1578,27 +1578,29 @@ window.PiP_graficAutorIndustrial = function() {
   if (window._chartAutorInd) window._chartAutorInd.destroy();
 
   const FILMS_IGLESIA = [
-    { x:1995, y:1419191, titol:'El día de la bestia',          festival:false, premiat:false, top100:false },
-    { x:1999, y:1669964, titol:'Muertos de risa',              festival:false, premiat:false, top100:false },
-    { x:2000, y:1609084, titol:'La comunidad',                 festival:false, premiat:false, top100:false },
-    { x:2008, y:1423300, titol:'Los crímenes de Oxford',       festival:false, premiat:false, top100:false },
-    { x:2010, y: 369118, titol:'Balada triste de trompeta',    festival:true,  premiat:true,  top100:false },
-    { x:2017, y:3284907, titol:'Perfectos desconocidos',       festival:false, premiat:false, top100:true  },
-    { x:2022, y: 673654, titol:'El cuarto pasajero',           festival:false, premiat:false, top100:false },
+    { x:1995, y:1419191, titol:'El día de la bestia',          top100:false, prestigi:null },
+    { x:1999, y:1669964, titol:'Muertos de risa',              top100:false, prestigi:null },
+    { x:2000, y:1609084, titol:'La comunidad',                 top100:false, prestigi:'EFA' },
+    { x:2004, y: 860710, titol:'Crimen ferpecto',              top100:false, prestigi:'EFA' },
+    { x:2008, y:1423300, titol:'Los crímenes de Oxford',       top100:false, prestigi:null },
+    { x:2010, y: 369118, titol:'Balada triste de trompeta',    top100:false, prestigi:'Venècia ★' },
+    { x:2017, y:3284907, titol:'Perfectos desconocidos',       top100:true,  prestigi:null },
+    { x:2022, y: 673654, titol:'El cuarto pasajero',           top100:false, prestigi:null, labelDy:-14 },
   ];
   const FILMS_AMENABAR = [
-    { x:1996, y: 855481, titol:'Tesis',                        festival:false, premiat:false, top100:false },
-    { x:1997, y:1794539, titol:'Abre los ojos',                festival:false, premiat:false, top100:false },
-    { x:2001, y:6410785, titol:'Los otros',                    festival:false, premiat:false, top100:true  },
-    { x:2004, y:4099475, titol:'Mar adentro',                  festival:true,  premiat:true,  top100:true  },
-    { x:2009, y:3492894, titol:'Ágora',                        festival:false, premiat:false, top100:true  },
-    { x:2019, y:1888896, titol:'Mientras dure la guerra',      festival:false, premiat:false, top100:false },
-    { x:2025, y: 797366, titol:'El cautivo',                   festival:false, premiat:false, top100:false },
+    { x:1996, y: 855481, titol:'Tesis',                        top100:false, prestigi:null },
+    { x:1997, y:1794539, titol:'Abre los ojos',                top100:false, prestigi:null },
+    { x:2001, y:6410785, titol:'Los otros',                    top100:true,  prestigi:'EFA · BAFTA' },
+    { x:2004, y:4099475, titol:'Mar adentro',                  top100:true,  prestigi:'Venècia ★ · Oscar ★ · EFA ★ · César · David di Donatello ★' },
+    { x:2009, y:3492709, titol:'Ágora',                        top100:true,  prestigi:'EFA' },
+    { x:2019, y:1888896, titol:'Mientras dure la guerra',      top100:false, prestigi:null },
+    { x:2025, y: 797366, titol:'El cautivo',                   top100:false, prestigi:null },
   ];
   const FILMS_BAYONA = [
-    { x:2007, y:4420987, titol:'El orfanato',                  festival:false, premiat:false, top100:true  },
-    { x:2012, y:6129976, titol:'Lo imposible',                 festival:false, premiat:false, top100:true  },
-    { x:2016, y:4613760, titol:'Un monstruo viene a verme',    festival:false, premiat:false, top100:true  },
+    { x:2007, y:4420987, titol:'El orfanato',                  top100:true,  prestigi:'EFA' },
+    { x:2012, y:6129976, titol:'Lo imposible',                 top100:true,  prestigi:'Oscar · EFA' },
+    { x:2016, y:4613696, titol:'Un monstruo viene a verme',    top100:true,  prestigi:'EFA ★' },
+    { x:2023, y: 556976, titol:'La sociedad de la nieve',      top100:false, prestigi:'Oscar · EFA ★ · BAFTA · Venècia (clausura)', labelDy:20 },
   ];
 
   // Títol al bloc
@@ -1607,7 +1609,7 @@ window.PiP_graficAutorIndustrial = function() {
     const tit = document.createElement('p');
     tit.id = 'ai-tit';
     tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = pip3T('De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala per film (1995–2025)','De la Iglesia, Amenábar y Bayona — Trayectoria de espectadores en salas por film (1995–2025)');
+    tit.innerHTML = pip3T('Model d’autor industrial — Trajectòria d\'espectadors a sala (1995–2025)','Modelo de autor industrial — Trayectoria de espectadores en salas (1995–2025)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
@@ -1632,8 +1634,9 @@ window.PiP_graficAutorIndustrial = function() {
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          const dy = i % 2 === 0 ? -14 : 20;
-          c.fillText(pt.titol, point.x, point.y + dy);
+          const dy = pt.labelDy ?? (i % 2 === 0 ? -14 : 20);
+          const dx = pt.labelDx ?? 0;
+          c.fillText(pt.titol, point.x + dx, point.y + dy);
         });
       });
       c.restore();
@@ -1681,9 +1684,10 @@ window.PiP_graficAutorIndustrial = function() {
           pointHoverRadius: 9,
           pointHitRadius: 12,
           pointStyle: 'circle',
-          pointBackgroundColor: COL_IGLESIA,
-          pointBorderWidth: 1.5,
-          pointBorderColor: '#fff',
+          pointBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_IGLESIA,
+          pointBorderWidth: ctx => ctx.raw?.prestigi ? 2.4 : 1.5,
+          pointBorderColor: ctx => ctx.raw?.prestigi ? COL_IGLESIA : '#fff',
+          pointHoverBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_IGLESIA,
           pointHoverBorderColor: '#363737',
           pointHoverBorderWidth: 1.2,
         },
@@ -1698,9 +1702,10 @@ window.PiP_graficAutorIndustrial = function() {
           pointHoverRadius: 9,
           pointHitRadius: 12,
           pointStyle: 'circle',
-          pointBackgroundColor: COL_AMENABAR,
-          pointBorderWidth: 1.5,
-          pointBorderColor: '#fff',
+          pointBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_AMENABAR,
+          pointBorderWidth: ctx => ctx.raw?.prestigi ? 2.4 : 1.5,
+          pointBorderColor: ctx => ctx.raw?.prestigi ? COL_AMENABAR : '#fff',
+          pointHoverBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_AMENABAR,
           pointHoverBorderColor: '#363737',
           pointHoverBorderWidth: 1.2,
         },
@@ -1715,9 +1720,10 @@ window.PiP_graficAutorIndustrial = function() {
           pointHoverRadius: 9,
           pointHitRadius: 12,
           pointStyle: 'circle',
-          pointBackgroundColor: COL_BAYONA,
-          pointBorderWidth: 1.5,
-          pointBorderColor: '#fff',
+          pointBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_BAYONA,
+          pointBorderWidth: ctx => ctx.raw?.prestigi ? 2.4 : 1.5,
+          pointBorderColor: ctx => ctx.raw?.prestigi ? COL_BAYONA : '#fff',
+          pointHoverBackgroundColor: ctx => ctx.raw?.prestigi ? '#fff' : COL_BAYONA,
           pointHoverBorderColor: '#363737',
           pointHoverBorderWidth: 1.2,
         },
@@ -1738,7 +1744,13 @@ window.PiP_graficAutorIndustrial = function() {
           bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
+            label: ctx => {
+              const d = ctx.raw || {};
+              const lines = [fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores')];
+              if (d.top100) lines.push('Top 100');
+              if (d.prestigi) lines.push(pip3T('Reconeixement','Reconocimiento') + ': ' + d.prestigi);
+              return lines;
+            },
           },
         },
       },
@@ -1772,6 +1784,7 @@ window.PiP_graficAutorIndustrial = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
+      <span style="display:flex;align-items:center;gap:5px;margin-left:4px"><span style="width:10px;height:10px;border:2px solid #777;background:#fff;border-radius:50%;display:inline-block;box-sizing:border-box"></span><span>${pip3T('Reconeixement internacional','Reconocimiento internacional')}</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
     bloc.appendChild(leg);
   }
