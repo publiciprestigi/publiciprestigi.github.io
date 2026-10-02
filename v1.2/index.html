@@ -134,6 +134,22 @@
     .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
     .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
     .inici-part-info .sub { font-size: 0.82rem; color: #888; }
+
+    .inici-part-novetat {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 7px;
+      min-height: 16px;
+      font-size: 0.72rem;
+      line-height: 1.2;
+      color: #777;
+      white-space: nowrap;
+    }
+    .inici-part-novetat .inici-novetat-badge {
+      padding: 3px 5px;
+      font-size: 0.55rem;
+    }
     .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
 
     .inici-substack {
@@ -414,17 +430,7 @@
 
   <main class="contingut">
     <div class="inici-portada">
-        <section class="inici-novetats" id="inici-novetats" aria-label="Novetats de la versió 1.2">
-          <span class="inici-novetat-grup">
-            <span class="inici-novetat-badge nou">Nou</span>
-            <span>
-              <a href="part-ii.html#oscar">Oscar</a>,
-              <a href="part-ii.html#efa">EFA</a>,
-              <a href="part-iii.html#bunuel">Buñuel i el segon mercat</a>
-            </span>
-          </span>
-        </section>
-      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
+<p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
       <div class="inici-hero">
         <div>
@@ -480,6 +486,10 @@
             <div class="inici-part-info">
               <div class="nom">Prestigi</div>
               <div class="sub">Reconeixement internacional en festivals i acadèmies</div>
+              <div class="inici-part-novetat">
+                <span class="inici-novetat-badge nou">Nou</span>
+                <span>Oscar · EFA</span>
+              </div>
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
@@ -489,6 +499,10 @@
             <div class="inici-part-info">
               <div class="nom">Anàlisi</div>
               <div class="sub">Cruïlles, comparatives i interpretacions</div>
+              <div class="inici-part-novetat">
+                <span class="inici-novetat-badge nou">Nou</span>
+                <span>Buñuel i el segon mercat</span>
+              </div>
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
