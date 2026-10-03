@@ -287,6 +287,28 @@
       </div>
 
       <div class="seccio-contingut" id="seccio-bunuel-franca">
+        <div class="text-md text-md-intro">
+          <p><strong>Mirat només des de les dades espanyoles, Buñuel ja planteja una primera anomalia.</strong> Quatre dels seus títols superen el milió d'espectadors a sales d'Espanya: <strong><em>Viridiana</em></strong>, <strong><em>Tristana</em></strong>, <strong><em>Belle de jour</em></strong> i <strong><em>Ese oscuro objeto del deseo</em></strong>. La xifra sorprèn especialment en un cineasta que acostumem a situar en l'extrem més autoral, radical i avantguardista de la seva generació.</p>
+          <p>El contrast amb Berlanga i Bardem ajuda a situar millor aquesta sorpresa. Tots tres formen part d'una mateixa constel·lació clàssica del cinema espanyol, però Buñuel és probablement el nom que hem llegit més des del cànon i menys des del mercat. Aquest primer gràfic provisional prova just això: fins a quin punt la seva trajectòria comercial a Espanya s'assembla més a la dels seus contemporanis del que la memòria cinèfila tendeix a recordar.</p>
+        </div>
+
+        <div id="grafic-bunuel-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 14px;margin:18px 0 0">
+          <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px">Buñuel, Berlanga i Bardem — Films amb més espectadors a sales d'Espanya</p>
+          <div style="position:relative;height:330px">
+            <canvas id="grafic-bunuel-berlanga-bardem"></canvas>
+          </div>
+          <div style="display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:8px;font-size:0.76em;color:#666;line-height:1.3">
+            <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#555;border:1.5px solid #555;display:inline-block"></span>Títols dins del corpus</span>
+            <span style="display:inline-flex;align-items:center;gap:6px"><span style="width:10px;height:10px;border-radius:50%;background:#fff;border:1.5px solid #555;display:inline-block"></span>Títols fora del corpus</span>
+          </div>
+          <div class="text-md text-md-llegenda" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5;text-align:center">
+            Primer prototip comparatiu. Els punts plens identifiquen pel·lícules incloses al corpus de l'estudi o als seus contextos; els punts buits corresponen a títols incorporats aquí com a suport comparatiu. En el cas de <strong><em>Belle de jour</em></strong>, l'any 1980 correspon a la seva estrena comercial espanyola, que és la data amb què entra al corpus d'espectadors.
+          </div>
+        </div>
+
+        <div class="text-md text-md-comentari" style="margin-top:22px">
+          <p>Aquesta primera imatge confirma dues coses. D'una banda, Buñuel no queda despenjat de Berlanga i Bardem: els seus pics comercials entren de ple en la mateixa escala. De l'altra, la sorpresa no és que Berlanga o Bardem fossin populars, sinó que Buñuel també ho fos bastant més del que solem recordar. El pas següent serà ampliar el focus amb la resta del seu corpus i, sobretot, incorporar-hi el mercat francès.</p>
+        </div>
       </div>
 
       <div class="seccio-contingut" id="seccio-conclusions">
@@ -380,6 +402,7 @@
     let graficConc1Init = false;
     let graficConc2Init = false;
     let graficMapaInit = false;
+    let graficBunuelInit = false;
 
     function mostraSeccio(idx) {
       actual = idx;
@@ -436,6 +459,11 @@
         graficMapaInit = true;
         if (window.PiP_graficMapaCanon) setTimeout(window.PiP_graficMapaCanon, 50);
         else { var _tmc = setInterval(function() { if (window.PiP_graficMapaCanon) { clearInterval(_tmc); window.PiP_graficMapaCanon(); } }, 100); }
+      }
+      if (s.id === 'bunuel-franca' && !graficBunuelInit) {
+        graficBunuelInit = true;
+        if (window.PiP_graficBunuelBerlangaBardem) setTimeout(window.PiP_graficBunuelBerlangaBardem, 50);
+        else { var _tbb = setInterval(function() { if (window.PiP_graficBunuelBerlangaBardem) { clearInterval(_tbb); window.PiP_graficBunuelBerlangaBardem(); } }, 100); }
       }
       if (s.id === 'conclusions') {
         if (!graficConc1Init && window.PiP_graficConclusions1) {
@@ -559,6 +587,113 @@
 <script src="js/scroll-fade.js"></script>
   <script src="js/textos.js"></script>
   <script src="js/part-iii.js"></script>
+  <script>
+    window.PiP_graficBunuelBerlangaBardem = function() {
+      const el = document.getElementById('grafic-bunuel-berlanga-bardem');
+      if (!el || typeof Chart === 'undefined') return;
+      if (window._chartBunuelBBB) window._chartBunuelBBB.destroy();
+
+      const ctx = el.getContext('2d');
+      const datasets = [
+        {
+          label: 'Luis Buñuel', borderColor: '#3d3d3d', backgroundColor: '#3d3d3d',
+          pointRadius: 7, pointHoverRadius: 9, pointBorderWidth: 1.5, tension: 0.15,
+          data: [
+            { x: 1961, y: 1039120, titol: 'Viridiana', corpus: false },
+            { x: 1970, y: 1801968, titol: 'Tristana', corpus: true },
+            { x: 1977, y: 1076567, titol: 'Ese oscuro objeto del deseo', corpus: true },
+            { x: 1980, y: 1168609, titol: 'Belle de jour', corpus: true }
+          ]
+        },
+        {
+          label: 'Luis García Berlanga', borderColor: '#2d5a88', backgroundColor: '#2d5a88',
+          pointRadius: 7, pointHoverRadius: 9, pointBorderWidth: 1.5, tension: 0.15,
+          data: [
+            { x: 1978, y: 2062527, titol: 'La escopeta nacional', corpus: true },
+            { x: 1981, y: 1121616, titol: 'Patrimonio nacional', corpus: true },
+            { x: 1985, y: 1907490, titol: 'La vaquilla', corpus: true }
+          ]
+        },
+        {
+          label: 'Juan Antonio Bardem', borderColor: '#9b2335', backgroundColor: '#9b2335',
+          pointRadius: 7, pointHoverRadius: 9, pointBorderWidth: 1.5, tension: 0.15,
+          data: [
+            { x: 1971, y: 1648190, titol: 'Varietés', corpus: true }
+          ]
+        }
+      ].map(ds => ({
+        ...ds,
+        pointBackgroundColor: ds.data.map(pt => pt.corpus ? ds.borderColor : '#ffffff'),
+        pointBorderColor: ds.data.map(() => ds.borderColor)
+      }));
+
+      const pluginLabels = {
+        id: 'bbb-labels',
+        afterDatasetsDraw(chart) {
+          const c = chart.ctx;
+          c.save();
+          c.font = 'italic 11px "Inter", -apple-system, Arial, sans-serif';
+          c.textAlign = 'center';
+          c.textBaseline = 'alphabetic';
+          chart.data.datasets.forEach((ds, di) => {
+            const meta = chart.getDatasetMeta(di);
+            c.fillStyle = ds.borderColor;
+            ds.data.forEach((pt, i) => {
+              const point = meta.data[i];
+              if (!point) return;
+              let dy = -12;
+              if (pt.titol === 'Patrimonio nacional' || pt.titol === 'Belle de jour') dy = 20;
+              c.fillText(pt.titol, point.x, point.y + dy);
+            });
+          });
+          c.restore();
+        }
+      };
+
+      window._chartBunuelBBB = new Chart(ctx, {
+        type: 'line',
+        data: { datasets },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { usePointStyle: true, boxWidth: 8, boxHeight: 8, padding: 14, color: '#555', font: { size: 11 } }
+            },
+            tooltip: {
+              backgroundColor: 'rgba(45,45,45,.94)',
+              padding: 10,
+              titleFont: { size: 12 },
+              bodyFont: { size: 12 },
+              callbacks: {
+                title(items) { const p = items[0].raw; return p.titol + ' (' + p.x + ')'; },
+                label(ctx) { return 'Espectadors: ' + new Intl.NumberFormat('ca-ES').format(ctx.raw.y); },
+                afterLabel(ctx) { return ctx.raw.corpus ? 'Corpus de l’estudi' : 'Fora del corpus'; }
+              }
+            }
+          },
+          scales: {
+            x: {
+              type: 'linear', min: 1960, max: 1986,
+              ticks: { stepSize: 5, color: '#777', font: { size: 11 } },
+              grid: { color: '#efefef' }
+            },
+            y: {
+              min: 0, max: 2200000,
+              ticks: {
+                stepSize: 500000, color: '#777', font: { size: 11 },
+                callback(value) { if (value === 0) return '0'; return (value / 1000000).toLocaleString('ca-ES', { maximumFractionDigits: 1 }) + 'M'; }
+              },
+              grid: { color: '#efefef' }
+            }
+          },
+          elements: { line: { borderWidth: 2 }, point: { borderWidth: 1.5, hoverBorderWidth: 1.5 } }
+        },
+        plugins: [pluginLabels]
+      });
+    };
+  </script>
   <script src="js/notes-tooltip.js"></script>
 
 
