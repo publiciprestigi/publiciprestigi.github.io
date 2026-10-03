@@ -416,13 +416,14 @@
     .inici-definicio {
       max-width: 720px;
       margin: 18px auto 0;
-      font-size: 1.02rem;
-      line-height: 1.62;
+      font-size: 1rem;
+      line-height: 1.7;
       font-weight: 400;
-      color: #2b2b2b;
+      color: #555;
     }
 
     .inici-grafic-central {
+      display: none;
       width: min(730px, 100%);
       margin: 18px auto 0;
       transform: none !important;
@@ -435,7 +436,7 @@
 
     .inici-xifres-landing {
       max-width: 1080px;
-      margin: 40px auto 0 !important;
+      margin: 66px auto 0 !important;
       padding-top: 0 !important;
       justify-content: space-between;
       text-align: center;
@@ -446,20 +447,21 @@
 
     .inici-preguntes {
       max-width: 840px;
-      margin: 74px auto 100px;
+      margin: 66px auto 94px;
       text-align: center;
     }
     .inici-preguntes .inici-intro-text {
       max-width: none;
       margin: 0;
-      font-size: 1.02rem;
-      line-height: 1.76;
-      color: #3f3f3f;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #555;
     }
 
     /* El bloc d'accés torna a quedar clarament delimitat com una unitat. */
     .inici-inferior {
       border-top: 1px solid #e5e5e5;
+      margin-top: 56px;
       padding-top: 0;
     }
 
@@ -502,22 +504,24 @@
       }
       .inici-definicio {
         font-size: .98rem;
+        line-height: 1.7;
       }
       .inici-grafic-central {
         margin-top: 20px;
       }
       .inici-xifres-landing {
-        margin-top: 38px !important;
+        margin-top: 50px !important;
       }
       .inici-preguntes {
-        margin: 50px auto 66px;
+        margin: 48px auto 66px;
         text-align: left;
       }
       .inici-preguntes .inici-intro-text {
         font-size: .98rem;
-        line-height: 1.72;
+        line-height: 1.7;
       }
       .inici-inferior {
+        margin-top: 44px;
         padding-top: 0;
       }
     }
@@ -689,38 +693,11 @@
 
       <section class="inici-landing-presentacio">
         <h1 class="inici-benvinguda">Públic i Prestigi</h1>
-        <p class="inici-definicio">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts.</p>
+        <p class="inici-definicio">Un estudi viu que mesura i analitza la tensió entre públic i prestigi, i tot allò que aquesta relació revela. Benvinguts.</p>
       </section>
 
       <div class="inici-hero-grafic inici-grafic-central">
         <svg id="grafic-circuits" viewBox="0 28 660 180" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
-      </div>
-
-      <div class="inici-xifres inici-xifres-landing">
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#2a5582">294M</span>
-          <span class="inici-xifra-l">espectadors acumulats</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#9B2335">340</span>
-          <span class="inici-xifra-l">films reconeguts</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#9B2335">116</span>
-          <span class="inici-xifra-l">films premiats</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#5a4a8a">17</span>
-          <span class="inici-xifra-l">dobles corones</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n">60</span>
-          <span class="inici-xifra-l">anys documentats</span>
-        </div>
-      </div>
-
-      <div class="inici-preguntes">
-        <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
       </div>
 
       <div class="inici-inferior">
@@ -780,6 +757,41 @@
           </div>
         </div>
       </div>
+
+      <div class="inici-xifres inici-xifres-landing">
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#2a5582">294M</span>
+          <span class="inici-xifra-l">espectadors acumulats</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#9B2335">340</span>
+          <span class="inici-xifra-l">films reconeguts</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#9B2335">116</span>
+          <span class="inici-xifra-l">films premiats</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n" style="color:#5a4a8a">17</span>
+          <span class="inici-xifra-l">dobles corones</span>
+        </div>
+        <div class="inici-xifra-bloc">
+          <span class="inici-xifra-n">60</span>
+          <span class="inici-xifra-l">anys documentats</span>
+        </div>
+      </div>
+
+      <div class="inici-preguntes">
+        <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquí s’obren altres preguntes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
+      </div>
+
+
+
+
+
+
+
+
 
 
       <div class="inici-prefooter" aria-label="Enllaços i novetats del projecte">
