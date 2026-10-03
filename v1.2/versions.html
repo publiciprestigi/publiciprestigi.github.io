@@ -47,9 +47,15 @@
 
     .versio-item {
       position: relative;
-      padding: 0 0 42px;
+      padding: 0 0 52px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid #ececec;
     }
-    .versio-item:last-child { padding-bottom: 0; }
+    .versio-item:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+    }
 
     .versio-punt {
       position: absolute;
@@ -111,7 +117,7 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
-    .etiqueta-preparacio { background: #e8f5ec; color: #2a7a3b; }
+    .etiqueta-preparacio, .etiqueta-actual { background: #e8f5ec; color: #2a7a3b; }
     .etiqueta-anual { background: #f2f2f2; color: #777; }
 
     .versio-resum {
@@ -131,13 +137,20 @@
     }
     .versio-accions a {
       color: #666;
-      text-decoration: none;
-      border-bottom: 1px solid #cfcfcf;
+      text-decoration: underline !important;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      border-bottom: none !important;
       padding-bottom: 1px;
+      font-weight: 400;
     }
     .versio-accions a:hover {
       color: var(--color-text);
-      border-bottom-color: #777;
+      text-decoration: underline !important;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      border-bottom: none !important;
+      font-weight: 600;
     }
 
     @media (max-width: 700px) {
@@ -154,7 +167,10 @@
         height: 13px;
         top: 8px;
       }
-      .versio-item { padding-bottom: 36px; }
+      .versio-item {
+        padding-bottom: 44px;
+        margin-bottom: 16px;
+      }
       .versio-cap { gap: 7px; }
       .versio-num { font-size: 1.04rem; }
       .versio-edicio { font-size: 0.8rem; }
@@ -178,7 +194,7 @@
         <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
-        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.1 (1965–2025)</a>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.2 (en preparació)</a>
       </div>
 
       <a href="/v1.2/" class="capcalera-logo">Públic i Prestigi</a>
@@ -214,13 +230,13 @@
 
     <div class="part-capcalera">
       <h1>Versions</h1>
-      <p class="part-subtitol">Cronologia de les edicions i ampliacions de l’estudi.</p>
+      <p class="part-subtitol">Cronologia de les edicions, actualitzacions i ampliacions de l’estudi.</p>
     </div>
 
     <div class="contingut-text">
       <div class="versions-intro">
-        <p><strong>Públic i Prestigi és un estudi viu.</strong> Les versions amb número enter (v1, v2, v3...) són les edicions anuals: incorporen les dades de l’any anterior i constitueixen l’actualització anual garantida del projecte. Les versions intermèdies (v1.1, v1.2...) amplien o revisen l’estudi durant l’any amb noves dades, capítols o línies d’anàlisi.</p>
-        <p>Cada versió publicada queda accessible en aquest historial. Aquí se’n resumeixen els principals canvis; els posts de <a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">Substack</a> n’expliquen el context, les novetats i les implicacions.</p>
+        <p>Públic i Prestigi és un estudi viu. Les versions amb número enter (v1, v2, v3...) són les edicions anuals: incorporen les dades de l’any anterior, amb les possibles noves incorporacions al Top 100 històric i els nous reconeixements en festivals i acadèmies, i actualitzen els rànquings, gràfics, textos i conclusions que se’n deriven. Constitueixen l’actualització anual garantida del projecte.</p>
+        <p>Les versions intermèdies (v1.1, v1.2...) introdueixen durant l’any noves dades, capítols, ampliacions o revisions de l’estudi. Cada versió publicada queda accessible en aquest historial. Aquí se’n resumeixen els principals canvis; els posts de <a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">Substack</a> n’expliquen el context, les novetats i les implicacions.</p>
       </div>
 
       <div class="versions-cronologia" aria-label="Cronologia de versions">
@@ -231,9 +247,10 @@
             <span class="versio-num">Versió 1</span>
             <span class="versio-edicio">· Edició 1965–2025</span>
           </div>
-          <p class="versio-resum">Primera edició pública de <em>Públic i Prestigi</em>, amb les tres parts de l’estudi i el corpus inicial de dades, mètriques i anàlisis.</p>
+          <p class="versio-resum">Primera edició pública de Públic i Prestigi, amb les tres parts de l’estudi i el corpus inicial de dades, mètriques i anàlisis.</p>
           <div class="versio-accions">
             <a href="/v1/">Obrir versió →</a>
+            <a href="https://publiciprestigi.substack.com/p/v1" target="_blank" rel="noopener">Llegir el llançament ↗</a>
           </div>
         </article>
 
@@ -244,9 +261,11 @@
             <span class="versio-num">Versió 1.1</span>
             <span class="versio-edicio">· Edició 1965–2025</span>
           </div>
-          <p class="versio-resum">Incorpora <em>El mapa del cànon</em> a la Part III, revisa les conclusions i introdueix ajustos de dades, textos i disseny.</p>
+          <p class="versio-resum">Incorpora «El mapa del cànon» a la Part III, revisa les conclusions i introdueix ajustos de dades, textos i disseny. Posteriorment, activa la versió en castellà de l’estudi.</p>
           <div class="versio-accions">
             <a href="/">Obrir versió →</a>
+            <a href="https://publiciprestigi.substack.com/p/v11" target="_blank" rel="noopener">Llegir l’actualització ↗</a>
+            <a href="https://publiciprestigi.substack.com/p/v11-esp" target="_blank" rel="noopener">Llançament en castellà ↗</a>
           </div>
         </article>
 
@@ -258,7 +277,7 @@
             <span class="versio-edicio">· Edició 1965–2025</span>
             <span class="versio-etiqueta etiqueta-preparacio">En preparació</span>
           </div>
-          <p class="versio-resum">Amplia el mapa del prestigi internacional amb noves dades de festivals i acadèmies, revisa els rànquings i bona part de la Part III, i incorpora <em>Buñuel i el segon mercat</em>.</p>
+          <p class="versio-resum">Amplia el mapa del prestigi internacional amb noves dades de festivals i acadèmies, revisa els rànquings i bona part de la Part III, i incorpora «Buñuel i el segon mercat».</p>
         </article>
 
         <article class="versio-item futura" id="v2">
