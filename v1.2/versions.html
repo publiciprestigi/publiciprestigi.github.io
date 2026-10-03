@@ -40,9 +40,24 @@
       position: absolute;
       left: 7px;
       top: 9px;
-      bottom: 12px;
+      bottom: 0;
       width: 1px;
       background: #d9d9d9;
+    }
+    .versions-cronologia::after {
+      content: '';
+      position: absolute;
+      left: 7px;
+      bottom: -34px;
+      width: 1px;
+      height: 34px;
+      background: repeating-linear-gradient(
+        to bottom,
+        #c8c8c8 0,
+        #c8c8c8 3px,
+        transparent 3px,
+        transparent 7px
+      );
     }
 
     .versio-item {
