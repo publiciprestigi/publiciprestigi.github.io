@@ -288,9 +288,9 @@
 
       <div class="seccio-contingut" id="seccio-bunuel-franca">
         <div class="text-md text-md-intro">
-          <p>Mirant les pel·lícules de Buñuel que apareixen citades a l’estudi, sorprèn comprovar que totes tres superen el milió d’espectadors: <em>Tristana</em> (1970, nominació a l’Oscar, 1,8M), <em>Belle de jour</em> (1967, Lleó d’Or a Venècia, 1,2M) i <em>Ese oscuro objeto del deseo</em> (1977, 2 nominacions als Oscar, 1,1M). El fet crida especialment l’atenció en un cineasta associat com pocs a l’avantguarda i a una idea radical de l’autoria cinematogràfica.</p>         
+          <p>Mirant les tres pel·lícules de Buñuel que apareixen citades a l’estudi, sorprèn comprovar que totes tres superen el milió d’espectadors: <em>Tristana</em> (1970, nominació a l’Oscar, 1,8M), <em>Belle de jour</em> (1967, Lleó d’Or a Venècia, 1,2M) i <em>Ese oscuro objeto del deseo</em> (1977, 2 nominacions als Oscar, 1,1M). El fet crida especialment l’atenció en un cineasta associat com pocs a l’avantguarda i a una idea radical de l’autoria cinematogràfica.</p>
           <p>Potser aquesta imatge és parcialment una construcció cinèfila posterior. Buñuel va ser també un director capaç de treballar dins d’indústries i gèneres populars, especialment durant la seva llarga etapa mexicana, introduint-hi sempre una marca pròpia, estranya i pertorbadora. La pregunta, per tant, no és només per què Buñuel tenia més públic del que podríem imaginar, sinó també si l’hem llegit massa des del cànon i massa poc des del mercat.</p>
-          <p>Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem, dos dels altres referents canònics del cinema espanyol. El gràfic recull tots els seus llargmetratges des de 1965, que en el cas de Buñuel coincideix sobretot amb el seu últim període francès.</p>
+          <p>Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem, dos altres referents canònics del cinema espanyol. El gràfic recull tots els seus llargmetratges des de 1965, que en el cas de Buñuel coincideix sobretot amb el seu últim període francès.</p>
 
         </div>
 
@@ -308,6 +308,30 @@
 
         <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
           <p>La comparació matisa la sorpresa inicial. Bardem manté durant el primer tram una trajectòria comercial especialment regular, amb diversos films per sobre del milió d’espectadors. Berlanga és més irregular, però concentra dos dels pics més alts amb <em>La escopeta nacional</em> (1978, 2,1M) i <em>La vaquilla</em> (1985, 1,9M). Buñuel és el més oscil·lant dels tres: alterna resultats modestos amb tres títols que superen el milió. Més que demostrar que fos un cineasta popular de manera constant, el gràfic mostra que la singularitat de la seva obra no era incompatible amb arribar, també, a un públic ampli.</p>
+        </div>
+
+        <div class="text-md text-md-intermedi" style="margin-top:32px">
+          <p style="font-size:18px;font-weight:600;color:#363737;margin:0 0 10px">Espanya i França</p>
+          <p>Però llegir Buñuel des del mercat obliga també a mirar fora d’Espanya. Què passa amb aquestes mateixes tres pel·lícules, <em>Tristana</em>, <em>Belle de jour</em> i <em>Ese oscuro objeto del deseo</em>, si hi afegim els espectadors que van tenir a França?</p>
+        </div>
+
+        <div id="grafic-bunuel-franca-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+          <p style="font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px;font-family:'Inter',-apple-system,Arial,sans-serif">Buñuel — Espectadors a sala a Espanya i França</p>
+          <div style="position:relative">
+            <div id="bunuel-franca-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+              <div style="min-width:700px;height:320px;position:relative">
+                <canvas id="grafic-bunuel-franca"></canvas>
+              </div>
+            </div>
+          </div>
+          <div id="bunuel-franca-leg" style="text-align:center;font-size:11px;margin-top:8px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif">
+            <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:8px;background:#b8463a;display:inline-block"></span><span>Espanya</span></span>
+            <span style="display:flex;align-items:center;gap:5px"><span style="width:12px;height:8px;background:#1e3d6b;display:inline-block"></span><span>França</span></span>
+          </div>
+        </div>
+
+        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
+          <p>El resultat no dibuixa un únic mercat dominant. <em>Tristana</em> és clarament més forta a Espanya, <em>Belle de jour</em> a França, mentre que <em>Ese oscuro objeto del deseo</em> presenta una diferència molt menor. Si posem aquestes xifres en relació amb el volum anual de cada mercat, aquest últim cas és pràcticament idèntic: el film representa aproximadament el 0,49% de les entrades anuals a Espanya i el 0,48% a França. El primer i el segon mercat canvien, per tant, segons la pel·lícula i segons des d’on es mira.</p>
         </div>
       </div>
 
@@ -464,6 +488,8 @@
         graficBunuelInit = true;
         if (window.PiP_graficBunuelBerlangaBardem) setTimeout(window.PiP_graficBunuelBerlangaBardem, 50);
         else { var _tbb = setInterval(function() { if (window.PiP_graficBunuelBerlangaBardem) { clearInterval(_tbb); window.PiP_graficBunuelBerlangaBardem(); } }, 100); }
+        if (window.PiP_graficBunuelFranca) setTimeout(window.PiP_graficBunuelFranca, 120);
+        else { var _tbf = setInterval(function() { if (window.PiP_graficBunuelFranca) { clearInterval(_tbf); window.PiP_graficBunuelFranca(); } }, 100); }
       }
       if (s.id === 'conclusions') {
         if (!graficConc1Init && window.PiP_graficConclusions1) {
@@ -864,6 +890,117 @@
         actualitzaHint();
       }
     };
+
+    window.PiP_graficBunuelFranca = function() {
+      const el = document.getElementById('grafic-bunuel-franca');
+      if (!el || typeof Chart === 'undefined') return;
+      if (window._chartBunuelFranca) window._chartBunuelFranca.destroy();
+
+      const fmt = n => n.toLocaleString('ca-ES');
+      const compact = n => {
+        if (n >= 1000000) return (n / 1000000).toLocaleString('ca-ES', { minimumFractionDigits: 1, maximumFractionDigits: 2 }) + 'M';
+        return Math.round(n / 1000).toLocaleString('ca-ES') + 'K';
+      };
+
+      const C_ES = '#b8463a';
+      const C_FR = '#1e3d6b';
+      const labels = ['Belle de jour (1967)', 'Tristana (1970)', 'Ese oscuro objeto del deseo (1977)'];
+      const espanya = [1168609, 1801968, 1076567];
+      const franca  = [2162160, 552228, 812574];
+      const contextEspanya = [
+        { anyMercat: 1980, mercat: 175000000, quota: 0.67, nota: 'Estrena a Espanya: 1980' },
+        { anyMercat: 1970, mercat: 305000000, quota: 0.59 },
+        { anyMercat: 1977, mercat: 220000000, quota: 0.49 }
+      ];
+      const contextFranca = [
+        { anyMercat: 1967, mercat: 211400000, quota: 1.02 },
+        { anyMercat: 1970, mercat: 184400000, quota: 0.30 },
+        { anyMercat: 1977, mercat: 169000000, quota: 0.48 }
+      ];
+
+      const pluginValors = {
+        id: 'bunuel-franca-valors',
+        afterDatasetsDraw(chart) {
+          const c = chart.ctx;
+          c.save();
+          c.font = '600 11px "Inter", -apple-system, Arial, sans-serif';
+          c.textBaseline = 'middle';
+          chart.data.datasets.forEach((ds, di) => {
+            c.fillStyle = ds.backgroundColor;
+            const meta = chart.getDatasetMeta(di);
+            meta.data.forEach((bar, i) => {
+              c.textAlign = 'left';
+              c.fillText(compact(ds.data[i]), bar.x + 7, bar.y);
+            });
+          });
+          c.restore();
+        }
+      };
+
+      window._chartBunuelFranca = new Chart(el.getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [
+            { label: 'Espanya', data: espanya, backgroundColor: C_ES, borderWidth: 0, barThickness: 18, contextMercat: contextEspanya },
+            { label: 'França', data: franca, backgroundColor: C_FR, borderWidth: 0, barThickness: 18, contextMercat: contextFranca }
+          ]
+        },
+        options: {
+          indexAxis: 'y', responsive: true, maintainAspectRatio: false, animation: false,
+          layout: { padding: { right: 54, top: 4, bottom: 4 } },
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(45,45,45,.94)', padding: 10,
+              titleFont: { size: 12 }, bodyFont: { size: 12 },
+              callbacks: {
+                title(items) { return items[0].label; },
+                label(ctx) { return ctx.dataset.label + ': ' + fmt(ctx.raw) + ' espectadors'; },
+                afterLabel(ctx) {
+                  const m = ctx.dataset.contextMercat[ctx.dataIndex];
+                  const linies = [];
+                  if (m.nota) linies.push(m.nota);
+                  linies.push('Mercat anual ≈ ' + compact(m.mercat));
+                  linies.push('Pes sobre el mercat ≈ ' + m.quota.toLocaleString('ca-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + '%');
+                  return linies;
+                },
+                footer(items) {
+                  if (!items.length) return '';
+                  const i = items[0].dataIndex;
+                  return 'Espanya + França: ' + fmt(espanya[i] + franca[i]);
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              beginAtZero: true, max: 2500000,
+              ticks: {
+                stepSize: 500000, color: '#666', font: { size: 11 },
+                callback(v) {
+                  if (v === 0) return '0';
+                  if (v === 500000) return '500K';
+                  if (v === 1000000) return '1M';
+                  if (v === 1500000) return '1,5M';
+                  if (v === 2000000) return '2M';
+                  if (v === 2500000) return '2,5M';
+                  return '';
+                }
+              },
+              grid: { color: '#eee' }, border: { display: false },
+              title: { display: true, text: 'Espectadors a sala', color: '#555', font: { size: 12 } }
+            },
+            y: {
+              grid: { display: false }, border: { display: false },
+              ticks: { color: '#363737', font: { size: 11, style: 'italic' } }
+            }
+          }
+        },
+        plugins: [pluginValors]
+      });
+    };
+
   </script>
   <script src="js/notes-tooltip.js"></script>
 
