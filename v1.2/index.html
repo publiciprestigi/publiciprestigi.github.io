@@ -116,7 +116,7 @@
     }
 
     /* Bloc inferior */
-    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; border-bottom: 1px solid #e5e5e5; }
     .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
     .inici-part {
       display: grid;
@@ -155,9 +155,10 @@
 
     .inici-substack {
       display: grid;
-      grid-template-rows: auto 1fr auto;
+      grid-template-rows: 1fr auto;
       padding: 0 0 0 40px;
       color: inherit;
+      position: relative;
     }
 
     .inici-substack-header,
@@ -174,23 +175,25 @@
     }
 
     .inici-substack-header {
-      display: flex;
-      justify-content: space-between;
+      position: absolute;
+      top: 18px;
+      right: 0;
+      display: inline-flex;
+      justify-content: flex-end;
       align-items: center;
       gap: 8px;
-      padding: 18px 0;
+      padding: 0;
+      z-index: 3;
     }
 
     .inici-substack-titol {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #1a1a1a;
+      display: none;
     }
 
     .inici-substack-foto {
       border-radius: 4px;
       overflow: hidden;
-      margin-bottom: 0;
+      margin: 18px 0 0;
       height: 300px;
       position: relative;
     }
