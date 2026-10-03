@@ -306,7 +306,7 @@
           </div>
         </div>
 
-        <div class="text-md text-md-comentari" style="margin-top:22px">
+        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
           <p>La comparació matisa la sorpresa inicial. Bardem manté durant el primer tram del període una trajectòria comercial especialment regular, amb diversos films per sobre del milió d’espectadors. Berlanga dibuixa una trajectòria més irregular, però concentra els dos pics més alts amb <em>La escopeta nacional</em> (1978) i <em>La vaquilla</em> (1985). Buñuel és el més oscil·lant dels tres: alterna resultats modestos amb tres títols que superen el milió. Més que demostrar que fos un cineasta popular de manera constant, el gràfic mostra que la seva condició d’autor radical no l’excloïa de la capacitat d’arribar a un públic ampli.</p>
         </div>
       </div>
@@ -599,6 +599,39 @@
       const C_BERLANGA = '#1e3d6b';
       const C_BARDEM = '#1e6b5c';
 
+      function normalitzaTitolBBB(v) {
+        return String(v || '')
+          .normalize('NFD')
+          .replace(/[\u0300-\u036f]/g, '')
+          .toLocaleLowerCase('ca-ES')
+          .replace(/[^a-z0-9]+/g, ' ')
+          .trim();
+      }
+
+      function reconeixementCorpusBBB(p) {
+        const corpus = window._corpusPrestigiData || [];
+        const titolCorpus = p.corpusTitol || p.titol;
+        const clau = normalitzaTitolBBB(titolCorpus);
+
+        const d = corpus.find(f =>
+          Number(f.any) === Number(p.any) &&
+          normalitzaTitolBBB(f.titol) === clau
+        );
+        if (!d) return '';
+
+        const parts = [];
+        (d.festivals || []).forEach(f => {
+          parts.push(f.festival + (f.premiat ? ' ★' : ''));
+        });
+        if (d.oscar) {
+          parts.push('Oscar' + (String(d.oscar.reconeixement || '').includes('★') ? ' ★' : ''));
+        }
+        if (d.efa) {
+          parts.push('EFA' + (String(d.efa.reconeixement || '').includes('★') ? ' ★' : ''));
+        }
+        return parts.join(' · ');
+      }
+
       const bunuel = [
         { x: 1969, any: 1969, y: 184767, titol: 'La vía láctea', label: 'La vía láctea', dy: -12 },
         { x: 1970, any: 1970, y: 1801968, titol: 'Tristana', label: 'Tristana', dy: -12 },
@@ -610,7 +643,7 @@
 
       const berlanga = [
         { x: 1967, any: 1967, y: 366352, titol: 'La boutique', label: 'La boutique', dy: 22 },
-        { x: 1970, any: 1970, y: 721883, titol: 'Vivan los novios', label: 'Vivan los novios', dy: 22 },
+        { x: 1970, any: 1970, y: 721883, titol: 'Vivan los novios', corpusTitol: 'Viva los novios!', label: 'Vivan los novios', dy: 22 },
         { x: 1974, any: 1974, y: 452850, titol: 'Tamaño natural', label: 'Tamaño natural', dy: -12 },
         { x: 1978, any: 1978, y: 2062527, titol: 'La escopeta nacional', label: 'La escopeta nacional', dy: -12 },
         { x: 1981, any: 1981, y: 1121616, titol: 'Patrimonio nacional', label: 'Patrimonio nacional', dy: -12 },
@@ -756,7 +789,15 @@
                   return fmtBBB(ctx.raw.y) + ' espectadors';
                 },
                 afterLabel(ctx) {
-                  return ctx.raw.estrenaEspanya ? 'Estrena a Espanya: ' + ctx.raw.estrenaEspanya : '';
+                  const linies = [];
+                  if (ctx.raw.estrenaEspanya) {
+                    linies.push('Estrena a Espanya: ' + ctx.raw.estrenaEspanya);
+                  }
+                  const reconeixement = reconeixementCorpusBBB(ctx.raw);
+                  if (reconeixement) {
+                    linies.push('Reconeixement: ' + reconeixement);
+                  }
+                  return linies;
                 }
               }
             }
