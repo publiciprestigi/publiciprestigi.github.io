@@ -288,8 +288,8 @@
 
       <div class="seccio-contingut" id="seccio-bunuel-franca">
         <div class="text-md text-md-intro">
-          <p>Mirat només des de les dades espanyoles, Buñuel ja planteja una primera anomalia. Tres dels seus films presents al corpus de l’estudi i al seu context superen el milió d’espectadors: <em>Tristana</em> (1970), <em>Ese oscuro objeto del deseo</em> (1977) i <em>Belle de jour</em> (1967), estrenada a Espanya el 1980. La xifra sorprèn especialment en un cineasta que acostumem a situar en l’extrem més autoral, radical i avantguardista de la seva generació.</p>
-          <p>Aquesta imatge és, però, només una part de la història. Buñuel també havia treballat durant dècades dins d’indústries i gèneres populars, especialment a Mèxic, mantenint-hi una marca d’autor estranya i sovint pertorbadora. Posar-lo al costat de Berlanga i Bardem permet començar per una pregunta molt concreta: fins a quin punt l’hem llegit massa des del cànon i massa poc des del mercat?</p>
+          <p>Mirat només des de les dades espanyoles, Buñuel ja planteja una primera anomalia. Tres dels seus films presents a l’estudi superen el milió d’espectadors: <em>Tristana</em> (1970), amb 1,8M, <em>Belle de jour</em> (1967), amb 1,2M, i <em>Ese oscuro objeto del deseo</em> (1977), amb 1,1M. La xifra sorprèn especialment en un cineasta que acostumem a situar en l’extrem més autoral, radical i avantguardista de la seva generació.</p>
+          <p>Potser aquesta imatge és parcialment una construcció cinèfila posterior. Buñuel va ser també un director capaç de treballar dins d’indústries i gèneres populars, especialment durant la seva llarga etapa mexicana, introduint-hi una marca pròpia, estranya i sovint pertorbadora. La pregunta, per tant, no és només per què Buñuel tenia més públic del que podríem imaginar, sinó també si l’hem llegit massa des del cànon i massa poc des del mercat.</p>
         </div>
 
         <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
@@ -305,7 +305,7 @@
         </div>
 
         <div class="text-md text-md-comentari" style="margin-top:22px">
-          <p>El tall de 1965 ens agafa amb les trajectòries dels tres directors ja començades. Per tant, el gràfic no compara les seves carreres completes, sinó el tram que coincideix amb la finestra històrica de Públic i Prestigi. En aquest període, Buñuel alterna films de públic molt reduït amb tres títols que superen el milió d’espectadors, mentre Berlanga i Bardem dibuixen trajectòries comercials diferents però dins d’una escala comparable.</p>
+          <p>La comparació matisa la sorpresa inicial. Bardem manté durant la primera dècada del període una presència comercial especialment regular, amb diversos films per sobre del milió d’espectadors. Berlanga dibuixa una trajectòria més irregular, però concentra els dos pics més alts amb <em>La escopeta nacional</em> (1978) i <em>La vaquilla</em> (1985). Buñuel és el més oscil·lant dels tres: alterna resultats modestos amb tres títols que superen el milió. Més que demostrar que fos un cineasta popular de manera constant, el gràfic mostra que la seva condició d’autor radical no l’excloïa d’una connexió considerable amb el públic.</p>
         </div>
       </div>
 
@@ -620,7 +620,7 @@
       ];
 
       const bardem = [
-        { x: 1965, any: 1965, y: 1112381, titol: 'Los pianos mecánicos', label: 'Los pianos mecánicos', dy: -12 },
+        { x: 1965.22, any: 1965, y: 1112381, titol: 'Los pianos mecánicos', label: 'Los pianos mecánicos', dx: 52, dy: -12 },
         { x: 1968, any: 1968, y: 460878, titol: 'El último día de la guerra', label: 'El último día de la guerra', dy: -12 },
         { x: 1971, any: 1971, y: 1648190, titol: 'Varietés', label: 'Varietés', dy: -12 },
         { x: 1972.78, any: 1973, y: 1237013, titol: 'La corrupción de Chris Miller', label: 'La corrupción de Chris Miller', dy: -12 },
@@ -628,7 +628,7 @@
         { x: 1975, any: 1975, y: 1310098, titol: 'El poder del deseo', label: 'El poder del deseo', dy: -12 },
         { x: 1977, any: 1977, y: 876910, titol: 'El puente', label: 'El puente', dy: 22 },
         { x: 1979, any: 1979, y: 270813, titol: 'Siete días de enero', label: 'Siete días de enero', dy: 22 },
-        { x: 1997, any: 1997, y: 94696, titol: 'Resultado final', label: 'Resultado final', dy: 22 }
+        { x: 1997, any: 1997, y: 94696, titol: 'Resultado final', label: 'Resultado final', dy: -12 }
       ];
 
       const pluginNoms = {
@@ -645,7 +645,9 @@
             ds.data.forEach((pt, i) => {
               const point = meta.data[i];
               if (!point) return;
-              c.fillText(pt.label || pt.titol, point.x, point.y + (pt.dy || -12));
+              let dy = pt.dy || -12;
+              if (point.y + dy > chart.scales.y.bottom - 4) dy = -12;
+              c.fillText(pt.label || pt.titol, point.x + (pt.dx || 0), point.y + dy);
             });
           });
           c.restore();
@@ -735,7 +737,7 @@
           responsive: true,
           maintainAspectRatio: false,
           animation: false,
-          layout: { padding: { bottom: 28 } },
+          layout: { padding: { top: 12, bottom: 38 } },
           plugins: {
             legend: { display: false },
             tooltip: {
@@ -767,16 +769,19 @@
             },
             y: {
               min: 0,
-              max: 2300000,
+              max: 2500000,
               ticks: {
                 stepSize: 500000,
                 color: '#363737',
                 font: { size: 11 },
                 callback(v) {
                   if (v === 0) return '0';
-                  return v >= 1000000
-                    ? (v / 1000000).toLocaleString('ca-ES', { maximumFractionDigits: 1 }) + 'M'
-                    : Math.round(v / 1000) + 'K';
+                  if (v === 500000) return '500K';
+                  if (v === 1000000) return '1M';
+                  if (v === 1500000) return '1,5M';
+                  if (v === 2000000) return '2M';
+                  if (v === 2500000) return '2,5M';
+                  return '';
                 }
               },
               grid: { color: '#eee' },
