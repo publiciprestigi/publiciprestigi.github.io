@@ -133,8 +133,9 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
-    .etiqueta-preparacio, .etiqueta-actual { background: #e8f5ec; color: #2a7a3b; }
-    .etiqueta-anual { background: #f2f2f2; color: #777; }
+    .etiqueta-actual { background: #e8f5ec; color: #2a7a3b; }
+    .etiqueta-anterior { background: #f2f2f2; color: #777; }
+    .etiqueta-anual { background: #fff0e5; color: #c8641f; }
 
     .versio-resum {
       max-width: 680px;
@@ -210,7 +211,7 @@
         <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
-        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.2 (en preparació)</a>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.2 (1965–2025)</a>
       </div>
 
       <a href="/v1.2/" class="capcalera-logo">Públic i Prestigi</a>
@@ -251,14 +252,24 @@
 
     <div class="contingut-text">
       <div class="versions-cronologia" aria-label="Cronologia de versions">
+        <article class="versio-item previa" id="v0">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">24 de març de 2026</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 0</span>
+          </div>
+          <p class="versio-resum">Primera versió compartida de l’estudi, en format PDF, abans de l’adaptació en format web.</p>
+        </article>
+
         <article class="versio-item publicada" id="v1">
           <span class="versio-punt" aria-hidden="true"></span>
           <span class="versio-data">14 de juny de 2026</span>
           <div class="versio-cap">
             <span class="versio-num">Versió 1</span>
             <span class="versio-edicio">· Edició 1965–2025</span>
+            <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
           </div>
-          <p class="versio-resum">Primera edició pública de Públic i Prestigi, amb les tres parts de l’estudi i el primer corpus de dades, mètriques i anàlisis.</p>
+          <p class="versio-resum">Primera edició pública en format web de Públic i Prestigi, amb les tres parts de l’estudi i el primer corpus de dades, mètriques i anàlisis.</p>
           <div class="versio-accions">
             <a href="/v1/">Obrir versió →</a>
             <a href="https://publiciprestigi.substack.com/p/v1" target="_blank" rel="noopener">Llegir el llançament ↗</a>
@@ -271,24 +282,28 @@
           <div class="versio-cap">
             <span class="versio-num">Versió 1.1</span>
             <span class="versio-edicio">· Edició 1965–2025</span>
+            <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
           </div>
           <p class="versio-resum">Incorpora «El mapa del cànon» a la Part III i introdueix ajustos de dades, textos i disseny. Posteriorment, s’activa la versió en castellà.</p>
           <div class="versio-accions">
-            <a href="/">Obrir versió →</a>
+            <a href="/v1.1/">Obrir versió →</a>
             <a href="https://publiciprestigi.substack.com/p/v11" target="_blank" rel="noopener">Llegir l’actualització ↗</a>
             <a href="https://publiciprestigi.substack.com/p/v11-esp" target="_blank" rel="noopener">Llegir el llançament en castellà ↗</a>
           </div>
         </article>
 
-        <article class="versio-item en-preparacio" id="v1-2">
+        <article class="versio-item actual" id="v1-2">
           <span class="versio-punt" aria-hidden="true"></span>
           <span class="versio-data">Tardor de 2026</span>
           <div class="versio-cap">
             <span class="versio-num">Versió 1.2</span>
             <span class="versio-edicio">· Edició 1965–2025</span>
-            <span class="versio-etiqueta etiqueta-preparacio">En preparació</span>
+            <span class="versio-etiqueta etiqueta-actual">Actual</span>
           </div>
           <p class="versio-resum">Amplia el mapa del prestigi internacional amb la incorporació de premis d’acadèmies, revisa els rànquings i bona part de la Part III, i incorpora «Buñuel i el segon mercat».</p>
+          <div class="versio-accions">
+            <a href="/">Obrir versió →</a>
+          </div>
         </article>
 
         <article class="versio-item futura" id="v2">
@@ -502,7 +517,7 @@
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.2 (en preparació)</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.2 (1965–2025)</a></div>
   </nav>
 
 
