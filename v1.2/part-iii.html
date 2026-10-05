@@ -358,12 +358,13 @@
             #bf-mirror .bf-bar.es .bf-value { left:-7px; transform:translate(-100%,-50%); color:#b8463a; }
             #bf-mirror .bf-bar.fr .bf-value { right:-7px; transform:translate(100%,-50%); color:#1e3d6b; }
             #bf-mirror .bf-film { text-align:center; padding:0 10px; line-height:1.25; }
-            #bf-mirror .bf-film-title { font-size:14px; font-style:italic; font-weight:400; color:#2f3030; line-height:1.22; }
+            #bf-mirror .bf-film-title { font-size:14px; font-style:italic; font-weight:600; color:#2f3030; line-height:1.22; }
             #bf-mirror .bf-film-note { margin-top:2px; font-size:10.5px; color:#777; }
-            #bf-mirror .bf-film-prod { margin-top:3px; font-size:11px; color:#747474; white-space:nowrap; }
+            #bf-mirror .bf-film-prod { margin-top:3px; font-size:11.2px; color:#747474; white-space:nowrap; }
             #bf-mirror .bf-axis-title { text-align:center; color:#666; font-size:12px; margin-top:11px; }
             #bf-tip { position:fixed; z-index:9999; display:none; max-width:260px; background:rgba(45,45,45,.96); color:white; padding:8px 10px; border-radius:3px; font:12px/1.4 'Inter',-apple-system,Arial,sans-serif; pointer-events:none; box-shadow:0 2px 8px rgba(0,0,0,.14); }
             #bf-tip strong { font-weight:600; }
+             #grafic-bunuel-franca-bloc .frx-source { font-size:10.5px; line-height:1.45; color:#888; text-align:center; margin:12px auto 0; max-width:850px; padding:0 12px; }
           </style>
 
           <div style="overflow:visible">
@@ -466,11 +467,10 @@
           #franca-top30 .f30-intro h2{margin-bottom:10px}
           #franca-top30 .f30-chart{border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 16px;margin:20px 0;font-family:'Inter',-apple-system,Arial,sans-serif;color:#363737;overflow:visible}
           #franca-top30 .f30-title{font-size:16px;font-weight:600;text-align:center;margin:0 0 6px}
-          #franca-top30 .f30-subtitle{font-size:10.5px;color:#777;text-align:center;margin:0 0 12px}
-          #franca-top30 .f30-controls{display:flex;justify-content:center;align-items:center;margin:0 0 16px}
-          #franca-top30 .f30-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:5px 11px;font:500 10.5px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
+                    #franca-top30 .f30-controls{display:flex;justify-content:center;align-items:center;gap:7px;margin:8px 0 17px}
+          #franca-top30 .f30-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 14px;font:500 11.5px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
           #franca-top30 .f30-toggle:hover{border-color:#aaa;color:#444}
-          #franca-top30 .f30-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
+          #franca-top30 .f30-toggle[aria-pressed="true"],#franca-top30 .f30-toggle.is-active{background:#363737;color:#fff;border-color:#363737}
           #franca-top30 .f30-head,
           #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,33%) minmax(220px,34%) minmax(0,33%);align-items:center}
           #franca-top30 .f30-head{margin:0 0 8px;align-items:end}
@@ -490,13 +490,13 @@
           #franca-top30 .f30-scale-side.right span:nth-child(3){left:50%}
           #franca-top30 .f30-scale-side.right span:nth-child(4){left:75%}
           #franca-top30 .f30-scale-side.right span:nth-child(5){right:0;left:auto;transform:none}
-          #franca-top30 .f30-row{min-height:58px;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
-          #franca-top30 .f30-film{display:grid;grid-template-columns:24px minmax(0,1fr);gap:7px;align-items:baseline;line-height:1.15;padding:0 10px}
-          #franca-top30 .f30-rank{font-size:10.5px;color:#999;text-align:right}
-          #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.18}
-          #franca-top30 .f30-name em{font-style:italic}
-          #franca-top30 .f30-year{font-size:10.5px;color:#888;margin-left:4px;white-space:nowrap}
-          #franca-top30 .f30-director{font-size:10.8px;line-height:1.18;color:#777;margin-top:3px}
+          #franca-top30 .f30-row{min-height:60px;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
+          #franca-top30 .f30-film{position:relative;text-align:center;line-height:1.15;padding:0 32px}
+          #franca-top30 .f30-rank{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:18px;font-size:10.5px;color:#999;text-align:right}
+          #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.2}
+          #franca-top30 .f30-name em{font-style:italic;font-weight:600}
+          #franca-top30 .f30-year{font-size:11px;color:#888;margin-left:4px;white-space:nowrap}
+          #franca-top30 .f30-director{font-size:11.3px;line-height:1.2;color:#707070;margin-top:3px;font-weight:400}
           #franca-top30 .f30-side{height:32px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%);overflow:visible}
           #franca-top30 .f30-side.es{justify-content:flex-end}
           #franca-top30 .f30-side.fr{justify-content:flex-start}
@@ -513,7 +513,7 @@
           #franca-top30 .f30-over{position:absolute;left:0;top:0;height:15px;border-left:2px solid #b8463a;pointer-events:none}
           #franca-top30 .f30-separator{display:flex;align-items:center;gap:10px;margin:24px 0 5px;color:#777;font-size:10.5px;font-weight:600}
           #franca-top30 .f30-separator:before,#franca-top30 .f30-separator:after{content:'';height:1px;background:#ddd;flex:1}
-          #franca-top30 .f30-extra .f30-row{min-height:58px}
+          #franca-top30 .f30-extra .f30-row{min-height:60px}
           #franca-top30 .f30-source{font-size:10.5px;line-height:1.45;color:#888;text-align:center;margin:14px auto 0;max-width:880px;padding:0 12px}
           #f30-tip{position:fixed;z-index:9999;display:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;padding:8px 10px;border-radius:3px;font:12px/1.42 'Inter',-apple-system,Arial,sans-serif;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
           #f30-tip strong{font-weight:600}
@@ -525,7 +525,7 @@
 
         <div id="franca-top30">
           <div class="text-md text-md-intermedi f30-intro">
-            <h2>França, un segon mercat</h2>
+            <h2>El públic francès</h2>
             <p>El cas de Buñuel obre una pregunta més àmplia: quines pel·lícules espanyoles han trobat realment un públic a França? El rànquing següent ordena els films per espectadors a les sales franceses i compara, en una mateixa escala, el seu recorregut a França i a Espanya.</p>
             <p>El criteri no incorpora automàticament qualsevol coproducció amb participació espanyola. En queden fora títols com <em>Tulipán negro</em>, <em>Delirios de grandeza</em> o <em>Las petroleras</em>, on la participació espanyola respon sobretot a una estructura industrial de coproducció però el centre creatiu és principalment francès. En canvi, s’hi inclouen coproduccions clarament vinculades a l’autoria i trajectòria de cineastes espanyols, com <em>Estambul 65</em>, <em>Tristana</em>, <em>Ese oscuro objeto del deseo</em> o <em>Los otros</em>.</p>
           </div>
@@ -533,8 +533,11 @@
           <div class="f30-chart">
             <div class="f30-inner">
               <p class="f30-title">Top 30 d’espectadors a França — Espanya vs. França (1965–2025)</p>
-              <p class="f30-subtitle">Ordre segons les entrades a França · les dues barres comparteixen escala · la numeració original es manté en filtrar</p>
-              <div class="f30-controls"><button type="button" id="f30-toggle-almodovar" class="f30-toggle" aria-pressed="false">Sense Almodóvar</button></div>
+              <div class="f30-controls" role="group" aria-label="Filtra el rànquing per Almodóvar">
+                <button type="button" class="f30-toggle is-active" data-mode="all" aria-pressed="true">Totes</button>
+                <button type="button" class="f30-toggle" data-mode="without" aria-pressed="false">Sense Almodóvar</button>
+                <button type="button" class="f30-toggle" data-mode="only" aria-pressed="false">Només Almodóvar</button>
+              </div>
               <div class="f30-head">
                 <div><div class="f30-country es">← Espanya</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
                 <div class="f30-head-title">Pel·lícula</div>
@@ -587,7 +590,8 @@
             };
             const main=document.getElementById('f30-main');
             const extra=document.getElementById('f30-extra');
-            const toggle=document.getElementById('f30-toggle-almodovar');
+            const controls=[...document.querySelectorAll('#franca-top30 .f30-toggle[data-mode]')];
+            const separator=document.querySelector('#franca-top30 .f30-separator');
             const tip=document.getElementById('f30-tip');
             const bindTips=()=>{
               document.querySelectorAll('#franca-top30 .f30-bar').forEach(bar=>{
@@ -598,16 +602,23 @@
                 bar.addEventListener('mouseleave',()=>{tip.style.display='none';});
               });
             };
-            const render=hideAlmodovar=>{
-              main.innerHTML=films.filter(f=>!hideAlmodovar || !isAlmodovar(f)).map(f=>row(f,false)).join('');
-              extra.innerHTML=extras.map(f=>row(f,true)).join('');
-              toggle.setAttribute('aria-pressed',hideAlmodovar?'true':'false');
-              toggle.textContent=hideAlmodovar?'Mostrar Almodóvar':'Sense Almodóvar';
+            const render=mode=>{
+              let visible=films;
+              if(mode==='without') visible=films.filter(f=>!isAlmodovar(f));
+              if(mode==='only') visible=films.filter(isAlmodovar);
+              main.innerHTML=visible.map(f=>row(f,false)).join('');
+              const showExtras=mode!=='only';
+              extra.innerHTML=showExtras ? extras.map(f=>row(f,true)).join('') : '';
+              if(separator) separator.style.display=showExtras ? 'flex' : 'none';
+              controls.forEach(btn=>{
+                const active=btn.dataset.mode===mode;
+                btn.classList.toggle('is-active',active);
+                btn.setAttribute('aria-pressed',active?'true':'false');
+              });
               bindTips();
             };
-            let hideAlmodovar=false;
-            toggle.addEventListener('click',()=>{hideAlmodovar=!hideAlmodovar;render(hideAlmodovar);});
-            render(false);
+            controls.forEach(btn=>btn.addEventListener('click',()=>render(btn.dataset.mode)));
+            render('all');
           })();
         </script>
 
