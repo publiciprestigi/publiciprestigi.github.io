@@ -461,322 +461,123 @@
         </div>
 
 
-        <style id="frx-segon-mercat-style">
-          .frx-subhead{margin-top:34px}
-          .frx-subhead h2{margin-bottom:9px}
-          .frx-block{border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 15px;margin:20px 0;overflow:visible;--frx-center:300px}
-          .frx-title{font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 18px;font-family:'Inter',-apple-system,Arial,sans-serif}
-          .frx-scroll{width:100%;overflow-x:visible}
-          .frx-mirror{width:100%;min-width:0;font-family:'Inter',-apple-system,Arial,sans-serif;color:#363737}
-          .frx-head,.frx-scale,.frx-row{display:grid;grid-template-columns:minmax(0,1fr) var(--frx-center) minmax(0,1fr)}
-          .frx-head{align-items:end;margin-bottom:4px}
-          .frx-country{font-size:11px;font-weight:600;color:#555}
-          .frx-country.es{text-align:right;padding-right:10px}
-          .frx-country.fr{text-align:left;padding-left:10px}
-          .frx-scale{margin-bottom:8px}
-          .frx-scale-side{position:relative;height:18px;color:#888;font-size:9px}
-          .frx-scale-side span{position:absolute;transform:translateX(-50%);bottom:0;white-space:nowrap}
-          .frx-scale-side.left span:first-child{transform:none}
-          .frx-scale-mid{text-align:center;font-size:9px;color:#aaa;padding-top:5px}
-          .frx-group{display:flex;align-items:center;gap:10px;margin:13px 0 2px;color:#555;font-size:11px;font-weight:600}
-          .frx-group::before,.frx-group::after{content:'';height:1px;background:#e8e8e8;flex:1}
-          .frx-group span{white-space:nowrap}
-          .frx-row{min-height:76px;align-items:center;border-top:1px solid #f2f2f2}
-          .frx-side{height:42px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.8%,#efefef 25%,transparent 25.2%,transparent 49.8%,#efefef 50%,transparent 50.2%,transparent 74.8%,#efefef 75%,transparent 75.2%)}
-          .frx-side.left{justify-content:flex-end}
-          .frx-side.right{justify-content:flex-start}
-          .frx-side.left::after,.frx-side.right::before{content:'';position:absolute;top:2px;bottom:2px;width:1px;background:#cfcfcf}
-          .frx-side.left::after{right:0}.frx-side.right::before{left:0}
-          .frx-bar{height:18px;min-width:3px;position:relative;cursor:default;transition:filter .15s ease}
-          .frx-bar:hover{filter:brightness(.9)}
-          .frx-bar.es{background:#b8463a}.frx-bar.fr{background:#1e3d6b}
-          .frx-value{position:absolute;top:50%;transform:translateY(-50%);font-size:11px;font-weight:600;white-space:nowrap}
-          .frx-bar.es .frx-value{left:-7px;transform:translate(-100%,-50%);color:#b8463a}
-          .frx-bar.fr .frx-value{right:-7px;transform:translate(100%,-50%);color:#1e3d6b}
-          .frx-film{text-align:center;padding:0 10px;line-height:1.2}
-          .frx-film-title{font-size:13.5px;font-weight:400;color:#2f3030;line-height:1.2}
-          .frx-film-prod{margin-top:3px;font-size:10.5px;line-height:1.18;color:#777}
-          .frx-film-extra{margin-top:3px;font-size:10px;font-weight:600;color:#8b6547}
-          .frx-no-release{padding-left:10px;font-size:10.5px;color:#999;font-style:italic;white-space:nowrap}
-          .frx-source{font-size:10.5px;line-height:1.45;color:#888;text-align:center;margin:12px auto 0;max-width:850px;padding:0 12px}
-          #frx-tip{position:fixed;z-index:9999;display:none;max-width:260px;background:rgba(45,45,45,.96);color:#fff;padding:8px 10px;border-radius:3px;font:12px/1.4 'Inter',-apple-system,Arial,sans-serif;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
-          #frx-tip strong{font-weight:600}
+        <style id="f30-style">
+          #franca-top30{margin-top:38px}
+          #franca-top30 .f30-intro h2{margin-bottom:10px}
+          #franca-top30 .f30-chart{border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 16px;margin:20px 0;font-family:'Inter',-apple-system,Arial,sans-serif;color:#363737}
+          #franca-top30 .f30-title{font-size:16px;font-weight:600;text-align:center;margin:0 0 6px}
+          #franca-top30 .f30-subtitle{font-size:10.5px;color:#777;text-align:center;margin:0 0 18px}
+          #franca-top30 .f30-head{display:grid;grid-template-columns:minmax(220px,34%) minmax(0,66%);gap:18px;align-items:end;margin:0 0 8px}
+          #franca-top30 .f30-head-title{font-size:10px;color:#999;padding-left:31px}
+          #franca-top30 .f30-head-bars{display:grid;grid-template-columns:1fr auto;align-items:end;gap:8px}
+          #franca-top30 .f30-scale{position:relative;height:21px;border-bottom:1px solid #ddd;color:#999;font-size:9px}
+          #franca-top30 .f30-scale span{position:absolute;bottom:4px;transform:translateX(-50%);white-space:nowrap}
+          #franca-top30 .f30-scale span:first-child{left:0;transform:none}
+          #franca-top30 .f30-scale span:nth-child(2){left:25%}
+          #franca-top30 .f30-scale span:nth-child(3){left:50%}
+          #franca-top30 .f30-scale span:nth-child(4){left:75%}
+          #franca-top30 .f30-scale span:last-child{right:0;left:auto;transform:none}
+          #franca-top30 .f30-unit{font-size:9px;color:#999;padding-bottom:4px;white-space:nowrap}
+          #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(220px,34%) minmax(0,66%);gap:18px;min-height:52px;align-items:center;border-top:1px solid #f0f0f0}
+          #franca-top30 .f30-film{display:grid;grid-template-columns:24px minmax(0,1fr);gap:7px;align-items:baseline;line-height:1.15}
+          #franca-top30 .f30-rank{font-size:10.5px;color:#999;text-align:right}
+          #franca-top30 .f30-name{font-size:12.5px;color:#303131;min-width:0}
+          #franca-top30 .f30-name em{font-style:italic}
+          #franca-top30 .f30-year{font-size:10px;color:#888;margin-left:4px;white-space:nowrap}
+          #franca-top30 .f30-bars{display:grid;grid-template-rows:15px 15px;gap:4px;position:relative}
+          #franca-top30 .f30-track{height:15px;position:relative;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%)}
+          #franca-top30 .f30-bar{height:15px;min-width:2px;position:relative;cursor:default;transition:filter .15s ease}
+          #franca-top30 .f30-bar:hover{filter:brightness(.88)}
+          #franca-top30 .f30-bar.fr{background:#1e3d6b}
+          #franca-top30 .f30-bar.es{background:#b8463a}
+          #franca-top30 .f30-code{position:absolute;left:6px;top:50%;transform:translateY(-50%);font-size:9px;font-weight:700;color:#fff;line-height:1}
+          #franca-top30 .f30-value{position:absolute;top:50%;right:-5px;transform:translate(100%,-50%);font-size:10px;font-weight:600;white-space:nowrap}
+          #franca-top30 .f30-bar.fr .f30-value{color:#1e3d6b}
+          #franca-top30 .f30-bar.es .f30-value{color:#b8463a}
+          #franca-top30 .f30-over{position:absolute;right:0;top:0;height:15px;border-right:2px solid #b8463a;pointer-events:none}
+          #franca-top30 .f30-separator{display:flex;align-items:center;gap:10px;margin:24px 0 5px;color:#777;font-size:10.5px;font-weight:600}
+          #franca-top30 .f30-separator:before,#franca-top30 .f30-separator:after{content:'';height:1px;background:#ddd;flex:1}
+          #franca-top30 .f30-extra .f30-row{min-height:49px}
+          #franca-top30 .f30-extra .f30-name{font-size:12px}
+          #franca-top30 .f30-director{font-size:9.5px;color:#888;margin-top:2px}
+          #franca-top30 .f30-source{font-size:10.5px;line-height:1.45;color:#888;text-align:center;margin:14px auto 0;max-width:880px;padding:0 12px}
+          #f30-tip{position:fixed;z-index:9999;display:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;padding:8px 10px;border-radius:3px;font:12px/1.42 'Inter',-apple-system,Arial,sans-serif;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
+          #f30-tip strong{font-weight:600}
           @media (max-width:760px){
-            .frx-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
-            .frx-mirror{min-width:900px}
-            .frx-block{--frx-center:280px}
+            #franca-top30 .f30-chart{overflow-x:auto;-webkit-overflow-scrolling:touch}
+            #franca-top30 .f30-inner{min-width:850px}
           }
         </style>
 
+        <div id="franca-top30">
+          <div class="text-md text-md-intermedi f30-intro">
+            <h2>França, un segon mercat</h2>
+            <p>El cas de Buñuel obre una pregunta més àmplia: quines pel·lícules espanyoles han trobat realment un públic a França? El rànquing següent ordena els films per espectadors a les sales franceses i compara, en una mateixa escala, el seu recorregut a França i a Espanya.</p>
+            <p>El criteri no incorpora automàticament qualsevol coproducció amb participació espanyola. En queden fora títols com <em>Tulipán negro</em>, <em>Delirios de grandeza</em> o <em>Las petroleras</em>, on la participació espanyola respon sobretot a una estructura industrial de coproducció però el centre creatiu és principalment francès. En canvi, s’hi inclouen coproduccions clarament vinculades a l’autoria i trajectòria de cineastes espanyols, com <em>Estambul 65</em>, <em>Tristana</em>, <em>Ese oscuro objeto del deseo</em> o <em>Los otros</em>.</p>
+          </div>
 
-        <div class="text-md text-md-intermedi frx-subhead">
-          <h2>Saura, el pont</h2>
-          <p>El prestigi internacional de Carlos Saura ja és fort als anys seixanta i setanta, però França no es converteix immediatament en un mercat massiu: <em>La caza</em> no s’hi estrena fins al 1974 i <em>Peppermint Frappé</em> queda inèdita comercialment durant dècades. El salt arriba amb <em>Cría cuervos</em>: una producció espanyola que hi aconsegueix més públic que a Espanya. Els anys següents mostren una relació sostinguda però irregular, i el segon gran pic arriba de nou amb una producció espanyola, <em>Carmen</em>.</p>
-        </div>
-
-
-        <div id="grafic-saura-franca" class="frx-block" style="--frx-center:300px">
-          <p class="frx-title">Saura — Espectadors a sala a Espanya i França (1976–1983)</p>
-          <div class="frx-scroll">
-            <div class="frx-mirror">
-              <div class="frx-head">
-                <div class="frx-country es">← Espanya</div>
-                <div></div>
-                <div class="frx-country fr">França →</div>
+          <div class="f30-chart">
+            <div class="f30-inner">
+              <p class="f30-title">Top 30 d’espectadors a França — Espanya vs. França (1965–2025)</p>
+              <p class="f30-subtitle">Ordre segons les entrades a França · les dues barres comparteixen escala</p>
+              <div class="f30-head">
+                <div class="f30-head-title">Pel·lícula</div>
+                <div class="f30-head-bars"><div class="f30-scale"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div><div class="f30-unit">espectadors</div></div>
               </div>
-            <div class="frx-scale">
-              <div class="frx-scale-side left"><span style="left:0%">1,5M</span><span style="left:33.333%">1M</span><span style="left:66.667%">500K</span></div>
-              <div class="frx-scale-mid">0</div>
-              <div class="frx-scale-side right"><span style="left:33.333%">500K</span><span style="left:66.667%">1M</span><span style="right:0;left:auto;transform:none">1,5M</span></div>
-            </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:86.208%" data-tip="<strong>Espanya</strong><br>1.293.113 espectadors<br>Mercat anual ≈ 240M<br>Quota de mercat ≈ 0,54%"><span class="frx-value">1,29M</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Cría cuervos</em> (1976)</div>
-                    <div class="frx-film-prod">Producció: Espanya</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:95.113%" data-tip="<strong>França</strong><br>1.426.702 espectadors<br>Mercat anual 177,3M<br>Quota de mercat 0,80%"><span class="frx-value">1,43M</span></div></div>
-              </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:74.693%" data-tip="<strong>Espanya</strong><br>1.120.399 espectadors<br>Mercat anual ≈ 200M<br>Quota de mercat ≈ 0,56%"><span class="frx-value">1,12M</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Mamá cumple cien años</em> (1979)</div>
-                    <div class="frx-film-prod">Coproducció: Espanya · França</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:27.496%" data-tip="<strong>França</strong><br>412.442 espectadors<br>Mercat anual 178,1M<br>Quota de mercat 0,23%"><span class="frx-value">412K</span></div></div>
-              </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:69.973%" data-tip="<strong>Espanya</strong><br>1.049.600 espectadors<br>Mercat anual ≈ 165M<br>Quota de mercat ≈ 0,64%"><span class="frx-value">1,05M</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Deprisa, deprisa</em> (1981)</div>
-                    <div class="frx-film-prod">Coproducció: Espanya · França</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:18.194%" data-tip="<strong>França</strong><br>272.906 espectadors<br>Mercat anual 189,2M<br>Quota de mercat 0,14%"><span class="frx-value">273K</span></div></div>
-              </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:28.488%" data-tip="<strong>Espanya</strong><br>427.324 espectadors<br>Mercat anual ≈ 115M<br>Quota de mercat ≈ 0,37%"><span class="frx-value">427K</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Carmen</em> (1983)</div>
-                    <div class="frx-film-prod">Producció: Espanya</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:58.122%" data-tip="<strong>França</strong><br>871.824 espectadors<br>Mercat anual 198,9M<br>Quota de mercat 0,44%"><span class="frx-value">872K</span></div></div>
-              </div>
+              <div id="f30-main"></div>
+              <div class="f30-separator"><span>Altres casos contemporanis</span></div>
+              <div id="f30-extra" class="f30-extra"></div>
+              <p class="f30-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> i ICAA quan el film no forma part del corpus. França, CNC i fonts franceses de box-office; mercat anual francès, CNC. Les dades de mercat i quota s’incorporen als globus sobre cada barra.</p>
             </div>
           </div>
-          <p class="frx-source">Fonts: Espanya, base de Públic i Prestigi. França, JP Box-Office i fonts franceses de distribució; mercat anual francès, CNC.</p>
-        </div>
 
-
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
-          <ul><li><em>Cría cuervos</em> és el punt d’inflexió: 1,43 milions d’entrades a França davant 1,29 milions a Espanya. En canvi, <em>Mamá cumple cien años</em> i <em>Deprisa, deprisa</em>, totes dues amb participació francesa, tenen un públic francès important però clarament menor que l’espanyol. <em>Carmen</em> torna a invertir la relació: 872.000 entrades a França davant 427.000 a Espanya.</li></ul>
-        </div>
-        <div class="text-md text-md-intermedi" style="margin-top:16px">
-          <p>El cas de <em>Carmen</em> té, a més, una familiaritat cultural evident per al públic francès: el personatge neix en la novel·la de Prosper Mérimée i es converteix en mite internacional amb l’òpera de Georges Bizet. És un context que pot afavorir-ne la recepció, però no explica per si sol el resultat. El més rellevant és la continuïtat: Saura demostra abans d’Almodóvar que un autor que produeix essencialment des d’Espanya pot construir a França un espai recurrent de prestigi, distribució i, en alguns films, públic massiu.</p>
-        </div>
-
-        <div class="text-md text-md-intermedi frx-subhead">
-          <h2>Almodóvar, un mercat propi</h2>
-          <p>Almodóvar converteix aquesta relació desigual en una continuïtat comercial molt més estable. <em>Tacones lejanos</em> encara és una coproducció entre Espanya i França; <em>Hable con ella</em>, <em>Volver</em> i <em>Madres paralelas</em> ja no necessiten participació francesa per trobar-hi un públic de dimensions comparables —o superiors— al d’Espanya.</p>
-        </div>
-
-
-        <div id="grafic-almodovar-franca" class="frx-block" style="--frx-center:300px">
-          <p class="frx-title">Almodóvar — Espectadors a sala a Espanya i França (1991–2021)</p>
-          <div class="frx-scroll">
-            <div class="frx-mirror">
-              <div class="frx-head">
-                <div class="frx-country es">← Espanya</div>
-                <div></div>
-                <div class="frx-country fr">França →</div>
-              </div>
-            <div class="frx-scale">
-              <div class="frx-scale-side left"><span style="left:0%">2,5M</span><span style="left:20%">2M</span><span style="left:40%">1,5M</span><span style="left:60%">1M</span><span style="left:80%">500K</span></div>
-              <div class="frx-scale-mid">0</div>
-              <div class="frx-scale-side right"><span style="left:20%">500K</span><span style="left:40%">1M</span><span style="left:60%">1,5M</span><span style="left:80%">2M</span><span style="right:0;left:auto;transform:none">2,5M</span></div>
-            </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:82.923%" data-tip="<strong>Espanya</strong><br>2.073.064 espectadors<br>Mercat anual ≈ 88M<br>Quota de mercat ≈ 2,36%"><span class="frx-value">2,07M</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Tacones lejanos</em> (1991)</div>
-                    <div class="frx-film-prod">Coproducció: Espanya · França</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:59.794%" data-tip="<strong>França</strong><br>1.494.860 espectadors<br>Mercat anual 117,5M<br>Quota de mercat 1,27%"><span class="frx-value">1,49M</span></div></div>
-              </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:54.706%" data-tip="<strong>Espanya</strong><br>1.367.655 espectadors<br>Mercat anual ≈ 140M<br>Quota de mercat ≈ 0,97%"><span class="frx-value">1,37M</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Hable con ella</em> (2002)</div>
-                    <div class="frx-film-prod">Producció: Espanya</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:86.310%" data-tip="<strong>França</strong><br>2.157.752 espectadors<br>Mercat anual 184,4M<br>Quota de mercat 1,17%"><span class="frx-value">2,16M</span></div></div>
-              </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:77.285%" data-tip="<strong>Espanya</strong><br>1.932.119 espectadors<br>Mercat anual 121M<br>Quota de mercat 1,59%"><span class="frx-value">1,93M</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Volver</em> (2006)</div>
-                    <div class="frx-film-prod">Producció: Espanya</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:93.969%" data-tip="<strong>França</strong><br>2.349.220 espectadors<br>Mercat anual 188,7M<br>Quota de mercat 1,24%"><span class="frx-value">2,35M</span></div></div>
-              </div>
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:17.026%" data-tip="<strong>Espanya</strong><br>425.643 espectadors<br>Mercat anual ≈ 55M<br>Quota de mercat ≈ 0,77%"><span class="frx-value">426K</span></div></div>
-                <div class="frx-film">
-                    <div class="frx-film-title"><em>Madres paralelas</em> (2021)</div>
-                    <div class="frx-film-prod">Producció: Espanya</div>
-                    
-                  </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:24.626%" data-tip="<strong>França</strong><br>615.647 espectadors<br>Mercat anual 96,2M<br>Quota de mercat 0,64%"><span class="frx-value">616K</span></div></div>
-              </div>
-            </div>
+          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
+            <ul>
+              <li>El rànquing confirma que França no funciona només com un espai de legitimació crítica. Almodóvar hi construeix una continuïtat comercial excepcional; Saura ja havia obert aquesta via amb <em>Cría cuervos</em> i <em>Carmen</em>, i altres films d’autor, gènere o animació hi troben també una audiència significativa.</li>
+              <li>La comparació amb Espanya revela models oposats: <em>Loca juventud</em>, <em>Carmen</em>, <em>Julieta</em> o <em>Sirât</em> guanyen pes a França, mentre que <em>Los otros</em>, <em>Lo imposible</em>, <em>Mujeres al borde de un ataque de nervios</em> o <em>Tadeo Jones 3</em> hi circulen amb una escala molt menor que al mercat espanyol.</li>
+            </ul>
           </div>
-          <p class="frx-source">Fonts: Espanya, base de Públic i Prestigi. França, JP Box-Office; mercat anual francès, CNC.</p>
         </div>
 
-
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
-          <ul><li><em>Hable con ella</em> i <em>Volver</em> superen els dos milions d’entrades a França i totes dues hi tenen més espectadors que a Espanya; <em>Madres paralelas</em> manté el mateix patró tres dècades després de <em>Tacones lejanos</em>.</li></ul>
-        </div>
-        <div class="text-md text-md-intermedi" style="margin-top:16px">
-          <p>La diferència amb Saura no és que Almodóvar descobreixi el mercat francès sense coproducció: <em>Cría cuervos</em> i <em>Carmen</em> ja havien demostrat que això era possible. La singularitat és la persistència. França ja no és només un soci industrial o un mercat ocasional: és un públic propi construït al llarg del temps.</p>
-        </div>
-
-        <div class="text-md text-md-intermedi frx-subhead">
-          <h2>Dels precedents a l’estratègia</h2>
-          <p>La relació amb França no neix amb els autors contemporanis ni es limita al cinema d’autor. Les coproduccions internacionals eren una estructura central del cinema espanyol dels seixanta: entre 1962 i 1969, 504 dels 1.003 llargmetratges produïts —el 50,2%— van ser coproduccions. El pes arriba al 64,9% el 1965, al 59,1% el 1966, al 56% el 1967 i encara al 50,9% el 1968. França era un soci habitual, però el principal eix europeu era Itàlia: en el període 1950–1975, aproximadament la meitat de les coproduccions bipartides es van fer amb aquest país.</p>
-          <p>Aquell context inclou models molt diferents. <em>Tulipán negro</em> és una gran coproducció europea de lideratge creatiu francès; <em>Estambul 65</em>, en canvi, exemplifica l’ambició d’Isasi-Isasmendi de construir des d’Espanya un cinema internacional. Dècades després, el cinema de gènere i l’autor industrial obren altres vies de circulació, mentre que les trajectòries recents de Trueba, Serra, Sorogoyen i Laxe mostren fins a quin punt França pot funcionar avui com a espai de producció, legitimació, distribució i públic. Dels directors de la generació actual analitzada abans, Carla Simón hi té una recepció visible però minoritària i Alauda Ruiz de Azúa no hi estrena comercialment cap llargmetratge dins del període de l’estudi.</p>
-          <p class="frx-source" style="text-align:left;max-width:none;padding:0;margin-top:10px">Context històric: dades de producció 1962–1969 recollides a partir de Ramón del Valle Fernández; per al període 1950–1975, Alejandro Pardo (2007), que situa Itàlia com a soci de prop del 50% de les coproduccions bipartides.</p>
-        </div>
-
-        <div id="grafic-sintesi-franca" class="frx-block" style="--frx-center:360px">
-          <p class="frx-title">Models de circulació — Espectadors a sala a Espanya i França (1964–2025)</p>
-          <div class="frx-scroll">
-            <div class="frx-mirror">
-              <div class="frx-head">
-                <div class="frx-country es">← Espanya</div>
-                <div></div>
-                <div class="frx-country fr">França →</div>
-              </div>
-              <div class="frx-scale">
-                <div class="frx-scale-side left"><span style="left:0%">6,4M</span><span style="left:25%">4,8M</span><span style="left:50%">3,2M</span><span style="left:75%">1,6M</span></div>
-                <div class="frx-scale-mid">0</div>
-                <div class="frx-scale-side right"><span style="left:25%">1,6M</span><span style="left:50%">3,2M</span><span style="left:75%">4,8M</span><span style="right:0;left:auto;transform:none">6,4M</span></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:34.047%" data-tip="<strong>Espanya</strong><br>2.178.978 espectadors<br>Mercat anual ≈ 400M<br>Quota de mercat ≈ 0,54%"><span class="frx-value">2,18M</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>Tulipán negro</em> · Christian-Jaque (1964)</div>
-                  <div class="frx-film-prod">Coproducció europea · lideratge creatiu francès</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:48.555%" data-tip="<strong>França</strong><br>3.107.512 espectadors<br>Mercat anual 275,8M<br>Quota de mercat 1,13%"><span class="frx-value">3,11M</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:42.371%" data-tip="<strong>Espanya</strong><br>2.711.723 espectadors<br>Mercat anual ≈ 390M<br>Quota de mercat ≈ 0,70%"><span class="frx-value">2,71M</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>Estambul 65</em> · Antonio Isasi-Isasmendi (1965)</div>
-                  <div class="frx-film-prod">Coproducció europea · impuls espanyol</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:29.504%" data-tip="<strong>França</strong><br>1.888.260 espectadors<br>Mercat anual 259,4M<br>Quota de mercat 0,73%"><span class="frx-value">1,89M</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:22.351%" data-tip="<strong>Espanya</strong><br>1.430.450 espectadors<br>Mercat anual 116,9M<br>Quota de mercat 1,22%"><span class="frx-value">1,43M</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>[REC]</em> · Jaume Balagueró i Paco Plaza (2007)</div>
-                  <div class="frx-film-prod">Producció espanyola · cinema de gènere</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:8.395%" data-tip="<strong>França</strong><br>537.274 espectadors<br>Mercat anual 177,5M<br>Quota de mercat 0,30%"><span class="frx-value">537K</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:95.781%" data-tip="<strong>Espanya</strong><br>6.129.976 espectadors<br>Mercat anual 94M<br>Quota de mercat 6,52%"><span class="frx-value">6,13M</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>Lo imposible</em> · J.A. Bayona (2012)</div>
-                  <div class="frx-film-prod">Producció espanyola · escala internacional</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:8.387%" data-tip="<strong>França</strong><br>536.770 espectadors<br>Mercat anual 204,3M<br>Quota de mercat 0,26%"><span class="frx-value">537K</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:0.457%" data-tip="<strong>Espanya</strong><br>29.244 espectadors<br>Mercat anual ≈ 105M<br>Quota de mercat ≈ 0,03%"><span class="frx-value">29K</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>La virgen de agosto</em> · Jonás Trueba (2019)</div>
-                  <div class="frx-film-prod">Producció: Espanya</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:0.662%" data-tip="<strong>França</strong><br>42.385 espectadors<br>Mercat anual 213,3M<br>Quota de mercat 0,02%"><span class="frx-value">42K</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:0.233%" data-tip="<strong>Espanya</strong><br>14.921 espectadors<br>Mercat anual 71M<br>Quota de mercat 0,02%"><span class="frx-value">15K</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>Pacifiction</em> · Albert Serra (2022)</div>
-                  <div class="frx-film-prod">Coproducció: França · Espanya · Alemanya · Portugal</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:0.939%" data-tip="<strong>França</strong><br>60.083 espectadors<br>Mercat anual 152M<br>Quota de mercat 0,04%"><span class="frx-value">60K</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:17.377%" data-tip="<strong>Espanya</strong><br>1.112.098 espectadors<br>Mercat anual 71M<br>Quota de mercat 1,57%"><span class="frx-value">1,11M</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>As bestas</em> · Rodrigo Sorogoyen (2022)</div>
-                  <div class="frx-film-prod">Coproducció: Espanya · França</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:5.115%" data-tip="<strong>França</strong><br>327.386 espectadors<br>Mercat anual 152M<br>Quota de mercat 0,22%"><span class="frx-value">327K</span></div></div>
-              </div>
-
-              <div class="frx-row">
-                <div class="frx-side left"><div class="frx-bar es" style="width:7.165%" data-tip="<strong>Espanya</strong><br>458.542 espectadors<br>Mercat anual ≈ 65M<br>Quota de mercat ≈ 0,71%"><span class="frx-value">459K</span></div></div>
-                <div class="frx-film">
-                  <div class="frx-film-title"><em>Sirāt</em> · Oliver Laxe (2025)</div>
-                  <div class="frx-film-prod">Coproducció: Espanya · França</div>
-                </div>
-                <div class="frx-side right"><div class="frx-bar fr" style="width:11.731%" data-tip="<strong>França</strong><br>750.780 espectadors<br>Mercat anual 156,8M<br>Quota de mercat 0,48%"><span class="frx-value">751K</span></div></div>
-              </div>
-            </div>
-          </div>
-          <p class="frx-source">Fonts: Espanya, base de Públic i Prestigi per als films del corpus i dades històriques/ICAA per als casos externs. França, JP Box-Office i AlloCiné/CBO; mercat anual francès, CNC. Les xifres serveixen per comparar magnituds de públic, no per equiparar el pes industrial de cada país en totes les coproduccions.</p>
-        </div>
-
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
-          <ul>
-            <li><em>Tulipán negro</em> i <em>Estambul 65</em> mostren dos precedents industrials gairebé inversos: una gran producció de lideratge francès amb participació espanyola i una superproducció internacional impulsada des d’Espanya per Isasi-Isasmendi.</li>
-            <li><em>[REC]</em> construeix a França un públic significatiu des del cinema de gènere; <em>Lo imposible</em>, en canvi, és un enorme èxit espanyol i internacional però França continua sent-hi un mercat clarament secundari. <em>Mar adentro</em> reforça aquesta distinció des de la coproducció: tot i la participació francesa i l’Oscar, el públic francès queda molt per sota de l’espanyol.</li>
-            <li>Els quatre casos recents amplien el ventall: Trueba i Serra treballen en escales petites però amb una relació francesa especialment intensa; Sorogoyen hi troba un mercat important però secundari, i Laxe torna a invertir la relació amb <em>Sirāt</em>, que té més espectadors a França que a Espanya.</li>
-          </ul>
-        </div>
-        <div class="text-md text-md-intermedi" style="margin-top:16px">
-          <p>La coproducció pot facilitar l’accés industrial, la distribució o el finançament; no garanteix que existeixi un segon mercat. La distinció final és, per tant, entre tres fenòmens que sovint se superposen però no són equivalents: coproducció, legitimació internacional i públic efectiu. Buñuel obre la pregunta perquè la seva trajectòria travessa els tres nivells; Saura hi afegeix un mercat francès irregular però recurrent; Almodóvar el converteix en una continuïtat comercial excepcional; i aquests precedents i trajectòries recents mostren que la relació amb França adopta escales i mecanismes molt diferents.</p>
-        </div>
-
-        <div id="frx-tip"></div>
+        <div id="f30-tip"></div>
         <script>
           (function() {
-            const tip = document.getElementById('frx-tip');
-            if (!tip) return;
-            document.querySelectorAll('#seccio-bunuel-franca .frx-bar').forEach(function(bar) {
-              bar.addEventListener('mouseenter', function() {
-                tip.innerHTML = bar.getAttribute('data-tip') || '';
-                tip.style.display = 'block';
-              });
-              bar.addEventListener('mousemove', function(e) {
-                const pad = 14;
-                let x = e.clientX + pad;
-                let y = e.clientY + pad;
-                const r = tip.getBoundingClientRect();
-                if (x + r.width > window.innerWidth - 10) x = e.clientX - r.width - pad;
-                if (y + r.height > window.innerHeight - 10) y = e.clientY - r.height - pad;
-                tip.style.left = x + 'px';
-                tip.style.top = y + 'px';
-              });
-              bar.addEventListener('mouseleave', function() { tip.style.display = 'none'; });
+            const films = [{"rank": 1, "title": "Volver", "year": 2006, "fr": 2349220, "es": 1932119}, {"rank": 2, "title": "Hable con ella", "year": 2002, "fr": 2157752, "es": 1367655}, {"rank": 3, "title": "Todo sobre mi madre", "year": 1999, "fr": 2018846, "es": 2590699}, {"rank": 4, "title": "Estambul 65", "year": 1965, "fr": 1888220, "es": 2711723}, {"rank": 5, "title": "Los otros", "year": 2001, "fr": 1565492, "es": 6410785}, {"rank": 6, "title": "Tacones lejanos", "year": 1991, "fr": 1494860, "es": 2073064}, {"rank": 7, "title": "Cría cuervos", "year": 1976, "fr": 1426702, "es": 1293113}, {"rank": 8, "title": "La mala educación", "year": 2004, "fr": 1086731, "es": 1241814}, {"rank": 9, "title": "Loca juventud", "year": 1965, "fr": 1010869, "es": 425166}, {"rank": 10, "title": "Planet 51", "year": 2009, "fr": 988487, "es": 1957318}, {"rank": 11, "title": "Los abrazos rotos", "year": 2009, "fr": 918919, "es": 696722}, {"rank": 12, "title": "Carmen", "year": 1983, "fr": 871824, "es": 427324}, {"rank": 13, "title": "Dolor y gloria", "year": 2019, "fr": 846952, "es": 964859}, {"rank": 14, "title": "Momias", "year": 2023, "fr": 840691, "es": 970812}, {"rank": 15, "title": "Todos lo saben", "year": 2018, "fr": 829736, "es": 580427}, {"rank": 16, "title": "Ese oscuro objeto del deseo", "year": 1977, "fr": 812574, "es": 1076567}, {"rank": 17, "title": "Julieta", "year": 2016, "fr": 791953, "es": 355378}, {"rank": 18, "title": "La piel que habito", "year": 2011, "fr": 733758, "es": 735403}, {"rank": 19, "title": "Sirât", "year": 2025, "fr": 713257, "es": 458542}, {"rank": 20, "title": "Cartas boca arriba", "year": 1966, "fr": 620902, "es": 553400}, {"rank": 21, "title": "La habitación de al lado", "year": 2024, "fr": 619160, "es": 402313}, {"rank": 22, "title": "Madres paralelas", "year": 2021, "fr": 615647, "es": 425643}, {"rank": 23, "title": "Kika", "year": 1993, "fr": 606697, "es": 1038568}, {"rank": 24, "title": "Mujeres al borde de un ataque de nervios", "year": 1988, "fr": 600134, "es": 3348457}, {"rank": 25, "title": "[REC]", "year": 2007, "fr": 554330, "es": 1430450}, {"rank": 26, "title": "Tristana", "year": 1970, "fr": 552228, "es": 1801968}, {"rank": 27, "title": "Lo imposible", "year": 2012, "fr": 536596, "es": 6129976}, {"rank": 28, "title": "Los amantes pasajeros", "year": 2013, "fr": 535760, "es": 714287}, {"rank": 29, "title": "Tadeo Jones 3. La tabla esmeralda", "year": 2022, "fr": 514894, "es": 1987567}, {"rank": 30, "title": "[REC] 2", "year": 2009, "fr": 493480, "es": 862301}];
+            const extras = [{"title": "Volveréis", "director": "Jonás Trueba", "year": 2024, "fr": 73216, "es": 74709}, {"title": "Pacifiction", "director": "Albert Serra", "year": 2022, "fr": 60323, "es": 14921}, {"title": "La virgen de agosto", "director": "Jonás Trueba", "year": 2019, "fr": 42808, "es": 29244}, {"title": "La mort de Louis XIV", "director": "Albert Serra", "year": 2016, "fr": 38877, "es": 5358}, {"title": "Un año, una noche", "director": "Isaki Lacuesta", "year": 2022, "fr": 9745, "es": 27776}];
+            const frMarket = {"1967": 211.5, "1970": 184.4, "1976": 177.3, "1977": 170.3, "1983": 198.9, "1991": 117.5, "2002": 184.4, "2006": 188.7, "2021": 96.2, "2025": 156.79};
+            const esMarket = {"1965": 390, "1966": 370, "1970": 305, "1976": 240, "1977": 220, "1983": 115, "1988": 85, "1991": 88, "1993": 90, "1999": 110, "2001": 146.8, "2002": 140.7, "2004": 143.9, "2006": 121.7, "2007": 116.9, "2009": 110, "2011": 98, "2012": 94, "2013": 78.7, "2016": 96, "2018": 98, "2019": 105, "2021": 55, "2022": 71, "2023": 80, "2024": 90, "2025": 65};
+            const MAX = 6500000;
+            const fmt = n => new Intl.NumberFormat('ca-ES').format(n);
+            const compact = n => n >= 1000000 ? (n/1000000).toLocaleString('ca-ES',{minimumFractionDigits:n>=2000000?1:2,maximumFractionDigits:2})+'M' : Math.round(n/1000)+'K';
+            const pct = (n,m) => m ? (n/(m*1000000)*100).toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+'%' : null;
+            const tipText = (country,n,market) => {
+              let s='<strong>'+country+'</strong><br>'+fmt(n)+' espectadors';
+              if (market) s += '<br>Mercat anual '+market.toLocaleString('ca-ES',{maximumFractionDigits:2})+'M<br>Quota de mercat '+pct(n,market);
+              else s += '<br>Mercat anual i quota: pendent de consolidació';
+              return s;
+            };
+            const row = (f,extra) => {
+              const title = extra
+                ? '<div><div class="f30-name"><em>'+f.title+'</em><span class="f30-year">('+f.year+')</span></div><div class="f30-director">'+f.director+'</div></div>'
+                : '<div class="f30-name"><em>'+f.title+'</em><span class="f30-year">('+f.year+')</span></div>';
+              const left = extra ? '<div class="f30-rank"></div>'+title : '<div class="f30-rank">'+f.rank+'</div>'+title;
+              const frW=Math.max(.3,Math.min(100,f.fr/MAX*100));
+              const esW=Math.max(.3,Math.min(100,f.es/MAX*100));
+              const overflow=f.es>MAX ? '<span class="f30-over" title="supera l’escala"></span>' : '';
+              return '<div class="f30-row">'+
+                '<div class="f30-film">'+left+'</div>'+
+                '<div class="f30-bars">'+
+                  '<div class="f30-track"><div class="f30-bar fr" style="width:'+frW+'%" data-tip="'+tipText('França',f.fr,frMarket[f.year]||null)+'"><span class="f30-code">FR</span><span class="f30-value">'+compact(f.fr)+'</span></div></div>'+
+                  '<div class="f30-track"><div class="f30-bar es" style="width:'+esW+'%" data-tip="'+tipText('Espanya',f.es,esMarket[f.year]||null)+'"><span class="f30-code">ES</span><span class="f30-value">'+compact(f.es)+'</span>'+overflow+'</div></div>'+
+                '</div></div>';
+            };
+            document.getElementById('f30-main').innerHTML=films.map(f=>row(f,false)).join('');
+            document.getElementById('f30-extra').innerHTML=extras.map(f=>row(f,true)).join('');
+            const tip=document.getElementById('f30-tip');
+            document.querySelectorAll('#franca-top30 .f30-bar').forEach(bar=>{
+              bar.addEventListener('mouseenter',()=>{tip.innerHTML=bar.getAttribute('data-tip')||'';tip.style.display='block';});
+              bar.addEventListener('mousemove',e=>{const pad=14;let x=e.clientX+pad,y=e.clientY+pad;const r=tip.getBoundingClientRect();if(x+r.width>window.innerWidth-10)x=e.clientX-r.width-pad;if(y+r.height>window.innerHeight-10)y=e.clientY-r.height-pad;tip.style.left=x+'px';tip.style.top=y+'px';});
+              bar.addEventListener('mouseleave',()=>{tip.style.display='none';});
             });
           })();
         </script>
