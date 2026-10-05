@@ -464,48 +464,62 @@
         <style id="f30-style">
           #franca-top30{margin-top:38px}
           #franca-top30 .f30-intro h2{margin-bottom:10px}
-          #franca-top30 .f30-chart{border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 16px;margin:20px 0;font-family:'Inter',-apple-system,Arial,sans-serif;color:#363737}
+          #franca-top30 .f30-chart{border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 16px;margin:20px 0;font-family:'Inter',-apple-system,Arial,sans-serif;color:#363737;overflow:visible}
           #franca-top30 .f30-title{font-size:16px;font-weight:600;text-align:center;margin:0 0 6px}
-          #franca-top30 .f30-subtitle{font-size:10.5px;color:#777;text-align:center;margin:0 0 18px}
-          #franca-top30 .f30-head{display:grid;grid-template-columns:minmax(220px,34%) minmax(0,66%);gap:18px;align-items:end;margin:0 0 8px}
-          #franca-top30 .f30-head-title{font-size:10px;color:#999;padding-left:31px}
-          #franca-top30 .f30-head-bars{display:grid;grid-template-columns:1fr auto;align-items:end;gap:8px}
-          #franca-top30 .f30-scale{position:relative;height:21px;border-bottom:1px solid #ddd;color:#999;font-size:9px}
-          #franca-top30 .f30-scale span{position:absolute;bottom:4px;transform:translateX(-50%);white-space:nowrap}
-          #franca-top30 .f30-scale span:first-child{left:0;transform:none}
-          #franca-top30 .f30-scale span:nth-child(2){left:25%}
-          #franca-top30 .f30-scale span:nth-child(3){left:50%}
-          #franca-top30 .f30-scale span:nth-child(4){left:75%}
-          #franca-top30 .f30-scale span:last-child{right:0;left:auto;transform:none}
-          #franca-top30 .f30-unit{font-size:9px;color:#999;padding-bottom:4px;white-space:nowrap}
-          #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(220px,34%) minmax(0,66%);gap:18px;min-height:58px;align-items:center;border-top:1px solid #f0f0f0}
-          #franca-top30 .f30-film{display:grid;grid-template-columns:24px minmax(0,1fr);gap:7px;align-items:baseline;line-height:1.15}
+          #franca-top30 .f30-subtitle{font-size:10.5px;color:#777;text-align:center;margin:0 0 12px}
+          #franca-top30 .f30-controls{display:flex;justify-content:center;align-items:center;margin:0 0 16px}
+          #franca-top30 .f30-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:5px 11px;font:500 10.5px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
+          #franca-top30 .f30-toggle:hover{border-color:#aaa;color:#444}
+          #franca-top30 .f30-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
+          #franca-top30 .f30-head,
+          #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,33%) minmax(220px,34%) minmax(0,33%);align-items:center}
+          #franca-top30 .f30-head{margin:0 0 8px;align-items:end}
+          #franca-top30 .f30-country{font-size:10px;font-weight:600;color:#666;padding-bottom:4px}
+          #franca-top30 .f30-country.es{text-align:right;padding-right:10px}
+          #franca-top30 .f30-country.fr{text-align:left;padding-left:10px}
+          #franca-top30 .f30-head-title{text-align:center;font-size:10px;color:#999;padding-bottom:4px}
+          #franca-top30 .f30-scale-side{position:relative;height:21px;border-bottom:1px solid #ddd;color:#999;font-size:9px}
+          #franca-top30 .f30-scale-side span{position:absolute;bottom:4px;transform:translateX(-50%);white-space:nowrap}
+          #franca-top30 .f30-scale-side.left span:nth-child(1){left:0;transform:none}
+          #franca-top30 .f30-scale-side.left span:nth-child(2){left:25%}
+          #franca-top30 .f30-scale-side.left span:nth-child(3){left:50%}
+          #franca-top30 .f30-scale-side.left span:nth-child(4){left:75%}
+          #franca-top30 .f30-scale-side.left span:nth-child(5){right:0;left:auto;transform:none}
+          #franca-top30 .f30-scale-side.right span:nth-child(1){left:0;transform:none}
+          #franca-top30 .f30-scale-side.right span:nth-child(2){left:25%}
+          #franca-top30 .f30-scale-side.right span:nth-child(3){left:50%}
+          #franca-top30 .f30-scale-side.right span:nth-child(4){left:75%}
+          #franca-top30 .f30-scale-side.right span:nth-child(5){right:0;left:auto;transform:none}
+          #franca-top30 .f30-row{min-height:58px;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
+          #franca-top30 .f30-film{display:grid;grid-template-columns:24px minmax(0,1fr);gap:7px;align-items:baseline;line-height:1.15;padding:0 10px}
           #franca-top30 .f30-rank{font-size:10.5px;color:#999;text-align:right}
           #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.18}
           #franca-top30 .f30-name em{font-style:italic}
           #franca-top30 .f30-year{font-size:10.5px;color:#888;margin-left:4px;white-space:nowrap}
-          #franca-top30 .f30-bars{display:grid;grid-template-rows:15px 15px;gap:4px;position:relative}
-          #franca-top30 .f30-track{height:15px;position:relative;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%)}
+          #franca-top30 .f30-director{font-size:10.8px;line-height:1.18;color:#777;margin-top:3px}
+          #franca-top30 .f30-side{height:32px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%);overflow:visible}
+          #franca-top30 .f30-side.es{justify-content:flex-end}
+          #franca-top30 .f30-side.fr{justify-content:flex-start}
+          #franca-top30 .f30-side.es::after,#franca-top30 .f30-side.fr::before{content:'';position:absolute;top:5px;bottom:5px;width:1px;background:#cfcfcf}
+          #franca-top30 .f30-side.es::after{right:0}
+          #franca-top30 .f30-side.fr::before{left:0}
           #franca-top30 .f30-bar{height:15px;min-width:2px;position:relative;cursor:default;transition:filter .15s ease}
           #franca-top30 .f30-bar:hover{filter:brightness(.88)}
           #franca-top30 .f30-bar.fr{background:#1e3d6b}
           #franca-top30 .f30-bar.es{background:#b8463a}
-          #franca-top30 .f30-code{position:absolute;left:6px;top:50%;transform:translateY(-50%);font-size:9px;font-weight:700;color:#fff;line-height:1}
-          #franca-top30 .f30-value{position:absolute;top:50%;right:-5px;transform:translate(100%,-50%);font-size:10px;font-weight:600;white-space:nowrap}
-          #franca-top30 .f30-bar.fr .f30-value{color:#1e3d6b}
-          #franca-top30 .f30-bar.es .f30-value{color:#b8463a}
-          #franca-top30 .f30-over{position:absolute;right:0;top:0;height:15px;border-right:2px solid #b8463a;pointer-events:none}
+          #franca-top30 .f30-value{position:absolute;top:50%;font-size:10px;font-weight:600;white-space:nowrap}
+          #franca-top30 .f30-bar.es .f30-value{left:-5px;transform:translate(-100%,-50%);color:#b8463a}
+          #franca-top30 .f30-bar.fr .f30-value{right:-5px;transform:translate(100%,-50%);color:#1e3d6b}
+          #franca-top30 .f30-over{position:absolute;left:0;top:0;height:15px;border-left:2px solid #b8463a;pointer-events:none}
           #franca-top30 .f30-separator{display:flex;align-items:center;gap:10px;margin:24px 0 5px;color:#777;font-size:10.5px;font-weight:600}
           #franca-top30 .f30-separator:before,#franca-top30 .f30-separator:after{content:'';height:1px;background:#ddd;flex:1}
           #franca-top30 .f30-extra .f30-row{min-height:58px}
-          #franca-top30 .f30-extra .f30-name{font-size:13.5px}
-          #franca-top30 .f30-director{font-size:10.8px;line-height:1.18;color:#777;margin-top:3px}
           #franca-top30 .f30-source{font-size:10.5px;line-height:1.45;color:#888;text-align:center;margin:14px auto 0;max-width:880px;padding:0 12px}
           #f30-tip{position:fixed;z-index:9999;display:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;padding:8px 10px;border-radius:3px;font:12px/1.42 'Inter',-apple-system,Arial,sans-serif;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
           #f30-tip strong{font-weight:600}
           @media (max-width:760px){
             #franca-top30 .f30-chart{overflow-x:auto;-webkit-overflow-scrolling:touch}
-            #franca-top30 .f30-inner{min-width:850px}
+            #franca-top30 .f30-inner{min-width:900px}
           }
         </style>
 
@@ -519,10 +533,12 @@
           <div class="f30-chart">
             <div class="f30-inner">
               <p class="f30-title">Top 30 d’espectadors a França — Espanya vs. França (1965–2025)</p>
-              <p class="f30-subtitle">Ordre segons les entrades a França · les dues barres comparteixen escala</p>
+              <p class="f30-subtitle">Ordre segons les entrades a França · les dues barres comparteixen escala · la numeració original es manté en filtrar</p>
+              <div class="f30-controls"><button type="button" id="f30-toggle-almodovar" class="f30-toggle" aria-pressed="false">Sense Almodóvar</button></div>
               <div class="f30-head">
+                <div><div class="f30-country es">← Espanya</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
                 <div class="f30-head-title">Pel·lícula</div>
-                <div class="f30-head-bars"><div class="f30-scale"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div><div class="f30-unit">espectadors</div></div>
+                <div><div class="f30-country fr">França →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
               </div>
               <div id="f30-main"></div>
               <div class="f30-separator"><span>Altres casos contemporanis</span></div>
@@ -551,32 +567,47 @@
             const compact = n => n >= 1000000 ? (n/1000000).toLocaleString('ca-ES',{minimumFractionDigits:n>=2000000?1:2,maximumFractionDigits:2})+'M' : Math.round(n/1000)+'K';
             const pct = (n,m) => m ? (n/(m*1000000)*100).toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+'%' : null;
             const tipText = (country,n,market) => {
-              let s='<strong>'+country+'</strong><br>'+fmt(n)+' espectadors';
-              if (market) s += '<br>Mercat anual '+market.toLocaleString('ca-ES',{maximumFractionDigits:2})+'M<br>Quota de mercat '+pct(n,market);
-              else s += '<br>Mercat anual i quota: pendent de consolidació';
-              return s;
+              let t='<strong>'+country+'</strong><br>'+fmt(n)+' espectadors';
+              if (market) t += '<br>Mercat anual '+market.toLocaleString('ca-ES',{maximumFractionDigits:2})+'M<br>Quota de mercat '+pct(n,market);
+              else t += '<br>Mercat anual i quota: pendent de consolidació';
+              return t;
             };
+            const isAlmodovar = f => f.director === 'Pedro Almodóvar';
             const row = (f,extra) => {
               const title = '<div><div class="f30-name"><em>'+f.title+'</em><span class="f30-year">('+f.year+')</span></div><div class="f30-director">'+f.director+'</div></div>';
-              const left = extra ? '<div class="f30-rank"></div>'+title : '<div class="f30-rank">'+f.rank+'</div>'+title;
+              const middle = '<div class="f30-film">'+(extra ? '<div class="f30-rank"></div>' : '<div class="f30-rank">'+f.rank+'</div>')+title+'</div>';
               const frW=Math.max(.3,Math.min(100,f.fr/MAX*100));
               const esW=Math.max(.3,Math.min(100,f.es/MAX*100));
               const overflow=f.es>MAX ? '<span class="f30-over" title="supera l’escala"></span>' : '';
-              return '<div class="f30-row">'+
-                '<div class="f30-film">'+left+'</div>'+
-                '<div class="f30-bars">'+
-                  '<div class="f30-track"><div class="f30-bar fr" style="width:'+frW+'%" data-tip="'+tipText('França',f.fr,frMarket[f.year]||null)+'"><span class="f30-code">FR</span><span class="f30-value">'+compact(f.fr)+'</span></div></div>'+
-                  '<div class="f30-track"><div class="f30-bar es" style="width:'+esW+'%" data-tip="'+tipText('Espanya',f.es,esMarket[f.year]||null)+'"><span class="f30-code">ES</span><span class="f30-value">'+compact(f.es)+'</span>'+overflow+'</div></div>'+
-                '</div></div>';
+              return '<div class="f30-row"'+(!extra && isAlmodovar(f)?' data-almodovar="true"':'')+'>'+ 
+                '<div class="f30-side es"><div class="f30-bar es" style="width:'+esW+'%" data-tip="'+tipText('Espanya',f.es,esMarket[f.year]||null)+'"><span class="f30-value">'+compact(f.es)+'</span>'+overflow+'</div></div>'+ 
+                middle+
+                '<div class="f30-side fr"><div class="f30-bar fr" style="width:'+frW+'%" data-tip="'+tipText('França',f.fr,frMarket[f.year]||null)+'"><span class="f30-value">'+compact(f.fr)+'</span></div></div>'+ 
+              '</div>';
             };
-            document.getElementById('f30-main').innerHTML=films.map(f=>row(f,false)).join('');
-            document.getElementById('f30-extra').innerHTML=extras.map(f=>row(f,true)).join('');
+            const main=document.getElementById('f30-main');
+            const extra=document.getElementById('f30-extra');
+            const toggle=document.getElementById('f30-toggle-almodovar');
             const tip=document.getElementById('f30-tip');
-            document.querySelectorAll('#franca-top30 .f30-bar').forEach(bar=>{
-              bar.addEventListener('mouseenter',()=>{tip.innerHTML=bar.getAttribute('data-tip')||'';tip.style.display='block';});
-              bar.addEventListener('mousemove',e=>{const pad=14;let x=e.clientX+pad,y=e.clientY+pad;const r=tip.getBoundingClientRect();if(x+r.width>window.innerWidth-10)x=e.clientX-r.width-pad;if(y+r.height>window.innerHeight-10)y=e.clientY-r.height-pad;tip.style.left=x+'px';tip.style.top=y+'px';});
-              bar.addEventListener('mouseleave',()=>{tip.style.display='none';});
-            });
+            const bindTips=()=>{
+              document.querySelectorAll('#franca-top30 .f30-bar').forEach(bar=>{
+                if (bar.dataset.tipBound) return;
+                bar.dataset.tipBound='1';
+                bar.addEventListener('mouseenter',()=>{tip.innerHTML=bar.getAttribute('data-tip')||'';tip.style.display='block';});
+                bar.addEventListener('mousemove',e=>{const pad=14;let x=e.clientX+pad,y=e.clientY+pad;const r=tip.getBoundingClientRect();if(x+r.width>window.innerWidth-10)x=e.clientX-r.width-pad;if(y+r.height>window.innerHeight-10)y=e.clientY-r.height-pad;tip.style.left=x+'px';tip.style.top=y+'px';});
+                bar.addEventListener('mouseleave',()=>{tip.style.display='none';});
+              });
+            };
+            const render=hideAlmodovar=>{
+              main.innerHTML=films.filter(f=>!hideAlmodovar || !isAlmodovar(f)).map(f=>row(f,false)).join('');
+              extra.innerHTML=extras.map(f=>row(f,true)).join('');
+              toggle.setAttribute('aria-pressed',hideAlmodovar?'true':'false');
+              toggle.textContent=hideAlmodovar?'Mostrar Almodóvar':'Sense Almodóvar';
+              bindTips();
+            };
+            let hideAlmodovar=false;
+            toggle.addEventListener('click',()=>{hideAlmodovar=!hideAlmodovar;render(hideAlmodovar);});
+            render(false);
           })();
         </script>
 
