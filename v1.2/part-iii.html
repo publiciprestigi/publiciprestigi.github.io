@@ -493,14 +493,15 @@
           #franca-top30 .f30-scale-side.right span:nth-child(4){left:75%}
           #franca-top30 .f30-scale-side.right span:nth-child(5){right:0;left:auto;transform:none}
           #franca-top30 .f30-row{min-height:60px;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
-          #franca-top30 .f30-film{position:relative;text-align:center;line-height:1.15;padding:0 32px}
-          #franca-top30 .f30-rank{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:18px;font-size:10.5px;color:#999;text-align:right}
+          #franca-top30 .f30-film{position:relative;text-align:center;line-height:1.15;padding:0 40px}
+          #franca-top30 .f30-rank{position:absolute;left:6px;top:50%;transform:translateY(-50%);width:34px;font-size:13.5px;color:#8f8f8f;text-align:right;display:flex;align-items:center;justify-content:flex-end;gap:5px;line-height:1}
           #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.2;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
           #franca-top30 .f30-name em{font-style:italic;font-weight:600}
-          #franca-top30 .f30-outcome{display:inline-block;font-size:12.5px;font-weight:600;line-height:1;color:#888;transform:translateY(-.2px)}
-          #franca-top30 .f30-outcome.left{color:#b8463a}
-          #franca-top30 .f30-outcome.right{color:#1e3d6b}
-          #franca-top30 .f30-outcome.equal{color:#888}
+          #franca-top30 .f30-rank-num{display:inline-block;min-width:10px}
+          #franca-top30 .f30-rank-sign{display:inline-block;font-size:13.5px;font-weight:600;line-height:1;color:#888;transform:translateY(-.2px)}
+          #franca-top30 .f30-rank-sign.left{color:#b8463a}
+          #franca-top30 .f30-rank-sign.right{color:#1e3d6b}
+          #franca-top30 .f30-rank-sign.equal{color:#888}
           #franca-top30 .f30-year{font-size:inherit;color:#888;margin-left:4px;white-space:nowrap;font-style:normal;font-weight:400}
           #franca-top30 .f30-director{font-size:11.3px;line-height:1.2;color:#707070;margin-top:3px;font-weight:400}
           #franca-top30 .f30-side{height:32px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%);overflow:visible}
@@ -592,14 +593,14 @@
             const isAlmodovar = f => f.director === 'Pedro Almodóvar';
             const marketSign = f => {
               const rel = Math.abs(f.fr - f.es) / Math.max(f.fr, f.es);
-              if (rel < 0.10) return '<span class="f30-outcome equal" aria-label="mercats gairebé equivalents">=</span>';
+              if (rel < 0.10) return '<span class="f30-rank-sign equal" aria-label="mercats gairebé equivalents">=</span>';
               return f.fr > f.es
-                ? '<span class="f30-outcome right" aria-label="França supera Espanya">→</span>'
-                : '<span class="f30-outcome left" aria-label="Espanya supera França">←</span>';
+                ? '<span class="f30-rank-sign right" aria-label="França supera Espanya">→</span>'
+                : '<span class="f30-rank-sign left" aria-label="Espanya supera França">←</span>';
             };
             const row = (f,extra) => {
-              const title = '<div><div class="f30-name">'+marketSign(f)+'<em>'+f.title+'</em><span class="f30-year">('+f.year+')</span></div><div class="f30-director">'+f.director+'</div></div>';
-              const middle = '<div class="f30-film">'+(extra ? '<div class="f30-rank"></div>' : '<div class="f30-rank">'+f.rank+'</div>')+title+'</div>';
+              const title = '<div><div class="f30-name"><em>'+f.title+'</em><span class="f30-year">('+f.year+')</span></div><div class="f30-director">'+f.director+'</div></div>';
+              const middle = '<div class="f30-film">'+(extra ? '<div class="f30-rank"></div>' : '<div class="f30-rank"><span class="f30-rank-num">'+f.rank+'</span>'+marketSign(f)+'</div>')+title+'</div>';
               const frW=Math.max(.3,Math.min(100,f.fr/MAX*100));
               const esW=Math.max(.3,Math.min(100,f.es/MAX*100));
               const overflow=f.es>MAX ? '<span class="f30-over" title="supera l’escala"></span>' : '';
