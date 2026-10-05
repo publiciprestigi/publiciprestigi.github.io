@@ -358,7 +358,9 @@
             #bf-mirror .bf-bar.es .bf-value { left:-7px; transform:translate(-100%,-50%); color:#b8463a; }
             #bf-mirror .bf-bar.fr .bf-value { right:-7px; transform:translate(100%,-50%); color:#1e3d6b; }
             #bf-mirror .bf-film { text-align:center; padding:0 10px; line-height:1.25; }
-            #bf-mirror .bf-film-title { font-size:14px; font-style:italic; font-weight:600; color:#2f3030; line-height:1.22; }
+            #bf-mirror .bf-film-title { font-size:14px; color:#2f3030; line-height:1.22; }
+            #bf-mirror .bf-film-name { font-style:italic; font-weight:600; }
+            #bf-mirror .bf-film-year { font-size:inherit; font-style:normal; font-weight:400; color:#888; }
             #bf-mirror .bf-film-note { margin-top:2px; font-size:10.5px; color:#777; }
             #bf-mirror .bf-film-prod { margin-top:3px; font-size:11.2px; color:#747474; white-space:nowrap; }
             #bf-mirror .bf-axis-title { text-align:center; color:#666; font-size:12px; margin-top:11px; }
@@ -386,7 +388,7 @@
                   <div class="bf-bar es" style="width:72.08%" data-tip="<strong>Espanya</strong><br>1.801.968 espectadors<br>Mercat anual ≈ 305M<br>Quota de mercat ≈ 0,59%"><span class="bf-value">1,80M</span></div>
                 </div>
                 <div class="bf-film">
-                  <div class="bf-film-title">Tristana (1970)</div>
+                  <div class="bf-film-title"><span class="bf-film-name">Tristana</span> <span class="bf-film-year">(1970)</span></div>
                   <div class="bf-film-prod">Coproducció: Espanya · Itàlia · França</div>
                 </div>
                 <div class="bf-side right">
@@ -399,7 +401,7 @@
                   <div class="bf-bar es" style="width:43.06%" data-tip="<strong>Espanya</strong><br>1.076.567 espectadors<br>Mercat anual ≈ 220M<br>Quota de mercat ≈ 0,49%"><span class="bf-value">1,08M</span></div>
                 </div>
                 <div class="bf-film">
-                  <div class="bf-film-title">Ese oscuro objeto del deseo (1977)</div>
+                  <div class="bf-film-title"><span class="bf-film-name">Ese oscuro objeto del deseo</span> <span class="bf-film-year">(1977)</span></div>
                   <div class="bf-film-prod">Coproducció: França · Espanya</div>
                 </div>
                 <div class="bf-side right">
@@ -412,7 +414,7 @@
                   <div class="bf-bar es" style="width:46.74%" data-tip="<strong>Espanya</strong><br>1.168.609 espectadors<br>Estrena a Espanya: 1980<br>Mercat anual ≈ 175M<br>Quota de mercat ≈ 0,67%"><span class="bf-value">1,17M</span></div>
                 </div>
                 <div class="bf-film">
-                  <div class="bf-film-title">Belle de jour (1980; orig. 1967)</div>
+                  <div class="bf-film-title"><span class="bf-film-name">Belle de jour</span> <span class="bf-film-year">(1980; orig. 1967)</span></div>
                   <div class="bf-film-prod">Coproducció: França · Itàlia</div>
                 </div>
                 <div class="bf-side right">
@@ -495,7 +497,7 @@
           #franca-top30 .f30-rank{position:absolute;left:8px;top:50%;transform:translateY(-50%);width:18px;font-size:10.5px;color:#999;text-align:right}
           #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.2}
           #franca-top30 .f30-name em{font-style:italic;font-weight:600}
-          #franca-top30 .f30-year{font-size:11px;color:#888;margin-left:4px;white-space:nowrap}
+          #franca-top30 .f30-year{font-size:inherit;color:#888;margin-left:4px;white-space:nowrap;font-style:normal;font-weight:400}
           #franca-top30 .f30-director{font-size:11.3px;line-height:1.2;color:#707070;margin-top:3px;font-weight:400}
           #franca-top30 .f30-side{height:32px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%);overflow:visible}
           #franca-top30 .f30-side.es{justify-content:flex-end}
@@ -525,7 +527,7 @@
 
         <div id="franca-top30">
           <div class="text-md text-md-intermedi f30-intro">
-            <h2>El públic francès</h2>
+            <h2>El públic francès: primer o segon mercat?</h2>
             <p>El cas de Buñuel obre una pregunta més àmplia: quines pel·lícules espanyoles han trobat realment un públic a França? El rànquing següent ordena els films per espectadors a les sales franceses i compara, en una mateixa escala, el seu recorregut a França i a Espanya.</p>
             <p>El criteri no incorpora automàticament qualsevol coproducció amb participació espanyola. En queden fora títols com <em>Tulipán negro</em>, <em>Delirios de grandeza</em> o <em>Las petroleras</em>, on la participació espanyola respon sobretot a una estructura industrial de coproducció però el centre creatiu és principalment francès. En canvi, s’hi inclouen coproduccions clarament vinculades a l’autoria i trajectòria de cineastes espanyols, com <em>Estambul 65</em>, <em>Tristana</em>, <em>Ese oscuro objeto del deseo</em> o <em>Los otros</em>.</p>
           </div>
@@ -552,8 +554,16 @@
 
           <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
             <ul>
-              <li>El rànquing confirma que França no funciona només com un espai de legitimació crítica. Almodóvar hi construeix una continuïtat comercial excepcional; Saura ja havia obert aquesta via amb <em>Cría cuervos</em> i <em>Carmen</em>, i altres films d’autor, gènere o animació hi troben també una audiència significativa.</li>
-              <li>La comparació amb Espanya revela models oposats: <em>Loca juventud</em>, <em>Carmen</em>, <em>Julieta</em> o <em>Sirât</em> guanyen pes a França, mentre que <em>Los otros</em>, <em>Lo imposible</em>, <em>Mujeres al borde de un ataque de nervios</em> o <em>Tadeo Jones 3</em> hi circulen amb una escala molt menor que al mercat espanyol.</li>
+              <li><strong>Almodóvar, del segon al primer mercat.</strong> És la presència dominant del rànquing i el cas més continuat d’un cineasta espanyol que converteix França en un mercat comparable a l’espanyol i, en diversos films, superior en nombre d’espectadors.</li>
+              <li><strong>Saura, el precedent.</strong> <em>Cría cuervos</em> i <em>Carmen</em> mostren abans d’Almodóvar que França podia arribar a funcionar com un mercat més fort que Espanya per a un autor produït essencialment des d’aquí.</li>
+              <li><strong>Un segon mercat ja als seixanta.</strong> <em>Estambul 65</em> i sobretot <em>Loca juventud</em> recorden que aquesta circulació no neix amb el cinema d’autor contemporani ni amb les polítiques europees de coproducció més recents.</li>
+              <li><strong>França com a primer mercat.</strong> Films de períodes i models molt diferents —de <em>Loca juventud</em> a <em>Julieta</em> o <em>Sirât</em>— tenen més espectadors a França que a Espanya. El gràfic permet llegir aquests canvis de jerarquia film a film.</li>
+              <li><strong>Espanya continua sent el primer mercat dels grans èxits industrials.</strong> <em>Los otros</em>, <em>Lo imposible</em>, <em>Mujeres al borde de un ataque de nervios</em> o <em>Tadeo Jones 3</em> circulen a França, però a una escala molt inferior a la seva explotació espanyola.</li>
+              <li><strong>El gènere també travessa la frontera.</strong> <em>Los otros</em>, <em>[REC]</em>, <em>[REC] 2</em> i <em>Lo imposible</em> mostren que el públic francès no és només una extensió del circuit de prestigi o d’autor.</li>
+              <li><strong>L’animació obre una altra via.</strong> <em>Planet 51</em>, <em>Momias</em> i <em>Tadeo Jones 3</em> introdueixen al Top 30 una circulació internacional que respon a lògiques diferents de les del cinema d’autor.</li>
+              <li><strong>Un primer mercat pot existir també a petita escala.</strong> Els casos contemporanis de Serra, Trueba i Lacuesta permeten mirar més enllà del volum absolut i preguntar quin pes té França dins de la vida comercial d’un film minoritari.</li>
+              <li><strong>Més entrades no sempre vol dir més penetració.</strong> La comparació de les quotes sobre el mercat anual de cada país permetrà matisar la lectura en valors absoluts i veure en quin territori cada film ocupa realment més espai.</li>
+              <li><strong>Coproduir no és el mateix que construir un públic.</strong> La participació industrial francesa pot facilitar la circulació, però no garanteix que França es converteixi en segon —ni en primer— mercat; per això les coproduccions de lideratge creatiu estranger queden fora del rànquing.</li>
             </ul>
           </div>
         </div>
