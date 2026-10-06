@@ -765,12 +765,14 @@
 
             const buttons=[...document.querySelectorAll('#grafic-mercats-coda-bloc .mercat-view-toggle')];
             const graphTitle=document.getElementById('mercats-coda-tit');
+            const graphNote=document.getElementById('mercats-coda-nota');
             const setView=(view)=>{
               chart.$view=view;
               if(view==='perhab'){
                 chart.config.type='line';
                 chart.data.datasets=perHabDatasets;
                 if(graphTitle) graphTitle.textContent='Entrades anuals per habitant — Espanya i França (1965–2025)';
+                if(graphNote) graphNote.textContent='Entrades anuals venudes dividides per la població de cada país.';
                 chart.options.scales.y.min=0;
                 chart.options.scales.y.max=13;
                 chart.options.scales.y2.display=false;
@@ -779,6 +781,7 @@
                 chart.config.type='bar';
                 chart.data.datasets=mercatDatasets;
                 if(graphTitle) graphTitle.textContent='Entrades venudes i evolució de la població a Espanya i França (1965–2025)';
+                if(graphNote) graphNote.textContent='Entrades venudes (barres) i població (línies) a Espanya i França, 1965–2025.';
                 chart.options.scales.y.min=0;
                 chart.options.scales.y.max=420;
                 chart.options.scales.y2.display=true;
