@@ -1,4 +1,4 @@
-/* Públic i Prestigi — Taula resum per dècades + gràfic de distribució */ 
+/* Públic i Prestigi — Taula resum per dècades + gràfic de distribució */
 
 const PIP_DEC_ES = document.documentElement.lang === 'es';
 const pipDecT = (ca, es) => PIP_DEC_ES ? es : ca;
@@ -121,8 +121,8 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
     )}</p>
     <canvas id="grafic-decades-canvas"></canvas>
     <p class="grafic-nota">${pipDecT(
-      'Nombre de pel·lícules del Top 100 per dècada i percentatge que representen sobre el total de 100 films.',
-      'Número de films del Top 100 por década y porcentaje que representan sobre el total de 100 films.'
+      'Nombre de pel·lícules del Top 100 per dècada i percentatge que representen.',
+      'Número de films del Top 100 por década y porcentaje que representan.'
     )}</p>
     <p class="grafic-font">${pipDecT(
       'Font: ICAA. Distribució per dècades: elaboració de <em>Públic i Prestigi</em>.',
