@@ -356,14 +356,6 @@ th.col-iic-header {
 }
 
 /* ── Part I · Distribució del Top 100 per dècada ── */
-#grafic-decades .grafic-decades-titol {
-  font-size: .82em;
-  font-weight: 700;
-  color: #363737;
-  text-align: center;
-  margin: 0 0 16px;
-  font-family: "Inter", -apple-system, "SF Pro Text", sans-serif;
-}
 
 #grafic-decades .grafic-nota {
   max-width: 700px;
