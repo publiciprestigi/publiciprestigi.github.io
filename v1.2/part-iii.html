@@ -504,10 +504,10 @@
           #franca-top30 .f30-scale-side.right span:nth-child(3){left:50%}
           #franca-top30 .f30-scale-side.right span:nth-child(4){left:75%}
           #franca-top30 .f30-scale-side.right span:nth-child(5){right:0;left:auto;transform:none}
-          #franca-top30 .f30-row{min-height:60px;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
+          #franca-top30 .f30-row{min-height:0;padding:8px 0;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
           #franca-top30 .f30-film{position:relative;text-align:center;line-height:1.15;padding:0 56px}
           #franca-top30 .f30-rank{position:absolute;left:4px;top:50%;transform:translateY(-50%);width:46px;color:#8f8f8f;text-align:right;display:flex;align-items:center;justify-content:flex-end;gap:7px;line-height:1}
-          #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.2;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
+          #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.2;text-align:center}
           #franca-top30 .f30-name em{font-style:italic;font-weight:600}
           #franca-top30 .f30-rank-num{display:inline-block;min-width:12px;font-size:12px;font-weight:400;color:#5f5f5f}
           #franca-top30 .f30-rank-sign{display:inline-block;font-size:16px;font-weight:700;line-height:1;color:#888;transform:translateY(-.2px)}
@@ -532,7 +532,7 @@
           #franca-top30 .f30-over{position:absolute;left:0;top:0;height:15px;border-left:2px solid #b8463a;pointer-events:none}
           #franca-top30 .f30-separator{display:block;margin:26px 0 8px;padding-top:0;border-top:1px solid #d8d8d8}
           #franca-top30 .f30-separator:before,#franca-top30 .f30-separator:after{content:none}
-          #franca-top30 .f30-extra .f30-row{min-height:60px}
+          #franca-top30 .f30-extra .f30-row{min-height:0}
           #franca-top30 .f30-extra .f30-row:first-child{border-top:none}
           #franca-top30 .f30-source{font-size:10.5px;line-height:1.45;color:#888;text-align:center;margin:14px auto 0;max-width:880px;padding:0 12px}
           #f30-tip{position:fixed;z-index:9999;display:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;padding:8px 10px;border-radius:3px;font:12px/1.42 'Inter',-apple-system,Arial,sans-serif;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
@@ -615,7 +615,7 @@
                 : '<span class="f30-rank-sign left" aria-label="Espanya supera França">←</span>';
             };
             const row = (f,extra) => {
-              const title = '<div><div class="f30-name"><em>'+f.title+'</em><span class="f30-year">('+f.year+')</span></div><div class="f30-director">'+f.director+'</div></div>';
+              const title = '<div><div class="f30-name"><em>'+f.title+'</em> <span class="f30-year">('+f.year+')</span></div><div class="f30-director">'+f.director+'</div></div>';
               const middle = '<div class="f30-film">'+(extra ? '<div class="f30-rank"></div>' : '<div class="f30-rank"><span class="f30-rank-num">'+f.rank+'</span>'+marketSign(f)+'</div>')+title+'</div>';
               const frW=Math.max(.3,Math.min(100,f.fr/MAX*100));
               const esW=Math.max(.3,Math.min(100,f.es/MAX*100));
