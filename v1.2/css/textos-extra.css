@@ -75,7 +75,7 @@
 #grafic-decades {
   padding: 28px 0;
   border-top: 1px solid #e5e5e5;
-  border-bottom: none;
+  border-bottom: 1px solid #e5e5e5;
   margin: 0 !important;
 }
 #taula-resum-premis {
@@ -364,6 +364,37 @@ th.col-iic-header {
 }
 
 #seccio-mercat-grafic .grafic-font {
+  max-width: 700px;
+  margin: 6px auto 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #888;
+  font-style: normal;
+}
+
+
+/* ── Part I · Distribució del Top 100 per dècada ── */
+#grafic-decades .grafic-decades-titol {
+  font-size: .82em;
+  font-weight: 700;
+  color: #363737;
+  text-align: center;
+  margin: 0 0 16px;
+  font-family: "Inter", -apple-system, "SF Pro Text", sans-serif;
+}
+
+#grafic-decades .grafic-nota {
+  max-width: 700px;
+  margin: 14px auto 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #666;
+  font-style: italic;
+}
+
+#grafic-decades .grafic-font {
   max-width: 700px;
   margin: 6px auto 0;
   text-align: center;
