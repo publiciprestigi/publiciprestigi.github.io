@@ -367,7 +367,10 @@
             #bf-tip { position:fixed; z-index:9999; display:none; max-width:260px; background:rgba(45,45,45,.96); color:white; padding:8px 10px; border-radius:3px; font:12px/1.4 'Inter',-apple-system,Arial,sans-serif; pointer-events:none; box-shadow:0 2px 8px rgba(0,0,0,.14); }
             #bf-tip strong { font-weight:600; }
              #grafic-bunuel-franca-bloc .frx-source { font-size:10.5px; line-height:1.45; color:#888; text-align:center; margin:12px auto 0; max-width:850px; padding:0 12px; }
-          #grafic-mercats-coda-bloc .frx-source,#grafic-mercats-ratio-bloc .frx-source { font-size:10.5px; line-height:1.45; color:#888; text-align:center; margin:12px auto 0; max-width:850px; padding:0 12px; }
+          #grafic-mercats-coda-bloc .frx-source { font-size:10.5px; line-height:1.45; color:#888; text-align:center; margin:12px auto 0; max-width:850px; padding:0 12px; }
+          #grafic-mercats-coda-bloc .mercat-view-controls{display:flex;justify-content:center;gap:7px;margin:0 0 12px}
+          #grafic-mercats-coda-bloc .mercat-view-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 13px;font:500 11px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer}
+          #grafic-mercats-coda-bloc .mercat-view-toggle.is-active,#grafic-mercats-coda-bloc .mercat-view-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
           </style>
 
           <div style="overflow:visible">
@@ -474,6 +477,8 @@
           #franca-top30 .f30-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 14px;font:500 11.5px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
           #franca-top30 .f30-toggle:hover{border-color:#aaa;color:#444}
           #franca-top30 .f30-toggle[aria-pressed="true"],#franca-top30 .f30-toggle.is-active{background:#363737;color:#fff;border-color:#363737}
+          #franca-top30 .f30-direction-note{margin:-7px 0 13px;text-align:center;font-size:9.8px;line-height:1.35;color:#8a8a8a}
+          #franca-top30 .f30-direction-note strong{font-weight:600;color:#777}
           #franca-top30 .f30-head,
           #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,33%) minmax(220px,34%) minmax(0,33%);align-items:center}
           #franca-top30 .f30-head{margin:0 0 8px;align-items:end}
@@ -500,10 +505,10 @@
           #franca-top30 .f30-scale-side.right span:nth-child(5){right:0;left:auto;transform:none}
           #franca-top30 .f30-row{min-height:60px;border-top:1px solid #f0f0f0;transition:opacity .15s ease}
           #franca-top30 .f30-film{position:relative;text-align:center;line-height:1.15;padding:0 56px}
-          #franca-top30 .f30-rank{position:absolute;left:2px;top:50%;transform:translateY(-50%);width:48px;font-size:16px;color:#8f8f8f;text-align:right;display:flex;align-items:center;justify-content:flex-end;gap:7px;line-height:1}
+          #franca-top30 .f30-rank{position:absolute;left:4px;top:50%;transform:translateY(-50%);width:46px;color:#8f8f8f;text-align:right;display:flex;align-items:center;justify-content:flex-end;gap:7px;line-height:1}
           #franca-top30 .f30-name{font-size:13.5px;color:#303131;min-width:0;line-height:1.2;display:inline-flex;align-items:center;justify-content:center;gap:6px;flex-wrap:wrap}
           #franca-top30 .f30-name em{font-style:italic;font-weight:600}
-          #franca-top30 .f30-rank-num{display:inline-block;min-width:13px;font-size:16px;font-weight:500}
+          #franca-top30 .f30-rank-num{display:inline-block;min-width:12px;font-size:12px;font-weight:500;color:#8f8f8f}
           #franca-top30 .f30-rank-sign{display:inline-block;font-size:16px;font-weight:700;line-height:1;color:#888;transform:translateY(-.2px)}
           #franca-top30 .f30-rank-sign.left{color:#b8463a}
           #franca-top30 .f30-rank-sign.right{color:#1e3d6b}
@@ -552,9 +557,10 @@
                 <button type="button" class="f30-toggle" data-mode="without" aria-pressed="false">Sense Almodóvar</button>
                 <button type="button" class="f30-toggle" data-mode="only" aria-pressed="false">Només Almodóvar</button>
               </div>
+              <p class="f30-direction-note">La fletxa indica quin país té més espectadors; <strong>=</strong>, resultats similars.</p>
               <div class="f30-head">
                 <div><div class="f30-country es">← Espanya</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
-                <div class="f30-head-title"><span class="f30-head-main">Pos. · pel·lícula</span><span class="f30-head-key"><span class="left">← Espanya</span><span class="equal">=</span><span class="right">França →</span></span></div>
+                <div class="f30-head-title"><span class="f30-head-main">Pel·lícula</span></div>
                 <div><div class="f30-country fr">França →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
               </div>
               <div id="f30-main"></div>
@@ -659,17 +665,14 @@
         </div>
 
         <div id="grafic-mercats-coda-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 14px;margin:20px 0">
+          <div class="mercat-view-controls" role="group" aria-label="Canvia la lectura del gràfic">
+            <button type="button" class="mercat-view-toggle is-active" data-view="mercat" aria-pressed="true">Mercat i població</button>
+            <button type="button" class="mercat-view-toggle" data-view="perhab" aria-pressed="false">Entrades per habitant</button>
+          </div>
           <div style="height:360px;position:relative">
             <canvas id="grafic-mercats-coda"></canvas>
           </div>
-          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població). Dades en milions.</p>
-        </div>
-
-        <div id="grafic-mercats-ratio-bloc" style="border-bottom:1px solid #e0e0e0;padding:8px 0 14px;margin:0 0 20px">
-          <div style="height:240px;position:relative">
-            <canvas id="grafic-mercats-ratio"></canvas>
-          </div>
-          <p class="frx-source">Lectura corregida per població: entrades anuals per habitant.</p>
+          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població). Dades en milions; la vista «Entrades per habitant» relaciona les dues sèries.</p>
         </div>
 
         <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
@@ -685,17 +688,23 @@
             const fraEntrades = [259.1, 234.2, 211.5, 203.2, 183.9, 184.4, 177.0, 184.4, 176.0, 179.4, 181.7, 177.3, 170.3, 178.5, 178.1, 175.4, 189.2, 201.9, 198.9, 190.9, 175.1, 168.1, 136.9, 124.7, 120.9, 121.9, 117.5, 116.0, 132.7, 124.4, 130.2, 136.7, 149.3, 170.6, 153.6, 165.8, 187.5, 184.4, 173.5, 195.8, 175.6, 188.8, 178.5, 190.3, 201.6, 207.1, 217.2, 203.6, 193.7, 209.1, 205.4, 213.2, 209.4, 201.2, 213.2, 65.3, 95.5, 152.1, 180.5, 181.6, 156.79];
             const espPoblacio = [32.1, 32.3, 32.6, 32.9, 33.2, 33.8, 34.1, 34.4, 34.8, 35.1, 35.5, 36.0, 36.4, 36.9, 37.2, 37.5, 37.8, 38.0, 38.2, 38.3, 38.4, 38.5, 38.6, 38.7, 38.8, 38.9, 38.9, 39.0, 39.1, 39.1, 39.2, 39.4, 39.6, 39.9, 40.2, 40.3, 41.1, 42.0, 42.7, 43.2, 44.1, 44.7, 45.2, 46.1, 46.7, 47.0, 47.2, 47.3, 47.1, 46.8, 46.6, 46.4, 46.6, 46.9, 47.1, 47.4, 47.5, 47.8, 48.3, 48.5, 48.6];
             const fraPoblacio = [49.877725, 50.311637, 50.722791, 51.11298, 51.536014, 52.007169, 52.499553, 52.962356, 53.392161, 53.746571, 54.002853, 54.232383, 54.486467, 54.73403, 54.979851, 55.274184, 55.603353, 55.806789, 56.10833, 56.383085, 56.665619, 56.956002, 57.266167, 57.598186, 57.943062, 58.261012, 58.554242, 58.846584, 59.103094, 59.324863, 59.541294, 59.754504, 59.968066, 60.190684, 60.501986, 60.918661, 61.364377, 61.812142, 62.249855, 62.707588, 63.180854, 63.622342, 64.01689, 64.375116, 64.706436, 65.026211, 65.34083, 65.657659, 65.997932, 66.312067, 66.548272, 66.724104, 66.91802, 67.158348, 67.382061, 67.60111, 67.842811, 68.184457, 68.372286, 68.551653, 68.720337];
-            new Chart(canvas.getContext('2d'), {
+            const espPerHab = espEntrades.map((v,i)=> Number((v/espPoblacio[i]).toFixed(2)));
+            const fraPerHab = fraEntrades.map((v,i)=> Number((v/fraPoblacio[i]).toFixed(2)));
+
+            const mercatDatasets = [
+              {label:'Espanya · entrades (M)',data:espEntrades,backgroundColor:'rgba(184,70,58,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
+              {label:'França · entrades (M)',data:fraEntrades,backgroundColor:'rgba(30,61,107,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
+              {label:'Espanya · població (M)',data:espPoblacio,type:'line',borderColor:'rgba(184,70,58,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.25,yAxisID:'y2',order:1,pointStyle:'line'},
+              {label:'França · població (M)',data:fraPoblacio,type:'line',borderColor:'rgba(30,61,107,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.25,yAxisID:'y2',order:1,pointStyle:'line'}
+            ];
+            const perHabDatasets = [
+              {label:'Espanya',data:espPerHab,type:'line',borderColor:'rgba(184,70,58,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.22,yAxisID:'y',pointStyle:'line'},
+              {label:'França',data:fraPerHab,type:'line',borderColor:'rgba(30,61,107,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.22,yAxisID:'y',pointStyle:'line'}
+            ];
+
+            const chart = new Chart(canvas.getContext('2d'), {
               type:'bar',
-              data:{
-                labels:anys,
-                datasets:[
-                  {label:'Espanya · entrades (M)',data:espEntrades,backgroundColor:'rgba(184,70,58,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
-                  {label:'França · entrades (M)',data:fraEntrades,backgroundColor:'rgba(30,61,107,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
-                  {label:'Espanya · població (M)',data:espPoblacio,type:'line',borderColor:'rgba(184,70,58,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.25,yAxisID:'y2',order:1,pointStyle:'line'},
-                  {label:'França · població (M)',data:fraPoblacio,type:'line',borderColor:'rgba(30,61,107,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.25,yAxisID:'y2',order:1,pointStyle:'line'}
-                ]
-              },
+              data:{labels:anys,datasets:mercatDatasets},
               options:{
                 animation:false,responsive:true,maintainAspectRatio:false,
                 interaction:{mode:'index',intersect:false},
@@ -723,6 +732,9 @@
                     title:(ctx)=>'Any '+ctx[0].label,
                     label:(ctx)=>{
                       const i=ctx.dataIndex;
+                      if (chart.$view==='perhab') {
+                        return ctx.dataset.label+': '+Number(ctx.parsed.y).toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' entrades per habitant';
+                      }
                       const es=Number(espEntrades[i]).toLocaleString('ca-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
                       const fr=Number(fraEntrades[i]).toLocaleString('ca-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
                       const espPop=Number(espPoblacio[i]).toLocaleString('ca-ES',{minimumFractionDigits:1,maximumFractionDigits:1});
@@ -736,52 +748,40 @@
                 scales:{
                   x:{ticks:{maxTicksLimit:13,color:'#666',font:{size:10},callback:(v,i)=>anys[i]%5===0?anys[i]:''},grid:{display:false}},
                   y:{position:'left',min:0,max:420,ticks:{color:'#666',font:{size:10}},grid:{color:'rgba(0,0,0,.06)'}},
-                  y2:{position:'right',min:0,max:90,ticks:{color:'#777',font:{size:10}},grid:{display:false}}
+                  y2:{display:true,position:'right',min:0,max:90,ticks:{color:'#777',font:{size:10}},grid:{display:false}}
                 }
               }
             });
+            chart.$view='mercat';
 
-            const ratioCanvas = document.getElementById('grafic-mercats-ratio');
-            if (ratioCanvas) {
-              const espPerHab = espEntrades.map((v,i)=> Number((v/espPoblacio[i]).toFixed(2)));
-              const fraPerHab = fraEntrades.map((v,i)=> Number((v/fraPoblacio[i]).toFixed(2)));
-              new Chart(ratioCanvas.getContext('2d'), {
-                type:'line',
-                data:{
-                  labels:anys,
-                  datasets:[
-                    {label:'Espanya',data:espPerHab,borderColor:'rgba(184,70,58,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.22},
-                    {label:'França',data:fraPerHab,borderColor:'rgba(30,61,107,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.22}
-                  ]
-                },
-                options:{
-                  animation:false,responsive:true,maintainAspectRatio:false,
-                  interaction:{mode:'index',intersect:false},
-                  plugins:{
-                    title:{display:true,text:'Entrades anuals per habitant — Espanya i França (1965–2025)',color:'#363737',font:{size:14,weight:'700',family:'"Inter",-apple-system,sans-serif'},padding:{bottom:12}},
-                    legend:{position:'top',align:'center',labels:{usePointStyle:true,pointStyleWidth:18,font:{size:11,family:'"Inter",-apple-system,sans-serif'},color:'#555',padding:13,generateLabels(chart){
-                      const labels = Chart.defaults.plugins.legend.labels.generateLabels(chart);
-                      labels.forEach((label) => {
-                        const ds = chart.data.datasets[label.datasetIndex];
-                        label.fillStyle = 'transparent';
-                        label.strokeStyle = ds.borderColor;
-                        label.lineWidth = 2;
-                        label.pointStyle = 'line';
-                      });
-                      return labels;
-                    }}},
-                    tooltip:{callbacks:{
-                      title:(ctx)=>'Any '+ctx[0].label,
-                      label:(ctx)=>ctx.dataset.label+': '+Number(ctx.parsed.y).toLocaleString('ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' entrades per habitant'
-                    }}
-                  },
-                  scales:{
-                    x:{ticks:{maxTicksLimit:13,color:'#666',font:{size:10},callback:(v,i)=>anys[i]%5===0?anys[i]:''},grid:{display:false}},
-                    y:{position:'left',min:0,max:13,ticks:{color:'#666',font:{size:10}},grid:{color:'rgba(0,0,0,.06)'},title:{display:false}}
-                  }
-                }
+            const buttons=[...document.querySelectorAll('#grafic-mercats-coda-bloc .mercat-view-toggle')];
+            const setView=(view)=>{
+              chart.$view=view;
+              if(view==='perhab'){
+                chart.config.type='line';
+                chart.data.datasets=perHabDatasets;
+                chart.options.plugins.title.text='Entrades anuals per habitant — Espanya i França (1965–2025)';
+                chart.options.scales.y.min=0;
+                chart.options.scales.y.max=13;
+                chart.options.scales.y2.display=false;
+                chart.options.plugins.tooltip.filter=()=>true;
+              } else {
+                chart.config.type='bar';
+                chart.data.datasets=mercatDatasets;
+                chart.options.plugins.title.text='Entrades venudes i evolució de la població a Espanya i França (1965–2025)';
+                chart.options.scales.y.min=0;
+                chart.options.scales.y.max=420;
+                chart.options.scales.y2.display=true;
+                chart.options.plugins.tooltip.filter=(ctx)=>ctx.dataset.yAxisID==='y';
+              }
+              buttons.forEach(btn=>{
+                const active=btn.dataset.view===view;
+                btn.classList.toggle('is-active',active);
+                btn.setAttribute('aria-pressed',active?'true':'false');
               });
-            }          })();
+              chart.update();
+            };
+            buttons.forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));          })();
         </script>
 
       </div>
