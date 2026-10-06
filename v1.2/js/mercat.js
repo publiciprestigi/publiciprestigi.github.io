@@ -82,8 +82,8 @@ async function construirGraficMercat() {
         'Entradas vendidas (barras) y población (línea) en España, 1965–2025.'
       )}</p>
       <p class="grafic-font">${pipMercatT(
-        'Font: base de <em>Públic i Prestigi</em>.',
-        'Fuente: base de <em>Públic i Prestigi</em>.'
+        'Fonts: Ministeri de Cultura i Comscore (entrades); INE (població).',
+        'Fuentes: Ministerio de Cultura y Comscore (entradas); INE (población).'
       )}</p>
     </div>`;
 
