@@ -164,16 +164,23 @@ function construirPremiades() {
   const graficDiv = document.createElement('div');
   graficDiv.innerHTML = `
     <div style="margin-top:0;padding-top:0;border-top:none">
-      <p style="text-align:center;font-size:16px;font-weight:600;color:#363737;margin-bottom:16px;margin-top:0">${pipT('Evolució premiades per dècada (1965–2025)','Evolución de las premiadas por década (1965–2025)')}</p>
+      <p style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin-bottom:16px;margin-top:0">${pipT('Evolució premiades per dècada (1965–2025)','Evolución de las premiadas por década (1965–2025)')}</p>
       <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:12px;font-size:11px;color:#555;">
         ${FESTS.map(f => `<span style="display:flex;align-items:center;gap:6px;"><span style="width:10px;height:10px;border-radius:2px;background:${COLORS[f]};display:inline-block;"></span>${festivalLabel(f)}</span>`).join('')}
       </div>
       <div style="position:relative;width:100%;height:260px;">
         <canvas id="grafic-premis-decades"></canvas>
       </div>
-      <p class="grafic-peu">${pipT('Nombre de films premiats per festival i dècada.','Número de films premiados por festival y década.')}</p>
+      <p style="text-align:center;font-size:14px;line-height:1.45;color:#666;font-style:italic;margin:14px 0 0">${pipT(
+        'Nombre de films premiats per festival i dècada.',
+        'Número de films premiados por festival y década.'
+      )}</p>
+      <p style="text-align:center;font-size:12px;line-height:1.45;color:#888;font-style:normal;margin:6px 0 0">${pipT(
+        'Fonts: arxius oficials dels festivals i fonts complementàries; vegeu «Dades i fonts».',
+        'Fuentes: archivos oficiales de los festivales y fuentes complementarias; véase «Datos y fuentes».'
+      )}</p>
 
-      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">${pipT('Premiades per festival (1965–2025)','Premiadas por festival (1965–2025)')}</p>
+      <p style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">${pipT('Premiades per festival (1965–2025)','Premiadas por festival (1965–2025)')}</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:24px;">
         ${cardsFest}
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
@@ -182,7 +189,7 @@ function construirPremiades() {
         </div>
       </div>
 
-      <p style="text-align:center;font-size:15px;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">${pipT('Màxims guardons (1965–2025)','Máximos galardones (1965–2025)')}</p>
+      <p style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin-bottom:16px;margin-top:36px;padding-top:28px;border-top:1px solid #e0e0e0">${pipT('Màxims guardons (1965–2025)','Máximos galardones (1965–2025)')}</p>
       <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:8px;">
         ${cardsMaxims}
         <div style="background:#f7f7f7;border-radius:6px;padding:12px 10px;text-align:center;border:1px solid #ddd;">
