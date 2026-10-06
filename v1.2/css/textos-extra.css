@@ -353,26 +353,7 @@ th.col-iic-header {
   #seccio-mercat-grafic .grafic-mercat-canvas-wrap {
     height: 420px;
   }
-  #seccio-mercat-grafic .grafic-nota {
-  max-width: 700px;
-  margin: 14px auto 0;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1.45;
-  color: #666;
-  font-style: italic;
 }
-
-#seccio-mercat-grafic .grafic-font {
-  max-width: 700px;
-  margin: 6px auto 0;
-  text-align: center;
-  font-size: 12px;
-  line-height: 1.45;
-  color: #888;
-  font-style: normal;
-}
-
 
 /* ── Part I · Distribució del Top 100 per dècada ── */
 #grafic-decades .grafic-decades-titol {
