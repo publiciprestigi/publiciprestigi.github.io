@@ -323,3 +323,27 @@ async function construirGraficMercat() {
 }
 
 window.PiP_graficMercat = construirGraficMercat;
+
+// Si la pàgina s'obre directament a #mercat, mostraSeccio() s'executa abans
+// que aquest fitxer s'hagi carregat. En aquest cas inicialitzem el gràfic aquí.
+(function inicialitzaMercatSiJaEsVisible() {
+  const arrenca = () => {
+    const seccio = document.getElementById('seccio-mercat');
+    const cont = document.getElementById('seccio-mercat-grafic');
+    if (!seccio || !cont || cont.dataset.pipMercatInit === '1') return;
+
+    const esMercat = window.location.hash === '#mercat' ||
+      window.getComputedStyle(seccio).display !== 'none';
+
+    if (esMercat) {
+      cont.dataset.pipMercatInit = '1';
+      construirGraficMercat();
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', arrenca, { once: true });
+  } else {
+    setTimeout(arrenca, 0);
+  }
+})();
