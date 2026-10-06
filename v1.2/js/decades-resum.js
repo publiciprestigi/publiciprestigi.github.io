@@ -1,4 +1,4 @@
-/* Públic i Prestigi — Taula resum per dècades + gràfic de distribució */
+/* Públic i Prestigi — Taula resum per dècades + gràfic de distribució */ 
 
 const PIP_DEC_ES = document.documentElement.lang === 'es';
 const pipDecT = (ca, es) => PIP_DEC_ES ? es : ca;
