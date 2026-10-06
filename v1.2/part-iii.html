@@ -324,7 +324,7 @@
             #bf-mirror .bf-scale,
             #bf-mirror .bf-row { display:grid; grid-template-columns:minmax(180px,1fr) 240px minmax(180px,1fr); }
             #bf-mirror .bf-head { align-items:end; margin-bottom:4px; }
-            #bf-mirror .bf-country { font-size:11px; font-weight:600; color:#555; }
+            #bf-mirror .bf-country { font-size:11px; font-weight:600; color:#555; letter-spacing:.02em; }
             #bf-mirror .bf-country.es { text-align:right; padding-right:10px; color:#b8463a; }
             #bf-mirror .bf-country.fr { text-align:left; padding-left:10px; color:#1e3d6b; }
             #bf-mirror .bf-total-head { text-align:center; font-size:10px; color:#999; }
@@ -366,8 +366,11 @@
             #bf-mirror .bf-axis-title { text-align:center; color:#666; font-size:12px; margin-top:11px; }
             #bf-tip { position:fixed; z-index:9999; display:none; max-width:260px; background:rgba(45,45,45,.96); color:white; padding:8px 10px; border-radius:3px; font:12px/1.4 'Inter',-apple-system,Arial,sans-serif; pointer-events:none; box-shadow:0 2px 8px rgba(0,0,0,.14); }
             #bf-tip strong { font-weight:600; }
-             #grafic-bunuel-franca-bloc .frx-source { font-size:10.5px; line-height:1.45; color:#888; text-align:center; margin:12px auto 0; max-width:850px; padding:0 12px; }
-          #grafic-mercats-coda-bloc .frx-source { font-size:10.5px; line-height:1.45; color:#888; text-align:center; margin:12px auto 0; max-width:850px; padding:0 12px; }
+             #grafic-bunuel-franca-bloc .frx-source { font-size:11px; line-height:1.45; color:#888; text-align:center; margin:5px auto 0; max-width:850px; padding:0 12px; }
+            #grafic-bunuel-franca-bloc .frx-note,
+            #grafic-mercats-coda-bloc .frx-note,
+            #franca-top30 .f30-note { font-size:11px; line-height:1.45; color:#666; text-align:center; margin:12px auto 0; max-width:880px; padding:0 12px; font-style:normal; }
+          #grafic-mercats-coda-bloc .frx-source { font-size:11px; line-height:1.45; color:#888; text-align:center; margin:5px auto 0; max-width:850px; padding:0 12px; }
           #grafic-mercats-coda-bloc .mercat-chart-title{font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 13px;font-family:'Inter',-apple-system,Arial,sans-serif}
           #grafic-mercats-coda-bloc .mercat-view-controls{display:flex;justify-content:center;gap:7px;margin:0 0 14px}
           #grafic-mercats-coda-bloc .mercat-view-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 13px;font:500 11px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer}
@@ -377,9 +380,9 @@
           <div style="overflow:visible">
             <div id="bf-mirror">
               <div class="bf-head">
-                <div class="bf-country es">← Espanya</div>
+                <div class="bf-country es">ES</div>
                 <div class="bf-total-head"></div>
-                <div class="bf-country fr">França →</div>
+                <div class="bf-country fr">FR</div>
               </div>
 
               <div class="bf-scale">
@@ -454,7 +457,8 @@
               });
             })();
           </script>
-          <p class="frx-source">Fonts: Espanya, base de Públic i Prestigi. França, JP Box-Office i CNC; mercat anual francès, CNC.</p>
+          <p class="frx-note">Les barres comparen els espectadors acumulats a Espanya i França en una mateixa escala.</p>
+          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em>. França, JP Box-Office i CNC; mercat anual francès, CNC.</p>
         </div>
 
         <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
@@ -478,12 +482,12 @@
           #franca-top30 .f30-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 14px;font:500 11.5px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer;transition:background .15s ease,color .15s ease,border-color .15s ease}
           #franca-top30 .f30-toggle:hover{border-color:#aaa;color:#444}
           #franca-top30 .f30-toggle[aria-pressed="true"],#franca-top30 .f30-toggle.is-active{background:#363737;color:#fff;border-color:#363737}
-          #franca-top30 .f30-direction-note{margin:-7px 0 13px;text-align:center;font-size:9.8px;line-height:1.35;color:#8a8a8a}
+          #franca-top30 .f30-direction-note{margin:-7px 0 13px;text-align:center;font-size:11px;line-height:1.4;color:#777}
           #franca-top30 .f30-direction-note strong{font-weight:600;color:#777}
           #franca-top30 .f30-head,
           #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,33%) minmax(220px,34%) minmax(0,33%);align-items:center}
           #franca-top30 .f30-head{margin:0 0 8px;align-items:end}
-          #franca-top30 .f30-country{font-size:11px;font-weight:600;padding-bottom:4px}
+          #franca-top30 .f30-country{font-size:11px;font-weight:600;padding-bottom:4px;letter-spacing:.02em}
           #franca-top30 .f30-country.es{text-align:right;padding-right:10px;color:#b8463a}
           #franca-top30 .f30-country.fr{text-align:left;padding-left:10px;color:#1e3d6b}
           #franca-top30 .f30-head-title{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:2px;text-align:center;color:#999;padding-bottom:2px;line-height:1.15}
@@ -534,7 +538,7 @@
           #franca-top30 .f30-separator:before,#franca-top30 .f30-separator:after{content:none}
           #franca-top30 .f30-extra .f30-row{min-height:0}
           #franca-top30 .f30-extra .f30-row:first-child{border-top:none}
-          #franca-top30 .f30-source{font-size:10.5px;line-height:1.45;color:#888;text-align:center;margin:14px auto 0;max-width:880px;padding:0 12px}
+          #franca-top30 .f30-source{font-size:11px;line-height:1.45;color:#888;text-align:center;margin:5px auto 0;max-width:880px;padding:0 12px}
           #f30-tip{position:fixed;z-index:9999;display:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;padding:8px 10px;border-radius:3px;font:12px/1.42 'Inter',-apple-system,Arial,sans-serif;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.14)}
           #f30-tip strong{font-weight:600}
           @media (max-width:760px){
@@ -558,15 +562,16 @@
                 <button type="button" class="f30-toggle" data-mode="without" aria-pressed="false">Sense Almodóvar</button>
                 <button type="button" class="f30-toggle" data-mode="only" aria-pressed="false">Només Almodóvar</button>
               </div>
-              <p class="f30-direction-note">La fletxa indica quin país té més espectadors; <strong>=</strong>, resultats similars.</p>
+              
               <div class="f30-head">
-                <div><div class="f30-country es">← Espanya</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
+                <div><div class="f30-country es">ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
                 <div class="f30-head-title"><span class="f30-head-main">Pel·lícula</span></div>
-                <div><div class="f30-country fr">França →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
+                <div><div class="f30-country fr">FR</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
               </div>
               <div id="f30-main"></div>
               <div class="f30-separator" aria-hidden="true"></div>
               <div id="f30-extra" class="f30-extra"></div>
+              <p class="f30-note">La fletxa assenyala el mercat amb més espectadors; <strong>=</strong> indica xifres similars. Les barres utilitzen una mateixa escala.</p>
               <p class="f30-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> i ICAA quan el film no forma part del corpus. França, CNC i fonts franceses de box-office; mercat anual francès, CNC. Les dades de mercat i quota s’incorporen als globus sobre cada barra.</p>
             </div>
           </div>
@@ -674,7 +679,8 @@
           <div style="height:360px;position:relative">
             <canvas id="grafic-mercats-coda"></canvas>
           </div>
-          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població). Dades en milions; la vista «Entrades per habitant» relaciona les dues sèries.</p>
+          <p id="mercats-coda-nota" class="frx-note">Entrades venudes (barres) i població (línies) a Espanya i França, 1965–2025.</p>
+          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).</p>
         </div>
 
         <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
