@@ -115,10 +115,6 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `
-    <p class="grafic-decades-titol">${pipDecT(
-      'Distribució del Top 100 per dècada (1965–2025)',
-      'Distribución del Top 100 por década (1965–2025)'
-    )}</p>
     <canvas id="grafic-decades-canvas"></canvas>
     <p class="grafic-nota">${pipDecT(
       'Nombre de pel·lícules del Top 100 per dècada i percentatge que representen.',
