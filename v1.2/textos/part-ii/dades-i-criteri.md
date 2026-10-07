@@ -18,7 +18,7 @@ L’ordre de presentació dels festivals respon a una jerarquia de prestigi àmp
 
 Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. <sup>[6]</sup> La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als altres festivals europeus.
 
-En l’àmbit de les acadèmies, els Oscar ocupen una posició clarament superior en projecció pública, impacte internacional i capacitat de consagració. Els EFA tenen un pes molt menor en aquests mateixos termes, però s’inclouen per la seva funció institucional com a principal reconeixement paneuropeu impulsat per la European Film Academy. La seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat institucional de construir un espai europeu de reconeixement compartit.
+En l’àmbit de les acadèmies, els Oscar ocupen una posició clarament superior en projecció pública, impacte internacional i capacitat de consagració. Els EFA tenen un pes molt menor en aquests mateixos termes, però s’inclouen com el principal intent de construir un reconeixement comú del cinema europeu. La seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat institucional de construir un espai europeu de reconeixement compartit.
 
 ## Coproduccions internacionals
 
