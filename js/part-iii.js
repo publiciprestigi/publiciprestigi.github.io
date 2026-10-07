@@ -1,8 +1,11 @@
 /* Públic i Prestigi — Part III: Anàlisi */
 
 let festivalsData = [];
+let oscarData = [];
+let efaData = [];
 let filmsData = [];
 let marketData = [];
+let corpusPrestigiData = [];
 
 const PIP_III_ES = document.documentElement.lang === 'es';
 const pip3T = (ca, es) => PIP_III_ES ? es : ca;
@@ -30,6 +33,8 @@ const FC = {
   'Venècia':      '#2E7D5E',
   'Sant Sebastià':'#E07B2A',
 };
+const OSCAR_COLOR = '#c8a000';
+const EFA_COLOR = '#8C6239';
 
 const fmt = n => n == null ? '—' : n.toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES');
 
@@ -43,18 +48,27 @@ function nomFest(festival) {
 
 async function carregarDades() {
   try {
-    const [rf, ri, rm] = await Promise.all([
+    const [rf, ro, re, ri, rm] = await Promise.all([
       fetch(pipPath('data/festivals.json')),
+      fetch(pipPath('data/oscar.json')),
+      fetch(pipPath('data/efa.json')),
       fetch(pipPath('data/films.json')),
       fetch(pipPath('data/market.json')),
     ]);
     festivalsData = await rf.json();
+    const oscarRaw = await ro.json();
+    const efaRaw = await re.json();
+    oscarData = oscarRaw.films || [];
+    efaData = efaRaw.films || [];
     filmsData = await ri.json();
     marketData = await rm.json();
+    corpusPrestigiData = construirCorpusPrestigi();
     window._filmsData = filmsData;
     window._festivalsData = festivalsData;
+    window._corpusPrestigiData = corpusPrestigiData;
     construirDobleCorona();
     construirSegonCercle();
+    construirGraficDobleCorona();
     construirBretxa();
     construirCazaAlcarras();
     construirDuesGeneracions();
@@ -76,33 +90,116 @@ function getDecada(any) {
 }
 
 /* ============================================================
-   DOBLE CORONA — Films de festival presents al Top 100
+   CORPUS DE PRESTIGI — unió en memòria, sense nou fitxer global
+   ============================================================ */
+function clauFilm(f) {
+  return `${String(f.titol || '').trim().toLocaleLowerCase('ca-ES')}|${f.any}`;
+}
+
+function construirCorpusPrestigi() {
+  const mapa = new Map();
+
+  function base(f) {
+    const k = clauFilm(f);
+    if (!mapa.has(k)) {
+      mapa.set(k, {
+        titol: f.titol,
+        any: f.any,
+        director: f.director || '',
+        festivals: [],
+        oscar: null,
+        efa: null,
+        top100_pos: null,
+        espectadors: null,
+      });
+    }
+    const d = mapa.get(k);
+    if (!d.director && f.director) d.director = f.director;
+    if (f.espectadors != null) d.espectadors = f.espectadors;
+    if (f.top100_pos != null) d.top100_pos = f.top100_pos;
+    return d;
+  }
+
+  festivalsData.forEach(f => {
+    const d = base(f);
+    d.festivals.push(f);
+  });
+  oscarData.forEach(f => {
+    const d = base(f);
+    d.oscar = f;
+  });
+  efaData.forEach(f => {
+    const d = base(f);
+    d.efa = f;
+  });
+
+  // films.json continua sent la font de suport per al Top 100 i espectadors
+  filmsData.forEach(f => {
+    const d = mapa.get(clauFilm(f));
+    if (!d) return;
+    if (f.espectadors != null) d.espectadors = f.espectadors;
+    if (f.in_top100 && f.pos_hist != null) d.top100_pos = f.pos_hist;
+  });
+
+  return [...mapa.values()];
+}
+
+function tePremiAcademia(f) {
+  return !!(f && String(f.reconeixement || '').includes('★'));
+}
+
+function celFestival(d) {
+  if (!d.festivals.length) return '—';
+  return d.festivals.map(f => {
+    const estrella = f.premiat ? ' <span class="estrella">★</span>' : '';
+    return `${nomFest(f.festival)}${estrella}`;
+  }).join(' · ');
+}
+
+function celAcademies(d) {
+  const parts = [];
+  if (d.oscar) {
+    const estrella = tePremiAcademia(d.oscar) ? ' <span class="estrella">★</span>' : '';
+    parts.push(`<strong style="color:${OSCAR_COLOR}">Oscar</strong>${estrella}`);
+  }
+  if (d.efa) {
+    const estrella = tePremiAcademia(d.efa) ? ' <span class="estrella">★</span>' : '';
+    parts.push(`<strong style="color:${EFA_COLOR}">EFA</strong>${estrella}`);
+  }
+  return parts.length ? parts.join(' · ') : '—';
+}
+
+// Regla exclusiva per al gràfic introductori: via d’entrada a la doble corona.
+// No és una jerarquia de prestigi: els films ja presents als festivals s’adscriuen
+// al festival corresponent; entre els casos que entren només per acadèmies, Oscar > EFA.
+// La taula conserva totes les presències reals.
+function viaEntradaDobleCorona(d) {
+  if (d.festivals.length) return d.festivals[0].festival;
+  if (d.oscar) return 'Oscar';
+  if (d.efa) return 'EFA';
+  return null;
+}
+
+/* ============================================================
+   DOBLE CORONA — Top 100 + reconeixement al corpus de prestigi
    ============================================================ */
 function construirDobleCorona() {
   const cont = document.getElementById('taula-doble-corona');
   if (!cont) return;
 
-  // Films únics in_top100 (deduplicació per títol+any si està a >1 festival)
-  const seen = new Map();
-  festivalsData.filter(f => f.in_top100).forEach(f => {
-    const k = f.titol + '|' + f.any;
-    if (!seen.has(k)) seen.set(k, f);
-  });
-  const films = [...seen.values()].sort((a,b) => (b.espectadors||0) - (a.espectadors||0));
+  const films = corpusPrestigiData
+    .filter(f => f.top100_pos != null)
+    .sort((a,b) => (a.top100_pos || 999) - (b.top100_pos || 999));
 
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-    const premi = f.premiat ? '<span class="estrella">★</span>' : '';
-    const decadaValor = decadaLabel3(f);
-    const decada = (decadaValor && decadaValor !== '—') ? decadaValor : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td class="col-pos">${i+1}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
-      <td>${nomFest(f.festival)}</td>
-      <td class="col-center">${premi}</td>
+      <td>${celFestival(f)}</td>
+      <td>${celAcademies(f)}</td>
       <td class="col-center col-subtil">#${f.top100_pos}</td>
-      <td class="col-subtil col-decada">${decada}</td>
       <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
     </tr>`;
   }).join('');
@@ -111,49 +208,429 @@ function construirDobleCorona() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:40%">${pip3T('Títol','Título')}</th>
-        <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
-        <th style="width:100px">Festival</th>
-        <th class="col-center" style="width:55px">${pip3T('Premi','Premio')}</th>
+        <th style="width:31%">${pip3T('Títol','Título')}</th>
+        <th class="col-subtil" style="width:14%">${pip3T('Direcció','Dirección')}</th>
+        <th style="width:16%">Festival</th>
+        <th style="width:16%">${pip3T('Acadèmies','Academias')}</th>
         <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-subtil" style="width:75px">${pip3T('Dècada','Década')}</th>
         <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
 }
 
+
+function construirGraficDobleCorona() {
+  const canvas = document.getElementById('grafic-doble-corona');
+  if (!canvas || typeof Chart === 'undefined' || !corpusPrestigiData.length) return;
+  if (window._chartDobleCorona) window._chartDobleCorona.destroy();
+
+  const ordre = ['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
+  const colors = {
+    'Cannes': FC.Cannes,
+    'Venècia': FC['Venècia'],
+    'Berlín': FC['Berlín'],
+    'Sant Sebastià': FC['Sant Sebastià'],
+    'Oscar': OSCAR_COLOR,
+    'EFA': EFA_COLOR,
+  };
+
+  const dobles = corpusPrestigiData
+    .filter(f => f.top100_pos != null)
+    .map(f => ({ ...f, via: viaEntradaDobleCorona(f) }))
+    .filter(f => !!f.via)
+    .sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca'));
+
+  const counts = Object.fromEntries(ordre.map(v => [v, dobles.filter(f => f.via === v).length]));
+
+  // Separa visualment els films d'una mateixa via quan cauen en anys iguals o molt pròxims.
+  // El tooltip conserva sempre l'any real; només es desplaça lleugerament la posició gràfica.
+  function spreadCloseYears(items, minGap = 1.75) {
+    const sorted = [...items].sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca'));
+    const result = [];
+    let i = 0;
+
+    while (i < sorted.length) {
+      const cluster = [sorted[i]];
+      let j = i + 1;
+      while (j < sorted.length && (sorted[j].any - sorted[j - 1].any) <= minGap) {
+        cluster.push(sorted[j]);
+        j++;
+      }
+
+      if (cluster.length === 1) {
+        result.push({ film: cluster[0], x: cluster[0].any });
+      } else {
+        const mean = cluster.reduce((s, f) => s + f.any, 0) / cluster.length;
+        const start = mean - (minGap * (cluster.length - 1) / 2);
+        cluster.forEach((f, idx) => result.push({ film: f, x: start + idx * minGap }));
+      }
+      i = j;
+    }
+    return result;
+  }
+
+  const datasets = ordre.map((via, idx) => {
+    const y = ordre.length - idx;
+    const items = dobles.filter(f => f.via === via);
+
+    const points = spreadCloseYears(items).map(({ film:f, x }) => ({
+      x,
+      y,
+      any: f.any,
+      titol: f.titol,
+      via,
+      top100_pos: f.top100_pos,
+    }));
+
+    return {
+      label: via,
+      data: points,
+      showLine: false,
+      pointRadius: 7,
+      pointHoverRadius: 9,
+      pointHitRadius: 12,
+      pointBackgroundColor: colors[via],
+      pointBorderColor: '#ffffff',
+      pointBorderWidth: 1.5,
+      pointHoverBorderColor: '#363737',
+      pointHoverBorderWidth: 1.2,
+    };
+  });
+
+  const minYear = 1965;
+  const maxYear = 2025;
+  const yMeta = {
+    6: { via: 'Cannes', label: festivalLabel3('Cannes'), count: counts['Cannes'] },
+    5: { via: 'Venècia', label: festivalLabel3('Venècia'), count: counts['Venècia'] },
+    4: { via: 'Berlín', label: festivalLabel3('Berlín'), count: counts['Berlín'] },
+    3: { via: 'Sant Sebastià', label: festivalLabel3('Sant Sebastià'), count: counts['Sant Sebastià'] },
+    2: { via: 'Oscar', label: 'Oscar', count: counts['Oscar'] },
+    1: { via: 'EFA', label: 'EFA', count: counts['EFA'] },
+  };
+
+  // Etiquetes de l'eix Y: institució en el seu color i recompte en gris neutre.
+  const yTickSplitLabels = {
+    id: 'doble-corona-y-split-labels',
+    afterDraw(chart) {
+      const scale = chart.scales.y;
+      if (!scale) return;
+      const ctx = chart.ctx;
+      const right = scale.right - 10;
+      const fontFamily = '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif';
+
+      ctx.save();
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+
+      [1,2,3,4,5,6].forEach(value => {
+        const meta = yMeta[value];
+        if (!meta) return;
+        const y = scale.getPixelForValue(value);
+        const countText = ` (${meta.count})`;
+
+        ctx.font = `400 13px ${fontFamily}`;
+        ctx.fillStyle = '#666';
+        ctx.fillText(countText, right, y);
+        const countWidth = ctx.measureText(countText).width;
+
+        ctx.font = `600 13px ${fontFamily}`;
+        ctx.fillStyle = colors[meta.via] || '#555';
+        ctx.fillText(meta.label, right - countWidth, y);
+      });
+
+      ctx.restore();
+    },
+  };
+
+  const externalTooltip = {
+    id: 'doble-corona-tooltip-external',
+    afterInit(chart) {
+      const parent = chart.canvas.parentNode;
+      let el = parent.querySelector('.doble-corona-tooltip');
+      if (!el) {
+        el = document.createElement('div');
+        el.className = 'doble-corona-tooltip';
+        Object.assign(el.style, {
+          position: 'absolute',
+          opacity: '0',
+          pointerEvents: 'none',
+          zIndex: '10',
+          background: 'rgba(45,45,45,0.95)',
+          color: '#fff',
+          borderRadius: '6px',
+          padding: '8px 10px',
+          fontSize: '12px',
+          lineHeight: '1.4',
+          whiteSpace: 'nowrap',
+          transition: 'opacity .08s ease',
+        });
+        parent.appendChild(el);
+      }
+    },
+  };
+
+  window._chartDobleCorona = new Chart(canvas.getContext('2d'), {
+    type: 'scatter',
+    plugins: [externalTooltip, yTickSplitLabels],
+    data: { datasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      layout: { padding: { top: 4, right: 8, bottom: 0, left: 6 } },
+      interaction: { mode: 'nearest', intersect: true },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          enabled: false,
+          external({ chart, tooltip }) {
+            const parent = chart.canvas.parentNode;
+            let el = parent.querySelector('.doble-corona-tooltip');
+            if (!el) return;
+
+            if (!tooltip || tooltip.opacity === 0 || !tooltip.dataPoints || !tooltip.dataPoints.length) {
+              el.style.opacity = '0';
+              return;
+            }
+
+            const raw = tooltip.dataPoints[0].raw || {};
+            const esc = (v) => String(v)
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#039;');
+
+            el.innerHTML = `<div><strong><em>${esc(raw.titol || '')}</em></strong> (${esc(raw.any || '')})</div>`;
+            el.style.opacity = '1';
+
+            const gap = 12;
+            const caretX = chart.canvas.offsetLeft + tooltip.caretX;
+            const caretY = chart.canvas.offsetTop + tooltip.caretY;
+            const width = el.offsetWidth;
+            const height = el.offsetHeight;
+            let left = caretX + gap;
+            if (left + width > parent.clientWidth) left = caretX - width - gap;
+            left = Math.max(0, Math.min(left, parent.clientWidth - width));
+            let top = caretY - (height / 2);
+            top = Math.max(0, Math.min(top, parent.clientHeight - height));
+            el.style.left = `${left}px`;
+            el.style.top = `${top}px`;
+          },
+        },
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          min: minYear,
+          max: maxYear,
+          grid: { color: 'rgba(0,0,0,0.05)' },
+          border: { color: '#d9d9d9' },
+          ticks: {
+            color: '#777',
+            font: { size: 11 },
+            stepSize: 10,
+            callback(value) {
+              return Number.isInteger(value) ? String(value) : '';
+            },
+          },
+        },
+        y: {
+          min: 0.5,
+          max: 6.5,
+          afterFit(scale) {
+            // Reserva espai per a la institució + el recompte dibuixats pel plugin.
+            scale.width = 122;
+          },
+          afterBuildTicks(scale) {
+            scale.ticks = [1,2,3,4,5,6].map(value => ({ value }));
+          },
+          ticks: {
+            display: false,
+            autoSkip: false,
+            padding: 10,
+          },
+          grid: { color: 'rgba(0,0,0,0.06)' },
+          border: { display: false },
+        },
+      },
+    },
+  });
+}
+
+// Versió preservada del gràfic inicial de barres, per si cal recuperar-la.
+function construirGraficDobleCoronaBarsOld() {
+  const canvas = document.getElementById('grafic-doble-corona');
+  if (!canvas || typeof Chart === 'undefined' || !corpusPrestigiData.length) return;
+  if (window._chartDobleCorona) window._chartDobleCorona.destroy();
+
+  const dobles = corpusPrestigiData.filter(f => f.top100_pos != null);
+  const ordre = ['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
+  const colors = [FC.Cannes, FC['Venècia'], FC['Berlín'], FC['Sant Sebastià'], OSCAR_COLOR, EFA_COLOR];
+  const labels = ordre.map(x => (x === 'Venècia' || x === 'Sant Sebastià') ? festivalLabel3(x) : x);
+  const grups = ordre.map(v => ({
+    via: v,
+    films: dobles
+      .filter(f => viaEntradaDobleCorona(f) === v)
+      .sort((a,b) => (a.any - b.any) || a.titol.localeCompare(b.titol, PIP_III_ES ? 'es' : 'ca')),
+  }));
+  const valors = grups.map(g => g.films.length);
+
+  function rgba(hex, alpha) {
+    const h = hex.replace('#','');
+    const n = parseInt(h, 16);
+    const r = (n >> 16) & 255;
+    const g = (n >> 8) & 255;
+    const b = n & 255;
+    return `rgba(${r},${g},${b},${alpha})`;
+  }
+
+  const etiquetesValors = {
+    id: 'doble-corona-valors',
+    afterDatasetsDraw(chart) {
+      const ctx = chart.ctx;
+      const meta = chart.getDatasetMeta(0);
+      ctx.save();
+      ctx.font = '600 12px "Inter", -apple-system, Arial, sans-serif';
+      ctx.fillStyle = '#363737';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'bottom';
+      meta.data.forEach((bar, i) => {
+        const v = valors[i];
+        const y = v === 0 ? chart.scales.y.getPixelForValue(0) - 5 : bar.y - 5;
+        ctx.fillText(String(v), bar.x, y);
+      });
+      ctx.restore();
+    },
+  };
+
+  window._chartDobleCorona = new Chart(canvas.getContext('2d'), {
+    type: 'bar',
+    plugins: [etiquetesValors],
+    data: {
+      labels,
+      datasets: [{
+        data: valors,
+        backgroundColor: colors.map(c => rgba(c, 0.90)),
+        hoverBackgroundColor: colors,
+        borderWidth: 0,
+        hoverBorderColor: '#363737',
+        hoverBorderWidth: 1,
+        categoryPercentage: 0.62,
+        barPercentage: 0.78,
+        maxBarThickness: 52,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      interaction: { mode: 'nearest', intersect: true },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          enabled: false,
+          external({ chart, tooltip }) {
+            const parent = chart.canvas.parentNode;
+            let el = parent.querySelector('.doble-corona-tooltip');
+            if (!el) {
+              el = document.createElement('div');
+              el.className = 'doble-corona-tooltip';
+              Object.assign(el.style, {
+                position: 'absolute',
+                opacity: '0',
+                pointerEvents: 'none',
+                zIndex: '10',
+                background: 'rgba(45,45,45,0.95)',
+                color: '#fff',
+                borderRadius: '6px',
+                padding: '9px 10px',
+                fontSize: '11px',
+                lineHeight: '1.45',
+                whiteSpace: 'nowrap',
+                transition: 'opacity .08s ease',
+              });
+              parent.appendChild(el);
+            }
+
+            if (!tooltip || tooltip.opacity === 0 || !tooltip.dataPoints || !tooltip.dataPoints.length) {
+              el.style.opacity = '0';
+              return;
+            }
+
+            const i = tooltip.dataPoints[0].dataIndex;
+            const films = grups[i].films;
+            if (!films.length) {
+              el.style.opacity = '0';
+              return;
+            }
+
+            const esc = (v) => String(v)
+              .replace(/&/g, '&amp;')
+              .replace(/</g, '&lt;')
+              .replace(/>/g, '&gt;')
+              .replace(/"/g, '&quot;')
+              .replace(/'/g, '&#039;');
+
+            el.innerHTML = films.map(f =>
+              `<div><strong><em>${esc(f.titol)}</em></strong> (${esc(f.any)})</div>`
+            ).join('');
+            el.style.opacity = '1';
+
+            const gap = 12;
+            const caretX = chart.canvas.offsetLeft + tooltip.caretX;
+            const caretY = chart.canvas.offsetTop + tooltip.caretY;
+            const width = el.offsetWidth;
+            const height = el.offsetHeight;
+            let left = caretX + gap;
+            if (left + width > parent.clientWidth) left = caretX - width - gap;
+            left = Math.max(0, Math.min(left, parent.clientWidth - width));
+            let top = caretY - (height / 2);
+            top = Math.max(0, Math.min(top, parent.clientHeight - height));
+            el.style.left = `${left}px`;
+            el.style.top = `${top}px`;
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          border: { color: '#d9d9d9' },
+          ticks: { color:'#555', font:{ size:11 } },
+        },
+        y: {
+          beginAtZero: true,
+          max: 7,
+          ticks: { stepSize:1, color:'#777', font:{ size:10 } },
+          grid: { color:'rgba(0,0,0,0.06)' },
+          border: { display: false },
+          title: { display:false },
+        },
+      },
+    },
+  });
+}
+
 /* ============================================================
-   SEGON CERCLE — Films de festival amb ≥ 1M no al Top 100
+   SEGON CERCLE — ≥1M espectadors, fora del Top 100
    ============================================================ */
 function construirSegonCercle() {
   const cont = document.getElementById('taula-segon-cercle');
   if (!cont) return;
 
-  const seen = new Map();
-  festivalsData
-    .filter(f => !f.in_top100 && (f.espectadors||0) >= 1_000_000)
-    .forEach(f => {
-      const k = f.titol + '|' + f.any;
-      if (!seen.has(k)) seen.set(k, f);
-    });
-  const films = [...seen.values()]
-    .sort((a,b) => (b.espectadors||0) - (a.espectadors||0))
-    .slice(0, 24);
+  const films = corpusPrestigiData
+    .filter(f => f.top100_pos == null && (f.espectadors || 0) >= 1_000_000)
+    .sort((a,b) => (b.espectadors||0) - (a.espectadors||0));
 
   const files = films.map((f, i) => {
     const bg = i % 2 === 0 ? '#ffffff' : '#f7f7f7';
-    const premi = f.premiat ? '<span class="estrella">★</span>' : '';
-    const decadaValor = decadaLabel3(f);
-    const decada = (decadaValor && decadaValor !== '—') ? decadaValor : '—';
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
-      <td class="col-pos">${i+12}</td>
+      <td class="col-pos">${i+18}</td>
       <td>${titolFilm(f)}</td>
       <td class="col-subtil">${f.director}</td>
-      <td>${nomFest(f.festival)}</td>
-      <td class="col-center">${premi}</td>
-      <td class="col-center col-subtil">—</td>
-      <td class="col-subtil col-decada">${decada}</td>
+      <td>${celFestival(f)}</td>
+      <td>${celAcademies(f)}</td>
       <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
     </tr>`;
   }).join('');
@@ -162,12 +639,10 @@ function construirSegonCercle() {
     <table class="taula-festivals">
       <thead><tr>
         <th class="col-pos">#</th>
-        <th style="width:40%">${pip3T('Títol','Título')}</th>
-        <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
-        <th style="width:100px">Festival</th>
-        <th class="col-center" style="width:55px">${pip3T('Premi','Premio')}</th>
-        <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-subtil" style="width:75px">${pip3T('Dècada','Década')}</th>
+        <th style="width:34%">${pip3T('Títol','Título')}</th>
+        <th class="col-subtil" style="width:16%">${pip3T('Direcció','Dirección')}</th>
+        <th style="width:18%">Festival</th>
+        <th style="width:18%">${pip3T('Acadèmies','Academias')}</th>
         <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}</th>
       </tr></thead>
       <tbody>${files}</tbody>
@@ -307,9 +782,12 @@ window.PiP_graficBretxa = function() {
           borderWidth: 2.5,
           pointRadius: 7,
           pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointBackgroundColor: colorsPunts,
           pointBorderColor: '#fff',
-          pointBorderWidth: 2,
+          pointBorderWidth: 1.5,
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
           tension: 0.25,
           fill: false,
           yAxisID: 'yRatio',
@@ -324,11 +802,14 @@ window.PiP_graficBretxa = function() {
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: {
-          display: true,
-          position: 'bottom',
-          labels: { boxWidth: 14, font: { size: 11 } },
+          display: false,
         },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             label: ctx => {
               if (ctx.dataset.yAxisID === 'yRatio')
@@ -434,7 +915,7 @@ window.PiP_graficCazaIAA = function() {
   if (!document.getElementById('caza-iaa-tit')) {
     const tit = document.createElement('p');
     tit.id = 'caza-iaa-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin-bottom:10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin-bottom:10px';
     tit.innerHTML = pip3T('IAA estimat','IAA estimado') + ': <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)';
     el.parentNode.insertBefore(tit, el);
   }
@@ -544,6 +1025,11 @@ window.PiP_graficCazaIAA = function() {
           display: false,
         },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             label: ctx => {
               const v = ctx.parsed.x;
@@ -567,7 +1053,7 @@ window.PiP_graficCazaIAA = function() {
           stacked: true,
           ticks: {
             color: '#363737',
-            font: { size: 12 },
+            font: { size: 11 },
           },
           grid: { display: false },
         },
@@ -736,7 +1222,7 @@ window.PiP_graficSauraAlmodovar = function() {
   if (bloc && !document.getElementById('sa-tit')) {
     const tit = document.createElement('p');
     tit.id = 'sa-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
     tit.innerHTML = pip3T('Saura i Almodóvar — Trajectòria d\'espectadors a sala per film (1966–2024)','Saura y Almodóvar — Trayectoria de espectadores en salas por film (1966–2024)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -815,9 +1301,13 @@ window.PiP_graficSauraAlmodovar = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
         {
           label: 'Pedro Almodóvar',
@@ -827,9 +1317,13 @@ window.PiP_graficSauraAlmodovar = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
       ],
     },
@@ -841,6 +1335,11 @@ window.PiP_graficSauraAlmodovar = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
             label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
@@ -851,7 +1350,7 @@ window.PiP_graficSauraAlmodovar = function() {
         x: {
           type: 'linear',
           min: 1965, max: 2026,
-          ticks: { stepSize: 5, color: '#363737', font: { size: 12 } },
+          ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
           grid: { color: '#eee' },
         },
         y: {
@@ -904,7 +1403,7 @@ window.PiP_graficGeneracioActual = function() {
   if (bloc && !document.getElementById('ga-tit')) {
     const tit = document.createElement('p');
     tit.id = 'ga-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
     tit.innerHTML = pip3T('Generació actual — Espectadors a sala (barra sòlida) vs. IAA estimat (barra clara)','Generación actual — Espectadores en salas (barra sólida) vs. IAA estimado (barra clara)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1018,6 +1517,11 @@ window.PiP_graficGeneracioActual = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => orden[items[0].dataIndex].titol + ' (' + orden[items[0].dataIndex].any + ')',
             label: ctx => {
@@ -1033,14 +1537,14 @@ window.PiP_graficGeneracioActual = function() {
           stacked: true,
           ticks: {
             callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
-            color: '#363737', font: { size: 12 },
+            color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: pip3T('Espectadors (sala + IAA estimat)','Espectadores (salas + IAA estimado)'), font: { size: 13 } },
+          title: { display: true, text: pip3T('Espectadors (sala + IAA estimat)','Espectadores (salas + IAA estimado)'), font: { size: 12 } },
         },
         y: {
           stacked: true,
-          ticks: { color: '#363737', font: { size: 12 } },
+          ticks: { color: '#363737', font: { size: 11 } },
           grid: { display: false },
         },
       },
@@ -1063,7 +1567,7 @@ window.PiP_graficGeneracioActual = function() {
 };
 
 // ═══════════════════════════════════════════════════════════════
-// CINEMA D'AUTOR INDUSTRIAL — Gràfic 3 directors
+// MODEL D'AUTOR INDUSTRIAL — Gràfic 3 directors
 // ═══════════════════════════════════════════════════════════════
 
 window.PiP_graficAutorIndustrial = function() {
@@ -1072,27 +1576,29 @@ window.PiP_graficAutorIndustrial = function() {
   if (window._chartAutorInd) window._chartAutorInd.destroy();
 
   const FILMS_IGLESIA = [
-    { x:1995, y:1419191, titol:'El día de la bestia',          festival:false, premiat:false, top100:false },
-    { x:1999, y:1669964, titol:'Muertos de risa',              festival:false, premiat:false, top100:false },
-    { x:2000, y:1609084, titol:'La comunidad',                 festival:false, premiat:false, top100:false },
-    { x:2008, y:1423300, titol:'Los crímenes de Oxford',       festival:false, premiat:false, top100:false },
-    { x:2010, y: 369118, titol:'Balada triste de trompeta',    festival:true,  premiat:true,  top100:false },
-    { x:2017, y:3284907, titol:'Perfectos desconocidos',       festival:false, premiat:false, top100:true  },
-    { x:2022, y: 673654, titol:'El cuarto pasajero',           festival:false, premiat:false, top100:false },
+    { x:1995, y:1419191, titol:'El día de la bestia',          top100:false, prestigi:null },
+    { x:1999, y:1669964, titol:'Muertos de risa',              top100:false, prestigi:null },
+    { x:2000, y:1609084, titol:'La comunidad',                 top100:false, prestigi:'EFA' },
+    { x:2004, y: 860710, titol:'Crimen ferpecto',              top100:false, prestigi:'EFA' },
+    { x:2008, y:1423300, titol:'Los crímenes de Oxford',       top100:false, prestigi:null },
+    { x:2010, y: 369118, titol:'Balada triste de trompeta',    top100:false, prestigi:'Venècia ★' },
+    { x:2017, y:3284907, titol:'Perfectos desconocidos',       top100:true,  prestigi:null },
+    { x:2022, y: 673654, titol:'El cuarto pasajero',           top100:false, prestigi:null, labelDy:-14 },
   ];
   const FILMS_AMENABAR = [
-    { x:1996, y: 855481, titol:'Tesis',                        festival:false, premiat:false, top100:false },
-    { x:1997, y:1794539, titol:'Abre los ojos',                festival:false, premiat:false, top100:false },
-    { x:2001, y:6410785, titol:'Los otros',                    festival:false, premiat:false, top100:true  },
-    { x:2004, y:4099475, titol:'Mar adentro',                  festival:true,  premiat:true,  top100:true  },
-    { x:2009, y:3492894, titol:'Ágora',                        festival:false, premiat:false, top100:true  },
-    { x:2019, y:1888896, titol:'Mientras dure la guerra',      festival:false, premiat:false, top100:false },
-    { x:2025, y: 797366, titol:'El cautivo',                   festival:false, premiat:false, top100:false },
+    { x:1996, y: 855481, titol:'Tesis',                        top100:false, prestigi:null },
+    { x:1997, y:1794539, titol:'Abre los ojos',                top100:false, prestigi:null },
+    { x:2001, y:6410785, titol:'Los otros',                    top100:true,  prestigi:'EFA' },
+    { x:2004, y:4099475, titol:'Mar adentro',                  top100:true,  prestigi:'Venècia ★ · Oscar ★ · EFA ★' },
+    { x:2009, y:3492709, titol:'Ágora',                        top100:true,  prestigi:'EFA' },
+    { x:2019, y:1888896, titol:'Mientras dure la guerra',      top100:false, prestigi:null },
+    { x:2025, y: 797366, titol:'El cautivo',                   top100:false, prestigi:null },
   ];
   const FILMS_BAYONA = [
-    { x:2007, y:4420987, titol:'El orfanato',                  festival:false, premiat:false, top100:true  },
-    { x:2012, y:6129976, titol:'Lo imposible',                 festival:false, premiat:false, top100:true  },
-    { x:2016, y:4613760, titol:'Un monstruo viene a verme',    festival:false, premiat:false, top100:true  },
+    { x:2007, y:4420987, titol:'El orfanato',                  top100:true,  prestigi:'EFA' },
+    { x:2012, y:6129976, titol:'Lo imposible',                 top100:true,  prestigi:'Oscar · EFA' },
+    { x:2016, y:4613696, titol:'Un monstruo viene a verme',    top100:true,  prestigi:'EFA ★' },
+    { x:2023, y: 556976, titol:'La sociedad de la nieve',      top100:false, prestigi:'Oscar · EFA ★ · Venècia (clausura)', labelDy:20 },
   ];
 
   // Títol al bloc
@@ -1100,8 +1606,8 @@ window.PiP_graficAutorIndustrial = function() {
   if (bloc && !document.getElementById('ai-tit')) {
     const tit = document.createElement('p');
     tit.id = 'ai-tit';
-    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px';
-    tit.innerHTML = pip3T('De la Iglesia, Amenábar i Bayona — Trajectòria d\'espectadors a sala per film (1995–2025)','De la Iglesia, Amenábar y Bayona — Trayectoria de espectadores en salas por film (1995–2025)');
+    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
+    tit.innerHTML = pip3T('Model d’autor industrial — Trajectòria d\'espectadors a sala (1995–2025)','Modelo de autor industrial — Trayectoria de espectadores en salas (1995–2025)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
 
@@ -1126,8 +1632,9 @@ window.PiP_graficAutorIndustrial = function() {
         ds.data.forEach((pt, i) => {
           const point = meta.data[i];
           if (!point) return;
-          const dy = i % 2 === 0 ? -14 : 20;
-          c.fillText(pt.titol, point.x, point.y + dy);
+          const dy = pt.labelDy ?? (i % 2 === 0 ? -14 : 20);
+          const dx = pt.labelDx ?? 0;
+          c.fillText(pt.titol, point.x + dx, point.y + dy);
         });
       });
       c.restore();
@@ -1172,10 +1679,15 @@ window.PiP_graficAutorIndustrial = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBackgroundColor: COL_IGLESIA,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBackgroundColor: COL_IGLESIA,
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
         {
           label: 'Alejandro Amenábar',
@@ -1185,10 +1697,15 @@ window.PiP_graficAutorIndustrial = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBackgroundColor: COL_AMENABAR,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBackgroundColor: COL_AMENABAR,
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
         {
           label: 'J.A. Bayona',
@@ -1198,10 +1715,15 @@ window.PiP_graficAutorIndustrial = function() {
           borderWidth: 2.5,
           tension: 0.15,
           pointRadius: 7,
+          pointHoverRadius: 9,
+          pointHitRadius: 12,
           pointStyle: 'circle',
           pointBackgroundColor: COL_BAYONA,
           pointBorderWidth: 1.5,
           pointBorderColor: '#fff',
+          pointHoverBackgroundColor: COL_BAYONA,
+          pointHoverBorderColor: '#363737',
+          pointHoverBorderWidth: 1.2,
         },
       ],
     },
@@ -1213,9 +1735,20 @@ window.PiP_graficAutorIndustrial = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
+          backgroundColor: 'rgba(45,45,45,0.95)',
+          cornerRadius: 6,
+          padding: 8,
+          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
+          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
           callbacks: {
             title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
+            label: ctx => {
+              const d = ctx.raw || {};
+              const lines = [fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores')];
+              if (d.top100) lines.push('Top 100');
+              if (d.prestigi) lines.push(pip3T('Reconeixement','Reconocimiento') + ': ' + d.prestigi);
+              return lines;
+            },
           },
         },
       },
@@ -1223,7 +1756,7 @@ window.PiP_graficAutorIndustrial = function() {
         x: {
           type: 'linear',
           min: 1994, max: 2027,
-          ticks: { stepSize: 5, color: '#363737', font: { size: 12 } },
+          ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
           grid: { color: '#eee' },
         },
         y: {
@@ -1277,7 +1810,7 @@ function construirLleis() {
   if (!document.getElementById('ll-styles')) {
     const s = document.createElement('style');
     s.id = 'll-styles';
-    s.textContent = `.ll-outer{position:relative;margin:0}.ll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}.ll-hint{position:absolute;top:0;right:0;width:28px;height:calc(100% - 8px);background:linear-gradient(to right,transparent,rgba(255,255,255,.55));pointer-events:none;transition:opacity .4s;z-index:20}.ll-g{position:relative;min-width:1600px;font-size:15px;font-family:-apple-system,"SF Pro Text",BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}.ll-g6{display:grid;grid-template-columns:31.67% 8.33% 6.67% 18.33% 23.33% 11.67%}.ll-lm{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed rgba(255,255,255,.42);z-index:4;pointer-events:none}.ll-lm.cl{border-left-color:rgba(0,0,0,.16)}.ll-gov{display:flex;height:26px;overflow:hidden}.ll-gb{display:flex;align-items:center;padding:0 8px;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;border-right:1px solid rgba(255,255,255,.3);white-space:nowrap;overflow:hidden}.ll-per .c{padding:11px 12px 9px;font-size:.85em;font-weight:700;color:#fff;border-right:1px solid rgba(255,255,255,.18)}.ll-mom{position:relative;height:96px;background:#f5f5f5;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;overflow:visible}.ll-mp{position:absolute;z-index:10;width:0}.ll-ml{position:absolute;left:0;top:0;bottom:0;width:0;border-left:1px dashed #b0b0b0}.ll-mc{position:absolute;left:0;top:10px;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#363737;color:#fff;font-size:.68em;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f5f5;box-shadow:0 1px 3px rgba(0,0,0,.22);z-index:2}.ll-ma{position:absolute;left:0;top:40px;transform:translateX(-50%);font-size:.65em;color:#888;white-space:nowrap;font-style:italic;text-align:center}.ll-mn{position:absolute;left:0;top:56px;transform:translateX(-50%);font-size:.72em;color:#333;white-space:nowrap;font-weight:700;text-align:center}.ll-fin .c{padding:12px 11px;font-size:.82em;color:#fff;font-style:italic;border-right:1px solid rgba(255,255,255,.18);line-height:1.4;min-height:80px}.ll-fin .c .nf{display:block;font-style:normal;font-weight:700;font-size:.9em;opacity:.82;margin-bottom:4px}.ll-iaa .c{display:flex;align-items:center;justify-content:center;height:26px;padding:0 10px;font-size:.68em;font-weight:400;color:#fff;border-right:1px solid rgba(255,255,255,.2)}.ll-eix{position:relative;height:32px;border-top:1px solid #ccc;margin-top:8px;padding-bottom:10px}.ll-ea{position:absolute;font-size:.72em;color:#999;transform:translateX(-50%);padding-top:3px;white-space:nowrap}.ll-ef{font-size:.75em;color:#888;text-transform:uppercase;letter-spacing:.05em;padding:5px 0 2px}.ll-tit{font-size:.82em;color:#363737;font-weight:700;margin-bottom:10px}.ll-leg{font-size:.78em;color:#888;font-style:italic;margin-top:10px;line-height:1.5}.c1{background:#2C3E50}.c2{background:#1A5276}.c3{background:#1E8449}.c4{background:#7D3C98}.c5{background:#B7770D}.c6{background:#922B21}.gf{background:#4E342E}.gt{background:#546E7A}.gps{background:#B71C1C}.gpp{background:#0D47A1}`;
+    s.textContent = `.ll-outer{position:relative;margin:0}.ll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px}.ll-hint{position:absolute;top:0;right:0;width:28px;height:calc(100% - 8px);background:linear-gradient(to right,transparent,rgba(255,255,255,.55));pointer-events:none;transition:opacity .4s;z-index:20}.ll-g{position:relative;min-width:1600px;font-size:15px;font-family:"Inter",-apple-system,"SF Pro Text",BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}.ll-g6{display:grid;grid-template-columns:31.67% 8.33% 6.67% 18.33% 23.33% 11.67%}.ll-lm{position:absolute;top:0;bottom:0;width:0;border-left:1px dashed rgba(255,255,255,.42);z-index:4;pointer-events:none}.ll-lm.cl{border-left-color:rgba(0,0,0,.16)}.ll-gov{display:flex;height:26px;overflow:hidden}.ll-gb{display:flex;align-items:center;padding:0 8px;font-size:.68em;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:#fff;border-right:1px solid rgba(255,255,255,.3);white-space:nowrap;overflow:hidden}.ll-per .c{padding:11px 12px 9px;font-size:.85em;font-weight:700;color:#fff;border-right:1px solid rgba(255,255,255,.18)}.ll-mom{position:relative;height:96px;background:#f5f5f5;border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;overflow:visible}.ll-mp{position:absolute;z-index:10;width:0}.ll-ml{position:absolute;left:0;top:0;bottom:0;width:0;border-left:1px dashed #b0b0b0}.ll-mc{position:absolute;left:0;top:10px;transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#363737;color:#fff;font-size:.68em;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid #f5f5f5;box-shadow:0 1px 3px rgba(0,0,0,.22);z-index:2}.ll-ma{position:absolute;left:0;top:40px;transform:translateX(-50%);font-size:.65em;color:#888;white-space:nowrap;font-style:italic;text-align:center}.ll-mn{position:absolute;left:0;top:56px;transform:translateX(-50%);font-size:.72em;color:#333;white-space:nowrap;font-weight:700;text-align:center}.ll-fin .c{padding:12px 11px;font-size:.82em;color:#fff;font-style:italic;border-right:1px solid rgba(255,255,255,.18);line-height:1.4;min-height:80px}.ll-fin .c .nf{display:block;font-style:normal;font-weight:700;font-size:.9em;opacity:.82;margin-bottom:4px}.ll-iaa .c{display:flex;align-items:center;justify-content:center;height:26px;padding:0 10px;font-size:.68em;font-weight:400;color:#fff;border-right:1px solid rgba(255,255,255,.2)}.ll-eix{position:relative;height:32px;border-top:1px solid #ccc;margin-top:8px;padding-bottom:10px}.ll-ea{position:absolute;font-size:.72em;color:#999;transform:translateX(-50%);padding-top:3px;white-space:nowrap}.ll-ef{font-size:.75em;color:#888;text-transform:uppercase;letter-spacing:.05em;padding:5px 0 2px}.ll-tit{font-size:16px;color:#363737;font-weight:600;margin-bottom:10px}.ll-leg{font-size:.78em;color:#888;font-style:italic;margin-top:10px;line-height:1.5}.c1{background:#2C3E50}.c2{background:#1A5276}.c3{background:#1E8449}.c4{background:#7D3C98}.c5{background:#B7770D}.c6{background:#922B21}.gf{background:#4E342E}.gt{background:#546E7A}.gps{background:#B71C1C}.gpp{background:#0D47A1}`;
     document.head.appendChild(s);
   }
 
@@ -1370,491 +1903,7 @@ function construirLleis() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  carregarDades();
-  construirGraficDobleCorona();
-});
-
-function construirGraficDobleCorona() {
-  const wrap = document.getElementById('grafic-doble-corona-wrap');
-  if (!wrap) return;
-
-  wrap.style.cssText = 'margin-top:28px;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:28px 0 20px;position:relative;';
-
-  const COL_PUB = '#2a5582';
-  const COL_PREST = '#9B2335';
-  const COL_OR = '#c8a000';
-
-  const dobles = [
-    { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null,           premiat:false },
-    { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null,           premiat:false },
-    { any:1975, titol:'Furtivos',            top100:'#16', festival:'Sant Sebastià', premi:'Conxa d\'Or',  premiat:true  },
-    { any:1977, titol:'La guerra de papá',   top100:'#18', festival:'Sant Sebastià', premi:null,           premiat:false },
-    { any:1984, titol:'Los santos inocentes',top100:'#62', festival:'Cannes',        premi:'Millor actor', premiat:true  },
-    { any:1988, titol:'Mujeres al borde de un ataque de nervios', top100:'#22', festival:'Venècia', premi:'Millor guió', premiat:true },
-    { any:1999, titol:'Todo sobre mi madre', top100:'#52', festival:'Cannes',        premi:'Millor direcció', premiat:true },
-    { any:2001, titol:'Juana la Loca',       top100:'#68', festival:'Sant Sebastià', premi:'Millor actriu',premiat:true  },
-    { any:2002, titol:'Los lunes al sol',    top100:'#70', festival:'Sant Sebastià', premi:'Conxa d\'Or',  premiat:true  },
-    { any:2004, titol:'Mar adentro',         top100:'#12', festival:'Venècia',       premi:'Lleó de Plata',premiat:true  },
-  ];
-  const doblesAnys = new Set(dobles.map(d => d.any));
-
-  // Dades completes: un valor per film, anys reals del Top 100
-  const pubFilms = [
-    {any:1965,titol:'La ciudad no es para mí'},{any:1966,titol:'El golfo'},{any:1966,titol:'Sopa de ganso'},
-    {any:1966,titol:'El arte de vivir'},{any:1966,titol:'La pandilla'},{any:1967,titol:'Crónica de 9 meses'},
-    {any:1967,titol:'Abuelo made in Spain'},{any:1967,titol:'La familia y uno más'},{any:1968,titol:'No somos de piedra'},
-    {any:1968,titol:'Cantando a la vida'},{any:1968,titol:'La vida sigue igual'},{any:1969,titol:'Hay que matar a B'},
-    {any:1969,titol:'El astronauta'},{any:1970,titol:'Vente a Alemania Pepe'},{any:1971,titol:'No firmes más letras Ramón'},
-    {any:1972,titol:'Mi querida señorita'},{any:1974,titol:'Tormento'},{any:1975,titol:'Furtivos'},
-    {any:1975,titol:'El casto Susanito'},{any:1976,titol:'El puente'},{any:1977,titol:'La guerra de papá'},
-    {any:1977,titol:'El anillo de nibelungo'},{any:1978,titol:'El soltero'},{any:1981,titol:'La colmena'},
-    {any:1984,titol:'Los santos inocentes'},{any:1988,titol:'Mujeres al borde de un ataque de nervios'},
-    {any:1991,titol:'Tacones lejanos'},{any:1995,titol:'Boca a boca'},{any:1997,titol:'La buena estrella'},
-    {any:1998,titol:'El abuelo'},{any:1999,titol:'Todo sobre mi madre'},{any:2001,titol:'Juana la Loca'},
-    {any:2001,titol:'El hijo de la novia'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'Soldados de Salamina'},
-    {any:2004,titol:'Mar adentro'},{any:2005,titol:'Habana Blues'},{any:2006,titol:'El laberinto del fauno'},
-    {any:2007,titol:'El orfanato'},{any:2009,titol:'Celda 211'},{any:2009,titol:'Agora'},
-    {any:2011,titol:'No habrá paz para los malvados'},{any:2012,titol:'Blancanieves'},{any:2014,titol:'La isla mínima'},
-    {any:2015,titol:'Truman'},{any:2016,titol:'Un monstruo viene a verme'},{any:2017,titol:'Verano 1993'},
-    {any:2017,titol:'El bar'},{any:2018,titol:'Campeones'},{any:2019,titol:'Dolor y gloria'},
-    {any:2022,titol:'El buen patrón'},{any:2024,titol:'Padre no hay más que uno 4'},{any:2025,titol:'Padre no hay más que uno 5'},
-  ];
-
-  const prestFilms = [
-    {any:1965,titol:'La caza'},{any:1966,titol:'Nueve cartas a Berta'},{any:1968,titol:'Stress es tres tres'},
-    {any:1970,titol:'El momento de la verdad'},{any:1973,titol:'El espíritu de la colmena'},
-    {any:1974,titol:'Tormento'},{any:1976,titol:'Pascual Duarte'},{any:1977,titol:'El desencanto'},
-    {any:1978,titol:'Cría cuervos'},{any:1981,titol:'Deprisa deprisa'},{any:1983,titol:'El sur'},
-    {any:1984,titol:'Los santos inocentes'},{any:1985,titol:'El año de las luces'},{any:1986,titol:'El viaje a ninguna parte'},
-    {any:1988,titol:'Mujeres al borde de un ataque de nervios'},{any:1989,titol:'Ay Carmela'},
-    {any:1991,titol:'Las edades de Lulú'},{any:1992,titol:'Belle époque'},{any:1994,titol:'Hola, ¿estás sola?'},
-    {any:1996,titol:'Martín (Hache)'},{any:1997,titol:'La buena estrella'},{any:1999,titol:'Todo sobre mi madre'},
-    {any:2001,titol:'Juana la Loca'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'El pianista'},
-    {any:2004,titol:'Mar adentro'},{any:2006,titol:'Volver'},{any:2007,titol:'El orfanato'},
-    {any:2009,titol:'El secreto de sus ojos'},{any:2010,titol:'Biutiful'},{any:2011,titol:'No habrá paz para los malvados'},
-    {any:2012,titol:'Blancanieves'},{any:2013,titol:'La gran belleza'},{any:2014,titol:'La isla mínima'},
-    {any:2015,titol:'Truman'},{any:2016,titol:'El olivo'},{any:2017,titol:'Verano 1993'},
-    {any:2018,titol:'Entre dos aguas'},{any:2019,titol:'Dolor y gloria'},{any:2021,titol:'El buen patrón'},
-    {any:2022,titol:'Alcarràs'},{any:2023,titol:'Cerrar los ojos'},{any:2024,titol:'Marco'},
-    {any:2025,titol:'La infiltrada'},
-  ];
-
-  // Stacking: per cada any, distribueix verticalment els dots
-  // cap avall des de la línia central (alterna: 0, -S, +S, -2S, +2S...)
-  function stackDots(films, baseY, R, step) {
-    const byYear = {};
-    films.forEach(f => {
-      if (!byYear[f.any]) byYear[f.any] = [];
-      byYear[f.any].push(f);
-    });
-    const result = [];
-    Object.entries(byYear).forEach(([anyStr, arr]) => {
-      const n = arr.length;
-      arr.forEach((f, i) => {
-        // Distribució: 0, +step, -step, +2*step, -2*step...
-        const offset = Math.ceil(i / 2) * (i % 2 === 0 ? 1 : -1) * step;
-        result.push({ ...f, cy: baseY + offset });
-      });
-    });
-    return result;
-  }
-
-  const A0=1964, A1=2025, W=860;
-  const STEP = 9; // separació vertical entre dots solapats
-  const YP_BASE = 80, YF_BASE = 180;
-  const R = 4, RD = 6;
-  const ns='http://www.w3.org/2000/svg';
-
-  const pubStacked   = stackDots(pubFilms,  YP_BASE, R, STEP);
-  const prestStacked = stackDots(prestFilms, YF_BASE, R, STEP);
-
-  // Altura total dinàmica
-  const maxYP = Math.max(...pubStacked.map(f => f.cy));
-  const maxYF = Math.max(...prestStacked.map(f => f.cy));
-  const minYP = Math.min(...pubStacked.map(f => f.cy));
-  const minYF = Math.min(...prestStacked.map(f => f.cy));
-  const PAD_TOP = 30, PAD_BOT = 50;
-  const H = Math.max(maxYP, maxYF) + PAD_BOT;
-
-  // Títol
-  const titolEl = document.createElement('p');
-  titolEl.style.cssText = 'font-size:0.82em;font-weight:600;color:#363737;margin-bottom:16px;text-align:center;font-family:system-ui,sans-serif;';
-  titolEl.textContent = pip3T('Dobles corones: films al Top 100 i a secció oficial competitiva de festival (1965–2025)','Dobles coronas: films en el Top 100 y en sección oficial competitiva de festival (1965–2025)');
-  wrap.appendChild(titolEl);
-
-  const svg = document.createElementNS(ns,'svg');
-  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
-  svg.setAttribute('width','100%');
-  svg.setAttribute('preserveAspectRatio','xMidYMid meet');
-  svg.style.cssText='display:block;width:100%;overflow:visible;';
-
-  function el(tag,attrs,par){
-    const e=document.createElementNS(ns,tag);
-    for(const[k,v]of Object.entries(attrs))e.setAttribute(k,v);
-    if(par)par.appendChild(e);return e;
-  }
-  function x(a){ return 8 + (a - A0) / (A1 - A0) * (W - 16); }
-
-  // Línies verticals dècada
-  [1965,1975,1985,1995,2005,2015,2025].forEach(a=>{
-    el('line',{x1:x(a),y1:PAD_TOP,x2:x(a),y2:H-PAD_BOT+10,stroke:'#f0f0f0','stroke-width':'1'},svg);
-    const t=el('text',{x:x(a),y:H-PAD_BOT+22,'font-size':'9',fill:'#bbb','text-anchor':'middle','font-family':'system-ui,sans-serif'},svg);
-    t.textContent=a;
-  });
-
-  // Línia horitzontal separadora al centre
-  const ySep = (YP_BASE + YF_BASE) / 2;
-  el('line',{x1:8,y1:ySep,x2:W-8,y2:ySep,stroke:'#e8e8e8','stroke-width':'1'},svg);
-
-  // Etiquetes carrils
-  el('text',{x:8,y:PAD_TOP+2,'font-size':'10',fill:COL_PUB,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent=pip3T('PÚBLIC','PÚBLICO');
-  el('text',{x:8,y:ySep+14,'font-size':'10',fill:COL_PREST,'font-weight':'700','font-family':'system-ui,sans-serif'},svg).textContent=pip3T('PRESTIGI','PRESTIGIO');
-
-  // Connexions dobles corones
-  dobles.forEach(d=>{
-    const pubDot  = pubStacked.find(f  => f.any === d.any && (f.titol === d.titol || doblesAnys.has(f.any)));
-    const prestDot= prestStacked.find(f => f.any === d.any && (f.titol === d.titol || doblesAnys.has(f.any)));
-    const y1 = pubDot  ? pubDot.cy  : YP_BASE;
-    const y2 = prestDot? prestDot.cy: YF_BASE;
-    el('line',{x1:x(d.any),y1:y1,x2:x(d.any),y2:y2,stroke:'#ddd','stroke-width':'0.8','stroke-dasharray':'3,2'},svg);
-  });
-
-  // Punts PÚBLIC
-  const cerclesDobles = [];
-  pubStacked.forEach(f=>{
-    const isDC = doblesAnys.has(f.any) && dobles.some(d=>d.any===f.any && (d.titol===f.titol||pubFilms.filter(p=>p.any===f.any).length===1));
-    const esDC = doblesAnys.has(f.any) && dobles.find(d=>d.any===f.any && d.titol===f.titol);
-    if (esDC) {
-      const c=el('circle',{cx:x(f.any),cy:f.cy,r:RD,fill:'white',stroke:COL_PUB,'stroke-width':'2',style:'cursor:pointer'},svg);
-      cerclesDobles.push({el:c,data:{...esDC,cy:f.cy}});
-    } else {
-      el('circle',{cx:x(f.any),cy:f.cy,r:R,fill:COL_PUB,opacity:'0.85'},svg);
-    }
-  });
-
-  // Punts PRESTIGI
-  prestStacked.forEach(f=>{
-    const esDC = doblesAnys.has(f.any) && dobles.find(d=>d.any===f.any && d.titol===f.titol);
-    if (esDC) {
-      const c=el('circle',{cx:x(f.any),cy:f.cy,r:RD,fill:'white',stroke:COL_PREST,'stroke-width':'2',style:'cursor:pointer'},svg);
-      cerclesDobles.push({el:c,data:{...esDC,cy:f.cy}});
-    } else {
-      el('circle',{cx:x(f.any),cy:f.cy,r:R,fill:COL_PREST,opacity:'0.85'},svg);
-    }
-  });
-
-  // Llegenda
-  const legY = H - PAD_BOT + 34;
-  const legItems=[
-    {col:COL_PUB,  label:pip3T('Públic — Top 100 (100 films)','Público — Top 100 (100 films)'), buit:false},
-    {col:COL_PREST,label:pip3T('Prestigi — Festivals (264 films)','Prestigio — Festivales (264 films)'), buit:false},
-    {col:COL_PUB,  label:pip3T('Doble corona (11 films)','Doble corona (11 films)'), buit:true},
-  ];
-  let lx = W/2 - 270;
-  legItems.forEach(item=>{
-    if(item.buit){
-      el('circle',{cx:lx+6,cy:legY,r:'5.5',fill:'white',stroke:item.col,'stroke-width':'1.8'},svg);
-    }else{
-      el('circle',{cx:lx+6,cy:legY,r:'5',fill:item.col},svg);
-    }
-    const t=el('text',{x:lx+16,y:legY+4,'font-size':'11',fill:'#555','font-family':'system-ui,sans-serif'},svg);
-    t.textContent=item.label;
-    lx+=item.label.length*5.8+28;
-  });
-
-  wrap.appendChild(svg);
-
-  // Tooltip
-  const tooltip=document.createElement('div');
-  tooltip.style.cssText='position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:10px 13px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.6;max-width:220px;font-family:system-ui,sans-serif;';
-  wrap.style.position='relative';
-  wrap.appendChild(tooltip);
-
-  cerclesDobles.forEach(({el:c,data:d})=>{
-    c.addEventListener('mouseenter',e=>{
-      const svgRect=svg.getBoundingClientRect();
-      const cx=parseFloat(c.getAttribute('cx'));
-      const cy=parseFloat(c.getAttribute('cy'));
-      const svgW=svgRect.width;
-      const svgH=svgRect.height;
-      const px=(cx/W)*svgW;
-      const py=(cy/H)*svgH;
-      let html=`<strong>${d.titol}</strong><br>${d.any}`;
-      if(d.top100)html+=`<br>${d.top100} ${pip3T('al Top 100','en el Top 100')}`;
-      html+=`<br>${festivalLabel3(d.festival)}`;
-      if(d.premi)html+=` · ${awardLabel3(d.premi)}`;
-      tooltip.innerHTML=html;
-      tooltip.style.display='block';
-      const tw=220;
-      let left=px+10;
-      if(left+tw>svgW)left=px-tw-10;
-      tooltip.style.left=left+'px';
-      tooltip.style.top=(py-10+svgRect.top-wrap.getBoundingClientRect().top)+'px';
-      c.setAttribute('opacity','0.7');
-    });
-    c.addEventListener('mouseleave',()=>{
-      tooltip.style.display='none';
-      c.setAttribute('opacity','1');
-    });
-  });
-}
-
-// ============================================================
-// GRÀFIC PUNT-1 CONCLUSIONS: Diagrama de dots públic/prestigi
-// ============================================================
-function construirGraficConclusions1() {
-  const wrap = document.getElementById('grafic-conclusions-1');
-  if (!wrap) return;
-
-  // Colors: accent web per blau, vermell festivals, verd segon cercle
-  const COL_BLAU    = '#1a75c4';
-  const COL_VERMELL = '#9B2335';
-  const COL_VERD    = '#2d7a4f';
-
-  // 11 dobles corones
-  const dobles = [
-    { any:1968, titol:'No somos de piedra',  top100:'#46', festival:'Sant Sebastià', premi:null },
-    { any:1974, titol:'Tormento',            top100:'#57', festival:'Sant Sebastià', premi:null },
-    { any:1975, titol:'Furtivos',            top100:'#16', festival:'Sant Sebastià', premi:'Conxa d\'Or' },
-    { any:1977, titol:'La guerra de papá',   top100:'#18', festival:'Sant Sebastià', premi:null },
-    { any:1984, titol:'Los santos inocentes',top100:'#62', festival:'Cannes',        premi:'Millor actor' },
-    { any:1988, titol:'Mujeres al borde de un ataque de nervios', top100:'#22', festival:'Venècia', premi:'Millor guió' },
-    { any:1999, titol:'Todo sobre mi madre', top100:'#52', festival:'Cannes',        premi:'Millor direcció' },
-    { any:2001, titol:'Juana la Loca',       top100:'#68', festival:'Sant Sebastià', premi:'Millor actriu' },
-    { any:2002, titol:'Los lunes al sol',    top100:'#70', festival:'Sant Sebastià', premi:'Conxa d\'Or' },
-    { any:2004, titol:'Mar adentro',         top100:'#12', festival:'Venècia',       premi:'Lleó de Plata' },
-  ];
-  const doblesAnys = new Set(dobles.map(d => d.any));
-
-  // 24 films del segon cercle (≥1M espectadors, no al Top 100)
-  const segonCercle = [
-    { any:1966, titol:'La caza' },
-    { any:1973, titol:'El espíritu de la colmena' },
-    { any:1976, titol:'Pascual Duarte' },
-    { any:1978, titol:'Cría cuervos' },
-    { any:1981, titol:'Deprisa deprisa' },
-    { any:1983, titol:'El sur' },
-    { any:1986, titol:'El viaje a ninguna parte' },
-    { any:1989, titol:'Ay Carmela' },
-    { any:1992, titol:'Belle époque' },
-    { any:1996, titol:'Martín (Hache)' },
-    { any:2003, titol:'El pianista' },
-    { any:2006, titol:'Volver' },
-    { any:2009, titol:'El secreto de sus ojos' },
-    { any:2010, titol:'Biutiful' },
-    { any:2013, titol:'La gran belleza' },
-  ];
-  const segonCercleAnys = new Set(segonCercle.map(f => f.any));
-  const segonCercleTitols = new Set(segonCercle.map(f => f.titol));
-
-  // Top 100 — un film per entrada
-  const pubFilms = [
-    {any:1965,titol:'La ciudad no es para mí'},{any:1966,titol:'El golfo'},{any:1966,titol:'Sopa de ganso'},
-    {any:1966,titol:'El arte de vivir'},{any:1966,titol:'La pandilla'},{any:1967,titol:'Crónica de 9 meses'},
-    {any:1967,titol:'Abuelo made in Spain'},{any:1967,titol:'La familia y uno más'},{any:1968,titol:'No somos de piedra'},
-    {any:1968,titol:'Cantando a la vida'},{any:1968,titol:'La vida sigue igual'},{any:1969,titol:'Hay que matar a B'},
-    {any:1969,titol:'El astronauta'},{any:1970,titol:'Vente a Alemania Pepe'},{any:1971,titol:'No firmes más letras Ramón'},
-    {any:1972,titol:'Mi querida señorita'},{any:1974,titol:'Tormento'},{any:1975,titol:'Furtivos'},
-    {any:1975,titol:'El casto Susanito'},{any:1976,titol:'El puente'},{any:1977,titol:'La guerra de papá'},
-    {any:1977,titol:'El anillo de nibelungo'},{any:1978,titol:'El soltero'},{any:1981,titol:'La colmena'},
-    {any:1984,titol:'Los santos inocentes'},{any:1988,titol:'Mujeres al borde de un ataque de nervios'},
-    {any:1991,titol:'Tacones lejanos'},{any:1995,titol:'Boca a boca'},{any:1997,titol:'La buena estrella'},
-    {any:1998,titol:'El abuelo'},{any:1999,titol:'Todo sobre mi madre'},{any:2001,titol:'Juana la Loca'},
-    {any:2001,titol:'El hijo de la novia'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'Soldados de Salamina'},
-    {any:2004,titol:'Mar adentro'},{any:2005,titol:'Habana Blues'},{any:2006,titol:'El laberinto del fauno'},
-    {any:2007,titol:'El orfanato'},{any:2009,titol:'Celda 211'},{any:2009,titol:'Agora'},
-    {any:2011,titol:'No habrá paz para los malvados'},{any:2012,titol:'Blancanieves'},{any:2014,titol:'La isla mínima'},
-    {any:2015,titol:'Truman'},{any:2016,titol:'Un monstruo viene a verme'},{any:2017,titol:'Verano 1993'},
-    {any:2017,titol:'El bar'},{any:2018,titol:'Campeones'},{any:2019,titol:'Dolor y gloria'},
-    {any:2022,titol:'El buen patrón'},{any:2024,titol:'Padre no hay más que uno 4'},{any:2025,titol:'Padre no hay más que uno 5'},
-  ];
-
-  // Festivals — films seleccionats (inclou dobles corones i segon cercle)
-  const prestFilms = [
-    {any:1965,titol:'La caza'},{any:1966,titol:'Nueve cartas a Berta'},{any:1968,titol:'Stress es tres tres'},
-    {any:1970,titol:'El momento de la verdad'},{any:1973,titol:'El espíritu de la colmena'},
-    {any:1974,titol:'Tormento'},{any:1976,titol:'Pascual Duarte'},{any:1977,titol:'El desencanto'},
-    {any:1978,titol:'Cría cuervos'},{any:1981,titol:'Deprisa deprisa'},{any:1983,titol:'El sur'},
-    {any:1984,titol:'Los santos inocentes'},{any:1985,titol:'El año de las luces'},{any:1986,titol:'El viaje a ninguna parte'},
-    {any:1988,titol:'Mujeres al borde de un ataque de nervios'},{any:1989,titol:'Ay Carmela'},
-    {any:1991,titol:'Las edades de Lulú'},{any:1992,titol:'Belle époque'},{any:1994,titol:'Hola, ¿estás sola?'},
-    {any:1996,titol:'Martín (Hache)'},{any:1997,titol:'La buena estrella'},{any:1999,titol:'Todo sobre mi madre'},
-    {any:2001,titol:'Juana la Loca'},{any:2002,titol:'Los lunes al sol'},{any:2003,titol:'El pianista'},
-    {any:2004,titol:'Mar adentro'},{any:2006,titol:'Volver'},{any:2007,titol:'El orfanato'},
-    {any:2009,titol:'El secreto de sus ojos'},{any:2010,titol:'Biutiful'},{any:2011,titol:'No habrá paz para los malvados'},
-    {any:2012,titol:'Blancanieves'},{any:2013,titol:'La gran belleza'},{any:2014,titol:'La isla mínima'},
-    {any:2015,titol:'Truman'},{any:2016,titol:'El olivo'},{any:2017,titol:'Verano 1993'},
-    {any:2018,titol:'Entre dos aguas'},{any:2019,titol:'Dolor y gloria'},{any:2021,titol:'El buen patrón'},
-    {any:2022,titol:'Alcarràs'},{any:2023,titol:'Cerrar los ojos'},{any:2024,titol:'Marco'},
-    {any:2025,titol:'La infiltrada'},
-  ];
-
-  function stackDots(films, baseY, step) {
-    const byYear = {};
-    films.forEach(f => {
-      if (!byYear[f.any]) byYear[f.any] = [];
-      byYear[f.any].push(f);
-    });
-    const result = [];
-    Object.entries(byYear).forEach(([, arr]) => {
-      arr.forEach((f, i) => {
-        const offset = Math.ceil(i / 2) * (i % 2 === 0 ? 1 : -1) * step;
-        result.push({ ...f, cy: baseY + offset });
-      });
-    });
-    return result;
-  }
-
-  const A0 = 1964, A1 = 2025, W = 860;
-  const STEP = 9;
-  const YP_BASE = 60, YF_BASE = 160;
-  const PAD_TOP = 28, PAD_BOT = 60;
-  const R = 4, RD = 6;
-  const ns = 'http://www.w3.org/2000/svg';
-
-  const pubStacked   = stackDots(pubFilms,   YP_BASE, STEP);
-  const prestStacked = stackDots(prestFilms,  YF_BASE, STEP);
-
-  const maxY = Math.max(...pubStacked.map(f=>f.cy), ...prestStacked.map(f=>f.cy));
-  const H = maxY + PAD_BOT;
-
-  function xPos(any) { return 12 + (any - A0) / (A1 - A0) * (W - 24); }
-
-  function el(tag, attrs, par) {
-    const e = document.createElementNS(ns, tag);
-    Object.entries(attrs).forEach(([k,v]) => e.setAttribute(k,v));
-    if (par) par.appendChild(e);
-    return e;
-  }
-
-  wrap.style.position = 'relative';
-
-  const svg = el('svg', { viewBox:`0 0 ${W} ${H}`, width:'100%', style:'overflow:visible;display:block;' }, wrap);
-
-  // Anys a la part SUPERIOR
-  [1965,1975,1985,1995,2005,2015,2025].forEach(any => {
-    const x = xPos(any);
-    // Línies verticals lleugeríssimes (fons, no destacades)
-    el('line', { x1:x, y1:PAD_TOP, x2:x, y2:maxY+8, stroke:'#f0f0f0', 'stroke-width':'1' }, svg);
-    // Etiqueta a dalt
-    el('text', { x, y:PAD_TOP-6, 'text-anchor':'middle', 'font-size':'9', fill:'#bbb', 'font-family':'system-ui,sans-serif' }, svg).textContent = any;
-  });
-
-  // Línies verticals NOMÉS per a dobles corones (grises, destacades)
-  dobles.forEach(d => {
-    const pd = pubStacked.find(f => f.titol === d.titol);
-    const fd = prestStacked.find(f => f.titol === d.titol);
-    const y1 = pd ? pd.cy : YP_BASE;
-    const y2 = fd ? fd.cy : YF_BASE;
-    el('line', { x1:xPos(d.any), y1, x2:xPos(d.any), y2, stroke:'#ccc', 'stroke-width':'1', 'stroke-dasharray':'3,2' }, svg);
-  });
-
-  const puntsInteractius = [];
-
-  // ── Fila PÚBLIC ──
-  pubStacked.forEach(f => {
-    const esDC = dobles.find(d => d.titol === f.titol);
-    if (esDC) {
-      // Doble corona: cercle blau buit
-      const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_BLAU, 'stroke-width':'2', style:'cursor:pointer' }, svg);
-      puntsInteractius.push({ el:c, data:{ ...esDC, tipus:'corona-pub' } });
-    } else {
-      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_BLAU, opacity:'0.9' }, svg);
-    }
-  });
-
-  // ── Fila PRESTIGI ──
-  prestStacked.forEach(f => {
-    const esDC = dobles.find(d => d.titol === f.titol);
-    const eSC  = segonCercleTitols.has(f.titol);
-    if (esDC) {
-      // Doble corona: cercle vermell buit
-      const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_VERMELL, 'stroke-width':'2', style:'cursor:pointer' }, svg);
-      puntsInteractius.push({ el:c, data:{ ...esDC, tipus:'corona-prest' } });
-    } else if (eSC) {
-      // Segon cercle: cercle verd buit
-      const sc = segonCercle.find(s => s.titol === f.titol);
-      const c = el('circle', { cx:xPos(f.any), cy:f.cy, r:RD, fill:'white', stroke:COL_VERD, 'stroke-width':'1.5', style:'cursor:pointer' }, svg);
-      puntsInteractius.push({ el:c, data:{ ...f, ...sc, tipus:'segon-cercle' } });
-    } else {
-      el('circle', { cx:xPos(f.any), cy:f.cy, r:R, fill:COL_VERMELL, opacity:'0.9' }, svg);
-    }
-  });
-
-  // ── Llegenda (sota el gràfic, mida adequada, ben separada) ──
-  const legY = maxY + 28;
-  const LEG_R = 6;
-  const LEG_FS = '12.5';
-  const LEG_GAP = 14;
-
-  const legItems = [
-    { tipus:'ple',   col:COL_BLAU,    label:pip3T('Públic — Top 100','Público — Top 100') },
-    { tipus:'ple',   col:COL_VERMELL, label:pip3T('Prestigi — Festivals','Prestigio — Festivales') },
-    { tipus:'doble', label:pip3T('Doble corona','Doble corona') },
-    { tipus:'buit',  col:COL_VERD,    label:pip3T('Segon cercle','Segundo círculo') },
-  ];
-
-  // Calcular amplada total per centrar
-  const textW = PIP_III_ES ? { 'Público — Top 100': 120, 'Prestigio — Festivales': 140, 'Doble corona': 110, 'Segundo círculo': 110 } : { 'Públic — Top 100': 120, 'Prestigi — Festivals': 140, 'Doble corona': 110, 'Segon cercle': 100 };
-  const itemW = legItems.map(item => LEG_R*2 + LEG_GAP + (textW[item.label] || 110) + 24);
-  const totalW = itemW.reduce((a,b) => a+b, 0);
-  let lx = (W - totalW) / 2;
-
-  legItems.forEach((item, i) => {
-    const cx = lx + LEG_R;
-    const cy = legY;
-    if (item.tipus === 'ple') {
-      el('circle', { cx, cy, r:LEG_R, fill:item.col }, svg);
-    } else if (item.tipus === 'doble') {
-      // Cercle blau buit + cercle vermell buit junts
-      el('circle', { cx:cx-4, cy, r:LEG_R, fill:'white', stroke:COL_BLAU, 'stroke-width':'2' }, svg);
-      el('circle', { cx:cx+4, cy, r:LEG_R, fill:'white', stroke:COL_VERMELL, 'stroke-width':'2' }, svg);
-    } else {
-      el('circle', { cx, cy, r:LEG_R, fill:'white', stroke:item.col, 'stroke-width':'1.5' }, svg);
-    }
-    const tx = item.tipus === 'doble' ? cx + LEG_R + 6 : cx + LEG_R + 6;
-    const t = el('text', { x:tx, y:cy+4, 'font-size':LEG_FS, fill:'#555', 'font-family':'system-ui,sans-serif' }, svg);
-    t.textContent = item.label;
-    lx += itemW[i];
-  });
-
-  // ── Tooltip ──
-  const tooltip = document.createElement('div');
-  tooltip.style.cssText = 'position:absolute;background:#1a1a1a;color:#fff;font-size:12px;padding:8px 12px;border-radius:4px;pointer-events:none;display:none;z-index:20;line-height:1.5;max-width:220px;font-family:system-ui,sans-serif;';
-  wrap.appendChild(tooltip);
-
-  puntsInteractius.forEach(({ el:c, data:d }) => {
-    c.addEventListener('mouseenter', () => {
-      const svgRect = svg.getBoundingClientRect();
-      const wRect   = wrap.getBoundingClientRect();
-      const cx = parseFloat(c.getAttribute('cx'));
-      const cy = parseFloat(c.getAttribute('cy'));
-      const px = (cx / W) * svgRect.width;
-      const py = (cy / H) * svgRect.height;
-      let html = `<strong>${d.titol}</strong><br>${d.any}`;
-      if (d.tipus === 'corona-pub' || d.tipus === 'corona-prest') {
-        if (d.top100) html += `<br>${d.top100} ${pip3T('al Top 100','en el Top 100')}`;
-        html += `<br>${festivalLabel3(d.festival)}`;
-        if (d.premi) html += ` · ${awardLabel3(d.premi)}`;
-        html += `<br><span style="color:#aaa">${pip3T('Doble corona','Doble corona')}</span>`;
-      } else if (d.tipus === 'segon-cercle') {
-        html += `<br><span style="color:#aaa">${pip3T('Segon cercle — ≥1M espectadors','Segundo círculo — ≥1M espectadores')}</span>`;
-      }
-      tooltip.innerHTML = html;
-      tooltip.style.display = 'block';
-      let left = px + 10;
-      if (left + 220 > svgRect.width) left = px - 230;
-      tooltip.style.left = left + 'px';
-      tooltip.style.top = (py - 10 + svgRect.top - wRect.top) + 'px';
-      c.setAttribute('opacity', '0.7');
-    });
-    c.addEventListener('mouseleave', () => {
-      tooltip.style.display = 'none';
-      c.setAttribute('opacity', '1');
-    });
-  });
-}
+document.addEventListener('DOMContentLoaded', carregarDades);
 
 // ============================================================
 // GRÀFIC PUNT-2 CONCLUSIONS: Premiats vs mitjana espectadors
@@ -2076,7 +2125,7 @@ window.PiP_graficMapaCanon = function() {
   if (bloc && !document.getElementById('mapa-capçalera')) {
     const nomsCurts = PIP_III_ES ? ['Radical', 'Generación actual', 'Núcleo central', 'Popular de género', 'Popular'] : ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
     let cap = `<div id="mapa-capçalera">
-      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965-2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965-2025)')}</p>
+      <p style="font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 18px">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965–2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965–2025)')}</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:22px;justify-content:center">`;
     blocs.forEach((b, i) => {
       cap += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${nomsCurts[i]}</span>`;
