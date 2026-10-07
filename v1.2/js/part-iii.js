@@ -1222,7 +1222,7 @@ window.PiP_graficSauraAlmodovar = function() {
   if (bloc && !document.getElementById('sa-tit')) {
     const tit = document.createElement('p');
     tit.id = 'sa-tit';
-    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif';
     tit.innerHTML = pip3T('Saura i Almodóvar — Trajectòria d\'espectadors a sala per film (1966–2024)','Saura y Almodóvar — Trayectoria de espectadores en salas por film (1966–2024)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1367,16 +1367,30 @@ window.PiP_graficSauraAlmodovar = function() {
     plugins: [pluginNoms, pluginLlindar],
   });
 
-  // Llegenda HTML centrada
+  // Llegenda HTML centrada, sota el titular
   if (bloc && !document.getElementById('sa-leg')) {
     const leg = document.createElement('div');
     leg.id = 'sa-leg';
-    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin:0 0 10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif';
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
-    bloc.appendChild(leg);
+    const tit = document.getElementById('sa-tit');
+    if (tit) tit.insertAdjacentElement('afterend', leg);
+    else bloc.insertBefore(leg, bloc.firstChild);
+  }
+
+  // Font
+  if (bloc && !document.getElementById('sa-font')) {
+    const font = document.createElement('p');
+    font.id = 'sa-font';
+    font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
+    font.innerHTML = pip3T(
+      'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA).',
+      'Fuente: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA).'
+    );
+    bloc.appendChild(font);
   }
 
   // Degradat scroll: desapareix en arribar al final
@@ -1403,7 +1417,7 @@ window.PiP_graficGeneracioActual = function() {
   if (bloc && !document.getElementById('ga-tit')) {
     const tit = document.createElement('p');
     tit.id = 'ga-tit';
-    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif';
     tit.innerHTML = pip3T('Generació actual — Espectadors a sala (barra sòlida) vs. IAA estimat (barra clara)','Generación actual — Espectadores en salas (barra sólida) vs. IAA estimado (barra clara)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1551,18 +1565,32 @@ window.PiP_graficGeneracioActual = function() {
     },
   });
 
-  // Llegenda HTML per director
+  // Llegenda HTML per director, sota el titular
   if (bloc && !document.getElementById('ga-leg')) {
     const leg = document.createElement('div');
     leg.id = 'ga-leg';
-    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin:0 0 10px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif';
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0e2b8;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Rodrigo Sorogoyen</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0d4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Oliver Laxe</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0c4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Carla Simón</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0b4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Alauda Ruiz de Azúa</span>
       <span style="display:flex;align-items:center;gap:5px;margin-left:8px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
-    bloc.appendChild(leg);
+    const tit = document.getElementById('ga-tit');
+    if (tit) tit.insertAdjacentElement('afterend', leg);
+    else bloc.insertBefore(leg, bloc.firstChild);
+  }
+
+  // Font
+  if (bloc && !document.getElementById('ga-font')) {
+    const font = document.createElement('p');
+    font.id = 'ga-font';
+    font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
+    font.innerHTML = pip3T(
+      'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA); IAA, estimació pròpia segons els factors definits a l’estudi.',
+      'Fuente: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA); IAA, estimación propia según los factores definidos en el estudio.'
+    );
+    bloc.appendChild(font);
   }
 };
 
