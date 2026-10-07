@@ -1268,6 +1268,20 @@ function pipTooltipTrajectoria(context) {
     el.appendChild(cos);
   }
 
+  if (raw.top100) {
+    const top = document.createElement('div');
+    top.style.fontWeight = '400';
+    top.textContent = 'Top 100';
+    el.appendChild(top);
+  }
+
+  if (raw.prestigi) {
+    const rec = document.createElement('div');
+    rec.style.fontWeight = '400';
+    rec.textContent = pip3T('Reconeixement','Reconocimiento') + ': ' + raw.prestigi;
+    el.appendChild(rec);
+  }
+
   el.style.opacity = '1';
 
   const rect = canvas.getBoundingClientRect();
@@ -1750,7 +1764,7 @@ window.PiP_graficAutorIndustrial = function() {
   if (bloc && !document.getElementById('ai-tit')) {
     const tit = document.createElement('p');
     tit.id = 'ai-tit';
-    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 10px';
+    tit.style.cssText = 'font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif';
     tit.innerHTML = pip3T('Model d’autor industrial — Trajectòria d\'espectadors a sala (1995–2025)','Modelo de autor industrial — Trayectoria de espectadores en salas (1995–2025)');
     bloc.insertBefore(tit, bloc.firstChild);
   }
@@ -1879,21 +1893,8 @@ window.PiP_graficAutorIndustrial = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: 'rgba(45,45,45,0.95)',
-          cornerRadius: 6,
-          padding: 8,
-          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
-          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
-          callbacks: {
-            title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => {
-              const d = ctx.raw || {};
-              const lines = [fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores')];
-              if (d.top100) lines.push('Top 100');
-              if (d.prestigi) lines.push(pip3T('Reconeixement','Reconocimiento') + ': ' + d.prestigi);
-              return lines;
-            },
-          },
+          enabled: false,
+          external: pipTooltipTrajectoria,
         },
       },
       scales: {
@@ -1917,17 +1918,31 @@ window.PiP_graficAutorIndustrial = function() {
     plugins: [pluginNoms, pluginLlindar],
   });
 
-  // Llegenda HTML
+  // Llegenda HTML centrada, sota el titular
   if (bloc && !document.getElementById('ai-leg')) {
     const leg = document.createElement('div');
     leg.id = 'ai-leg';
-    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+    leg.style.cssText = 'text-align:center;font-size:11px;margin:0 0 10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif';
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
-    bloc.appendChild(leg);
+    const tit = document.getElementById('ai-tit');
+    if (tit) tit.insertAdjacentElement('afterend', leg);
+    else bloc.insertBefore(leg, bloc.firstChild);
+  }
+
+  // Font
+  if (bloc && !document.getElementById('ai-font')) {
+    const font = document.createElement('p');
+    font.id = 'ai-font';
+    font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
+    font.innerHTML = pip3T(
+      'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA).',
+      'Fuente: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA).'
+    );
+    bloc.appendChild(font);
   }
 
   // Degradat scroll
