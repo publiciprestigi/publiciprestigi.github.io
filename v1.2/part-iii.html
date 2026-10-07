@@ -387,7 +387,7 @@
         </div>
 
         <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
-          <p id="bbb-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 10px;font-family:'Inter',-apple-system,Arial,sans-serif">Buñuel, Berlanga i Bardem — Trajectòria d’espectadors a sala per film (1965–1999)</p>
+          <p id="bbb-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif">Buñuel, Berlanga i Bardem — Trajectòria d’espectadors a sala per film (1965–1999)</p>
           <div style="position:relative">
             <div id="bbb-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
               <div style="min-width:2500px;height:520px;position:relative">
@@ -1297,6 +1297,11 @@
         }
       };
 
+      [...bunuel, ...berlanga, ...bardem].forEach(p => {
+        const rec = reconeixementCorpusBBB(p);
+        if (rec) p.prestigi = rec;
+      });
+
       const datasets = [
         {
           label: 'Luis Buñuel',
@@ -1359,30 +1364,8 @@
           plugins: {
             legend: { display: false },
             tooltip: {
-              backgroundColor: 'rgba(45,45,45,.94)',
-              padding: 10,
-              titleFont: { size: 12 },
-              bodyFont: { size: 12 },
-              callbacks: {
-                title(items) {
-                  const p = items[0].raw;
-                  return p.titol + ' (' + p.any + ')';
-                },
-                label(ctx) {
-                  return fmtBBB(ctx.raw.y) + ' espectadors';
-                },
-                afterLabel(ctx) {
-                  const linies = [];
-                  if (ctx.raw.estrenaEspanya) {
-                    linies.push('Estrena a Espanya: ' + ctx.raw.estrenaEspanya);
-                  }
-                  const reconeixement = reconeixementCorpusBBB(ctx.raw);
-                  if (reconeixement) {
-                    linies.push('Reconeixement: ' + reconeixement);
-                  }
-                  return linies;
-                }
-              }
+              enabled: false,
+              external: pipTooltipTrajectoria
             }
           },
           scales: {
@@ -1427,13 +1410,23 @@
       if (bloc && !document.getElementById('bbb-leg')) {
         const leg = document.createElement('div');
         leg.id = 'bbb-leg';
-        leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
+        leg.style.cssText = 'text-align:center;font-size:11px;margin:0 0 10px;display:flex;justify-content:center;align-items:center;gap:18px;flex-wrap:wrap;color:#555;font-family:"Inter",-apple-system,"SF Pro Text",Arial,sans-serif';
         leg.innerHTML = `
           <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${C_BUNUEL};display:inline-block"></span><span>Luis Buñuel</span></span>
           <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${C_BERLANGA};display:inline-block"></span><span>Luis García Berlanga</span></span>
           <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${C_BARDEM};display:inline-block"></span><span>Juan Antonio Bardem</span></span>
           <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>Llindar Top 100 (2,02M esp.)</span></span>`;
-        bloc.appendChild(leg);
+        const tit = document.getElementById('bbb-tit');
+        if (tit) tit.insertAdjacentElement('afterend', leg);
+        else bloc.insertBefore(leg, bloc.firstChild);
+      }
+
+      if (bloc && !document.getElementById('bbb-font')) {
+        const font = document.createElement('p');
+        font.id = 'bbb-font';
+        font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
+        font.innerHTML = 'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA).';
+        bloc.appendChild(font);
       }
 
       const hint = document.getElementById('bbb-scroll-hint');
