@@ -266,10 +266,29 @@
         <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-distribucio"></div>
         <div class="text-md text-md-comentari" data-text="part-iii/caza-alcarras" data-bloc="comentari-distribucio"></div>
         <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="final-distribucio"></div>
-        <div class="grafic-wrap" style="height:270px;position:relative;margin-top:24px;margin-bottom:0;border-bottom:none">
-          <canvas id="grafic-caza-iaa"></canvas>
+
+        <div id="grafic-caza-iaa-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin-top:24px">
+          <p id="caza-iaa-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">
+            IAA estimat: <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)
+          </p>
+
+          <div id="caza-iaa-leg" style="text-align:center;font-size:11px;margin:0 0 12px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
+            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>
+          </div>
+
+          <div class="grafic-wrap" style="height:270px;position:relative;margin:0;border-top:none;border-bottom:none">
+            <canvas id="grafic-caza-iaa"></canvas>
+          </div>
+
+          <p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px">
+            Fonts: ICAA (sales); TV3 i La 2/TVE (audiències televisives); estimacions pròpies per a televisió de pagament i plataformes.
+          </p>
         </div>
-        <div class="text-md text-md-comentari" style="border-top:1px solid #e5e5e5;padding-top:20px;margin-top:24px" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
+
+        <div class="text-md text-md-comentari" style="margin-top:24px" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
       </div>
 
       <div class="seccio-contingut" id="seccio-lleis">
