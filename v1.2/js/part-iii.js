@@ -1268,6 +1268,13 @@ function pipTooltipTrajectoria(context) {
     el.appendChild(cos);
   }
 
+  if (raw.estrenaEspanya) {
+    const estrena = document.createElement('div');
+    estrena.style.fontWeight = '400';
+    estrena.textContent = pip3T('Estrena a Espanya','Estreno en España') + ': ' + raw.estrenaEspanya;
+    el.appendChild(estrena);
+  }
+
   if (raw.top100) {
     const top = document.createElement('div');
     top.style.fontWeight = '400';
