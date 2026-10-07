@@ -16,7 +16,7 @@ Els 2020s apunten una petita recuperació de la ràtio (0,14), però amb una dè
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
-El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mitjana anual d’entrades del mercat (línia grisa). Com més baixa és la ràtio, més gran és la distància entre el públic dels films de festivals i el dels grans èxits comercials. 
+El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mitjana anual d’entrades del mercat (línia grisa). Com més baixa és la ràtio, més gran és la distància entre el públic dels films de festivals i el dels grans èxits comercials.
 <!-- /intro-grafic1 -->
 
 <!-- post-grafic1 -->
