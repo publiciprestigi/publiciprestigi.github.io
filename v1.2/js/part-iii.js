@@ -839,7 +839,7 @@ window.PiP_graficBretxa = function() {
           title: { display: true, text: pip3T('Mercat anual (M entrades)','Mercado anual (M entradas)'), font: { size: 12 }, color: '#888' },
         },
         x: {
-          ticks: { color: '#363737', font: { size: 11 } },
+          ticks: { color: 'rgba(0,0,0,0)', font: { size: 11 } },
           grid: { display: false },
         },
       },
@@ -1583,10 +1583,52 @@ window.PiP_graficGeneracioActual = function() {
     },
   };
 
+  // Plugin: etiquetes de l'eix Y amb el títol del film en cursiva
+  // i any/director en rodona. Chart.js no permet estils parcials dins
+  // d'un mateix tick, per això es dibuixen manualment sobre el canvas.
+  const etiquetesFilmsGA = {
+    id: 'ga-etiquetes-films',
+    afterDraw(chart) {
+      const c = chart.ctx;
+      const yScale = chart.scales.y;
+      const xText = yScale.left - 10;
+
+      c.save();
+      c.textAlign = 'left';
+      c.textBaseline = 'middle';
+
+      orden.forEach((f, i) => {
+        const y = yScale.getPixelForTick(i);
+        if (y < yScale.top - 2 || y > yScale.bottom + 2) return;
+
+        const cognom = f.director.split(' ').slice(-1)[0];
+        const suffix = ` (${f.any}) · ${cognom}`;
+
+        c.font = 'italic 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
+        const wTitle = c.measureText(f.titol).width;
+
+        c.font = '11px "Inter",-apple-system,"SF Pro Text",sans-serif';
+        const wSuffix = c.measureText(suffix).width;
+
+        let x = xText - wTitle - wSuffix;
+
+        c.fillStyle = '#363737';
+        c.font = 'italic 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
+        c.fillText(f.titol, x, y);
+        x += wTitle;
+
+        c.font = '11px "Inter",-apple-system,"SF Pro Text",sans-serif';
+        c.fillText(suffix, x, y);
+      });
+
+      c.restore();
+    },
+  };
+
   const ctx = el.getContext('2d');
   window._chartGenActual = new Chart(ctx, {
     type: 'bar',
-    plugins: [sepDirectors, pluginLlindar],
+    plugins: [sepDirectors, pluginLlindar, etiquetesFilmsGA],
     data: {
       labels,
       datasets: [
