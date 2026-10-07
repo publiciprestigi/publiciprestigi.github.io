@@ -1211,6 +1211,85 @@ function renderTaulaGen(films, contId, directorFix) {
     </table>`;
 }
 
+
+// Tooltip HTML comú per als gràfics de trajectòries:
+// títol de film en cursiva, any en rodona i dada principal a sota.
+function pipTooltipTrajectoria(context) {
+  const chart = context.chart;
+  const tooltip = context.tooltip;
+  const canvas = chart.canvas;
+  const id = 'pip-tooltip-trajectoria-' + canvas.id;
+
+  let el = document.getElementById(id);
+  if (!el) {
+    el = document.createElement('div');
+    el.id = id;
+    el.style.cssText = [
+      'position:fixed',
+      'z-index:9999',
+      'pointer-events:none',
+      'opacity:0',
+      'background:rgba(45,45,45,0.95)',
+      'color:#fff',
+      'border-radius:6px',
+      'padding:8px 10px',
+      'font:12px/1.35 "Inter",-apple-system,"SF Pro Text",sans-serif',
+      'white-space:nowrap',
+      'box-shadow:0 1px 3px rgba(0,0,0,.12)',
+      'transition:opacity .08s ease'
+    ].join(';');
+    document.body.appendChild(el);
+  }
+
+  if (!tooltip || tooltip.opacity === 0 || !tooltip.dataPoints || !tooltip.dataPoints.length) {
+    el.style.opacity = '0';
+    return;
+  }
+
+  const item = tooltip.dataPoints[0];
+  const raw = item.raw || {};
+  const any = item.parsed && item.parsed.x != null ? item.parsed.x : '';
+  const espectadors = item.parsed && item.parsed.y != null ? item.parsed.y : null;
+
+  el.innerHTML = '';
+
+  const tit = document.createElement('div');
+  tit.style.cssText = 'font-weight:600;margin:0 0 3px';
+  const em = document.createElement('em');
+  em.textContent = raw.titol || '';
+  tit.appendChild(em);
+  tit.appendChild(document.createTextNode(any !== '' ? ' (' + any + ')' : ''));
+  el.appendChild(tit);
+
+  if (espectadors != null) {
+    const cos = document.createElement('div');
+    cos.style.fontWeight = '400';
+    cos.textContent = fmt(espectadors) + ' ' + pip3T('espectadors','espectadores');
+    el.appendChild(cos);
+  }
+
+  el.style.opacity = '1';
+
+  const rect = canvas.getBoundingClientRect();
+  const marge = 12;
+  let x = rect.left + tooltip.caretX + marge;
+  let y = rect.top + tooltip.caretY + marge;
+
+  // Mesurar després d'omplir-lo i mantenir-lo dins del viewport.
+  const w = el.offsetWidth;
+  const h = el.offsetHeight;
+
+  if (x + w > window.innerWidth - 10) {
+    x = rect.left + tooltip.caretX - w - marge;
+  }
+  if (y + h > window.innerHeight - 10) {
+    y = rect.top + tooltip.caretY - h - marge;
+  }
+
+  el.style.left = Math.max(10, x) + 'px';
+  el.style.top = Math.max(10, y) + 'px';
+}
+
 // GRÀFIC 1: Saura vs Almodóvar — Trajectòria espectadors a sala
 window.PiP_graficSauraAlmodovar = function() {
   const el = document.getElementById('grafic-saura-almodovar');
@@ -1335,15 +1414,8 @@ window.PiP_graficSauraAlmodovar = function() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: 'rgba(45,45,45,0.95)',
-          cornerRadius: 6,
-          padding: 8,
-          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
-          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
-          callbacks: {
-            title: items => items[0].raw.titol + ' (' + items[0].parsed.x + ')',
-            label: ctx => fmt(ctx.parsed.y) + ' ' + pip3T('espectadors','espectadores'),
-          },
+          enabled: false,
+          external: pipTooltipTrajectoria,
         },
       },
       scales: {
