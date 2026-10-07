@@ -839,7 +839,7 @@ window.PiP_graficBretxa = function() {
           title: { display: true, text: pip3T('Mercat anual (M entrades)','Mercado anual (M entradas)'), font: { size: 12 }, color: '#888' },
         },
         x: {
-          ticks: { color: 'rgba(0,0,0,0)', font: { size: 11 } },
+          ticks: { color: '#363737', font: { size: 11 } },
           grid: { display: false },
         },
       },
@@ -1583,18 +1583,15 @@ window.PiP_graficGeneracioActual = function() {
     },
   };
 
-  // Plugin: etiquetes de l'eix Y amb el títol del film en cursiva
-  // i any/director en rodona. Chart.js no permet estils parcials dins
-  // d'un mateix tick, per això es dibuixen manualment sobre el canvas.
+  // Etiquetes de l'eix Y: títol del film en cursiva; any i director en rodona.
   const etiquetesFilmsGA = {
     id: 'ga-etiquetes-films',
     afterDraw(chart) {
       const c = chart.ctx;
       const yScale = chart.scales.y;
-      const xText = yScale.left - 10;
+      const xRight = yScale.right - 10;
 
       c.save();
-      c.textAlign = 'left';
       c.textBaseline = 'middle';
 
       orden.forEach((f, i) => {
@@ -1610,15 +1607,16 @@ window.PiP_graficGeneracioActual = function() {
         c.font = '11px "Inter",-apple-system,"SF Pro Text",sans-serif';
         const wSuffix = c.measureText(suffix).width;
 
-        let x = xText - wTitle - wSuffix;
+        const xStart = xRight - wTitle - wSuffix;
 
         c.fillStyle = '#363737';
+        c.textAlign = 'left';
+
         c.font = 'italic 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
-        c.fillText(f.titol, x, y);
-        x += wTitle;
+        c.fillText(f.titol, xStart, y);
 
         c.font = '11px "Inter",-apple-system,"SF Pro Text",sans-serif';
-        c.fillText(suffix, x, y);
+        c.fillText(suffix, xStart + wTitle, y);
       });
 
       c.restore();
@@ -1672,7 +1670,11 @@ window.PiP_graficGeneracioActual = function() {
         },
         y: {
           stacked: true,
-          ticks: { color: '#363737', font: { size: 11 } },
+          ticks: {
+            color: 'rgba(0,0,0,0)',
+            font: { size: 11 },
+            padding: 10,
+          },
           grid: { display: false },
         },
       },
