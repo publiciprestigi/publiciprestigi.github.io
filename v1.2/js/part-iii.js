@@ -802,17 +802,7 @@ window.PiP_graficBretxa = function() {
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: {
-          display: true,
-          position: 'top',
-          labels: {
-            color: '#555',
-            font: { size: 11 },
-            usePointStyle: true,
-            pointStyle: 'line',
-            boxWidth: 26,
-            boxHeight: 8,
-            padding: 16,
-          },
+          display: false,
         },
         tooltip: {
           backgroundColor: 'rgba(45,45,45,0.95)',
