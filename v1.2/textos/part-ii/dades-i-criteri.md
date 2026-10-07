@@ -12,23 +12,27 @@ En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix 
 
 Que una pel·lícula hagi estat seleccionada a competició oficial en un dels quatre festivals considerats és, en si mateix, un reconeixement de primer nivell: és el festival, com a institució, qui valida el film davant la comunitat cinematogràfica internacional i el col·loca en el debat crític global. Els premis que atorguen els jurats posteriorment afegeixen un reconeixement addicional, però de naturalesa diferent: depenen de la composició canviant del jurat, de les tendències estètiques del moment, dels equilibris geogràfics i polítics... No mesuren qualitat objectiva sinó que reflecteixen el consens d'un grup determinat en un moment concret. Per això, incorporem totes les pel·lícules seleccionades, premiades o no, com a objecte d'anàlisi rellevant.
 
-A les taules de cada festival que veurem a continuació, s’hi indica amb el símbol ★ si ha obtingut algun premi, si també forma part del Top 100 d’espectadors de la Part I (i/o la posició documentada dins la dècada corresponent) i el nombre d’espectadors acumulats en sales de cinema segons les dades de l’ICAA.
-
-## Dades d’espectadors
-
-L’estudi incorpora aquesta dada no només per als films del Top 100 de la Part I, sinó també per al conjunt de pel·lícules analitzades als festivals, les acadèmies i els capítols posteriors d’anàlisi. La font principal és la <a href="https://www.cultura.gob.es/cultura/areas/cine/industria-cine/base-datos-peliculas-calificadas.html" target="_blank" rel="noopener"><strong>Base de dades de pel·lícules qualificades de l’ICAA</strong></a>, que ofereix la xifra acumulada disponible per a cada títol.
-
-La primera recollida sistemàtica de la <a href="/versions/" target="_self">versió actual</a> es va fer l’última setmana de febrer del 2026. Les versions publicades posteriorment durant l’any han incorporat nous títols amb la xifra disponible a l’ICAA en aquell moment. Per això, dins d’una mateixa edició poden conviure dades consultades en dates diferents durant l’any en curs, i algunes xifres poden variar lleugerament respecte de consultes posteriors.
-
-Cada nova edició anual inclourà una revisió general de les dades d’espectadors de tot el corpus; les versions publicades durant l’any podran incorporar nous títols amb dades més recents. Les xifres del **Top 100 de la Part I** mantenen el criteri i la font específica descrits a «Fonts i eines».
+## Jerarquia de festivals i acadèmies
 
 L’ordre de presentació dels festivals respon a una jerarquia de prestigi àmpliament reconeguda, però no estrictament oficial: Cannes, Venècia i Berlín constitueixen el nucli dels tres grans festivals internacionals de referència, amb Cannes en una primera posició molt consolidada i Venècia i Berlín en posicions properes, sovint intercanviables segons el pes que es doni a la història, la dimensió institucional o la projecció industrial de cada festival.
 
 Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. <sup>[6]</sup> La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als altres festivals europeus.
 
+En l’àmbit de les acadèmies, els Oscar ocupen una posició clarament superior en projecció pública, impacte internacional i capacitat de consagració. Els EFA tenen un pes molt menor en aquests mateixos termes, però s’inclouen per la seva funció institucional com a principal reconeixement paneuropeu impulsat per la European Film Academy. La seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat institucional de construir un espai europeu de reconeixement compartit.
+
 ## Coproduccions internacionals
 
 A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, queden fora del corpus.
+
+## Dades d’espectadors
+
+A les taules de festivals i acadèmies s’indica amb el símbol ★ si el film ha obtingut algun premi, si també forma part del Top 100 d’espectadors de la Part I (i/o la posició documentada dins la dècada corresponent) i el nombre d’espectadors acumulats en sales de cinema segons les dades de l’ICAA.
+
+L’estudi incorpora aquesta dada no només per als films del Top 100 de la Part I, sinó també per al conjunt de pel·lícules analitzades als festivals, les acadèmies i els capítols posteriors d’anàlisi. La font principal és la <a href="https://sede.mcu.gob.es/CatalogoICAA" target="_blank" rel="noopener">Base de dades de pel·lícules qualificades de l’ICAA</a>, que ofereix la xifra acumulada disponible per a cada títol.
+
+La primera recollida sistemàtica de la <a href="versions.html">versió actual</a> es va fer l’última setmana de febrer del 2026. Les versions publicades posteriorment durant l’any han incorporat nous títols amb la xifra disponible a l’ICAA en aquell moment. Per això, dins d’una mateixa edició poden conviure dades consultades en dates diferents durant l’any en curs, i algunes xifres poden variar lleugerament respecte de consultes posteriors.
+
+Cada nova edició anual inclourà una revisió general de les dades d’espectadors de tot el corpus; les versions publicades durant l’any podran incorporar nous títols amb dades més recents. Les xifres del Top 100 de la Part I mantenen el criteri i la font específica descrits a <a href="part-i.html#intro">«Fonts i eines»</a>.
 
 ## Sobre les fonts
 
