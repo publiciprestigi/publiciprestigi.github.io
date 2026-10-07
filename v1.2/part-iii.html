@@ -184,7 +184,70 @@
         <div class="text-md text-md-intermedi" data-text="part-iii/bretxa" data-bloc="intro-grafic1"></div>
 
         <div id="grafic-bretxa-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin:18px 0 0">
-          <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 4px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">Evolució de la bretxa entre festivals i públic (1965–2025)</p>
+          <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">Evolució de la bretxa entre festivals i públic (1965–2025)</p>
+
+          <div class="bretxa-llegenda" aria-label="Llegenda del gràfic">
+            <span class="bretxa-llegenda-item">
+              <span class="bretxa-linia bretxa-linia-ratio" aria-hidden="true"><span class="bretxa-punt"></span></span>
+              <span>Ràtio bretxa</span>
+            </span>
+            <span class="bretxa-llegenda-item">
+              <span class="bretxa-linia bretxa-linia-mercat" aria-hidden="true"></span>
+              <span>Mercat anual mitjà</span>
+            </span>
+          </div>
+
+          <style>
+            #grafic-bretxa-bloc .bretxa-llegenda{
+              display:flex;
+              justify-content:center;
+              align-items:center;
+              gap:26px;
+              flex-wrap:wrap;
+              margin:0 0 8px;
+              color:#555;
+              font:11px/1.2 'Inter',-apple-system,'SF Pro Text',sans-serif;
+            }
+            #grafic-bretxa-bloc .bretxa-llegenda-item{
+              display:inline-flex;
+              align-items:center;
+              gap:7px;
+              white-space:nowrap;
+            }
+            #grafic-bretxa-bloc .bretxa-linia{
+              position:relative;
+              display:inline-block;
+              width:30px;
+              height:10px;
+              flex:0 0 30px;
+            }
+            #grafic-bretxa-bloc .bretxa-linia::before{
+              content:'';
+              position:absolute;
+              left:0;
+              right:0;
+              top:50%;
+              transform:translateY(-50%);
+              border-top:2px solid #363737;
+            }
+            #grafic-bretxa-bloc .bretxa-linia-mercat::before{
+              border-top:2px dashed #b8b8b8;
+            }
+            #grafic-bretxa-bloc .bretxa-punt{
+              position:absolute;
+              left:50%;
+              top:50%;
+              width:7px;
+              height:7px;
+              border-radius:50%;
+              background:#363737;
+              border:1.5px solid #fff;
+              transform:translate(-50%,-50%);
+              box-sizing:content-box;
+              z-index:1;
+            }
+          </style>
+
           <div class="grafic-wrap" style="height:340px;position:relative;margin:0;border-top:none;border-bottom:none">
             <canvas id="grafic-bretxa"></canvas>
           </div>
