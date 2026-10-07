@@ -1597,7 +1597,7 @@ window.PiP_graficGeneracioActual = function() {
     },
   };
 
-  // Etiquetes de l'eix Y: títol del film en cursiva; any i director en rodona.
+  // Etiquetes de l'eix Y: títol del film en negreta + cursiva; any i director en rodona.
   const etiquetesFilmsGA = {
     id: 'ga-etiquetes-films',
     afterDraw(chart) {
@@ -1615,7 +1615,7 @@ window.PiP_graficGeneracioActual = function() {
         const cognom = f.director.split(' ').slice(-1)[0];
         const suffix = ` (${f.any}) · ${cognom}`;
 
-        c.font = 'italic 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
+        c.font = 'italic 700 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
         const wTitle = c.measureText(f.titol).width;
 
         c.font = '11px "Inter",-apple-system,"SF Pro Text",sans-serif';
@@ -1626,7 +1626,7 @@ window.PiP_graficGeneracioActual = function() {
         c.fillStyle = '#363737';
         c.textAlign = 'left';
 
-        c.font = 'italic 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
+        c.font = 'italic 700 11px "Inter",-apple-system,"SF Pro Text",sans-serif';
         c.fillText(f.titol, xStart, y);
 
         c.font = '11px "Inter",-apple-system,"SF Pro Text",sans-serif';
@@ -2285,8 +2285,8 @@ window.PiP_graficMapaCanon = function() {
   if (bloc && !document.getElementById('mapa-capçalera')) {
     const nomsCurts = PIP_III_ES ? ['Radical', 'Generación actual', 'Núcleo central', 'Popular de género', 'Popular'] : ['Radical', 'Generació actual', 'Nucli central', 'Popular de gènere', 'Popular'];
     let cap = `<div id="mapa-capçalera">
-      <p style="font-size:16px;font-weight:600;color:#363737;text-align:center;margin:0 0 18px">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965–2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965–2025)')}</p>
-      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.75em;color:#555;margin-bottom:22px;justify-content:center">`;
+      <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:&quot;Inter&quot;,-apple-system,&quot;SF Pro Text&quot;,sans-serif">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965–2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965–2025)')}</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:#555;margin-bottom:18px;justify-content:center;font-family:&quot;Inter&quot;,-apple-system,&quot;SF Pro Text&quot;,sans-serif">`;
     blocs.forEach((b, i) => {
       cap += `<span style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;border-radius:2px;background:${b.color};display:inline-block"></span>${nomsCurts[i]}</span>`;
     });
@@ -2311,7 +2311,7 @@ window.PiP_graficMapaCanon = function() {
     b.films.forEach(f => {
       const w = Math.max((f.esp / MAX) * 100, 0.35);
       html += `<tr>
-        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:310px;font-size:.94em;color:#363737"><em>${f.t}</em> (${f.any}) · ${f.dir}</td>
+        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:310px;font-size:.94em;color:#363737"><strong><em>${f.t}</em></strong> (${f.any}) · ${f.dir}</td>
         <td style="text-align:center;color:#999">${f.c}</td>
         <td style="text-align:center;color:#999">${f.ca}</td>
         <td style="text-align:center;color:#999">${f.b}</td>
@@ -2322,7 +2322,8 @@ window.PiP_graficMapaCanon = function() {
   });
 
   html += `</table>
-    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">${pip3T('✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent | <b>·</b> fora de l\'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona','✓ presente en la lista del Centenario (orden cronológico, sin ranking) | — ausente | <b>·</b> fuera del alcance temporal de la lista | Barras proporcionales a los espectadores (máx. 9,56M) | Orden cronológico dentro de cada zona')}</p>`;
+    <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">${pip3T('✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent | <b>·</b> fora de l\'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona','✓ presente en la lista del Centenario (orden cronológico, sin ranking) | — ausente | <b>·</b> fuera del alcance temporal de la lista | Barras proporcionales a los espectadores (máx. 9,56M) | Orden cronológico dentro de cada zona')}</p>
+    <p style="font-size:12px;color:#888;margin:7px 0 0;line-height:1.45;text-align:center">${pip3T('Fonts: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA) i les tres llistes indicades al text.','Fuentes: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA) y las tres listas indicadas en el texto.')}</p>`;
 
   el.innerHTML = html;
 
