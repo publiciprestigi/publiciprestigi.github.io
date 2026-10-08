@@ -493,7 +493,7 @@
                   <div class="bf-film-prod">Producció: França · Itàlia</div>
                 </div>
                 <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:55.56%" data-tip="<strong>França</strong><br>1.389.101 espectadors<br>Estrena FR: 04/03/1964"><span class="bf-value">1,39M</span></div>
+                  <div class="bf-bar fr" style="width:55.56%" data-tip="<strong>França</strong><br>1.389.101 espectadors<br>Estrena FR: 04/03/1964<br>Mercat anual i quota: no disponibles (sèrie des de 1965)"><span class="bf-value">1,39M</span></div>
                 </div>
               </div>
 
@@ -532,7 +532,7 @@
                   <div class="bf-film-prod">Coproducció: Espanya · Mèxic</div>
                 </div>
                 <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:24.20%" data-tip="<strong>França</strong><br>605.083 espectadors<br>Estrena FR: 04/04/1962<br>Acumulat CBO; reestrenes per delimitar"><span class="bf-value">605K</span></div>
+                  <div class="bf-bar fr" style="width:24.20%" data-tip="<strong>França</strong><br>605.083 espectadors<br>Estrena FR: 04/04/1962<br>Mercat anual i quota: no disponibles (sèrie des de 1965)<br>Acumulat CBO; reestrenes per delimitar"><span class="bf-value">605K</span></div>
                 </div>
               </div>
 
@@ -768,7 +768,7 @@
             const tipText = (country,n,market) => {
               let t='<strong>'+country+'</strong><br>'+fmt(n)+' espectadors';
               if (market) t += '<br>Mercat anual '+market.toLocaleString('ca-ES',{maximumFractionDigits:2})+'M<br>Quota de mercat '+pct(n,market);
-              else t += '<br>Mercat anual i quota: pendent de consolidació';
+              else t += '<br>Mercat anual i quota: no disponibles';
               return t;
             };
             const isAlmodovar = f => f.director === 'Pedro Almodóvar';
@@ -1443,7 +1443,7 @@
                   const anyVisible = Number(film.estrenaEspanya ?? film.any ?? Math.floor(film.x));
                   return {
                     ...pt,
-                    raw: { ...film, x: anyVisible },
+                    raw: { ...film, any: anyVisible, x: anyVisible, estrenaEspanya: undefined },
                     parsed: { ...pt.parsed, x: anyVisible },
                     label: String(anyVisible)
                   };
@@ -1459,7 +1459,7 @@
           scales: {
             x: {
               type: 'linear',
-              min: 1965,
+              min: 1964.5,
               max: 2000,
               ticks: { stepSize: 5, color: '#363737', font: { size: 11 } },
               grid: { color: '#eee' }
