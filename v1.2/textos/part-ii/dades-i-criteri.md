@@ -1,10 +1,10 @@
-La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiques amplia el marc d’anàlisi i permet observar diferències en l’abast de públic i en la manera com cada institució reconeix, legitima i dona visibilitat a les pel·lícules.
+La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiques amplia el marc d’anàlisi i permet observar diferències en l’abast de públic i en la manera com festivals i acadèmies reconeixen, legitimen i donen visibilitat a les pel·lícules.
 
 L’estudi recull la presència i els premis obtinguts a les seccions oficials competitives de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>, i les nominacions i premis dels <strong style="color:#c8a000">Oscar</strong> i els <strong style="color:#8C6239">EFA</strong>.
 
 | Àmbit | Criteri de selecció | Criteri de premis | Què queda fora o es mostra a part |
 |---|---|---|---|
-| **Festivals** | Films a la secció oficial competitiva | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no computen, però es mostren separadament a títol informatiu. Les seccions paral·leles i els premis més tècnics no s’hi inclouen. |
+| **Festivals** | Films a la secció oficial competitiva | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no computen, però es mostren separadament a títol informatiu. Les seccions paral·leles i altres premis secundaris no s’hi inclouen. |
 | **Acadèmies** | Films amb nominacions en qualsevol categoria | Tots els premis | Als EFA, els Premis del Públic i altres votacions no acadèmiques es mostren separadament; els reconeixements a professionals espanyols en produccions estrangeres, també. |
 
 ## Festivals: selecció, premis i jerarquia
