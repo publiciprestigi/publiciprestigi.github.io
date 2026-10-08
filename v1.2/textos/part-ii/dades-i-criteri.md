@@ -2,7 +2,7 @@ La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiq
 
 | Àmbit | Criteri d'inclusió | Criteri de premis | Què queda fora o es mostra a part |
 |---|---|---|---|
-| **Festivals** | Films seleccionats a la secció oficial competitiva | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no computen, però es mostren separadament a títol informatiu. Les seccions paral·leles i els premis més tècnics no s’hi inclouen. |
+| **Festivals** | Films a la secció oficial competitiva | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no computen, però es mostren separadament a títol informatiu. Les seccions paral·leles i els premis més tècnics no s’hi inclouen. |
 | **Acadèmies** | Films amb nominacions en qualsevol categoria | Tots els premis | Als EFA, els Premis del Públic i altres votacions no acadèmiques es mostren separadament; els reconeixements a professionals espanyols en produccions estrangeres, també. |
 
 ## Festivals: selecció, premis i jerarquia
