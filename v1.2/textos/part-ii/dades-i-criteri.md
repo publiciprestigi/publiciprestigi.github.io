@@ -15,9 +15,9 @@ L’ordre de presentació dels festivals respon a una jerarquia de prestigi àmp
 
 Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. <sup>[6]</sup> La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als altres festivals europeus.
 
-## Acadèmies: Oscar i EFA
+## Acadèmies: XXX i XXX
 
-En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria; per això cada film computa una sola vegada com a presència independentment del nombre de reconeixements.
+En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria; per això cada film computa una sola vegada com a presència independentment del nombre de candidatures i reconeixements.
 
 Els corpus dels Oscar i els EFA no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional.
 
