@@ -1,12 +1,9 @@
 Festivals i acadèmies com a formes complementàries de reconeixement internacional del cinema espanyol. L’estudi recull la presència i els premis obtinguts a les seccions oficials competitives de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>, i les nominacions i premis dels <strong style="color:#c8a000">Oscar</strong> i els <strong style="color:#8C6239">EFA</strong>.
 
-## Criteri general
-
-| Àmbit | Què compta al corpus principal | Criteri de premis | Què queda separat |
+| Àmbit | Què compta | Criteri de premis | Què queda fora o es mostra a part |
 |---|---|---|---|
-| Festivals | Selecció a la secció oficial a concurs | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Seccions paral·leles i participacions fora de competició |
-| Oscar | Totes les nominacions i premis oficials, incloses les categories tècniques | Cada film compta una sola vegada com a presència | Reconeixements a professionals en produccions estrangeres |
-| EFA | Totes les nominacions i premis oficials decidits per l’Acadèmia, incloses les categories tècniques | Cada film compta una sola vegada com a presència | Premis del Públic i altres votacions no acadèmiques; reconeixements a professionals en produccions estrangeres |
+| **Festivals** | Seleccions a competició oficial | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no compten en el recompte principal, però es mostren separadament a títol informatiu. Les seccions paral·leles tampoc no s’hi inclouen ni es mostren en aquesta versió |
+| **Acadèmies** | Totes les nominacions oficials dels Oscar i els EFA | Tots els premis oficials | Als EFA, els Premis del Públic i altres votacions no acadèmiques es mostren separadament. També es documenten a part els reconeixements a professionals espanyols en produccions estrangeres |
 
 ## Festivals: selecció, premis i jerarquia
 
@@ -20,7 +17,7 @@ Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocu
 
 ## Acadèmies: Oscar i EFA
 
-A les acadèmies, el primer nivell de reconeixement és la nominació. Tant als Oscar com als EFA, l’estudi compta totes les categories oficials, incloses les tècniques, i cada film computa una sola vegada com a presència independentment del nombre de nominacions o premis. En el cas dels EFA, els Premis del Públic i altres votacions no decidides pels membres de l’Acadèmia es documenten separadament i no formen part del corpus principal.
+A les acadèmies, el primer nivell de reconeixement és la nominació. Tant als Oscar com als EFA, l’estudi compta totes les nominacions i premis oficials, i cada film computa una sola vegada com a presència independentment del nombre de reconeixements. En el cas dels EFA, els Premis del Públic i altres votacions no decidides pels membres de l’Acadèmia es documenten separadament.
 
 En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria.
 
