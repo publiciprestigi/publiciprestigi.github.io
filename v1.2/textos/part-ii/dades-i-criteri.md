@@ -1,6 +1,6 @@
 La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiques amplia el marc d’anàlisi i permet observar diferències en l’abast de públic i en la manera com festivals i acadèmies reconeixen, legitimen i donen visibilitat a les pel·lícules.
 
-L’estudi recull la presència i els premis obtinguts a les seccions oficials competitives de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>, i les nominacions i premis dels <strong style="color:#c8a000">Oscar</strong> i els <strong style="color:#8C6239">EFA</strong>.
+L’estudi recull la presència i els premis obtinguts a les seccions oficials a competició de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>, i les nominacions i premis dels <strong style="color:#c8a000">Oscar</strong> i els <strong style="color:#8C6239">EFA</strong>.
 
 | Àmbit | Criteri de selecció | Criteri de premis | Què queda fora o es mostra a part |
 |---|---|---|---|
