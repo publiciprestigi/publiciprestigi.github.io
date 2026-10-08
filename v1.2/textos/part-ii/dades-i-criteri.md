@@ -7,7 +7,7 @@ L’estudi recull la presència i els premis obtinguts als festivals de <strong 
 | **Festivals** | Secció oficial a competició | Guardó màxim, premis especials del jurat, direcció, interpretació i guió | Secció oficial fora de competició, seccions paral·leles i altres premis tècnics i secundaris. |
 | **Acadèmies** | Nominacions en qualsevol categoria | Tots els premis | Reconeixement a professionals espanyols en produccions estrangeres; i als EFA, Premis del Públic i altres votacions no acadèmiques. |
 
-## Festivals: selecció, premis i jerarquia
+## Festivals: selecció i jerarquia
 
 Que una pel·lícula hagi estat seleccionada a competició oficial és, en si mateix, un reconeixement de primer nivell: és el festival, com a institució, qui valida el film davant la comunitat cinematogràfica internacional i el col·loca en el debat crític global. Els premis que atorguen els jurats posteriorment afegeixen un reconeixement addicional, però de naturalesa diferent: depenen de la composició canviant del jurat, de les tendències estètiques del moment, dels equilibris geogràfics i polítics... No mesuren qualitat objectiva sinó que reflecteixen el consens d'un grup determinat en un moment concret. Per això, l’estudi incorpora totes les pel·lícules seleccionades, premiades o no.
 
