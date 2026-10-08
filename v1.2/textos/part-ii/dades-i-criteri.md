@@ -7,8 +7,6 @@ La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiq
 
 ## Festivals: selecció, premis i jerarquia
 
-El corpus principal dels festivals es limita estrictament a la secció oficial a concurs de cadascun: En Compétition, Concorso, Wettbewerb i Sección Oficial a concurso. En queden excloses les seccions paral·leles i les participacions fora de competició, que aquesta versió incorpora separadament a títol informatiu. El recompte de premis es limita al guardó màxim de cada festival, als premis especials del jurat, a la millor direcció, a les millors interpretacions i al millor guió; no s’hi inclouen altres premis tècnics o secundaris.
-
 Que una pel·lícula hagi estat seleccionada a competició oficial és, en si mateix, un reconeixement de primer nivell: és el festival, com a institució, qui valida el film davant la comunitat cinematogràfica internacional i el col·loca en el debat crític global. Els premis que atorguen els jurats posteriorment afegeixen un reconeixement addicional, però de naturalesa diferent: depenen de la composició canviant del jurat, de les tendències estètiques del moment, dels equilibris geogràfics i polítics... No mesuren qualitat objectiva sinó que reflecteixen el consens d'un grup determinat en un moment concret. Per això, l’estudi incorpora totes les pel·lícules seleccionades, premiades o no.
 
 L’ordre de presentació dels festivals respon a una jerarquia de prestigi àmpliament reconeguda, però no estrictament oficial: Cannes, Venècia i Berlín constitueixen el nucli dels tres grans festivals internacionals de referència, amb Cannes en una primera posició molt consolidada i Venècia i Berlín en posicions properes, sovint intercanviables segons el pes que es doni a la història, la dimensió institucional o la projecció industrial de cada festival.
@@ -35,9 +33,7 @@ A les taules de festivals i acadèmies s’indica amb el símbol ★ si el film 
 
 L’estudi incorpora aquesta dada no només per als films del Top 100 de la Part I, sinó també per al conjunt de pel·lícules analitzades als festivals, les acadèmies i els capítols posteriors d’anàlisi. La font principal és la <a href="https://sede.mcu.gob.es/CatalogoICAA" target="_blank" rel="noopener">Base de dades de pel·lícules qualificades de l’ICAA</a>, que ofereix la xifra acumulada disponible per a cada títol.
 
-La primera recollida sistemàtica de la <a href="versions.html">versió actual</a> es va fer l’última setmana de febrer del 2026. Les versions publicades posteriorment durant l’any han incorporat nous títols amb la xifra disponible a l’ICAA en aquell moment. Per això, dins d’una mateixa edició poden conviure dades consultades en dates diferents durant l’any en curs, i algunes xifres poden variar lleugerament respecte de consultes posteriors.
-
-Cada nova edició anual inclourà una revisió general de les dades d’espectadors de tot el corpus; les versions publicades durant l’any podran incorporar nous títols amb dades més recents. Les xifres del Top 100 de la Part I mantenen el criteri i la font específica descrits a <a href="part-i.html#intro">«Fonts i eines»</a>.
+La primera recollida sistemàtica de la <a href="versions.html">versió actual</a> es va fer l’última setmana de febrer del 2026. Les versions publicades posteriorment durant l’any han incorporat nous títols amb la xifra disponible a l’ICAA en aquell moment. Per això, dins d’una mateixa edició poden conviure dades consultades en dates diferents durant l’any en curs, i algunes xifres poden variar lleugerament respecte de consultes posteriors. Cada nova edició anual inclourà una revisió general de les dades d’espectadors de tot l'estudi.
 
 ## Sobre les fonts
 
