@@ -5,7 +5,7 @@ L’estudi recull la presència i els premis obtinguts als festivals de <strong 
 | Àmbit | Criteri de selecció | Criteri de premis | Què queda fora |
 |---|---|---|---|
 | **Festivals** | Secció oficial a competició | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Secció oficial fora de competició, seccions paral·leles i altres premis tècnics i secundaris. |
-| **Acadèmies** | Nominacions en qualsevol categoria | Tots els premis | Reconeixement a professionals espanyols en produccions estrangeres; als EFA, Premis del Públic i altres votacions no acadèmiques. |
+| **Acadèmies** | Nominacions en qualsevol categoria | Tots els premis | Reconeixement a professionals espanyols en produccions estrangeres; i als EFA, Premis del Públic i altres votacions no acadèmiques. |
 
 ## Festivals: selecció, premis i jerarquia
 
