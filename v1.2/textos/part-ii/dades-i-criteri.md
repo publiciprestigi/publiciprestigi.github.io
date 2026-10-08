@@ -17,9 +17,7 @@ Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocu
 
 ## Acadèmies: Oscar i EFA
 
-A les acadèmies, el primer nivell de reconeixement és la nominació. Tant als Oscar com als EFA, l’estudi compta totes les nominacions i premis oficials, i cada film computa una sola vegada com a presència independentment del nombre de reconeixements. En el cas dels EFA, els Premis del Públic i altres votacions no decidides pels membres de l’Acadèmia es documenten separadament.
-
-En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria.
+En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria; per això cada film computa una sola vegada com a presència independentment del nombre de reconeixements.
 
 Els corpus dels Oscar i els EFA no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional.
 
