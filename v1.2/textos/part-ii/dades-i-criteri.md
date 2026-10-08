@@ -2,7 +2,7 @@ La incorporació dels premis de les acadèmies cinematogràfiques amplia el marc
 
 L’estudi recull la presència als festivals de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>, i als premis <strong style="color:#c8a000">Oscar</strong> i <strong style="color:#8C6239">EFA</strong>, de la següent manera: 
 
-| Àmbit | Criteri de selecció | Criteri de premis | Què queda fora o es mostra a part |
+| Àmbit | Criteri de selecció | Criteri de premis | Què queda fora o a part |
 |---|---|---|---|
 | **Festivals** | Secció oficial a competició | Guardó màxim, premis especials del jurat, direcció, interpretació i guió | Secció oficial fora de competició, seccions paral·leles i altres premis tècnics i secundaris. |
 | **Acadèmies** | Nominacions en qualsevol categoria | Tots els premis | Reconeixement a professionals espanyols en produccions estrangeres; i als EFA, Premis del Públic i altres votacions no acadèmiques. |
