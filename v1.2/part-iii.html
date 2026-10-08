@@ -409,10 +409,10 @@
 
         
   <style id="pip-mini-mercats-style">
-    .pip-mini-mercats{max-width:540px;margin:16px 0 16px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif;color:#363737}
-    .text-md-comentari> .pip-mini-mercats{margin:14px 0 22px 18px}
-    .text-md-comentari li .pip-mini-mercats{margin:14px 0 10px 18px}
-    .pip-mini-mercats .pmm-context{font-size:12px;font-weight:600;margin:0 0 10px;line-height:1.4}
+    /* Petites síntesis integrades i centrades en la columna de comentari. */
+    .pip-mini-mercats{box-sizing:border-box;width:calc(100% - 36px);max-width:520px;margin:25px auto 30px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif;color:#363737}
+    .text-md-comentari li > .pip-mini-mercats{margin:25px auto 32px}
+    .pip-mini-mercats .pmm-context{font-size:12px;font-weight:600;margin:0 0 12px;line-height:1.4}
     .pip-mini-mercats .pmm-row{display:grid;grid-template-columns:24px minmax(0,1fr) 73px;gap:10px;align-items:center;margin:8px 0}
     .pip-mini-mercats .pmm-country{font-size:11px;font-weight:600;color:#666}
     .pip-mini-mercats .pmm-track{height:18px;position:relative;background:#f3f3f3}
@@ -420,7 +420,7 @@
     .pip-mini-mercats .pmm-bar.es{background:#b8463a}
     .pip-mini-mercats .pmm-bar.fr{background:#1e3d6b}
     .pip-mini-mercats .pmm-value{font-size:12px;font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
-    @media(max-width:460px){.pip-mini-mercats{max-width:none}.text-md-comentari> .pip-mini-mercats,.text-md-comentari li .pip-mini-mercats{margin-left:0}.pip-mini-mercats .pmm-row{grid-template-columns:20px minmax(0,1fr) 60px;gap:6px}.pip-mini-mercats .pmm-value{font-size:11px}}
+    @media(max-width:460px){.pip-mini-mercats{width:100%}.pip-mini-mercats .pmm-row{grid-template-columns:20px minmax(0,1fr) 60px;gap:6px}.pip-mini-mercats .pmm-value{font-size:11px}}
   </style>
 
 <div id="grafic-bunuel-franca-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 18px;margin:20px 0;overflow:visible">
@@ -637,14 +637,13 @@
 
         <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none">
           <ul>
-            <li>La comparació ampliada mostra resultats molt desiguals: <em>Viridiana</em> i <em>Tristana</em> tenen més espectadors a Espanya, mentre que els altres films tenen més públic a França; <em>Ese oscuro objeto del deseo</em> presenta xifres relativament properes als dos països. Si posem aquestes xifres en relació amb el volum anual de cada mercat, el cas d’<em>Ese oscuro objeto del deseo</em> és pràcticament idèntic: el film representa aproximadament el 0,49% de les entrades anuals a Espanya i el 0,48% a França.</li>
-
-          </ul>
+            <li>La comparació ampliada mostra resultats molt desiguals: <em>Viridiana</em> i <em>Tristana</em> tenen més espectadors a Espanya, mentre que els altres films tenen més públic a França; <em>Ese oscuro objeto del deseo</em> presenta xifres relativament properes als dos països. Si posem aquestes xifres en relació amb el volum anual de cada mercat, el cas d’<em>Ese oscuro objeto del deseo</em> és pràcticament idèntic: el film representa aproximadament el 0,49% de les entrades anuals a Espanya i el 0,48% a França.
 <div class="pip-mini-mercats" role="img" aria-label="Buñuel · 8 films de la comparativa: Espanya 6,398,618 espectadors; França 8,622,696 espectadors" >
   <p class="pmm-context">Buñuel · 8 films de la comparativa</p>
   <div class="pmm-row"><span class="pmm-country">ES</span><div class="pmm-track"><span class="pmm-bar es" style="width:74.21%"></span></div><span class="pmm-value">6,40M</span></div>
   <div class="pmm-row"><span class="pmm-country">FR</span><div class="pmm-track"><span class="pmm-bar fr" style="width:100.00%"></span></div><span class="pmm-value">8,62M</span></div>
-</div>
+</div></li>
+          </ul>
         </div>
 
         <div class="text-md text-md-intermedi" style="margin-top:22px">
