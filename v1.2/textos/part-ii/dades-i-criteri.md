@@ -15,13 +15,13 @@ L’ordre de presentació dels festivals respon a una jerarquia de prestigi àmp
 
 Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. <sup>[6]</sup> La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als altres festivals europeus.
 
-## Acadèmies: XXX i XXX
+## Acadèmies: candidatures i legitimitat
 
-En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria; per això cada film computa una sola vegada com a presència independentment del nombre de candidatures i reconeixements.
+En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria.
 
-Els corpus dels Oscar i els EFA no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional.
+Els corpus dels Oscar i els EFA no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional. 
 
-En termes de pes institucional i projecció pública, els Oscar ocupen una posició clarament superior. Els EFA tenen un impacte molt menor, la seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat encara no gaire reeixida de construir un espai europeu de reconeixement compartit.
+En termes de pes institucional i projecció pública, els Oscar ocupen una posició clarament superior. Els EFA tenen un impacte molt menor. La seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat, encara no gaire reeixida, de construir un espai europeu de reconeixement compartit.
 
 ## Coproduccions internacionals
 
