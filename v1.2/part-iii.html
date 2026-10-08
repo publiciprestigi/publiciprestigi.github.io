@@ -1283,14 +1283,14 @@
       }
 
       const bunuel = [
-        { x: 1968.95, any: 1964, estrenaEspanya: 1968, y: 236140, titol: 'Diario de una camarera', label: 'Diario de una camarera', dy: 22 },
+        { x: 1968.95, any: 1964, estrenaEspanya: 1968, y: 236140, titol: 'Diario de una camarera', label: 'Diario de una camarera', dy: 22, prestigi: '' },
         { x: 1970, any: 1970, y: 1801968, titol: 'Tristana', label: 'Tristana', dy: -12 },
         { x: 1975.3, any: 1974, estrenaEspanya: 1975, y: 355140, titol: 'El fantasma de la libertad', label: 'El fantasma de la libertad', dy: 22 },
-        { x: 1977.27, any: 1961, estrenaEspanya: 1977, y: 1039181, titol: 'Viridiana', label: 'Viridiana', dy: 24 },
+        { x: 1977.27, any: 1961, estrenaEspanya: 1977, y: 1039181, titol: 'Viridiana', label: 'Viridiana', dy: 24, prestigi: 'Cannes ★' },
         { x: 1977.63, any: 1969, estrenaEspanya: 1977, y: 184767, titol: 'La vía láctea', label: 'La vía láctea', dy: -12 },
         { x: 1978.16, any: 1977, estrenaEspanya: 1978, y: 1076567, titol: 'Ese oscuro objeto del deseo', label: 'Ese oscuro objeto…', dy: -12 },
-        { x: 1980, any: 1967, estrenaEspanya: 1980, y: 1168609, titol: 'Belle de jour', label: 'Belle de jour', dy: 22 },
-        { x: 1983.08, any: 1972, estrenaEspanya: 1983, y: 536246, titol: 'El discreto encanto de la burguesía', label: 'El discreto encanto…', dy: -12 }
+        { x: 1980, any: 1967, estrenaEspanya: 1980, y: 1168609, titol: 'Belle de jour', label: 'Belle de jour', dy: 22, prestigi: 'Venècia ★' },
+        { x: 1983.08, any: 1972, estrenaEspanya: 1983, y: 536246, titol: 'El discreto encanto de la burguesía', label: 'El discreto encanto…', dy: -12, prestigi: 'Oscar ★' }
       ];
 
       const berlanga = [
@@ -1368,7 +1368,7 @@
 
       [...bunuel, ...berlanga, ...bardem].forEach(p => {
         const rec = reconeixementCorpusBBB(p);
-        if (rec) p.prestigi = rec;
+        if (rec && !p.prestigi) p.prestigi = rec;
       });
 
       const datasets = [
