@@ -2,8 +2,8 @@ Festivals i acadèmies com a formes complementàries de reconeixement internacio
 
 | Àmbit | Què compta | Criteri de premis | Què queda fora o es mostra a part |
 |---|---|---|---|
-| **Festivals** | Seleccions a competició oficial | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no es recullen, però es mostren separadament a títol informatiu. Les seccions paral·leles i els premis més tècnics no s’hi inclouen. |
-| **Acadèmies** | Totes les nominacions en qualsevol categoria | Tots els premis | Als EFA, els Premis del Públic i altres votacions no acadèmiques es mostren separadament; els reconeixements a professionals espanyols en produccions estrangeres, també. |
+| **Festivals** | Films seleccionats a la secció oficial competitiva | Guardó màxim, premis especials del jurat, direcció, interpretacions i guió | Les participacions fora de competició no es recullen, però es mostren separadament a títol informatiu. Les seccions paral·leles i els premis més tècnics no s’hi inclouen. |
+| **Acadèmies** | Films amb nominacions en qualsevol categoria | Tots els premis | Als EFA, els Premis del Públic i altres votacions no acadèmiques es mostren separadament; els reconeixements a professionals espanyols en produccions estrangeres, també. |
 
 ## Festivals: selecció, premis i jerarquia
 
