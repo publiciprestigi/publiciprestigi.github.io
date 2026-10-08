@@ -31,7 +31,7 @@ Per a cada títol, la taula recull els festivals i acadèmies en què s'ha recon
 <!-- intro-cercle -->
 ## El segon cercle
 
-Per sota del llindar del Top 100 hi ha 34 pel·lícules del corpus de prestigi que superen el milió d’espectadors. Formen un «segon cercle» de films que no arriben formalment a la doble corona, però combinen reconeixement internacional i una presència en sales molt significativa. La numeració continua la de la taula anterior per fer visible la gradació entre els dos grups.
+Per sota del llindar del Top 100 hi ha 34 pel·lícules del corpus de prestigi que superen el milió d’espectadors. Formen un «segon cercle» de films que no arriben formalment a la «doble corona», però combinen reconeixement internacional i una presència en sales molt significativa. La numeració continua la de la taula anterior per fer visible la gradació entre els dos grups.
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
