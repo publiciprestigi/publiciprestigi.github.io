@@ -23,7 +23,7 @@ En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix 
 
 Els corpus dels Oscar i els EFA no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional.
 
-En termes de pes institucional i projecció pública, els Oscar ocupen una posició clarament superior. Els EFA tenen un impacte molt menor, però s’inclouen com el principal intent de construir un reconeixement comú del cinema europeu. La seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat institucional de construir un espai europeu de reconeixement compartit.
+En termes de pes institucional i projecció pública, els Oscar ocupen una posició clarament superior. Els EFA tenen un impacte molt menor, la seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat encara no gaire reeixida de construir un espai europeu de reconeixement compartit.
 
 ## Coproduccions internacionals
 
