@@ -27,7 +27,7 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:comentari-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-coproduccions -->
-- *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya. Els altres cinc títols són produccions franceses o francoitalianes i, per tant, no formen part del corpus de l’estudi. Aquesta diversitat reflecteix la importància de les coproduccions en el cinema europeu de l’època: entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N]
+- *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya, precisament el títol que presenta les xifres d’espectadors més equilibrades entre els dos països. Els altres cinc títols són produccions franceses o francoitalianes. Aquesta diversitat reflecteix la importància de les coproduccions en el cinema europeu de l’època: entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N]
 <!-- /PIP_BLOC:comentari-coproduccions -->
 
 <!-- PIP_BLOC:comentari-balanc -->
