@@ -19,7 +19,7 @@ La comparació també posa en evidència la singularitat de l’última etapa de
 
 Què passa, doncs, quan mirem els espectadors de les vuit pel·lícules de Buñuel a França i els comparem amb els d’Espanya? Les xifres permeten observar el pes de cada mercat i els desfasaments entre les estrenes, en alguns casos de molts anys. El gràfic ordena les pel·lícules segons l’any d’estrena a Espanya i indica per a cada títol els anys corresponents als dos mercats (ES i FR).
 
-Aquests desequilibris tenen una explicació històrica. La censura franquista va condicionar profundament l’exhibició de Buñuel, amb prohibicions, retalls i estrenes sovint molt tardanes. L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves possibilitats d’exhibició per a una part de la seva filmografia, encara que sovint amb una distribució limitada i irregular. El cas més emblemàtic és *Viridiana*, prohibida després de Cannes i estrenada comercialment el 1977, setze anys després de la seva realització. [N]
+Aquests desequilibris tenen una explicació històrica. La censura franquista va condicionar profundament l’exhibició de Buñuel, amb prohibicions, retalls i estrenes sovint molt tardanes. L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves possibilitats d’exhibició per a una part de la seva filmografia, encara que sovint amb una distribució limitada i irregular. El cas més emblemàtic és *Viridiana*, prohibida després de Cannes i estrenada comercialment el 1977, setze anys després de la seva producció. [N]
 <!-- /PIP_BLOC:intro-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
