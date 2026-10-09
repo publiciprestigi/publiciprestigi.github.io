@@ -22,9 +22,15 @@ Què passa, doncs, quan mirem els espectadors de les vuit pel·lícules de Buñu
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
 - Les vuit pel·lícules presenten recorreguts comercials molt diferents. *Tristana* i *Viridiana* tenen clarament més espectadors a Espanya, mentre que *Ese oscuro objeto del deseo* registra xifres relativament properes als dos països. En els altres cinc títols predomina el públic francès. Però les dates també expliquen una altra història: la censura franquista va condicionar profundament l’exhibició de Buñuel, amb prohibicions, retalls i estrenes sovint molt tardanes. L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves possibilitats d’exhibició per a una part de la seva filmografia, encara que sovint amb una distribució limitada i irregular. El cas més emblemàtic és *Viridiana*, prohibida després de Cannes i estrenada comercialment el 1977, setze anys després de la seva realització. [N]
-- La dimensió internacional de Buñuel s’inscriu també en una indústria europea en què les coproduccions tenien un pes considerable. Entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N] Dels vuit films comparats, *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya. Els altres cinc són produccions franceses o francoitalianes i per això no formen part del corpus de l'estudi.
-- En conjunt, les vuit pel·lícules acumulen 6,4 milions d’espectadors a Espanya i 8,6 milions a França. El balanç mostra la importància del mercat francès en la trajectòria final de Buñuel, però també confirma que la seva obra va arribar a un públic considerable a Espanya, malgrat els obstacles polítics i les irregularitats de distribució.
 <!-- /PIP_BLOC:comentari-dos-paisos -->
+
+<!-- PIP_BLOC:comentari-coproduccions -->
+- La dimensió internacional de Buñuel s’inscriu també en una indústria europea en què les coproduccions tenien un pes considerable. Entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N] Dels vuit films comparats, *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya. Els altres cinc són produccions franceses o francoitalianes i per això no formen part del corpus de l'estudi.
+<!-- /PIP_BLOC:comentari-coproduccions -->
+
+<!-- PIP_BLOC:comentari-balanc -->
+- En conjunt, les vuit pel·lícules acumulen 6,4 milions d’espectadors a Espanya i 8,6 milions a França. El balanç mostra la importància del mercat francès en la trajectòria final de Buñuel, però també confirma que la seva obra va arribar a un públic considerable a Espanya, malgrat els obstacles polítics i les irregularitats de distribució.
+<!-- /PIP_BLOC:comentari-balanc -->
 
 <!-- PIP_BLOC:context-industrial -->
 Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a diferents sistemes industrials, culturals i comercials. En el seu cas, aquesta dimensió estava profundament marcada per l’exili i les condicions polítiques. Amb les generacions posteriors, es convertirà també en una possibilitat artística i industrial deliberada. Però coproduir amb un altre país i aconseguir-hi un públic són dues coses diferents: la col·laboració industrial no garanteix, per si sola, l’existència d’un segon mercat.
