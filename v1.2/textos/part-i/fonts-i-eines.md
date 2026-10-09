@@ -31,6 +31,6 @@ L'IIC és un indicador propi de l'estudi que situa els espectadors en relació a
 
 ## Estimacions i bibliografia
 
-Les xifres marcades amb el símbol ≈ indiquen dades estimades. Els totals anuals del mercat cinematogràfic dels anys seixanta, setanta i vuitanta provenen d'estimacions basades en les estadístiques del Ministeri de Cultura, les dades de l'INE sobre hàbits culturals i la historiografia del cinema espanyol, especialment *Historia del cine español*, de Romà Gubern et al. (Cátedra, 1995). Per als anys noranta en endavant, els totals provenen dels anuaris de l'ICAA i de Comscore. <sup>[3]</sup>
+Les xifres marcades amb el símbol ≈ indiquen dades estimades. Per reconstruir els totals anuals del mercat cinematogràfic dels anys seixanta, setanta i vuitanta, s'han utilitzat estadístiques del Ministeri de Cultura, dades de l'INE sobre hàbits culturals i estudis d'història del cinema espanyol. Per als anys noranta en endavant, els totals provenen dels anuaris de l'ICAA i de Comscore. <sup>[3]</sup>
 
 Els textos de «Context» sobre les primeres dècades es basen en una síntesi de la historiografia clàssica del cinema espanyol, especialment *Historia del cine español*, de Romà Gubern et al. (Cátedra, 1995); *El cine español después de Franco*, de John Hopewell (El Arquero, 1989); i *Del azul al verde: el cine español bajo el franquismo*, de Domènec Font (Avance, 1976). Per a les dècades més recents, la síntesi prové de crítica i periodisme cinematogràfic contemporani. En tots els casos, es tracta de valoracions contextuals i interpretatives de l'autor.
