@@ -2,7 +2,7 @@
 
 > Document de treball: els gràfics es representen amb marcadors. Els textos posteriors a «Entre dos països» encara no s’han revisat editorialment.
 
-Mirant les quatre pel·lícules de Buñuel que apareixen citades a l’estudi, sorprèn comprovar que totes superen el milió d’espectadors a Espanya: *Viridiana* (1961, Palma d’Or a Cannes, 1,04M), *Tristana* (1970, nominació a l’Oscar, 1,8M), *Ese oscuro objeto del deseo* (1977, dues nominacions als Oscar, 1,1M) i *Belle de jour* (1967, Lleó d’Or a Venècia, 1,2M). El fet crida especialment l’atenció en un cineasta associat com pocs a l’avantguarda i a una idea radical de l’autoria cinematogràfica.
+Mirant les quatre pel·lícules de Buñuel que apareixen citades a l’estudi, sorprèn comprovar que totes superen el milió d’espectadors: *Viridiana* (1961, Palma d’Or a Cannes, 1,04M), *Tristana* (1970, nominació a l’Oscar, 1,8M), *Ese oscuro objeto del deseo* (1977, dues nominacions als Oscar, 1,1M) i *Belle de jour* (1967, Lleó d’Or a Venècia, 1,2M). El fet crida especialment l’atenció en un cineasta associat com pocs a l’avantguarda i a una idea radical de l’autoria cinematogràfica.
 
 Potser aquesta imatge és parcialment una construcció cinèfila posterior. Buñuel va ser també un director capaç de treballar dins d’indústries i gèneres populars, especialment durant la seva llarga etapa mexicana, introduint-hi sempre una marca pròpia, estranya i pertorbadora. La pregunta, per tant, no és només per què Buñuel tenia més públic del que podríem imaginar, sinó també si l’hem llegit massa des del cànon i massa poc des del mercat.
 
