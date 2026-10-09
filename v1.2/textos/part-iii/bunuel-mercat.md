@@ -7,7 +7,7 @@ Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem
 <!-- /PIP_BLOC:intro -->
 
 <!-- PIP_BLOC:comentari-trajectories -->
-- La comparació matisa la sorpresa inicial. Bardem manté durant el primer tram una trajectòria comercial regular, amb diversos films per sobre del milió d’espectadors. Berlanga és més irregular, però concentra dos dels pics més alts amb *La escopeta nacional* (1978, 2,1M) i *La vaquilla* (1985, 1,9M). Buñuel alterna resultats més modestos amb l’èxit destacat de *Tristana*, que gairebé arriba als dos milions.
+- Bardem manté una trajectòria comercial sorprenentment regular, amb diversos films per sobre del milió d’espectadors, malgrat que bona part de la seva última etapa ha quedat pràcticament fora de la memòria cinèfila actual. Berlanga, associat a priori a un cinema més popular, presenta xifres semblants a les de Buñuel, amb dos grans èxits, *La escopeta nacional* i *La vaquilla*, malgrat que bona part de les seves pel·lícules més emblemàtiques són anteriors al període representat. Buñuel, amb una trajectòria industrial molt més atípica, manté resultats comparables i s’acosta als dos milions amb *Tristana*.
 <!-- /PIP_BLOC:comentari-trajectories -->
 
 <!-- PIP_BLOC:transicio-franca -->
@@ -23,11 +23,11 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:intro-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
-- Les vuit pel·lícules presenten recorreguts comercials molt diferents. *Tristana* i *Viridiana* tenen clarament més espectadors a Espanya, mentre que *Ese oscuro objeto del deseo* registra xifres relativament properes als dos països. En els altres cinc títols predomina el públic francès, especialment en *Belle de jour*, que supera els dos milions d'espectadors.
+- *Tristana* i *Viridiana* tenen clarament més espectadors a Espanya, mentre que *Ese oscuro objeto del deseo* registra xifres relativament properes als dos països. En els altres cinc títols predomina el públic francès, especialment en *Belle de jour*, que supera els dos milions d’espectadors. Més enllà d’aquestes diferències, les xifres revelen una capacitat de convocatòria considerable: a França, cap de les vuit pel·lícules baixa del mig milió d’espectadors, i fins i tot els resultats més modestos a Espanya indiquen una presència comercial apreciable.
 <!-- /PIP_BLOC:comentari-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-coproduccions -->
-- Les vuit pel·lícules no tenen el mateix estatus industrial. *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya. Els altres cinc títols són produccions franceses o francoitalianes i, per tant, no formen part del corpus de l’estudi. Aquesta diversitat reflecteix la importància de les coproduccions en el cinema europeu de l’època: entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N]
+- *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya. Els altres cinc títols són produccions franceses o francoitalianes i, per tant, no formen part del corpus de l’estudi. Aquesta diversitat reflecteix la importància de les coproduccions en el cinema europeu de l’època: entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N]
 <!-- /PIP_BLOC:comentari-coproduccions -->
 
 <!-- PIP_BLOC:comentari-balanc -->
