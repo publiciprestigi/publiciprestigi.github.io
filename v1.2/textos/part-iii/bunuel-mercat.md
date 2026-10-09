@@ -17,7 +17,7 @@ La comparació també posa en evidència la singularitat de l’última etapa de
 <!-- PIP_BLOC:intro-dos-paisos -->
 ## Entre dos països
 
-Què passa, doncs, quan comparem els espectadors de les vuit pel·lícules de Buñuel a Espanya i França? La comparació permet observar el pes de cada mercat, tot i que algunes d’aquestes pel·lícules van arribar a les sales espanyoles molts anys després de l’estrena francesa. Per això, el gràfic les ordena segons l’any d’estrena a Espanya i indica per a cada títol els anys d’estrena als dos països (ES i FR).
+Què passa quan comparem els espectadors de les vuit pel·lícules de Buñuel a Espanya i França? La comparació permet observar el pes de cada mercat, tot i que algunes d’aquestes pel·lícules van arribar a les sales espanyoles molts anys després de l’estrena francesa. Per això, el gràfic les ordena segons l’any d’estrena a Espanya i indica per a cada títol els anys d’estrena als dos països (ES i FR).
 <!-- /PIP_BLOC:intro-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
