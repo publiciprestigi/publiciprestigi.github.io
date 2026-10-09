@@ -41,9 +41,9 @@ Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a 
 <!-- PIP_BLOC:intro-top30 -->
 ## Segon o primer mercat?
 
-El cas de Buñuel obre una pregunta més àmplia: quines pel·lícules espanyoles han trobat realment un públic a França? El rànquing següent ordena els films per espectadors a les sales franceses i compara, en una mateixa escala, el seu recorregut a França i a Espanya.
+El cas de Buñuel planteja una pregunta més àmplia: quines pel·lícules espanyoles han aconseguit construir un públic a França? El rànquing següent recull els trenta títols amb més espectadors a les sales franceses i compara els resultats als dos països, destacant en cada cas quin mercat predomina.
 
-La finestra 1965–2025 es refereix a l’estrena al mercat espanyol; per això *Viridiana* (1961), estrenada a Espanya el 1977, hi té cabuda. El criteri no incorpora automàticament qualsevol coproducció amb participació espanyola. En queden fora títols com *Tulipán negro*, *Delirios de grandeza* o *Las petroleras*, on la participació espanyola respon sobretot a una estructura industrial de coproducció però el centre creatiu és principalment francès. En canvi, s’hi inclouen coproduccions clarament vinculades a l’autoria i trajectòria de cineastes espanyols, com *Estambul 65*, *Las Vegas 500 millones*, *Tristana*, *Ese oscuro objeto del deseo* o *Los otros*. *El perro*, també d’Isasi-Isasmendi, va tenir estrena comercial a França, però queda fora perquè no s’ha pogut localitzar una xifra acumulada francesa prou fiable.
+Per delimitar el període, es pren com a referència l’any d’estrena a Espanya; per això *Viridiana* (1961), estrenada el 1977, hi té cabuda. Pel que fa a les coproduccions, el criteri no es limita a la participació industrial espanyola, sinó que també considera la vinculació creativa de cada pel·lícula. Així, en queden fora *Tulipán negro* (1964), de Christian-Jaque, amb Alain Delon i Adolfo Marsillach (inclosa a la Part I), o *Delirios de grandeza* (1971), la comèdia de Louis de Funès rodada a Espanya, totes dues amb participació espanyola, però de lideratge creatiu principalment francès.
 <!-- /PIP_BLOC:intro-top30 -->
 
 <!-- PIP_BLOC:comentaris-top30 -->
