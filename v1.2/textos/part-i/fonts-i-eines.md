@@ -8,7 +8,7 @@ També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cin
 
 El període comença el 1965, any a partir del qual l'ICAA disposa de registres d'espectadors prou complets i fiables. Les dades anteriors existeixen, però són fragmentàries i no permeten establir comparacions sòlides amb la resta del rànquing. Per aquest motiu, el 1965 és el punt de partida de tot l'estudi. <sup>[1]</sup>
 
-Les coproduccions s'inclouen com a espanyoles quan compleixen els requisits oficials de participació establerts per l'ICAA, independentment de la nacionalitat del director. Per això hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen.
+Les coproduccions s'inclouen com a espanyoles quan compleixen els requisits oficials de participació establerts per l'ICAA, independentment de la nacionalitat del director. Per això hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen, malgrat que la seva vinculació amb la cinematografia espanyola pugui ser limitada.
 
 ## El problema dels espectadors absoluts
 
