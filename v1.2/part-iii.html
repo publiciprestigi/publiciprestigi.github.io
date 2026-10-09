@@ -378,7 +378,7 @@
              data-bloc="tancament"></div>
       </div>
 
-      <template id="bunuel-mini-comentari-dos-paisos"><div aria-label="Buñuel · 8 films de la comparativa: Espanya 6,398,618 espectadors; França 8,622,696 espectadors" class="pip-mini-mercats" role="img">
+      <template id="bunuel-mini-comentari-balanc"><div aria-label="Buñuel · 8 films de la comparativa: Espanya 6,398,618 espectadors; França 8,622,696 espectadors" class="pip-mini-mercats" role="img">
 <p class="pmm-context">Buñuel · 8 films de la comparativa</p>
 <div class="pmm-row"><span class="pmm-country">ES</span><div class="pmm-track"><span class="pmm-bar es" style="width:74.21%"></span></div><span class="pmm-value">6,40M</span></div>
 <div class="pmm-row"><span class="pmm-country">FR</span><div class="pmm-track"><span class="pmm-bar fr" style="width:100.00%"></span></div><span class="pmm-value">8,62M</span></div>
@@ -646,6 +646,14 @@
         </div>
 
         <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-bunuel-bloc="comentari-dos-paisos">
+          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+
+        <div class="text-md text-md-comentari" style="margin-top:0;border-top:none;padding-top:0" data-bunuel-bloc="comentari-coproduccions">
+          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+
+        <div class="text-md text-md-comentari" style="margin-top:0;border-top:none;padding-top:0" data-bunuel-bloc="comentari-balanc">
           <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
 
@@ -1270,7 +1278,7 @@
       rendered.push([node, marked.parse(blocks[key])]);
     }
     for (const [node,html] of rendered) node.innerHTML = html;
-    for (const key of ['comentari-dos-paisos','comentaris-top30']) {
+    for (const key of ['comentari-balanc','comentaris-top30']) {
       const target = document.querySelector('[data-bunuel-bloc="' + key + '"] li');
       const template = document.getElementById('bunuel-mini-' + key);
       if (target && template) target.appendChild(template.content.cloneNode(true));
