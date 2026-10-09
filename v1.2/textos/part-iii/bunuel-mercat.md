@@ -17,7 +17,7 @@ La comparació també posa en evidència la singularitat de l’última etapa de
 <!-- PIP_BLOC:intro-dos-paisos -->
 ## Entre dos països
 
-Què passa quan mirem els espectadors de les vuit pel·lícules de Buñuel a França i els comparem amb els d’Espanya? Les xifres permeten observar el pes de cada mercat i les diferències cronològiques entre les estrenes, especialment significatives en el cas espanyol. El gràfic ordena les pel·lícules segons l’any d’estrena a Espanya i indica per a cada títol els anys d’estrena als dos països (ES i FR).
+Què passa, doncs, quan mirem els espectadors de les vuit pel·lícules de Buñuel a França i els comparem amb els d’Espanya? Les xifres permeten observar el pes de cada mercat i els desfasaments entre les estrenes, en alguns casos de molts anys. El gràfic ordena les pel·lícules segons l’any d’estrena a Espanya i indica per a cada títol els anys corresponents als dos mercats (ES i FR).
 <!-- /PIP_BLOC:intro-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
