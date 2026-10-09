@@ -27,8 +27,6 @@ Què passa, doncs, quan mirem els espectadors de les vuit pel·lícules de Buñu
 <!-- /PIP_BLOC:comentari-dos-paisos -->
 
 <!-- PIP_BLOC:context-industrial -->
-Les vuit pel·lícules no tenen el mateix estatus industrial. *Viridiana* és una coproducció hispanomexicana; *Tristana*, una coproducció entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya. Les altres produccions del període aquí comparades són de nacionalitat francesa o francitaliana i no passen automàticament a formar part del corpus espanyol de prestigi.
-
 Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a diferents sistemes industrials, culturals i comercials. En el seu cas, aquesta dimensió estava profundament marcada per l’exili i les condicions polítiques. Amb les generacions posteriors, es convertirà també en una possibilitat artística i industrial deliberada. Però coproduir amb un altre país i aconseguir-hi un públic són dues coses diferents: la col·laboració industrial no garanteix, per si sola, l’existència d’un segon mercat.
 <!-- /PIP_BLOC:context-industrial -->
 
