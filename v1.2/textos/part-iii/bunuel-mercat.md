@@ -7,7 +7,7 @@ Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem
 <!-- /PIP_BLOC:intro -->
 
 <!-- PIP_BLOC:comentari-trajectories -->
-- La comparació matisa la sorpresa inicial. Bardem manté durant el primer tram una trajectòria comercial regular, amb diversos films per sobre del milió d’espectadors. Berlanga és més irregular, però concentra dos dels pics més alts amb *La escopeta nacional* (1978, 2,1M) i *La vaquilla* (1985, 1,9M). Buñuel alterna resultats més modestos amb l’èxit destacat de *Tristana* (1970, 1,8M), que gairebé arriba als dos milions.
+- La comparació matisa la sorpresa inicial. Bardem manté durant el primer tram una trajectòria comercial regular, amb diversos films per sobre del milió d’espectadors. Berlanga és més irregular, però concentra dos dels pics més alts amb *La escopeta nacional* (1978, 2,1M) i *La vaquilla* (1985, 1,9M). Buñuel alterna resultats més modestos amb l’èxit destacat de *Tristana*, que gairebé arriba als dos milions.
 <!-- /PIP_BLOC:comentari-trajectories -->
 
 <!-- PIP_BLOC:transicio-franca -->
