@@ -35,7 +35,7 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:comentari-balanc -->
 
 <!-- PIP_BLOC:context-industrial -->
-Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a diferents sistemes industrials, culturals i comercials. En el seu cas, aquesta dimensió estava profundament marcada per l’exili i les condicions polítiques. Amb les generacions posteriors, es convertirà també en una possibilitat artística i industrial deliberada. Però coproduir amb un altre país i aconseguir-hi un segon mercat són dues coses diferents: la col·laboració industrial no garanteix, per si sola, l’existència d’aquest públic complementari. Però alguns cineastes han aconseguit convertir aquesta possibilitat en una realitat.
+Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a diferents sistemes industrials, culturals i comercials. En el seu cas, aquesta dimensió estava profundament marcada per l’exili i les condicions polítiques. Amb les generacions posteriors, es convertirà també en una possibilitat artística i industrial deliberada. Però coproduir amb un altre país i aconseguir-hi un segon mercat són dues coses diferents: la col·laboració industrial no garanteix, per si sola, l’existència d’aquest públic complementari. Però alguns cineastes han aconseguit construir un públic a França independentment de la fórmula de producció.
 <!-- /PIP_BLOC:context-industrial -->
 
 <!-- PIP_BLOC:intro-top30 -->
