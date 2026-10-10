@@ -13,7 +13,7 @@ Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem
 <!-- PIP_BLOC:transicio-franca -->
 La comparació també posa en evidència la singularitat de l’última etapa de Buñuel: una trajectòria desenvolupada principalment dins la indústria francesa, però amb retorns puntuals al cinema espanyol, com *Viridiana* i *Tristana*. Aquesta doble dimensió industrial i cultural convida a mirar també què passava amb les seves pel·lícules fora d’Espanya.
 
-La comparació també posa en evidència la singularitat de l’última etapa de Buñuel: una trajectòria desenvolupada principalment dins la indústria francesa, però amb retorns puntuals al cinema espanyol, com *Viridiana* i *Tristana*. Berlanga i Bardem també van tenir projecció a França, tant comercial com a través de coproduccions, però amb una presència a les sales menys continuada i d’un abast aparentment menor, i sense desvincular-se mai de la indústria espanyola. [N] En aquest sentit, l’excepcional doble dimensió industrial i cultural de Buñuel convida a examinar també la recepció de les seves pel·lícules a França.
+La comparació també posa en evidència la singularitat de l’última etapa de Buñuel: una trajectòria desenvolupada principalment dins la indústria francesa, però amb retorns puntuals al cinema espanyol, com *Viridiana* i *Tristana*. Berlanga i Bardem també van tenir projecció a França, tant comercial com a través de coproduccions, però amb una presència a les sales menys continuada i d’un abast aparentment menor, i sense desvincular-se mai de la indústria espanyola. [N] En aquest sentit, l’excepcional doble dimensió industrial i cultural de Buñuel convida a examinar també la recepció comercial fora d’Espanya.
 
 <!-- /PIP_BLOC:transicio-franca -->
 
