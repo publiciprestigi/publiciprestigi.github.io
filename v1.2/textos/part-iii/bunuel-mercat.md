@@ -7,7 +7,7 @@ Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem
 <!-- /PIP_BLOC:intro -->
 
 <!-- PIP_BLOC:comentari-trajectories -->
-- Bardem té cinc dels nou films per sobre del milió d’espectadors, malgrat que avui aquesta última etapa de la seva carrera ha caigut pràcticament en l’oblit. Berlanga, associat a priori a un cinema més popular, presenta xifres semblants a les de Buñuel i Bardem, amb dos grans èxits, *La escopeta nacional* i *La vaquilla*, tot i que alguns dels seus títols més emblemàtics queden fora del període estudiat. Buñuel, amb una trajectòria industrial molt més atípica, manté resultats comparables i s’acosta als dos milions amb *Tristana*. Les mitjanes per film confirmen la proximitat comercial dels tres cineastes.
+- Bardem té cinc dels nou films per sobre del milió d’espectadors, malgrat que avui aquesta última etapa de la seva carrera ha caigut pràcticament en l’oblit. Berlanga, associat a priori a un cinema més popular, presenta xifres semblants a les de Buñuel i Bardem, amb dos grans èxits, *La escopeta nacional* i *La vaquilla*, tot i que alguns dels seus títols més emblemàtics queden fora del període estudiat. Buñuel, amb una trajectòria industrial molt més atípica, manté resultats comparables i s’acosta als dos milions amb *Tristana*. Les mitjanes per film confirmen la proximitat comercial dels tres cineastes:
 <!-- /PIP_BLOC:comentari-trajectories -->
 
 <!-- PIP_BLOC:transicio-franca -->
@@ -46,7 +46,7 @@ Quines altres pel·lícules espanyoles han aconseguit construir un públic a Fra
 <!-- /PIP_BLOC:intro-top30 -->
 
 <!-- PIP_BLOC:comentaris-top30 -->
-- **Almodóvar: quan el segon mercat es converteix en el primer.** Catorze dels trenta films del rànquing són seus. La seva presència no és només dominant, sinó estructural, i en diversos títols França supera Espanya en nombre d’espectadors. El filtre permet veure fins a quin punt aquesta excepcionalitat condiciona la lectura del conjunt.
+- **Almodóvar: quan el segon mercat es converteix en el primer.** Catorze dels trenta films del rànquing són seus. El mercat francès esdevé una part estable de la seva trajectòria comercial, fins al punt que tres dels quatre títols estrenats des de 2016 tenen més espectadors a França que a Espanya. Aquesta implantació també es reflecteix en els premis César, amb nou pel·lícules nominades i tres premiades. En conjunt, els catorze títols acumulen a França gairebé tants espectadors com a Espanya:
 - **Isasi-Isasmendi: una via internacional abans d’Almodóvar.** *Estambul 65* i *Las Vegas 500 millones* situen dues grans produccions seves dins del Top 30 francès. En tots dos casos el públic espanyol és superior, però França funciona ja com un segon mercat rellevant per a un cinema d’acció i aventura concebut amb projecció internacional.
 - **Saura: el segon mercat abans d’Almodóvar.** *Cría cuervos* i *Carmen* tenen més espectadors a França que a Espanya i mostren que aquesta inversió ja era possible dècades abans que Almodóvar la convertís en una continuïtat.
 - **Una inversió inesperada.** *Loca juventud*, *Los abrazos rotos*, *Julieta* o *Sirât* exemplifiquen inversions de jerarquia molt diferents entre si: films que, contra la intuïció d’un primer mercat domèstic, troben a França un públic superior.
