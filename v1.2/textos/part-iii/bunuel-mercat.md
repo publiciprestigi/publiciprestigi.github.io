@@ -41,7 +41,7 @@ Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a 
 <!-- PIP_BLOC:intro-top30 -->
 ## Segon o primer mercat?
 
-El cas de Buñuel ens fa plantejar una pregunta més àmplia: quines altres pel·lícules espanyoles han aconseguit construir un públic a França? El rànquing següent recull els trenta títols amb més espectadors a les sales franceses i compara els resultats als dos països, destacant en cada cas quin mercat predomina. Per delimitar el període, es pren com a referència l’any d’estrena a Espanya. El rànquing només inclou pel·lícules amb una clara vinculació creativa i de producció espanyola.
+El cas de Buñuel ens fa plantejar una pregunta més àmplia: quines altres pel·lícules espanyoles han aconseguit construir un públic a França? El rànquing següent recull els trenta títols amb més espectadors a les sales franceses i compara els resultats als dos països, destacant en cada cas quin mercat predomina. Es pren com a referència l’any d’estrena a Espanya. El rànquing només inclou pel·lícules amb una clara vinculació creativa i de producció espanyola.
 <!-- /PIP_BLOC:intro-top30 -->
 
 <!-- PIP_BLOC:comentaris-top30 -->
