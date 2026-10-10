@@ -7,7 +7,7 @@ Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem
 <!-- /PIP_BLOC:intro -->
 
 <!-- PIP_BLOC:comentari-trajectories -->
-- Bardem manté una trajectòria comercial inicial notablement regular, amb diversos films per sobre del milió d’espectadors, en contrast amb l’oblit en què ha caigut bona part de la seva última etapa. Berlanga, associat a priori a un cinema més popular, presenta xifres semblants a les de Buñuel i Bardem, amb dos grans èxits, *La escopeta nacional* i *La vaquilla*, tot i que alguns dels seus títols més emblemàtics queden fora del període estudiat. Buñuel, amb una trajectòria industrial molt més atípica, manté resultats comparables i s’acosta als dos milions amb *Tristana*. Les mitjanes per film confirmen la proximitat comercial dels tres cineastes.
+- Bardem manté una trajectòria comercial notablement regular, amb cinc dels nou films per sobre del milió d’espectadors, en contrast amb el poc que es recorda actualment d’aquesta última etapa. Berlanga, associat a priori a un cinema més popular, presenta xifres semblants a les de Buñuel i Bardem, amb dos grans èxits, *La escopeta nacional* i *La vaquilla*, tot i que alguns dels seus títols més emblemàtics queden fora del període estudiat. Buñuel, amb una trajectòria industrial molt més atípica, manté resultats comparables i s’acosta als dos milions amb *Tristana*. Les mitjanes per film confirmen la proximitat comercial dels tres cineastes.
 <!-- /PIP_BLOC:comentari-trajectories -->
 
 <!-- PIP_BLOC:transicio-franca -->
