@@ -57,16 +57,19 @@ Quines altres pel·lícules espanyoles han aconseguit construir un públic a Fra
 <!-- /PIP_BLOC:comentaris-top30 -->
 
 <!-- PIP_BLOC:intro-mercats -->
-## Comparativa de mercat i població
+## Comparativa de mercat, població i quota
 
-Per tancar el capítol, tornem a la perspectiva amb què començava l’estudi. Si a la Part I observàvem l’evolució del mercat i la població a Espanya, aquí ampliem la comparació a França i hi afegim les entrades per habitant, que permeten analitzar l’assistència al cinema més enllà de les diferències demogràfiques.
+Per tancar el capítol, tornem a la perspectiva amb què començava l’estudi. Si a la Part I observàvem l’evolució del mercat i la població a Espanya, aquí ampliem la comparació a França i hi afegim les entrades per habitant, que permeten analitzar l’assistència al cinema més enllà de les diferències demogràfiques, i les quotes de mercat del 2025. Els tres botons permeten alternar entre els gràfics i els comentaris corresponents, que apareixen a sota.
 <!-- /PIP_BLOC:intro-mercats -->
 
 <!-- PIP_BLOC:comentari-mercats -->
 - **Tres etapes d'una relació canviant.** Als anys seixanta, Espanya venia més entrades de cinema que França malgrat tenir una població considerablement inferior. La davallada posterior del mercat espanyol va invertir aquesta relació, però durant els anys noranta i la primera meitat dels 2000 els dos mercats van tornar a acostar-se. Des d’aleshores, i especialment després de la crisi de 2008, la distància s’ha ampliat a favor de França. Mentrestant, la població dels dos països ha crescut en proporcions força semblants: la divergència cinematogràfica no es pot explicar simplement per la demografia, sinó per l’evolució desigual de l’assistència a les sales.
-- **De l'avantatge espanyol a la resistència francesa.** El 1965, Espanya superava les dotze entrades anuals per habitant, més del doble que França, una superioritat que es va mantenir fins a començaments dels vuitanta. Després d’una caiguda pronunciada, els dos països van tornar a presentar nivells semblants durant els noranta i els primers 2000, amb diversos anys favorables a Espanya. La divergència posterior demostra que l’actual superioritat francesa no és una constant històrica. Les dues cinematografies han travessat transformacions semblants, però França ha aconseguit sostenir millor l’assistència a les sales, especialment durant les dues darreres dècades.
 <!-- /PIP_BLOC:comentari-mercats -->
 
-<!-- PIP_BLOC:coda-2023 -->
-- **Una frontera, dues direccions desiguals.** La fortalesa del cinema francès al seu mercat interior, sostinguda per un sistema de protecció cultural àmpliament consolidat, contrasta amb el pes molt més reduït del cinema espanyol a les seves pròpies sales. Però les diferències també apareixen en la circulació entre els dos països: el 2023, Unifrance comptabilitzava 114 estrenes de produccions i coproduccions franceses a Espanya, mentre el CNC registrava només 12 estrenes classificades com a espanyoles a França. Tot i respondre a criteris de nacionalitat diferents, les xifres apunten a una forta asimetria en l'accés als mercats. I encara una altra paradoxa: les produccions franceses representaven el 15,7% de les estrenes a Espanya, però només el 2,6% dels espectadors. La distribució obre les portes d'un segon mercat; construir-hi un públic és una qüestió diferent.
-<!-- /PIP_BLOC:coda-2023 -->
+<!-- PIP_BLOC:comentari-perhab -->
+- **De l'avantatge espanyol a la resistència francesa.** El 1965, Espanya superava les dotze entrades anuals per habitant, més del doble que França, una superioritat que es va mantenir fins a començaments dels vuitanta. Després d’una caiguda pronunciada, els dos països van tornar a presentar nivells semblants durant els noranta i els primers 2000, amb diversos anys favorables a Espanya. La divergència posterior demostra que l’actual superioritat francesa no és una constant històrica. Les dues cinematografies han travessat transformacions semblants, però França ha aconseguit sostenir millor l’assistència a les sales, especialment durant les dues darreres dècades.
+<!-- /PIP_BLOC:comentari-perhab -->
+
+<!-- PIP_BLOC:comentari-quota -->
+- **Dos mercats, dos equilibris.** La fotografia del 2025 mostra una diferència considerable: el cinema nacional representa el 18,6% dels espectadors a Espanya, davant del 37,9% a França. En canvi, el cinema nord-americà té una quota molt més elevada a Espanya (48,2%) que a França (34,9%). La fortalesa del cinema francès al seu mercat interior està vinculada, entre altres factors, a un sistema consolidat de suport a la producció, la distribució i l’exhibició, però també a les diferències industrials i als hàbits d’assistència. Les xifres no mesuren directament la circulació entre els dos països: mostren el repartiment del públic dins de cadascun. Aquesta distinció és essencial també per entendre el segon mercat. La distribució obre les portes d’un segon mercat; construir-hi un públic és una qüestió diferent.
+<!-- /PIP_BLOC:comentari-quota -->
