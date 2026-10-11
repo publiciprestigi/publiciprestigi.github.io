@@ -503,6 +503,20 @@
           #grafic-mercats-coda-bloc .mercat-view-controls{display:flex;justify-content:center;gap:7px;margin:0 0 14px}
           #grafic-mercats-coda-bloc .mercat-view-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 13px;font:500 11px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer}
           #grafic-mercats-coda-bloc .mercat-view-toggle.is-active,#grafic-mercats-coda-bloc .mercat-view-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
+          #grafic-mercats-coda-bloc .mercat-view-controls{flex-wrap:wrap}
+          #grafic-mercats-coda-bloc [hidden],#mercats-comentaris [hidden]{display:none!important}
+          #grafic-mercats-coda-bloc .mq-legend{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin:5px 0 37px;font:11px/1.3 'Inter',sans-serif;color:#666}
+          #grafic-mercats-coda-bloc .mq-legend span{display:inline-flex;align-items:center;gap:6px}
+          #grafic-mercats-coda-bloc .mq-legend i{height:9px;width:9px;display:inline-block}
+          #grafic-mercats-coda-bloc .mq-row{max-width:900px;margin:0 auto 30px}
+          #grafic-mercats-coda-bloc .mq-heading{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline;margin-bottom:9px;font:14px/1.4 'Inter',sans-serif}
+          #grafic-mercats-coda-bloc .mq-heading span{font-size:11px;color:#777}
+          #grafic-mercats-coda-bloc .mq-stack{height:32px;display:flex;width:100%;position:relative}
+          #grafic-mercats-coda-bloc .mq-segment{height:100%;display:block;cursor:help;transition:filter .15s;outline-offset:3px}
+          #grafic-mercats-coda-bloc .mq-segment:hover,#grafic-mercats-coda-bloc .mq-segment:focus{filter:brightness(.85)}
+          #grafic-mercats-coda-bloc .mq-values{margin-top:7px;font:11px/1.5 'Inter',sans-serif;color:#666}
+          #mercats-quota-tooltip{position:fixed;z-index:9999;pointer-events:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;border-radius:3px;padding:9px 12px;font:12px/1.5 'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+          @media(max-width:520px){#grafic-mercats-coda-bloc .mq-heading span{width:100%}#grafic-mercats-coda-bloc .mq-stack{height:27px}#grafic-mercats-coda-bloc .mq-values{font-size:10px}}
           </style>
 
           <div class="bf-mobile-scroll" style="overflow:visible">
@@ -860,51 +874,28 @@
           <div class="mercat-view-controls" role="group" aria-label="Canvia la lectura del gràfic">
             <button type="button" class="mercat-view-toggle is-active" data-view="mercat" aria-pressed="true">Mercat i població</button>
             <button type="button" class="mercat-view-toggle" data-view="perhab" aria-pressed="false">Entrades per habitant</button>
+            <button type="button" class="mercat-view-toggle" data-view="quota" aria-pressed="false">Quota 2025</button>
           </div>
-          <div style="height:360px;position:relative">
+          <div id="mercats-historic-wrap" style="height:360px;position:relative">
             <canvas id="grafic-mercats-coda"></canvas>
           </div>
+          <div id="mercats-quota-wrap" hidden>
+            <div id="mercats-quota-llegenda" class="mq-legend" aria-label="Llegenda de les quotes de mercat">
+              <span><i style="background:#b8463a"></i>Cinema nacional</span>
+              <span><i style="background:#697b90"></i>Cinema nord-americà</span>
+              <span><i style="background:#bcbcbc"></i>Altres cinematografies</span>
+            </div>
+            <div class="mq-row"><div class="mq-heading"><strong>Espanya</strong><span>66,9M d'espectadors</span></div><div class="mq-stack" role="group" aria-label="Espanya: cinema nacional 18,6%; nord-americà 48,2%; altres 33,2%"><span class="mq-segment" style="width:18.6%;background:#b8463a" tabindex="0" data-country="Espanya" data-label="Cinema nacional" data-percent="18,6" data-total="66,9"></span><span class="mq-segment" style="width:48.2%;background:#697b90" tabindex="0" data-country="Espanya" data-label="Cinema nord-americà" data-percent="48,2" data-total="66,9"></span><span class="mq-segment" style="width:33.2%;background:#bcbcbc" tabindex="0" data-country="Espanya" data-label="Altres cinematografies" data-percent="33,2" data-total="66,9"></span></div><div class="mq-values">Cinema nacional 18,6% · EUA 48,2% · Altres 33,2%</div></div>
+            <div class="mq-row"><div class="mq-heading"><strong>França</strong><span>156,2M d'entrades</span></div><div class="mq-stack" role="group" aria-label="França: cinema nacional 37,9%; nord-americà 34,9%; altres 27,2%"><span class="mq-segment" style="width:37.9%;background:#b8463a" tabindex="0" data-country="França" data-label="Cinema nacional" data-percent="37,9" data-total="156,2"></span><span class="mq-segment" style="width:34.9%;background:#697b90" tabindex="0" data-country="França" data-label="Cinema nord-americà" data-percent="34,9" data-total="156,2"></span><span class="mq-segment" style="width:27.2%;background:#bcbcbc" tabindex="0" data-country="França" data-label="Altres cinematografies" data-percent="27,2" data-total="156,2"></span></div><div class="mq-values">Cinema nacional 37,9% · EUA 34,9% · Altres 27,2%</div></div>
+          </div>
           <p id="mercats-coda-nota" class="frx-note">Entrades venudes (barres) i població (línies) a Espanya i França, 1965–2025.</p>
-          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).</p>
+          <p id="mercats-coda-fonts" class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).</p>
         </div>
 
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-bunuel-bloc="comentari-mercats">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
-</div>
-
-        <!-- Coda 2023: fotografia del repartiment del públic (independent del JS compartit) -->
-        <div id="pip-foto-2023" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 19px;margin:28px 0 0;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif;color:#363737">
-          <p style="font-size:.82em;font-weight:700;text-align:center;margin:0 0 19px">Repartiment del públic cinematogràfic a Espanya i França (2023)</p>
-          <style>
-            #pip-foto-2023 .p23-row{margin:0 auto 21px;max-width:900px}
-            #pip-foto-2023 .p23-head{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:baseline;margin-bottom:9px}
-            #pip-foto-2023 .p23-country{font-size:14px;font-weight:600}
-            #pip-foto-2023 .p23-market{font-size:11.5px;color:#666}
-            #pip-foto-2023 .p23-stack{height:27px;display:flex;width:100%;overflow:hidden}
-            #pip-foto-2023 .p23-stack span{display:block;height:100%}
-            #pip-foto-2023 .p23-values{font-size:11px;line-height:1.5;color:#666;margin-top:6px}
-            #pip-foto-2023 .p23-legend{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 18px;margin:6px auto 15px;font-size:11px;color:#666}
-            #pip-foto-2023 .p23-legend span{display:inline-flex;align-items:center;gap:5px}
-            #pip-foto-2023 .p23-legend i{display:inline-block;width:9px;height:9px}
-            #pip-foto-2023 .p23-source{font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:850px;padding:0 12px}
-            @media(max-width:500px){#pip-foto-2023 .p23-market{width:100%}#pip-foto-2023 .p23-stack{height:23px}#pip-foto-2023 .p23-values{font-size:10px}}
-          </style>
-          <div class="p23-row">
-            <div class="p23-head"><span class="p23-country">Espanya</span><span class="p23-market">Mercat: 76,7M entrades · 1,66 per habitant</span></div>
-            <div class="p23-stack" role="img" aria-label="Espanya: cinema propi 17,5%; nord-americà 59,9%; altres cinematografies 22,6%"><span style="width:17.5%;background:#b8463a"></span><span style="width:59.9%;background:#697b90"></span><span style="width:22.6%;background:#bcbcbc"></span></div>
-            <div class="p23-values">Cinema propi 17,5% · EUA 59,9% · Altres 22,6%</div>
-          </div>
-          <div class="p23-row">
-            <div class="p23-head"><span class="p23-country">França</span><span class="p23-market">Mercat: 180,8M entrades · 2,64 per habitant</span></div>
-            <div class="p23-stack" role="img" aria-label="França: cinema propi 39,8%; nord-americà 41,3%; altres cinematografies 18,9%"><span style="width:39.8%;background:#b8463a"></span><span style="width:41.3%;background:#697b90"></span><span style="width:18.9%;background:#bcbcbc"></span></div>
-            <div class="p23-values">Cinema propi 39,8% · EUA 41,3% · Altres 18,9%</div>
-          </div>
-          <div class="p23-legend"><span><i style="background:#b8463a"></i>Cinema propi</span><span><i style="background:#697b90"></i>Cinema nord-americà</span><span><i style="background:#bcbcbc"></i>Altres cinematografies</span></div>
-          <p class="p23-source">Fonts: Ministeri de Cultura/ICAA i CNC (2023). Dades comparatives de treball; criteris de nacionalitat i coproduccions pendents de revisió final.</p>
-        </div>
-
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-bunuel-bloc="coda-2023">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+        <div id="mercats-comentaris">
+          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-mercat-comentari="mercat" data-bunuel-bloc="comentari-mercats"></div>
+          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-mercat-comentari="perhab" data-bunuel-bloc="comentari-perhab" hidden></div>
+          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-mercat-comentari="quota" data-bunuel-bloc="comentari-quota" hidden></div>
         </div>
 
         <script>
@@ -985,9 +976,22 @@
             const buttons=[...document.querySelectorAll('#grafic-mercats-coda-bloc .mercat-view-toggle')];
             const graphTitle=document.getElementById('mercats-coda-tit');
             const graphNote=document.getElementById('mercats-coda-nota');
+            const graphSources=document.getElementById('mercats-coda-fonts');
+            const historicWrap=document.getElementById('mercats-historic-wrap');
+            const quotaWrap=document.getElementById('mercats-quota-wrap');
+            const comments=[...document.querySelectorAll('[data-mercat-comentari]')];
             const setView=(view)=>{
               chart.$view=view;
-              if(view==='perhab'){
+              if (historicWrap) historicWrap.hidden=(view==='quota');
+              if (quotaWrap) quotaWrap.hidden=(view!=='quota');
+              comments.forEach(el=>{ el.hidden=(el.dataset.mercatComentari!==view); });
+              if(graphSources) graphSources.innerHTML=view==='quota'
+                ? 'Fonts: Espanya, Ministeri de Cultura, Estadística de Cinematografia 2025; França, CNC, balanç definitiu de 2025. Percentatges segons nacionalitat de les pel·lícules a cada mercat.'
+                : 'Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).';
+              if(view==='quota'){
+                if(graphTitle) graphTitle.textContent='La fotografia del 2025 — Repartiment del públic cinematogràfic';
+                if(graphNote) graphNote.textContent='Quota d’espectadors per nacionalitat de la pel·lícula dins de cada mercat.';
+              } else if(view==='perhab'){
                 chart.config.type='line';
                 chart.data.datasets=perHabDatasets;
                 if(graphTitle) graphTitle.textContent='Entrades anuals per habitant — Espanya i França (1965–2025)';
@@ -1011,9 +1015,16 @@
                 btn.classList.toggle('is-active',active);
                 btn.setAttribute('aria-pressed',active?'true':'false');
               });
-              chart.update();
+              if(view!=='quota') chart.update();
             };
-            buttons.forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));          })();
+            buttons.forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));
+            const tip=document.createElement('div'); tip.id='mercats-quota-tooltip'; tip.hidden=true;document.body.appendChild(tip);
+            function positionTip(e){const x=Math.min(e.clientX+13,window.innerWidth-285),y=Math.max(8,e.clientY-69);tip.style.left=Math.max(8,x)+'px';tip.style.top=y+'px';}
+            document.querySelectorAll('#mercats-quota-wrap .mq-segment').forEach(seg=>{
+              const show=e=>{const pct=Number(seg.dataset.percent.replace(',','.'));const total=Number(seg.dataset.total.replace(',','.'));const admission=(total*pct/100).toLocaleString('ca-ES',{minimumFractionDigits:1,maximumFractionDigits:1});tip.innerHTML='<strong>'+seg.dataset.country+' · '+seg.dataset.label+'</strong><br>'+seg.dataset.percent+'% del mercat<br>≈ '+admission+' milions d’entrades';tip.hidden=false;if(e&&Number.isFinite(e.clientX))positionTip(e);else {const r=seg.getBoundingClientRect();positionTip({clientX:r.left+r.width/2,clientY:r.top});}};
+              seg.addEventListener('mouseenter',show);seg.addEventListener('mousemove',positionTip);seg.addEventListener('mouseleave',()=>{tip.hidden=true});seg.addEventListener('focus',show);seg.addEventListener('blur',()=>{tip.hidden=true});
+            });
+          })();
         </script>
 
       </div>
