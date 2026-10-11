@@ -505,6 +505,14 @@
           #grafic-mercats-coda-bloc .mercat-view-toggle.is-active,#grafic-mercats-coda-bloc .mercat-view-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
           #grafic-mercats-coda-bloc .mercat-view-controls{flex-wrap:wrap}
           #grafic-mercats-coda-bloc [hidden],#mercats-comentaris [hidden]{display:none!important}
+          #mercats-quota-wrap{min-height:360px;box-sizing:border-box}
+          #grafic-mercats-coda-bloc .mq-national-summary{margin:19px auto 20px;text-align:center;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif}
+          #grafic-mercats-coda-bloc .mq-national-title{font-size:11px;color:#777;margin-bottom:10px}
+          #grafic-mercats-coda-bloc .mq-national-pair{display:flex;justify-content:center;align-items:baseline;gap:48px;flex-wrap:wrap}
+          #grafic-mercats-coda-bloc .mq-national-item{display:inline-flex;gap:9px;align-items:baseline;white-space:nowrap;font-size:12px;color:#666}
+          #grafic-mercats-coda-bloc .mq-national-item strong{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
+          #grafic-mercats-coda-bloc .mq-national-item.es strong{color:#b8463a}
+          #grafic-mercats-coda-bloc .mq-national-item.fr strong{color:#1e3d6b}
           #grafic-mercats-coda-bloc .mq-legend{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin:5px 0 37px;font:11px/1.3 'Inter',sans-serif;color:#666}
           #grafic-mercats-coda-bloc .mq-legend span{display:inline-flex;align-items:center;gap:6px}
           #grafic-mercats-coda-bloc .mq-legend i{height:9px;width:9px;display:inline-block}
@@ -519,6 +527,7 @@
           #grafic-mercats-coda-bloc .mq-segment:hover,#grafic-mercats-coda-bloc .mq-segment:focus{filter:brightness(.85)}
           #grafic-mercats-coda-bloc .mq-values{margin-top:7px;font:11px/1.5 'Inter',sans-serif;color:#666}
           #mercats-quota-tooltip{position:fixed;z-index:9999;pointer-events:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;border-radius:3px;padding:9px 12px;font:12px/1.5 'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+          @media(max-width:520px){#mercats-quota-wrap{min-height:0}}
           @media(max-width:520px){#grafic-mercats-coda-bloc .mq-heading span{width:100%}#grafic-mercats-coda-bloc .mq-stack{height:27px}#grafic-mercats-coda-bloc .mq-values{font-size:10px}}
           </style>
 
@@ -883,6 +892,13 @@
             <canvas id="grafic-mercats-coda"></canvas>
           </div>
           <div id="mercats-quota-wrap" hidden>
+            <div class="mq-national-summary" aria-label="Quota de cinema propi el 2025: Espanya 18,6%; França 37,9%">
+              <div class="mq-national-title">Quota de cinema propi</div>
+              <div class="mq-national-pair">
+                <span class="mq-national-item es">ES <strong>18,6%</strong></span>
+                <span class="mq-national-item fr">FR <strong>37,9%</strong></span>
+              </div>
+            </div>
             <div id="mercats-quota-llegenda" class="mq-legend" aria-label="Llegenda de les quotes de mercat">
               <span><i style="background:#b8463a"></i>Cinema espanyol</span>
               <span><i style="background:#1e3d6b"></i>Cinema francès</span>
@@ -993,7 +1009,7 @@
                 ? 'Fonts: Espanya, Ministeri de Cultura, Estadística de Cinematografia 2025; França, CNC, balanç definitiu de 2025. Percentatges segons nacionalitat de les pel·lícules a cada mercat.'
                 : 'Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).';
               if(view==='quota'){
-                if(graphTitle) graphTitle.textContent='Repartiment del públic cinematogràfic — La fotografia del 2025';
+                if(graphTitle) graphTitle.textContent='Quota nacional i repartiment del públic — La fotografia del 2025';
                 if(graphNote) graphNote.textContent='Les barres són proporcionals al volum total d’entrades de cada mercat; els colors indiquen el repartiment dels espectadors segons l’origen de les pel·lícules.';
               } else if(view==='perhab'){
                 chart.config.type='line';
