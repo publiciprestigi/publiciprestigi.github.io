@@ -57,9 +57,7 @@ Quines altres pel·lícules espanyoles han aconseguit construir un públic a Fra
 <!-- /PIP_BLOC:comentaris-top30 -->
 
 <!-- PIP_BLOC:tancament-top30 -->
-**Més entrades no sempre vol dir més penetració.** Les quotes sobre el mercat anual de cada país, disponibles als globus del gràfic, permeten matisar la comparació absoluta i veure en quin territori cada film ocupa realment més espai.
 
-**Coproduir no és el mateix que construir un públic.** La participació industrial francesa pot facilitar la circulació, però no garanteix que França es converteixi en segon —ni en primer— mercat. Per això les coproduccions de lideratge creatiu estranger queden fora del rànquing i es tracten com un problema metodològic diferent.
 <!-- /PIP_BLOC:tancament-top30 -->
 
 <!-- PIP_BLOC:intro-mercats -->
