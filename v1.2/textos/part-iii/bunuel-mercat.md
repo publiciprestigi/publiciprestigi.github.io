@@ -56,10 +56,6 @@ Quines altres pel·lícules espanyoles han aconseguit construir un públic a Fra
 - **De la perifèria al gran públic: el cas *Sirât*.** Després d’una trajectòria vinculada a les seccions paral·leles de Cannes i a un cinema d’autor minoritari, Óliver Laxe arriba amb *Sirât* (#18) a la Competició Oficial, on obté el Premi del Jurat, i aconsegueix un èxit comercial excepcional a França, amb un reconeixement internacional que s’estén als César, els EFA i els Oscar. En una escala de públic molt més reduïda, cineastes com Albert Serra i Jonás Trueba també troben a França un mercat especialment receptiu, amb pel·lícules que igualen o superen els espectadors aconseguits a Espanya.
 <!-- /PIP_BLOC:comentaris-top30 -->
 
-<!-- PIP_BLOC:tancament-top30 -->
-
-<!-- /PIP_BLOC:tancament-top30 -->
-
 <!-- PIP_BLOC:intro-mercats -->
 ## Comparativa de mercat i població
 
