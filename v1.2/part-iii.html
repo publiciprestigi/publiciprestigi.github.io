@@ -777,9 +777,6 @@
           <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
 
-          <div class="text-md text-md-intermedi" style="margin-top:18px" data-bunuel-bloc="tancament-top30">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
-</div>
         </div>
 
         <div id="f30-tip"></div>
@@ -1283,7 +1280,7 @@
     const rendered = [];
     for (const node of targets) {
       const key = node.dataset.bunuelBloc;
-      if (!blocks[key]) throw new Error('Falta el bloc ' + key);
+      if (!Object.prototype.hasOwnProperty.call(blocks, key)) throw new Error('Falta el bloc ' + key);
       rendered.push([node, marked.parse(blocks[key])]);
     }
     for (const [node,html] of rendered) node.innerHTML = html;
