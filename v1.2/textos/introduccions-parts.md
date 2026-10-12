@@ -31,5 +31,5 @@ Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'
 <!-- fi:iii:preguntes -->
 
 <!-- iii:final -->
-No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova les nostres interpretacions i ampliar la mirada.
+No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova els nostres prejudicis i ampliar la mirada.
 <!-- fi:iii:final -->
