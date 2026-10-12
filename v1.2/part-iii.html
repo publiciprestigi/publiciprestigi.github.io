@@ -991,8 +991,8 @@
                 ? 'Fonts: Espanya, Ministeri de Cultura (Estadística de Cinematografia 2025); França, CNC (balanç definitiu de 2025)'
                 : 'Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).';
               if(view==='quota'){
-                if(graphTitle) graphTitle.textContent='Repartiment del públic segons nacionalitat de les pel·lícules — Espanya i França (2025)';
-                if(graphNote) graphNote.textContent='Cada barra representa el 100% del públic del seu mercat, distribuït segons l’origen de les pel·lícules.';
+                if(graphTitle) graphTitle.textContent='Repartiment del públic segons l'origen de les pel·lícules — Espanya i França (2025)';
+                if(graphNote) graphNote.textContent='Cada barra representa el 100% del públic del seu mercat, repartits entre les diferents cinematografies.';
               } else if(view==='perhab'){
                 chart.config.type='line';
                 chart.data.datasets=perHabDatasets;
