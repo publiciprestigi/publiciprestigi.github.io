@@ -160,7 +160,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 <!-- Nova pàgina d’entrada editorial (prova) -->
 <section class="seccio-contingut pip-entrada" id="seccio-portada">
-<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Què fa que una pel·lícula sigui considerada important? Quins directors i sensibilitats han destacat internacionalment? Què canvia quan el reconeixement arriba dels festivals o de les acadèmies?</p><p class="pip-entrada-desenvolupament">Els grans festivals i les acadèmies han exercit durant dècades un paper fonamental en la construcció del prestigi cinematogràfic, però els seus criteris i influències també han canviat. Aquesta segona part reuneix i ordena les seleccions, nominacions, premis i rànquings del cinema espanyol en aquests circuits, per observar-ne l’evolució i oferir una perspectiva més àmplia del reconeixement obtingut.</p><p class="pip-entrada-final">El prestigi no és només una qüestió de valor artístic, sinó també una construcció històrica, cultural i institucional.</p></div>
+<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Què fa que una pel·lícula sigui considerada important? Quins directors i sensibilitats han destacat internacionalment? Què canvia quan el reconeixement arriba dels festivals o de les acadèmies?</p><p class="pip-entrada-final">El prestigi no és només una qüestió de valor artístic, sinó també una construcció històrica, cultural i institucional.</p></div>
 <div class="pip-entrada-cta">
 <button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button">Començar →</button>
 </div>
@@ -531,5 +531,32 @@ body.pip-en-portada .nav-seccions { display: none; }
 <!-- Cloudflare Web Analytics -->
 <script data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module"></script>
 <!-- End Cloudflare Web Analytics -->
+<script id="pip-entrada-md-loader">
+/* Textos de les entrades I, II i III: un únic Markdown compartit. */
+(async function () {
+  const part = document.body.classList.contains('part-iii') ? 'iii' :
+               document.body.classList.contains('part-ii') ? 'ii' : 'i';
+  const entrada = document.getElementById('seccio-portada');
+  if (!entrada) return;
+  try {
+    const resposta = await fetch(pipPath('textos/introduccions-parts.md'));
+    if (!resposta.ok) throw new Error('HTTP ' + resposta.status);
+    const md = await resposta.text();
+    function bloc(tipus) {
+      const inici = '<!-- ' + part + ':' + tipus + ' -->';
+      const fi = '<!-- fi:' + part + ':' + tipus + ' -->';
+      const a = md.indexOf(inici), b = md.indexOf(fi, a + inici.length);
+      if (a < 0 || b < 0) throw new Error('Bloc absent: ' + part + '/' + tipus);
+      return md.slice(a + inici.length, b).trim();
+    }
+    for (const tipus of ['preguntes', 'final']) {
+      const desti = entrada.querySelector('.pip-entrada-' + tipus);
+      if (desti) desti.innerHTML = marked.parse(bloc(tipus)).trim().replace(/^<p>/, '').replace(/<\/p>$/, '');
+    }
+  } catch (error) {
+    console.error('No s’ha pogut carregar el Markdown de les introduccions. Es conserva el text de reserva.', error);
+  }
+})();
+</script>
 </body>
 </html>

@@ -107,7 +107,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <!-- MODEL A: només text editorial -->
 <!-- Nova pàgina d’entrada editorial (prova) -->
 <section class="seccio-contingut pip-entrada" id="seccio-portada">
-<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Com han canviat el mercat i els públics? Què revelen les diferents maneres de mesurar l’èxit comercial d’una pel·lícula? Què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula?</p><p class="pip-entrada-desenvolupament">Durant seixanta anys, milions d’espectadors han construït, entrada a entrada, la història del cinema espanyol a les sales. Des de l’expansió de la televisió fins a la irrupció de les plataformes i el sotrac de la pandèmia, aquesta primera part ordena les dades de públic i els grans èxits de cada període, amb una mirada a l’evolució del mercat i els canvis en els hàbits de consum.</p><p class="pip-entrada-final">Les xifres d’espectadors no són només una magnitud econòmica, també ofereixen una manera de llegir la història cultural i social d’un país.</p></div>
+<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Com han canviat el mercat i els públics? Què revelen les diferents maneres de mesurar l’èxit comercial d’una pel·lícula? Què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula?</p><p class="pip-entrada-final">Les xifres d’espectadors no són només una magnitud econòmica, també ofereixen una manera de llegir la història cultural i social d’un país.</p></div>
 <div class="pip-entrada-cta">
 <button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button">Començar →</button>
 </div>
@@ -515,5 +515,32 @@ body.pip-en-portada .nav-seccions { display: none; }
 <!-- Cloudflare Web Analytics -->
 <script data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module"></script>
 <!-- End Cloudflare Web Analytics -->
+<script id="pip-entrada-md-loader">
+/* Textos de les entrades I, II i III: un únic Markdown compartit. */
+(async function () {
+  const part = document.body.classList.contains('part-iii') ? 'iii' :
+               document.body.classList.contains('part-ii') ? 'ii' : 'i';
+  const entrada = document.getElementById('seccio-portada');
+  if (!entrada) return;
+  try {
+    const resposta = await fetch(pipPath('textos/introduccions-parts.md'));
+    if (!resposta.ok) throw new Error('HTTP ' + resposta.status);
+    const md = await resposta.text();
+    function bloc(tipus) {
+      const inici = '<!-- ' + part + ':' + tipus + ' -->';
+      const fi = '<!-- fi:' + part + ':' + tipus + ' -->';
+      const a = md.indexOf(inici), b = md.indexOf(fi, a + inici.length);
+      if (a < 0 || b < 0) throw new Error('Bloc absent: ' + part + '/' + tipus);
+      return md.slice(a + inici.length, b).trim();
+    }
+    for (const tipus of ['preguntes', 'final']) {
+      const desti = entrada.querySelector('.pip-entrada-' + tipus);
+      if (desti) desti.innerHTML = marked.parse(bloc(tipus)).trim().replace(/^<p>/, '').replace(/<\/p>$/, '');
+    }
+  } catch (error) {
+    console.error('No s’ha pogut carregar el Markdown de les introduccions. Es conserva el text de reserva.', error);
+  }
+})();
+</script>
 </body>
 </html>

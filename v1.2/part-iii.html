@@ -153,7 +153,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 <!-- Nova pàgina d’entrada editorial (prova) -->
 <section class="seccio-contingut pip-entrada" id="seccio-portada">
-<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria i el cànon quan també canvien els mercats i les formes de veure cinema?</p><p class="pip-entrada-desenvolupament">Aquesta tercera part pren les dades del públic i del prestigi com a punt de partida per formular preguntes i contrastar hipòtesis. A través de comparatives i estudis de cas, explora les relacions entre l’èxit comercial, el reconeixement artístic i les transformacions de la indústria i la cultura, en una investigació oberta a nous temes i perspectives.</p><p class="pip-entrada-final">No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova les nostres interpretacions i ampliar la mirada.</p></div>
+<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria i el cànon quan també canvien els mercats i les formes de veure cinema?</p><p class="pip-entrada-final">No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova les nostres interpretacions i ampliar la mirada.</p></div>
 <div class="pip-entrada-cta">
 <button class="nav-seccio-btn pip-entrada-enllac" data-desti="doble-corona" type="button">Començar →</button>
 </div>
@@ -1780,5 +1780,32 @@ body.pip-en-portada .nav-seccions { display: none; }
     }
   </script>
 <script src="js/idioma.js"></script>
+<script id="pip-entrada-md-loader">
+/* Textos de les entrades I, II i III: un únic Markdown compartit. */
+(async function () {
+  const part = document.body.classList.contains('part-iii') ? 'iii' :
+               document.body.classList.contains('part-ii') ? 'ii' : 'i';
+  const entrada = document.getElementById('seccio-portada');
+  if (!entrada) return;
+  try {
+    const resposta = await fetch(pipPath('textos/introduccions-parts.md'));
+    if (!resposta.ok) throw new Error('HTTP ' + resposta.status);
+    const md = await resposta.text();
+    function bloc(tipus) {
+      const inici = '<!-- ' + part + ':' + tipus + ' -->';
+      const fi = '<!-- fi:' + part + ':' + tipus + ' -->';
+      const a = md.indexOf(inici), b = md.indexOf(fi, a + inici.length);
+      if (a < 0 || b < 0) throw new Error('Bloc absent: ' + part + '/' + tipus);
+      return md.slice(a + inici.length, b).trim();
+    }
+    for (const tipus of ['preguntes', 'final']) {
+      const desti = entrada.querySelector('.pip-entrada-' + tipus);
+      if (desti) desti.innerHTML = marked.parse(bloc(tipus)).trim().replace(/^<p>/, '').replace(/<\/p>$/, '');
+    }
+  } catch (error) {
+    console.error('No s’ha pogut carregar el Markdown de les introduccions. Es conserva el text de reserva.', error);
+  }
+})();
+</script>
 </body>
 </html>
