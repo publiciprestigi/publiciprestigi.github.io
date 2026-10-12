@@ -85,17 +85,11 @@
 .pip-entrada .pip-entrada-article { max-width: 760px; margin: 9px 0 0; }
 .pip-entrada .pip-entrada-article p { margin: 0 0 1.4em; }
 .pip-entrada .pip-entrada-article p:last-child { margin-bottom: 0; }
-body.pip-en-portada .titol-sticky #titol-principal { display: none; }
+body.pip-en-portada .nav-seccions { display: none; }
 @media(max-width:700px) { .pip-entrada .pip-entrada-article { margin: 9px 0 0; } }
-/* Entrada: mateix cos tipogràfic que els altres textos; accessos de navegació discrets. */
-.pip-entrada .pip-entrada-article { margin-top: 9px; margin-bottom: 0; }
-.pip-entrada-accessos { max-width:760px; margin: 32px 0 20px; padding-top: 21px; border-top: 1px solid #e5e5e5; font-family: Inter,-apple-system,'SF Pro Text',sans-serif; }
-.pip-entrada-accessos-titol { font-size: 13px; font-weight: 600; color: #666; margin:0 0 12px; }
-.pip-entrada-accessos-items { display:flex; flex-wrap:wrap; gap:12px 25px; }
-.pip-entrada-enllac { display:inline-flex; align-items:center; gap:7px; font-size:15px; line-height:1.5; color:#363737; text-decoration:none; border-bottom:1px solid #aaa; padding-bottom:3px; }
-.pip-entrada-enllac:hover, .pip-entrada-enllac:focus-visible { border-bottom-color:currentColor; color:#111; }
-.pip-entrada-enllac .pip-fletxa { font-size:16px; }
-@media(max-width:700px){.pip-entrada-accessos {margin-top:25px;} .pip-entrada-accessos-items {display:flex;flex-direction:column;align-items:flex-start;gap:15px;}}
+/* Accés de continuació amb el mateix botó de navegació interna. */
+.pip-entrada-cta { max-width:760px; margin:26px 0 12px; display:flex; justify-content:flex-start; }
+.pip-entrada-cta .nav-seccio-btn { cursor:pointer; }
 </style>
 </head>
 <body class="amb-sidebar part-iii">
@@ -174,12 +168,9 @@ body.pip-en-portada .titol-sticky #titol-principal { display: none; }
           <p class="pip-entrada-desenvolupament">Aquesta tercera part pren les dades del públic i del prestigi com a punt de partida per formular preguntes i contrastar hipòtesis. A través de comparatives i estudis de cas, explora les relacions entre l’èxit comercial, el reconeixement artístic i les transformacions de la indústria i la cultura cinematogràfica, en una investigació oberta a nous temes i perspectives.</p>
           <p class="pip-entrada-final">No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova les nostres interpretacions i ampliar la mirada.</p>
         </div>
-        <nav class="pip-entrada-accessos" aria-label="Per començar a explorar aquesta part">
-          <p class="pip-entrada-accessos-titol">Per començar</p>
-          <div class="pip-entrada-accessos-items">
-            <a href="#doble-corona" class="pip-entrada-enllac" data-desti="doble-corona" title="Comença pel primer capítol">La doble corona <span class="pip-fletxa" aria-hidden="true">→</span></a>
-          </div>
-        </nav>
+        <div class="pip-entrada-cta">
+          <button type="button" class="nav-seccio-btn pip-entrada-enllac" data-desti="doble-corona">Començar →</button>
+        </div>
       </section>
 
       <div class="seccio-contingut" id="seccio-doble-corona">
@@ -1135,7 +1126,7 @@ body.pip-en-portada .titol-sticky #titol-principal { display: none; }
 
 <script>
     const seccions = [
-      { id: 'portada', titol: '', sup: 'Cruïlles, comparatives i interpretacions' },
+      { id: 'portada', titol: 'III — Anàlisi', sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'doble-corona', titol: 'La doble corona',                           sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'bretxa',       titol: 'Evolució de la bretxa festivals vs. públic', sup: 'Cruïlles, comparatives i interpretacions' },
       { id: 'caza-alcarras',      titol: 'La caza vs. Alcarràs',  titolHTML: '<em>La caza</em> vs. <em>Alcarràs</em>',  sup: 'Cruïlles, comparatives i interpretacions' },

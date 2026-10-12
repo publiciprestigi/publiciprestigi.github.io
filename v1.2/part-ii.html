@@ -86,17 +86,11 @@
 .pip-entrada .pip-entrada-article { max-width: 760px; margin: 9px 0 0; }
 .pip-entrada .pip-entrada-article p { margin: 0 0 1.4em; }
 .pip-entrada .pip-entrada-article p:last-child { margin-bottom: 0; }
-body.pip-en-portada .titol-sticky #titol-principal { display: none; }
+body.pip-en-portada .nav-seccions { display: none; }
 @media(max-width:700px) { .pip-entrada .pip-entrada-article { margin: 9px 0 0; } }
-/* Entrada: mateix cos tipogràfic que els altres textos; accessos de navegació discrets. */
-.pip-entrada .pip-entrada-article { margin-top: 9px; margin-bottom: 0; }
-.pip-entrada-accessos { max-width:760px; margin: 32px 0 20px; padding-top: 21px; border-top: 1px solid #e5e5e5; font-family: Inter,-apple-system,'SF Pro Text',sans-serif; }
-.pip-entrada-accessos-titol { font-size: 13px; font-weight: 600; color: #666; margin:0 0 12px; }
-.pip-entrada-accessos-items { display:flex; flex-wrap:wrap; gap:12px 25px; }
-.pip-entrada-enllac { display:inline-flex; align-items:center; gap:7px; font-size:15px; line-height:1.5; color:#363737; text-decoration:none; border-bottom:1px solid #aaa; padding-bottom:3px; }
-.pip-entrada-enllac:hover, .pip-entrada-enllac:focus-visible { border-bottom-color:currentColor; color:#111; }
-.pip-entrada-enllac .pip-fletxa { font-size:16px; }
-@media(max-width:700px){.pip-entrada-accessos {margin-top:25px;} .pip-entrada-accessos-items {display:flex;flex-direction:column;align-items:flex-start;gap:15px;}}
+/* Accés de continuació amb el mateix botó de navegació interna. */
+.pip-entrada-cta { max-width:760px; margin:26px 0 12px; display:flex; justify-content:flex-start; }
+.pip-entrada-cta .nav-seccio-btn { cursor:pointer; }
 </style>
 </head>
 <body class="amb-sidebar part-ii">
@@ -181,13 +175,9 @@ body.pip-en-portada .titol-sticky #titol-principal { display: none; }
           <p class="pip-entrada-desenvolupament">Aquesta segona part reuneix i ordena sis dècades de presència del cinema espanyol als principals festivals i premis internacionals. Seleccions, nominacions, guardons i rànquings permeten dibuixar un mapa del reconeixement obtingut, observar-ne l’evolució i plantejar preguntes sobre la imatge cultural del nostre cinema a l’exterior.</p>
           <p class="pip-entrada-final">El prestigi no és només una qüestió de valor artístic, sinó també una construcció històrica, cultural i institucional.</p>
         </div>
-        <nav class="pip-entrada-accessos" aria-label="Per començar a explorar aquesta part">
-          <p class="pip-entrada-accessos-titol">Per començar</p>
-          <div class="pip-entrada-accessos-items">
-            <a href="#intro" class="pip-entrada-enllac" data-desti="intro" title="Com s’ha construït el mapa del prestigi">Dades i criteri <span class="pip-fletxa" aria-hidden="true">→</span></a>
-            <a href="#premiades" class="pip-entrada-enllac" data-desti="premiades" title="El recorregut del reconeixement internacional">Premiades per dècada <span class="pip-fletxa" aria-hidden="true">→</span></a>
-          </div>
-        </nav>
+        <div class="pip-entrada-cta">
+          <button type="button" class="nav-seccio-btn pip-entrada-enllac" data-desti="intro">Començar →</button>
+        </div>
       </section>
 
       <div class="seccio-contingut" id="seccio-premiades">
@@ -318,7 +308,7 @@ body.pip-en-portada .titol-sticky #titol-principal { display: none; }
 
 <script>
     const seccions = [
-      { id: 'portada', titol: '', sup: 'Reconeixement internacional en festivals i acadèmies' },
+      { id: 'portada', titol: 'II — Prestigi', sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'intro',              titol: 'Dades i criteri',                                        sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'premiades',          titol: 'Premiades per dècada',                                   sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'cannes',             titol: 'Festival de Cannes — En Compétition',                     sup: 'Reconeixement internacional en festivals i acadèmies' },
