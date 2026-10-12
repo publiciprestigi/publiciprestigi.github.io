@@ -15,7 +15,7 @@ Les xifres d’espectadors no són només una magnitud econòmica, també oferei
 ## II — Prestigi
 
 <!-- ii:preguntes -->
-Què fa que una pel·lícula sigui considerada important? Quines pel·lícules han destacat als grans festivals i als premis de les acadèmies al llarg del temps? Quin públic han tingut les pel·lícules seleccionades, nominades o premiades? Hi ha grans diferències d’espectadors entre les pel·lícules reconegudes als diferents certàmens i premis? Quins directors han aconseguit més reconeixement internacional?
+Què fa que una pel·lícula sigui considerada important? Quins títols han destacat als grans festivals i als premis de les acadèmies al llarg del temps? Quin públic han tingut les pel·lícules seleccionades, nominades o premiades? Quines pel·lícules lideren els rànquings d'espectadors de Cannes, Berlín o els Oscar? Quantes han arribat al Top 100? Quins directors han destacat més als grans festivals i què canvia quan hi incorporem els Oscar?
 <!-- fi:ii:preguntes -->
 
 <!-- ii:final -->
