@@ -505,7 +505,7 @@
           #grafic-mercats-coda-bloc .mercat-view-toggle.is-active,#grafic-mercats-coda-bloc .mercat-view-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
           #grafic-mercats-coda-bloc .mercat-view-controls{flex-wrap:wrap}
           #grafic-mercats-coda-bloc [hidden],#mercats-comentaris [hidden]{display:none!important}
-          #grafic-mercats-coda-bloc .mq-legend{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin:21px 0 28px;font:11px/1.3 'Inter',sans-serif;color:#666}
+          #grafic-mercats-coda-bloc .mq-legend{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin:30px 0 28px;font:11px/1.3 'Inter',sans-serif;color:#666}
           #grafic-mercats-coda-bloc .mq-legend span{display:inline-flex;align-items:center;gap:6px}
           #grafic-mercats-coda-bloc .mq-legend i{height:9px;width:9px;display:inline-block}
           #grafic-mercats-coda-bloc .mq-row{max-width:900px;margin:0 auto 30px}
@@ -991,8 +991,8 @@
                 ? 'Fonts: Espanya, Ministeri de Cultura (Estadística de Cinematografia 2025); França, CNC (balanç definitiu de 2025)'
                 : 'Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).';
               if(view==='quota'){
-                if(graphTitle) graphTitle.textContent="Repartiment del públic segons l’origen de les pel·lícules — Espanya i França (2025)";
-                if(graphNote) graphNote.textContent='Cada barra representa el 100% dels espectadors del seu mercat, repartits entre les diferents cinematografies.';
+                if(graphTitle) graphTitle.textContent="Repartiment del públic segons nacionalitat — Espanya i França (2025)";
+                if(graphNote) graphNote.textContent='Cada barra representa el 100% del públic del seu mercat, distribuït segons l’origen de les pel·lícules.';
               } else if(view==='perhab'){
                 chart.config.type='line';
                 chart.data.datasets=perHabDatasets;
