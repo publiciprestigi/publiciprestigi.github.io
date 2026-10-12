@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="ca" data-base="">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Part III — Anàlisi. Cruïlles, comparatives i interpretacions (1965–2025).">
-  <link rel="canonical" href="https://publiciprestigi.com/part-iii.html">
-  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/part-iii.html">
-  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/part-iii.html">
-  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/part-iii.html">
-  <title>Part III — Anàlisi · Públic i Prestigi</title>
-  <link rel="stylesheet" href="css/estil.css">
-  <link rel="stylesheet" href="css/textos-extra.css">
-  <link rel="stylesheet" href="css/capcalera-subscripcio.css">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <script>
+<html data-base="" lang="ca">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Part III — Anàlisi. Cruïlles, comparatives i interpretacions (1965–2025)." name="description"/>
+<link href="https://publiciprestigi.com/part-iii.html" rel="canonical"/>
+<link href="https://publiciprestigi.com/part-iii.html" hreflang="ca" rel="alternate"/>
+<link href="https://publiciprestigi.com/es/part-iii.html" hreflang="es" rel="alternate"/>
+<link href="https://publiciprestigi.com/part-iii.html" hreflang="x-default" rel="alternate"/>
+<title>Part III — Anàlisi · Públic i Prestigi</title>
+<link href="css/estil.css" rel="stylesheet"/>
+<link href="css/textos-extra.css" rel="stylesheet"/>
+<link href="css/capcalera-subscripcio.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
     window.pipPath = function (path) {
       var base = document.documentElement.getAttribute('data-base') || '';
       return base + path;
     };
   </script>
-
 <style id="pip-update-mark-style">
   .sidebar-link-update,
   .drawer-link-update{
@@ -78,8 +77,6 @@
     display:none;
   }
 </style>
-
-
 <style id="pip-entrades-prova">
 /* Entrada editorial: reutilitza la tipografia ordinària dels textos Markdown. */
 .pip-entrada .pip-entrada-article { max-width: 760px; margin: 9px 0 0; }
@@ -91,137 +88,117 @@ body.pip-en-portada .nav-seccions { display: none; }
 .pip-entrada-cta { max-width:760px; margin:26px 0 12px; display:flex; justify-content:flex-start; }
 .pip-entrada-cta .nav-seccio-btn { cursor:pointer; }
 </style>
-</head>
+<style id="pip-entrada-preguntes-style">
+/* Preguntes inicials en gris, mateix cos i tipografia que el text habitual. */
+.pip-entrada .pip-entrada-article .pip-entrada-preguntes { color:#858585; font-style:normal; font-weight:400; }
+</style></head>
 <body class="amb-sidebar part-iii">
-
-  <!-- ── Capçalera CA ── -->
-  <header class="capcalera capcalera-v2">
-    <div class="capcalera-interior">
-      <div class="capcalera-esquerra">
-        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
-          <span></span><span></span><span></span>
-        </button>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
-      </div>
-
-      <a href="/v1.2/" class="capcalera-logo">Públic i Prestigi</a>
-
-      <div class="capcalera-controls">
-        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar" role="button" tabindex="0" aria-label="Cercar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-        </span>
-
-        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Subscriure's</button>
-
-        <div class="capcalera-idioma">
-          <a href="#" class="actiu" lang="ca" aria-current="page">CA</a>
-          <a href="es/part-iii.html" class="lang-es" lang="es" hreflang="es">ES</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <nav class="navegacio">
-    <div class="navegacio-interior">
-      <a href="/v1.2/" class="nav-link">Inici</a>
-      <a href="part-i.html" class="nav-link">I — Públic</a>
-      <a href="part-ii.html" class="nav-link">II — Prestigi</a>
-      <a href="part-iii.html" class="nav-link actiu">III — Anàlisi</a>
-      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
-    </div>
-  </nav>
-
-  <div class="layout-sidebar">
-
-    <aside class="sidebar">
-      <div class="sidebar-spacer"></div>
-      <div class="sidebar-grup">
-        <div class="sidebar-grup-titol">Capítols</div>
-        <a href="#" class="sidebar-link" data-seccio="doble-corona">La doble corona</a>
-        <a href="#" class="sidebar-link" data-seccio="bretxa">Evolució de la bretxa festivals vs. públic</a>
-        <a href="#" class="sidebar-link" data-seccio="caza-alcarras">La caza vs. Alcarràs</a>
-        <a href="#" class="sidebar-link" data-seccio="lleis">Finestres, lleis i tecnologia</a>
-        <a href="#" class="sidebar-link" data-seccio="generacions">Saura, Almodóvar i la generació actual</a>
-        <a href="#" class="sidebar-link" data-seccio="autor-industrial">Model d’autor industrial</a>
-        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a href="#" class="sidebar-link sidebar-link-badge" data-seccio="bunuel-mercat"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a href="#" class="sidebar-link" data-seccio="conclusions">De les mètriques a les paradoxes</a>
-      </div>
-      <div class="sidebar-separador"></div>
-      <div class="sidebar-grup">
-        <a href="notes.html" class="sidebar-link sidebar-link-notes" data-extern="true">Notes</a>
-      </div>
-    </aside>
-
-    <main class="contingut-sidebar">
-      <div class="titol-sticky">
-        <p class="titol-sticky-sup" id="titol-sup"></p>
-        <h1 id="titol-principal"></h1>
-      </div>
-
-      <!-- Nova pàgina d’entrada editorial (prova) -->
-      <section class="seccio-contingut pip-entrada" id="seccio-portada">
-        <div class="pip-entrada-article text-md">
-          <p class="pip-entrada-obertura">Què passa quan posem en relació les pel·lícules que han arribat a més espectadors amb les que han obtingut més reconeixement? Què revelen les coincidències, les distàncies i les contradiccions entre aquests dos circuits?</p>
-          <p class="pip-entrada-desenvolupament">Aquesta tercera part pren les dades del públic i del prestigi com a punt de partida per formular preguntes i contrastar hipòtesis. A través de comparatives i estudis de cas, explora les relacions entre l’èxit comercial, el reconeixement artístic i les transformacions de la indústria i la cultura cinematogràfica, en una investigació oberta a nous temes i perspectives.</p>
-          <p class="pip-entrada-final">No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova les nostres interpretacions i ampliar la mirada.</p>
-        </div>
-        <div class="pip-entrada-cta">
-          <button type="button" class="nav-seccio-btn pip-entrada-enllac" data-desti="doble-corona">Començar →</button>
-        </div>
-      </section>
-
-      <div class="seccio-contingut" id="seccio-doble-corona">
-        <div class="text-md text-md-intro" data-text="part-iii/doble-corona" data-bloc="intro"></div>
-        <div class="text-md" data-text="part-iii/doble-corona" data-bloc="intro-grafic"></div>
-
-        <div id="grafic-doble-corona-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin:18px 0 0">
-          <p style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin-bottom:14px;margin-top:0;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">Via d’entrada a la doble corona (1965–2025)</p>
-          <div style="height:230px;position:relative">
-            <canvas id="grafic-doble-corona"></canvas>
-          </div>
-          <div class="text-md text-md-llegenda" data-text="part-iii/doble-corona" data-bloc="nota-grafic" style="font-size:14px;color:#666;margin-top:14px;line-height:1.45;text-align:center;font-style:italic"></div>
-          <style>
+<!-- ── Capçalera CA ── -->
+<header class="capcalera capcalera-v2">
+<div class="capcalera-interior">
+<div class="capcalera-esquerra">
+<button aria-label="Menú" class="btn-hamburguesa" onclick="toggleDrawer()">
+<span></span><span></span><span></span>
+</button>
+<a class="capcalera-versio" href="versions.html" id="versio-label">Versió 1.1 (1965–2025)</a>
+</div>
+<a class="capcalera-logo" href="/v1.2/">Públic i Prestigi</a>
+<div class="capcalera-controls">
+<span aria-label="Cercar" class="capcalera-lupa" onclick="toggleBuscador()" role="button" tabindex="0" title="Cercar">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+</span>
+<button class="capcalera-subscripcio" onclick="obreSubscripcio()" type="button">Subscriure's</button>
+<div class="capcalera-idioma">
+<a aria-current="page" class="actiu" href="#" lang="ca">CA</a>
+<a class="lang-es" href="es/part-iii.html" hreflang="es" lang="es">ES</a>
+</div>
+</div>
+</div>
+</header>
+<nav class="navegacio">
+<div class="navegacio-interior">
+<a class="nav-link" href="/v1.2/">Inici</a>
+<a class="nav-link" href="part-i.html">I — Públic</a>
+<a class="nav-link" href="part-ii.html">II — Prestigi</a>
+<a class="nav-link actiu" href="part-iii.html">III — Anàlisi</a>
+<a class="nav-link" href="sobre.html">Sobre el projecte</a>
+</div>
+</nav>
+<div class="layout-sidebar">
+<aside class="sidebar">
+<div class="sidebar-spacer"></div>
+<div class="sidebar-grup">
+<div class="sidebar-grup-titol">Capítols</div>
+<a class="sidebar-link" data-seccio="doble-corona" href="#">La doble corona</a>
+<a class="sidebar-link" data-seccio="bretxa" href="#">Evolució de la bretxa festivals vs. públic</a>
+<a class="sidebar-link" data-seccio="caza-alcarras" href="#">La caza vs. Alcarràs</a>
+<a class="sidebar-link" data-seccio="lleis" href="#">Finestres, lleis i tecnologia</a>
+<a class="sidebar-link" data-seccio="generacions" href="#">Saura, Almodóvar i la generació actual</a>
+<a class="sidebar-link" data-seccio="autor-industrial" href="#">Model d’autor industrial</a>
+<a class="sidebar-link sidebar-link-badge" data-seccio="mapa-canon" href="#"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+<a class="sidebar-link sidebar-link-badge" data-seccio="bunuel-mercat" href="#"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+<a class="sidebar-link" data-seccio="conclusions" href="#">De les mètriques a les paradoxes</a>
+</div>
+<div class="sidebar-separador"></div>
+<div class="sidebar-grup">
+<a class="sidebar-link sidebar-link-notes" data-extern="true" href="notes.html">Notes</a>
+</div>
+</aside>
+<main class="contingut-sidebar">
+<div class="titol-sticky">
+<p class="titol-sticky-sup" id="titol-sup"></p>
+<h1 id="titol-principal"></h1>
+</div>
+<!-- Nova pàgina d’entrada editorial (prova) -->
+<section class="seccio-contingut pip-entrada" id="seccio-portada">
+<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Què passa quan posem en relació les pel·lícules que han arribat a més espectadors amb les que han obtingut més reconeixement? Què revelen les coincidències, les distàncies i les contradiccions entre aquests dos circuits?</p><p class="pip-entrada-desenvolupament">Aquesta tercera part pren les dades del públic i del prestigi com a punt de partida per formular preguntes i contrastar hipòtesis. A través de comparatives i estudis de cas, explora les relacions entre l’èxit comercial, el reconeixement artístic i les transformacions de la indústria i la cultura cinematogràfica, en una investigació oberta a nous temes i perspectives.</p><p class="pip-entrada-final">No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova les nostres interpretacions i ampliar la mirada.</p></div>
+<div class="pip-entrada-cta">
+<button class="nav-seccio-btn pip-entrada-enllac" data-desti="doble-corona" type="button">Començar →</button>
+</div>
+</section>
+<div class="seccio-contingut" id="seccio-doble-corona">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/doble-corona"></div>
+<div class="text-md" data-bloc="intro-grafic" data-text="part-iii/doble-corona"></div>
+<div id="grafic-doble-corona-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin:18px 0 0">
+<p style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin-bottom:14px;margin-top:0;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">Via d’entrada a la doble corona (1965–2025)</p>
+<div style="height:230px;position:relative">
+<canvas id="grafic-doble-corona"></canvas>
+</div>
+<div class="text-md text-md-llegenda" data-bloc="nota-grafic" data-text="part-iii/doble-corona" style="font-size:14px;color:#666;margin-top:14px;line-height:1.45;text-align:center;font-style:italic"></div>
+<style>
             #grafic-doble-corona-bloc .text-md-llegenda p { margin:0; }
           </style>
-          <p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:5px auto 0;max-width:850px;padding:0 12px">Fonts: base de <em>Públic i Prestigi</em>; festivals, Oscar i EFA segons les fonts detallades a la Part II.</p>
-        </div>
-        <div class="text-md" data-text="part-iii/doble-corona" data-bloc="criteri-grafic" style="margin-top:18px"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/doble-corona" data-bloc="bloc-corona"></div>
-        <div id="taula-doble-corona" style="margin-top:16px"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/doble-corona" data-bloc="comentari-corona"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/doble-corona" data-bloc="intro-cercle"></div>
-        <div id="taula-segon-cercle"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/doble-corona" data-bloc="comentari-cercle"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-bretxa">
-        <div class="text-md text-md-intro" data-text="part-iii/bretxa" data-bloc="intro"></div>
-        <div id="taula-bretxa"></div>
-        <div class="text-md text-md-llegenda" data-text="part-iii/bretxa" data-bloc="llegenda-taula" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/bretxa" data-bloc="comentari"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/bretxa" data-bloc="intro-grafic1"></div>
-
-        <div id="grafic-bretxa-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin:18px 0 0">
-          <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">Evolució de la bretxa entre festivals i públic (1965–2025)</p>
-
-          <div class="bretxa-llegenda" aria-label="Llegenda del gràfic">
-            <span class="bretxa-llegenda-item">
-              <span class="bretxa-linia bretxa-linia-ratio" aria-hidden="true"><span class="bretxa-punt"></span></span>
-              <span>Ràtio bretxa</span>
-            </span>
-            <span class="bretxa-llegenda-item">
-              <span class="bretxa-linia bretxa-linia-mercat" aria-hidden="true"></span>
-              <span>Mercat anual mitjà</span>
-            </span>
-          </div>
-
-          <style>
+<p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:5px auto 0;max-width:850px;padding:0 12px">Fonts: base de <em>Públic i Prestigi</em>; festivals, Oscar i EFA segons les fonts detallades a la Part II.</p>
+</div>
+<div class="text-md" data-bloc="criteri-grafic" data-text="part-iii/doble-corona" style="margin-top:18px"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-corona" data-text="part-iii/doble-corona"></div>
+<div id="taula-doble-corona" style="margin-top:16px"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-corona" data-text="part-iii/doble-corona" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="intro-cercle" data-text="part-iii/doble-corona"></div>
+<div id="taula-segon-cercle"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-cercle" data-text="part-iii/doble-corona" style="border-top:none;padding-top:0;margin-top:28px"></div>
+</div>
+<div class="seccio-contingut" id="seccio-bretxa">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/bretxa"></div>
+<div id="taula-bretxa"></div>
+<div class="text-md text-md-llegenda" data-bloc="llegenda-taula" data-text="part-iii/bretxa" style="font-size:0.82em;color:#555;margin-top:10px;line-height:1.5"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-iii/bretxa" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="intro-grafic1" data-text="part-iii/bretxa"></div>
+<div id="grafic-bretxa-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin:18px 0 0">
+<p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">Evolució de la bretxa entre festivals i públic (1965–2025)</p>
+<div aria-label="Llegenda del gràfic" class="bretxa-llegenda">
+<span class="bretxa-llegenda-item">
+<span aria-hidden="true" class="bretxa-linia bretxa-linia-ratio"><span class="bretxa-punt"></span></span>
+<span>Ràtio bretxa</span>
+</span>
+<span class="bretxa-llegenda-item">
+<span aria-hidden="true" class="bretxa-linia bretxa-linia-mercat"></span>
+<span>Mercat anual mitjà</span>
+</span>
+</div>
+<style>
             #grafic-bretxa-bloc .bretxa-llegenda{
               display:flex;
               justify-content:center;
@@ -271,184 +248,151 @@ body.pip-en-portada .nav-seccions { display: none; }
               z-index:1;
             }
           </style>
-
-          <div class="grafic-wrap" style="height:340px;position:relative;margin:0;border-top:none;border-bottom:none">
-            <canvas id="grafic-bretxa"></canvas>
-          </div>
-          <p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:5px auto 0;max-width:850px;padding:0 12px">Fonts: base de <em>Públic i Prestigi</em>; mercat anual, Ministeri de Cultura i Comscore.</p>
-        </div>
-
-          <div class="text-md" data-text="part-iii/bretxa" data-bloc="post-grafic1" style="margin-top:28px"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-caza-alcarras">
-        <div class="text-md text-md-intro" data-text="part-iii/caza-alcarras" data-bloc="intro"></div>
-        <div id="taula-caza-comparativa"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/caza-alcarras" data-bloc="comentari-taula"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-iaa"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/caza-alcarras" data-bloc="comentari-iaa"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="bloc-distribucio"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/caza-alcarras" data-bloc="comentari-distribucio"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/caza-alcarras" data-bloc="final-distribucio"></div>
-
-        <div id="grafic-caza-iaa-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin-top:24px">
-          <p id="caza-iaa-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">
+<div class="grafic-wrap" style="height:340px;position:relative;margin:0;border-top:none;border-bottom:none">
+<canvas id="grafic-bretxa"></canvas>
+</div>
+<p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:5px auto 0;max-width:850px;padding:0 12px">Fonts: base de <em>Públic i Prestigi</em>; mercat anual, Ministeri de Cultura i Comscore.</p>
+</div>
+<div class="text-md" data-bloc="post-grafic1" data-text="part-iii/bretxa" style="margin-top:28px"></div>
+</div>
+<div class="seccio-contingut" id="seccio-caza-alcarras">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/caza-alcarras"></div>
+<div id="taula-caza-comparativa"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-taula" data-text="part-iii/caza-alcarras" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-iaa" data-text="part-iii/caza-alcarras"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-iaa" data-text="part-iii/caza-alcarras" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-distribucio" data-text="part-iii/caza-alcarras"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-distribucio" data-text="part-iii/caza-alcarras" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="final-distribucio" data-text="part-iii/caza-alcarras"></div>
+<div id="grafic-caza-iaa-bloc" style="border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:20px 0 22px;margin-top:24px">
+<p id="caza-iaa-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">
             IAA estimat: <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)
           </p>
-
-          <div id="caza-iaa-leg" style="text-align:center;font-size:11px;margin:0 0 12px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">
-            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
-            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
-            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
-            <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>
-          </div>
-
-          <div class="grafic-wrap" style="height:270px;position:relative;margin:0;border-top:none;border-bottom:none">
-            <canvas id="grafic-caza-iaa"></canvas>
-          </div>
-
-          <p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px">
+<div id="caza-iaa-leg" style="text-align:center;font-size:11px;margin:0 0 12px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif">
+<span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
+<span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
+<span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
+<span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>
+</div>
+<div class="grafic-wrap" style="height:270px;position:relative;margin:0;border-top:none;border-bottom:none">
+<canvas id="grafic-caza-iaa"></canvas>
+</div>
+<p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px">
             Fonts: ICAA (sales); TV3 i La 2/TVE (audiències televisives); estimacions pròpies per a televisió de pagament i plataformes.
           </p>
-        </div>
-
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:24px" data-text="part-iii/caza-alcarras" data-bloc="comentari-final"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-lleis">
-        <div class="text-md text-md-intro" data-text="part-iii/lleis" data-bloc="intro"></div>
-        <div id="grafic-lleis"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/lleis" data-bloc="moments"></div>
-        <div class="text-md text-md-comentari" data-text="part-iii/lleis" data-bloc="conclusio"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-generacions">
-        <div class="text-md text-md-intro" data-text="part-iii/dues-generacions" data-bloc="intro"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-saura"></div>
-        <div id="taula-saura"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/dues-generacions" data-bloc="comentari-saura"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-almodovar"></div>
-        <div id="taula-almodovar"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/dues-generacions" data-bloc="comentari-almodovar"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="text-grafic1"></div>
-        <div id="grafic-sa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
-          <div style="position:relative">
-            <div id="sa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-              <div style="min-width:1700px;height:520px;position:relative">
-                <canvas id="grafic-saura-almodovar"></canvas>
-              </div>
-            </div>
-            <div id="sa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
-          </div>
-        </div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/dues-generacions" data-bloc="bloc-actual"></div>
-        <div id="taula-actual"></div>
-        <div class="text-md text-md-comentari" style="border-top:none;padding-top:0;margin-top:28px" data-text="part-iii/dues-generacions" data-bloc="comentari-actual"></div>
-
-        <div id="grafic-ga-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0">
-          <div class="grafic-wrap" style="height:720px;position:relative;border-top:none;border-bottom:none">
-            <canvas id="grafic-generacio-actual"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-autor-industrial">
-        <div class="text-md text-md-intro" data-text="part-iii/autor-industrial" data-bloc="intro"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-iglesia"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-amenabar"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="bloc-bayona"></div>
-
-        <div id="grafic-ai-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
-          <div style="position:relative">
-            <div id="ai-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-              <div style="min-width:1700px;height:480px;position:relative">
-                <canvas id="grafic-autor-industrial"></canvas>
-              </div>
-            </div>
-            <div id="ai-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
-          </div>
-        </div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="conclusio"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/autor-industrial" data-bloc="paradoxa"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-mapa-canon">
-        <div class="text-md text-md-intro" data-text="part-iii/mapa-canon" data-bloc="intro"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="fonts"></div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="criteri"></div>
-
-        <div id="grafic-mapa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
-          <div style="position:relative">
-            <div id="mapa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-              <div id="grafic-mapa-canon" style="min-width:720px"></div>
-            </div>
-            <div id="mapa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
-          </div>
-        </div>
-
-        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="nucli"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="intermedis"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/mapa-canon" data-bloc="extrems"></div>
-        <div class="text-md text-md-intermedi"
-             style="border-top:1px solid #e0e0e0; padding-top:20px; margin-top:24px"
-             data-text="part-iii/mapa-canon"
-             data-bloc="tancament"></div>
-      </div>
-
-      <template id="bunuel-mini-comentari-trajectories"><div aria-label="Mitjana d’espectadors per film: Buñuel 0,80 milions; Berlanga 0,84 milions; Bardem 0,92 milions" class="pip-mini-mercats pip-mini-directors" role="img">
+</div>
+<div class="text-md text-md-comentari" data-bloc="comentari-final" data-text="part-iii/caza-alcarras" style="border-top:none;padding-top:0;margin-top:24px"></div>
+</div>
+<div class="seccio-contingut" id="seccio-lleis">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/lleis"></div>
+<div id="grafic-lleis"></div>
+<div class="text-md text-md-intermedi" data-bloc="moments" data-text="part-iii/lleis"></div>
+<div class="text-md text-md-comentari" data-bloc="conclusio" data-text="part-iii/lleis"></div>
+</div>
+<div class="seccio-contingut" id="seccio-generacions">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/dues-generacions"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-saura" data-text="part-iii/dues-generacions"></div>
+<div id="taula-saura"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-saura" data-text="part-iii/dues-generacions" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-almodovar" data-text="part-iii/dues-generacions"></div>
+<div id="taula-almodovar"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-almodovar" data-text="part-iii/dues-generacions" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div class="text-md text-md-intermedi" data-bloc="text-grafic1" data-text="part-iii/dues-generacions"></div>
+<div id="grafic-sa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+<div style="position:relative">
+<div id="sa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div style="min-width:1700px;height:520px;position:relative">
+<canvas id="grafic-saura-almodovar"></canvas>
+</div>
+</div>
+<div id="sa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+</div>
+</div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-actual" data-text="part-iii/dues-generacions"></div>
+<div id="taula-actual"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-actual" data-text="part-iii/dues-generacions" style="border-top:none;padding-top:0;margin-top:28px"></div>
+<div id="grafic-ga-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0">
+<div class="grafic-wrap" style="height:720px;position:relative;border-top:none;border-bottom:none">
+<canvas id="grafic-generacio-actual"></canvas>
+</div>
+</div>
+</div>
+<div class="seccio-contingut" id="seccio-autor-industrial">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/autor-industrial"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-iglesia" data-text="part-iii/autor-industrial"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-amenabar" data-text="part-iii/autor-industrial"></div>
+<div class="text-md text-md-intermedi" data-bloc="bloc-bayona" data-text="part-iii/autor-industrial"></div>
+<div id="grafic-ai-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+<div style="position:relative">
+<div id="ai-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div style="min-width:1700px;height:480px;position:relative">
+<canvas id="grafic-autor-industrial"></canvas>
+</div>
+</div>
+<div id="ai-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+</div>
+</div>
+<div class="text-md text-md-intermedi" data-bloc="conclusio" data-text="part-iii/autor-industrial"></div>
+<div class="text-md text-md-intermedi" data-bloc="paradoxa" data-text="part-iii/autor-industrial"></div>
+</div>
+<div class="seccio-contingut" id="seccio-mapa-canon">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/mapa-canon"></div>
+<div class="text-md text-md-intermedi" data-bloc="fonts" data-text="part-iii/mapa-canon"></div>
+<div class="text-md text-md-intermedi" data-bloc="criteri" data-text="part-iii/mapa-canon"></div>
+<div id="grafic-mapa-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+<div style="position:relative">
+<div id="mapa-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div id="grafic-mapa-canon" style="min-width:720px"></div>
+</div>
+<div id="mapa-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
+</div>
+</div>
+<div class="text-md text-md-intermedi" data-bloc="nucli" data-text="part-iii/mapa-canon"></div>
+<div class="text-md text-md-intermedi" data-bloc="intermedis" data-text="part-iii/mapa-canon"></div>
+<div class="text-md text-md-intermedi" data-bloc="extrems" data-text="part-iii/mapa-canon"></div>
+<div class="text-md text-md-intermedi" data-bloc="tancament" data-text="part-iii/mapa-canon" style="border-top:1px solid #e0e0e0; padding-top:20px; margin-top:24px"></div>
+</div>
+<template id="bunuel-mini-comentari-trajectories"><div aria-label="Mitjana d’espectadors per film: Buñuel 0,80 milions; Berlanga 0,84 milions; Bardem 0,92 milions" class="pip-mini-mercats pip-mini-directors" role="img">
 <p class="pmm-context">Mitjana d’espectadors per film</p>
 <div class="pmm-row"><span class="pmm-country">Buñuel (8)</span><div class="pmm-track"><span class="pmm-bar" style="width:86.75%;background:#b8463a"></span></div><span class="pmm-value">0,80M</span></div>
 <div class="pmm-row"><span class="pmm-country">Berlanga (10)</span><div class="pmm-track"><span class="pmm-bar" style="width:91.55%;background:#1e3d6b"></span></div><span class="pmm-value">0,84M</span></div>
 <div class="pmm-row"><span class="pmm-country">Bardem (9)</span><div class="pmm-track"><span class="pmm-bar" style="width:100%;background:#1e6b5c"></span></div><span class="pmm-value">0,92M</span></div>
 </div></template>
-      <template id="bunuel-mini-comentari-balanc"><div aria-label="Buñuel · 8 films de la comparativa: Espanya 6,398,618 espectadors; França 8,622,696 espectadors" class="pip-mini-mercats" role="img">
+<template id="bunuel-mini-comentari-balanc"><div aria-label="Buñuel · 8 films de la comparativa: Espanya 6,398,618 espectadors; França 8,622,696 espectadors" class="pip-mini-mercats" role="img">
 <p class="pmm-context">Buñuel · 8 films · Total d’espectadors</p>
 <div class="pmm-row"><span class="pmm-country">ES</span><div class="pmm-track"><span class="pmm-bar es" style="width:74.21%"></span></div><span class="pmm-value">6,40M</span></div>
 <div class="pmm-row"><span class="pmm-country">FR</span><div class="pmm-track"><span class="pmm-bar fr" style="width:100.00%"></span></div><span class="pmm-value">8,62M</span></div>
 </div></template>
-      <template id="bunuel-mini-comentaris-top30"><div aria-label="Almodóvar · 14 films del Top 30: Espanya 17,886,981 espectadors; França 15,376,389 espectadors" class="pip-mini-mercats" role="img">
+<template id="bunuel-mini-comentaris-top30"><div aria-label="Almodóvar · 14 films del Top 30: Espanya 17,886,981 espectadors; França 15,376,389 espectadors" class="pip-mini-mercats" role="img">
 <p class="pmm-context">Almodóvar · 14 films del Top 30 · Total d’espectadors</p>
 <div class="pmm-row"><span class="pmm-country">ES</span><div class="pmm-track"><span class="pmm-bar es" style="width:100.00%"></span></div><span class="pmm-value">17,89M</span></div>
 <div class="pmm-row"><span class="pmm-country">FR</span><div class="pmm-track"><span class="pmm-bar fr" style="width:85.96%"></span></div><span class="pmm-value">15,38M</span></div>
 </div></template>
-      <div class="seccio-contingut" id="seccio-bunuel-mercat">
-        <div class="text-md text-md-intro" data-bunuel-bloc="intro">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div class="seccio-contingut" id="seccio-bunuel-mercat">
+<div class="text-md text-md-intro" data-bunuel-bloc="intro">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-        <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
-          <p id="bbb-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif">Buñuel, Berlanga i Bardem — Trajectòria d’espectadors a sala per film (1965–1999)</p>
-          <div style="position:relative">
-            <div id="bbb-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
-              <div style="min-width:2500px;height:520px;position:relative">
-                <canvas id="grafic-bunuel-berlanga-bardem"></canvas>
-              </div>
-            </div>
-            <div id="bbb-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
-          </div>
-        </div>
-
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-bunuel-bloc="comentari-trajectories">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
+<p id="bbb-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif">Buñuel, Berlanga i Bardem — Trajectòria d’espectadors a sala per film (1965–1999)</p>
+<div style="position:relative">
+<div id="bbb-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div style="min-width:2500px;height:520px;position:relative">
+<canvas id="grafic-bunuel-berlanga-bardem"></canvas>
 </div>
-
-        <div class="text-md text-md-intermedi" style="margin-top:22px" data-bunuel-bloc="transicio-franca">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-        <div class="text-md text-md-intermedi" style="margin-top:34px" data-bunuel-bloc="intro-dos-paisos">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div id="bbb-scroll-hint" style="position:absolute;top:0;right:0;width:32px;height:100%;background:linear-gradient(to right,transparent,rgba(255,255,255,.85));pointer-events:none;transition:opacity .4s;z-index:20"></div>
 </div>
-
-        
-  <style id="pip-mini-mercats-style">
+</div>
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-trajectories" style="margin-top:22px;border-top:none">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+<div class="text-md text-md-intermedi" data-bunuel-bloc="transicio-franca" style="margin-top:22px">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+<div class="text-md text-md-intermedi" data-bunuel-bloc="intro-dos-paisos" style="margin-top:34px">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+<style id="pip-mini-mercats-style">
     /* Petites síntesis integrades i centrades en la columna de comentari. */
     .pip-mini-mercats{box-sizing:border-box;width:calc(100% - 36px);max-width:520px;margin:25px auto 30px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif;color:#363737}
     .text-md-comentari li > .pip-mini-mercats{margin:25px auto 32px}
@@ -465,11 +409,9 @@ body.pip-en-portada .nav-seccions { display: none; }
     @media(max-width:460px){.pip-mini-mercats{width:100%}.pip-mini-mercats .pmm-row{grid-template-columns:20px minmax(0,1fr) 60px;gap:6px}.pip-mini-mercats .pmm-value{font-size:11px}}
     @media(max-width:460px){.pip-mini-directors .pmm-row{grid-template-columns:85px minmax(0,1fr) 60px}}
   </style>
-
 <div id="grafic-bunuel-franca-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 18px;margin:20px 0;overflow:visible">
-          <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px;font-family:'Inter',-apple-system,Arial,sans-serif">Buñuel — Espectadors a sala a Espanya i França (1962–1983)</p>
-
-          <style>
+<p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 18px;font-family:'Inter',-apple-system,Arial,sans-serif">Buñuel — Espectadors a sala a Espanya i França (1962–1983)</p>
+<style>
             #bf-mirror { width:100%; min-width:0; font-family:'Inter',-apple-system,Arial,sans-serif; color:#363737; }
             #bf-mirror .bf-head,
             #bf-mirror .bf-scale,
@@ -543,130 +485,118 @@ body.pip-en-portada .nav-seccions { display: none; }
           #mercats-quota-tooltip{position:fixed;z-index:9999;pointer-events:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;border-radius:3px;padding:9px 12px;font:12px/1.5 'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.15)}
           @media(max-width:520px){#grafic-mercats-coda-bloc .mq-heading span{width:100%}#grafic-mercats-coda-bloc .mq-stack{height:27px}#grafic-mercats-coda-bloc .mq-values{font-size:10px}}
           </style>
-
-          <div class="bf-mobile-scroll" style="overflow:visible">
-            <div id="bf-mirror">
-              <div class="bf-head">
-                <div class="bf-country es">← ES</div>
-                <div class="bf-total-head"></div>
-                <div class="bf-country fr">FR →</div>
-              </div>
-
-              <div class="bf-scale">
-                <div class="bf-scale-side left"><span>2,5M</span><span>2M</span><span>1,5M</span><span>1M</span><span>500K</span></div>
-                <div class="bf-scale-mid">0</div>
-                <div class="bf-scale-side right"><span>500K</span><span>1M</span><span>1,5M</span><span>2M</span><span>2,5M</span></div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:9.45%" data-tip="<strong>Espanya</strong><br>236.140 espectadors<br>Estrena ES: 08/06/1968<br>Mercat anual: 330M<br>Quota de mercat: 0,07%"><span class="bf-value">236K</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">Diario de una camarera</span> <span class="bf-film-year">(ES 1968, FR 1964)</span></div>
-                  <div class="bf-film-prod">Producció: França · Itàlia</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:55.56%" data-tip="<strong>França</strong><br>1.389.101 espectadors<br>Estrena FR: 04/03/1964<br>Mercat anual i quota: no disponibles (sèrie des de 1965)"><span class="bf-value">1,39M</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:72.08%" data-tip="<strong>Espanya</strong><br>1.801.968 espectadors<br>Estrena ES: 29/03/1970<br>Mercat anual: 305M<br>Quota de mercat: 0,59%"><span class="bf-value">1,80M</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">Tristana</span> <span class="bf-film-year">(ES 1970, FR 1970)</span></div>
-                  <div class="bf-film-prod">Coproducció: Espanya · Itàlia · França</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:22.09%" data-tip="<strong>França</strong><br>552.228 espectadors<br>Estrena FR: 29/04/1970<br>Mercat anual: 184,4M<br>Quota de mercat: 0,30%"><span class="bf-value">552K</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:14.21%" data-tip="<strong>Espanya</strong><br>355.140 espectadors<br>Estrena ES: 19/04/1975<br>Mercat anual: 255M<br>Quota de mercat: 0,14%"><span class="bf-value">355K</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">El fantasma de la libertad</span> <span class="bf-film-year">(ES 1975, FR 1974)</span></div>
-                  <div class="bf-film-prod">Producció: França · Itàlia</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:43.24%" data-tip="<strong>França</strong><br>1.081.088 espectadors<br>Estrena FR: 11/09/1974<br>Mercat anual: 179,4M<br>Quota de mercat: 0,60%"><span class="bf-value">1,08M</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:41.57%" data-tip="<strong>Espanya</strong><br>1.039.181 espectadors<br>Estrena ES: 09/04/1977<br>Mercat anual: 220M<br>Quota de mercat: 0,47%"><span class="bf-value">1,04M</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">Viridiana</span> <span class="bf-film-year">(ES 1977, FR 1962)</span></div>
-                  <div class="bf-film-prod">Coproducció: Espanya · Mèxic</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:24.20%" data-tip="<strong>França</strong><br>605.083 espectadors<br>Estrena FR: 04/04/1962<br>Mercat anual i quota: no disponibles (sèrie des de 1965)<br>Acumulat CBO; reestrenes per delimitar"><span class="bf-value">605K</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:7.39%" data-tip="<strong>Espanya</strong><br>184.767 espectadors<br>Estrena ES: 19/08/1977<br>Mercat anual: 220M<br>Quota de mercat: 0,08%"><span class="bf-value">185K</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">La vía láctea</span> <span class="bf-film-year">(ES 1977, FR 1969)</span></div>
-                  <div class="bf-film-prod">Producció: França · Itàlia</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:21.18%" data-tip="<strong>França</strong><br>529.538 espectadors<br>Estrena FR: 14/03/1969<br>Mercat anual: 183,9M<br>Quota de mercat: 0,29%"><span class="bf-value">530K</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:43.06%" data-tip="<strong>Espanya</strong><br>1.076.567 espectadors<br>Estrena ES: 01/03/1978<br>Mercat anual: 205M<br>Quota de mercat: 0,53%"><span class="bf-value">1,08M</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">Ese oscuro objeto del deseo</span> <span class="bf-film-year">(ES 1978, FR 1977)</span></div>
-                  <div class="bf-film-prod">Coproducció: França · Espanya</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:32.50%" data-tip="<strong>França</strong><br>812.574 espectadors<br>Estrena FR: 1977<br>Mercat anual: 170,3M<br>Quota de mercat: 0,48%"><span class="bf-value">813K</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:46.74%" data-tip="<strong>Espanya</strong><br>1.168.609 espectadors<br>Estrena ES: 1980<br>Mercat anual: 175M<br>Quota de mercat: 0,67%"><span class="bf-value">1,17M</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">Belle de jour</span> <span class="bf-film-year">(ES 1980, FR 1967)</span></div>
-                  <div class="bf-film-prod">Coproducció: França · Itàlia</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:86.49%" data-tip="<strong>França</strong><br>2.162.160 espectadors<br>Estrena FR: 1967<br>Mercat anual: 211,5M<br>Quota de mercat: 1,02%"><span class="bf-value">2,16M</span></div>
-                </div>
-              </div>
-
-              <div class="bf-row">
-                <div class="bf-side left">
-                  <div class="bf-bar es" style="width:21.45%" data-tip="<strong>Espanya</strong><br>536.246 espectadors<br>Estrena ES: 28/01/1983<br>Mercat anual: 130M<br>Quota de mercat: 0,41%<br>Exhibició subtitulada documentada el 1973"><span class="bf-value">536K</span></div>
-                </div>
-                <div class="bf-film">
-                  <div class="bf-film-title"><span class="bf-film-name">El discreto encanto de la burguesía</span> <span class="bf-film-year">(ES 1983, FR 1972)</span></div>
-                  <div class="bf-film-prod">Producció: França · Itàlia</div>
-                </div>
-                <div class="bf-side right">
-                  <div class="bf-bar fr" style="width:59.64%" data-tip="<strong>França</strong><br>1.490.924 espectadors<br>Estrena FR: 15/09/1972<br>Mercat anual: 184,4M<br>Quota de mercat: 0,81%"><span class="bf-value">1,49M</span></div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-          <div id="bf-tip"></div>
-
-          <script>
+<div class="bf-mobile-scroll" style="overflow:visible">
+<div id="bf-mirror">
+<div class="bf-head">
+<div class="bf-country es">← ES</div>
+<div class="bf-total-head"></div>
+<div class="bf-country fr">FR →</div>
+</div>
+<div class="bf-scale">
+<div class="bf-scale-side left"><span>2,5M</span><span>2M</span><span>1,5M</span><span>1M</span><span>500K</span></div>
+<div class="bf-scale-mid">0</div>
+<div class="bf-scale-side right"><span>500K</span><span>1M</span><span>1,5M</span><span>2M</span><span>2,5M</span></div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;236.140 espectadors&lt;br&gt;Estrena ES: 08/06/1968&lt;br&gt;Mercat anual: 330M&lt;br&gt;Quota de mercat: 0,07%" style="width:9.45%"><span class="bf-value">236K</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">Diario de una camarera</span> <span class="bf-film-year">(ES 1968, FR 1964)</span></div>
+<div class="bf-film-prod">Producció: França · Itàlia</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;1.389.101 espectadors&lt;br&gt;Estrena FR: 04/03/1964&lt;br&gt;Mercat anual i quota: no disponibles (sèrie des de 1965)" style="width:55.56%"><span class="bf-value">1,39M</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;1.801.968 espectadors&lt;br&gt;Estrena ES: 29/03/1970&lt;br&gt;Mercat anual: 305M&lt;br&gt;Quota de mercat: 0,59%" style="width:72.08%"><span class="bf-value">1,80M</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">Tristana</span> <span class="bf-film-year">(ES 1970, FR 1970)</span></div>
+<div class="bf-film-prod">Coproducció: Espanya · Itàlia · França</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;552.228 espectadors&lt;br&gt;Estrena FR: 29/04/1970&lt;br&gt;Mercat anual: 184,4M&lt;br&gt;Quota de mercat: 0,30%" style="width:22.09%"><span class="bf-value">552K</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;355.140 espectadors&lt;br&gt;Estrena ES: 19/04/1975&lt;br&gt;Mercat anual: 255M&lt;br&gt;Quota de mercat: 0,14%" style="width:14.21%"><span class="bf-value">355K</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">El fantasma de la libertad</span> <span class="bf-film-year">(ES 1975, FR 1974)</span></div>
+<div class="bf-film-prod">Producció: França · Itàlia</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;1.081.088 espectadors&lt;br&gt;Estrena FR: 11/09/1974&lt;br&gt;Mercat anual: 179,4M&lt;br&gt;Quota de mercat: 0,60%" style="width:43.24%"><span class="bf-value">1,08M</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;1.039.181 espectadors&lt;br&gt;Estrena ES: 09/04/1977&lt;br&gt;Mercat anual: 220M&lt;br&gt;Quota de mercat: 0,47%" style="width:41.57%"><span class="bf-value">1,04M</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">Viridiana</span> <span class="bf-film-year">(ES 1977, FR 1962)</span></div>
+<div class="bf-film-prod">Coproducció: Espanya · Mèxic</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;605.083 espectadors&lt;br&gt;Estrena FR: 04/04/1962&lt;br&gt;Mercat anual i quota: no disponibles (sèrie des de 1965)&lt;br&gt;Acumulat CBO; reestrenes per delimitar" style="width:24.20%"><span class="bf-value">605K</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;184.767 espectadors&lt;br&gt;Estrena ES: 19/08/1977&lt;br&gt;Mercat anual: 220M&lt;br&gt;Quota de mercat: 0,08%" style="width:7.39%"><span class="bf-value">185K</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">La vía láctea</span> <span class="bf-film-year">(ES 1977, FR 1969)</span></div>
+<div class="bf-film-prod">Producció: França · Itàlia</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;529.538 espectadors&lt;br&gt;Estrena FR: 14/03/1969&lt;br&gt;Mercat anual: 183,9M&lt;br&gt;Quota de mercat: 0,29%" style="width:21.18%"><span class="bf-value">530K</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;1.076.567 espectadors&lt;br&gt;Estrena ES: 01/03/1978&lt;br&gt;Mercat anual: 205M&lt;br&gt;Quota de mercat: 0,53%" style="width:43.06%"><span class="bf-value">1,08M</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">Ese oscuro objeto del deseo</span> <span class="bf-film-year">(ES 1978, FR 1977)</span></div>
+<div class="bf-film-prod">Coproducció: França · Espanya</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;812.574 espectadors&lt;br&gt;Estrena FR: 1977&lt;br&gt;Mercat anual: 170,3M&lt;br&gt;Quota de mercat: 0,48%" style="width:32.50%"><span class="bf-value">813K</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;1.168.609 espectadors&lt;br&gt;Estrena ES: 1980&lt;br&gt;Mercat anual: 175M&lt;br&gt;Quota de mercat: 0,67%" style="width:46.74%"><span class="bf-value">1,17M</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">Belle de jour</span> <span class="bf-film-year">(ES 1980, FR 1967)</span></div>
+<div class="bf-film-prod">Coproducció: França · Itàlia</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;2.162.160 espectadors&lt;br&gt;Estrena FR: 1967&lt;br&gt;Mercat anual: 211,5M&lt;br&gt;Quota de mercat: 1,02%" style="width:86.49%"><span class="bf-value">2,16M</span></div>
+</div>
+</div>
+<div class="bf-row">
+<div class="bf-side left">
+<div class="bf-bar es" data-tip="&lt;strong&gt;Espanya&lt;/strong&gt;&lt;br&gt;536.246 espectadors&lt;br&gt;Estrena ES: 28/01/1983&lt;br&gt;Mercat anual: 130M&lt;br&gt;Quota de mercat: 0,41%&lt;br&gt;Exhibició subtitulada documentada el 1973" style="width:21.45%"><span class="bf-value">536K</span></div>
+</div>
+<div class="bf-film">
+<div class="bf-film-title"><span class="bf-film-name">El discreto encanto de la burguesía</span> <span class="bf-film-year">(ES 1983, FR 1972)</span></div>
+<div class="bf-film-prod">Producció: França · Itàlia</div>
+</div>
+<div class="bf-side right">
+<div class="bf-bar fr" data-tip="&lt;strong&gt;França&lt;/strong&gt;&lt;br&gt;1.490.924 espectadors&lt;br&gt;Estrena FR: 15/09/1972&lt;br&gt;Mercat anual: 184,4M&lt;br&gt;Quota de mercat: 0,81%" style="width:59.64%"><span class="bf-value">1,49M</span></div>
+</div>
+</div>
+</div>
+</div>
+<div id="bf-tip"></div>
+<script>
             (function() {
               const tip = document.getElementById('bf-tip');
               if (!tip) return;
@@ -689,28 +619,22 @@ body.pip-en-portada .nav-seccions { display: none; }
               });
             })();
           </script>
-          <p class="frx-note">Espectadors acumulats a Espanya i França, comparats en una mateixa escala.</p>
-          <p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> i ICAA. França, JP Box-Office, CNC i CBO Box Office; mercat anual francès, CNC.</p>
-        </div>
-
-        <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-bunuel-bloc="comentari-dos-paisos">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<p class="frx-note">Espectadors acumulats a Espanya i França, comparats en una mateixa escala.</p>
+<p class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> i ICAA. França, JP Box-Office, CNC i CBO Box Office; mercat anual francès, CNC.</p>
 </div>
-
-        <div class="text-md text-md-comentari" style="margin-top:0;border-top:none;padding-top:0" data-bunuel-bloc="comentari-coproduccions">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-dos-paisos" style="margin-top:22px;border-top:none">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-        <div class="text-md text-md-comentari" style="margin-top:0;border-top:none;padding-top:0" data-bunuel-bloc="comentari-balanc">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-coproduccions" style="margin-top:0;border-top:none;padding-top:0">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-        <div class="text-md text-md-intermedi" style="margin-top:22px" data-bunuel-bloc="context-industrial">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-balanc" style="margin-top:0;border-top:none;padding-top:0">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-
-        <style id="f30-style">
+<div class="text-md text-md-intermedi" data-bunuel-bloc="context-industrial" style="margin-top:22px">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+<style id="f30-style">
           #franca-top30{margin-top:38px}
           #franca-top30 .f30-intro h2{margin-bottom:10px}
           #franca-top30 .f30-chart{border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 16px;margin:20px 0;font-family:'Inter',-apple-system,Arial,sans-serif;color:#363737;overflow:visible}
@@ -783,43 +707,36 @@ body.pip-en-portada .nav-seccions { display: none; }
             #franca-top30 .f30-inner{min-width:900px}
           }
         </style>
-
-        <div id="franca-top30">
-          <div class="text-md text-md-intermedi f30-intro" data-bunuel-bloc="intro-top30">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div id="franca-top30">
+<div class="text-md text-md-intermedi f30-intro" data-bunuel-bloc="intro-top30">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-          <div class="f30-chart">
-            <div class="f30-inner">
-              <p class="f30-title">Top 30 d’espectadors a França — Comparativa amb Espanya (1965–2025)</p>
-              <div class="f30-controls" role="group" aria-label="Filtra el rànquing per Almodóvar">
-                <button type="button" class="f30-toggle is-active" data-mode="all" aria-pressed="true">Totes</button>
-                <button type="button" class="f30-toggle" data-mode="without" aria-pressed="false">Sense Almodóvar</button>
-                <button type="button" class="f30-toggle" data-mode="only" aria-pressed="false">Només Almodóvar</button>
-              </div>
-              <p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
-              
-              <div class="f30-head">
-                <div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
-                <div class="f30-head-title"><span class="f30-head-main">Pel·lícula</span></div>
-                <div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
-              </div>
-              <div id="f30-main"></div>
-              <div class="f30-separator" aria-hidden="true"></div>
-              <div id="f30-extra" class="f30-extra"></div>
-              
-              <p class="f30-source">Fonts: Espanya, base de Públic i Prestigi i ICAA per als films fora del corpus. França, CNC, JP Box-Office i CBO Box Office; mercat anual francès, CNC.</p>
-            </div>
-          </div>
-
-          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-bunuel-bloc="comentaris-top30">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div class="f30-chart">
+<div class="f30-inner">
+<p class="f30-title">Top 30 d’espectadors a França — Comparativa amb Espanya (1965–2025)</p>
+<div aria-label="Filtra el rànquing per Almodóvar" class="f30-controls" role="group">
+<button aria-pressed="true" class="f30-toggle is-active" data-mode="all" type="button">Totes</button>
+<button aria-pressed="false" class="f30-toggle" data-mode="without" type="button">Sense Almodóvar</button>
+<button aria-pressed="false" class="f30-toggle" data-mode="only" type="button">Només Almodóvar</button>
 </div>
-
-        </div>
-
-        <div id="f30-tip"></div>
-        <script>
+<p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
+<div class="f30-head">
+<div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
+<div class="f30-head-title"><span class="f30-head-main">Pel·lícula</span></div>
+<div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
+</div>
+<div id="f30-main"></div>
+<div aria-hidden="true" class="f30-separator"></div>
+<div class="f30-extra" id="f30-extra"></div>
+<p class="f30-source">Fonts: Espanya, base de Públic i Prestigi i ICAA per als films fora del corpus. França, CNC, JP Box-Office i CBO Box Office; mercat anual francès, CNC.</p>
+</div>
+</div>
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentaris-top30" style="margin-top:22px;border-top:none">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+</div>
+</div>
+<div id="f30-tip"></div>
+<script>
           (function() {
             const films = [{"rank": 1,"title": "Volver","director": "Pedro Almodóvar","year": 2006,"fr": 2349220,"es": 1932119},{"rank": 2,"title": "Hable con ella","director": "Pedro Almodóvar","year": 2002,"fr": 2157752,"es": 1367655},{"rank": 3,"title": "Todo sobre mi madre","director": "Pedro Almodóvar","year": 1999,"fr": 2018846,"es": 2590699},{"rank": 4,"title": "Estambul 65","director": "Antonio Isasi-Isasmendi","year": 1965,"fr": 1888220,"es": 2711723},{"rank": 5,"title": "Los otros","director": "Alejandro Amenábar","year": 2001,"fr": 1565492,"es": 6410785},{"rank": 6,"title": "Tacones lejanos","director": "Pedro Almodóvar","year": 1991,"fr": 1494860,"es": 2073064},{"rank": 7,"title": "Cría cuervos","director": "Carlos Saura","year": 1976,"fr": 1426702,"es": 1293113},{"rank": 8,"title": "La mala educación","director": "Pedro Almodóvar","year": 2004,"fr": 1086731,"es": 1241814},{"rank": 9,"title": "Loca juventud","director": "Manuel Mur Oti","year": 1965,"fr": 1010869,"es": 425166},{"rank": 10,"title": "Planet 51","director": "Jorge Blanco","year": 2009,"fr": 988487,"es": 1957318},{"rank": 11,"title": "Los abrazos rotos","director": "Pedro Almodóvar","year": 2009,"fr": 918919,"es": 696722},{"rank": 12,"title": "Carmen","director": "Carlos Saura","year": 1983,"fr": 871824,"es": 427324},{"rank": 13,"title": "Dolor y gloria","director": "Pedro Almodóvar","year": 2019,"fr": 846952,"es": 964859},{"rank": 14,"title": "Momias","director": "Juan Jesús García Galocha","year": 2023,"fr": 840691,"es": 970812},{"rank": 15,"title": "Ese oscuro objeto del deseo","director": "Luis Buñuel","year": 1977,"esYear": 1978,"fr": 812574,"es": 1076567},{"rank": 16,"title": "Julieta","director": "Pedro Almodóvar","year": 2016,"fr": 791953,"es": 355378},{"rank": 17,"title": "La piel que habito","director": "Pedro Almodóvar","year": 2011,"fr": 733758,"es": 735403},{"rank": 18,"title": "Sirât","director": "Oliver Laxe","year": 2025,"fr": 713257,"es": 476236},{"rank": 19,"title": "Cartas boca arriba","director": "Jesús Franco","year": 1966,"fr": 620902,"es": 553400},{"rank": 20,"title": "La habitación de al lado","director": "Pedro Almodóvar","year": 2024,"fr": 619160,"es": 402313},{"rank": 21,"title": "Madres paralelas","director": "Pedro Almodóvar","year": 2021,"fr": 615647,"es": 425643},{"rank": 22,"title": "Kika","director": "Pedro Almodóvar","year": 1993,"fr": 606697,"es": 1038568},{"title": "Viridiana","director": "Luis Buñuel","year": 1961,"esYear": 1977,"frYear": 1962,"fr": 605083,"es": 1039181,"rank": 23},{"rank": 24,"title": "Mujeres al borde de un ataque de nervios","director": "Pedro Almodóvar","year": 1988,"fr": 600134,"es": 3348457},{"rank": 25,"title": "Las Vegas 500 millones","director": "Antonio Isasi-Isasmendi","year": 1968,"frYear": 1969,"fr": 577148,"es": 2706134},{"rank": 26,"title": "[REC]","director": "Jaume Balagueró · Paco Plaza","year": 2007,"fr": 554330,"es": 1430450},{"rank": 27,"title": "Tristana","director": "Luis Buñuel","year": 1970,"fr": 552228,"es": 1801968},{"rank": 28,"title": "Lo imposible","director": "J. A. Bayona","year": 2012,"fr": 536596,"es": 6129976},{"rank": 29,"title": "Los amantes pasajeros","director": "Pedro Almodóvar","year": 2013,"fr": 535760,"es": 714287},{"rank": 30,"title": "Tadeo Jones 3. La tabla esmeralda","director": "Enrique Gato","year": 2022,"fr": 514894,"es": 1987567}];
             const extras = [{"title": "Volveréis", "director": "Jonás Trueba", "year": 2024, "fr": 73216, "es": 74709}, {"title": "Pacifiction", "director": "Albert Serra", "year": 2022, "fr": 60323, "es": 14921}];
@@ -889,42 +806,38 @@ body.pip-en-portada .nav-seccions { display: none; }
             render('all');
           })();
         </script>
-
-        <div class="text-md text-md-intermedi" style="margin-top:38px" data-bunuel-bloc="intro-mercats">
-          <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
+<div class="text-md text-md-intermedi" data-bunuel-bloc="intro-mercats" style="margin-top:38px">
+<!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
-
-        <div id="grafic-mercats-coda-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 14px;margin:20px 0">
-          <p id="mercats-coda-tit" class="mercat-chart-title">Entrades venudes i evolució de la població a Espanya i França (1965–2025)</p>
-          <div class="mercat-view-controls" role="group" aria-label="Canvia la lectura del gràfic">
-            <button type="button" class="mercat-view-toggle is-active" data-view="mercat" aria-pressed="true">Mercat i població</button>
-            <button type="button" class="mercat-view-toggle" data-view="perhab" aria-pressed="false">Entrades per habitant</button>
-            <button type="button" class="mercat-view-toggle" data-view="quota" aria-pressed="false">Quota 2025</button>
-          </div>
-          <div id="mercats-historic-wrap" style="height:360px;position:relative">
-            <canvas id="grafic-mercats-coda"></canvas>
-          </div>
-          <div id="mercats-quota-wrap" hidden>
-            <div id="mercats-quota-llegenda" class="mq-legend" aria-label="Llegenda de les quotes de mercat">
-              <span><i style="background:#b8463a"></i>Cinema espanyol</span>
-              <span><i style="background:#1e3d6b"></i>Cinema francès</span>
-              <span><i style="background:#b18a50"></i>Cinema nord-americà</span>
-              <span><i style="background:#bcbcbc"></i>Altres cinematografies</span>
-            </div>
-            <div class="mq-row"><div class="mq-heading"><strong>Espanya</strong><span>Mercat: 66,9M entrades</span></div><div class="mq-track"><div class="mq-stack" role="group" aria-label="Espanya: cinema espanyol 18,6%; nord-americà 48,2%; altres 33,2%"><span class="mq-segment" style="width:18.6%;background:#b8463a" tabindex="0" data-country="Espanya" data-label="Cinema espanyol" data-percent="18,6" data-total="66,9"></span><span class="mq-segment" style="width:48.2%;background:#b18a50" tabindex="0" data-country="Espanya" data-label="Cinema nord-americà" data-percent="48,2" data-total="66,9"></span><span class="mq-segment" style="width:33.2%;background:#bcbcbc" tabindex="0" data-country="Espanya" data-label="Altres cinematografies" data-percent="33,2" data-total="66,9"></span></div></div><div class="mq-values">Cinema espanyol 18,6% · EUA 48,2% · Altres 33,2%</div></div>
-            <div class="mq-row"><div class="mq-heading"><strong>França</strong><span>Mercat: 156,2M entrades</span></div><div class="mq-stack" role="group" aria-label="França: cinema francès 37,9%; nord-americà 34,9%; altres 27,2%"><span class="mq-segment" style="width:37.9%;background:#1e3d6b" tabindex="0" data-country="França" data-label="Cinema francès" data-percent="37,9" data-total="156,2"></span><span class="mq-segment" style="width:34.9%;background:#b18a50" tabindex="0" data-country="França" data-label="Cinema nord-americà" data-percent="34,9" data-total="156,2"></span><span class="mq-segment" style="width:27.2%;background:#bcbcbc" tabindex="0" data-country="França" data-label="Altres cinematografies" data-percent="27,2" data-total="156,2"></span></div><div class="mq-values">Cinema francès 37,9% · EUA 34,9% · Altres 27,2%</div></div>
-          </div>
-          <p id="mercats-coda-nota" class="frx-note">Entrades venudes (barres) i població (línies) a Espanya i França, 1965–2025.</p>
-          <p id="mercats-coda-fonts" class="frx-source">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).</p>
-        </div>
-
-        <div id="mercats-comentaris">
-          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-mercat-comentari="mercat" data-bunuel-bloc="comentari-mercats"></div>
-          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-mercat-comentari="perhab" data-bunuel-bloc="comentari-perhab" hidden></div>
-          <div class="text-md text-md-comentari" style="margin-top:22px;border-top:none" data-mercat-comentari="quota" data-bunuel-bloc="comentari-quota" hidden></div>
-        </div>
-
-        <script>
+<div id="grafic-mercats-coda-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0 14px;margin:20px 0">
+<p class="mercat-chart-title" id="mercats-coda-tit">Entrades venudes i evolució de la població a Espanya i França (1965–2025)</p>
+<div aria-label="Canvia la lectura del gràfic" class="mercat-view-controls" role="group">
+<button aria-pressed="true" class="mercat-view-toggle is-active" data-view="mercat" type="button">Mercat i població</button>
+<button aria-pressed="false" class="mercat-view-toggle" data-view="perhab" type="button">Entrades per habitant</button>
+<button aria-pressed="false" class="mercat-view-toggle" data-view="quota" type="button">Quota 2025</button>
+</div>
+<div id="mercats-historic-wrap" style="height:360px;position:relative">
+<canvas id="grafic-mercats-coda"></canvas>
+</div>
+<div hidden="" id="mercats-quota-wrap">
+<div aria-label="Llegenda de les quotes de mercat" class="mq-legend" id="mercats-quota-llegenda">
+<span><i style="background:#b8463a"></i>Cinema espanyol</span>
+<span><i style="background:#1e3d6b"></i>Cinema francès</span>
+<span><i style="background:#b18a50"></i>Cinema nord-americà</span>
+<span><i style="background:#bcbcbc"></i>Altres cinematografies</span>
+</div>
+<div class="mq-row"><div class="mq-heading"><strong>Espanya</strong><span>Mercat: 66,9M entrades</span></div><div class="mq-track"><div aria-label="Espanya: cinema espanyol 18,6%; nord-americà 48,2%; altres 33,2%" class="mq-stack" role="group"><span class="mq-segment" data-country="Espanya" data-label="Cinema espanyol" data-percent="18,6" data-total="66,9" style="width:18.6%;background:#b8463a" tabindex="0"></span><span class="mq-segment" data-country="Espanya" data-label="Cinema nord-americà" data-percent="48,2" data-total="66,9" style="width:48.2%;background:#b18a50" tabindex="0"></span><span class="mq-segment" data-country="Espanya" data-label="Altres cinematografies" data-percent="33,2" data-total="66,9" style="width:33.2%;background:#bcbcbc" tabindex="0"></span></div></div><div class="mq-values">Cinema espanyol 18,6% · EUA 48,2% · Altres 33,2%</div></div>
+<div class="mq-row"><div class="mq-heading"><strong>França</strong><span>Mercat: 156,2M entrades</span></div><div aria-label="França: cinema francès 37,9%; nord-americà 34,9%; altres 27,2%" class="mq-stack" role="group"><span class="mq-segment" data-country="França" data-label="Cinema francès" data-percent="37,9" data-total="156,2" style="width:37.9%;background:#1e3d6b" tabindex="0"></span><span class="mq-segment" data-country="França" data-label="Cinema nord-americà" data-percent="34,9" data-total="156,2" style="width:34.9%;background:#b18a50" tabindex="0"></span><span class="mq-segment" data-country="França" data-label="Altres cinematografies" data-percent="27,2" data-total="156,2" style="width:27.2%;background:#bcbcbc" tabindex="0"></span></div><div class="mq-values">Cinema francès 37,9% · EUA 34,9% · Altres 27,2%</div></div>
+</div>
+<p class="frx-note" id="mercats-coda-nota">Entrades venudes (barres) i població (línies) a Espanya i França, 1965–2025.</p>
+<p class="frx-source" id="mercats-coda-fonts">Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).</p>
+</div>
+<div id="mercats-comentaris">
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-mercats" data-mercat-comentari="mercat" style="margin-top:22px;border-top:none"></div>
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-perhab" data-mercat-comentari="perhab" hidden="" style="margin-top:22px;border-top:none"></div>
+<div class="text-md text-md-comentari" data-bunuel-bloc="comentari-quota" data-mercat-comentari="quota" hidden="" style="margin-top:22px;border-top:none"></div>
+</div>
+<script>
           (function() {
             const canvas = document.getElementById('grafic-mercats-coda');
             if (!canvas || typeof Chart === 'undefined') return;
@@ -1052,78 +965,66 @@ body.pip-en-portada .nav-seccions { display: none; }
             });
           })();
         </script>
-
-      </div>
-
-      <div class="seccio-contingut" id="seccio-conclusions">
-        <div class="text-md text-md-intro" data-text="part-iii/conclusions" data-bloc="intro"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cap"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-1-cos"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2-cap"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-2-cos"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-3"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-4"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-5"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-6"></div>
-        <div class="text-md text-md-intermedi" data-text="part-iii/conclusions" data-bloc="punt-7"></div>
-      </div>
-
-      <div class="nav-seccions">
-        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
-        <button class="btn-top" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
-        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
-      </div>
-  </div>
-
-  <footer class="peu">
-    <div class="peu-interior">
-      <span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · <a href="legal.html#propietat">Llicència CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografies</a></span>
-      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
-    </div>
-  </footer>
-
-  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
-    <div class="buscador-interior">
-      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
-      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
-      <div id="buscador-resultats"></div>
-    </div>
-  </div>
-
-  
-  <!-- ── Modal de subscripció ── -->
-  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
-    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
-      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Tancar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M6 6l12 12M18 6L6 18"></path>
-        </svg>
-      </button>
-
-      <h2 id="subscripcio-titol">Subscriu-te</h2>
-
-      <div class="subscripcio-icona" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 20L6 17"></path>
-          <path d="M32 13V8"></path>
-          <path d="M54 20L58 17"></path>
-          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
-          <path d="M16 24l16 12 16-12"></path>
-        </svg>
-      </div>
-
-      <div class="subscripcio-text">
-        <p>Les novetats i actualitzacions de Públic i Prestigi es publiquen a <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicació del projecte.</p>
-        <p>En continuar, aniràs a la pàgina de subscripció, on podràs introduir el teu correu i completar el procés.</p>
-      </div>
-
-      <div class="subscripcio-accions">
-        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
-        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancel·lar</button>
-      </div>
-    </div>
-  </div>
-
+</div>
+<div class="seccio-contingut" id="seccio-conclusions">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-1-cap" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-1-cos" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-2-cap" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-2-cos" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-3" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-4" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-5" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-6" data-text="part-iii/conclusions"></div>
+<div class="text-md text-md-intermedi" data-bloc="punt-7" data-text="part-iii/conclusions"></div>
+</div>
+<div class="nav-seccions">
+<button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+<button class="btn-top" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+</div>
+</main></div>
+<footer class="peu">
+<div class="peu-interior">
+<span>© 2026 Marc Prades · <a href="legal.html">Avís legal</a> · <a href="legal.html#privacitat">Privacitat</a> · <a href="legal.html#propietat">Llicència CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografies</a></span>
+<span><a href="https://publiciprestigi.substack.com" rel="noopener" target="_blank">publiciprestigi.substack.com</a></span>
+</div>
+</footer>
+<div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+<div class="buscador-interior">
+<input autocomplete="off" id="buscador-input" placeholder="Cerca a l'estudi..." type="text"/>
+<button class="buscador-tancar" onclick="toggleBuscador()">✕</button>
+<div id="buscador-resultats"></div>
+</div>
+</div>
+<!-- ── Modal de subscripció ── -->
+<div class="subscripcio-overlay" hidden="" id="subscripcio-modal">
+<div aria-labelledby="subscripcio-titol" aria-modal="true" class="subscripcio-modal" role="dialog">
+<button aria-label="Tancar" class="subscripcio-tancar" onclick="tancaSubscripcio()" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M6 6l12 12M18 6L6 18"></path>
+</svg>
+</button>
+<h2 id="subscripcio-titol">Subscriu-te</h2>
+<div aria-hidden="true" class="subscripcio-icona">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64">
+<path d="M10 20L6 17"></path>
+<path d="M32 13V8"></path>
+<path d="M54 20L58 17"></path>
+<rect height="28" rx="4" width="36" x="14" y="21"></rect>
+<path d="M16 24l16 12 16-12"></path>
+</svg>
+</div>
+<div class="subscripcio-text">
+<p>Les novetats i actualitzacions de Públic i Prestigi es publiquen a <a href="https://publiciprestigi.substack.com/" rel="noopener" target="_blank">Substack</a>, el canal de comunicació del projecte.</p>
+<p>En continuar, aniràs a la pàgina de subscripció, on podràs introduir el teu correu i completar el procés.</p>
+</div>
+<div class="subscripcio-accions">
+<a class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F" id="subscripcio-continuar">Continuar</a>
+<button class="subscripcio-cancellar" onclick="tancaSubscripcio()" type="button">Cancel·lar</button>
+</div>
+</div>
+</div>
 <script>
     const seccions = [
       { id: 'portada', titol: 'III — Anàlisi', sup: 'Cruïlles, comparatives i interpretacions' },
@@ -1287,9 +1188,7 @@ body.pip-en-portada .nav-seccions { display: none; }
     }
     document.addEventListener('keydown', e => { if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); } });
   </script>
-
-  
-  <script>
+<script>
     // ── MODAL SUBSCRIPCIÓ ──
     let subscripcioFocusAnterior = null;
 
@@ -1344,11 +1243,10 @@ body.pip-en-portada .nav-seccions { display: none; }
       }
     });
   </script>
-
 <script src="js/scroll-header.js"></script>
 <script src="js/buscador.js"></script>
 <script src="js/scroll-fade.js"></script>
-  <script src="js/textos.js"></script>
+<script src="js/textos.js"></script>
 <script id="bunuel-mercat-loader">
 (function() {
   const ruta = pipPath('textos/part-iii/bunuel-mercat.md');
@@ -1385,9 +1283,8 @@ body.pip-en-portada .nav-seccions { display: none; }
   });
 })();
 </script>
-
-  <script src="js/part-iii.js"></script>
-  <script>
+<script src="js/part-iii.js"></script>
+<script>
     window.PiP_graficBunuelBerlangaBardem = function() {
       const el = document.getElementById('grafic-bunuel-berlanga-bardem');
       if (!el || typeof Chart === 'undefined') return;
@@ -1790,85 +1687,82 @@ body.pip-en-portada .nav-seccions { display: none; }
     };
 
   </script>
-  <script src="js/notes-tooltip.js"></script>
-
-
-  <!-- ── Drawer mòbil ── -->
-  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
-  <nav class="drawer" id="drawer" aria-label="Menú principal">
-    <div class="drawer-cap">
-      <a href="/v1.2/" class="drawer-logo">Públic i Prestigi</a>
-      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
-    </div>
-    <div class="drawer-seccio"><a href="/v1.2/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
-    <div class="drawer-seccio" id="drawer-part-i">
-      <div class="drawer-seccio-fila">
-        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
-        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
-      </div>
-      <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Context</div>
-        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fonts i eines</a>
-        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercat i població</a>
-        <div class="drawer-grup-titol">Top 100</div>
-        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resum per dècada</a>
-        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
-        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
-        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
-        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
-        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
-        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
-        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
-        <div class="drawer-grup-titol">Rànquings</div>
-        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
-        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Per penetració</a>
-        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Per quota de mercat</a>
-        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Per IIC</a>
-        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
-      </div>
-    </div>
-    <div class="drawer-seccio" id="drawer-part-ii">
-      <div class="drawer-seccio-fila">
-        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
-        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
-      </div>
-      <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Context</div>
-        <a class="drawer-link" href="part-ii.html#intro" onclick="toggleDrawer()">Dades i criteri</a>
-        <div class="drawer-grup-titol">Festivals</div>
-        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
-        <a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
-        <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
-        <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
-        <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
-        <div class="drawer-grup-titol">Rànquings</div>
-        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
-        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
-      </div>
-    </div>
-    <div class="drawer-seccio" id="drawer-part-iii">
-      <div class="drawer-seccio-fila">
-        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
-        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
-      </div>
-      <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Capítols</div>
-        <a class="drawer-link" onclick="navegaDrawer('doble-corona')">La doble corona</a>
-        <a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolució de la bretxa festivals vs. públic</a>
-        <a class="drawer-link" onclick="navegaDrawer('caza-alcarras')">La caza vs. Alcarràs</a>
-        <a class="drawer-link" onclick="navegaDrawer('lleis')">Finestres, lleis i tecnologia</a>
-        <a class="drawer-link" onclick="navegaDrawer('generacions')">Saura, Almodóvar i la generació actual</a>
-        <a class="drawer-link" onclick="navegaDrawer('autor-industrial')">Model d’autor industrial</a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" onclick="navegaDrawer('bunuel-mercat')"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link" onclick="navegaDrawer('conclusions')">De les mètriques a les paradoxes</a>
-      </div>
-    </div>
-    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
-  </nav>
-
-  <script>
+<script src="js/notes-tooltip.js"></script>
+<!-- ── Drawer mòbil ── -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<nav aria-label="Menú principal" class="drawer" id="drawer">
+<div class="drawer-cap">
+<a class="drawer-logo" href="/v1.2/">Públic i Prestigi</a>
+<button aria-label="Tancar" class="drawer-tancar" onclick="toggleDrawer()">✕</button>
+</div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap es-link" href="/v1.2/" onclick="toggleDrawer()">Inici</a></div>
+<div class="drawer-seccio" id="drawer-part-i">
+<div class="drawer-seccio-fila">
+<a class="drawer-seccio-nom" href="part-i.html" onclick="toggleDrawer()">I — Públic</a>
+<button aria-label="Expandir" class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')"><span class="drawer-arrow">▼</span></button>
+</div>
+<div class="drawer-subseccions">
+<div class="drawer-grup-titol">Context</div>
+<a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fonts i eines</a>
+<a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercat i població</a>
+<div class="drawer-grup-titol">Top 100</div>
+<a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resum per dècada</a>
+<a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+<a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+<a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+<a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+<a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+<a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+<a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+<div class="drawer-grup-titol">Rànquings</div>
+<a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+<a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Per penetració</a>
+<a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Per quota de mercat</a>
+<a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Per IIC</a>
+<a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
+</div>
+</div>
+<div class="drawer-seccio" id="drawer-part-ii">
+<div class="drawer-seccio-fila">
+<a class="drawer-seccio-nom" href="part-ii.html" onclick="toggleDrawer()">II — Prestigi</a>
+<button aria-label="Expandir" class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')"><span class="drawer-arrow">▼</span></button>
+</div>
+<div class="drawer-subseccions">
+<div class="drawer-grup-titol">Context</div>
+<a class="drawer-link" href="part-ii.html#intro" onclick="toggleDrawer()">Dades i criteri</a>
+<div class="drawer-grup-titol">Festivals</div>
+<a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
+<a class="drawer-link" href="part-ii.html#cannes" onclick="toggleDrawer()">Cannes</a>
+<a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
+<a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
+<a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
+<div class="drawer-grup-titol">Rànquings</div>
+<a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+<a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
+</div>
+</div>
+<div class="drawer-seccio" id="drawer-part-iii">
+<div class="drawer-seccio-fila">
+<a class="drawer-seccio-nom" href="part-iii.html" onclick="toggleDrawer()">III — Anàlisi</a>
+<button aria-label="Expandir" class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')"><span class="drawer-arrow">▼</span></button>
+</div>
+<div class="drawer-subseccions">
+<div class="drawer-grup-titol">Capítols</div>
+<a class="drawer-link" onclick="navegaDrawer('doble-corona')">La doble corona</a>
+<a class="drawer-link" onclick="navegaDrawer('bretxa')">Evolució de la bretxa festivals vs. públic</a>
+<a class="drawer-link" onclick="navegaDrawer('caza-alcarras')">La caza vs. Alcarràs</a>
+<a class="drawer-link" onclick="navegaDrawer('lleis')">Finestres, lleis i tecnologia</a>
+<a class="drawer-link" onclick="navegaDrawer('generacions')">Saura, Almodóvar i la generació actual</a>
+<a class="drawer-link" onclick="navegaDrawer('autor-industrial')">Model d’autor industrial</a>
+<a class="drawer-link drawer-link-badge" onclick="navegaDrawer('mapa-canon')"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+<a class="drawer-link drawer-link-badge" onclick="navegaDrawer('bunuel-mercat')"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+<a class="drawer-link" onclick="navegaDrawer('conclusions')">De les mètriques a les paradoxes</a>
+</div>
+</div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap es-link" href="sobre.html" onclick="toggleDrawer()">Sobre el projecte</a></div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap drawer-versio" href="versions.html" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
+</nav>
+<script>
     function toggleDrawer() {
       const drawer = document.getElementById('drawer');
       const overlay = document.getElementById('drawer-overlay');
@@ -1885,6 +1779,6 @@ body.pip-en-portada .nav-seccions { display: none; }
       if (idx >= 0) mostraSeccio(idx);
     }
   </script>
-  <script src="js/idioma.js"></script>
+<script src="js/idioma.js"></script>
 </body>
 </html>
