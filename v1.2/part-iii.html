@@ -505,15 +505,7 @@
           #grafic-mercats-coda-bloc .mercat-view-toggle.is-active,#grafic-mercats-coda-bloc .mercat-view-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
           #grafic-mercats-coda-bloc .mercat-view-controls{flex-wrap:wrap}
           #grafic-mercats-coda-bloc [hidden],#mercats-comentaris [hidden]{display:none!important}
-          #mercats-quota-wrap{min-height:360px;box-sizing:border-box}
-          #grafic-mercats-coda-bloc .mq-national-summary{margin:17px auto 16px;text-align:center;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif}
-          #grafic-mercats-coda-bloc .mq-national-title{font-size:11px;color:#777;margin-bottom:10px}
-          #grafic-mercats-coda-bloc .mq-national-pair{display:flex;justify-content:center;align-items:baseline;gap:48px;flex-wrap:wrap}
-          #grafic-mercats-coda-bloc .mq-national-item{display:inline-flex;gap:9px;align-items:baseline;white-space:nowrap;font-size:12px;color:#666}
-          #grafic-mercats-coda-bloc .mq-national-item strong{font-size:21px;font-weight:700;font-variant-numeric:tabular-nums}
-          #grafic-mercats-coda-bloc .mq-national-item.es strong{color:#b8463a}
-          #grafic-mercats-coda-bloc .mq-national-item.fr strong{color:#1e3d6b}
-          #grafic-mercats-coda-bloc .mq-legend{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin:5px 0 30px;font:11px/1.3 'Inter',sans-serif;color:#666}
+          #grafic-mercats-coda-bloc .mq-legend{display:flex;justify-content:center;gap:8px 18px;flex-wrap:wrap;margin:5px 0 28px;font:11px/1.3 'Inter',sans-serif;color:#666}
           #grafic-mercats-coda-bloc .mq-legend span{display:inline-flex;align-items:center;gap:6px}
           #grafic-mercats-coda-bloc .mq-legend i{height:9px;width:9px;display:inline-block}
           #grafic-mercats-coda-bloc .mq-row{max-width:900px;margin:0 auto 30px}
@@ -521,13 +513,10 @@
           #grafic-mercats-coda-bloc .mq-heading span{font-size:11px;color:#777}
           #grafic-mercats-coda-bloc .mq-track{width:100%;position:relative}
           #grafic-mercats-coda-bloc .mq-stack{height:32px;display:flex;width:100%;position:relative;z-index:2}
-          #grafic-mercats-coda-bloc .mq-stack.mq-stack-es{width:42.83%}
-          #grafic-mercats-coda-bloc .mq-ghost{position:absolute;top:0;bottom:0;left:42.83%;right:0;z-index:1;background:transparent;border:1px dashed rgba(170,170,170,.6);box-sizing:border-box}
           #grafic-mercats-coda-bloc .mq-segment{height:100%;display:block;cursor:default;transition:filter .15s;outline-offset:3px}
           #grafic-mercats-coda-bloc .mq-segment:hover,#grafic-mercats-coda-bloc .mq-segment:focus{filter:brightness(.85)}
           #grafic-mercats-coda-bloc .mq-values{margin-top:7px;font:11px/1.5 'Inter',sans-serif;color:#666}
           #mercats-quota-tooltip{position:fixed;z-index:9999;pointer-events:none;max-width:270px;background:rgba(45,45,45,.96);color:#fff;border-radius:3px;padding:9px 12px;font:12px/1.5 'Inter',sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.15)}
-          @media(max-width:520px){#mercats-quota-wrap{min-height:0}}
           @media(max-width:520px){#grafic-mercats-coda-bloc .mq-heading span{width:100%}#grafic-mercats-coda-bloc .mq-stack{height:27px}#grafic-mercats-coda-bloc .mq-values{font-size:10px}}
           </style>
 
@@ -892,20 +881,13 @@
             <canvas id="grafic-mercats-coda"></canvas>
           </div>
           <div id="mercats-quota-wrap" hidden>
-            <div class="mq-national-summary" aria-label="Quota de mercat nacional el 2025: Espanya 18,6%; França 37,9%">
-              <div class="mq-national-title">Quota de mercat nacional</div>
-              <div class="mq-national-pair">
-                <span class="mq-national-item es">ES <strong>18,6%</strong></span>
-                <span class="mq-national-item fr">FR <strong>37,9%</strong></span>
-              </div>
-            </div>
             <div id="mercats-quota-llegenda" class="mq-legend" aria-label="Llegenda de les quotes de mercat">
               <span><i style="background:#b8463a"></i>Cinema espanyol</span>
               <span><i style="background:#1e3d6b"></i>Cinema francès</span>
               <span><i style="background:#b18a50"></i>Cinema nord-americà</span>
               <span><i style="background:#bcbcbc"></i>Altres cinematografies</span>
             </div>
-            <div class="mq-row"><div class="mq-heading"><strong>Espanya</strong><span>Mercat: 66,9M entrades</span></div><div class="mq-track"><div class="mq-stack mq-stack-es" role="group" aria-label="Espanya: cinema espanyol 18,6%; nord-americà 48,2%; altres 33,2%"><span class="mq-segment" style="width:18.6%;background:#b8463a" tabindex="0" data-country="Espanya" data-label="Cinema espanyol" data-percent="18,6" data-total="66,9"></span><span class="mq-segment" style="width:48.2%;background:#b18a50" tabindex="0" data-country="Espanya" data-label="Cinema nord-americà" data-percent="48,2" data-total="66,9"></span><span class="mq-segment" style="width:33.2%;background:#bcbcbc" tabindex="0" data-country="Espanya" data-label="Altres cinematografies" data-percent="33,2" data-total="66,9"></span></div><div class="mq-ghost" aria-hidden="true"></div></div><div class="mq-values">Cinema espanyol 18,6% · EUA 48,2% · Altres 33,2%</div></div>
+            <div class="mq-row"><div class="mq-heading"><strong>Espanya</strong><span>Mercat: 66,9M entrades</span></div><div class="mq-track"><div class="mq-stack" role="group" aria-label="Espanya: cinema espanyol 18,6%; nord-americà 48,2%; altres 33,2%"><span class="mq-segment" style="width:18.6%;background:#b8463a" tabindex="0" data-country="Espanya" data-label="Cinema espanyol" data-percent="18,6" data-total="66,9"></span><span class="mq-segment" style="width:48.2%;background:#b18a50" tabindex="0" data-country="Espanya" data-label="Cinema nord-americà" data-percent="48,2" data-total="66,9"></span><span class="mq-segment" style="width:33.2%;background:#bcbcbc" tabindex="0" data-country="Espanya" data-label="Altres cinematografies" data-percent="33,2" data-total="66,9"></span></div></div><div class="mq-values">Cinema espanyol 18,6% · EUA 48,2% · Altres 33,2%</div></div>
             <div class="mq-row"><div class="mq-heading"><strong>França</strong><span>Mercat: 156,2M entrades</span></div><div class="mq-stack" role="group" aria-label="França: cinema francès 37,9%; nord-americà 34,9%; altres 27,2%"><span class="mq-segment" style="width:37.9%;background:#1e3d6b" tabindex="0" data-country="França" data-label="Cinema francès" data-percent="37,9" data-total="156,2"></span><span class="mq-segment" style="width:34.9%;background:#b18a50" tabindex="0" data-country="França" data-label="Cinema nord-americà" data-percent="34,9" data-total="156,2"></span><span class="mq-segment" style="width:27.2%;background:#bcbcbc" tabindex="0" data-country="França" data-label="Altres cinematografies" data-percent="27,2" data-total="156,2"></span></div><div class="mq-values">Cinema francès 37,9% · EUA 34,9% · Altres 27,2%</div></div>
           </div>
           <p id="mercats-coda-nota" class="frx-note">Entrades venudes (barres) i població (línies) a Espanya i França, 1965–2025.</p>
@@ -1009,8 +991,8 @@
                 ? 'Fonts: Espanya, Ministeri de Cultura, Estadística de Cinematografia 2025; França, CNC, balanç definitiu de 2025. Percentatges segons nacionalitat de les pel·lícules a cada mercat.'
                 : 'Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).';
               if(view==='quota'){
-                if(graphTitle) graphTitle.textContent='Quota de mercat nacional i repartiment del públic — La fotografia del 2025';
-                if(graphNote) graphNote.textContent='Les barres són proporcionals al volum total d’entrades de cada mercat.';
+                if(graphTitle) graphTitle.textContent='Repartiment del públic — La fotografia del 2025';
+                if(graphNote) graphNote.textContent='Cada barra representa el 100% del públic del seu mercat, distribuït segons l’origen de les pel·lícules.';
               } else if(view==='perhab'){
                 chart.config.type='line';
                 chart.data.datasets=perHabDatasets;
