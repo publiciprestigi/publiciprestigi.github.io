@@ -22,6 +22,23 @@
       return base + path;
     };
   </script>
+
+<style id="pip-entrades-prova">
+/* Tractament específic de les noves entrades, sense alterar la resta de capítols */
+.seccio-contingut.pip-entrada { max-width: 860px; }
+.pip-entrada .pip-entrada-article { max-width: 745px; margin: 34px 0 64px; }
+.pip-entrada .pip-entrada-obertura { font-size: clamp(19px, 2.0vw, 23px); line-height: 1.58; letter-spacing: -.018em; color: #363737; margin: 0 0 36px; font-weight: 400; }
+.pip-entrada .pip-entrada-desenvolupament { font-size: 16px; line-height: 1.85; color: #474747; max-width: 700px; margin: 0 0 38px; }
+.pip-entrada .pip-entrada-final { border-top: 1px solid #d6d6d6; padding-top: 24px; font-size: 17px; line-height: 1.7; color: #363737; max-width: 700px; margin: 0; }
+body.pip-en-portada .titol-sticky #titol-principal { display: none; }
+body.pip-en-portada .titol-sticky { padding-bottom: 0; }
+@media(max-width:700px) {
+ .pip-entrada .pip-entrada-article { margin-top: 25px; margin-bottom: 46px; }
+ .pip-entrada .pip-entrada-obertura { font-size: 19px; line-height: 1.55; margin-bottom: 26px; }
+ .pip-entrada .pip-entrada-desenvolupament { font-size: 15px; line-height: 1.75; margin-bottom: 30px; }
+ .pip-entrada .pip-entrada-final { font-size: 16px; padding-top: 20px; }
+}
+</style>
 </head>
 <body class="amb-sidebar part-i">
 
@@ -102,6 +119,15 @@
       </div>
 
       <!-- MODEL A: només text editorial -->
+      <!-- Nova pàgina d’entrada editorial (prova) -->
+      <section class="seccio-contingut pip-entrada" id="seccio-portada">
+        <div class="pip-entrada-article">
+          <p class="pip-entrada-obertura">Durant seixanta anys, milions d’espectadors han construït, entrada a entrada, la història del cinema espanyol a les sales. Però què ens expliquen realment aquestes xifres? Com han canviat el mercat i els públics? I què significa l’èxit comercial quan la sala de cinema ha deixat de ser l’únic espai de trobada entre una pel·lícula i els seus espectadors?</p>
+          <p class="pip-entrada-desenvolupament">Des de l’expansió de la televisió fins a la irrupció de les plataformes i el sotrac de la pandèmia, aquesta primera part ordena sis dècades de dades d’exhibició i assistència a les sales, amb una mirada a l’evolució del mercat, els grans èxits i els canvis en els hàbits de consum.</p>
+          <p class="pip-entrada-final">Les xifres d’espectadors no són només una magnitud econòmica, també ofereixen una manera de llegir la història cultural i social d’un país.</p>
+        </div>
+      </section>
+
       <div class="seccio-contingut" id="seccio-intro">
         <div class="contingut-text">
           <div class="text-md" data-text="part-i/fonts-i-eines"></div>
@@ -252,6 +278,7 @@
 
 <script>
     const seccions = [
+      { id: 'portada', titol: '', sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: 'intro',       titol: 'Fonts i eines',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: 'mercat',      titol: 'Mercat i població',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
       { id: 'decades',     titol: 'Resum per dècada',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
@@ -279,6 +306,7 @@
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
       document.getElementById('titol-sup').textContent = s.sup;
+      document.body.classList.toggle('pip-en-portada', s.id === 'portada');
       document.getElementById('titol-principal').textContent = s.titol;
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -291,7 +319,9 @@
       btnAnt.style.visibility = prev ? 'visible' : 'hidden';
       btnSeg.textContent = next ? next.titol + ' →' : '';
       btnSeg.style.visibility = next ? 'visible' : 'hidden';
-      history.pushState({ idx }, '', '#' + s.id);
+      if (!window.__pipInicialitzantEntrada) {
+        history.pushState({ idx }, '', s.id === 'portada' ? window.location.pathname + window.location.search : '#' + s.id);
+      }
       document.documentElement.scrollTop = 0;
       document.querySelector('.contingut-sidebar').scrollTop = 0;
       if (window.PiP_aplicaFade) window.PiP_aplicaFade();
@@ -322,7 +352,9 @@
     (function() {
       const hash = window.location.hash.replace('#', '');
       const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      window.__pipInicialitzantEntrada = true;
       mostraSeccio(idx >= 0 ? idx : 0);
+      window.__pipInicialitzantEntrada = false;
     })();
 
     // Botó enrere/endavant del navegador
@@ -335,6 +367,7 @@
         document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
         document.getElementById('seccio-' + s.id).style.display = 'block';
         document.getElementById('titol-sup').textContent = s.sup;
+      document.body.classList.toggle('pip-en-portada', s.id === 'portada');
         document.getElementById('titol-principal').textContent = s.titol;
         document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
         const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
