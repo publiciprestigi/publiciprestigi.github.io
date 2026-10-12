@@ -3,7 +3,7 @@
 ## I — Públic
 
 <!-- i:preguntes -->
-Com han canviat el mercat i els públics? Què revelen les diferents maneres de mesurar l’èxit comercial d’una pel·lícula? Què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula?
+Com hem passat de vendre 390 milions d'entrades anuals a mitjans dels anys seixanta als 50 milions de l'any de la pandèmia? Ens estem recuperant? Quines pel·lícules han concentrat més públic al llarg d'aquesta història? Què ens expliquen quan les situem en el context de cada dècada? Com canvien els rànquings quan, més enllà dels espectadors absoluts, incorporem altres mètriques? Què passa quan les sales ja no expliquen tot l'impacte d'una pel·lícula?
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
