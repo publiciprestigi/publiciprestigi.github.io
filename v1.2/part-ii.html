@@ -82,20 +82,12 @@
 
 
 <style id="pip-entrades-prova">
-/* Tractament específic de les noves entrades, sense alterar la resta de capítols */
-.seccio-contingut.pip-entrada { max-width: 860px; }
-.pip-entrada .pip-entrada-article { max-width: 745px; margin: 34px 0 64px; }
-.pip-entrada .pip-entrada-obertura { font-size: clamp(19px, 2.0vw, 23px); line-height: 1.58; letter-spacing: -.018em; color: #363737; margin: 0 0 36px; font-weight: 400; }
-.pip-entrada .pip-entrada-desenvolupament { font-size: 16px; line-height: 1.85; color: #474747; max-width: 700px; margin: 0 0 38px; }
-.pip-entrada .pip-entrada-final { border-top: 1px solid #d6d6d6; padding-top: 24px; font-size: 17px; line-height: 1.7; color: #363737; max-width: 700px; margin: 0; }
+/* Entrada editorial: reutilitza la tipografia ordinària dels textos Markdown. */
+.pip-entrada .pip-entrada-article { max-width: 760px; margin: 22px 0 55px; }
+.pip-entrada .pip-entrada-article p { margin: 0 0 1.4em; }
+.pip-entrada .pip-entrada-article p:last-child { margin-bottom: 0; }
 body.pip-en-portada .titol-sticky #titol-principal { display: none; }
-body.pip-en-portada .titol-sticky { padding-bottom: 0; }
-@media(max-width:700px) {
- .pip-entrada .pip-entrada-article { margin-top: 25px; margin-bottom: 46px; }
- .pip-entrada .pip-entrada-obertura { font-size: 19px; line-height: 1.55; margin-bottom: 26px; }
- .pip-entrada .pip-entrada-desenvolupament { font-size: 15px; line-height: 1.75; margin-bottom: 30px; }
- .pip-entrada .pip-entrada-final { font-size: 16px; padding-top: 20px; }
-}
+@media(max-width:700px) { .pip-entrada .pip-entrada-article { margin: 18px 0 38px; } }
 </style>
 </head>
 <body class="amb-sidebar part-ii">
@@ -175,7 +167,7 @@ body.pip-en-portada .titol-sticky { padding-bottom: 0; }
 
       <!-- Nova pàgina d’entrada editorial (prova) -->
       <section class="seccio-contingut pip-entrada" id="seccio-portada">
-        <div class="pip-entrada-article">
+        <div class="pip-entrada-article text-md">
           <p class="pip-entrada-obertura">Què fa que una pel·lícula sigui considerada important? Qui decideix quin cinema mereix ser reconegut, recordat i incorporat a la història? Els grans festivals i les acadèmies han exercit durant dècades un paper fonamental en la construcció del prestigi cinematogràfic, però els seus criteris, equilibris i influències també han canviat.</p>
           <p class="pip-entrada-desenvolupament">Aquesta segona part reuneix i ordena sis dècades de presència del cinema espanyol als principals festivals i premis internacionals. Seleccions, nominacions, guardons i rànquings permeten dibuixar un mapa del reconeixement obtingut, observar-ne l’evolució i plantejar preguntes sobre la imatge cultural del nostre cinema a l’exterior.</p>
           <p class="pip-entrada-final">El prestigi no és només una qüestió de valor artístic, sinó també una construcció històrica, cultural i institucional.</p>
