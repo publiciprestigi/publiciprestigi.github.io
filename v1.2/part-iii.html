@@ -988,7 +988,7 @@
               if (quotaWrap) quotaWrap.hidden=(view!=='quota');
               comments.forEach(el=>{ el.hidden=(el.dataset.mercatComentari!==view); });
               if(graphSources) graphSources.innerHTML=view==='quota'
-                ? 'Fonts: Espanya, Ministeri de Cultura, Estadística de Cinematografia 2025; França, CNC, balanç definitiu de 2025. Percentatges segons nacionalitat de les pel·lícules a cada mercat.'
+                ? 'Fonts: Espanya, Ministeri de Cultura (Estadística de Cinematografia 2025); França, CNC (balanç definitiu de 2025)'
                 : 'Fonts: Espanya, base de <em>Públic i Prestigi</em> (mercat i població). França, CNC (entrades) i World Bank (població).';
               if(view==='quota'){
                 if(graphTitle) graphTitle.textContent='Repartiment del públic segons nacionalitat de les pel·lícules — Espanya i França (2025)';
