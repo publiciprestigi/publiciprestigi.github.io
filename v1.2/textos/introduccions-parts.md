@@ -3,7 +3,7 @@
 ## Part I — Públic
 
 <!-- i:preguntes -->
-Com s'ha passat de vendre 390M d'entrades anuals a mitjans dels anys seixanta als 50M de l'any de la pandèmia? Hi ha signes de recuperació? Quines pel·lícules han concentrat més públic al llarg d'aquesta història? Què ens expliquen quan les situem en el context de cada dècada? Com canvien els rànquings quan, més enllà dels espectadors absoluts, incorporem altres mètriques? Quins directors han aconseguit reunir més públic als cinemes?
+Com s'ha passat de vendre 390M d'entrades anuals a mitjans dels anys seixanta als 50M de l'any de la pandèmia? Hi ha signes de recuperació? Què ens diuen les xifres d'espectadors sobre la història cultural i social d'un país? I què descobrim quan les situem en el context de cada dècada? Com canvien els rànquings quan, més enllà dels espectadors absoluts, incorporem altres mètriques? Quins directors han aconseguit reunir més públic als cinemes?
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
