@@ -27,7 +27,7 @@ El prestigi no és només una qüestió de valor artístic, sinó també una con
 ## Part III — Anàlisi
 
 <!-- iii:preguntes -->
-Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'ha allunyat del gran públic? Com mesurem l'impacte d'una pel·lícula quan les sales ja no ho expliquen tot? Com han condicionat les lleis, els cicles econòmics i la tecnologia la producció, la distribució i el finançament? De quina manera han canviat les formes de fer cinema i d'arribar als espectadors entre generacions? Com canvien el mercat, la memòria i el cànon quan també canvien les formes de veure cinema?
+Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'ha allunyat del gran públic? Com mesurem l'impacte d'una pel·lícula quan les sales ja no ho expliquen tot? Com han condicionat les lleis i els canvis tecnològics qui podia fer cinema i amb quins recursos? De quina manera han canviat les formes de fer cinema i d'arribar als espectadors entre generacions? Com canvien el mercat, la memòria i el cànon quan també canvien les formes de veure cinema?
 <!-- fi:iii:preguntes -->
 
 <!-- iii:final -->
