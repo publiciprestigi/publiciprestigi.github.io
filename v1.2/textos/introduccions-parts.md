@@ -3,7 +3,7 @@
 ## Part I — Públic
 
 <!-- i:preguntes -->
-Com s'ha passat dels 390 milions d'entrades anuals a mitjans dels anys seixanta als 50 de l'any de la pandèmia? Hi ha signes de recuperació? Què ens diuen les xifres d'espectadors sobre la història cultural i social d'un país? I què descobrim quan les situem en el context de cada dècada? Com canvien els rànquings quan, més enllà dels espectadors absoluts, incorporem altres mètriques? Quins directors han aconseguit reunir més públic als cinemes?
+Com s'ha passat dels 390 milions d'entrades anuals a mitjans dels anys seixanta als 50 milions de l'any de la pandèmia? Hi ha signes de recuperació? Què ens diuen les xifres d'espectadors sobre la història cultural i social d'un país? I què descobrim quan les situem en el context de cada dècada? Com canvien els rànquings quan, més enllà dels espectadors absoluts, incorporem altres mètriques? Quins directors han aconseguit reunir més públic als cinemes?
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
