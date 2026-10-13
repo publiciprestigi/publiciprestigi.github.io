@@ -7,7 +7,7 @@ Com hem passat de vendre 390M d'entrades anuals a mitjans dels anys seixanta als
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
-Les xifres d’espectadors no són només una magnitud econòmica, també ofereixen una manera de llegir la història cultural i social d’un país.
+Les xifres d’espectadors també ens ajuden a entendre la història cultural i social d’un país.
 <!-- fi:i:final -->
 
 ---
