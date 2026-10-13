@@ -25,7 +25,7 @@ Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el 
 ## Part III — Anàlisi
 
 <!-- iii:preguntes -->
-Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'ha allunyat del gran públic? Com mesurem l'impacte d'una pel·lícula quan les sales ja no ho expliquen tot? Com han condicionat les lleis i els canvis tecnològics qui podia fer cinema i amb quins recursos? De quina manera han canviat les formes d'arribar als espectadors entre generacions de cineastes? Com canvien el mercat, la memòria i el cànon quan també canvien les formes de veure cinema?
+Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'ha allunyat del gran públic? Com mesurem l'impacte d'una pel·lícula quan les sales ja no ho expliquen tot? Com han condicionat les lleis i els canvis tecnològics qui podia fer cinema i amb quins recursos? Com han canviat les maneres d'arribar al públic d'una generació de cineastes a l'altra? Com canvien el mercat, la memòria i el cànon quan també canvien les formes de veure cinema?
 <!-- fi:iii:preguntes -->
 
 <!-- iii:final -->
