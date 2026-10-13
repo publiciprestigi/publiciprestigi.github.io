@@ -7,7 +7,6 @@ Com hem passat de vendre 390M d'entrades anuals a mitjans dels anys seixanta als
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
-Les xifres d’espectadors també ens ajuden a entendre la història cultural i social d’un país.
 <!-- fi:i:final -->
 
 ---
@@ -19,7 +18,6 @@ Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el 
 <!-- fi:ii:preguntes -->
 
 <!-- ii:final -->
-El prestigi no és només una qüestió de valor artístic, sinó també una construcció històrica, cultural i institucional.
 <!-- fi:ii:final -->
 
 ---
@@ -31,5 +29,4 @@ Què passa quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'
 <!-- fi:iii:preguntes -->
 
 <!-- iii:final -->
-No es tracta de buscar dades que confirmin allò que ja pensem, sinó d’utilitzar-les per posar a prova els nostres prejudicis i ampliar la mirada.
 <!-- fi:iii:final -->
