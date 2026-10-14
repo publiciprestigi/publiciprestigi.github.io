@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow, noarchive">
   <link rel="canonical" href="https://publiciprestigi.com/">
   <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/">
   <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/">
@@ -15,29 +14,23 @@
   <style>
     .contingut { padding-top: 0; padding-bottom: 0; }
     .inici-portada { max-width: var(--amplada-max); padding: 0; }
-
-    /* Prova portada com a landing: sense menú principal superior */
-    body.pag-inici .navegacio {
-      display: none;
-    }
     .inici-antetitol {
       font-size: 0.72rem;
       letter-spacing: .1em;
       text-transform: uppercase;
       color: #999;
-      margin: 28px 0 24px;
+      margin-bottom: 24px;
       line-height: 1.6;
       font-weight: 400;
-      text-align: center;
     }
 
     /* Hero */
     .inici-hero {
       display: grid;
-      grid-template-columns: 0.92fr 1.58fr;
-      gap: 38px;
+      grid-template-columns: 1fr 1.45fr;
+      gap: 56px;
       align-items: center;
-      padding-bottom: 0;
+      padding-bottom: 16px;
     }
     .inici-claim {
       font-size: 2.5rem;
@@ -48,36 +41,11 @@
       margin: 0;
     }
 
-    .inici-hero-grafic {
-      position: relative;
-      min-width: 0;
-      transform: translateX(-2%);
-    }
-    .inici-hero-grafic svg {
-      width: 100%;
-      display: block;
-      overflow: visible;
-    }
-    .inici-circuits-tooltip {
-      position: absolute;
-      z-index: 20;
-      opacity: 0;
-      pointer-events: none;
-      transform: translate(-50%, -100%);
-      background: rgba(45,45,45,0.95);
-      color: #fff;
-      border-radius: 6px;
-      padding: 8px 10px;
-      font-size: 12px;
-      line-height: 1.4;
-      white-space: nowrap;
-      transition: opacity .08s ease;
-      font-family: var(--font-principal);
-    }
+    .inici-hero-grafic svg { width: 100%; display: block; }
 
     /* Text + xifres: un sol bloc sense separador */
     .inici-text-xifres {
-      padding: 24px 0 44px;
+      padding: 16px 0 36px;
       border-bottom: 1px solid #e5e5e5;
     }
     .inici-intro-text {
@@ -91,12 +59,6 @@
     .inici-xifres {
       display: flex;
       gap: 0;
-      margin-top: 0;
-      padding-top: 0;
-      margin-bottom: 32px;
-    }
-    .inici-text-xifres .inici-intro-text:last-child {
-      margin-bottom: 0;
     }
 
     .inici-xifra-bloc { flex: 1; }
@@ -116,7 +78,7 @@
     }
 
     /* Bloc inferior */
-    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; border-bottom: 1px solid #e5e5e5; }
+    .inici-inferior { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
     .inici-parts { border-right: 1px solid #e5e5e5; display: flex; flex-direction: column; }
     .inici-part {
       display: grid;
@@ -135,30 +97,13 @@
     .inici-part-num { font-size: 1.2rem; font-weight: 700; line-height: 1; }
     .inici-part-info .nom { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 4px; }
     .inici-part-info .sub { font-size: 0.82rem; color: #888; }
-
-    .inici-part-novetat {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      margin-top: 7px;
-      min-height: 16px;
-      font-size: 0.72rem;
-      line-height: 1.2;
-      color: #777;
-      white-space: nowrap;
-    }
-    .inici-part-novetat .inici-novetat-badge {
-      padding: 3px 5px;
-      font-size: 0.55rem;
-    }
     .inici-part-arrow { font-size: 0.85rem; color: #ccc; text-align: right; }
 
     .inici-substack {
       display: grid;
-      grid-template-rows: 1fr auto;
+      grid-template-rows: auto 1fr auto;
       padding: 0 0 0 40px;
       color: inherit;
-      position: relative;
     }
 
     .inici-substack-header,
@@ -175,25 +120,23 @@
     }
 
     .inici-substack-header {
-      position: absolute;
-      top: 18px;
-      right: 0;
-      display: inline-flex;
-      justify-content: flex-end;
+      display: flex;
+      justify-content: space-between;
       align-items: center;
       gap: 8px;
-      padding: 0;
-      z-index: 3;
+      padding: 18px 0;
     }
 
     .inici-substack-titol {
-      display: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #1a1a1a;
     }
 
     .inici-substack-foto {
       border-radius: 4px;
       overflow: hidden;
-      margin: 18px 0 0;
+      margin-bottom: 0;
       height: 300px;
       position: relative;
     }
@@ -331,8 +274,7 @@
 
       .inici-antetitol {
         font-size: 0.65rem;
-        margin: 24px 0 16px;
-        text-align: center;
+        margin-bottom: 16px;
       }
 
       .inici-novetats {
@@ -354,15 +296,13 @@
 
       .inici-claim { font-size: 1.8rem; }
 
-      /* En mòbil el gràfic ocupa tota l'amplada disponible */
-      .inici-hero-grafic { transform: none; }
+      /* Centrat visual del gràfic només en pantalles estretes */
+      .inici-hero-grafic { transform: translateX(-4%); }
 
       /* Xifres: 2 columnes x 3 files */
       .inici-xifres {
         flex-wrap: wrap;
         gap: 16px 0;
-        margin-top: 0;
-        padding-top: 0;
       }
 
       .inici-xifra-bloc { flex: 0 0 50%; }
@@ -382,263 +322,6 @@
       .inici-substack { padding: 0; }
       .inici-substack-foto { height: 220px; }
     }
-  
-    /* PROVA A — landing centrada */
-    .capcalera-logo-picto {
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .capcalera-logo-picto img {
-      width: 42px;
-      height: 42px;
-      display: block;
-      object-fit: contain;
-    }
-
-    .inici-antetitol {
-      margin: 44px 0 0 !important;
-      text-align: center;
-    }
-
-    .inici-landing-presentacio {
-      max-width: 1040px;
-      margin: 22px auto 0;
-      text-align: center;
-    }
-    .inici-benvinguda {
-      margin: 0;
-      font-size: clamp(1.95rem, 2.67vw, 2.57rem);
-      line-height: 1.1;
-      letter-spacing: -0.025em;
-      font-weight: 700;
-      color: #242424;
-    }
-    .inici-definicio {
-      max-width: 900px;
-      margin: 22px auto 0;
-      font-size: 1rem;
-      line-height: 1.7;
-      font-weight: 400;
-      color: #555;
-    }
-
-    .inici-grafic-central {
-      display: none;
-      width: min(730px, 100%);
-      margin: 18px auto 0;
-      transform: none !important;
-    }
-    .inici-grafic-central svg {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .inici-xifres-landing {
-      max-width: 1080px;
-      margin: 66px auto 0 !important;
-      padding-top: 0 !important;
-      justify-content: space-between;
-      text-align: center;
-    }
-    .inici-xifres-landing .inici-xifra-bloc {
-      flex: 1 1 0;
-    }
-
-    .inici-preguntes {
-      max-width: 840px;
-      margin: 66px auto 66px;
-      text-align: center;
-    }
-    .inici-preguntes .inici-intro-text {
-      max-width: none;
-      margin: 0;
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #555;
-    }
-
-    /* El bloc d'accés torna a quedar clarament delimitat com una unitat. */
-    .inici-inferior {
-      border-top: 1px solid #e5e5e5;
-      margin-top: 44px;
-      padding-top: 0;
-    }
-
-    /* Moviment molt discret de les dobles corones. */
-    .inici-grafic-central g[role="button"] circle {
-      transition: r .22s ease, stroke-width .22s ease;
-    }
-    .inici-circuits-tooltip {
-      transition: opacity .20s ease;
-    }
-
-    .inici-part-novetat {
-      margin-top: 8px;
-      min-height: 16px;
-    }
-    .inici-part-novetat .inici-novetat-badge {
-      font-size: 0.55rem;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 900px) {
-      .capcalera-logo-picto {
-        width: 38px;
-        height: 38px;
-      }
-      .capcalera-logo-picto img {
-        width: 34px;
-        height: 34px;
-      }
-      .inici-antetitol {
-        margin-top: 22px !important;
-      }
-      .inici-landing-presentacio {
-        margin-top: 22px;
-      }
-      .inici-benvinguda {
-        font-size: 1.9rem;
-      }
-      .inici-definicio {
-        font-size: .98rem;
-        line-height: 1.7;
-      }
-      .inici-grafic-central {
-        margin-top: 20px;
-      }
-      .inici-xifres-landing {
-        margin-top: 50px !important;
-      }
-      .inici-preguntes {
-        margin: 48px auto 66px;
-        text-align: left;
-      }
-      .inici-preguntes .inici-intro-text {
-        font-size: .98rem;
-        line-height: 1.7;
-      }
-      .inici-inferior {
-        margin-top: 44px;
-        padding-top: 0;
-      }
-    }
-
-  
-    /* Pre-footer editorial: mateixa lògica visual que el bloc final de Substack */
-    .inici-prefooter {
-      border-top: none;
-      margin-left: -40px;
-      margin-right: -40px;
-      padding: 44px 0 64px;
-      text-align: center;
-    }
-    .inici-prefooter-titol {
-      margin: 0;
-      font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 30px;
-      line-height: 36px;
-      font-weight: 700;
-      letter-spacing: normal;
-      color: #363737;
-    }
-    .inici-prefooter-subtitol {
-      margin: 2px 0 0;
-      max-width: 760px;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 17px;
-      line-height: 24px;
-      font-weight: 400;
-      color: #363737;
-    }
-    .inici-prefooter-links {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 0;
-      font-size: .9rem;
-      line-height: 1.45;
-      font-weight: 400;
-    }
-    .inici-prefooter-links a {
-      color: #343434;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-    }
-    .inici-prefooter-links a:hover {
-      color: #000;
-      opacity: 1;
-    }
-
-    .inici-prefooter-novetats {
-      max-width: 790px;
-      margin: 36px auto 0;
-      text-align: center;
-    }
-    .inici-prefooter-copy {
-      margin: 0 auto;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: #888;
-    }
-    .inici-prefooter-copy-actualitzat {
-      margin-top: 24px;
-    }
-    .inici-prefooter-copy .inici-novetat-badge {
-      display: inline-block;
-      margin-right: 7px;
-      vertical-align: 1px;
-    }
-    .inici-prefooter-copy a {
-      color: #666;
-      text-decoration: underline;
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-      text-decoration-color: rgba(0,0,0,.32);
-    }
-    .inici-prefooter-copy a:hover {
-      color: #1a1a1a;
-    }
-
-    @media (max-width: 900px) {
-      .inici-prefooter {
-        margin-left: 0;
-        margin-right: 0;
-        padding: 0 0 54px;
-      }
-      .inici-prefooter-titol {
-        font-size: 26px;
-        line-height: 32px;
-      }
-      .inici-prefooter-subtitol {
-        font-size: 16px;
-        line-height: 23px;
-      }
-      .inici-prefooter-links {
-        gap: 16px;
-        margin-top: 0;
-        font-size: .9rem;
-      }
-      .inici-prefooter-novetats {
-        max-width: 100%;
-        margin-top: 30px;
-      }
-      .inici-prefooter-copy {
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-      .inici-prefooter-copy-actualitzat {
-        margin-top: 22px;
-      }
-    }
-
   </style>
   <script>
     window.pipPath = function (path) {
@@ -656,10 +339,10 @@
         <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.2 (en preparació)</a>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
       </div>
 
-      <a href="/v1.2/" class="capcalera-logo capcalera-logo-picto" aria-label="Públic i Prestigi"><img src="img/picto-pip.jpg" alt=""></a>
+      <a href="/" class="capcalera-logo">Públic i Prestigi</a>
 
       <div class="capcalera-controls">
         <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar" role="button" tabindex="0" aria-label="Cercar">
@@ -682,7 +365,7 @@
 
   <nav class="navegacio">
     <div class="navegacio-interior">
-      <a href="/v1.2/" class="nav-link actiu">Inici</a>
+      <a href="/" class="nav-link actiu">Inici</a>
       <a href="part-i.html" class="nav-link">I — Públic</a>
       <a href="part-ii.html" class="nav-link">II — Prestigi</a>
       <a href="part-iii.html" class="nav-link">III — Anàlisi</a>
@@ -692,15 +375,52 @@
 
   <main class="contingut">
     <div class="inici-portada">
-<p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
 
-      <section class="inici-landing-presentacio">
-        <h1 class="inici-benvinguda">Públic i Prestigi</h1>
-        <p class="inici-definicio">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? Un estudi viu que mesura i analitza dues formes d’èxit, el públic massiu i el prestigi internacional, i tot allò que revela. Benvinguts.</p>
+      <section class="inici-novetats" id="inici-novetats" aria-label="Novetats de la versió 1.1">
+        <span class="inici-novetat-grup">
+          <span class="inici-novetat-badge nou">Nou</span>
+          <a href="part-iii.html#mapa-canon">El mapa del cànon</a>
+        </span>
       </section>
 
-      <div class="inici-hero-grafic inici-grafic-central">
-        <svg id="grafic-circuits" viewBox="0 28 660 180" xmlns="http://www.w3.org/2000/svg" aria-label="Públic i prestigi al llarg del temps"></svg>
+      <p class="inici-antetitol">Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025)</p>
+
+      <div class="inici-hero">
+        <div>
+          <p class="inici-claim">Dues maneres d'entendre l'èxit. Una mateixa història.</p>
+        </div>
+        <div class="inici-hero-grafic">
+          <svg id="grafic-circuits" viewBox="0 0 600 230" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+      </div>
+
+      <!-- Text + xifres: bloc únic sense separador intern -->
+      <div class="inici-text-xifres">
+        <p class="inici-intro-text">Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? A partir d’aquest joc inicial, apareixen altres preguntes més fondes: què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Fins a quin punt el cinema d’autor s’ha allunyat del gran públic? Com canvien la memòria, el cànon i les narratives quan també canvien les formes de veure cinema?</p>
+        <p class="inici-intro-text">Un estudi viu que mesura i analitza la tensió entre públic massiu i prestigi crític, i tot allò que revela. Benvinguts!</p>
+
+        <div class="inici-xifres">
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#2a5582">294M</span>
+            <span class="inici-xifra-l">espectadors acumulats</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">340</span>
+            <span class="inici-xifra-l">films reconeguts</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#9B2335">116</span>
+            <span class="inici-xifra-l">films premiats</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n" style="color:#5a4a8a">17</span>
+            <span class="inici-xifra-l">dobles corones</span>
+          </div>
+          <div class="inici-xifra-bloc">
+            <span class="inici-xifra-n">60</span>
+            <span class="inici-xifra-l">anys documentats</span>
+          </div>
+        </div>
       </div>
 
       <div class="inici-inferior">
@@ -709,7 +429,7 @@
             <div class="inici-part-num" style="color:#2a5582">I</div>
             <div class="inici-part-info">
               <div class="nom">Públic</div>
-              <div class="sub">Top 100 pel·lícules amb més espectadors a sales de cinema</div>
+              <div class="sub">Top 100 pel·lícules amb més espectadors</div>
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
@@ -718,8 +438,7 @@
             <div class="inici-part-num" style="color:#9B2335">II</div>
             <div class="inici-part-info">
               <div class="nom">Prestigi</div>
-              <div class="sub">Reconeixement internacional en festivals i acadèmies</div>
-              
+              <div class="sub">Cannes, Berlín, Venècia, Sant Sebastià</div>
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
@@ -729,42 +448,24 @@
             <div class="inici-part-info">
               <div class="nom">Anàlisi</div>
               <div class="sub">Cruïlles, comparatives i interpretacions</div>
-              
             </div>
             <div class="inici-part-arrow">→</div>
           </a>
         </div>
 
         <div class="inici-substack">
+          <a href="https://publiciprestigi.substack.com" class="inici-substack-header" target="_blank" rel="noopener">
+            <span class="inici-substack-titol">Substack</span>
+            <span class="inici-part-arrow">↗</span>
+          </a>
           <a href="https://publiciprestigi.substack.com" class="inici-substack-foto-link" target="_blank" rel="noopener" aria-label="Obre el Substack de Públic i Prestigi">
             <div class="inici-substack-foto">
               <div class="inici-substack-pista" id="substack-pista">
-                                <div class="inici-substack-slide">
-                  <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%; transform:scale(1.02); transform-origin:center;" />
+                <div class="inici-substack-slide">
+                  <img src="img/saura-montiel.jpg" alt="Carlos Saura i Sara Montiel" style="object-position:center 30%" />
                 </div>
                 <div class="inici-substack-slide">
-                  <img src="img/bunuel.jpg" alt="Luis Buñuel i Hollywood" style="object-position:center 20%; transform:scale(1.02); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%; transform:scale(1.02); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/rabal-landa.jpg" alt="Francisco Rabal i Alfredo Landa" style="object-position:center 60%; transform:scale(1.02); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/segura-iglesia.jpg" alt="Santiago Segura i Àlex de la Iglesia" style="object-position:center 20%; transform:scale(1.02); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/amenabar-cruise.jpg" alt="Tom Cruise, Nicole Kidman, Alejandro Amenábar i José Luis Cuerda" style="object-position:center 1%; transform:scale(1.02); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/zamora-simon.jpg" alt="María Zamora i Carla Simón" style="object-position:center 25%; transform:scale(1.02); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/bayona-serra.jpg" alt="J.A. Bayona i Albert Serra" style="object-position:center 50%; transform:scale(1.12); transform-origin:center;" />
-                </div>
-                <div class="inici-substack-slide">
-                  <img src="img/azua.jpg" alt="Alauda Ruiz de Azúa" style="object-position:center 25%; transform:scale(1.02); transform-origin:center;" />
+                  <img src="img/isasi-borau.jpg" alt="Antonio Isasi-Isasmendi i José Luis Borau" style="object-position:center 15%" />
                 </div>
                 <div class="inici-substack-slide">
                   <img src="img/pedro-laxe.jpg" alt="Pedro Almodóvar i Oliver Laxe" style="object-position:center 45%; transform:scale(1.02); transform-origin:center;" />
@@ -775,50 +476,6 @@
           <div class="inici-substack-peu">
             <div class="inici-substack-punts" id="substack-punts" aria-label="Selecciona una imatge del carrusel"></div>
           </div>
-        </div>
-      </div>
-
-      <div class="inici-xifres inici-xifres-landing">
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#2a5582">294M</span>
-          <span class="inici-xifra-l">espectadors acumulats</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#9B2335">340</span>
-          <span class="inici-xifra-l">films reconeguts</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#9B2335">116</span>
-          <span class="inici-xifra-l">films premiats</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n" style="color:#5a4a8a">17</span>
-          <span class="inici-xifra-l">dobles corones</span>
-        </div>
-        <div class="inici-xifra-bloc">
-          <span class="inici-xifra-n">60</span>
-          <span class="inici-xifra-l">anys documentats</span>
-        </div>
-      </div>
-
-      <div class="inici-prefooter" aria-label="Enllaços i novetats del projecte">
-        <div class="inici-prefooter-links">
-          <a href="sobre.html">Sobre el projecte</a>
-        </div>
-
-        <div class="inici-prefooter-novetats">
-          <p class="inici-prefooter-copy">
-            <span class="inici-novetat-badge nou">Nou</span>
-            La <a href="versions.html">versió 1.2</a> amplia l’estudi del prestigi amb la incorporació de les dades dels
-            <a href="part-ii.html#oscar">Oscar</a> i els <a href="part-ii.html#efa">European Film Awards</a>, i afegeix un nou capítol d’anàlisi:
-            <a href="part-iii.html#bunuel-franca">Buñuel i el segon mercat</a>.
-          </p>
-
-          <p class="inici-prefooter-copy inici-prefooter-copy-actualitzat">
-            <span class="inici-novetat-badge">Actualitzat</span>
-            A la <a href="part-ii.html">Part II</a>, s’han ampliat les dades dels festivals i revisat els rànquings amb les noves dades de les acadèmies.
-            A la <a href="part-iii.html">Part III</a>, s’han editat la majoria dels capítols.
-          </p>
         </div>
       </div>
 
@@ -1130,17 +787,14 @@
       }
     });
 
-    // ── Gràfic de portada: dos circuits i cinc dobles corones representatives ──
+    // Només el bloc del gràfic — substitueix l'IIFE anterior
     (function() {
       const svg = document.getElementById('grafic-circuits');
-      const wrap = document.querySelector('.inici-hero-grafic');
-      if (!svg || !wrap) return;
-
       const ns = 'http://www.w3.org/2000/svg';
-      const W = 660, ML = 92, MR = 18;
-      const YP = 72, YF = 132;
+      const W = 600, ML = 130, MR = 12;
+      const YP = 60, YF = 110;
       const A0 = 1965, A1 = 2025;
-      const COL_PUB = '#2a5582', COL_PREST = '#9B2335', COL_DOBLE = '#5a4a8a';
+      const COL_PUB = '#2a5582', COL_PREST = '#9B2335';
 
       function x(a) { return ML + (a - A0) / (A1 - A0) * (W - ML - MR); }
 
@@ -1151,340 +805,73 @@
         return e;
       }
 
-      // Eix temporal: només anys, sense línies de graella.
+      // Anys — només text, sense línies
       [1965, 1975, 1985, 1995, 2005, 2015, 2025].forEach(a => {
-        const t = el('text', {
-          x: x(a), y: 184,
-          'font-size': '10.5',
-          fill: '#b8b8b8',
-          'text-anchor': 'middle',
-          'font-family': 'Inter,-apple-system,sans-serif'
-        }, svg);
+        const t = el('text', { x: x(a), y: 22, 'font-size': '10', fill: '#ccc', 'text-anchor': 'middle', 'font-family': 'system-ui,sans-serif' }, svg);
         t.textContent = a;
       });
 
-      // Etiquetes dels dos circuits: sense els antics subtítols “Top 100” / “Festivals”.
-      function cLabel(label, y, col) {
-        const t = el('text', {
-          x: ML - 18, y: y + 4,
-          'font-size': '13',
-          fill: col,
-          'font-weight': '600',
-          'text-anchor': 'end',
-          'font-family': 'Inter,-apple-system,sans-serif'
-        }, svg);
+      // Etiquetes de carril
+      function cLabel(label, sub, y, col) {
+        const t = el('text', { x: ML - 16, y: y + 3, 'font-size': '12', fill: col, 'font-weight': '700', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
         t.textContent = label;
+        const s = el('text', { x: ML - 16, y: y + 18, 'font-size': '12', fill: '#bbb', 'text-anchor': 'end', 'font-family': 'system-ui,sans-serif' }, svg);
+        s.textContent = sub;
       }
 
-      cLabel('Públic', YP, COL_PUB);
-      cLabel('Prestigi', YF, COL_PREST);
+      cLabel('PÚBLIC', 'Top 100', YP, COL_PUB);
+      cLabel('PRESTIGI', 'Festivals', YF, COL_PREST);
 
-      // Mostra representativa: menys punts que abans, mantenint la distribució temporal relativa.
-      // No equival a una pel·lícula per punt; és una síntesi visual dels dos volums.
-      const pub = [
-        1965, 1967, 1969,
-        1971, 1974, 1977, 1979,
-        1982, 1986,
-        1991, 1995, 1998,
-        2001, 2003, 2006, 2009,
-        2014, 2016, 2018,
-        2022, 2025
-      ];
+      // Pelis emblemàtiques
+      const emblematiques = [1975, 1988, 2004];
 
-      const prest = [
-        1967,
-        1972, 1978,
-        1981, 1984, 1986,
-        1993, 1997,
-        2001, 2007, 2009,
-        2010, 2014, 2017, 2019,
-        2022, 2025
-      ];
+      // Punts públic — plens, excepte les emblemàtiques
+      const pub = [1964,1965,1965,1966,1966,1966,1966,1966,1967,1967,1967,1968,1968,1968,
+        1969,1969,1970,1971,1972,1974,1975,1975,1976,1977,1977,1978,
+        1981,1984,1988,1991,1995,1997,1998,1999,
+        2001,2001,2002,2003,2004,2005,2006,2007,2009,2009,2011,
+        2012,2014,2015,2016,2017,2017,2018,2019,2022,2024,2025];
 
-      const dobles = [
-        { any: 1975, titol: 'Furtivos' },
-        { any: 1984, titol: 'Los santos inocentes' },
-        { any: 1988, titol: 'Mujeres al borde de un ataque de nervios' },
-        { any: 2004, titol: 'Mar adentro' },
-        { any: 2012, titol: 'Lo imposible' },
-      ];
+      const prest = [1965,1966,1968,1970,1973,1974,1976,1977,1978,1981,1983,1984,1985,1986,
+        1988,1989,1991,1992,1994,1996,1997,1999,2001,2002,2003,2004,2006,2007,
+        2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2021,2022,2023,2024,2025];
 
-      // Evitem solapaments: cada fila es distribueix dins dels intervals
-      // delimitats per les dobles corones. Els anys reals es mantenen al tooltip;
-      // el desplaçament és només visual i mínim.
-      const dobleYears = dobles.map(d => d.any);
-
-      function distribueixPunts(years, minGapPx = 17.2) {
-        const generals = years
-          .filter(any => !dobleYears.includes(any))
-          .slice()
-          .sort((a, b) => a - b);
-
-        const fixedXs = dobles.map(d => x(d.any));
-        const boundaries = [ML, ...fixedXs, W - MR];
-        const resultat = [];
-
-        for (let seg = 0; seg < boundaries.length - 1; seg++) {
-          const left = boundaries[seg];
-          const right = boundaries[seg + 1];
-          const teDobleEsquerra = seg > 0;
-          const teDobleDreta = seg < boundaries.length - 2;
-
-          const grup = generals.filter(any => {
-            const px = x(any);
-            if (seg === 0) return px >= left && px < right;
-            if (seg === boundaries.length - 2) return px > left && px <= right;
-            return px > left && px < right;
-          });
-
-          if (!grup.length) continue;
-
-          const minX = left + (teDobleEsquerra ? minGapPx : 0);
-          const maxX = right - (teDobleDreta ? minGapPx : 0);
-
-          let pos = grup.map(any => Math.min(Math.max(x(any), minX), maxX));
-
-          // Passada cap a la dreta.
-          for (let i = 1; i < pos.length; i++) {
-            pos[i] = Math.max(pos[i], pos[i - 1] + minGapPx);
-          }
-
-          // Ajustem al límit dret i fem passada cap a l'esquerra.
-          if (pos[pos.length - 1] > maxX) {
-            pos[pos.length - 1] = maxX;
-          }
-          for (let i = pos.length - 2; i >= 0; i--) {
-            pos[i] = Math.min(pos[i], pos[i + 1] - minGapPx);
-          }
-
-          // Garantim el límit esquerre i fem una última passada estable.
-          if (pos[0] < minX) pos[0] = minX;
-          for (let i = 1; i < pos.length; i++) {
-            pos[i] = Math.max(pos[i], pos[i - 1] + minGapPx);
-          }
-
-          // L'interval és prou ample; aquest petit ajust evita qualsevol
-          // desbordament numèric sense alterar la distribució.
-          if (pos[pos.length - 1] > maxX) {
-            const excés = pos[pos.length - 1] - maxX;
-            pos = pos.map(v => v - excés);
-          }
-
-          grup.forEach((any, i) => resultat.push({ any, cx: pos[i] }));
-        }
-
-        return resultat.sort((a, b) => a.cx - b.cx);
-      }
-
-      const pubSpread = distribueixPunts(pub);
-      const prestSpread = distribueixPunts(prest);
-
-      // Punts generals.
-      pubSpread.forEach(p => {
-        el('circle', {
-          cx: p.cx, cy: YP, r: '6.1',
-          fill: COL_PUB,
-          stroke: '#fff', 'stroke-width': '1.4'
-        }, svg);
+      // Primer les línies verticals de les 3 pelis (sota els punts)
+      emblematiques.forEach(a => {
+        el('line', { x1: x(a), y1: YP - 10, x2: x(a), y2: YF + 10, stroke: '#ccc', 'stroke-width': '1' }, svg);
       });
 
-      prestSpread.forEach(p => {
-        el('circle', {
-          cx: p.cx, cy: YF, r: '6.1',
-          fill: COL_PREST,
-          stroke: '#fff', 'stroke-width': '1.5'
-        }, svg);
+      // Punts públic plens (no emblemàtiques)
+      pub.filter(a => !emblematiques.includes(a)).forEach(a =>
+        el('circle', { cx: x(a), cy: YP, r: '3.5', fill: COL_PUB }, svg)
+      );
+
+      // Punts prestigi plens (no emblemàtiques)
+      prest.filter(a => !emblematiques.includes(a)).forEach(a =>
+        el('circle', { cx: x(a), cy: YF, r: '3.5', fill: COL_PREST }, svg)
+      );
+
+      // Cercles buits per a les emblemàtiques (damunt les línies)
+      emblematiques.forEach(a => {
+        el('circle', { cx: x(a), cy: YP, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
+        el('circle', { cx: x(a), cy: YF, r: '4.5', fill: 'white', stroke: '#5a4a8a', 'stroke-width': '1.8' }, svg);
       });
 
-      const tooltip = document.createElement('div');
-      tooltip.className = 'inici-circuits-tooltip';
-      wrap.appendChild(tooltip);
+      // 3 etiquetes escalonades cap avall
+      const etiq = [
+        { any: 1975, titol: 'Furtivos',          anchor: 'start',  dx: 4,  baseY: 130 },
+        { any: 2004, titol: 'Mar adentro',       anchor: 'end',    dx: -4, baseY: 155 },
+        { any: 1988, titol: 'Mujeres al borde…', anchor: 'middle', dx: 0,  baseY: 182 },
+      ];
 
-      function tooltipHtml(d) {
-        const titol = String(d.titol)
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#039;');
-        return `<strong><em>${titol}</em></strong> (${d.any})`;
-      }
-
-      function activa(g, d) {
-        g.querySelectorAll('circle').forEach(c => {
-          c.setAttribute('r', '8.1');
-          c.setAttribute('stroke', COL_DOBLE);
-          c.setAttribute('stroke-width', '2.6');
-          c.setAttribute('fill', '#fff');
-        });
-
-        const punt = g.querySelector('circle:last-of-type');
-        const pr = punt.getBoundingClientRect();
-        const wr = wrap.getBoundingClientRect();
-
-        tooltip.innerHTML = tooltipHtml(d);
-        tooltip.style.left = `${pr.left - wr.left + pr.width / 2}px`;
-        tooltip.style.top = `${pr.top - wr.top - 8}px`;
-        tooltip.style.opacity = '1';
-      }
-
-      function desactiva(g) {
-        g.querySelectorAll('circle').forEach(c => {
-          c.setAttribute('r', '6.5');
-          c.setAttribute('stroke', COL_DOBLE);
-          c.setAttribute('stroke-width', '2');
-          c.setAttribute('fill', '#fff');
-        });
-        tooltip.style.opacity = '0';
-      }
-
-      // Cinc dobles corones representatives: connector discret + cercle blanc amb contorn lila.
-      // A la portada també es recorren automàticament, com una demostració silenciosa
-      // de la interactivitat del gràfic. Qualsevol interacció de l'usuari atura el bucle.
-      const grupsDobles = [];
-
-      dobles.forEach((d, idxDoble) => {
-        const cx = x(d.any);
-        const g = el('g', {
-          tabindex: '0',
-          role: 'button',
-          'aria-label': `${d.titol} (${d.any})`,
-          style: 'cursor:pointer;outline:none'
-        }, svg);
-
-        el('line', {
-          x1: cx, y1: YP + 8, x2: cx, y2: YF - 8,
-          stroke: COL_DOBLE, 'stroke-opacity': '0.70', 'stroke-width': '1.2'
-        }, g);
-
-        el('circle', {
-          cx, cy: YP, r: '6.5',
-          fill: '#fff',
-          stroke: COL_DOBLE, 'stroke-width': '2'
-        }, g);
-
-        el('circle', {
-          cx, cy: YF, r: '6.5',
-          fill: '#fff',
-          stroke: COL_DOBLE, 'stroke-width': '2'
-        }, g);
-
-        grupsDobles.push({ g, d });
-
-        g.addEventListener('mouseenter', () => {
-          aturaAuto();
-          activa(g, d);
-        });
-        g.addEventListener('mouseleave', () => {
-          desactiva(g);
-          programaReiniciAuto();
-        });
-        g.addEventListener('focus', () => {
-          aturaAuto();
-          activa(g, d);
-        });
-        g.addEventListener('blur', () => {
-          desactiva(g);
-          programaReiniciAuto();
-        });
-        g.addEventListener('click', () => {
-          // El clic no atura el relat automàtic: incorpora la selecció manual
-          // al mateix ritme i continua després amb la corona següent.
-          if (autoTimer) {
-            clearTimeout(autoTimer);
-            autoTimer = null;
-          }
-          if (reiniciTimer) {
-            clearTimeout(reiniciTimer);
-            reiniciTimer = null;
-          }
-          netejaAutoActiu();
-          activa(g, d);
-          autoActiu = { g, d };
-          autoIndex = (idxDoble + 1) % grupsDobles.length;
-
-          if (!redueixMoviment) {
-            autoTimer = setTimeout(() => {
-              autoTimer = null;
-              netejaAutoActiu();
-              pasAuto();
-            }, 4700);
-          }
-        });
+      etiq.forEach(e => {
+        const cx = x(e.any);
+        el('line', { x1: cx, y1: YF + 10, x2: cx, y2: e.baseY - 4, stroke: '#ddd', 'stroke-width': '0.8' }, svg);
+        const tany = el('text', { x: cx + e.dx, y: e.baseY + 4, 'font-size': '11', fill: '#888', 'text-anchor': e.anchor, 'font-weight': '600', 'font-family': 'system-ui,sans-serif' }, svg);
+        tany.textContent = e.any;
+        const ttit = el('text', { x: cx + e.dx, y: e.baseY + 19, 'font-size': '12.5', fill: '#222', 'text-anchor': e.anchor, 'font-weight': '600', 'font-style': 'italic', 'font-family': 'system-ui,sans-serif' }, svg);
+        ttit.textContent = e.titol;
       });
-
-      const redueixMoviment = window.matchMedia &&
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-      let autoTimer = null;
-      let reiniciTimer = null;
-      let autoIndex = 0;
-      let autoActiu = null;
-
-      function netejaAutoActiu() {
-        if (autoActiu) {
-          desactiva(autoActiu.g);
-          autoActiu = null;
-        }
-      }
-
-      function aturaAuto() {
-        if (autoTimer) {
-          clearTimeout(autoTimer);
-          autoTimer = null;
-        }
-        if (reiniciTimer) {
-          clearTimeout(reiniciTimer);
-          reiniciTimer = null;
-        }
-        netejaAutoActiu();
-      }
-
-      function programaReiniciAuto() {
-        if (redueixMoviment) return;
-        if (reiniciTimer) clearTimeout(reiniciTimer);
-        reiniciTimer = setTimeout(() => {
-          reiniciTimer = null;
-          iniciaAuto();
-        }, 3500);
-      }
-
-      function pasAuto() {
-        if (redueixMoviment || !grupsDobles.length) return;
-
-        netejaAutoActiu();
-        autoActiu = grupsDobles[autoIndex];
-        activa(autoActiu.g, autoActiu.d);
-
-        autoTimer = setTimeout(() => {
-          netejaAutoActiu();
-          autoIndex += 1;
-
-          if (autoIndex >= grupsDobles.length) {
-            autoIndex = 0;
-            autoTimer = setTimeout(pasAuto, 650);
-          } else {
-            autoTimer = setTimeout(pasAuto, 650);
-          }
-        }, 4700);
-      }
-
-      function iniciaAuto() {
-        if (redueixMoviment || autoTimer || autoActiu) return;
-        pasAuto();
-      }
-
-      // Si l'usuari entra al gràfic, l'animació deixa de competir amb el cursor.
-      wrap.addEventListener('pointerenter', aturaAuto);
-      wrap.addEventListener('pointerleave', programaReiniciAuto);
-
-      // Primera aparició després d'una pausa, perquè la portada pugui assentar-se.
-      if (!redueixMoviment) {
-        autoTimer = setTimeout(() => {
-          autoTimer = null;
-          iniciaAuto();
-        }, 1800);
-      }
     })();
   </script>
 
@@ -1496,11 +883,11 @@
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
   <nav class="drawer" id="drawer" aria-label="Menú principal">
     <div class="drawer-cap">
-      <a href="/v1.2/" class="drawer-logo">Públic i Prestigi</a>
+      <a href="/" class="drawer-logo">Públic i Prestigi</a>
       <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
     </div>
 
-    <div class="drawer-seccio"><a href="/v1.2/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
+    <div class="drawer-seccio"><a href="/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
     <div class="drawer-seccio" id="drawer-part-i">
       <div class="drawer-seccio-fila">
         <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
@@ -1542,14 +929,9 @@
         <a class="drawer-link" href="part-ii.html#venecia" onclick="toggleDrawer()">Venècia</a>
         <a class="drawer-link" href="part-ii.html#berlin" onclick="toggleDrawer()">Berlín</a>
         <a class="drawer-link" href="part-ii.html#sansebastia" onclick="toggleDrawer()">Sant Sebastià</a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#paralleles" onclick="toggleDrawer()"><span>Seccions paral·leles</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
         <div class="drawer-grup-titol">Rànquings</div>
         <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
         <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
-        <div class="drawer-grup-titol">Premis d’acadèmies</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#cesar-bafta-donatello" onclick="toggleDrawer()"><span>César, BAFTA i Donatello</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
       </div>
     </div>
 
@@ -1566,8 +948,8 @@
         <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cinema, lleis i tecnologia</a>
         <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dues generacions</a>
         <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cinema d'autor industrial</a>
-        <a class="drawer-link" href="part-iii.html#mapa-canon" onclick="toggleDrawer()">El mapa del cànon</a>
-        <a class="drawer-link" href="part-iii.html#conclusions" onclick="toggleDrawer()">Conclusions</a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
     </div>
 
@@ -1583,7 +965,7 @@
       </div>
     </div>
 
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.2 (en preparació)</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
   </nav>
 
   <script>
