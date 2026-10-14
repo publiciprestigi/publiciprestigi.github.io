@@ -14,7 +14,7 @@ Com s'ha passat dels 390 milions d'entrades anuals de 1965 als 65 milions de 202
 ## Part II — Prestigi
 
 <!-- ii:preguntes -->
-Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el reconeixement internacional al llarg del temps? Quin paper tenen els festivals i les acadèmies en el recorregut d'un film? Quants espectadors han tingut les obres seleccionades, nominades o premiades? Quins directors han destacat més als grans festivals i què canvia quan hi incorporem els Oscar?
+Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el reconeixement internacional al llarg del temps? Quina influència tenen els festivals i les acadèmies en el recorregut d'un film? Quants espectadors han tingut les obres seleccionades, nominades o premiades? Quins directors han destacat més als grans festivals i què canvia quan hi incorporem els Oscar?
 <!-- fi:ii:preguntes -->
 
 <!-- ii:final -->
@@ -25,7 +25,7 @@ Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el 
 ## Part III — Anàlisi
 
 <!-- iii:preguntes -->
-Què descobrim quan creuem públic i prestigi? Fins a quin punt el cinema d'autor s'ha allunyat del gran públic? Què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Com ha canviat la manera d'arribar al públic amb cada nova generació de cineastes? Com canvien el mercat, la memòria i el cànon quan també canvien les formes de veure cinema?
+Què revela la coincidència entre públic i prestigi? Fins a quin punt el cinema d'autor s'ha allunyat del gran públic? Què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula? Com ha canviat la manera d'arribar al públic amb cada nova generació de cineastes? Com canvien el mercat, la memòria i el cànon quan també canvien les formes de veure cinema?
 <!-- fi:iii:preguntes -->
 
 <!-- iii:final -->
