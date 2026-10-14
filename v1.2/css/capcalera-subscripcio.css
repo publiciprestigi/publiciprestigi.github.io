@@ -542,3 +542,18 @@
     transform: rotate(180deg);
   }
 }
+
+/* Mòbil estret: substituir el títol de capçalera pel llorer.
+   La portada ja utilitza el pictograma; el nom continua al menú lateral. */
+@media (max-width: 520px) {
+  .capcalera-v2 .capcalera-logo:not(.capcalera-logo-picto) {
+    display: block;
+    width: 38px;
+    height: 38px;
+    flex: none;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    background: url("../img/picto-pip.jpg") center / contain no-repeat;
+  }
+}
