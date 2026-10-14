@@ -3,7 +3,7 @@
 ## Part I — Públic
 
 <!-- i:preguntes -->
-Com s'ha passat dels 390 milions d'entrades anuals de 1965 als 65 milions de 2025? Què descobrim quan situem les xifres d'espectadors en el context de cada dècada? Què ens diuen sobre la història cultural i social d'un país? Com canvien els rànquings quan incorporem altres mètriques més enllà dels espectadors absoluts? Quins directors han aconseguit reunir més públic als cinemes?
+Com s'ha passat dels 390 milions d'entrades anuals de 1965 als 65 milions de 2025? Què descobrim quan situem les xifres d'espectadors en el context de cada dècada? Què ens diuen sobre la història cultural i social d'un país? Com canvien els rànquings quan incorporem altres mètriques més enllà dels espectadors absoluts? Quins directors han aconseguit reunir més públic?
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
