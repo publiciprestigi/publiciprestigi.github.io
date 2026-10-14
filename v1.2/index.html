@@ -639,6 +639,58 @@
       }
     }
 
+
+    /* Portada v1.2 — indicadors adaptats a pantalles petites.
+       La graella preval sobre els antics estils flex de la landing. */
+    @media (min-width: 601px) and (max-width: 900px) {
+      .inici-xifres.inici-xifres-landing {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        max-width: 650px;
+        column-gap: 12px;
+        row-gap: 30px;
+        margin: 50px auto 0 !important;
+      }
+      .inici-xifres-landing .inici-xifra-bloc {
+        grid-column: span 2;
+        min-width: 0;
+      }
+      .inici-xifres-landing .inici-xifra-bloc:nth-child(4) { grid-column: 2 / span 2; }
+      .inici-xifres-landing .inici-xifra-bloc:nth-child(5) { grid-column: 4 / span 2; }
+      .inici-prefooter { padding-top: 34px; }
+    }
+    @media (max-width: 600px) {
+      .inici-xifres.inici-xifres-landing {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 390px;
+        column-gap: 18px;
+        row-gap: 30px;
+        margin: 46px auto 0 !important;
+        padding: 0 6px;
+        box-sizing: border-box;
+      }
+      .inici-xifres-landing .inici-xifra-bloc {
+        min-width: 0;
+        width: auto;
+        flex: none;
+        text-align: center;
+      }
+      .inici-xifres-landing .inici-xifra-bloc:nth-child(5) {
+        grid-column: 1 / -1;
+      }
+      .inici-xifres-landing .inici-xifra-n {
+        font-size: clamp(1.9rem, 8vw, 2.25rem);
+        line-height: 1.08;
+      }
+      .inici-xifres-landing .inici-xifra-l {
+        line-height: 1.45;
+        max-width: 155px;
+        margin: 0 auto;
+      }
+      .inici-prefooter { padding-top: 36px; }
+      .inici-prefooter-links { margin-top: 0; }
+    }
   </style>
   <script>
     window.pipPath = function (path) {
