@@ -3,7 +3,7 @@
 ## Part I — Públic
 
 <!-- i:preguntes -->
-Com s'ha passat dels 390 milions d'entrades anuals de 1965 als 65 milions de 2025? Què ens diuen les xifres d'espectadors sobre la història cultural i social d'un país? I què descobrim quan les situem en el context de cada dècada? Com canvien els rànquings quan, més enllà dels espectadors absoluts, incorporem altres mètriques? Quins directors han aconseguit reunir més públic als cinemes?
+Com s'ha passat dels 390 milions d'entrades anuals de 1965 als 65 milions de 2025? Què ens diuen les xifres d'espectadors sobre la història cultural i social d'un país? I què descobrim quan les situem en el context de cada dècada? Com canvien els rànquings quan incorporem altres mètriques més enllà dels espectadors absoluts? Quins directors han aconseguit reunir més públic als cinemes?
 <!-- fi:i:preguntes -->
 
 <!-- i:final -->
@@ -14,7 +14,7 @@ Com s'ha passat dels 390 milions d'entrades anuals de 1965 als 65 milions de 202
 ## Part II — Prestigi
 
 <!-- ii:preguntes -->
-Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el reconeixement internacional al llarg de sis dècades? Quin paper tenen els festivals i les acadèmies en el recorregut d'una pel·lícula? Quants espectadors han tingut les obres seleccionades, nominades o premiades, i fins a quin punt han connectat amb el gran públic? Quins directors han destacat més als grans festivals i què canvia quan hi incorporem els Oscar?
+Què fa que una pel·lícula sigui considerada important? Com ha evolucionat el reconeixement internacional al llarg del temps? Quin paper tenen els festivals i les acadèmies en el recorregut d'un film? Quants espectadors han tingut les obres seleccionades, nominades o premiades, i fins a quin punt han connectat amb el gran públic? Quins directors han destacat més als grans festivals i què canvia quan hi incorporem els Oscar?
 <!-- fi:ii:preguntes -->
 
 <!-- ii:final -->
