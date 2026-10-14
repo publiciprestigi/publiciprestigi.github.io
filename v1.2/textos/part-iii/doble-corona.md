@@ -37,7 +37,7 @@ Per sota del llindar del Top 100 hi ha 34 pel·lícules amb reconeixement intern
 <!-- comentari-cercle -->
 - Dels 34 films del segon cercle, 24 han participat en algun dels quatre festivals i 10 s’hi incorporen exclusivament per les acadèmies. *Volver* (2006), amb gairebé dos milions d’espectadors, és un dels casos més clars de frontera: queda fora de la «doble corona» per menys de 90.000 espectadors respecte al llindar del Top 100, no per manca d’impacte.
 
-- La concentració temporal continua sent marcada: 2 films pertanyen als 60s, 10 als 70s, 6 als 80s, 6 als 90s i 8 als 2000s. Als 2010s només hi apareixen *La isla mínima* (2014) i *Mientras dure la guerra* (2019), i als 2020s, cap. L’ampliació amb les acadèmies incorpora nous casos: 11 films reconeguts pels Oscar —dos de Buñuel— i 7 pels EFA, amb dos títols d’Almodóvar també presents als Oscar.
+- La concentració temporal continua sent marcada: 2 films pertanyen als 60s, 10 als 70s, 6 als 80s, 6 als 90s i 8 als 2000s. Als 2010s només hi apareixen 2: *La isla mínima* (2014) i *Mientras dure la guerra* (2019), i als 2020s, cap. L’ampliació amb les acadèmies incorpora nous casos: 11 films reconeguts pels Oscar —dos de Buñuel— i 7 pels EFA, amb dos títols d’Almodóvar també presents als Oscar.
 
 En conjunt, les 17 «dobles corones» i els 34 films del «segon cercle» formen una zona de contacte de 51 títols entre totes les 340 pel·lícules amb reconeixement internacional recollides a la Part II, un 15%. Aquesta coincidència entre públic i prestigi continua sent minoritària i no apareix cap nou cas des del 2020, en un període marcat pel sotrac de la pandèmia i una recuperació de l’assistència a les sales encara incompleta i incerta.
 
