@@ -509,3 +509,36 @@
 .inici-novetat-grup a {
   font-size: 14px;
 }
+
+
+/* v1.2: header mòbil net, logotip centrat a la pantalla. */
+.capcalera-v2 .capcalera-sobre { display: none !important; }
+
+@media (max-width: 900px) {
+  .capcalera-v2 .capcalera-interior { position: relative; }
+  .capcalera-v2 .capcalera-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .capcalera-v2 .capcalera-esquerra { margin-right: auto; }
+  .capcalera-v2 .capcalera-controls { margin-left: auto; }
+  .drawer-seccio.part-actual > .drawer-seccio-fila .drawer-seccio-nom {
+    color: var(--color-text);
+    font-weight: 700;
+  }
+  .drawer-link.actiu {
+    color: var(--color-text);
+    font-weight: 700;
+    border-left: 3px solid var(--color-text);
+    padding-left: 29px;
+    background: #f0f0ee;
+  }
+  .drawer-seccio-toggle[aria-expanded="true"] .drawer-arrow {
+    transform: rotate(180deg);
+  }
+}
