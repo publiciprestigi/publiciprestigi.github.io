@@ -662,36 +662,43 @@
     @media (max-width: 600px) {
       .inici-xifres.inici-xifres-landing {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        max-width: 390px;
-        column-gap: 18px;
-        row-gap: 30px;
-        margin: 46px auto 0 !important;
-        padding: 0 6px;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        max-width: 440px;
+        column-gap: 6px;
+        row-gap: 24px;
+        margin: 42px auto 0 !important;
+        padding: 0 2px;
         box-sizing: border-box;
       }
       .inici-xifres-landing .inici-xifra-bloc {
+        grid-column: span 2;
         min-width: 0;
         width: auto;
         flex: none;
         text-align: center;
       }
+      .inici-xifres-landing .inici-xifra-bloc:nth-child(4) {
+        grid-column: 2 / span 2;
+      }
       .inici-xifres-landing .inici-xifra-bloc:nth-child(5) {
-        grid-column: 1 / -1;
+        grid-column: 4 / span 2;
       }
       .inici-xifres-landing .inici-xifra-n {
-        font-size: clamp(1.9rem, 8vw, 2.25rem);
+        font-size: clamp(1.45rem, 5.6vw, 1.9rem);
         line-height: 1.08;
+        margin-bottom: 7px;
       }
       .inici-xifres-landing .inici-xifra-l {
-        line-height: 1.45;
-        max-width: 155px;
+        font-size: clamp(0.67rem, 2.45vw, 0.78rem);
+        line-height: 1.4;
+        letter-spacing: 0;
+        max-width: 130px;
         margin: 0 auto;
+        overflow-wrap: normal;
       }
-      .inici-prefooter { padding-top: 36px; }
+      .inici-prefooter { padding-top: 33px; }
       .inici-prefooter-links { margin-top: 0; }
-    }
-  </style>
+    }  </style>
   <script>
     window.pipPath = function (path) {
       var base = document.documentElement.getAttribute('data-base') || '';
