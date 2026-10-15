@@ -75,7 +75,9 @@
     const order=[7,6,5,4,3,2,1,0,8];
     const orderedBands=order.map(i=>bands[i]);
     const orderedCounts=order.map(i=>bandCounts[i]);
-    const orderedColors=order.map(i=>i===0?'#87709f':i===8?'#bbb':'#9B2335');
+    const orderedGroups=order.map(i=>data.filter(bands[i][1]));
+    const groupCounts=legend.map(([k])=>orderedGroups.map(g=>g.filter(f=>classificacio(f)===k).length));
+    if(groupCounts.reduce((n,row)=>n+row.reduce((a,b)=>a+b,0),0)!==data.length) throw Error('Distribució incompleta');
     host.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Procedència del reconeixement internacional (1965–2025)','Procedencia del reconocimiento internacional (1965–2025)'))+
       '<div class="pip-panorama-switch" role="group" aria-label="'+tr('Vista de la procedència','Vista de la procedencia')+'">'+
@@ -107,11 +109,49 @@
       ''; 
     publicHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
+      '<div class="pip-panorama-legend">'+legendHTML+'</div>'+ 
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('340 pel·lícules distribuïdes segons els espectadors a les sales espanyoles.','340 películas distribuidas según sus espectadores en las salas españolas.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
     const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],hoverBackgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
-    const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:orderedBands.map(x=>x[0]),datasets:[{data:orderedCounts,backgroundColor:orderedColors,hoverBackgroundColor:orderedColors,borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
+    const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{
+      type:'bar',
+      data:{
+        labels:orderedBands.map(x=>x[0]),
+        datasets:legend.map(([key,label],i)=>({
+          label, data:groupCounts[i],
+          backgroundColor:palette[key],hoverBackgroundColor:palette[key],
+          borderWidth:0,stack:'circuits',maxBarThickness:25,
+        }))
+      },
+      options:{
+        ...options,indexAxis:'y',
+        plugins:{...options.plugins,tooltip:{
+          ...options.plugins.tooltip,
+          mode:'index',intersect:false,
+          callbacks:{
+            title:items=>items[0]?.label||'',
+            label:c=>' '+c.dataset.label+': '+int(c.parsed.x),
+            footer:items=>tr('Total: ','Total: ')+int(items.reduce((sum,item)=>sum+item.parsed.x,0))
+          }
+        }},
+        scales:{
+          x:{stacked:true,beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}},
+          y:{stacked:true,grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}}
+        }
+      },
+      plugins:[{
+        id:'pip-top100-band-label',
+        afterDraw(chart){
+          const index=order.indexOf(0),axis=chart.scales.y;
+          if(index<0||!axis)return;
+          const y=axis.getPixelForValue(index);
+          const x=axis.left-9;
+          const ctx=chart.ctx;
+          ctx.save();ctx.fillStyle='#5a4a8a';ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fill();ctx.restore();
+        }
+      }]
+    });
     window.PiP_panoramaResize = () => { chartDecades.resize(); };
     window.PiP_panoramaEspectadorsResize = () => { chartPublic.resize(); };
     if (document.getElementById('seccio-panorama')?.style.display === 'block') requestAnimationFrame(window.PiP_panoramaResize);
