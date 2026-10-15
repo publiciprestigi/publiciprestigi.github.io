@@ -376,3 +376,9 @@ th.col-iic-header {
   color: #888;
   font-style: normal;
 }
+
+/* Part II · Rànquing per espectadors: subtítols institucionals a mida editorial h2 */
+#seccio-espectadors .subtitol-festival-ranking {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
