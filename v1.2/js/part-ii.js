@@ -488,7 +488,7 @@ async function construirRànquingAcademiesEspectadors() {
 
     const academies = [
       { nom: 'Oscar', color: '#c8a000', films: oscarData.films || [] },
-      { nom: 'EFA',   color: '#E5CF83', films: efaData.films || [] },
+      { nom: 'EFA',   color: '#AD8B35', films: efaData.films || [] },
     ];
 
     const blocAcademia = ({ nom, color, films }) => {
