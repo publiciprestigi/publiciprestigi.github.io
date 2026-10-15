@@ -7,8 +7,8 @@ A continuació, els rànquings per festivals i acadèmies permeten comparar l'ab
 <!-- /intro -->
 
 <!-- comentari-grafic -->
-- · El reconeixement internacional no garanteix una gran afluència a les sales: la distribució permet apreciar el pes de les pel·lícules amb un públic reduït respecte dels èxits comercials.
-- · Els 17 films del Top 100 constitueixen el grup de major abast de públic dins del corpus de 340 títols.
+- El reconeixement internacional no garanteix una gran afluència a les sales: la distribució permet apreciar el pes de les pel·lícules amb un públic reduït respecte dels èxits comercials.
+- Els 17 films del Top 100 constitueixen el grup de major abast de públic dins del corpus de 340 títols.
 <!-- /comentari-grafic -->
 
 <!-- comentari -->
