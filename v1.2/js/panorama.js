@@ -41,7 +41,8 @@
   const source = () => '<p class="pip-panorama-font">'+tr('Fonts: base de dades de Públic i Prestigi; arxius dels festivals, Oscar i EFA.','Fuentes: base de datos de Públic i Prestigi; archivos de festivales, Oscar y EFA.')+'</p>';
   function draw(data) {
     const host=document.getElementById('pip-panorama-content');
-    if (!host || typeof Chart==='undefined') return;
+    const publicHost=document.getElementById('pip-panorama-espectadors');
+    if (!host || !publicHost || typeof Chart==='undefined') return;
     if (data.length!==340) {host.textContent=tr('No s’ha pogut validar el conjunt de dades.','No se ha podido validar el conjunto de datos.');return;}
     const counts={fest:0,both:0,acad:0};
     for(const f of data) counts[classificacio(f)]++;
@@ -83,19 +84,21 @@
       cap(tr('Pel·lícules amb reconeixement internacional per dècada (1965–2025)','Películas con reconocimiento internacional por década (1965–2025)'))+
       '<div class="pip-panorama-legend">'+legendHTML+'</div><div class="pip-panorama-canvas"><canvas id="pip-panorama-decades"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('Dècada de producció de la pel·lícula, no de concessió del reconeixement. 1965–69 i 2020–25 són períodes parcials.','Década de producción de la película, no de concesión del reconocimiento. 1965–69 y 2020–25 son períodos parciales.')+'</p>'+source()+'</div>'+
-      '<div class="pip-panorama-block">'+
-      '<h2 class="pip-panorama-sub">'+tr('Espectadors a Espanya','Espectadores en España')+'</h2>'+
+      ''; 
+    publicHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Distribució per franges d’espectadors (1965–2025)','Distribución por franjas de espectadores (1965–2025)'))+
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('340 pel·lícules distribuïdes segons els espectadors a les sales espanyoles.','340 películas distribuidas según sus espectadores en las salas españolas.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
     const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],hoverBackgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
     const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:bands.map(x=>x[0]),datasets:[{data:bandCounts,backgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#9B2335'),hoverBackgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#9B2335'),borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
-    window.PiP_panoramaResize = () => { chartDecades.resize(); chartPublic.resize(); };
+    window.PiP_panoramaResize = () => { chartDecades.resize(); };
+    window.PiP_panoramaEspectadorsResize = () => { chartPublic.resize(); };
     if (document.getElementById('seccio-panorama')?.style.display === 'block') requestAnimationFrame(window.PiP_panoramaResize);
+    if (document.getElementById('seccio-espectadors')?.style.display === 'block') requestAnimationFrame(window.PiP_panoramaEspectadorsResize);
   }
   async function load() {
-    const root=document.getElementById('pip-panorama-content'); if(!root)return;
+    const root=document.getElementById('pip-panorama-content'); if(!root || !document.getElementById('pip-panorama-espectadors'))return;
     try {const base=typeof pipPath==='function'?pipPath('data/'):'data/';const [f,o,e]=await Promise.all(['festivals.json','oscar.json','efa.json'].map(async name=>{const r=await fetch(base+name);if(!r.ok)throw Error(name+' '+r.status);return r.json();}));draw(normRows(f,o,e));}
     catch(err){console.error('Panorama:',err);root.textContent=tr('No s’han pogut carregar les dades del panorama.','No se han podido cargar los datos del panorama.');}
   }
