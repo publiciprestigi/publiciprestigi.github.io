@@ -126,9 +126,10 @@
       },
       options:{
         ...options,indexAxis:'y',
+        interaction:{mode:'index',intersect:true},
         plugins:{...options.plugins,tooltip:{
           ...options.plugins.tooltip,
-          mode:'index',intersect:false,
+          mode:'index',intersect:true,
           callbacks:{
             title:items=>items[0]?.label||'',
             label:c=>' '+c.dataset.label+': '+int(c.parsed.x),
