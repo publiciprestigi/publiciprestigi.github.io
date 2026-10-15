@@ -57,7 +57,7 @@
     const institutions=['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
     const institute = institutions.map(n=>({name:n,n:data.filter(f=>f.institucions.has(n)).length}));
     const max=Math.max(...institute.map(x=>x.n));
-    const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><strong>'+int(a.n)+' '+tr('films','películas')+'</strong></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
+    const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><span class="pip-panorama-inst-count"><strong>'+int(a.n)+'</strong><span class="pip-panorama-inst-unit">'+tr('films','películas')+'</span></span></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
     const decades=['60s','70s','80s','90s','2000s','2010s','2020s'];
     const groups=decades.map((d,i)=>data.filter(f=>f.any>=(i===0?1965:i===1?1970:i===2?1980:i===3?1990:i===4?2000:i===5?2010:2020)&&f.any<=(i===0?1969:i===1?1979:i===2?1989:i===3?1999:i===4?2009:i===5?2019:2025)));
     const bands=[
