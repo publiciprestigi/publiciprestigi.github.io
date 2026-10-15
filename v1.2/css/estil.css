@@ -791,9 +791,9 @@ body.cap-hidden .sidebar {
 
 /* Border-left per festival */
 #seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
-#seccio-berlin .taula-festivals       { border-left: 3px solid #1976D2; }
-#seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
-#seccio-sansebastia .taula-festivals  { border-left: 3px solid #E07B2A; }
+#seccio-berlin .taula-festivals       { border-left: 3px solid #CC6977; }
+#seccio-venezia .taula-festivals      { border-left: 3px solid #B84555; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #DA929A; }
 
 /* --- Directors en negre normal a Part I --- */
 .taula-films td.col-subtil,
@@ -1540,7 +1540,7 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 }
 
 #seccio-oscar .taula-oscar-principal tbody tr {
-  background: rgba(200, 160, 0, 0.07);
+  background: #F8F0D0;
   border-bottom: 2px solid #fff;
 }
 
@@ -1595,13 +1595,13 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
    v1.2 — EFA / PREMIS DEL CINEMA EUROPEU
    ============================================================ */
 #seccio-efa .efa-resum {
-  border-left: 3px solid #8C6239;
+  border-left: 3px solid #E5CF83;
   padding-left: 12px;
   margin-bottom: 20px;
 }
 
 #seccio-efa .taula-efa-principal tbody tr {
-  background: rgba(140, 98, 57, 0.07);
+  background: #F8EDC9;
   border-bottom: 2px solid #fff;
 }
 
@@ -1668,3 +1668,17 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 .sidebar-link-badge[data-seccio="directors"] {
   align-items: flex-end;
 }
+
+/* v1.2 — Paleta institucional graduada: fons de taules */
+body.part-ii {
+ --pip-cannes:#9B2335; --pip-venecia:#B84555; --pip-berlin:#CC6977; --pip-sansebastia:#DA929A;
+ --pip-oscar:#c8a000; --pip-efa:#E5CF83;
+ --pip-fons-cannes:#F5E5E8; --pip-fons-venecia:#F6E7EA; --pip-fons-berlin:#F7E9ED; --pip-fons-sansebastia:#F9ECEF;
+ --pip-fons-oscar:#F8F0D0; --pip-fons-efa:#F8EDC9;
+}
+#seccio-cannes .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-cannes); }
+#seccio-venecia .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-venecia); }
+#seccio-berlin .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-berlin); }
+#seccio-sansebastia .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-sansebastia); }
+#seccio-oscar .taula-oscar-principal tbody tr td { background:var(--pip-fons-oscar); }
+#seccio-efa .taula-efa-principal tbody tr td { background:var(--pip-fons-efa); }
