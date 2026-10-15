@@ -513,10 +513,9 @@ function construirGraficDobleCoronaBarsOld() {
       datasets: [{
         data: valors,
         backgroundColor: colors.map(c => rgba(c, 0.90)),
-        hoverBackgroundColor: colors,
+        hoverBackgroundColor: colors.map(c => rgba(c, 0.60)),
         borderWidth: 0,
-        hoverBorderColor: '#363737',
-        hoverBorderWidth: 1,
+        hoverBorderWidth: 0,
         categoryPercentage: 0.62,
         barPercentage: 0.78,
         maxBarThickness: 52,
@@ -991,13 +990,13 @@ window.PiP_graficCazaIAA = function() {
         {
           label: 'Sala',
           data: [403195, 341377],
-          backgroundColor: '#1E4080',
+          backgroundColor: '#1E4080', hoverBackgroundColor: 'rgba(30,64,128,0.6)',
           borderWidth: 0,
         },
         {
           label: 'TV pública (TV3 + La 2 TVE)',
           data: [530000, 0],
-          backgroundColor: '#9B2335',
+          backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.6)',
           borderWidth: 0,
         },
         {
