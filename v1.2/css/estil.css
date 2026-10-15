@@ -1595,13 +1595,13 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
    v1.2 — EFA / PREMIS DEL CINEMA EUROPEU
    ============================================================ */
 #seccio-efa .efa-resum {
-  border-left: 3px solid #E5CF83;
+  border-left: 3px solid #C5AE63;
   padding-left: 12px;
   margin-bottom: 20px;
 }
 
 #seccio-efa .taula-efa-principal tbody tr {
-  background: #FDFBF3;
+  background: #FBF7E7;
   border-bottom: 2px solid #fff;
 }
 
@@ -1672,9 +1672,9 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 /* v1.2 — Paleta institucional graduada: fons de taules */
 body.part-ii {
  --pip-cannes:#9B2335; --pip-venecia:#B84555; --pip-berlin:#CC6977; --pip-sansebastia:#DA929A;
- --pip-oscar:#c8a000; --pip-efa:#E5CF83;
+ --pip-oscar:#c8a000; --pip-efa:#C5AE63;
  --pip-fons-cannes:#F8EAED; --pip-fons-venecia:#FAF0F2; --pip-fons-berlin:#FCF5F6; --pip-fons-sansebastia:#FEFAFB;
- --pip-fons-oscar:#FAF3DE; --pip-fons-efa:#FDFBF3;
+ --pip-fons-oscar:#FAF3DE; --pip-fons-efa:#FBF7E7;
 }
 /* Un sol to institucional per taula, sense alternança de files. */
 #seccio-cannes .taula-festivals tbody tr td { background:var(--pip-fons-cannes); }
