@@ -1,6 +1,6 @@
 La incorporació dels premis de les acadèmies cinematogràfiques amplia el marc d’anàlisi més enllà dels festivals i permet explorar les diferents formes de reconeixement internacional del cinema espanyol i la seva relació amb el públic.
 
-L’estudi recull la presència als festivals de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>, i als premis <strong style="color:#c8a000">Oscar</strong> i <strong style="color:#8C6239">EFA</strong>, de la següent manera: 
+L’estudi recull la presència als festivals de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#B84555">Venècia</strong>, <strong style="color:#CC6977">Berlín</strong> i <strong style="color:#DA929A">Sant Sebastià</strong>, i als premis <strong style="color:#c8a000">Oscar</strong> i <strong style="color:#C5AE63">EFA</strong>, de la següent manera:
 
 | Àmbit | Criteri de selecció | Criteri de premis | Què queda fora o a part |
 |---|---|---|---|
