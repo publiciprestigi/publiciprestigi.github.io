@@ -1676,9 +1676,10 @@ body.part-ii {
  --pip-fons-cannes:#F5E5E8; --pip-fons-venecia:#F6E7EA; --pip-fons-berlin:#F7E9ED; --pip-fons-sansebastia:#F9ECEF;
  --pip-fons-oscar:#F8F0D0; --pip-fons-efa:#F8EDC9;
 }
-#seccio-cannes .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-cannes); }
-#seccio-venecia .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-venecia); }
-#seccio-berlin .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-berlin); }
-#seccio-sansebastia .taula-festivals tbody tr:nth-child(odd) td { background:var(--pip-fons-sansebastia); }
+/* Un sol to institucional per taula, sense alternança de files. */
+#seccio-cannes .taula-festivals tbody tr td { background:var(--pip-fons-cannes); }
+#seccio-venecia .taula-festivals tbody tr td { background:var(--pip-fons-venecia); }
+#seccio-berlin .taula-festivals tbody tr td { background:var(--pip-fons-berlin); }
+#seccio-sansebastia .taula-festivals tbody tr td { background:var(--pip-fons-sansebastia); }
 #seccio-oscar .taula-oscar-principal tbody tr td { background:var(--pip-fons-oscar); }
 #seccio-efa .taula-efa-principal tbody tr td { background:var(--pip-fons-efa); }
