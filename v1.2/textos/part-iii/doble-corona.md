@@ -1,5 +1,5 @@
 <!-- intro -->
-Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors i han rebut algun dels reconeixements internacionals recollits a la Part II. La [versió anterior](https://publiciprestigi.com/v1.1/part-iii.html#doble-corona) de l'estudi n’identificava 11, tots a partir de la presència en les competicions oficials de Cannes, Venècia, Berlín o Sant Sebastià. La incorporació dels Oscar i els EFA amplia ara el grup amb sis films més, fins als 17 títols. [N]
+Anomenem «doble corona» les pel·lícules que coincideixen en els dos grans eixos de l’estudi: figuren al Top 100 històric d’espectadors de la Part I i han rebut algun dels reconeixements internacionals recollits a la Part II. La [versió anterior](https://publiciprestigi.com/v1.1/part-iii.html#doble-corona) de l'estudi n’identificava 11, tots a partir de la presència en les competicions oficials de Cannes, Venècia, Berlín o Sant Sebastià. La incorporació dels Oscar i els EFA amplia ara el grup amb sis films més, fins als 17 títols. [N]
 <!-- /intro -->
 
 <!-- intro-grafic -->
@@ -39,6 +39,6 @@ Per sota del llindar del Top 100 hi ha 34 pel·lícules amb reconeixement intern
 
 - La concentració temporal continua sent marcada: 2 films pertanyen als 60s, 10 als 70s, 6 als 80s, 6 als 90s i 8 als 2000s. Als 2010s només hi apareixen 2: *La isla mínima* (2014) i *Mientras dure la guerra* (2019), i als 2020s, cap. L’ampliació amb les acadèmies incorpora nous casos: 11 films reconeguts pels Oscar —dos de Buñuel— i 7 pels EFA, amb dos títols d’Almodóvar, també presents als Oscar.
 
-En conjunt, les 17 «dobles corones» i els 34 films del «segon cercle» formen una zona de contacte de 51 títols entre totes les 340 pel·lícules amb reconeixement internacional recollides a la Part II, un 15%. Aquesta coincidència entre públic i prestigi continua sent minoritària i no apareix cap nou cas des del 2020, en un període marcat pel sotrac de la pandèmia i una recuperació de l’assistència a les sales encara incompleta i incerta.
+De les 340 pel·lícules amb reconeixement internacional, només 17 formen part també del Top 100 històric d'espectadors: un 5% del conjunt. La «doble corona» continua sent, per tant, una coincidència excepcional entre públic i prestigi. Els 34 films del «segon cercle» amplien aquesta zona de contacte fins a 51 títols (15%), però queden fora de la intersecció estricta entre els dos circuits. No apareix cap nova «doble corona» des del 2020, en un període marcat pel sotrac de la pandèmia i una recuperació de l'assistència a les sales encara incompleta i incerta.
 
 <!-- /comentari-cercle -->
