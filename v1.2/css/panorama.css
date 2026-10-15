@@ -1,7 +1,7 @@
 /* Panorama — maqueta Part II v1.2: norma gràfica compartida */
 #seccio-panorama .pip-panorama-block{margin:0 0 42px;padding:0 0 35px;border-bottom:1px solid #e5e5e5}
 #seccio-panorama .pip-panorama-block:last-child{border-bottom:0}
-#seccio-panorama .pip-panorama-sub{font-size:1.08em;font-weight:600;color:#363737;margin:4px 0 30px;line-height:1.35}
+#seccio-panorama .pip-panorama-sub{font-size:1.25rem;font-weight:600;color:#363737;margin:1.5rem 0 0.5rem;line-height:1.35}
 #seccio-panorama .pip-panorama-chart-title{font-family:Inter,-apple-system,'SF Pro Text',sans-serif;text-align:center;font-size:.82em;font-weight:700;color:#363737;margin:0 0 16px;line-height:1.4}
 #seccio-panorama .pip-panorama-mainbar{height:32px;display:flex;width:100%;gap:2px;overflow:hidden;border-radius:2px}
 #seccio-panorama .pip-panorama-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:17px 0 5px}
