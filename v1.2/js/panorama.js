@@ -136,11 +136,16 @@
         plugins:{...options.plugins,tooltip:{
           ...options.plugins.tooltip,
           mode:'index',intersect:true,
+          filter:c=>c.parsed.x>0,
           callbacks:{
             title:items=>items[0]?.label||'',
-            label:c=>{ const n=c.parsed.x; const total=orderedCounts[c.dataIndex]; return ' '+c.dataset.label+': '+int(n)+' ('+pct(n,total)+')'; },
-            filter:c=>c.parsed.x>0 && c.dataIndex!==order.length-1,
-            footer:items=>tr('Total: ','Total: ')+int(items.reduce((sum,item)=>sum+item.parsed.x,0))
+            label:c=>{
+              const n=c.parsed.x;
+              if(c.dataIndex===order.length-1) return ' '+int(n)+' '+tr('films','películas');
+              const total=orderedCounts[c.dataIndex];
+              return ' '+c.dataset.label+': '+int(n)+' ('+pct(n,total)+')';
+            },
+            footer:items=>items[0]?.dataIndex===order.length-1?'':tr('Total: ','Total: ')+int(orderedCounts[items[0].dataIndex])
           }
         }},
         scales:{
