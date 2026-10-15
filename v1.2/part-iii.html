@@ -908,8 +908,8 @@ body.pip-en-portada .nav-seccions { display: none; }
             const fraPerHab = fraEntrades.map((v,i)=> Number((v/fraPoblacio[i]).toFixed(2)));
 
             const mercatDatasets = [
-              {label:'Espanya · entrades (M)',data:espEntrades,backgroundColor:'rgba(184,70,58,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
-              {label:'França · entrades (M)',data:fraEntrades,backgroundColor:'rgba(30,61,107,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
+              {label:'Espanya · entrades (M)',data:espEntrades,backgroundColor:'rgba(184,70,58,.78)',hoverBackgroundColor:'rgba(184,70,58,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
+              {label:'França · entrades (M)',data:fraEntrades,backgroundColor:'rgba(30,61,107,.78)',hoverBackgroundColor:'rgba(30,61,107,.78)',borderWidth:0,yAxisID:'y',order:2,barPercentage:.92,categoryPercentage:.88,pointStyle:'rect'},
               {label:'Espanya · població (M)',data:espPoblacio,type:'line',borderColor:'rgba(184,70,58,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.25,yAxisID:'y2',order:1,pointStyle:'line'},
               {label:'França · població (M)',data:fraPoblacio,type:'line',borderColor:'rgba(30,61,107,.92)',backgroundColor:'transparent',borderWidth:2,pointRadius:0,pointHoverRadius:3,tension:.25,yAxisID:'y2',order:1,pointStyle:'line'}
             ];
@@ -1341,7 +1341,7 @@ body.pip-en-portada .nav-seccions { display: none; }
   });
 })();
 </script>
-<script src="js/part-iii.js?v=20261015hover1"></script>
+<script src="js/part-iii.js?v=20261015hoverfinal"></script>
 <script>
     window.PiP_graficBunuelBerlangaBardem = function() {
       const el = document.getElementById('grafic-bunuel-berlanga-bardem');
