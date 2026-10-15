@@ -17,7 +17,7 @@
     c.stroke();
     return ctx.createPattern(tile,'repeat');
   }
-  const institutional = {'Cannes':'#9B2335','Venècia':'#2E7D5E','Berlín':'#1976D2','Sant Sebastià':'#E07B2A','Oscar':'#c8a000','EFA':'#8C6239'};
+  const institutional = {'Cannes':'#9B2335','Venècia':'#B84555','Berlín':'#CC6977','Sant Sebastià':'#DA929A','Oscar':'#c8a000','EFA':'#E5CF83'};
   const key = f => f.any + '|' + String(f.titol).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
   const pct = (v,n) => (v*100/n).toLocaleString(es?'es-ES':'ca-ES',{maximumFractionDigits:1,minimumFractionDigits:1})+'%';
   const int = v => v.toLocaleString(es?'es-ES':'ca-ES');
