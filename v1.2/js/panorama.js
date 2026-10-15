@@ -42,9 +42,8 @@
   function draw(data) {
     const host=document.getElementById('pip-panorama-content');
     const secondHost=document.getElementById('pip-panorama-evolucio');
-    const institHost=document.getElementById('pip-panorama-institucions-bloc');
     const publicHost=document.getElementById('pip-panorama-espectadors');
-    if (!host || !secondHost || !institHost || !publicHost || typeof Chart==='undefined') return;
+    if (!host || !secondHost || !publicHost || typeof Chart==='undefined') return;
     if (data.length!==340) {host.textContent=tr('No s’ha pogut validar el conjunt de dades.','No se ha podido validar el conjunto de datos.');return;}
     const counts={fest:0,both:0,acad:0};
     for(const f of data) counts[classificacio(f)]++;
@@ -78,17 +77,29 @@
     const orderedCounts=order.map(i=>bandCounts[i]);
     const orderedColors=order.map(i=>i===0?'#87709f':i===8?'#bbb':'#9B2335');
     host.innerHTML = '<div class="pip-panorama-block">'+
-
       cap(tr('Procedència del reconeixement internacional (1965–2025)','Procedencia del reconocimiento internacional (1965–2025)'))+
+      '<div class="pip-panorama-switch" role="group" aria-label="'+tr('Vista de la procedència','Vista de la procedencia')+'">'+
+      '<button class="pip-panorama-toggle is-active" type="button" data-pip-vista="circuits" aria-pressed="true">'+tr('Per circuits','Por circuitos')+'</button>'+
+      '<button class="pip-panorama-toggle" type="button" data-pip-vista="organismes" aria-pressed="false">'+tr('Per festivals i acadèmies','Por festivales y academias')+'</button></div>'+
+      '<div class="pip-panorama-view" data-pip-panel="circuits">'+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
-      '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p>'+
-      source()+'</div>';
-    institHost.innerHTML = '<div class="pip-panorama-block">'+
-      cap(tr('Procedència per festivals i acadèmies (1965–2025)','Procedencia por festivales y academias (1965–2025)'))+
+      '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p></div>'+
+      '<div class="pip-panorama-view" data-pip-panel="organismes" hidden>'+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
-      '<p class="pip-panorama-nota">'+tr('Els totals institucionals no són acumulables: una pel·lícula pot aparèixer en més d’una institució.','Los totales institucionales no son acumulables: una película puede figurar en más de una institución.')+'</p>'+source()+'</div>'+
-      ''; 
+      '<p class="pip-panorama-nota">'+tr('Els totals no són acumulables: una pel·lícula pot aparèixer en més d’un festival o acadèmia.','Los totales no son acumulables: una película puede aparecer en más de un festival o academia.')+'</p></div>'+
+      source()+'</div>';
+    host.querySelectorAll('[data-pip-vista]').forEach(button => button.addEventListener('click', () => {
+      const view=button.dataset.pipVista;
+      host.querySelectorAll('[data-pip-vista]').forEach(b=>{
+        const selected=b.dataset.pipVista===view;
+        b.classList.toggle('is-active',selected);
+        b.setAttribute('aria-pressed',String(selected));
+      });
+      host.querySelectorAll('[data-pip-panel]').forEach(panel=>{
+        panel.hidden=panel.dataset.pipPanel!==view;
+      });
+    }));
     secondHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Evolució del reconeixement internacional per dècada (1965–2025)','Evolución del reconocimiento internacional por década (1965–2025)'))+
       '<div class="pip-panorama-legend">'+legendHTML+'</div><div class="pip-panorama-canvas"><canvas id="pip-panorama-decades"></canvas></div>'+
