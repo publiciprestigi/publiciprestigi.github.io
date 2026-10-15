@@ -111,7 +111,7 @@
       cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
       '<div class="pip-panorama-legend">'+legendHTML+'</div>'+ 
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
-      '<p class="pip-panorama-nota">'+tr('340 pel·lícules distribuïdes segons els espectadors a les sales espanyoles.','340 películas distribuidas según sus espectadores en las salas españolas.')+'</p>'+source()+'</div>';
+      '<p class="pip-panorama-nota">'+tr('Cada barra mostra el total de films de la franja, desglossat per procedència del reconeixement. El punt lila identifica el Top 100.','Cada barra muestra el total de películas de la franja, desglosado según el origen del reconocimiento. El punto violeta identifica el Top 100.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
     const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],hoverBackgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
     const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{
