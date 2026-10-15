@@ -42,8 +42,9 @@
   function draw(data) {
     const host=document.getElementById('pip-panorama-content');
     const secondHost=document.getElementById('pip-panorama-evolucio');
+    const institHost=document.getElementById('pip-panorama-institucions-bloc');
     const publicHost=document.getElementById('pip-panorama-espectadors');
-    if (!host || !secondHost || !publicHost || typeof Chart==='undefined') return;
+    if (!host || !secondHost || !institHost || !publicHost || typeof Chart==='undefined') return;
     if (data.length!==340) {host.textContent=tr('No s’ha pogut validar el conjunt de dades.','No se ha podido validar el conjunto de datos.');return;}
     const counts={fest:0,both:0,acad:0};
     for(const f of data) counts[classificacio(f)]++;
@@ -82,11 +83,13 @@
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
       '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p>'+
-      cap(tr('Pel·lícules per institució (1965–2025)','Películas por institución (1965–2025)'))+
+      source()+'</div>';
+    institHost.innerHTML = '<div class="pip-panorama-block">'+
+      cap(tr('Procedència per festivals i acadèmies (1965–2025)','Procedencia por festivales y academias (1965–2025)'))+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
       '<p class="pip-panorama-nota">'+tr('Els totals institucionals no són acumulables: una pel·lícula pot aparèixer en més d’una institució.','Los totales institucionales no son acumulables: una película puede figurar en más de una institución.')+'</p>'+source()+'</div>'+
-      '<div class="pip-panorama-block">'+
-
+      ''; 
+    secondHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Evolució del reconeixement internacional per dècada (1965–2025)','Evolución del reconocimiento internacional por década (1965–2025)'))+
       '<div class="pip-panorama-legend">'+legendHTML+'</div><div class="pip-panorama-canvas"><canvas id="pip-panorama-decades"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('Dècada de producció de la pel·lícula, no de concessió del reconeixement. 1965–69 i 2020–25 són períodes parcials.','Década de producción de la película, no de concesión del reconocimiento. 1965–69 y 2020–25 son períodos parciales.')+'</p>'+source()+'</div>'+
