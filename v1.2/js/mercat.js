@@ -147,7 +147,7 @@ async function construirGraficMercat() {
       label: pipMercatT('Entrades venudes (M)','Entradas vendidas (M)'),
       data: entrades,
       backgroundColor: colorsBarres,
-      hoverBackgroundColor: colorsHover,
+      hoverBackgroundColor: colorsBarres,
       borderWidth: 0,
       yAxisID: 'y',
       order: 2,
