@@ -305,7 +305,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       document.getElementById('titol-sup').textContent = s.sup;
       document.body.classList.toggle('pip-en-portada', s.id === 'portada');
       document.getElementById('titol-principal').textContent = s.titol;
-      const festColors = { 'cannes': '#9B2335', 'berlin': '#CC6977', 'venecia': '#B84555', 'sansebastia': '#DA929A', 'oscar': '#c8a000', 'efa': '#AD8B35' };
+      const festColors = { 'cannes': '#9B2335', 'berlin': '#CC6977', 'venecia': '#B84555', 'sansebastia': '#DA929A', 'oscar': '#c8a000', 'efa': '#E5CF83' };
       document.getElementById('titol-principal').style.color = festColors[s.id] || 'var(--color-text)';
       document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
       const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
@@ -363,7 +363,7 @@ body.pip-en-portada .nav-seccions { display: none; }
         document.getElementById('titol-sup').textContent = s.sup;
       document.body.classList.toggle('pip-en-portada', s.id === 'portada');
         document.getElementById('titol-principal').textContent = s.titol;
-        const popColors = { 'cannes': '#9B2335', 'berlin': '#CC6977', 'venecia': '#B84555', 'sansebastia': '#DA929A', 'oscar': '#c8a000', 'efa': '#AD8B35' };
+        const popColors = { 'cannes': '#9B2335', 'berlin': '#CC6977', 'venecia': '#B84555', 'sansebastia': '#DA929A', 'oscar': '#c8a000', 'efa': '#E5CF83' };
         document.getElementById('titol-principal').style.color = popColors[s.id] || 'var(--color-text)';
         document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
         const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
