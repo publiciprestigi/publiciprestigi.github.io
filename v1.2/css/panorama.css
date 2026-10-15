@@ -1,27 +1,31 @@
-/* Panorama — maqueta Part II v1.2: norma gràfica compartida */
-#seccio-panorama .pip-panorama-block{margin:0 0 42px;padding:0 0 35px;border-bottom:1px solid #e5e5e5}
-#seccio-panorama .pip-panorama-block:last-child{border-bottom:0}
-#seccio-panorama .pip-panorama-sub{font-size:1.25rem;font-weight:600;color:#363737;margin:1.5rem 0 0.5rem;line-height:1.35}
-#seccio-panorama .pip-panorama-chart-title{font-family:Inter,-apple-system,'SF Pro Text',sans-serif;text-align:center;font-size:.82em;font-weight:700;color:#363737;margin:0 0 16px;line-height:1.4}
-#seccio-panorama .pip-panorama-mainbar{height:32px;display:flex;width:100%;gap:2px;overflow:hidden;border-radius:2px}
-#seccio-panorama .pip-panorama-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:17px 0 5px}
-#seccio-panorama .pip-panorama-three>div{min-width:0;text-align:center}
-#seccio-panorama .pip-panorama-num{font-size:24px;font-weight:650;color:#363737;display:block}
-#seccio-panorama .pip-panorama-perc{font-size:13px;color:#666;display:block;margin:2px 0 7px}
-#seccio-panorama .pip-panorama-label{font-size:12px;color:#555;display:flex;align-items:center;justify-content:center;gap:6px}
-#seccio-panorama .pip-panorama-label i,#seccio-panorama .pip-panorama-key i{display:inline-block;flex-shrink:0;width:10px;height:10px;border-radius:2px}
-#seccio-panorama .pip-panorama-nota{text-align:center;font-size:14px;line-height:1.45;color:#666;font-style:italic;margin:15px 0 0}
-#seccio-panorama .pip-panorama-font{text-align:center;font-size:12px;line-height:1.45;color:#888;font-style:normal;margin:8px 0 0}
-#seccio-panorama .pip-panorama-institucions{max-width:650px;margin:0 auto}
-#seccio-panorama .pip-panorama-mainbar+.pip-panorama-three+.pip-panorama-nota{margin-bottom:37px}
-#seccio-panorama .pip-panorama-inst-row{display:grid;grid-template-columns:120px minmax(0,1fr) 36px;align-items:center;gap:13px;margin:9px 0;font-size:12px;color:#555}
-#seccio-panorama .pip-panorama-inst-name{white-space:nowrap}
-#seccio-panorama .pip-panorama-inst-track{height:12px;background:#f3f3f3}
-#seccio-panorama .pip-panorama-inst-fill{height:100%}
-#seccio-panorama .pip-panorama-inst-row strong{font-size:12px;font-weight:600;text-align:right;color:#363737}
-#seccio-panorama .pip-panorama-inst-divider{height:14px}
-#seccio-panorama .pip-panorama-legend{display:flex;gap:17px;flex-wrap:wrap;margin:0 0 13px;justify-content:center}
-#seccio-panorama .pip-panorama-key{display:flex;align-items:center;gap:6px;font-size:11px;color:#555}
-#seccio-panorama .pip-panorama-canvas{height:280px;position:relative;width:100%}
-#seccio-panorama .pip-panorama-canvas-public{height:320px}
-@media(max-width:540px){#seccio-panorama .pip-panorama-inst-row{grid-template-columns:90px minmax(0,1fr) 28px;gap:7px}#seccio-panorama .pip-panorama-three{gap:6px}#seccio-panorama .pip-panorama-label{font-size:10px;line-height:1.3}#seccio-panorama .pip-panorama-num{font-size:21px}#seccio-panorama .pip-panorama-canvas-public{height:280px}}
+/* Procedència i evolució + gràfic introductori de Per espectadors — Part II v1.2 */
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-block{margin:0 0 42px;padding:0 0 35px;border-bottom:1px solid #e5e5e5}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-block:last-child{border-bottom:0}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-sub{font-size:1.25rem;font-weight:600;color:#363737;margin:1.5rem 0 0.5rem;line-height:1.35}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-chart-title{font-family:Inter,-apple-system,'SF Pro Text',sans-serif;text-align:center;font-size:.82em;font-weight:700;color:#363737;margin:0 0 16px;line-height:1.4}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-mainbar{height:32px;display:flex;width:100%;gap:2px;overflow:hidden;border-radius:2px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:17px 0 5px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-three>div{min-width:0;text-align:center}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-num{font-size:24px;font-weight:650;color:#363737;display:block}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-perc{font-size:13px;color:#666;display:block;margin:2px 0 7px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-label{font-size:12px;color:#555;display:flex;align-items:center;justify-content:center;gap:6px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-label i,:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-key i{display:inline-block;flex-shrink:0;width:10px;height:10px;border-radius:2px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-nota{text-align:center;font-size:14px;line-height:1.45;color:#666;font-style:italic;margin:15px 0 0}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-font{text-align:center;font-size:12px;line-height:1.45;color:#888;font-style:normal;margin:8px 0 0}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-institucions{max-width:650px;margin:0 auto}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-mainbar+.pip-panorama-three+.pip-panorama-nota{margin-bottom:37px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-row{display:grid;grid-template-columns:120px minmax(0,1fr) 36px;align-items:center;gap:13px;margin:9px 0;font-size:12px;color:#555}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-name{white-space:nowrap}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-track{height:12px;background:#f3f3f3}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-fill{height:100%}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-row strong{font-size:12px;font-weight:600;text-align:right;color:#363737}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-divider{height:14px}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-legend{display:flex;gap:17px;flex-wrap:wrap;margin:0 0 13px;justify-content:center}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-key{display:flex;align-items:center;gap:6px;font-size:11px;color:#555}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-canvas{height:280px;position:relative;width:100%}
+:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-canvas-public{height:320px}
+@media(max-width:540px){:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-inst-row{grid-template-columns:90px minmax(0,1fr) 28px;gap:7px}:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-three{gap:6px}:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-label{font-size:10px;line-height:1.3}:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-num{font-size:21px}:is(#seccio-panorama,#seccio-espectadors) .pip-panorama-canvas-public{height:280px}}
+
+/* Gràfic de distribució: obertura de la pàgina Per espectadors. */
+#seccio-espectadors #pip-panorama-espectadors{margin:8px 0 30px}
+#seccio-espectadors #pip-panorama-espectadors .pip-panorama-block{padding-bottom:23px;margin-bottom:25px}
