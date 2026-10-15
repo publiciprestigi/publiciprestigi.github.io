@@ -53,3 +53,9 @@
 /* Distribució per volum d'espectadors: barres horitzontals apilades. */
 #seccio-espectadors .pip-panorama-canvas-public{height:365px}
 @media(max-width:540px){#seccio-espectadors .pip-panorama-canvas-public{height:385px}}
+
+/* Recompte institucional en una sola línia, amb unitat discreta. */
+#pip-panorama-content .pip-panorama-inst-row{grid-template-columns:120px minmax(0,1fr) 72px}
+#pip-panorama-content .pip-panorama-inst-count{display:flex;align-items:baseline;justify-content:flex-end;gap:5px;white-space:nowrap}
+#pip-panorama-content .pip-panorama-inst-unit{font-size:12px;font-weight:400;color:#777}
+@media(max-width:540px){#pip-panorama-content .pip-panorama-inst-row{grid-template-columns:90px minmax(0,1fr) 66px}}
