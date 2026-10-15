@@ -41,8 +41,9 @@
   const source = () => '<p class="pip-panorama-font">'+tr('Fonts: base de dades de Públic i Prestigi; arxius dels festivals, Oscar i EFA.','Fuentes: base de datos de Públic i Prestigi; archivos de festivales, Oscar y EFA.')+'</p>';
   function draw(data) {
     const host=document.getElementById('pip-panorama-content');
+    const secondHost=document.getElementById('pip-panorama-evolucio');
     const publicHost=document.getElementById('pip-panorama-espectadors');
-    if (!host || !publicHost || typeof Chart==='undefined') return;
+    if (!host || !secondHost || !publicHost || typeof Chart==='undefined') return;
     if (data.length!==340) {host.textContent=tr('No s’ha pogut validar el conjunt de dades.','No se ha podido validar el conjunto de datos.');return;}
     const counts={fest:0,both:0,acad:0};
     for(const f of data) counts[classificacio(f)]++;
@@ -70,9 +71,14 @@
       [tr('Sense dades','Sin datos'),f=>f.espectadors===null]
     ];
     const bandCounts=bands.map(([n,test])=>data.filter(test).length);
+    // Lectura ascendent: de menys públic al Top 100; sense dades, al final.
+    const order=[7,6,5,4,3,2,1,0,8];
+    const orderedBands=order.map(i=>bands[i]);
+    const orderedCounts=order.map(i=>bandCounts[i]);
+    const orderedColors=order.map(i=>i===0?'#87709f':i===8?'#bbb':'#9B2335');
     host.innerHTML = '<div class="pip-panorama-block">'+
-      '<h2 class="pip-panorama-sub">'+tr('Procedència del reconeixement','Procedencia del reconocimiento')+'</h2>'+
-      cap(tr('Festivals i acadèmies (1965–2025)','Festivales y academias (1965–2025)'))+
+
+      cap(tr('Procedència del reconeixement internacional (1965–2025)','Procedencia del reconocimiento internacional (1965–2025)'))+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
       '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p>'+
@@ -80,18 +86,18 @@
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
       '<p class="pip-panorama-nota">'+tr('Els totals institucionals no són acumulables: una pel·lícula pot aparèixer en més d’una institució.','Los totales institucionales no son acumulables: una película puede figurar en más de una institución.')+'</p>'+source()+'</div>'+
       '<div class="pip-panorama-block">'+
-      '<h2 class="pip-panorama-sub">'+tr('Evolució per dècades','Evolución por décadas')+'</h2>'+
-      cap(tr('Pel·lícules amb reconeixement internacional per dècada (1965–2025)','Películas con reconocimiento internacional por década (1965–2025)'))+
+
+      cap(tr('Evolució del reconeixement internacional per dècada (1965–2025)','Evolución del reconocimiento internacional por década (1965–2025)'))+
       '<div class="pip-panorama-legend">'+legendHTML+'</div><div class="pip-panorama-canvas"><canvas id="pip-panorama-decades"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('Dècada de producció de la pel·lícula, no de concessió del reconeixement. 1965–69 i 2020–25 són períodes parcials.','Década de producción de la película, no de concesión del reconocimiento. 1965–69 y 2020–25 son períodos parciales.')+'</p>'+source()+'</div>'+
       ''; 
     publicHost.innerHTML = '<div class="pip-panorama-block">'+
-      cap(tr('Distribució per franges d’espectadors (1965–2025)','Distribución por franjas de espectadores (1965–2025)'))+
+      cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('340 pel·lícules distribuïdes segons els espectadors a les sales espanyoles.','340 películas distribuidas según sus espectadores en las salas españolas.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
     const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],hoverBackgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
-    const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:bands.map(x=>x[0]),datasets:[{data:bandCounts,backgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#9B2335'),hoverBackgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#9B2335'),borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
+    const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:orderedBands.map(x=>x[0]),datasets:[{data:orderedCounts,backgroundColor:orderedColors,hoverBackgroundColor:orderedColors,borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
     window.PiP_panoramaResize = () => { chartDecades.resize(); };
     window.PiP_panoramaEspectadorsResize = () => { chartPublic.resize(); };
     if (document.getElementById('seccio-panorama')?.style.display === 'block') requestAnimationFrame(window.PiP_panoramaResize);
