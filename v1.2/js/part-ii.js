@@ -213,7 +213,7 @@ function construirPremiades() {
           label: festivalLabel(fest),
           data: graficData[fest],
           backgroundColor: COLORS[fest],
-          hoverBackgroundColor: HOVER[fest],
+          hoverBackgroundColor: COLORS[fest],
           borderWidth: 0,
         }))
       },
