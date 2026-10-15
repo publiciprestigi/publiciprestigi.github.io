@@ -1,7 +1,15 @@
-<!-- intro -->
-La incorporació dels reconeixements atorgats per les acadèmies cinematogràfiques amplia el marc d’anàlisi i permet observar diferències en l’abast de públic i en els tipus de reconeixement de cada institució. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els EFA n'aporten onze i els Oscar quatre.
+<!-- intro-grafic -->
+La distribució per volum d'espectadors ofereix una primera fotografia del públic dels 340 films amb reconeixement internacional. Permet observar quants títols arriben a les franges de més assistència i quants es concentren en els nivells inferiors, abans de comparar els resultats dels diferents festivals i acadèmies.
+<!-- /intro-grafic -->
 
+<!-- intro -->
+A continuació, els rànquings per festivals i acadèmies permeten comparar l'abast de públic dels films reconeguts en cadascun dels sis àmbits. La incorporació dels premis de les acadèmies cinematogràfiques amplia el marc d'anàlisi i mostra diferències entre els dos circuits. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100; Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els EFA n'aporten onze i els Oscar quatre.
 <!-- /intro -->
+
+<!-- comentari-grafic -->
+- · El reconeixement internacional no garanteix una gran afluència a les sales: la distribució permet apreciar el pes de les pel·lícules amb un públic reduït respecte dels èxits comercials.
+- · Els 17 films del Top 100 constitueixen el grup de major abast de públic dins del corpus de 340 títols.
+<!-- /comentari-grafic -->
 
 <!-- comentari -->
 - La mitjana d'espectadors revela un contrast clar: Cannes i Venècia (al voltant dels 700k) superen àmpliament Berlín (444K) i Sant Sebastià (386K), i l'ordre gairebé coincideix amb la jerarquia de prestigi internacional que hem establert. No és casual: Cannes és el festival de referència absoluta del cinema d'autor internacional, mentre que Venècia, el més antic dels quatre, ha mantingut històricament una selecció amb major vocació popular, en contrast amb el perfil més arriscat de Berlín.
