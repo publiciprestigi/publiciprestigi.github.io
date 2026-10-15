@@ -134,7 +134,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       datasets: [{
         data: counts,
         backgroundColor: colors,
-        hoverBackgroundColor: colorsHover,
+        hoverBackgroundColor: colors,
         borderWidth: 0,
       }]
     },
