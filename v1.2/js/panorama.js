@@ -138,7 +138,7 @@
           mode:'index',intersect:true,
           callbacks:{
             title:items=>items[0]?.label||'',
-            label:c=>' '+c.dataset.label+': '+int(c.parsed.x),
+            label:c=>{ const n=c.parsed.x; const total=orderedCounts[c.dataIndex]; const noData=c.dataIndex===order.length-1; return ' '+c.dataset.label+': '+int(n)+(noData?'':' ('+pct(n,total)+')'); },
             filter:c=>c.parsed.x>0,
             footer:items=>tr('Total: ','Total: ')+int(items.reduce((sum,item)=>sum+item.parsed.x,0))
           }
