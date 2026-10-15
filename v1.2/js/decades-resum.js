@@ -115,7 +115,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `
-    <p class="grafic-decades-titol" style="text-align:center;font-size:13px;font-weight:700;color:#363737;margin:0 0 14px;font-family:Inter,-apple-system,\'SF Pro Text\',sans-serif">${pipDecT('Distribució del Top 100 per dècada (1965–2025)','Distribución del Top 100 por década (1965–2025)')}</p>
+    <p class="grafic-decades-titol" style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin:0 0 14px;font-family:Inter,-apple-system,\'SF Pro Text\',sans-serif">${pipDecT('Distribució del Top 100 per dècada (1965–2025)','Distribución del Top 100 por década (1965–2025)')}</p>
     <canvas id="grafic-decades-canvas"></canvas>
     <p class="grafic-nota">${pipDecT(
       'Nombre de pel·lícules del Top 100 per dècada i percentatge que representen.',
