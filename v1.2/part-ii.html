@@ -301,6 +301,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       const s = seccions[idx];
       document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
       document.getElementById('seccio-' + s.id).style.display = 'block';
+      if (s.id === 'panorama') requestAnimationFrame(() => window.PiP_panoramaResize?.());
       document.getElementById('titol-sup').textContent = s.sup;
       document.body.classList.toggle('pip-en-portada', s.id === 'portada');
       document.getElementById('titol-principal').textContent = s.titol;
