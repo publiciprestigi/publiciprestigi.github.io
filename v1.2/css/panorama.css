@@ -29,3 +29,15 @@
 /* Gràfic de distribució: obertura de la pàgina Per espectadors. */
 #seccio-espectadors #pip-panorama-espectadors{margin:8px 0 30px}
 #seccio-espectadors #pip-panorama-espectadors .pip-panorama-block{padding-bottom:23px;margin-bottom:25px}
+
+/* v1.2 — Gràfics emmarcats com els de Mercat i població (Part I). */
+#seccio-panorama :is(#pip-panorama-content,#pip-panorama-institucions-bloc,#pip-panorama-evolucio) .pip-panorama-block,
+#seccio-espectadors #pip-panorama-espectadors .pip-panorama-block {
+  border-top:1px solid #e5e5e5;
+  border-bottom:1px solid #e5e5e5;
+  padding:22px 0 22px;
+  margin:20px 0 24px;
+}
+#seccio-panorama .pip-panorama-block:last-child{border-bottom:1px solid #e5e5e5}
+#seccio-panorama :is(#pip-panorama-content,#pip-panorama-institucions-bloc,#pip-panorama-evolucio) .pip-panorama-block:last-child{border-bottom:1px solid #e5e5e5}
+#seccio-espectadors #pip-panorama-espectadors .pip-panorama-block{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:22px 0;margin:18px 0 18px}
