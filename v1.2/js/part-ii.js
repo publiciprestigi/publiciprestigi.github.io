@@ -113,7 +113,7 @@ function construirPremiades() {
   const DECADES = ['60s','70s','80s','90s','2000s','2010s','2020s'];
   const FESTS   = ['Cannes','Venècia','Berlín','Sant Sebastià'];
   const COLORS  = { 'Cannes':'#9B2335','Berlín':'#CC6977','Venècia':'#B84555','Sant Sebastià':'#DA929A' };
-  const HOVER   = { 'Cannes':'rgba(155,35,53,0.5)','Berlín':'rgba(25,118,210,0.5)','Venècia':'rgba(46,125,94,0.5)','Sant Sebastià':'rgba(224,123,42,0.5)' };
+  const HOVER = Object.fromEntries(Object.entries(COLORS).map(([fest, color]) => [fest, color]));
 
   // Màxims guardons
   const MAXIMS2 = [
@@ -270,9 +270,9 @@ function construirFestival(festival, seccioId) {
 
   const COLORS_FEST = {
     'Cannes':        'rgba(155, 35, 53, 0.07)',
-    'Berlín':        'rgba(25, 118, 210, 0.07)',
-    'Venècia':       'rgba(46, 125, 94, 0.07)',
-    'Sant Sebastià': 'rgba(224, 123, 42, 0.07)',
+    'Berlín':        '#FCF5F6',
+    'Venècia':       '#FAF0F2',
+    'Sant Sebastià': '#FEFAFB',
   };
   const bgFest = COLORS_FEST[festival] || '#fff';
 
@@ -488,7 +488,7 @@ async function construirRànquingAcademiesEspectadors() {
 
     const academies = [
       { nom: 'Oscar', color: '#c8a000', films: oscarData.films || [] },
-      { nom: 'EFA',   color: '#E5CF83', films: efaData.films || [] },
+      { nom: 'EFA',   color: '#C5AE63', films: efaData.films || [] },
     ];
 
     const blocAcademia = ({ nom, color, films }) => {
