@@ -11,9 +11,9 @@
     tile.width=12; tile.height=12;
     const c=tile.getContext('2d');
     c.fillStyle='#c8a000'; c.fillRect(0,0,12,12);
-    c.strokeStyle='#9B2335'; c.lineWidth=4;
+    c.strokeStyle='#9B2335'; c.lineWidth=5;
     c.beginPath();
-    for (let k=-12;k<=24;k+=8) { c.moveTo(k,0); c.lineTo(k+12,12); }
+    for (let k=-12;k<=24;k+=12) { c.moveTo(k,0); c.lineTo(k+12,12); }
     c.stroke();
     return ctx.createPattern(tile,'repeat');
   }
@@ -71,7 +71,7 @@
     host.innerHTML = '<div class="pip-panorama-block">'+
       '<h2 class="pip-panorama-sub">'+tr('Procedència del reconeixement','Procedencia del reconocimiento')+'</h2>'+
       cap(tr('Festivals i acadèmies (1965–2025)','Festivales y academias (1965–2025)'))+
-      '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
+      '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+(k==='both'?stripeCSS:palette[k])+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
       '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p>'+
       cap(tr('Pel·lícules per institució (1965–2025)','Películas por institución (1965–2025)'))+
