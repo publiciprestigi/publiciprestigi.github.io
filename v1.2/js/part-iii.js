@@ -513,7 +513,7 @@ function construirGraficDobleCoronaBarsOld() {
       datasets: [{
         data: valors,
         backgroundColor: colors.map(c => rgba(c, 0.90)),
-        hoverBackgroundColor: colors.map(c => rgba(c, 0.60)),
+        hoverBackgroundColor: colors.map(c => rgba(c, 0.90)),
         borderWidth: 0,
         hoverBorderWidth: 0,
         categoryPercentage: 0.62,
@@ -990,13 +990,13 @@ window.PiP_graficCazaIAA = function() {
         {
           label: 'Sala',
           data: [403195, 341377],
-          backgroundColor: '#1E4080', hoverBackgroundColor: 'rgba(30,64,128,0.6)',
+          backgroundColor: '#1E4080', hoverBackgroundColor: '#1E4080',
           borderWidth: 0,
         },
         {
           label: 'TV pública (TV3 + La 2 TVE)',
           data: [530000, 0],
-          backgroundColor: '#9B2335', hoverBackgroundColor: 'rgba(155,35,53,0.6)',
+          backgroundColor: '#9B2335', hoverBackgroundColor: '#9B2335',
           borderWidth: 0,
         },
         {
@@ -1650,8 +1650,8 @@ window.PiP_graficGeneracioActual = function() {
     data: {
       labels,
       datasets: [
-        { label: pip3T('Espectadors a sala','Espectadores en salas'), data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
-        { label: pip3T('IAA estimat (valor mig)','IAA estimado (valor medio)'), data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsPaler, borderWidth: 0 },
+        { label: pip3T('Espectadors a sala','Espectadores en salas'), data: sala, backgroundColor: colorsFort, hoverBackgroundColor: colorsFort, borderWidth: 0 },
+        { label: pip3T('IAA estimat (valor mig)','IAA estimado (valor medio)'), data: iaaAdd, backgroundColor: colorsFluix, hoverBackgroundColor: colorsFluix, borderWidth: 0 },
       ],
     },
     options: {
