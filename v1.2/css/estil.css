@@ -1540,7 +1540,7 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 }
 
 #seccio-oscar .taula-oscar-principal tbody tr {
-  background: #F8F0D0;
+  background: #FAF3DE;
   border-bottom: 2px solid #fff;
 }
 
@@ -1601,7 +1601,7 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 }
 
 #seccio-efa .taula-efa-principal tbody tr {
-  background: #F8EDC9;
+  background: #FDFBF3;
   border-bottom: 2px solid #fff;
 }
 
@@ -1673,8 +1673,8 @@ html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
 body.part-ii {
  --pip-cannes:#9B2335; --pip-venecia:#B84555; --pip-berlin:#CC6977; --pip-sansebastia:#DA929A;
  --pip-oscar:#c8a000; --pip-efa:#E5CF83;
- --pip-fons-cannes:#F5E5E8; --pip-fons-venecia:#F6E7EA; --pip-fons-berlin:#F7E9ED; --pip-fons-sansebastia:#F9ECEF;
- --pip-fons-oscar:#F8F0D0; --pip-fons-efa:#F8EDC9;
+ --pip-fons-cannes:#F8EAED; --pip-fons-venecia:#FAF0F2; --pip-fons-berlin:#FCF5F6; --pip-fons-sansebastia:#FEFAFB;
+ --pip-fons-oscar:#FAF3DE; --pip-fons-efa:#FDFBF3;
 }
 /* Un sol to institucional per taula, sense alternança de files. */
 #seccio-cannes .taula-festivals tbody tr td { background:var(--pip-fons-cannes); }
