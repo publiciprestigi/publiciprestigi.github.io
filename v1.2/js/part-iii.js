@@ -72,6 +72,14 @@ async function carregarDades() {
     construirBretxa();
     construirCazaAlcarras();
     construirDuesGeneracions();
+    // Si Generacions ja és visible (p. ex. arribada directa per #generacions),
+    // inicialitzar els gràfics després de disposar de les dades.
+    if (document.getElementById('seccio-generacions')?.style.display === 'block') {
+      requestAnimationFrame(() => {
+        window.PiP_graficSauraAlmodovar?.();
+        window.PiP_graficGeneracioActual?.();
+      });
+    }
     construirLleis();
     window.PiP_graficConclusions1 = construirGraficConclusions1;
     window.PiP_graficConclusions2 = construirGraficConclusions2;
