@@ -13,9 +13,9 @@ const decadaText = f => PIP_ES ? (f.decada_es || f.decada) : f.decada;
 
 const FC = {
   'Cannes':       '#9B2335',
-  'Berlín':       '#1976D2',
-  'Venècia':      '#2E7D5E',
-  'Sant Sebastià':'#E07B2A',
+  'Berlín':       '#CC6977',
+  'Venècia':      '#B84555',
+  'Sant Sebastià':'#DA929A',
 };
 
 async function carregarFestivals() {
@@ -112,15 +112,15 @@ function construirPremiades() {
   // ── Càlcul automàtic des de festivalsData ──
   const DECADES = ['60s','70s','80s','90s','2000s','2010s','2020s'];
   const FESTS   = ['Cannes','Venècia','Berlín','Sant Sebastià'];
-  const COLORS  = { 'Cannes':'#9B2335','Berlín':'#1976D2','Venècia':'#2E7D5E','Sant Sebastià':'#E07B2A' };
+  const COLORS  = { 'Cannes':'#9B2335','Berlín':'#CC6977','Venècia':'#B84555','Sant Sebastià':'#DA929A' };
   const HOVER   = { 'Cannes':'rgba(155,35,53,0.5)','Berlín':'rgba(25,118,210,0.5)','Venècia':'rgba(46,125,94,0.5)','Sant Sebastià':'rgba(224,123,42,0.5)' };
 
   // Màxims guardons
   const MAXIMS2 = [
     { nom: pipT("Palma d'Or", "Palma de Oro"), color: '#9B2335', patro: /palma d.or/i },
-    { nom: pipT("Lleó d'Or", "León de Oro"), color: '#2E7D5E', patro: /lle[oó] d.or/i },
-    { nom: pipT("Os d'Or", "Oso de Oro"), color: '#1976D2', patro: /os d.or/i },
-    { nom: pipT("Conxa d'Or", "Concha de Oro"), color: '#E07B2A', patro: /conxa d.or/i },
+    { nom: pipT("Lleó d'Or", "León de Oro"), color: '#B84555', patro: /lle[oó] d.or/i },
+    { nom: pipT("Os d'Or", "Oso de Oro"), color: '#CC6977', patro: /os d.or/i },
+    { nom: pipT("Conxa d'Or", "Concha de Oro"), color: '#DA929A', patro: /conxa d.or/i },
   ];
 
   const tPremiades = festivalsData.filter(f => f.premiat);
@@ -488,7 +488,7 @@ async function construirRànquingAcademiesEspectadors() {
 
     const academies = [
       { nom: 'Oscar', color: '#c8a000', films: oscarData.films || [] },
-      { nom: 'EFA',   color: '#8C6239', films: efaData.films || [] },
+      { nom: 'EFA',   color: '#E5CF83', films: efaData.films || [] },
     ];
 
     const blocAcademia = ({ nom, color, films }) => {
