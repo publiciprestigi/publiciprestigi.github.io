@@ -113,7 +113,7 @@ function construirPremiades() {
   const DECADES = ['60s','70s','80s','90s','2000s','2010s','2020s'];
   const FESTS   = ['Cannes','Venècia','Berlín','Sant Sebastià'];
   const COLORS  = { 'Cannes':'#9B2335','Berlín':'#CC6977','Venècia':'#B84555','Sant Sebastià':'#DA929A' };
-  const HOVER = Object.fromEntries(Object.entries(COLORS).map(([fest, color]) => [fest, color]));
+  const HOVER = { 'Cannes':'#801B2B', 'Venècia':'#983545', 'Berlín':'#AC4D60', 'Sant Sebastià':'#BD747F' };
 
   // Màxims guardons
   const MAXIMS2 = [
