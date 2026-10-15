@@ -3,7 +3,7 @@
   'use strict';
   const es = document.documentElement.lang === 'es';
   const tr = (ca, cast) => es ? cast : ca;
-  const palette = {fest:'#527da4',both:'#87709f',acad:'#c49a60'};
+  const palette = {fest:'#9B2335',both:'#E32636',acad:'#D49CA5'};
   const institutional = {'Cannes':'#9B2335','Venècia':'#2E7D5E','Berlín':'#1976D2','Sant Sebastià':'#E07B2A','Oscar':'#b59732','EFA':'#8C6239'};
   const key = f => f.any + '|' + String(f.titol).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
   const pct = (v,n) => (v*100/n).toLocaleString(es?'es-ES':'ca-ES',{maximumFractionDigits:1,minimumFractionDigits:1})+'%';
@@ -76,7 +76,7 @@
       '<p class="pip-panorama-nota">'+tr('340 pel·lícules distribuïdes segons els espectadors a les sales espanyoles.','340 películas distribuidas según sus espectadores en las salas españolas.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
     const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
-    const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:bands.map(x=>x[0]),datasets:[{data:bandCounts,backgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#527da4'),borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
+    const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:bands.map(x=>x[0]),datasets:[{data:bandCounts,backgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#9B2335'),borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
     window.PiP_panoramaResize = () => { chartDecades.resize(); chartPublic.resize(); };
     if (document.getElementById('seccio-panorama')?.style.display === 'block') requestAnimationFrame(window.PiP_panoramaResize);
   }
