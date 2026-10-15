@@ -197,7 +197,7 @@ body.pip-en-portada .nav-seccions { display: none; }
   <p class="contacte-nota">Coincidència entre les 100 pel·lícules amb més espectadors (Part I) i les 340 pel·lícules reconegudes als festivals i acadèmies (Part II).</p>
 </div>
 <style>
-  #grafic-contacte-prestigi{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:23px 0 20px;margin:23px 0 28px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif;color:#363737}
+  #grafic-contacte-prestigi{position:relative;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:23px 0 20px;margin:23px 0 28px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif;color:#363737}
   #grafic-contacte-prestigi .contacte-titol{text-align:center;font-size:.82em;font-weight:700;margin:0 0 14px}
   #grafic-contacte-prestigi .contacte-resum{text-align:center;font-size:14px;margin:0 0 17px;color:#666}
   #grafic-contacte-prestigi .contacte-resum strong{font-size:20px;color:#5a4a8a;font-variant-numeric:tabular-nums}
@@ -214,7 +214,8 @@ body.pip-en-portada .nav-seccions { display: none; }
   #grafic-contacte-prestigi .contacte-clau{display:inline-block;flex:0 0 9px;width:9px;height:9px;border-radius:2px}
   #grafic-contacte-prestigi .contacte-llegenda strong{font-variant-numeric:tabular-nums}#grafic-contacte-prestigi .contacte-llegenda-principal strong{font-weight:800;color:#363737}#grafic-contacte-prestigi .contacte-llegenda-principal span{font-weight:600;color:#363737}
   #grafic-contacte-prestigi .contacte-llegenda span{color:#666}
-  #grafic-contacte-prestigi .contacte-globus{display:none;max-width:470px;margin:12px auto 0;padding:9px 12px;background:#333;color:#fff;border-radius:3px;font-size:12px;line-height:1.5;text-align:center}
+  #grafic-contacte-prestigi .contacte-globus{display:none;position:absolute;z-index:10;max-width:min(340px,calc(100% - 16px));width:max-content;padding:8px 10px;background:rgba(45,45,45,.95);color:#fff;border-radius:6px;font-size:12px;line-height:1.45;text-align:center;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.12);transform:translateX(-50%)}
+  #grafic-contacte-prestigi .contacte-globus::after{content:'';position:absolute;top:100%;left:var(--contacte-arrow,50%);transform:translateX(-50%);border:6px solid transparent;border-top-color:rgba(45,45,45,.95)}
   #grafic-contacte-prestigi .contacte-globus.obert{display:block}
   #grafic-contacte-prestigi .contacte-nota{text-align:center;margin:14px auto 0;max-width:850px;padding:0 12px;font-size:14px;color:#666;line-height:1.45;font-style:italic}
   @media(max-width:600px){#grafic-contacte-prestigi .contacte-llegenda{gap:8px 14px;font-size:11px}#grafic-contacte-prestigi .contacte-llegenda>div{gap:4px}#grafic-contacte-prestigi .contacte-barra{height:26px}}
@@ -225,7 +226,19 @@ body.pip-en-portada .nav-seccions { display: none; }
   if(!bloc)return;
   const globus=bloc.querySelector('.contacte-globus');
   const segments=bloc.querySelectorAll('.contacte-segment');
-  function mostra(el){globus.textContent=el.dataset.globus;globus.classList.add('obert');}
+  function mostra(el){
+    globus.textContent=el.dataset.globus;
+    globus.classList.add('obert');
+    const bar=el.getBoundingClientRect();
+    const root=bloc.getBoundingClientRect();
+    const centre=bar.left+bar.width/2-root.left;
+    const marge=8;
+    const amplada=globus.offsetWidth;
+    const x=Math.max(amplada/2+marge,Math.min(root.width-amplada/2-marge,centre));
+    globus.style.left=x+'px';
+    globus.style.top=(bar.top-root.top-globus.offsetHeight-10)+'px';
+    globus.style.setProperty('--contacte-arrow',Math.max(8,Math.min(amplada-8,amplada/2+centre-x))+'px');
+  }
   function amaga(){globus.classList.remove('obert');globus.textContent='';}
   segments.forEach(el=>{
     el.addEventListener('mouseenter',()=>mostra(el));
