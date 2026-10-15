@@ -3,7 +3,7 @@
   'use strict';
   const es = document.documentElement.lang === 'es';
   const tr = (ca, cast) => es ? cast : ca;
-  const palette = {fest:'#9B2335',both:'#333D38',acad:'#c8a000'};
+  const palette = {fest:'#9B2335',both:'#A05A29',acad:'#c8a000'};
   // Patró compartit: línies diagonals fines amb els dos colors institucionals.
   const stripeCSS = 'repeating-linear-gradient(135deg, #9B2335 0px, #9B2335 3px, #c8a000 3px, #c8a000 6px)';
   function stripeCanvas(ctx) {
@@ -17,7 +17,7 @@
     c.stroke();
     return ctx.createPattern(tile,'repeat');
   }
-  const institutional = {'Cannes':'#9B2335','Venècia':'#B84555','Berlín':'#CC6977','Sant Sebastià':'#DA929A','Oscar':'#c8a000','EFA':'#E5CF83'};
+  const institutional = {'Cannes':'#9B2335','Venècia':'#B84555','Berlín':'#CC6977','Sant Sebastià':'#DA929A','Oscar':'#c8a000','EFA':'#C5AE63'};
   const key = f => f.any + '|' + String(f.titol).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
   const pct = (v,n) => (v*100/n).toLocaleString(es?'es-ES':'ca-ES',{maximumFractionDigits:1,minimumFractionDigits:1})+'%';
   const int = v => v.toLocaleString(es?'es-ES':'ca-ES');
@@ -49,7 +49,7 @@
       ['both',tr('Festivals i acadèmies','Festivales y academias')],
       ['acad',tr('Només acadèmies','Solo academias')]
     ];
-    const legendHTML = legend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+(k==='both'?stripeCSS:palette[k])+'"></i>'+l+'</span>').join('');
+    const legendHTML = legend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+palette[k]+'"></i>'+l+'</span>').join('');
     const institutions=['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
     const institute = institutions.map(n=>({name:n,n:data.filter(f=>f.institucions.has(n)).length}));
     const max=Math.max(...institute.map(x=>x.n));
@@ -71,7 +71,7 @@
     host.innerHTML = '<div class="pip-panorama-block">'+
       '<h2 class="pip-panorama-sub">'+tr('Procedència del reconeixement','Procedencia del reconocimiento')+'</h2>'+
       cap(tr('Festivals i acadèmies (1965–2025)','Festivales y academias (1965–2025)'))+
-      '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+(k==='both'?stripeCSS:palette[k])+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
+      '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
       '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p>'+
       cap(tr('Pel·lícules per institució (1965–2025)','Películas por institución (1965–2025)'))+
@@ -88,7 +88,7 @@
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('340 pel·lícules distribuïdes segons els espectadors a les sales espanyoles.','340 películas distribuidas según sus espectadores en las salas españolas.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
-    const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:k==='both'?stripeCanvas(document.getElementById('pip-panorama-decades').getContext('2d')):palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
+    const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
     const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{type:'bar',data:{labels:bands.map(x=>x[0]),datasets:[{data:bandCounts,backgroundColor:bands.map((x,i)=>i===0?'#87709f':i===8?'#bbb':'#9B2335'),borderWidth:0}]},options:{...options,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+int(c.parsed.y)+' · '+pct(c.parsed.y,data.length)}}},scales:{x:{grid:{display:false},ticks:{maxRotation:48,minRotation:45,font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}}});
     window.PiP_panoramaResize = () => { chartDecades.resize(); chartPublic.resize(); };
     if (document.getElementById('seccio-panorama')?.style.display === 'block') requestAnimationFrame(window.PiP_panoramaResize);
