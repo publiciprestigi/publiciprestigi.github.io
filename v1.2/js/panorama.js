@@ -49,9 +49,9 @@
     const counts={fest:0,both:0,acad:0};
     for(const f of data) counts[classificacio(f)]++;
     const legend=[
-      ['fest',tr('Només films de festivals','Solo películas de festivales')],
-      ['both',tr('Films coincidents en festivals i acadèmies','Películas coincidentes en festivales y academias')],
-      ['acad',tr('Només films d’acadèmies','Solo películas de academias')]
+      ['fest',tr('Només de festivals','Solo de festivales')],
+      ['both',tr('Coincidents en festivals i acadèmies','Coincidentes en festivales y academias')],
+      ['acad',tr('Només d’acadèmies','Solo de academias')]
     ];
     const legendHTML = legend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+palette[k]+'"></i>'+l+'</span>').join('');
     const institutions=['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
@@ -88,7 +88,7 @@
       '<button class="pip-panorama-toggle" type="button" data-pip-vista="circuits" aria-pressed="false">'+tr('Per circuits','Por circuitos')+'</button></div>'+
       '<div class="pip-panorama-view" data-pip-panel="circuits" hidden>'+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
-      '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
+      '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'<span class="pip-panorama-num-unit"> '+tr('films','películas')+'</span></span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
       '<p class="pip-panorama-nota">'+tr('Els 340 films es reparteixen en tres grups excloents segons on han estat reconeguts. Cada film es compta una sola vegada.','Las 340 películas se distribuyen en tres grupos excluyentes según dónde han sido reconocidas. Cada película se cuenta una sola vez.')+'</p></div>'+
       '<div class="pip-panorama-view" data-pip-panel="organismes">'+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
