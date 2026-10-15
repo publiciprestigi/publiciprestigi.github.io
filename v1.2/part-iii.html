@@ -1146,16 +1146,10 @@ body.pip-en-portada .nav-seccions { display: none; }
         else { var _t = setInterval(function() { if (window.PiP_graficCazaIAA) { clearInterval(_t); window.PiP_graficCazaIAA(); } }, 100); }
       }
       if (s.id === 'generacions') {
-        if (!graficSAInit) {
-          graficSAInit = true;
-          if (window.PiP_graficSauraAlmodovar) setTimeout(window.PiP_graficSauraAlmodovar, 50);
-          else { var _tsa = setInterval(function() { if (window.PiP_graficSauraAlmodovar) { clearInterval(_tsa); window.PiP_graficSauraAlmodovar(); } }, 100); }
-        }
-        if (!graficGAInit) {
-          graficGAInit = true;
-          if (window.PiP_graficGeneracioActual) setTimeout(window.PiP_graficGeneracioActual, 100);
-          else { var _tga = setInterval(function() { if (window.PiP_graficGeneracioActual) { clearInterval(_tga); window.PiP_graficGeneracioActual(); } }, 100); }
-        }
+        // Regenerar els gràfics si la secció s'obre abans de rebre les dades.
+        // El mòdul de dades també els inicialitza quan acaba de carregar.
+        if (window.PiP_graficSauraAlmodovar) setTimeout(window.PiP_graficSauraAlmodovar, 80);
+        if (window.PiP_graficGeneracioActual) setTimeout(window.PiP_graficGeneracioActual, 100);
       }
       if (s.id === 'autor-industrial' && !graficAIInit) {
         graficAIInit = true;
