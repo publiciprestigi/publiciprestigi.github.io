@@ -49,3 +49,7 @@
 #pip-panorama-content .pip-panorama-toggle:focus-visible{outline:2px solid #363737;outline-offset:3px}
 #pip-panorama-content .pip-panorama-view[hidden]{display:none!important}
 #pip-panorama-content .pip-panorama-view[data-pip-panel="organismes"]{padding:3px 0 0}
+
+/* Distribució per volum d'espectadors: barres horitzontals apilades. */
+#seccio-espectadors .pip-panorama-canvas-public{height:365px}
+@media(max-width:540px){#seccio-espectadors .pip-panorama-canvas-public{height:385px}}
