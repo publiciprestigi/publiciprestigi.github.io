@@ -21,6 +21,7 @@
   const institutional = {'Cannes':'#9B2335','Venècia':'#B84555','Berlín':'#CC6977','Sant Sebastià':'#DA929A','Oscar':'#c8a000','EFA':'#C5AE63'};
   const key = f => f.any + '|' + String(f.titol).normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'');
   const pct = (v,n) => (v*100/n).toLocaleString(es?'es-ES':'ca-ES',{maximumFractionDigits:1,minimumFractionDigits:1})+'%';
+  const pctWhole = (v,n) => Math.round(v*100/n)+'%';
   const int = v => v.toLocaleString(es?'es-ES':'ca-ES');
   const options = {responsive:true,maintainAspectRatio:false,animation:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'rgba(45,45,45,.95)',titleFont:{family:'Inter',size:12},bodyFont:{family:'Inter',size:12},padding:10,cornerRadius:6}},scales:{}};
   function normRows(fest,oscar,efa) {
@@ -76,18 +77,20 @@
     const orderedBands=order.map(i=>bands[i]);
     const orderedCounts=order.map(i=>bandCounts[i]);
     const orderedGroups=order.map(i=>data.filter(bands[i][1]));
-    const groupCounts=legend.map(([k])=>orderedGroups.map(g=>g.filter(f=>classificacio(f)===k).length));
+    const publicLegend=[['fest',tr('Només festivals','Solo festivales')],['acad',tr('Acadèmies','Academias')]];
+    const publicLegendHTML=publicLegend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+palette[k]+'"></i>'+l+'</span>').join('');
+    const groupCounts=publicLegend.map(([k])=>orderedGroups.map(g=>g.filter(f=>k==='fest'?classificacio(f)==='fest':classificacio(f)!=='fest').length));
     if(groupCounts.reduce((n,row)=>n+row.reduce((a,b)=>a+b,0),0)!==data.length) throw Error('Distribució incompleta');
     host.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Procedència del reconeixement internacional (1965–2025)','Procedencia del reconocimiento internacional (1965–2025)'))+
       '<div class="pip-panorama-switch" role="group" aria-label="'+tr('Vista de la procedència','Vista de la procedencia')+'">'+
-      '<button class="pip-panorama-toggle is-active" type="button" data-pip-vista="circuits" aria-pressed="true">'+tr('Per circuits','Por circuitos')+'</button>'+
-      '<button class="pip-panorama-toggle" type="button" data-pip-vista="organismes" aria-pressed="false">'+tr('Per festivals i acadèmies','Por festivales y academias')+'</button></div>'+
-      '<div class="pip-panorama-view" data-pip-panel="circuits">'+
+      '<button class="pip-panorama-toggle is-active" type="button" data-pip-vista="organismes" aria-pressed="true">'+tr('Per festivals i acadèmies','Por festivales y academias')+'</button>'+
+      '<button class="pip-panorama-toggle" type="button" data-pip-vista="circuits" aria-pressed="false">'+tr('Per circuits','Por circuitos')+'</button></div>'+
+      '<div class="pip-panorama-view" data-pip-panel="circuits" hidden>'+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
       '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p></div>'+
-      '<div class="pip-panorama-view" data-pip-panel="organismes" hidden>'+
+      '<div class="pip-panorama-view" data-pip-panel="organismes">'+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
       '<p class="pip-panorama-nota">'+tr('Els totals no són acumulables: una pel·lícula pot aparèixer en més d’un festival o acadèmia.','Los totales no son acumulables: una película puede aparecer en más de un festival o academia.')+'</p></div>'+
       source()+'</div>';
@@ -109,7 +112,7 @@
       ''; 
     publicHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
-      '<div class="pip-panorama-legend">'+legendHTML+'</div>'+ 
+      '<div class="pip-panorama-legend">'+publicLegendHTML+'</div>'+ 
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('Cada barra mostra el total de films de la franja, desglossat per procedència del reconeixement. El punt lila identifica el Top 100.','Cada barra muestra el total de películas de la franja, desglosado según el origen del reconocimiento. El punto violeta identifica el Top 100.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
@@ -119,7 +122,7 @@
       data:{
         labels:orderedBands.map(x=>x[0]),
         datasets:[
-          ...legend.map(([key,label],i)=>({
+          ...publicLegend.map(([key,label],i)=>({
             label, data:groupCounts[i].map((n,index)=>index===order.length-1?0:n),
             backgroundColor:palette[key],hoverBackgroundColor:palette[key],
             borderWidth:0,stack:'circuits',maxBarThickness:25,
@@ -143,7 +146,7 @@
               const n=c.parsed.x;
               if(c.dataIndex===order.length-1) return ' '+int(n)+' '+tr('films','películas');
               const total=orderedCounts[c.dataIndex];
-              return ' '+c.dataset.label+': '+int(n)+' ('+pct(n,total)+')';
+              return ' '+c.dataset.label+': '+int(n)+' ('+pctWhole(n,total)+')';
             },
             footer:items=>items[0]?.dataIndex===order.length-1?'':tr('Total: ','Total: ')+int(orderedCounts[items[0].dataIndex])
           }
