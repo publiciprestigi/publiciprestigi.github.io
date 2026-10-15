@@ -41,3 +41,11 @@
 #seccio-panorama .pip-panorama-block:last-child{border-bottom:1px solid #e5e5e5}
 #seccio-panorama :is(#pip-panorama-content,#pip-panorama-institucions-bloc,#pip-panorama-evolucio) .pip-panorama-block:last-child{border-bottom:1px solid #e5e5e5}
 #seccio-espectadors #pip-panorama-espectadors .pip-panorama-block{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:22px 0;margin:18px 0 18px}
+
+/* Selector de vistes — Procedència del reconeixement. */
+#pip-panorama-content .pip-panorama-switch{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin:0 0 23px}
+#pip-panorama-content .pip-panorama-toggle{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 13px;font:500 11px/1 'Inter',-apple-system,Arial,sans-serif;cursor:pointer}
+#pip-panorama-content .pip-panorama-toggle.is-active,#pip-panorama-content .pip-panorama-toggle[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
+#pip-panorama-content .pip-panorama-toggle:focus-visible{outline:2px solid #363737;outline-offset:3px}
+#pip-panorama-content .pip-panorama-view[hidden]{display:none!important}
+#pip-panorama-content .pip-panorama-view[data-pip-panel="organismes"]{padding:3px 0 0}
