@@ -29,12 +29,12 @@ const awardLabel3 = premi => PIP_III_ES ? (AWARD_LABEL_III[premi] || premi) : pr
 
 const FC = {
   'Cannes':       '#9B2335',
-  'Berlín':       '#1976D2',
-  'Venècia':      '#2E7D5E',
-  'Sant Sebastià':'#E07B2A',
+  'Berlín':       '#CC6977',
+  'Venècia':      '#B84555',
+  'Sant Sebastià':'#DA929A',
 };
 const OSCAR_COLOR = '#c8a000';
-const EFA_COLOR = '#8C6239';
+const EFA_COLOR = '#C5AE63';
 
 const fmt = n => n == null ? '—' : n.toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES');
 
@@ -709,7 +709,7 @@ function construirBretxa() {
 
   // Colors semàfor segons ràtio
   function colorRatio(r) {
-    if (r > 0.25)  return { fons: '#e6f0e8', text: '#2E7D5E' }; // verd
+    if (r > 0.25)  return { fons: '#e6f0e8', text: '#B84555' }; // verd
     if (r >= 0.10) return { fons: '#faefdb', text: '#b87509' }; // taronja
     return { fons: '#f7e3e3', text: '#a93226' };                // vermell
   }
@@ -746,7 +746,7 @@ window.PiP_graficBretxa = function() {
 
   // Color de cada punt de la ràtio segons llindar (semàfor)
   function colorPunt(r) {
-    if (r > 0.25)  return '#2E7D5E'; // verd
+    if (r > 0.25)  return '#B84555'; // verd
     if (r >= 0.10) return '#b87509'; // taronja
     return '#a93226';                // vermell
   }
