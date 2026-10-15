@@ -109,7 +109,7 @@
       ''; 
     publicHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
-      '<div class="pip-panorama-legend">'+legendHTML+'</div>'+ 
+      '<div class="pip-panorama-legend">'+legendHTML+'<span class="pip-panorama-key"><i style="background:#bdbdbd"></i>'+tr('Sense dades','Sin datos')+'</span></div>'+ 
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
       '<p class="pip-panorama-nota">'+tr('Cada barra mostra el total de films de la franja, desglossat per procedència del reconeixement. El punt lila identifica el Top 100.','Cada barra muestra el total de películas de la franja, desglosado según el origen del reconocimiento. El punto violeta identifica el Top 100.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
@@ -118,11 +118,17 @@
       type:'bar',
       data:{
         labels:orderedBands.map(x=>x[0]),
-        datasets:legend.map(([key,label],i)=>({
-          label, data:groupCounts[i],
-          backgroundColor:palette[key],hoverBackgroundColor:palette[key],
-          borderWidth:0,stack:'circuits',maxBarThickness:25,
-        }))
+        datasets:[
+          ...legend.map(([key,label],i)=>({
+            label, data:groupCounts[i].map((n,index)=>index===order.length-1?0:n),
+            backgroundColor:palette[key],hoverBackgroundColor:palette[key],
+            borderWidth:0,stack:'circuits',maxBarThickness:25,
+          })),
+          {label:tr('Sense dades','Sin datos'),
+           data:orderedCounts.map((n,index)=>index===order.length-1?n:0),
+           backgroundColor:'#bdbdbd',hoverBackgroundColor:'#bdbdbd',
+           borderWidth:0,stack:'circuits',maxBarThickness:25}
+        ]
       },
       options:{
         ...options,indexAxis:'y',
@@ -133,6 +139,7 @@
           callbacks:{
             title:items=>items[0]?.label||'',
             label:c=>' '+c.dataset.label+': '+int(c.parsed.x),
+            filter:c=>c.parsed.x>0,
             footer:items=>tr('Total: ','Total: ')+int(items.reduce((sum,item)=>sum+item.parsed.x,0))
           }
         }},
