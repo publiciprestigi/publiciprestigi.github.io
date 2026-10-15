@@ -49,19 +49,19 @@
     const counts={fest:0,both:0,acad:0};
     for(const f of data) counts[classificacio(f)]++;
     const legend=[
-      ['fest',tr('Només festivals','Solo festivales')],
-      ['both',tr('Festivals i acadèmies','Festivales y academias')],
-      ['acad',tr('Només acadèmies','Solo academias')]
+      ['fest',tr('Només films de festivals','Solo películas de festivales')],
+      ['both',tr('Films coincidents en festivals i acadèmies','Películas coincidentes en festivales y academias')],
+      ['acad',tr('Només films d’acadèmies','Solo películas de academias')]
     ];
     const legendHTML = legend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+palette[k]+'"></i>'+l+'</span>').join('');
     const institutions=['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
     const institute = institutions.map(n=>({name:n,n:data.filter(f=>f.institucions.has(n)).length}));
     const max=Math.max(...institute.map(x=>x.n));
-    const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><strong>'+int(a.n)+'</strong></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
+    const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><strong>'+int(a.n)+' '+tr('films','películas')+'</strong></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
     const decades=['60s','70s','80s','90s','2000s','2010s','2020s'];
     const groups=decades.map((d,i)=>data.filter(f=>f.any>=(i===0?1965:i===1?1970:i===2?1980:i===3?1990:i===4?2000:i===5?2010:2020)&&f.any<=(i===0?1969:i===1?1979:i===2?1989:i===3?1999:i===4?2009:i===5?2019:2025)));
     const bands=[
-      [tr('Top 100','Top 100'), f=>f.top],
+      [tr('Més de 2,02M (Top 100)','Más de 2,02M (Top 100)'), f=>f.top],
       [tr('1M–2,02M','1M–2,02M'),f=>!f.top&&f.espectadors>=1000000],
       ['500K–1M',f=>!f.top&&f.espectadors>=500000&&f.espectadors<1000000],
       ['250K–500K',f=>f.espectadors>=250000&&f.espectadors<500000],
@@ -77,7 +77,7 @@
     const orderedBands=order.map(i=>bands[i]);
     const orderedCounts=order.map(i=>bandCounts[i]);
     const orderedGroups=order.map(i=>data.filter(bands[i][1]));
-    const publicLegend=[['fest',tr('Només festivals','Solo festivales')],['acad',tr('Acadèmies','Academias')]];
+    const publicLegend=[['fest',tr('Només reconegudes per festivals','Solo reconocidas por festivales')],['acad',tr('Reconegudes per acadèmies','Reconocidas por academias')]];
     const publicLegendHTML=publicLegend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+palette[k]+'"></i>'+l+'</span>').join('');
     const groupCounts=publicLegend.map(([k])=>orderedGroups.map(g=>g.filter(f=>k==='fest'?classificacio(f)==='fest':classificacio(f)!=='fest').length));
     if(groupCounts.reduce((n,row)=>n+row.reduce((a,b)=>a+b,0),0)!==data.length) throw Error('Distribució incompleta');
@@ -89,10 +89,10 @@
       '<div class="pip-panorama-view" data-pip-panel="circuits" hidden>'+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució de 340 pel·lícules per origen','Distribución de 340 películas por origen')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
       '<div class="pip-panorama-three">'+legend.map(([k,l])=>'<div><span class="pip-panorama-num">'+int(counts[k])+'</span><span class="pip-panorama-perc">'+pct(counts[k],data.length)+'</span><span class="pip-panorama-label"><i style="background:'+palette[k]+'"></i>'+l+'</span></div>').join('')+'</div>'+
-      '<p class="pip-panorama-nota">'+tr('32 pel·lícules coincideixen en tots dos circuits.','32 películas coinciden en ambos circuitos.')+'</p></div>'+
+      '<p class="pip-panorama-nota">'+tr('Els 340 films es reparteixen en tres grups excloents segons on han estat reconeguts. Cada film es compta una sola vegada.','Las 340 películas se distribuyen en tres grupos excluyentes según dónde han sido reconocidas. Cada película se cuenta una sola vez.')+'</p></div>'+
       '<div class="pip-panorama-view" data-pip-panel="organismes">'+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
-      '<p class="pip-panorama-nota">'+tr('Els totals no són acumulables: una pel·lícula pot aparèixer en més d’un festival o acadèmia.','Los totales no son acumulables: una película puede aparecer en más de un festival o academia.')+'</p></div>'+
+      '<p class="pip-panorama-nota">'+tr('Cada xifra indica el nombre de films reconeguts per l’organisme. Els totals no es poden sumar perquè alguns films tenen reconeixements tant en festivals com en acadèmies.','Cada cifra indica el número de películas reconocidas por cada organismo. Los totales no pueden sumarse porque algunas películas tienen reconocimientos tanto en festivales como en academias.')+'</p></div>'+
       source()+'</div>';
     host.querySelectorAll('[data-pip-vista]').forEach(button => button.addEventListener('click', () => {
       const view=button.dataset.pipVista;
@@ -114,7 +114,7 @@
       cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
       '<div class="pip-panorama-legend">'+publicLegendHTML+'</div>'+ 
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
-      '<p class="pip-panorama-nota">'+tr('Cada barra mostra el total de films de la franja, desglossat per procedència del reconeixement. El punt lila identifica el Top 100.','Cada barra muestra el total de películas de la franja, desglosado según el origen del reconocimiento. El punto violeta identifica el Top 100.')+'</p>'+source()+'</div>';
+      '<p class="pip-panorama-nota">'+tr('Cada barra mostra el total de films de la franja, diferenciant els reconeguts només als festivals dels que tenen algun reconeixement d’acadèmia.','Cada barra muestra el total de películas de la franja, diferenciando las reconocidas solo en festivales de las que tienen algún reconocimiento de academia.')+'</p>'+source()+'</div>';
     const base={...options,scales:{x:{grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}},y:{beginAtZero:true,stacked:true,grid:{color:'#eee'},ticks:{precision:0,font:{family:'Inter',size:11},color:'#777'}}}};
     const chartDecades = new Chart(document.getElementById('pip-panorama-decades'),{type:'bar',data:{labels:decades,datasets:legend.map(([k,l])=>({label:l,data:groups.map(g=>g.filter(f=>classificacio(f)===k).length),backgroundColor:palette[k],hoverBackgroundColor:palette[k],borderWidth:0,stack:'total'}))},options:{...base,plugins:{...options.plugins,tooltip:{...options.plugins.tooltip,callbacks:{label:c=>' '+c.dataset.label+': '+c.parsed.y}}},scales:{...base.scales,x:{...base.scales.x,stacked:true}}}});
     const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{
@@ -156,17 +156,7 @@
           y:{stacked:true,grid:{display:false},ticks:{font:{family:'Inter',size:11},color:'#666'}}
         }
       },
-      plugins:[{
-        id:'pip-top100-band-label',
-        afterDraw(chart){
-          const index=order.indexOf(0),axis=chart.scales.y;
-          if(index<0||!axis)return;
-          const y=axis.getPixelForValue(index);
-          const x=axis.left-9;
-          const ctx=chart.ctx;
-          ctx.save();ctx.fillStyle='#5a4a8a';ctx.beginPath();ctx.arc(x,y,3.5,0,Math.PI*2);ctx.fill();ctx.restore();
-        }
-      }]
+      plugins:[]
     });
     window.PiP_panoramaResize = () => { chartDecades.resize(); };
     window.PiP_panoramaEspectadorsResize = () => { chartPublic.resize(); };
