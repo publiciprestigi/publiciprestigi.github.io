@@ -1,7 +1,11 @@
 <!-- intro -->
-El reconeixement internacional del cinema espanyol procedeix de dos circuits diferents: els festivals i els premis de les acadèmies. El primer gràfic presenta la distribució dels 340 films del corpus segons la procedència d'aquest reconeixement, amb els casos que coincideixen en tots dos circuits i el pes de cadascun dels sis organismes estudiats.
+El reconeixement internacional del cinema espanyol s'articula a través de dos circuits: els festivals i les acadèmies cinematogràfiques. Dels 340 films estudiats, alguns han estat reconeguts en tots dos àmbits. El primer gràfic mostra la procedència del conjunt, diferenciant els dos circuits i els casos compartits.
 <!-- /intro -->
 
+<!-- institucions -->
+Si desglossem el conjunt per festivals i acadèmies, apareixen perfils i volums diferents. El recompte per organisme permet situar les sis fonts de reconeixement, tenint present que una mateixa pel·lícula pot figurar en més d'una.
+<!-- /institucions -->
+
 <!-- evolucio -->
-La perspectiva històrica permet observar com varia aquesta presència internacional al llarg de les dècades. El segon gràfic distribueix les pel·lícules segons l'any de producció i distingeix els reconeixements de festivals, d'acadèmies i els compartits. La lectura correspon a les pel·lícules del corpus, no al nombre de premis concedits.
+La distribució per dècades afegeix la dimensió històrica: permet veure com ha variat la presència dels films espanyols als dos circuits al llarg del període 1965–2025. Les dates corresponen als anys de producció de les pel·lícules, no als anys de concessió dels premis.
 <!-- /evolucio -->
