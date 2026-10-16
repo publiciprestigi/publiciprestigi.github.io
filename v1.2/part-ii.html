@@ -320,7 +320,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       const next = seccions[idx + 1];
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
-      const destAnt = prev ? { part:'PART II', titol:(prev.nav || prev.titol), url:null } : { part:'PART I', titol:'Rànquing per directors', url:'part-i.html#ranking-directors' };
+      const destAnt = prev ? { part:'PART II', titol:(prev.nav || prev.titol), url:null } : { part:'PART I', titol:'Rànquing per directors', url:'part-i.html#directors' };
       const destSeg = next ? { part:'PART II', titol:(next.nav || next.titol), url:null } : { part:'PART III', titol:'Començar', url:'part-iii.html' };
       const pintaBoto = (btn, dest, direccio) => {
         btn.style.visibility = dest ? 'visible' : 'hidden';
