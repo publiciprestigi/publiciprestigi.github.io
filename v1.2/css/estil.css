@@ -318,6 +318,10 @@ body.cap-hidden .sidebar {
 /* Seccions */
 .seccio-contingut { display: none; max-width: var(--amplada-text); }
 
+/* L'amplada de la navegació segueix la lectura; les seccions amb contingut ample poden ocupar tot l'espai. */
+.nav-seccions { width:100%; max-width:var(--amplada-text); }
+.nav-seccions.pip-nav-ampla { max-width:none; }
+
 /* Navegació anterior/següent */
 .nav-seccions {
   display: flex;
