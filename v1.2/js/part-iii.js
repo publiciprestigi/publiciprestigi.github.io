@@ -859,6 +859,44 @@ window.PiP_graficBretxa = function() {
 /* ============================================================
    CAZA-ALCARRAS — Taula comparativa i gràfic IAA
    ============================================================ */
+
+/* Les taules de trajectòries comparteixen el corpus de la Part II. */
+function reconeixementsTrajectoria(f) {
+  const noms = {
+    'Mujeres al borde…': 'Mujeres al borde de un ataque de nervios',
+    'Átame': 'Átame!',
+    'Ay, Carmela': '¡Ay, Carmela!'
+  };
+  const titol = noms[f.titol] || f.titol;
+  const registre = corpusPrestigiData.find(x => x.any === f.any && x.titol === titol);
+  if (!registre) return '—';
+  return [celFestival(registre),celAcademies(registre)].filter(x=>x!=='—').join(' · ') || '—';
+}
+
+// Files dels EFA incorporades a la Part II i absents de la selecció de trajectòries.
+// Es calculen a partir dels mateixos espectadors i mercats que la resta del projecte.
+function novaFilaEFA(titol) {
+  const f = efaData.find(x=>x.titol===titol);
+  if (!f || f.espectadors == null) throw new Error('EFA sense espectadors: '+titol);
+  const m = marketData.find(x=>x.any===f.any);
+  if (!m) throw new Error('Mercat no trobat: '+f.any);
+  const penetracio = 100*f.espectadors/(m.poblacio_M*1e6);
+  const quota = 100*f.espectadors/(m.entrades_M*1e6);
+  const factor = f.any<1984?1:f.any<1990?3:f.any<1995?2.5:f.any<=2005?2.15:f.any<=2019?2.5:3.25;
+  const iaa = f.espectadors*factor;
+  const fmtPct = n=>n.toFixed(2).replace('.',',')+'%'+(m.estimat?'≈':'');
+  const iaaTxt = iaa>=1e6?'~'+(iaa/1e6).toFixed(2).replace('.',',')+'M':'~'+Math.round(iaa/1000)*1000;
+  const iaaForm = iaa>=1e6?iaaTxt:'~'+Math.round(iaa).toLocaleString('de-DE');
+  return {
+    any:f.any,titol:f.titol,festival:null,premiat:String(f.reconeixement).includes('★'),
+    esp:f.espectadors,top100:null,
+    mercat:String(m.entrades_M).replace('.',',')+'M'+(m.estimat?'≈':''),
+    penetr:fmtPct(penetracio),quota:fmtPct(quota),
+    iic:Math.sqrt(penetracio*quota/2.15).toFixed(2).replace('.',','),
+    iaa_xifra:iaaForm,iaa_mult:'',iaa_est:true
+  };
+}
+
 function construirCazaAlcarras() {
   const cont = document.getElementById('taula-caza-comparativa');
   if (!cont) return;
@@ -894,8 +932,7 @@ function construirCazaAlcarras() {
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${f.director}</td>
-      <td>${nomFest(f.festival)}</td>
-      <td class="col-center">${premi}</td>
+      <td>${reconeixementsTrajectoria(f)}</td>
       <td class="col-center col-subtil">—</td>
       <td class="col-num">${fmt(f.espectadors)}</td>
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
@@ -1098,8 +1135,7 @@ const COLORS_DIRECTOR = {
 const TAULA_PELI_HEADER = `
   <th style="width:30%">${pip3T('Títol','Título')}</th>
   <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
-  <th style="width:70px">Festival</th>
-  <th class="col-center" style="width:30px">★</th>
+  <th style="min-width:170px">${pip3T('Reconeixement','Reconocimiento')}</th>
   <th class="col-center" style="width:60px">Top 100</th>
   <th class="col-num" style="width:100px">${pip3T('Espectadors','Espectadores')}</th>
   <th class="col-num" style="width:65px">${pip3T('Mercat','Mercado')}</th>
@@ -1166,6 +1202,11 @@ function construirDuesGeneracions() {
     { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:688335, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,45%', quota:'1,06%', iic:'0,85', iaa_xifra:'~2,24M', iaa_mult:'', iaa_est:true },
   ];
 
+  FILMS_SAURA.push(...['Goya en Burdeos','Fados','Io, Don Giovanni'].map(novaFilaEFA));
+  FILMS_ALMODOVAR.push(...['La mala educación','Los amantes pasajeros'].map(novaFilaEFA));
+  FILMS_SAURA.sort((a,b)=>a.any-b.any);
+  FILMS_ALMODOVAR.sort((a,b)=>a.any-b.any);
+
   renderTaulaGen(FILMS_SAURA, 'taula-saura', 'Carlos Saura');
   renderTaulaGen(FILMS_ALMODOVAR, 'taula-almodovar', 'Pedro Almodóvar');
   renderTaulaGen(FILMS_ACTUAL, 'taula-actual', null);  // director per fila
@@ -1186,7 +1227,7 @@ function renderTaulaGen(films, contId, directorFix) {
     const premi = f.premiat ? '<span class="estrella">★</span>' : '';
     const titolCell = `<strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.any})</span>`;
     const dir = directorFix || f.director;
-    const fest = f.festival ? nomFest(f.festival) : '<span class="col-subtil">—</span>';
+    const recon = reconeixementsTrajectoria(f);
     let topText = '—';
     if (f.top100) {
       topText = f.top100.globalPos
@@ -1199,8 +1240,7 @@ function renderTaulaGen(films, contId, directorFix) {
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
       <td class="col-subtil">${dir}</td>
-      <td>${fest}</td>
-      <td class="col-center">${premi}</td>
+      <td>${recon}</td>
       <td class="col-center">${top}</td>
       <td class="col-num">${fmt(f.esp)}</td>
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
