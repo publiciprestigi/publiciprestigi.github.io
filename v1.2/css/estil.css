@@ -328,8 +328,18 @@ body.cap-hidden .sidebar {
   box-sizing:border-box;
   margin-top:48px;
   padding-top:24px;
-  border-top:1px solid var(--color-linia);
+  border-top:0;
+  position:relative;
   align-items:stretch;
+}
+.nav-seccions::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:var(--pip-amplada-linia, 720px);
+  max-width:100%;
+  border-top:1px solid var(--color-linia);
 }
 .nav-seccions .nav-seccio-btn,
 .pip-entrada-cta .nav-seccio-btn {
