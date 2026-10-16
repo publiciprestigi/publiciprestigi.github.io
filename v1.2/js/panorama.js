@@ -83,7 +83,7 @@
       '<div class="pip-panorama-view" data-pip-panel="circuits" hidden>'+
       '<div class="pip-circuit-key">'+legend.map(([k,l])=>'<div class="pip-circuit-key-item"><span class="pip-circuit-key-label"><i style="background:'+palette[k]+'"></i>'+l+'</span><span class="pip-circuit-key-stats"><strong>'+int(counts[k])+'</strong> '+tr('films','películas')+' <span>· '+pct(counts[k],data.length)+'</span></span></div>').join('')+'</div>'+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució dels 340 films en tres grups','Distribución de las 340 películas en tres grupos')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' '+tr('films','películas')+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
-      '<p class="pip-panorama-nota">'+tr('Els 340 films es reparteixen en tres grups excloents segons on han estat reconeguts. Cada film es compta una sola vegada.','Las 340 películas se distribuyen en tres grupos excluyentes según dónde han sido reconocidas. Cada película se cuenta una sola vez.')+'</p></div>'+
+      '<p class="pip-panorama-nota">'+tr('Distribució dels films segons el circuit de reconeixement, als festivals, a les acadèmies o en tots dos.','Distribución de las películas según el circuito de reconocimiento, en los festivales, en las academias o en ambos.')+'</p></div>'+
       '<div class="pip-panorama-view" data-pip-panel="organismes">'+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
       '<p class="pip-panorama-nota">'+tr('Nombre de pel·lícules reconegudes en cadascun dels quatre festivals i les dues acadèmies.','Número de películas reconocidas en cada uno de los cuatro festivales y las dos academias.')+'</p></div>'+
