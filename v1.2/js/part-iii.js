@@ -1748,7 +1748,7 @@ window.PiP_graficGeneracioActual = function() {
             color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
-          title: { display: true, text: pip3T('Espectadors (sala + IAA estimat)','Espectadores (salas + IAA estimado)'), font: { size: 12 } },
+          title: { display: true, text: pip3T('Espectadors','Espectadores'), font: { size: 12 } },
         },
         y: {
           stacked: true,
