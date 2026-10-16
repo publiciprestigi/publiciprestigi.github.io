@@ -179,78 +179,58 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="text-md text-md-intermedi" data-bloc="intro-cercle" data-text="part-iii/doble-corona"></div>
 <div id="taula-segon-cercle"></div>
 <div class="text-md text-md-comentari" data-bloc="comentari-cercle" data-text="part-iii/doble-corona" style="border-top:none;padding-top:0;margin-top:28px"></div>
-<div id="grafic-contacte-prestigi" aria-label="Coincidència entre públic i prestigi: 17 dobles corones (5%), 34 films del segon cercle (10%) i 289 restants (85%), sobre 340 films">
+<div id="grafic-contacte-prestigi" aria-label="Creuament entre 100 films de públic i 340 films de prestigi, amb 17 pel·lícules compartides">
   <p class="contacte-titol">La doble corona: la coincidència entre públic i prestigi (1965–2025)</p>
-  <p class="contacte-resum"><strong>17</strong> dobles corones <span>·</span> <strong>5%</strong> del total de 340 pel·lícules</p>
-  <div class="contacte-barra" role="group" aria-label="Distribució proporcional dels 340 films">
-    <button class="contacte-segment contacte-corona" type="button" aria-label="17 dobles corones, 5% del total; pel·lícules del Top 100 amb almenys 2.020.217 espectadors" data-globus="17 films de la doble corona (Top 100 + reconeixement internacional)" style="flex:17"></button>
-    <button class="contacte-segment contacte-cercle" type="button" aria-label="34 films del segon cercle, 10% del total; entre un milió i el llindar del Top 100" data-globus="34 films del segon cercle (només reconeixement internacional)" style="flex:34"></button>
-    <button class="contacte-segment contacte-resta" type="button" aria-label="289 films restants, 85% del total; fora dels dos grups" data-globus="289 films restants (només reconeixement internacional)" style="flex:289"></button>
+  <div class="contacte-llegenda" aria-label="Llegenda del gràfic">
+    <span><i class="contacte-clau contacte-public"></i>Només públic</span>
+    <span><i class="contacte-clau contacte-prestigi"></i>Només prestigi</span>
+    <span><i class="contacte-clau contacte-corona"></i>Coincidència</span>
   </div>
-  <p class="contacte-unitat">Franges d’espectadors</p>
-  <div class="contacte-llegenda">
-    <div class="contacte-llegenda-principal"><i class="contacte-clau contacte-corona"></i><strong>5%</strong><span>Més de 2,02M</span></div>
-    <div><i class="contacte-clau contacte-cercle"></i><strong>10%</strong><span>Entre 1M i 2,02M</span></div>
-    <div><i class="contacte-clau contacte-resta"></i><strong>85%</strong><span>Menys d’1M</span></div>
+  <div class="contacte-fila">
+    <div class="contacte-cap"><strong>Part I — Públic</strong><span>100 films</span></div>
+    <div class="contacte-barra" role="img" aria-label="Dels 100 films més vistos, 83 són només de públic i 17 coincideixen amb el corpus de prestigi">
+      <span class="contacte-segment contacte-public" style="flex:83" title="83 films només de públic"></span>
+      <span class="contacte-segment contacte-corona" style="flex:17" title="17 films compartits"></span>
+    </div>
+    <div class="contacte-dades"><span>83 només públic</span><strong>17 compartits · 17%</strong></div>
   </div>
-  <div class="contacte-globus" role="status" aria-live="polite"></div>
-  <p class="contacte-nota">Coincidència entre les 100 pel·lícules amb més espectadors (Part I) i les 340 pel·lícules reconegudes als festivals i acadèmies (Part II).</p>
+  <div class="contacte-fila">
+    <div class="contacte-cap"><strong>Part II — Prestigi</strong><span>340 films</span></div>
+    <div class="contacte-barra" role="img" aria-label="Dels 340 films reconeguts internacionalment, 323 no són al Top 100 i 17 sí">
+      <span class="contacte-segment contacte-prestigi" style="flex:323" title="323 films només de prestigi"></span>
+      <span class="contacte-segment contacte-corona" style="flex:17" title="17 films compartits"></span>
+    </div>
+    <div class="contacte-dades"><span>323 només prestigi</span><strong>17 compartits · 5%</strong></div>
+  </div>
+  <p class="contacte-resultat"><strong>17</strong> dobles corones <span>·</span> presents en tots dos corpus</p>
+  <p class="contacte-nota">Cada barra representa el 100% del seu corpus, amb escala pròpia. Els 17 títols liles són els mateixos en totes dues barres.</p>
+  <p class="contacte-segon"><strong>Segon cercle · 34 films</strong> amb reconeixement internacional i entre 1M i 2,02M d’espectadors, fora del Top 100.</p>
 </div>
 <style>
-  #grafic-contacte-prestigi{position:relative;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:23px 0 20px;margin:23px 0 28px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif;color:#363737}
-  #grafic-contacte-prestigi .contacte-titol{text-align:center;font-size:.82em;font-weight:700;margin:0 0 14px}
-  #grafic-contacte-prestigi .contacte-resum{text-align:center;font-size:14px;margin:0 0 17px;color:#666}
-  #grafic-contacte-prestigi .contacte-resum strong{font-size:20px;color:#5a4a8a;font-variant-numeric:tabular-nums}
-  #grafic-contacte-prestigi .contacte-resum span{margin:0 6px;color:#aaa}
-  #grafic-contacte-prestigi .contacte-barra{display:flex;gap:2px;height:29px;overflow:hidden;border-radius:3px;width:100%}
-  #grafic-contacte-prestigi .contacte-segment{min-width:0;display:block;border:0;border-radius:0;padding:0;cursor:pointer}
-  #grafic-contacte-prestigi .contacte-segment:hover{opacity:1}#grafic-contacte-prestigi .contacte-segment:focus-visible{outline:1px solid #363737;outline-offset:-1px}
-  #grafic-contacte-prestigi .contacte-corona{background:#5a4a8a}
-  #grafic-contacte-prestigi .contacte-cercle{background:#858585}
-  #grafic-contacte-prestigi .contacte-resta{background:#dedede}
-  #grafic-contacte-prestigi .contacte-unitat{text-align:center;font-size:11px;color:#777;margin:12px 0 -6px}
-  #grafic-contacte-prestigi .contacte-llegenda{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:15px;font-size:12px}
-  #grafic-contacte-prestigi .contacte-llegenda>div{display:flex;align-items:center;gap:6px}
-  #grafic-contacte-prestigi .contacte-clau{display:inline-block;flex:0 0 9px;width:9px;height:9px;border-radius:2px}
-  #grafic-contacte-prestigi .contacte-llegenda strong{font-variant-numeric:tabular-nums}#grafic-contacte-prestigi .contacte-llegenda-principal strong{font-weight:800;color:#363737}#grafic-contacte-prestigi .contacte-llegenda-principal span{font-weight:600;color:#363737}
-  #grafic-contacte-prestigi .contacte-llegenda span{color:#666}
-  #grafic-contacte-prestigi .contacte-globus{display:none;position:absolute;z-index:10;max-width:min(340px,calc(100% - 16px));width:max-content;padding:8px 10px;background:rgba(45,45,45,.95);color:#fff;border-radius:6px;font-size:12px;line-height:1.45;text-align:center;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.12);transform:translateX(-50%)}
-  #grafic-contacte-prestigi .contacte-globus::after{content:'';position:absolute;top:100%;left:var(--contacte-arrow,50%);transform:translateX(-50%);border:6px solid transparent;border-top-color:rgba(45,45,45,.95)}
-  #grafic-contacte-prestigi .contacte-globus.obert{display:block}
-  #grafic-contacte-prestigi .contacte-nota{text-align:center;margin:14px auto 0;max-width:850px;padding:0 12px;font-size:14px;color:#666;line-height:1.45;font-style:italic}
-  @media(max-width:600px){#grafic-contacte-prestigi .contacte-llegenda{gap:8px 14px;font-size:11px}#grafic-contacte-prestigi .contacte-llegenda>div{gap:4px}#grafic-contacte-prestigi .contacte-barra{height:26px}}
+#grafic-contacte-prestigi{border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;padding:23px 0 20px;margin:23px 0 28px;font-family:Inter,-apple-system,'SF Pro Text',sans-serif;color:#363737}
+#grafic-contacte-prestigi .contacte-titol{text-align:center;font-size:.82em;font-weight:700;margin:0 0 16px}
+#grafic-contacte-prestigi .contacte-llegenda{display:flex;justify-content:center;gap:14px 24px;flex-wrap:wrap;margin:0 0 24px;font-size:12px;color:#555}
+#grafic-contacte-prestigi .contacte-llegenda>span{display:flex;align-items:center;gap:6px}
+#grafic-contacte-prestigi .contacte-clau{display:inline-block;width:10px;height:10px;flex:0 0 10px;border-radius:2px}
+#grafic-contacte-prestigi .contacte-public{background:#1E4080}
+#grafic-contacte-prestigi .contacte-prestigi{background:#9B2335}
+#grafic-contacte-prestigi .contacte-corona{background:#5a4a8a}
+#grafic-contacte-prestigi .contacte-fila{max-width:760px;margin:0 auto 22px}
+#grafic-contacte-prestigi .contacte-cap,#grafic-contacte-prestigi .contacte-dades{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+#grafic-contacte-prestigi .contacte-cap{margin-bottom:7px;font-size:13px}
+#grafic-contacte-prestigi .contacte-cap>span{font-size:12px;color:#777}
+#grafic-contacte-prestigi .contacte-barra{display:flex;gap:2px;height:29px;overflow:hidden;border-radius:2px;width:100%}
+#grafic-contacte-prestigi .contacte-segment{display:block;min-width:0}
+#grafic-contacte-prestigi .contacte-dades{margin-top:7px;font-size:12px;color:#666}
+#grafic-contacte-prestigi .contacte-dades strong{font-size:12px;font-weight:600;color:#5a4a8a}
+#grafic-contacte-prestigi .contacte-resultat{text-align:center;margin:6px 0 0;font-size:14px;color:#666}
+#grafic-contacte-prestigi .contacte-resultat strong{font-size:24px;color:#5a4a8a;font-weight:650}
+#grafic-contacte-prestigi .contacte-resultat span{color:#aaa;margin:0 5px}
+#grafic-contacte-prestigi .contacte-nota{text-align:center;max-width:720px;margin:15px auto 0;font-size:14px;line-height:1.45;color:#666;font-style:italic}
+#grafic-contacte-prestigi .contacte-segon{text-align:center;margin:17px auto 0;max-width:720px;font-size:12px;line-height:1.5;color:#777}
+#grafic-contacte-prestigi .contacte-segon strong{font-weight:600;color:#555}
+@media(max-width:540px){#grafic-contacte-prestigi .contacte-llegenda{font-size:11px;gap:8px 12px}#grafic-contacte-prestigi .contacte-dades{font-size:11px}#grafic-contacte-prestigi .contacte-barra{height:26px}}
 </style>
-<script>
-(function(){
-  const bloc=document.getElementById('grafic-contacte-prestigi');
-  if(!bloc)return;
-  const globus=bloc.querySelector('.contacte-globus');
-  const segments=bloc.querySelectorAll('.contacte-segment');
-  function mostra(el){
-    globus.textContent=el.dataset.globus;
-    globus.classList.add('obert');
-    const bar=el.getBoundingClientRect();
-    const root=bloc.getBoundingClientRect();
-    const centre=bar.left+bar.width/2-root.left;
-    const marge=8;
-    const amplada=globus.offsetWidth;
-    const x=Math.max(amplada/2+marge,Math.min(root.width-amplada/2-marge,centre));
-    globus.style.left=x+'px';
-    globus.style.top=(bar.top-root.top-globus.offsetHeight-10)+'px';
-    globus.style.setProperty('--contacte-arrow',Math.max(8,Math.min(amplada-8,amplada/2+centre-x))+'px');
-  }
-  function amaga(){globus.classList.remove('obert');globus.textContent='';}
-  segments.forEach(el=>{
-    el.addEventListener('mouseenter',()=>mostra(el));
-    el.addEventListener('mouseleave',()=>{if(!el.matches(':focus'))amaga();});
-    el.addEventListener('focus',()=>mostra(el));
-    el.addEventListener('blur',amaga);
-    el.addEventListener('click',()=>{if(globus.classList.contains('obert')&&globus.textContent===el.dataset.globus)amaga();else mostra(el);});
-  });
-  document.addEventListener('pointerdown',e=>{if(!bloc.contains(e.target))amaga();});
-})();
-</script>
-</div>
 <div class="seccio-contingut" id="seccio-bretxa">
 <div class="text-md text-md-intro" data-bloc="intro" data-text="part-iii/bretxa"></div>
 <div id="taula-bretxa"></div>
