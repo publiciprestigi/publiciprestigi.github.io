@@ -318,15 +318,14 @@ body.cap-hidden .sidebar {
 /* Seccions */
 .seccio-contingut { display: none; max-width: var(--amplada-text); }
 
-/* L'amplada de la navegació segueix la lectura; les seccions amb contingut ample poden ocupar tot l'espai. */
-.nav-seccions { width:100%; max-width:var(--amplada-text); }
-.nav-seccions.pip-nav-ampla { max-width:none; }
+/* Navegació compacta sempre ancorada al marge esquerre del contingut. */
+.nav-seccions { width:100%; max-width:var(--amplada-text); box-sizing:border-box; gap:12px; }
 
 /* Navegació anterior/següent */
 .nav-seccions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid var(--color-linia);
@@ -352,7 +351,7 @@ body.cap-hidden .sidebar {
 .nav-seccio-btn .pip-nav-titol { display:block; font-size:0.87rem; color:var(--color-text); }
 @media (max-width:600px) {
   .nav-seccions { gap:8px; }
-  .nav-seccions .nav-seccio-btn { flex:1 1 0; min-width:0; max-width:44%; padding:11px 9px; overflow-wrap:break-word; }
+  .nav-seccions .nav-seccio-btn { flex:0 1 auto; min-width:0; max-width:44%; padding:11px 9px; overflow-wrap:anywhere; }
   .nav-seccions .btn-top { flex:0 0 auto; }
   .nav-seccio-btn .pip-nav-titol { font-size:0.79rem; }
 }
