@@ -321,11 +321,10 @@ body.cap-hidden .sidebar {
 /* Navegació editorial de dues columnes fixes, independent de les taules. */
 .nav-seccions {
   display:grid;
-  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-columns:repeat(2,minmax(0,294px));
   column-gap:12px;
   row-gap:12px;
   width:100%;
-  max-width:600px;
   box-sizing:border-box;
   margin-top:48px;
   padding-top:24px;
@@ -383,7 +382,7 @@ body.cap-hidden .sidebar {
 }
 .nav-seccions .pip-nav-pujar:hover { color:var(--color-text); text-decoration:underline; }
 @media (max-width:600px) {
-  .nav-seccions { column-gap:8px; row-gap:9px; }
+  .nav-seccions { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:8px; row-gap:9px; }
   .nav-seccions .nav-seccio-btn { min-height:92px; padding:11px 10px; }
   .nav-seccio-btn .pip-nav-titol { font-size:.79rem; }
 }
