@@ -1402,7 +1402,9 @@ window.PiP_graficSauraAlmodovar = function() {
           const point = meta.data[i];
           if (!point) return;
           const preferDown = i % 2 !== 0;
-          const dy = (preferDown && point.y + 22 > yBottom) ? -10 : (preferDown ? 18 : -10);
+          // Separar les etiquetes dels films propers a zero del límit inferior.
+          const low = pt.y < 140000;
+          const dy = low ? (i % 2 === 0 ? -15 : -33) : ((preferDown && point.y + 22 > yBottom) ? -10 : (preferDown ? 18 : -10));
           c.fillText(pt.titol, point.x, point.y + dy);
         });
       });
@@ -1494,9 +1496,9 @@ window.PiP_graficSauraAlmodovar = function() {
           grid: { color: '#eee' },
         },
         y: {
-          min: 0, max: 3700000,
+          min: -300000, max: 3700000,
           ticks: {
-            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
+            callback: v => v < 0 ? '' : (v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k'),
             color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
