@@ -176,7 +176,7 @@ function construirPremiades() {
         'Número de films premiados por festival y década.'
       )}</p>
       <p style="text-align:center;font-size:12px;line-height:1.45;color:#888;font-style:normal;margin:6px 0 0">${pipT(
-        'Fonts: arxius oficials dels festivals i fonts complementàries; vegeu «Dades i fonts».',
+        'Fonts: arxius oficials dels festivals i fonts complementàries; vegeu «Dades i criteri».',
         'Fuentes: archivos oficiales de los festivales y fuentes complementarias; véase «Datos y fuentes».'
       )}</p>
 
