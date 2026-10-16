@@ -102,7 +102,7 @@
     publicHost.innerHTML = '<div class="pip-panorama-block">'+
       cap(tr('Distribució dels 340 films per volum d’espectadors (1965–2025)','Distribución de las 340 películas por volumen de espectadores (1965–2025)'))+
       '<div class="pip-panorama-canvas pip-panorama-canvas-public"><canvas id="pip-panorama-public"></canvas></div>'+
-      '<p class="pip-panorama-nota">'+tr('Cada barra representa el nombre de films de la franja. Els cinc films sense dades d’espectadors es mostren separadament en gris.','Cada barra representa el número de películas de la franja. Las cinco películas sin datos de espectadores se muestran por separado en gris.')+'</p>'+source()+'</div>';
+      '<p class="pip-panorama-nota">'+tr('Cada barra representa el nombre de films de la franja.','Cada barra representa el número de películas de la franja.')+'</p>'+source()+'</div>';
     const chartPublic = new Chart(document.getElementById('pip-panorama-public'),{
       type:'bar',
       data:{
