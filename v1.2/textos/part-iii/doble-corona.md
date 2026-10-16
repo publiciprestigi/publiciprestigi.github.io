@@ -39,7 +39,7 @@ Per sota del llindar del Top 100 hi ha 34 pel·lícules amb reconeixement intern
 
 - La concentració temporal continua sent marcada: 2 films pertanyen als 60s, 10 als 70s, 6 als 80s, 6 als 90s i 8 als 2000s. Als 2010s només hi apareixen 2: *La isla mínima* (2014) i *Mientras dure la guerra* (2019), i als 2020s, cap. L’ampliació amb les acadèmies incorpora nous casos: 11 films reconeguts pels Oscar —dos de Buñuel— i 7 pels EFA, amb dos títols d’Almodóvar, també presents als Oscar.
 
-De les 340 pel·lícules amb reconeixement internacional, només 17 formen part també del Top 100 històric d'espectadors, un 5% del conjunt. Aquests mateixos 17 títols representen el 17% del Top 100. La «doble corona» continua sent, per tant, una coincidència excepcional entre públic i prestigi. Els 34 films del «segon cercle» amplien aquesta zona de contacte fins a 51 títols (15%), però queden fora de la intersecció estricta entre els dos circuits. No apareix cap nova «doble corona» des del 2020, en un període marcat pel sotrac de la pandèmia i una recuperació de l'assistència a les sales encara incompleta i incerta.
+De les 340 pel·lícules amb reconeixement internacional, només 17 formen part també del Top 100 històric d'espectadors, un 5% del conjunt. La «doble corona» continua sent, per tant, una coincidència excepcional entre públic i prestigi. Els 34 films del «segon cercle» amplien aquesta zona de contacte fins a 51 títols (15%), però queden fora de la intersecció estricta entre els dos circuits. No apareix cap nova «doble corona» des del 2020, en un període marcat pel sotrac de la pandèmia i una recuperació de l'assistència a les sales encara incompleta i incerta.
 
 
 <!-- /comentari-cercle -->
