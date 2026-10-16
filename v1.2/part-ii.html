@@ -13,7 +13,7 @@
 <title>II — Prestigi · Públic i Prestigi</title>
 <link href="css/estil.css?v=20261015palette5" rel="stylesheet"/>
 <link href="css/textos-extra.css?v=20261015c" rel="stylesheet"/>
-<link href="css/panorama.css?v=20261015circuits1" rel="stylesheet"/>
+<link href="css/panorama.css?v=20261016simple1" rel="stylesheet"/>
 <link href="css/capcalera-subscripcio.css?v=20261014b" rel="stylesheet"/>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -134,7 +134,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="sidebar-grup">
 <div class="sidebar-grup-titol">Context</div>
 <a class="sidebar-link" data-seccio="intro" href="#">Dades i criteri</a>
-<a class="sidebar-link sidebar-link-badge" data-seccio="panorama" href="#"><span>Procedència i evolució</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+<a class="sidebar-link sidebar-link-badge" data-seccio="panorama" href="#"><span>Procedència del reconeixement</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
 </div>
 <div class="sidebar-grup">
 <div class="sidebar-grup-titol">Festivals</div>
@@ -179,9 +179,6 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="seccio-contingut" id="seccio-panorama">
 <div class="text-md text-md-intro" data-bloc="intro" data-text="part-ii/procedencia-evolucio"></div>
 <div id="pip-panorama-content" aria-live="polite"></div>
-<div class="text-md text-md-intermedi" data-bloc="evolucio" data-text="part-ii/procedencia-evolucio"></div>
-<div id="pip-panorama-evolucio"></div>
-<div class="text-md text-md-intermedi" data-bloc="tancament" data-text="part-ii/procedencia-evolucio"></div>
 </div>
 <div class="seccio-contingut" id="seccio-cannes">
 <div class="text-md text-md-intro" data-bloc="intro" data-text="part-ii/festival-cannes"></div>
@@ -289,7 +286,7 @@ body.pip-en-portada .nav-seccions { display: none; }
     const seccions = [
       { id: 'portada', titol: 'Part II — Prestigi', sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'intro',              titol: 'Dades i criteri',                                        sup: 'Reconeixement internacional en festivals i acadèmies' },
-      { id: 'panorama',           titol: 'Procedència i evolució',                                               sup: 'Reconeixement internacional en festivals i acadèmies' },
+      { id: 'panorama',           titol: 'Procedència del reconeixement',                                               sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'premiades',          titol: 'Premiades per dècada',                                   sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'cannes',             titol: 'Festival de Cannes — En Compétition',                     sup: 'Reconeixement internacional en festivals i acadèmies' },
       { id: 'venecia',            titol: 'Festival de Venècia — Concorso',                          sup: 'Reconeixement internacional en festivals i acadèmies' },
@@ -448,7 +445,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <script src="js/scroll-fade.js"></script>
 <script src="js/textos.js"></script>
 <script src="js/part-ii.js?v=20261015hoverfinal"></script>
-<script src="js/panorama.js?v=20261015circuits1"></script>
+<script src="js/panorama.js?v=20261016simple1"></script>
 <script src="js/notes-tooltip.js"></script>
 <!-- ── Drawer mòbil ── -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
@@ -492,7 +489,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="drawer-subseccions">
 <div class="drawer-grup-titol">Context</div>
 <a class="drawer-link" onclick="navegaDrawer('intro')">Dades i criteri</a>
-<a class="drawer-link drawer-link-badge" onclick="navegaDrawer('panorama')"><span>Procedència i evolució</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+<a class="drawer-link drawer-link-badge" onclick="navegaDrawer('panorama')"><span>Procedència del reconeixement</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
 <div class="drawer-grup-titol">Festivals</div>
 <a class="drawer-link" onclick="navegaDrawer('premiades')">Premiades per dècada</a>
 <a class="drawer-link" onclick="navegaDrawer('cannes')">Cannes</a>
