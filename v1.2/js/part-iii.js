@@ -1404,8 +1404,18 @@ window.PiP_graficSauraAlmodovar = function() {
           const preferDown = i % 2 !== 0;
           // Separar les etiquetes dels films propers a zero del límit inferior.
           const low = pt.y < 140000;
-          const dy = low ? (i % 2 === 0 ? -15 : -33) : ((preferDown && point.y + 22 > yBottom) ? -10 : (preferDown ? 18 : -10));
-          c.fillText(pt.titol, point.x, point.y + dy);
+          // Separació puntual per als títols dels films gairebé situats a 0K.
+          // Els punts i l'escala no es mouen; només la posició de les etiquetes.
+          const labelOffsets = {
+            'Fados': { dx: -22, dy: -18 },
+            'Io, Don Giovanni': { dx: 12, dy: -35 },
+            'La noche oscura': { dx: -10, dy: -22 },
+            '¡Dispara!': { dx: 2, dy: -22 },
+            'Taxi': { dx: -12, dy: -19 }
+          };
+          const manual = labelOffsets[pt.titol];
+          const dy = manual ? manual.dy : (low ? -19 : ((preferDown && point.y + 22 > yBottom) ? -10 : (preferDown ? 18 : -10)));
+          c.fillText(pt.titol, point.x + (manual ? manual.dx : 0), point.y + dy);
         });
       });
       c.restore();
