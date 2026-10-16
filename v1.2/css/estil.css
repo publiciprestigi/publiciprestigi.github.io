@@ -337,7 +337,7 @@ body.cap-hidden .sidebar {
   position:absolute;
   top:0;
   left:0;
-  width:var(--pip-amplada-linia, 720px);
+  width:var(--amplada-text);
   max-width:100%;
   border-top:1px solid var(--color-linia);
 }
