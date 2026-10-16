@@ -332,7 +332,8 @@ body.cap-hidden .sidebar {
   border-top:1px solid var(--color-linia);
   align-items:stretch;
 }
-.nav-seccions .nav-seccio-btn {
+.nav-seccions .nav-seccio-btn,
+.pip-entrada-cta .nav-seccio-btn {
   box-sizing:border-box;
   width:100%;
   max-width:none;
@@ -351,6 +352,12 @@ body.cap-hidden .sidebar {
   overflow-wrap:break-word;
 }
 .nav-seccions .nav-seccio-btn:hover { background:#f5f5f5; }
+.pip-entrada-cta .nav-seccio-btn {
+  width:294px;
+  max-width:100%;
+  text-align:center;
+}
+.pip-entrada-cta .nav-seccio-btn:hover { background:#f5f5f5; }
 .nav-seccions #btn-anterior { text-align:left; }
 .nav-seccions #btn-seguent { text-align:right; }
 .nav-seccio-btn .pip-nav-part {
