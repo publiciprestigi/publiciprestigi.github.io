@@ -56,7 +56,7 @@
     const institutions=['Cannes','Venècia','Berlín','Sant Sebastià','Oscar','EFA'];
     const institute = institutions.map(n=>({name:n,n:data.filter(f=>f.institucions.has(n)).length}));
     const max=Math.max(...institute.map(x=>x.n));
-    const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><span class="pip-panorama-inst-count"><strong>'+int(a.n)+'</strong><span class="pip-panorama-inst-unit">'+tr('films','películas')+'</span></span></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
+    const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><span class="pip-panorama-inst-count"><strong>'+int(a.n)+'</strong></span></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
     const bands=[
       [tr('Més de 2,02M (Top 100)','Más de 2,02M (Top 100)'), f=>f.top],
       [tr('1M–2,02M','1M–2,02M'),f=>!f.top&&f.espectadors>=1000000],
@@ -76,7 +76,7 @@
     const orderedGroups=order.map(i=>data.filter(bands[i][1]));
     if(orderedCounts.reduce((a,b)=>a+b,0)!==data.length) throw Error('Distribució incompleta');
     host.innerHTML = '<div class="pip-panorama-block">'+
-      cap(tr('Procedència del reconeixement internacional (1965–2025)','Procedencia del reconocimiento internacional (1965–2025)'))+
+      cap(tr('Els 340 films amb reconeixement internacional (1965–2025)','Las 340 películas con reconocimiento internacional (1965–2025)'))+
       '<div class="pip-panorama-switch" role="group" aria-label="'+tr('Vista de la procedència','Vista de la procedencia')+'">'+
       '<button class="pip-panorama-toggle is-active" type="button" data-pip-vista="organismes" aria-pressed="true">'+tr('Per festivals i acadèmies','Por festivales y academias')+'</button>'+
       '<button class="pip-panorama-toggle" type="button" data-pip-vista="circuits" aria-pressed="false">'+tr('Per circuits','Por circuitos')+'</button></div>'+
@@ -86,7 +86,7 @@
       '<p class="pip-panorama-nota">'+tr('Els 340 films es reparteixen en tres grups excloents segons on han estat reconeguts. Cada film es compta una sola vegada.','Las 340 películas se distribuyen en tres grupos excluyentes según dónde han sido reconocidas. Cada película se cuenta una sola vez.')+'</p></div>'+
       '<div class="pip-panorama-view" data-pip-panel="organismes">'+
       '<div class="pip-panorama-institucions">'+instHTML+'</div>'+
-      '<p class="pip-panorama-nota">'+tr('Cada xifra indica el nombre de films reconeguts per l’organisme. Els totals no es poden sumar perquè alguns films tenen reconeixements tant en festivals com en acadèmies.','Cada cifra indica el número de películas reconocidas por cada organismo. Los totales no pueden sumarse porque algunas películas tienen reconocimientos tanto en festivales como en academias.')+'</p></div>'+
+      '<p class="pip-panorama-nota">'+tr('Nombre de pel·lícules reconegudes en cadascun dels quatre festivals i les dues acadèmies.','Número de películas reconocidas en cada uno de los cuatro festivales y las dos academias.')+'</p></div>'+
       source()+'</div>';
     host.querySelectorAll('[data-pip-vista]').forEach(button => button.addEventListener('click', () => {
       const view=button.dataset.pipVista;
