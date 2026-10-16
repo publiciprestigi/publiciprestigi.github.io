@@ -1113,7 +1113,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       const next = seccions[idx + 1];
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
-      const destAnt = prev ? { part:'PART III', titol:(prev.nav || prev.titol), url:null } : { part:'PART II', titol:'Rànquing per directors', url:'part-ii.html#ranking-directors' };
+      const destAnt = prev ? { part:'PART III', titol:(prev.nav || prev.titol), url:null } : { part:'PART II', titol:'Rànquing per directors', url:'part-ii.html#directors' };
       const destSeg = next ? { part:'PART III', titol:(next.nav || next.titol), url:null } : null;
       const pintaBoto = (btn, dest, direccio) => {
         btn.style.visibility = dest ? 'visible' : 'hidden';
