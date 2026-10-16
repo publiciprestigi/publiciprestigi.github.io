@@ -109,7 +109,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <section class="seccio-contingut pip-entrada" id="seccio-portada">
 <div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Com han canviat el mercat i els públics? Què revelen les diferents maneres de mesurar l’èxit comercial d’una pel·lícula? Què passa quan les sales ja no expliquen tot l’impacte d’una pel·lícula?</p><p class="pip-entrada-final">Les xifres d’espectadors no són només una magnitud econòmica, també ofereixen una manera de llegir la història cultural i social d’un país.</p></div>
 <div class="pip-entrada-cta">
-<button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button">Començar →</button>
+<button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button"><span class="pip-nav-part">PART I</span><span class="pip-nav-titol">Començar →</span></button>
 </div>
 </section>
 <div class="seccio-contingut" id="seccio-intro">
@@ -274,10 +274,16 @@ body.pip-en-portada .nav-seccions { display: none; }
       const next = seccions[idx + 1];
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
-      btnAnt.textContent = prev ? '← ' + prev.titol : '';
-      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
-      btnSeg.textContent = next ? next.titol + ' →' : '';
-      btnSeg.style.visibility = next ? 'visible' : 'hidden';
+      const destAnt = prev ? { part:'PART I', titol:(prev.nav || prev.titol), url:null } : null;
+      const destSeg = next ? { part:'PART I', titol:(next.nav || next.titol), url:null } : { part:'PART II', titol:'Començar', url:'part-ii.html' };
+      const pintaBoto = (btn, dest, direccio) => {
+        btn.style.visibility = dest ? 'visible' : 'hidden';
+        if (!dest) return;
+        btn.innerHTML = '<span class="pip-nav-part">' + dest.part + '</span><span class="pip-nav-titol">' + (direccio === 'ant' ? '← ' : '') + dest.titol + (direccio === 'seg' ? ' →' : '') + '</span>';
+        btn.dataset.enllac = dest.url || '';
+      };
+      pintaBoto(btnAnt, destAnt, 'ant');
+      pintaBoto(btnSeg, destSeg, 'seg');
       if (!window.__pipInicialitzantEntrada) {
         history.pushState({ idx }, '', s.id === 'portada' ? window.location.pathname + window.location.search : '#' + s.id);
       }
@@ -292,8 +298,8 @@ body.pip-en-portada .nav-seccions { display: none; }
       }
     }
 
-    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
-    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); else if (document.getElementById('btn-anterior').dataset.enllac) location.href = document.getElementById('btn-anterior').dataset.enllac; }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); else if (document.getElementById('btn-seguent').dataset.enllac) location.href = document.getElementById('btn-seguent').dataset.enllac; }
 
     document.querySelectorAll('.pip-entrada-enllac').forEach(a => {
       a.addEventListener('click', e => {
