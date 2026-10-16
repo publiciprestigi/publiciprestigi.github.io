@@ -301,14 +301,6 @@ body.pip-en-portada .nav-seccions { display: none; }
 
     let actual = 0;
 
-    function ajustaLiniaNavegacio() {
-      const seccio = document.querySelector('.seccio-contingut[style*="display: block"]');
-      const nav = document.querySelector('.nav-seccions');
-      if (!seccio || !nav) return;
-      const amplada = Math.min(nav.clientWidth, Math.max(seccio.clientWidth, seccio.scrollWidth));
-      nav.style.setProperty('--pip-amplada-linia', amplada + 'px');
-    }
-
     function mostraSeccio(idx) {
       actual = idx;
       const s = seccions[idx];
@@ -338,8 +330,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       };
       pintaBoto(btnAnt, destAnt, 'ant');
       pintaBoto(btnSeg, destSeg, 'seg');
-      requestAnimationFrame(ajustaLiniaNavegacio);
-      setTimeout(ajustaLiniaNavegacio, 400);
+
 
       if (!window.__pipInicialitzantEntrada) {
         history.pushState({ idx }, '', s.id === 'portada' ? window.location.pathname + window.location.search : '#' + s.id);
