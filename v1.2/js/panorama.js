@@ -110,7 +110,8 @@
         datasets:[
           {label:tr('Films','Películas'),
            data:orderedCounts.map((n,index)=>index===order.length-1?0:n),
-           backgroundColor:'#9B2335',hoverBackgroundColor:'#9B2335',
+           backgroundColor:orderedCounts.map((_,index)=>order[index]===0?'#5a4a8a':'#9B2335'),
+           hoverBackgroundColor:orderedCounts.map((_,index)=>order[index]===0?'#5a4a8a':'#9B2335'),
            borderWidth:0,stack:'total',maxBarThickness:25},
           {label:tr('Sense dades','Sin datos'),
            data:orderedCounts.map((n,index)=>index===order.length-1?n:0),
