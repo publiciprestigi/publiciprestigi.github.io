@@ -63,14 +63,12 @@
       ['500K–1M',f=>!f.top&&f.espectadors>=500000&&f.espectadors<1000000],
       ['250K–500K',f=>f.espectadors>=250000&&f.espectadors<500000],
       ['100K–250K',f=>f.espectadors>=100000&&f.espectadors<250000],
-      ['50K–100K',f=>f.espectadors>=50000&&f.espectadors<100000],
-      ['25K–50K',f=>f.espectadors>=25000&&f.espectadors<50000],
-      [tr('Menys de 25K','Menos de 25K'),f=>f.espectadors!==null&&f.espectadors<25000],
+      [tr('Menys de 100K','Menos de 100K'),f=>f.espectadors!==null&&f.espectadors<100000],
       [tr('Sense dades','Sin datos'),f=>f.espectadors===null]
     ];
     const bandCounts=bands.map(([n,test])=>data.filter(test).length);
     // Lectura ascendent: de menys públic al Top 100; sense dades, al final.
-    const order=[7,6,5,4,3,2,1,0,8];
+    const order=[5,4,3,2,1,0,6];
     const orderedBands=order.map(i=>bands[i]);
     const orderedCounts=order.map(i=>bandCounts[i]);
     const orderedGroups=order.map(i=>data.filter(bands[i][1]));
