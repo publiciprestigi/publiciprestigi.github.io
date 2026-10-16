@@ -275,7 +275,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
       const destAnt = prev ? { part:'PART I', titol:(prev.nav || prev.titol), url:null } : null;
-      const destSeg = next ? { part:'PART I', titol:(next.nav || next.titol), url:null } : { part:'PART II', titol:'Començar', url:'part-ii.html' };
+      const destSeg = next ? { part:'PART I', titol:(next.nav || next.titol), url:null } : { part:'PART II', titol:'Prestigi', url:'part-ii.html#intro' };
       const pintaBoto = (btn, dest, direccio) => {
         btn.style.visibility = dest ? 'visible' : 'hidden';
         if (!dest) return;
