@@ -1496,9 +1496,9 @@ window.PiP_graficSauraAlmodovar = function() {
           grid: { color: '#eee' },
         },
         y: {
-          min: -300000, max: 3700000,
+          min: 0, max: 3700000,
           ticks: {
-            callback: v => v < 0 ? '' : (v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k'),
+            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
             color: '#363737', font: { size: 11 },
           },
           grid: { color: '#eee' },
