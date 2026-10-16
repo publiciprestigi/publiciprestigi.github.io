@@ -363,8 +363,8 @@ body.cap-hidden .sidebar {
 }
 .nav-seccions .nav-seccio-btn:hover { background:#f5f5f5; }
 .pip-entrada-cta .nav-seccio-btn {
-  width:100%;
-  max-width:var(--amplada-text);
+  width:calc((var(--amplada-text) - 12px) / 2);
+  max-width:100%;
   text-align:left;
 }
 .pip-entrada-cta .nav-seccio-btn:hover { background:#f5f5f5; }
