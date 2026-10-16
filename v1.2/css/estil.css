@@ -321,7 +321,8 @@ body.cap-hidden .sidebar {
 /* Navegació editorial de dues columnes fixes, independent de les taules. */
 .nav-seccions {
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,294px));
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:var(--amplada-text);
   column-gap:12px;
   row-gap:24px;
   width:100%;
@@ -362,8 +363,8 @@ body.cap-hidden .sidebar {
 }
 .nav-seccions .nav-seccio-btn:hover { background:#f5f5f5; }
 .pip-entrada-cta .nav-seccio-btn {
-  width:294px;
-  max-width:100%;
+  width:100%;
+  max-width:var(--amplada-text);
   text-align:left;
 }
 .pip-entrada-cta .nav-seccio-btn:hover { background:#f5f5f5; }
