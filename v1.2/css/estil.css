@@ -340,6 +340,7 @@ body.cap-hidden .sidebar {
   transition: background 0.12s;
   max-width: 260px;
 }
+.nav-seccions #btn-anterior { text-align: left; }
 .nav-seccio-btn:last-child { text-align: right; }
 .nav-seccio-btn:hover { background: #f5f5f5; }
 .nav-seccio-btn { min-height:62px; padding:12px 17px; max-width:300px; line-height:1.25; }
