@@ -931,8 +931,8 @@ function construirCazaAlcarras() {
     const gris = s => `<span style="color:#6b6b6b">${s}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
-      <td class="col-subtil">${f.director}</td>
-      <td>${reconeixementsTrajectoria(f)}</td>
+      <td class="col-subtil" style="padding-right:13px">${f.director}</td>
+      <td style="padding-right:12px">${reconeixementsTrajectoria(f)}</td>
       <td class="col-center col-subtil">—</td>
       <td class="col-num">${fmt(f.espectadors)}</td>
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
@@ -1133,10 +1133,10 @@ const COLORS_DIRECTOR = {
 };
 
 const TAULA_PELI_HEADER = `
-  <th style="width:30%">${pip3T('Títol','Título')}</th>
-  <th class="col-subtil" style="width:12%">${pip3T('Director','Dirección')}</th>
-  <th style="min-width:170px">${pip3T('Reconeixement','Reconocimiento')}</th>
-  <th class="col-center" style="width:60px">Top 100</th>
+  <th style="width:29%">${pip3T('Títol','Título')}</th>
+  <th class="col-subtil" style="width:13%;padding-right:13px">${pip3T('Director','Dirección')}</th>
+  <th style="min-width:155px;padding-right:12px">${pip3T('Reconeixement','Reconocimiento')}</th>
+  <th class="col-center" style="width:68px">Top 100</th>
   <th class="col-num" style="width:100px">${pip3T('Espectadors','Espectadores')}</th>
   <th class="col-num" style="width:65px">${pip3T('Mercat','Mercado')}</th>
   <th class="col-num" style="width:65px">${pip3T('Penetr.','Penetr.')}</th>
@@ -1239,8 +1239,8 @@ function renderTaulaGen(films, contId, directorFix) {
     const top = `<span class="col-subtil" style="font-size:.9em">${topText}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
-      <td class="col-subtil">${dir}</td>
-      <td>${recon}</td>
+      <td class="col-subtil" style="padding-right:13px">${dir}</td>
+      <td style="padding-right:12px">${recon}</td>
       <td class="col-center">${top}</td>
       <td class="col-num">${fmt(f.esp)}</td>
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
