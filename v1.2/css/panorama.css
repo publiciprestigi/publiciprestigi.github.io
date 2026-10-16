@@ -62,3 +62,6 @@
 
 /* Unitats dels tres totals de circuits, discretes i alineades amb el número. */
 #pip-panorama-content .pip-panorama-num-unit{font-size:12px;font-weight:400;color:#777;white-space:nowrap;vertical-align:baseline}
+
+/* El comentari editorial segueix el marc del gràfic sense una segona línia. */
+#seccio-panorama .text-md-comentari[data-bloc="lectura"]{border-top:none;padding-top:0;margin-top:16px}
