@@ -1151,7 +1151,7 @@ function capcaleraTaulaIII(tipus) {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
     const cls = center ? 'col-center' : (numeric ? 'col-num' : (i===1?'col-subtil':''));
-    return `<th class="${cls}" style="width:${PIP_III_COLS[columnesTaulaIII(tipus)[i]]}px;padding:8px 3px;white-space:nowrap;letter-spacing:0;font-size:0.66rem">${nom}</th>`;
+    return `<th class="${cls}" style="width:${PIP_III_COLS[columnesTaulaIII(tipus)[i]]}px;padding:8px 3px;white-space:nowrap">${nom}</th>`;
   }).join('');
 }
 function marcTaulaIII(header, rows, tipus) {
