@@ -1,5 +1,5 @@
 <!-- intro -->
-El cas de *La caza* i *Alcarràs* no és un exemple puntual, sinó el símptoma de dues èpoques radicalment diferents. El que va ser possible entre els anys 60 i 90, amb mercats molt més grans i una centralitat encara decisiva de la sala, i el que és possible ara, amb un mercat d’entrades postpandèmia bastant més petit i sis o més finestres simultànies, són realitats incomparables en xifres brutes, però que les mètriques adequades permeten, almenys, posar en diàleg.
+El cas de *La caza* i *Alcarràs* no és un exemple puntual, sinó el símptoma de dues èpoques radicalment diferents. El que va ser possible entre els anys 60 i 90, amb mercats molt més grans i una centralitat encara decisiva de la sala, i el que és possible ara, amb un mercat d’entrades postpandèmia molt més petit i sis o més finestres de distribució, són realitats incomparables en xifres brutes, però que les mètriques adequades permeten, almenys, posar en diàleg.
 
 El que segueix és una mirada a dues carreres emblemàtiques de la generació anterior, Saura i Almodóvar, i a quatre directors de la generació actual que s’han convertit en referents del cinema espanyol als festivals internacionals.
 <!-- /intro -->
@@ -7,7 +7,7 @@ El que segueix és una mirada a dues carreres emblemàtiques de la generació an
 <!-- bloc-saura -->
 ## Carlos Saura (1966–1996): el prestigi com a força de resistència
 
-Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial, els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
+Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial. Els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
@@ -25,9 +25,9 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 <!-- /bloc-almodovar -->
 
 <!-- comentari-almodovar -->
-- La ‘doble corona’ sostinguda (i el 'segon cercle') és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Tacones lejanos*, *Todo sobre mi madre* i *Volver* combinen festivals i públic en una proporció que cap altre director del corpus manté amb aquesta continuïtat. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
+- La «doble corona» sostinguda (i el «segon cercle») és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Tacones lejanos*, *Todo sobre mi madre* i *Volver* combinen festivals i públic en una proporció que cap altre director del corpus manté amb aquesta continuïtat. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
 
-- *Mujeres al borde…*  és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE encara amb una capacitat de convocatòria enorme, abans que la fragmentació del *share* es consolidés amb les privades, i una obertura cultural accelerada amb la consolidació democràtica. L’estrena televisiva arriba el gener de 1991, dos anys després de l’estrena en sales. El resultat és un IAA estimat de 10,04M: una combinació mai vista fins llavors de sala massiva, televisió forta i projecció internacional.
+- *Mujeres al borde…* és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE encara amb una capacitat de convocatòria enorme, abans que la fragmentació del *share* es consolidés amb les privades, i una obertura cultural accelerada amb la consolidació democràtica. L’estrena televisiva arriba el gener de 1991, dos anys després de l’estrena en sales. El resultat és un IAA estimat de 10,04M, una combinació excepcional de sala massiva, televisió forta i projecció internacional.
 
 - A partir dels 2010s, el patró canvia. *Los abrazos rotos*, *La piel que habito*, *Julieta*, *Dolor y gloria* i *Madres paralelas* mantenen el reconeixement internacional, però ja no operen en el mateix mercat de sala que els grans Almodóvar dels 80s i 90s. La seva participació més recent, *La habitación de al lado* (402k en sala, Lleó d’Or a Venècia), se situa en el mateix rang que *Alcarràs*, *Sirât* o *Los domingos*: mateix ordre de públic, de prestigi i ecosistema multifinestra. El que ha canviat no és el talent, és el mercat.
 <!-- /comentari-almodovar -->
@@ -51,5 +51,5 @@ El conjunt mostra la paradoxa del període actual: aquests directors no generen 
 
 - Simón i Ruiz de Azúa: la nova zona de contacte. *Alcarràs* (Ós d’Or a Berlín, 2022) i *Los domingos* (Conxa d’Or a Sant Sebastià, 2025) són els casos més recents de films amb reconeixement màxim als festivals i xifres de sala significatives per al període actual. L’IAA estimat de *Los domingos* (2,55M, amb les finestres posteriors encara obertes) el situa en un ordre de magnitud comparable al dels grans pics de Saura o als Almodóvar del període actual. La sala ja no dona tota la mesura del seu abast.
 
-El gràfic següent visualitza aquesta diferència entre públic de sala i audiència acumulada estimada. En la generació actual, el salt entre una xifra i l’altra no és un detall menor, és una part central del funcionament del mercat. Si només ens fixem amb l'IAA, *As bestas* i *Los domingos* podrien ser perfectament les noves 'dobles corones' de l'època actual. <sup>[18]</sup>
+El gràfic següent visualitza aquesta diferència entre públic de sala i audiència acumulada estimada. En la generació actual, el salt entre una xifra i l’altra no és un detall menor, és una part central del funcionament del mercat. Si substituíssim els espectadors de sala per l’IAA, *As bestas* i *Los domingos* podrien ser les noves «dobles corones» de l’època actual. <sup>[18]</sup>
 <!-- /comentari-actual -->
