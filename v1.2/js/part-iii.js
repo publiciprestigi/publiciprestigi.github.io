@@ -1213,9 +1213,8 @@ function construirCodaBayona() {
   const films = FILMS_BAYONA.slice(0,3);
   const audienciesTV = {'El orfanato':2079000,'Lo imposible':6117000,'Un monstruo viene a verme':2671000};
   const fmtM = n => (n/1e6).toFixed(2).replace('.',',')+'M';
-  const max = 16e6;
   el.innerHTML = `
-    <p class="pmm-context">${pip3T('Sala + estrena TV davant l’IAA estimat','Salas + estreno TV frente al IAA estimado')}</p>
+    <p class="pmm-context">${pip3T('Audiència real i estimada','Audiencia real y estimada')}</p>
     <div class="pip3-bayona-llegenda">
       <span><i style="background:#B84555"></i>${pip3T('Sala','Salas')}</span>
       <span><i style="background:#E5A0A7"></i>${pip3T('Estrena TV','Estreno TV')}</span>
@@ -1228,10 +1227,10 @@ function construirCodaBayona() {
         <div class="pip3-bayona-filmnom"><em>${f.titol}</em></div>
         <div class="pip3-bayona-parella">
           <div class="pmm-track pip3-bayona-segments">
-            <span class="pmm-bar" style="width:${f.y/max*100}%;background:#B84555"></span><span class="pmm-bar" style="width:${tv/max*100}%;background:#E5A0A7"></span>
+            <span class="pmm-bar" style="width:${f.y/iaa*100}%;background:#B84555"></span><span class="pmm-bar" style="width:${tv/iaa*100}%;background:#E5A0A7"></span>
           </div>
           <span class="pmm-value">${fmtM(f.y+tv)}</span>
-          <div class="pmm-track"><span class="pmm-bar" style="width:${iaa/max*100}%;background:#1E3D6B"></span></div>
+          <div class="pmm-track"><span class="pmm-bar" style="width:100%;background:#1E3D6B"></span></div>
           <span class="pmm-value">${fmtM(iaa)}</span>
         </div>
       </div>`;
