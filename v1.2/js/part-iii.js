@@ -1146,7 +1146,7 @@ const TAULA_PELI_HEADER = `
   <th class="col-num" style="width:95px;text-align:right">${pip3T('IAA estimat','IAA estimado')}</th>
 `;
 
-const TAULA_AI_HEADER = TAULA_PELI_HEADER.replace(/<th[^>]*>IIC<\/th>\s*/,'').replace(/<th[^>]*>\$\{pip3T\('IAA estimat','IAA estimado'\)\}<\/th>\s*/,'');
+const TAULA_AI_HEADER = TAULA_PELI_HEADER.replace(/<th[^>]*>IIC<\/th>\s*/,'').replace(/<th[^>]*>\$\{pip3T\('IAA estimat','IAA estimado'\)\}<\/th>\s*/,'').replace(/<th[^>]*>\$\{pip3T\('Director','Dirección'\)\}<\/th>\s*/,'');
 
 
 // Taules d'autor industrial: mateix corpus que el gràfic, sense IIC ni IAA.
@@ -1173,7 +1173,6 @@ function construirTaulesAutorIndustrial() {
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
         <td><strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.x})</span></td>
-        <td class="col-subtil" style="padding-right:13px">${grup.nom}</td>
         <td style="padding-right:12px">${recon}</td>
         <td class="col-center col-subtil">${top}</td>
         <td class="col-num">${fmt(esp)}</td>
