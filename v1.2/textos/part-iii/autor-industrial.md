@@ -14,10 +14,6 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 
 <!-- /bloc-iglesia -->
 
-<!-- comentari-iglesia -->
-- *Perfectos desconocidos* és, amb molta diferència, el seu màxim comercial, amb 3,28M d’espectadors. En canvi, *Balada triste de trompeta*, el seu gran reconeixement a Venècia, registra el mínim de públic del conjunt. La distància entre tots dos films resumeix una trajectòria en què l’èxit popular i el prestigi internacional no necessàriament coincideixen.
-<!-- /comentari-iglesia -->
-
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més complet del model
 
@@ -26,10 +22,6 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 *Mar adentro* continua sent la intersecció màxima: Lleó de Plata a Venècia, Oscar a millor pel·lícula de parla no anglesa, dos EFA, 4,1 milions d’espectadors i #12 del Top 100. Més que una excepció absoluta, és la culminació més visible d’un recorregut capaç de combinar públic massiu, ambició industrial i prestigi internacional. Amenábar demostra que l’autoria també pot operar dins d’un cinema popular, exportable i de gran escala.
 
 <!-- /bloc-amenabar -->
-
-<!-- comentari-amenabar -->
-- *Los otros* és el seu màxim d’espectadors, amb 6,41M, mentre que *Mar adentro* concentra el reconeixement internacional més important de la seva carrera. Entre el 2001 i el 2009, tres films consecutius superen els 3,4 milions d’espectadors. És una continuïtat comercial excepcional, que explica la solidesa industrial d’Amenábar.
-<!-- /comentari-amenabar -->
 
 <!-- bloc-bayona -->
 ## J.A. Bayona: l’escala internacional
@@ -43,12 +35,6 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 <!-- comentari-bayona -->
 - Els tres primers films de Bayona superen els quatre milions d’espectadors a Espanya, amb quotes de mercat entre el 3,78% i el 6,52%. *La sociedad de la nieve*, en canvi, registra 557K espectadors i una quota del 0,70%, malgrat el reconeixement internacional. És el contrast més radical de les tres trajectòries, però també el menys interpretable des de la taquilla, perquè el consum principal del film es desplaça a Netflix. Per això indiquem **n/c** a la taula: el factor general de l’IAA no és representatiu d’una explotació centrada en Netflix.
 <!-- /comentari-bayona -->
-
-<!-- comentari-coda-bayona -->
-- Les estrenes a Telecinco van reunir una audiència mitjana de 2.079.000 espectadors per a *El orfanato* (2010), 6.117.000 per a *Lo imposible* (2014) i 2.671.000 per a *Un monstruo viene a verme* (2018). Sumades a les entrades de sala, aquestes dues finestres representen entre el 59% i el 80% de l'IAA estimat. Encara hi falten la televisió de pagament, les televisions autonòmiques, el DVD i les plataformes digitals, que podrien acostar l'audiència acumulada a l'ordre de magnitud de l'IAA en el mercat espanyol. La comparació és orientativa: suma entrades de cinema i audiència mitjana televisiva, no espectadors únics, i no verifica el factor multiplicador.
-
-<!-- /comentari-coda-bayona -->
-
 
 <!-- transicio-grafic-ai -->
 Les tres trajectòries es poden llegir ara conjuntament. El gràfic següent compara l'evolució dels espectadors a sala de De la Iglesia, Amenábar i Bayona, i fa visibles les diferències d'escala i continuïtat comercial entre els seus models.
