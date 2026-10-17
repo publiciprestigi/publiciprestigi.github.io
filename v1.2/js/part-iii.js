@@ -1150,7 +1150,7 @@ function capcaleraTaulaIII(tipus) {
   return noms.map((nom,i) => {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
-    const cls = center ? 'col-center' : ((i === 4 || i === noms.length-1) ? '' : (numeric ? 'col-num' : (i===1?'col-subtil':'')));
+    const cls = center ? 'col-center' : ((i === 4 || i === noms.length-1) ? 'pip3-th-esquerra' : (numeric ? 'col-num' : (i===1?'col-subtil':'')));
     return `<th class="${cls}" style="width:${PIP_III_COLS[columnesTaulaIII(tipus)[i]]}px;padding:8px 3px;white-space:nowrap">${nom}</th>`;
   }).join('');
 }
