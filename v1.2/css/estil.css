@@ -1743,6 +1743,9 @@ body.part-ii {
 .pip3-taula-ampla { max-width:none !important; border-collapse:collapse; }
 .pip3-taula-ampla th, .pip3-taula-ampla td { box-sizing:border-box; padding-right:4px; }
 .pip3-taula-ampla th { white-space:nowrap; }
+/* Separació visual dels encapçalaments respecte de la columna anterior. */
+.pip3-taula-ampla thead th.pip3-th-esquerra { text-align:left !important; padding-left:9px !important; }
+
 .pip3-taula-ampla .col-num { white-space:nowrap; font-variant-numeric:tabular-nums; }
 /* Excepció editorial de Part III: mantenir la taula ampla, sense scroll intern. */
 .pip3-taula-ampla { display:table !important; overflow:visible !important; max-width:none !important; }
