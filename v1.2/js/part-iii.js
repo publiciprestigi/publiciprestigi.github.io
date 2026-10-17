@@ -1134,7 +1134,7 @@ const COLORS_DIRECTOR = {
 // Una distribució proporcional comuna; cada taula ocupa l'amplada disponible, sense scroll.
 // Amplades comunes en píxels, com el model ampli de la v1.1.
 // Les taules s'estenen a la dreta de la columna editorial, sense scroll.
-const PIP_III_COLS = [180,118,150,65,105,76,80,72,40,95];
+const PIP_III_COLS = [180,102,142,64,98,69,72,64,38,79];
 function columnesTaulaIII(tipus) {
   return tipus === 'caza' ? [0,1,2,3,4,5,6,7,8,9] : [0,1,2,3,4,5,6,7,9];
 }
@@ -1142,11 +1142,11 @@ function capcaleraTaulaIII(tipus) {
   const noms = [
     pip3T('Títol','Título'),pip3T('Director','Dirección'),
     pip3T('Reconeixement','Reconocimiento'),'Top 100',
-    pip3T('Espectadors','Espectadores'),pip3T('Mercat','Mercado'),
+    pip3T('Espect.','Espect.'),pip3T('Mercat','Mercado'),
     pip3T('Penetr.','Penetr.'),pip3T('Quota','Cuota')
   ];
   if (tipus === 'caza') noms.push('IIC');
-  noms.push(pip3T('IAA estimat','IAA estimado'));
+  noms.push('IAA');
   return noms.map((nom,i) => {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
