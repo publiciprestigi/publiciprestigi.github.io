@@ -1147,7 +1147,8 @@ function capcaleraTaulaIII(tipus) {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
     const cls = center ? 'col-center' : (numeric ? 'col-num' : (i===1?'col-subtil':''));
-    const pct = (PIP_III_COLS[indexs[i]] / total * 100).toFixed(3);
+    const directorPct = PIP_III_COLS[1] / PIP_III_COLS.reduce((n,v)=>n+v,0) * 100;
+    const pct = (i === 1 ? directorPct : PIP_III_COLS[indexs[i]] / (total-PIP_III_COLS[1]) * (100-directorPct)).toFixed(3);
     return `<th class="${cls}" style="width:${pct}%;padding:5px 2px 9px;white-space:normal;overflow-wrap:normal;font-size:.92em;line-height:1.2">${nom}</th>`;
   }).join('');
 }
