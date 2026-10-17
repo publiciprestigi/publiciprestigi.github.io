@@ -2097,11 +2097,11 @@ function construirLleis() {
 <div class="ll-ef">Factor IAA</div>
 <div class="ll-g6 ll-iaa">
   <div class="c" style="background:rgba(44,62,80,.62)">×1,0</div>
-  <div class="c" style="background:rgba(26,82,118,.62)">×2,5–3,5</div>
-  <div class="c" style="background:rgba(30,132,73,.62)">×2,0–3,0</div>
-  <div class="c" style="background:rgba(125,60,152,.62)">×1,8–2,5</div>
-  <div class="c" style="background:rgba(183,119,13,.62)">×2,0–3,0</div>
-  <div class="c" style="background:rgba(146,43,33,.62)">×2,5–4,0</div>
+  <div class="c" style="background:rgba(26,82,118,.62)">×3,0</div>
+  <div class="c" style="background:rgba(30,132,73,.62)">×2,5</div>
+  <div class="c" style="background:rgba(125,60,152,.62)">×2,15</div>
+  <div class="c" style="background:rgba(183,119,13,.62)">×2,5</div>
+  <div class="c" style="background:rgba(146,43,33,.62)">×3,25</div>
 </div>
 
 <div class="ll-eix">
