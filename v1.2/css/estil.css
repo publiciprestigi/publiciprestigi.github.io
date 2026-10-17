@@ -1738,3 +1738,37 @@ body.part-ii {
 #seccio-sansebastia .taula-festivals tbody tr td { background:var(--pip-fons-sansebastia); }
 #seccio-oscar .taula-oscar-principal tbody tr td { background:var(--pip-fons-oscar); }
 #seccio-efa .taula-efa-principal tbody tr td { background:var(--pip-fons-efa); }
+
+/* Part III: taules comparatives dins l'amplada editorial, sense scroll lateral */
+.pip3-taula-ajustada {
+  width:100% !important;
+  max-width:100%;
+  table-layout:fixed;
+}
+.pip3-taula-ajustada th,
+.pip3-taula-ajustada td {
+  box-sizing:border-box;
+  min-width:0 !important;
+  padding-left:3px !important;
+  padding-right:3px !important;
+}
+.pip3-taula-ajustada th {
+  white-space:normal !important;
+  overflow-wrap:anywhere;
+  letter-spacing:0 !important;
+  font-size:0.66rem !important;
+}
+.pip3-taula-ajustada td {
+  overflow-wrap:break-word;
+  font-size:0.76rem;
+  line-height:1.35;
+}
+.pip3-taula-ajustada .col-num {
+  white-space:nowrap;
+  font-size:0.72rem;
+  font-variant-numeric:tabular-nums;
+}
+.pip3-taula-ajustada td:nth-child(2) {
+  overflow-wrap:normal;
+  word-break:normal;
+}
