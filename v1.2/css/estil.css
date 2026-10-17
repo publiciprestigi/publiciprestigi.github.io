@@ -1744,7 +1744,17 @@ body.part-ii {
 .pip3-taula-ampla th, .pip3-taula-ampla td { box-sizing:border-box; padding-right:4px; }
 .pip3-taula-ampla th { white-space:nowrap; }
 /* Separació visual dels encapçalaments respecte de la columna anterior. */
-.pip3-taula-ampla thead th.pip3-th-esquerra { text-align:left !important; padding-left:9px !important; }
+/* Alineació comuna: dues columnes de text a l'esquerra,
+   Reconeixement i Top 100 centrats, mètriques a la dreta. */
+.pip3-taula-ampla thead th:nth-child(-n+2),
+.pip3-taula-ampla tbody td:nth-child(-n+2) { text-align:left !important; }
+.pip3-taula-ampla thead th:nth-child(3),
+.pip3-taula-ampla tbody td:nth-child(3),
+.pip3-taula-ampla thead th:nth-child(4),
+.pip3-taula-ampla tbody td:nth-child(4) { text-align:center !important; }
+.pip3-taula-ampla thead th:nth-child(n+5),
+.pip3-taula-ampla tbody td:nth-child(n+5) { text-align:right !important; }
+.pip3-taula-ampla thead th.pip3-th-esquerra { padding-left:3px !important; }
 
 .pip3-taula-ampla .col-num { white-space:nowrap; font-variant-numeric:tabular-nums; }
 /* Excepció editorial de Part III: mantenir la taula ampla, sense scroll intern. */
