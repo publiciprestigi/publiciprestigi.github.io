@@ -14,6 +14,10 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 
 <!-- /bloc-iglesia -->
 
+<!-- comentari-iglesia -->
+- *Perfectos desconocidos* és, amb molta diferència, el seu màxim comercial, amb 3,28M d’espectadors. En canvi, *Balada triste de trompeta*, el seu gran reconeixement a Venècia, registra el mínim de públic del conjunt. La distància entre tots dos films resumeix una trajectòria en què l’èxit popular i el prestigi internacional no necessàriament coincideixen.
+<!-- /comentari-iglesia -->
+
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més complet del model
 
@@ -23,6 +27,10 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 
 <!-- /bloc-amenabar -->
 
+<!-- comentari-amenabar -->
+- *Los otros* és el seu màxim d’espectadors, amb 6,41M, mentre que *Mar adentro* concentra el reconeixement internacional més important de la seva carrera. Entre el 2001 i el 2009, tres films consecutius superen els 3,4 milions d’espectadors. És una continuïtat comercial excepcional, que explica la solidesa industrial d’Amenábar.
+<!-- /comentari-amenabar -->
+
 <!-- bloc-bayona -->
 ## J.A. Bayona: l’escala internacional
 
@@ -31,6 +39,10 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 Bayona no ha construït la seva carrera a través de les seccions competitives dels grans festivals, però el reconeixement de les acadèmies acompanya la seva consolidació industrial. *El orfanato* va obtenir nominacions als EFA; *Lo imposible*, una nominació a l’Oscar per Naomi Watts i també reconeixement als EFA; *Un monstruo viene a verme* també va ser premiada als EFA. El seu cas és el que més s’apropa al model industrial internacional: gran producció, gènere, exigència tècnica, autoria i voluntat explícita d’arribar a públics amplis.
 
 <!-- /bloc-bayona -->
+
+<!-- comentari-bayona -->
+- Els tres primers films de Bayona superen els quatre milions d’espectadors a Espanya, amb quotes de mercat entre el 3,78% i el 6,52%. *La sociedad de la nieve*, en canvi, registra 557K espectadors i una quota del 0,70%, malgrat el reconeixement internacional. És el contrast més radical de les tres trajectòries, però també el menys interpretable des de la taquilla, perquè el consum principal del film es desplaça a Netflix.
+<!-- /comentari-bayona -->
 
 <!-- conclusio -->
 La singularitat d’aquest model no consisteix, per tant, a quedar fora del prestigi, sinó a no dependre’n per construir públic, escala i continuïtat industrial. En De la Iglesia, Amenábar i Bayona, el reconeixement de festivals i acadèmies arriba de manera puntual o paral·lela sobre trajectòries que tenen el mercat i l’espectador com a condició central. Els seus casos ocupen una zona que la divisió estricta entre públic i prestigi no explica del tot: cinema fet per a molts, amb la mirada i el control d’un autor.
