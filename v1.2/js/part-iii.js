@@ -1133,21 +1133,33 @@ const COLORS_DIRECTOR = {
   'Alauda Ruiz de Azúa':  { fort: '#c8785e', fluix: '#f0b4ac', paler: '#f7cfcf' }, // salmó
 };
 
-const TAULA_PELI_HEADER = `
-  <th style="width:29%">${pip3T('Títol','Título')}</th>
-  <th class="col-subtil" style="width:13%;padding-right:13px">${pip3T('Director','Dirección')}</th>
-  <th style="min-width:155px;padding-right:12px">${pip3T('Reconeixement','Reconocimiento')}</th>
-  <th class="col-center" style="width:68px">Top 100</th>
-  <th class="col-num" style="width:100px">${pip3T('Espectadors','Espectadores')}</th>
-  <th class="col-num" style="width:65px">${pip3T('Mercat','Mercado')}</th>
-  <th class="col-num" style="width:65px">${pip3T('Penetr.','Penetr.')}</th>
-  <th class="col-num" style="width:55px">${pip3T('Quota','Cuota')}</th>
-  <th class="col-center" style="width:40px">IIC</th>
-  <th class="col-num" style="width:95px;text-align:right">${pip3T('IAA estimat','IAA estimado')}</th>
-`;
-
-const TAULA_AI_HEADER = TAULA_PELI_HEADER.replace(/<th[^>]*>IIC<\/th>\s*/,'').replace(/<th[^>]*>\$\{pip3T\('IAA estimat','IAA estimado'\)\}<\/th>\s*/,'').replace(/<th[^>]*>\$\{pip3T\('Director','Dirección'\)\}<\/th>\s*/,'');
-
+// Cada model manté l'amplada global de la taula i distribueix les columnes segons la seva funció.
+function capcaleraTaulaIII(tipus) {
+  const ambIIC = tipus === 'caza';
+  const ambIAA = tipus !== 'industrial';
+  const amplades = tipus === 'industrial'
+    ? [25,12,19,7,13,8,9,7]
+    : tipus === 'generacions'
+      ? [22,10,19,6,13,7,8,7,8]
+      : [20,10,18,6,12,7,7,6,5,9];
+  const noms = [
+    pip3T('Títol','Título'),pip3T('Director','Dirección'),
+    pip3T('Reconeixement','Reconocimiento'),'Top 100',
+    pip3T('Espectadors','Espectadores'),pip3T('Mercat','Mercado'),
+    pip3T('Penetr.','Penetr.'),pip3T('Quota','Cuota')
+  ];
+  if (ambIIC) noms.push('IIC');
+  if (ambIAA) noms.push(pip3T('IAA estimat','IAA estimado'));
+  return noms.map((nom,i) => {
+    const center = nom === 'Top 100' || nom === 'IIC';
+    const numeric = i >= 4 && !center;
+    const cls = center ? 'col-center' : (numeric ? 'col-num' : (i===1?'col-subtil':''));
+    return `<th class="${cls}" style="width:${amplades[i]}%;min-width:0;padding-right:${i===2?8:4}px">${nom}</th>`;
+  }).join('');
+}
+const TAULA_PELI_HEADER = capcaleraTaulaIII('caza');
+const TAULA_GENERACIONS_HEADER = capcaleraTaulaIII('generacions');
+const TAULA_AI_HEADER = capcaleraTaulaIII('industrial');
 
 // Taules d'autor industrial: mateix corpus que el gràfic, sense IIC ni IAA.
 function construirTaulesAutorIndustrial() {
@@ -1173,7 +1185,8 @@ function construirTaulesAutorIndustrial() {
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
         <td><strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.x})</span></td>
-        <td style="padding-right:12px">${recon}</td>
+        <td class="col-subtil" style="padding-right:6px">${grup.nom}</td>
+        <td style="padding-right:8px">${recon}</td>
         <td class="col-center col-subtil">${top}</td>
         <td class="col-num">${fmt(esp)}</td>
         <td class="col-num col-subtil">${mercat}</td>
@@ -1181,7 +1194,7 @@ function construirTaulesAutorIndustrial() {
         <td class="col-num col-subtil">${quota}</td>
       </tr>`;
     }).join('');
-    cont.innerHTML = `<table class="taula-festivals" style="font-size:0.82em;width:100%">
+    cont.innerHTML = `<table class="taula-festivals" style="font-size:0.82em;width:100%;table-layout:fixed">
       <thead><tr>${TAULA_AI_HEADER}</tr></thead><tbody>${rows}</tbody></table>`;
   }
 }
@@ -1280,8 +1293,8 @@ function renderTaulaGen(films, contId, directorFix) {
     const top = `<span class="col-subtil" style="font-size:.9em">${topText}</span>`;
     return `<tr style="background:${bg};border-bottom:2px solid #fff">
       <td>${titolCell}</td>
-      <td class="col-subtil" style="padding-right:13px">${dir}</td>
-      <td style="padding-right:12px">${recon}</td>
+      <td class="col-subtil" style="padding-right:6px">${dir}</td>
+      <td style="padding-right:8px">${recon}</td>
       <td class="col-center">${top}</td>
       <td class="col-num">${fmt(f.esp)}</td>
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
@@ -1292,8 +1305,8 @@ function renderTaulaGen(films, contId, directorFix) {
   }).join('');
 
   cont.innerHTML = `
-    <table class="taula-festivals" style="font-size:0.82em;width:100%">
-      <thead><tr>${TAULA_PELI_HEADER}</tr></thead>
+    <table class="taula-festivals" style="font-size:0.82em;width:100%;table-layout:fixed">
+      <thead><tr>${TAULA_GENERACIONS_HEADER}</tr></thead>
       <tbody>${files}</tbody>
     </table>`;
 }
