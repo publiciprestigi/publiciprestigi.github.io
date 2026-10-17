@@ -32,12 +32,8 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 
 <!-- /bloc-bayona -->
 
-<!-- comentari-bayona -->
-- Els tres primers films de Bayona superen els quatre milions d’espectadors a Espanya, amb quotes de mercat entre el 3,78% i el 6,52%. *La sociedad de la nieve*, en canvi, registra 557K espectadors i una quota del 0,70%, malgrat el reconeixement internacional. És el contrast més radical de les tres trajectòries, però també el menys interpretable des de la taquilla, perquè el consum principal del film es desplaça a Netflix. Per això indiquem **n/c** a la taula: el factor general de l’IAA no és representatiu d’una explotació centrada en Netflix.
-<!-- /comentari-bayona -->
-
 <!-- transicio-grafic-ai -->
-Les tres trajectòries es poden llegir ara conjuntament. El gràfic següent compara l'evolució dels espectadors a sala de De la Iglesia, Amenábar i Bayona, i fa visibles les diferències d'escala i continuïtat comercial entre els seus models.
+El gràfic següent compara l’evolució dels espectadors a sala de De la Iglesia, Amenábar i Bayona.
 <!-- /transicio-grafic-ai -->
 
 <!-- conclusio -->
@@ -48,5 +44,5 @@ La singularitat d’aquest model no consisteix, per tant, a quedar fora del pres
 <!-- paradoxa -->
 Però el model topa avui amb un límit de mesura. *La sociedad de la nieve* (2023) ho il·lustra millor que cap altre film de Bayona: suma 556.976 espectadors a les sales espanyoles, dues nominacions als Oscar i dos premis als EFA, però la seva explotació principal passa per Netflix. El film ja és visible dins del corpus de prestigi i també deixa una xifra de taquilla; el que no podem mesurar de manera comparable és la magnitud real del seu públic.
 
-Les plataformes digitals no publiquen dades detallades d’audiència per títol i país que permetin equiparar una visualització amb una entrada de cinema. Per això, una pel·lícula concebuda per arribar a una audiència global pot aparèixer amb una xifra de sala relativament modesta al costat de films molt menys vistos en conjunt. El model d’autor industrial no desapareix necessàriament: una part del seu públic ha canviat de circuit, mentre que les mètriques històriques continuen ancorades a la sala. <sup>[20]</sup>
+Les plataformes digitals no publiquen dades detallades d’audiència per títol i país que permetin equiparar una visualització amb una entrada de cinema. Per això l’IAA de *La sociedad de la nieve* figura com a **n/c** a la taula. Per això, una pel·lícula concebuda per arribar a una audiència global pot aparèixer amb una xifra de sala relativament modesta al costat de films molt menys vistos en conjunt. El model d’autor industrial no desapareix necessàriament: una part del seu públic ha canviat de circuit, mentre que les mètriques històriques continuen ancorades a la sala. <sup>[20]</sup>
 <!-- /paradoxa -->
