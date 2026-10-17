@@ -13,7 +13,7 @@ El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50%
 
 ### 2. Les televisions privades (1990): canvi de model
 
-L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, transforma progressivament el finançament del cinema. L’obligació d’invertir el 5% dels ingressos en producció audiovisual europea no arribarà fins al 1999. Però el gir estructural ja venia del final del model Miró, els productors impulsen un model en què el pressupost es reparteix entre tres vies de finançament: taquilla, televisió i Estat. <sup>[14]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,5.
+L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, transforma progressivament el finançament del cinema (l’obligació legal d’invertir el 5% dels ingressos en producció audiovisual europea no arribarà fins al 1999). Però el gir estructural ja venia del final del model Miró, quan els productors impulsen un model en què el pressupost es reparteix entre tres vies de finançament: taquilla, televisió i Estat. <sup>[14]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,5.
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
@@ -33,7 +33,7 @@ La Llei del Cinema del 2007 va establir el marc legal per incorporar criteris d�
 
 ### 7. La Llei de Comunicació Audiovisual (2022) i la batalla del productor independent
 
-La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions. <sup>[17]</sup> Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cinema i de la Cultura Audiovisual, presentat el juny del 2024, no va arribar a aprovar-se abans de la dissolució de les Corts l'octubre del 2026. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
+La Llei de Comunicació Audiovisual estén a les plataformes les obligacions d’inversió en producció audiovisual, acostant-les al paper que abans havien tingut les televisions. <sup>[17]</sup> Però el conflicte central és la definició de “productor independent”: si les plataformes poden controlar o absorbir una part del finançament pensat per al cinema independent, el model que ha fet possibles films com *Alcarràs* o *Los domingos* queda en tensió. El Projecte de Llei del Cinema i de la Cultura Audiovisual, remès al Congrés el juny del 2024 i tramitat per via d’urgència, ha quedat novament paralitzat amb la recent convocatòria d’eleccions generals de l’octubre del 2026. La batalla ja no és només qui finança el cinema, sinó qui conserva el control creatiu i industrial de les obres.
 <!-- /moments -->
 
 <!-- conclusio -->
