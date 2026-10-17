@@ -1227,18 +1227,15 @@ function construirCodaBayona() {
       return `<div class="pip3-bayona-grup">
         <div class="pip3-bayona-filmnom"><em>${f.titol}</em></div>
         <div class="pip3-bayona-parella">
-          <div class="pip3-bayona-tipus">${pip3T('Sala + TV','Salas + TV')}</div>
           <div class="pmm-track pip3-bayona-segments">
             <span class="pmm-bar" style="width:${f.y/max*100}%;background:#B84555"></span><span class="pmm-bar" style="width:${tv/max*100}%;background:#E5A0A7"></span>
           </div>
           <span class="pmm-value">${fmtM(f.y+tv)}</span>
-          <div class="pip3-bayona-tipus">${pip3T('IAA estimat','IAA estimado')}</div>
           <div class="pmm-track"><span class="pmm-bar" style="width:${iaa/max*100}%;background:#1E3D6B"></span></div>
           <span class="pmm-value">${fmtM(iaa)}</span>
         </div>
       </div>`;
-    }).join('')}
-    <p class="pip3-bayona-fonts">${pip3T('Fonts: audiències de les estrenes televisives, Mediaset; espectadors de sala, base de dades de Públic i Prestigi. IAA, estimació pròpia.','Fuentes: audiencias de los estrenos televisivos, Mediaset; espectadores en salas, base de datos de Público y Prestigio. IAA, estimación propia.')}</p>`;
+    }).join('')}`;
 }
 
 function construirDuesGeneracions() {
