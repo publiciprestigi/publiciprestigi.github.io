@@ -41,7 +41,7 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 <!-- /bloc-bayona -->
 
 <!-- comentari-bayona -->
-- Els tres primers films de Bayona superen els quatre milions d’espectadors a Espanya, amb quotes de mercat entre el 3,78% i el 6,52%. *La sociedad de la nieve*, en canvi, registra 557K espectadors i una quota del 0,70%, malgrat el reconeixement internacional. És el contrast més radical de les tres trajectòries, però també el menys interpretable des de la taquilla, perquè el consum principal del film es desplaça a Netflix.
+- Els tres primers films de Bayona superen els quatre milions d’espectadors a Espanya, amb quotes de mercat entre el 3,78% i el 6,52%. *La sociedad de la nieve*, en canvi, registra 557K espectadors i una quota del 0,70%, malgrat el reconeixement internacional. És el contrast més radical de les tres trajectòries, però també el menys interpretable des de la taquilla, perquè el consum principal del film es desplaça a Netflix. Per això no hi computem un IAA estimat: aplicar-hi el factor general donaria una xifra que no representa adequadament aquest model de distribució.
 <!-- /comentari-bayona -->
 
 <!-- conclusio -->
