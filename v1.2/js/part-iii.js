@@ -1168,7 +1168,7 @@ function construirTaulesAutorIndustrial() {
       const mercat = String(m.entrades_M).replace('.',',')+'M'+(m.estimat?'≈':'');
       const recon = reconeixementsTrajectoria({titol:f.titol,any:f.x});
       const reg = corpusPrestigiData.find(x=>x.any===f.x&&x.titol===f.titol);
-      const pos = reg?.top100_pos || null;
+      const pos = reg?.top100_pos || filmsData.find(x=>x.any===f.x&&x.titol===f.titol&&x.in_top100)?.pos_hist || null;
       const top = pos ? '#'+pos : '—';
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
