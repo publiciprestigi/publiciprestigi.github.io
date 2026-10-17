@@ -72,6 +72,7 @@ async function carregarDades() {
     construirBretxa();
     construirCazaAlcarras();
     construirDuesGeneracions();
+    construirTaulesAutorIndustrial();
     // Si Generacions ja és visible (p. ex. arribada directa per #generacions),
     // inicialitzar els gràfics després de disposar de les dades.
     if (document.getElementById('seccio-generacions')?.style.display === 'block') {
@@ -1145,6 +1146,47 @@ const TAULA_PELI_HEADER = `
   <th class="col-num" style="width:95px;text-align:right">${pip3T('IAA estimat','IAA estimado')}</th>
 `;
 
+const TAULA_AI_HEADER = TAULA_PELI_HEADER.replace(/<th[^>]*>IIC<\/th>\s*/,'').replace(/<th[^>]*>\$\{pip3T\('IAA estimat','IAA estimado'\)\}<\/th>\s*/,'');
+
+
+// Taules d'autor industrial: mateix corpus que el gràfic, sense IIC ni IAA.
+function construirTaulesAutorIndustrial() {
+  const grups = [
+    { films:FILMS_IGLESIA, id:'taula-ai-iglesia', nom:'Álex de la Iglesia' },
+    { films:FILMS_AMENABAR, id:'taula-ai-amenabar', nom:'Alejandro Amenábar' },
+    { films:FILMS_BAYONA, id:'taula-ai-bayona', nom:'J.A. Bayona' },
+  ];
+  for (const grup of grups) {
+    const cont = document.getElementById(grup.id);
+    if (!cont) continue;
+    const rows = grup.films.map(f => {
+      const m = marketData.find(x=>x.any===f.x);
+      if (!m) throw new Error('Mercat no trobat: '+f.x);
+      const esp = f.y;
+      const penetr = (100*esp/(m.poblacio_M*1e6)).toFixed(2).replace('.',',')+'%'+(m.estimat?'≈':'');
+      const quota = (100*esp/(m.entrades_M*1e6)).toFixed(2).replace('.',',')+'%'+(m.estimat?'≈':'');
+      const mercat = String(m.entrades_M).replace('.',',')+'M'+(m.estimat?'≈':'');
+      const recon = reconeixementsTrajectoria({titol:f.titol,any:f.x});
+      const reg = corpusPrestigiData.find(x=>x.any===f.x&&x.titol===f.titol);
+      const pos = reg?.top100_pos || null;
+      const top = pos ? '#'+pos : '—';
+      const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
+      return `<tr style="background:${bg};border-bottom:2px solid #fff">
+        <td><strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.x})</span></td>
+        <td class="col-subtil" style="padding-right:13px">${grup.nom}</td>
+        <td style="padding-right:12px">${recon}</td>
+        <td class="col-center col-subtil">${top}</td>
+        <td class="col-num">${fmt(esp)}</td>
+        <td class="col-num col-subtil">${mercat}</td>
+        <td class="col-num col-subtil">${penetr}</td>
+        <td class="col-num col-subtil">${quota}</td>
+      </tr>`;
+    }).join('');
+    cont.innerHTML = `<table class="taula-festivals" style="font-size:0.82em;width:100%">
+      <thead><tr>${TAULA_AI_HEADER}</tr></thead><tbody>${rows}</tbody></table>`;
+  }
+}
+
 function construirDuesGeneracions() {
   FILMS_SAURA = [
     { any:1966, titol:'La caza', festival:'Berlín', premiat:true, esp:341377, top100:null, mercat:'370M≈', penetr:'1,06%≈', quota:'0,09%≈', iic:'0,21', iaa_xifra:'341.377', iaa_mult:'', iaa_est:false },
@@ -1246,7 +1288,6 @@ function renderTaulaGen(films, contId, directorFix) {
       <td class="col-num col-subtil">${gris(f.mercat)}</td>
       <td class="col-num col-subtil">${gris(f.penetr)}</td>
       <td class="col-num col-subtil">${gris(f.quota)}</td>
-      <td class="col-center col-subtil">${f.iic}</td>
       <td class="col-num" style="text-align:right"><strong style="color:#555">${f.iaa_xifra}</strong></td>
     </tr>`;
   }).join('');
@@ -1796,36 +1837,39 @@ window.PiP_graficGeneracioActual = function() {
 // MODEL D'AUTOR INDUSTRIAL — Gràfic 3 directors
 // ═══════════════════════════════════════════════════════════════
 
-window.PiP_graficAutorIndustrial = function() {
-  const el = document.getElementById('grafic-autor-industrial');
-  if (!el || typeof Chart === 'undefined') return;
-  if (window._chartAutorInd) window._chartAutorInd.destroy();
-
-  const FILMS_IGLESIA = [
+const FILMS_IGLESIA = [
     { x:1995, y:1419191, titol:'El día de la bestia',          top100:false, prestigi:null },
     { x:1999, y:1669964, titol:'Muertos de risa',              top100:false, prestigi:null },
-    { x:2000, y:1609084, titol:'La comunidad',                 top100:false, prestigi:'EFA' },
+    { x:2000, y:1609084, titol:'La comunidad',                 top100:false, prestigi:'Sant Sebastià ★' },
     { x:2004, y: 860710, titol:'Crimen ferpecto',              top100:false, prestigi:'EFA' },
     { x:2008, y:1423300, titol:'Los crímenes de Oxford',       top100:false, prestigi:null },
     { x:2010, y: 369118, titol:'Balada triste de trompeta',    top100:false, prestigi:'Venècia ★' },
     { x:2017, y:3284907, titol:'Perfectos desconocidos',       top100:true,  prestigi:null },
     { x:2022, y: 673654, titol:'El cuarto pasajero',           top100:false, prestigi:null, labelDy:-14 },
   ];
-  const FILMS_AMENABAR = [
+
+const FILMS_AMENABAR = [
     { x:1996, y: 855481, titol:'Tesis',                        top100:false, prestigi:null },
     { x:1997, y:1794539, titol:'Abre los ojos',                top100:false, prestigi:null },
     { x:2001, y:6410785, titol:'Los otros',                    top100:true,  prestigi:'EFA' },
     { x:2004, y:4099475, titol:'Mar adentro',                  top100:true,  prestigi:'Venècia ★ · Oscar ★ · EFA ★' },
-    { x:2009, y:3492709, titol:'Ágora',                        top100:true,  prestigi:'EFA' },
+    { x:2009, y:3492709, titol:'Ágora',                        top100:true,  prestigi:null },
     { x:2019, y:1888896, titol:'Mientras dure la guerra',      top100:false, prestigi:null },
     { x:2025, y: 797366, titol:'El cautivo',                   top100:false, prestigi:null },
   ];
-  const FILMS_BAYONA = [
+
+const FILMS_BAYONA = [
     { x:2007, y:4420987, titol:'El orfanato',                  top100:true,  prestigi:'EFA' },
     { x:2012, y:6129976, titol:'Lo imposible',                 top100:true,  prestigi:'Oscar · EFA' },
     { x:2016, y:4613696, titol:'Un monstruo viene a verme',    top100:true,  prestigi:'EFA ★' },
     { x:2023, y: 556976, titol:'La sociedad de la nieve',      top100:false, prestigi:'Oscar · EFA ★ · Venècia (clausura)', labelDy:20 },
   ];
+
+window.PiP_graficAutorIndustrial = function() {
+  const el = document.getElementById('grafic-autor-industrial');
+  if (!el || typeof Chart === 'undefined') return;
+  if (window._chartAutorInd) window._chartAutorInd.destroy();
+
 
   // Títol al bloc
   const bloc = document.getElementById('grafic-ai-bloc');
