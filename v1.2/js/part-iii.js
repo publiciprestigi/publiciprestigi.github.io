@@ -1140,8 +1140,8 @@ function capcaleraTaulaIII(tipus) {
     pip3T('Penetr.','Penetr.'),pip3T('Quota','Cuota')
   ];
   if (tipus === 'caza') noms.push('IIC');
-  if (tipus !== 'industrial') noms.push(pip3T('IAA estimat','IAA estimado'));
-  const indexs = tipus === 'industrial' ? [0,1,2,3,4,5,6,7] : tipus === 'generacions' ? [0,1,2,3,4,5,6,7,9] : [0,1,2,3,4,5,6,7,8,9];
+  noms.push(pip3T('IAA estimat','IAA estimado'));
+  const indexs = tipus === 'caza' ? [0,1,2,3,4,5,6,7,8,9] : [0,1,2,3,4,5,6,7,9];
   const total = indexs.reduce((n,i)=>n+PIP_III_COLS[i],0);
   return noms.map((nom,i) => {
     const center = nom === 'Top 100' || nom === 'IIC';
@@ -1181,6 +1181,11 @@ function construirTaulesAutorIndustrial() {
       const reg = corpusPrestigiData.find(x=>x.any===f.x&&x.titol===f.titol);
       const pos = reg?.top100_pos || filmsData.find(x=>x.any===f.x&&x.titol===f.titol&&x.in_top100)?.pos_hist || null;
       const top = pos ? '#'+pos : '—';
+      const factor = f.x<1984?1:f.x<1990?3:f.x<1995?2.5:f.x<=2005?2.15:f.x<=2019?2.5:3.25;
+      const iaaValor = esp*factor;
+      const iaa = f.titol === 'La sociedad de la nieve' ? '—' :
+        iaaValor >= 1e6 ? '~'+(iaaValor/1e6).toFixed(2).replace('.',',')+'M' :
+        '~'+fmt(Math.round(iaaValor));
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
       return `<tr style="background:${bg};border-bottom:2px solid #fff">
         <td><strong><em>${f.titol}</em></strong> <span class="col-subtil">(${f.x})</span></td>
@@ -1191,6 +1196,7 @@ function construirTaulesAutorIndustrial() {
         <td class="col-num col-subtil">${mercat}</td>
         <td class="col-num col-subtil">${penetr}</td>
         <td class="col-num col-subtil">${quota}</td>
+        <td class="col-num"><strong style="color:#555">${iaa}</strong></td>
       </tr>`;
     }).join('');
     cont.innerHTML = marcTaulaIII(TAULA_AI_HEADER, rows);
