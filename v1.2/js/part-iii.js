@@ -1134,7 +1134,7 @@ const COLORS_DIRECTOR = {
 // Una distribució proporcional comuna; cada taula ocupa l'amplada disponible, sense scroll.
 // Amplades comunes en píxels, com el model ampli de la v1.1.
 // Les taules s'estenen a la dreta de la columna editorial, sense scroll.
-const PIP_III_COLS = [180,102,142,64,98,69,72,64,38,79];
+const PIP_III_COLS = [180,94,140,64,98,69,72,64,38,79];
 function columnesTaulaIII(tipus) {
   return tipus === 'caza' ? [0,1,2,3,4,5,6,7,8,9] : [0,1,2,3,4,5,6,7,9];
 }
@@ -1150,7 +1150,7 @@ function capcaleraTaulaIII(tipus) {
   return noms.map((nom,i) => {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
-    const cls = center ? 'col-center' : (numeric ? 'col-num' : (i===1?'col-subtil':''));
+    const cls = center ? 'col-center' : ((i === 4 || i === noms.length-1) ? '' : (numeric ? 'col-num' : (i===1?'col-subtil':'')));
     return `<th class="${cls}" style="width:${PIP_III_COLS[columnesTaulaIII(tipus)[i]]}px;padding:8px 3px;white-space:nowrap">${nom}</th>`;
   }).join('');
 }
