@@ -1134,7 +1134,7 @@ const COLORS_DIRECTOR = {
 // Una distribució proporcional comuna; cada taula ocupa l'amplada disponible, sense scroll.
 // Amplades comunes en píxels, com el model ampli de la v1.1.
 // Les taules s'estenen a la dreta de la columna editorial, sense scroll.
-const PIP_III_COLS = [145,72,135,48,100,63,65,62,36,80];
+const PIP_III_COLS = [180,118,150,65,105,76,80,72,40,95];
 function columnesTaulaIII(tipus) {
   return tipus === 'caza' ? [0,1,2,3,4,5,6,7,8,9] : [0,1,2,3,4,5,6,7,9];
 }
@@ -1163,7 +1163,7 @@ const TAULA_PELI_HEADER = capcaleraTaulaIII('caza');
 const TAULA_GENERACIONS_HEADER = capcaleraTaulaIII('generacions');
 const TAULA_AI_HEADER = capcaleraTaulaIII('industrial');
 
-// Taules d'autor industrial: mateix corpus que el gràfic, sense IIC ni IAA.
+// Taules d'autor industrial: mateix corpus que el gràfic, amb IAA i sense IIC.
 function construirTaulesAutorIndustrial() {
   const grups = [
     { films:FILMS_IGLESIA, id:'taula-ai-iglesia', nom:'Álex de la Iglesia' },
@@ -1186,7 +1186,7 @@ function construirTaulesAutorIndustrial() {
       const top = pos ? '#'+pos : '—';
       const factor = f.x<1984?1:f.x<1990?3:f.x<1995?2.5:f.x<=2005?2.15:f.x<=2019?2.5:3.25;
       const iaaValor = esp*factor;
-      const iaa = f.titol === 'La sociedad de la nieve' ? 'n/c*' :
+      const iaa = f.titol === 'La sociedad de la nieve' ? 'n/c' :
         iaaValor >= 1e6 ? '~'+(iaaValor/1e6).toFixed(2).replace('.',',')+'M' :
         '~'+fmt(Math.round(iaaValor));
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
