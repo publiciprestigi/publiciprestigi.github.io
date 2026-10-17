@@ -13,7 +13,7 @@ El Decret Miró crea el primer sistema de subvencions anticipades de fins al 50%
 
 ### 2. Les televisions privades (1990): canvi de model
 
-L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró, els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades: taquilla, televisió i Estat. <sup>[14]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,0–3,0.
+L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pagament, canvia el finançament del cinema. Però el gir estructural ja venia del final del model Miró, els productors aconsegueixen que el pressupost es reparteixi entre tres potes obligades: taquilla, televisió i Estat. <sup>[14]</sup> La televisió deixa de ser només una emissió posterior i es converteix en una peça del model. Aquest esquema farà possibles els grans èxits dels 2000s, de *Mar adentro* a *El orfanato*: sala massiva i televisió com a segon mercat. El factor IAA del període 1990–1994 s’estima en ×2,5.
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
@@ -25,7 +25,7 @@ El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cul
 
 ### 5. Netflix i l'explosió de plataformes (2015–2025)
 
-Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el punt de no retorn. La COVID (2020) tanca les sales durant mesos i normalitza el consum domèstic. Disney+, HBO Max i Amazon Prime consoliden l'ecosistema. En clau espanyola, Filmin, fundada el 2007, havia anticipat aquest model amb un catàleg especialitzat en cinema d'autor i europeu que la converteix en referència per al públic del circuit cultural. El factor IAA arriba a ×2,5–4,0: un film actual pot ser vist per 2–4 vegades més persones que les que van a la sala de cinema.
+Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el punt de no retorn. La COVID (2020) tanca les sales durant mesos i normalitza el consum domèstic. Disney+, HBO Max i Amazon Prime consoliden l'ecosistema. En clau espanyola, Filmin, fundada el 2007, havia anticipat aquest model amb un catàleg especialitzat en cinema d'autor i europeu que la converteix en referència per al públic del circuit cultural. El factor IAA de 2020–2025 se situa en ×3,25, una estimació orientativa de l'audiència acumulada durant els primers anys d'explotació.
 
 ### 6. Les mesures de paritat (2018–2020): un canvi estructural
 
