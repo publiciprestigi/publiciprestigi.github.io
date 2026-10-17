@@ -944,7 +944,7 @@ function construirCazaAlcarras() {
     </tr>`;
   }).join('');
 
-  cont.innerHTML = marcTaulaIII(TAULA_PELI_HEADER, files);
+  cont.innerHTML = marcTaulaIII(TAULA_PELI_HEADER, files, 'caza');
 }
 
 window.PiP_graficCazaIAA = function() {
@@ -1131,7 +1131,12 @@ const COLORS_DIRECTOR = {
 
 // Cada model manté l'amplada global de la taula i distribueix les columnes segons la seva funció.
 // Una distribució proporcional comuna; cada taula ocupa l'amplada disponible, sense scroll.
+// Amplades comunes en píxels, com el model ampli de la v1.1.
+// Les taules s'estenen a la dreta de la columna editorial, sense scroll.
 const PIP_III_COLS = [145,72,135,48,100,63,65,62,36,80];
+function columnesTaulaIII(tipus) {
+  return tipus === 'caza' ? [0,1,2,3,4,5,6,7,8,9] : [0,1,2,3,4,5,6,7,9];
+}
 function capcaleraTaulaIII(tipus) {
   const noms = [
     pip3T('Títol','Título'),pip3T('Director','Dirección'),
@@ -1141,19 +1146,16 @@ function capcaleraTaulaIII(tipus) {
   ];
   if (tipus === 'caza') noms.push('IIC');
   noms.push(pip3T('IAA estimat','IAA estimado'));
-  const indexs = tipus === 'caza' ? [0,1,2,3,4,5,6,7,8,9] : [0,1,2,3,4,5,6,7,9];
-  const total = indexs.reduce((n,i)=>n+PIP_III_COLS[i],0);
   return noms.map((nom,i) => {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
     const cls = center ? 'col-center' : (numeric ? 'col-num' : (i===1?'col-subtil':''));
-    const directorPct = PIP_III_COLS[1] / PIP_III_COLS.reduce((n,v)=>n+v,0) * 100;
-    const pct = (i === 1 ? directorPct : PIP_III_COLS[indexs[i]] / (total-PIP_III_COLS[1]) * (100-directorPct)).toFixed(3);
-    return `<th class="${cls}" style="width:${pct}%;padding:5px 2px 9px;white-space:normal;overflow-wrap:normal;font-size:.92em;line-height:1.2">${nom}</th>`;
+    return `<th class="${cls}" style="width:${PIP_III_COLS[columnesTaulaIII(tipus)[i]]}px;padding:8px 3px;white-space:nowrap;letter-spacing:0;font-size:0.66rem">${nom}</th>`;
   }).join('');
 }
-function marcTaulaIII(header, rows) {
-  return `<table class="taula-festivals pip3-taula-ajustada" style="font-size:0.78em;width:100%;table-layout:fixed">
+function marcTaulaIII(header, rows, tipus) {
+  const amplada = columnesTaulaIII(tipus).reduce((n,i)=>n+PIP_III_COLS[i],0);
+  return `<table class="taula-festivals pip3-taula-ampla" style="font-size:0.82em;width:${amplada}px;min-width:${amplada}px;table-layout:fixed">
     <thead><tr>${header}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 const TAULA_PELI_HEADER = capcaleraTaulaIII('caza');
@@ -1199,7 +1201,7 @@ function construirTaulesAutorIndustrial() {
         <td class="col-num"><strong style="color:#555">${iaa}</strong></td>
       </tr>`;
     }).join('');
-    cont.innerHTML = marcTaulaIII(TAULA_AI_HEADER, rows);
+    cont.innerHTML = marcTaulaIII(TAULA_AI_HEADER, rows, 'industrial');
   }
 }
 
@@ -1308,7 +1310,7 @@ function renderTaulaGen(films, contId, directorFix) {
     </tr>`;
   }).join('');
 
-  cont.innerHTML = marcTaulaIII(TAULA_GENERACIONS_HEADER, files);
+  cont.innerHTML = marcTaulaIII(TAULA_GENERACIONS_HEADER, files, 'generacions');
 }
 
 
