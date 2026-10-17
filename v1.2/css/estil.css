@@ -1742,7 +1742,7 @@ body.part-ii {
 /* Part III: taules comparatives amples com a la v1.1, cap a la dreta del text. */
 .pip3-taula-ampla { max-width:none !important; border-collapse:collapse; }
 .pip3-taula-ampla th, .pip3-taula-ampla td { box-sizing:border-box; padding-right:4px; }
-.pip3-taula-ampla th { white-space:nowrap; letter-spacing:0; }
+.pip3-taula-ampla th { white-space:nowrap; }
 .pip3-taula-ampla .col-num { white-space:nowrap; font-variant-numeric:tabular-nums; }
 /* Excepció editorial de Part III: mantenir la taula ampla, sense scroll intern. */
 .pip3-taula-ampla { display:table !important; overflow:visible !important; max-width:none !important; }
