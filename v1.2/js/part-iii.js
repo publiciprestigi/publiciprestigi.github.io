@@ -1182,8 +1182,9 @@ function construirTaulesAutorIndustrial() {
       const mercat = String(m.entrades_M).replace('.',',')+'M'+(m.estimat?'≈':'');
       const recon = reconeixementsTrajectoria({titol:f.titol,any:f.x});
       const reg = corpusPrestigiData.find(x=>x.any===f.x&&x.titol===f.titol);
-      const pos = reg?.top100_pos || filmsData.find(x=>x.any===f.x&&x.titol===f.titol&&x.in_top100)?.pos_hist || null;
-      const top = pos ? '#'+pos : '—';
+      const filmPartI = filmsData.find(x=>x.any===f.x&&x.titol===f.titol);
+      const pos = reg?.top100_pos || (filmPartI?.in_top100 ? filmPartI.pos_hist : null);
+      const top = pos ? '#'+pos : filmPartI?.pos_decade ? filmPartI.pos_decade+'a als '+filmPartI.decada : '—';
       const factor = f.x<1984?1:f.x<1990?3:f.x<1995?2.5:f.x<=2005?2.15:f.x<=2019?2.5:3.25;
       const iaaValor = esp*factor;
       const iaa = f.titol === 'La sociedad de la nieve' ? 'n/c' :
