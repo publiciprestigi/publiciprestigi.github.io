@@ -73,6 +73,7 @@ async function carregarDades() {
     construirCazaAlcarras();
     construirDuesGeneracions();
     construirTaulesAutorIndustrial();
+    construirCodaBayona();
     // Si Generacions ja és visible (p. ex. arribada directa per #generacions),
     // inicialitzar els gràfics després de disposar de les dades.
     if (document.getElementById('seccio-generacions')?.style.display === 'block') {
@@ -1185,7 +1186,7 @@ function construirTaulesAutorIndustrial() {
       const top = pos ? '#'+pos : '—';
       const factor = f.x<1984?1:f.x<1990?3:f.x<1995?2.5:f.x<=2005?2.15:f.x<=2019?2.5:3.25;
       const iaaValor = esp*factor;
-      const iaa = f.titol === 'La sociedad de la nieve' ? '—' :
+      const iaa = f.titol === 'La sociedad de la nieve' ? 'n/c*' :
         iaaValor >= 1e6 ? '~'+(iaaValor/1e6).toFixed(2).replace('.',',')+'M' :
         '~'+fmt(Math.round(iaaValor));
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
@@ -1203,6 +1204,36 @@ function construirTaulesAutorIndustrial() {
     }).join('');
     cont.innerHTML = marcTaulaIII(TAULA_AI_HEADER, rows, 'industrial');
   }
+}
+
+// Coda Bayona: comparació visual estàtica entre dues finestres conegudes i l'IAA.
+function construirCodaBayona() {
+  const el = document.getElementById('coda-bayona-grafic');
+  if (!el) return;
+  const films = FILMS_BAYONA.slice(0,3);
+  const audienciesTV = {'El orfanato':2079000,'Lo imposible':6117000,'Un monstruo viene a verme':2671000};
+  const fmtM = n => (n/1e6).toFixed(2).replace('.',',')+'M';
+  const max = 16e6;
+  el.innerHTML = `
+    <div class="pip3-bayona-coda-title">${pip3T('Bayona — Sala i estrena televisiva davant l’IAA estimat','Bayona — Salas y estreno televisivo frente al IAA estimado')}</div>
+    <div class="pip3-bayona-llegenda">
+      <span><i style="background:#B84555"></i>${pip3T('Sala','Salas')}</span>
+      <span><i style="background:#E5A0A7"></i>${pip3T('Estrena TV','Estreno TV')}</span>
+      <span><i style="background:#1E3D6B"></i>${pip3T('IAA estimat','IAA estimado')}</span>
+    </div>
+    ${films.map(f => {
+      const tv = audienciesTV[f.titol];
+      const iaa = f.y*2.5;
+      return `<div class="pip3-bayona-film">
+        <div class="pip3-bayona-nom"><strong><em>${f.titol}</em></strong> <span>(${f.x})</span></div>
+        <div class="pip3-bayona-linia"><span>${pip3T('Sala + TV','Salas + TV')}</span>
+          <div class="pip3-bayona-pista"><i style="width:${f.y/max*100}%;background:#B84555"></i><i style="width:${tv/max*100}%;background:#E5A0A7"></i></div>
+          <b>${fmtM(f.y+tv)}</b></div>
+        <div class="pip3-bayona-linia"><span>${pip3T('IAA estimat','IAA estimado')}</span>
+          <div class="pip3-bayona-pista"><i style="width:${iaa/max*100}%;background:#1E3D6B"></i></div>
+          <b>${fmtM(iaa)}</b></div>
+      </div>`;
+    }).join('')}`;
 }
 
 function construirDuesGeneracions() {
