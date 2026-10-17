@@ -944,7 +944,7 @@ function construirCazaAlcarras() {
     </tr>`;
   }).join('');
 
-  cont.innerHTML = marcTaulaIII(TAULA_PELI_HEADER, files, 'caza');
+  cont.innerHTML = marcTaulaIII(TAULA_PELI_HEADER, files);
 }
 
 window.PiP_graficCazaIAA = function() {
@@ -1130,8 +1130,8 @@ const COLORS_DIRECTOR = {
 };
 
 // Cada model manté l'amplada global de la taula i distribueix les columnes segons la seva funció.
-// Amplades fixes compartides entre els tres capítols. En pantalles estretes la taula es desplaça horitzontalment.
-const PIP_III_COLS = [185,100,170,65,115,80,88,80,48,110];
+// Una distribució proporcional comuna; cada taula ocupa l'amplada disponible, sense scroll.
+const PIP_III_COLS = [145,72,135,48,100,63,65,62,36,80];
 function capcaleraTaulaIII(tipus) {
   const noms = [
     pip3T('Títol','Título'),pip3T('Director','Dirección'),
@@ -1141,24 +1141,19 @@ function capcaleraTaulaIII(tipus) {
   ];
   if (tipus === 'caza') noms.push('IIC');
   if (tipus !== 'industrial') noms.push(pip3T('IAA estimat','IAA estimado'));
-  const indexAmplada = tipus === 'industrial' ? [0,1,2,3,4,5,6,7] : tipus === 'generacions' ? [0,1,2,3,4,5,6,7,9] : [0,1,2,3,4,5,6,7,8,9];
+  const indexs = tipus === 'industrial' ? [0,1,2,3,4,5,6,7] : tipus === 'generacions' ? [0,1,2,3,4,5,6,7,9] : [0,1,2,3,4,5,6,7,8,9];
+  const total = indexs.reduce((n,i)=>n+PIP_III_COLS[i],0);
   return noms.map((nom,i) => {
     const center = nom === 'Top 100' || nom === 'IIC';
     const numeric = i >= 4 && !center;
     const cls = center ? 'col-center' : (numeric ? 'col-num' : (i===1?'col-subtil':''));
-    return `<th class="${cls}" style="width:${PIP_III_COLS[indexAmplada[i]]}px;min-width:${PIP_III_COLS[indexAmplada[i]]}px;box-sizing:border-box;padding-right:6px;white-space:nowrap">${nom}</th>`;
+    const pct = (PIP_III_COLS[indexs[i]] / total * 100).toFixed(3);
+    return `<th class="${cls}" style="width:${pct}%;padding:5px 2px 9px;white-space:normal;overflow-wrap:normal;font-size:.92em;line-height:1.2">${nom}</th>`;
   }).join('');
 }
-function midaTaulaIII(tipus) {
-  const indexs = tipus === 'industrial' ? [0,1,2,3,4,5,6,7] : tipus === 'generacions' ? [0,1,2,3,4,5,6,7,9] : [0,1,2,3,4,5,6,7,8,9];
-  return indexs.reduce((n,i)=>n+PIP_III_COLS[i],0);
-}
-function marcTaulaIII(header, rows, tipus) {
-  const width = midaTaulaIII(tipus);
-  return `<div class="pip3-table-scroll" style="width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch">
-    <table class="taula-festivals" style="font-size:0.82em;width:${width}px;min-width:${width}px;table-layout:fixed">
-      <thead><tr>${header}</tr></thead><tbody>${rows}</tbody>
-    </table></div>`;
+function marcTaulaIII(header, rows) {
+  return `<table class="taula-festivals pip3-taula-ajustada" style="font-size:0.78em;width:100%;table-layout:fixed">
+    <thead><tr>${header}</tr></thead><tbody>${rows}</tbody></table>`;
 }
 const TAULA_PELI_HEADER = capcaleraTaulaIII('caza');
 const TAULA_GENERACIONS_HEADER = capcaleraTaulaIII('generacions');
@@ -1197,7 +1192,7 @@ function construirTaulesAutorIndustrial() {
         <td class="col-num col-subtil">${quota}</td>
       </tr>`;
     }).join('');
-    cont.innerHTML = marcTaulaIII(TAULA_AI_HEADER, rows, 'industrial');
+    cont.innerHTML = marcTaulaIII(TAULA_AI_HEADER, rows);
   }
 }
 
@@ -1306,7 +1301,7 @@ function renderTaulaGen(films, contId, directorFix) {
     </tr>`;
   }).join('');
 
-  cont.innerHTML = marcTaulaIII(TAULA_GENERACIONS_HEADER, files, 'generacions');
+  cont.innerHTML = marcTaulaIII(TAULA_GENERACIONS_HEADER, files);
 }
 
 
