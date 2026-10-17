@@ -1756,8 +1756,8 @@ body.part-ii {
 .pip3-bayona-llegenda span { display:inline-flex;align-items:center;gap:5px; }
 .pip3-bayona-llegenda i { display:block;width:9px;height:9px; }
 .pip3-bayona-grup { display:grid;grid-template-columns:104px minmax(0,1fr);gap:8px;align-items:center;margin:15px 0; }
-.pip3-bayona-filmnom { font-size:11px;font-weight:600;color:#666;line-height:1.3; }
-.pip3-bayona-parella { display:grid;grid-template-columns:minmax(0,1fr) 63px;gap:6px 8px;align-items:center; }
+.pip3-bayona-filmnom { font-size:11px;font-weight:600;color:#666;line-height:1.3;overflow-wrap:normal; }
+.pip3-bayona-parella { display:grid;grid-template-columns:minmax(0,1fr) 63px;gap:4px 8px;align-items:center; }
 .pip3-bayona-tipus { font-size:10px;color:#666;white-space:nowrap; }
 .pip3-bayona-coda .pmm-track { height:18px;position:relative;background:#f3f3f3; }
 .pip3-bayona-coda .pmm-bar { height:100%;display:block; }
