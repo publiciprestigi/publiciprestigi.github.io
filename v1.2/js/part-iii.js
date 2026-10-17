@@ -1060,6 +1060,7 @@ window.PiP_graficCazaIAA = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
+      datasets: { bar: { barThickness: 30, maxBarThickness: 30 } },
       layout: { padding: { right: 160 } },
       plugins: {
         legend: {
@@ -1094,7 +1095,7 @@ window.PiP_graficCazaIAA = function() {
           stacked: true,
           ticks: {
             color: '#363737',
-            font: { size: 11 },
+            font: { size: 11, style: 'italic' },
           },
           grid: { display: false },
         },
