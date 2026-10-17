@@ -19,7 +19,7 @@ La comparació no pretén equiparar les dues pel·lícules, sinó mirar què can
 
 Les xifres de sala capturen només una finestra d’exhibició. L’IAA estima l’audiència total d’un film sumant les finestres disponibles en cada època durant els primers 2–3 anys d’explotació comercial. Com l’IIC, és una mètrica pròpia d’aquest estudi: no és una xifra oficial, sinó una estimació orientativa per comparar èpoques que no són directament comparables.
 
-El factor multiplicador varia segons el període. Els valors són estimacions orientatives de la capacitat de cada ecosistema de distribució per ampliar l'audiència més enllà de la sala, no coeficients mesurats. L'IAA estimat s'indica amb el símbol ~ a les taules i gràfics de l'estudi. <sup>[11]</sup>
+El factor multiplicador varia segons el període. Els valors són estimacions orientatives de la capacitat de cada ecosistema de distribució per ampliar l'audiència més enllà de la sala, no coeficients mesurats. L'IAA estimat s'indica amb el símbol ~ a les taules i gràfics de l'estudi.
 
 | Període | Nº finestres | Tipus de finestres | Factor IAA |
 | --- | --- | --- | --- |
