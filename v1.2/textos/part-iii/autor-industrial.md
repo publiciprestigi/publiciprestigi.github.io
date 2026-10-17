@@ -26,7 +26,7 @@ Hi ha una zona intermèdia que les dades de l’estudi fan visible i que no enca
 <!-- bloc-bayona -->
 ## J.A. Bayona: l’escala internacional
 
-És qui ha portat la lògica del model més lluny. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100) i *Un monstruo viene a verme* (2016, 4,6M, #8): tres films de gran format que connecten amb el públic espanyol a una escala excepcional. Després arriba el salt a Hollywood amb la franquícia *Jurassic*, de la mà, precisament, de Spielberg.
+És qui ha portat la lògica del model més lluny. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100) i *Un monstruo viene a verme* (2016, 4,6M, #8): tres films de gran format que connecten amb el públic espanyol a una escala excepcional. [N] Després arriba el salt a Hollywood amb la franquícia *Jurassic*, de la mà, precisament, de Spielberg.
 
 Bayona no ha construït la seva carrera a través de les seccions competitives dels grans festivals, però el reconeixement de les acadèmies acompanya la seva consolidació industrial. *El orfanato* va obtenir nominacions als EFA; *Lo imposible*, una nominació a l’Oscar per Naomi Watts i també reconeixement als EFA; *Un monstruo viene a verme* també va ser premiada als EFA. El seu cas és el que més s’apropa al model industrial internacional: gran producció, gènere, exigència tècnica, autoria i voluntat explícita d’arribar a públics amplis.
 
