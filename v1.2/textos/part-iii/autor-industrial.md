@@ -50,6 +50,10 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 <!-- /comentari-coda-bayona -->
 
 
+<!-- transicio-grafic-ai -->
+Les tres trajectòries es poden llegir ara conjuntament. El gràfic següent compara l'evolució dels espectadors a sala de De la Iglesia, Amenábar i Bayona, i fa visibles les diferències d'escala i continuïtat comercial entre els seus models.
+<!-- /transicio-grafic-ai -->
+
 <!-- conclusio -->
 La singularitat d’aquest model no consisteix, per tant, a quedar fora del prestigi, sinó a no dependre’n per construir públic, escala i continuïtat industrial. En De la Iglesia, Amenábar i Bayona, el reconeixement de festivals i acadèmies arriba de manera puntual o paral·lela sobre trajectòries que tenen el mercat i l’espectador com a condició central. Els seus casos ocupen una zona que la divisió estricta entre públic i prestigi no explica del tot: cinema fet per a molts, amb la mirada i el control d’un autor.
 
