@@ -44,16 +44,9 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 - Els tres primers films de Bayona superen els quatre milions d’espectadors a Espanya, amb quotes de mercat entre el 3,78% i el 6,52%. *La sociedad de la nieve*, en canvi, registra 557K espectadors i una quota del 0,70%, malgrat el reconeixement internacional. És el contrast més radical de les tres trajectòries, però també el menys interpretable des de la taquilla, perquè el consum principal del film es desplaça a Netflix. Per això indiquem **n/c*** a la taula: el factor general de l’IAA no és representatiu d’una explotació centrada en Netflix.
 <!-- /comentari-bayona -->
 
-<!-- coda-bayona -->
-### Dues finestres conegudes davant l'IAA estimat
-
-Les primeres emissions en obert dels tres films de Bayona permeten contrastar parcialment l'IAA amb audiències televisives documentades.
-<!-- /coda-bayona -->
-
 <!-- comentari-coda-bayona -->
-- Les estrenes a Telecinco van reunir una audiència mitjana de **2.079.000 espectadors** per a *El orfanato* (2010), **6.117.000** per a *Lo imposible* (2014) i **2.671.000** per a *Un monstruo viene a verme* (2018). Sumades a les entrades de sala, aquestes dues finestres representen entre el **59% i el 80%** de l'IAA estimat. Encara hi falten la televisió de pagament, les televisions autonòmiques, el DVD i les plataformes digitals, que podrien acostar l'audiència acumulada a l'ordre de magnitud de l'IAA en el mercat espanyol. La comparació és orientativa: suma entrades de cinema i audiència mitjana televisiva, no espectadors únics, i no verifica el factor multiplicador.
+- Les estrenes a Telecinco van reunir una audiència mitjana de 2.079.000 espectadors per a *El orfanato* (2010), 6.117.000 per a *Lo imposible* (2014) i 2.671.000 per a *Un monstruo viene a verme* (2018). Sumades a les entrades de sala, aquestes dues finestres representen entre el 59% i el 80% de l'IAA estimat. Encara hi falten la televisió de pagament, les televisions autonòmiques, el DVD i les plataformes digitals, que podrien acostar l'audiència acumulada a l'ordre de magnitud de l'IAA en el mercat espanyol. La comparació és orientativa: suma entrades de cinema i audiència mitjana televisiva, no espectadors únics, i no verifica el factor multiplicador.
 
-Fonts de les estrenes televisives: [Mediaset, *El orfanato* (2010)](https://www.mediaset.es/telemania/TVAmericana-mecenas-TVEspanola_0_963900081.html); [Mediaset, *Lo imposible* (2014)](https://www.mediaset.es/telemania/audiencias/audiencia-pelicula-imposible-telecinco-record-dos-decadas_18_1894200618.html); [Mediaset, *Un monstruo viene a verme* (2018)](https://files.mediaset.es/file/10002/2018/12/12/111218_Un_monstruo_viene_a_verme_-20-1_28e7.pdf). Les dades de sala provenen de la base de dades del projecte.
 <!-- /comentari-coda-bayona -->
 
 
