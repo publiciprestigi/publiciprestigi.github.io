@@ -19,16 +19,16 @@ La comparació no pretén equiparar les dues pel·lícules, sinó mirar què can
 
 Les xifres de sala capturen només una finestra d’exhibició. L’IAA estima l’audiència total d’un film sumant les finestres disponibles en cada època durant els primers 2–3 anys d’explotació comercial. Com l’IIC, és una mètrica pròpia d’aquest estudi: no és una xifra oficial, sinó una estimació orientativa per comparar èpoques que no són directament comparables.
 
-El factor multiplicador varia segons el període i s'expressa com a forquilla per reflectir la incertesa inherent al càlcul. A les taules i gràfics d'aquest estudi s'utilitza el punt mig de cada forquilla com a valor de referència, indicat amb el símbol ~.
+El factor multiplicador varia segons el període. Els valors són estimacions orientatives de la capacitat de cada ecosistema de distribució per ampliar l'audiència més enllà de la sala, no coeficients mesurats. L'IAA estimat s'indica amb el símbol ~ a les taules i gràfics de l'estudi. <sup>[11]</sup>
 
-| Període | Nº finestres | Tipus de finestres | Factor IAA | IAA punt mig |
-| --- | --- | --- | --- | --- |
-| <span style="white-space:nowrap">1965–1984</span> | 1 | *Sala de cinema* | ×1,0 | **×1,0** |
-| <span style="white-space:nowrap">1984–1989</span> | 3 | *Sala + TVE + VHS* | ×2,5–3,5 | **×3,0** |
-| <span style="white-space:nowrap">1990–1994</span> | 4 | *Sala + TVE + VHS + TV autonòmiques* | ×2,0–3,0 | **×2,5** |
-| <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privades/pagament + TV auton. + DVD* | ×1,8–2,5 | **×2,15** |
-| <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV priv./pag. + TV auton. + DVD + plataformes digitals* | ×2,0–3,0 | **×2,5** |
-| <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV priv./pag. + TV auton. + plataformes digitals en expansió* | ×2,5–4,0 | **×3,25** |
+| Període | Nº finestres | Tipus de finestres | Factor IAA |
+| --- | --- | --- | --- |
+| <span style="white-space:nowrap">1965–1984</span> | 1 | *Sala de cinema* | ×1,0 |
+| <span style="white-space:nowrap">1984–1989</span> | 3 | *Sala + TVE + VHS* | ×3,0 |
+| <span style="white-space:nowrap">1990–1994</span> | 4 | *Sala + TVE + VHS + TV autonòmiques* | ×2,5 |
+| <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privades/pagament + TV auton. + DVD* | ×2,15 |
+| <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV priv./pag. + TV auton. + DVD + plataformes digitals* | ×2,5 |
+| <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV priv./pag. + TV auton. + plataformes digitals en expansió* | ×3,25 |
 <!-- /bloc-iaa -->
 
 <!-- comentari-iaa -->
