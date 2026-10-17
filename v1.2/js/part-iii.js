@@ -1194,12 +1194,12 @@ function construirDuesGeneracions() {
     { any:2010, titol:'Todos vós sodes capitáns', director:'Oliver Laxe', festival:null, premiat:false, esp:905, top100:null, mercat:'101M≈', penetr:'0,00%≈', quota:'0,00%≈', iic:'0,00', iaa_xifra:'~2.250', iaa_mult:'', iaa_est:true },
     { any:2016, titol:'Mimosas', director:'Oliver Laxe', festival:null, premiat:false, esp:12097, top100:null, mercat:'96M≈', penetr:'0,03%≈', quota:'0,01%≈', iic:'0,01≈', iaa_xifra:'~30.000', iaa_mult:'', iaa_est:true },
     { any:2019, titol:'O que arde', director:'Oliver Laxe', festival:null, premiat:false, esp:104633, top100:null, mercat:'105,5M≈', penetr:'0,22%≈', quota:'0,10%≈', iic:'0,10≈', iaa_xifra:'~262.000', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Sirât', director:'Oliver Laxe', festival:'Cannes', premiat:true, esp:458542, top100:null, mercat:'65M≈', penetr:'0,94%≈', quota:'0,71%≈', iic:'0,56≈', iaa_xifra:'~1,50M', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Sirât', director:'Oliver Laxe', festival:'Cannes', premiat:true, esp:476143, top100:null, mercat:'65M≈', penetr:'0,98≈%', quota:'0,73≈%', iic:'0,58≈', iaa_xifra:'~1,55M', iaa_mult:'', iaa_est:true },
     { any:2017, titol:'Estiu 1993', director:'Carla Simón', festival:null, premiat:false, esp:198214, top100:null, mercat:'100M≈', penetr:'0,43%≈', quota:'0,20%≈', iic:'0,20≈', iaa_xifra:'~495.000', iaa_mult:'', iaa_est:true },
     { any:2022, titol:'Alcarràs', director:'Carla Simón', festival:'Berlín', premiat:true, esp:403195, top100:null, mercat:'71M', penetr:'0,84%', quota:'0,57%', iic:'0,47', iaa_xifra:'~1,31M', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:281749, top100:null, mercat:'65M≈', penetr:'0,58%≈', quota:'0,43%≈', iic:'0,34≈', iaa_xifra:'~0,92M', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:284821, top100:null, mercat:'65M≈', penetr:'0,59≈%', quota:'0,44≈%', iic:'0,35≈', iaa_xifra:'~0,93M', iaa_mult:'', iaa_est:true },
     { any:2022, titol:'Cinco lobitos', director:'Alauda Ruiz de Azúa', festival:null, premiat:false, esp:154708, top100:null, mercat:'71M≈', penetr:'0,32%≈', quota:'0,22%≈', iic:'0,18≈', iaa_xifra:'~504.000', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:688335, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,45%', quota:'1,06%', iic:'0,85', iaa_xifra:'~2,24M', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:785231, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,62%', quota:'1,21%', iic:'0,95', iaa_xifra:'~2,55M', iaa_mult:'', iaa_est:true },
   ];
 
   FILMS_SAURA.push(...['Goya en Burdeos','Fados','Io, Don Giovanni'].map(novaFilaEFA));
