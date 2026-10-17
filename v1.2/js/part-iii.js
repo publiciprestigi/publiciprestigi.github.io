@@ -1215,7 +1215,7 @@ function construirCodaBayona() {
   const fmtM = n => (n/1e6).toFixed(2).replace('.',',')+'M';
   const max = 16e6;
   el.innerHTML = `
-    <div class="pip3-bayona-coda-title">${pip3T('Sala + estrena TV davant l’IAA estimat','Salas + estreno TV frente al IAA estimado')}</div>
+    <p class="pmm-context">${pip3T('Sala + estrena TV davant l’IAA estimat','Salas + estreno TV frente al IAA estimado')}</p>
     <div class="pip3-bayona-llegenda">
       <span><i style="background:#B84555"></i>${pip3T('Sala','Salas')}</span>
       <span><i style="background:#E5A0A7"></i>${pip3T('Estrena TV','Estreno TV')}</span>
@@ -1224,16 +1224,21 @@ function construirCodaBayona() {
     ${films.map(f => {
       const tv = audienciesTV[f.titol];
       const iaa = f.y*2.5;
-      return `<div class="pip3-bayona-film">
-        <div class="pip3-bayona-nom"><strong><em>${f.titol}</em></strong> <span>(${f.x})</span></div>
-        <div class="pip3-bayona-linia"><span>${pip3T('Sala + TV','Salas + TV')}</span>
-          <div class="pip3-bayona-pista"><i style="width:${f.y/max*100}%;background:#B84555"></i><i style="width:${tv/max*100}%;background:#E5A0A7"></i></div>
-          <b>${fmtM(f.y+tv)}</b></div>
-        <div class="pip3-bayona-linia"><span>${pip3T('IAA estimat','IAA estimado')}</span>
-          <div class="pip3-bayona-pista"><i style="width:${iaa/max*100}%;background:#1E3D6B"></i></div>
-          <b>${fmtM(iaa)}</b></div>
+      return `<div class="pip3-bayona-grup">
+        <div class="pip3-bayona-filmnom"><em>${f.titol}</em></div>
+        <div class="pip3-bayona-parella">
+          <div class="pip3-bayona-tipus">${pip3T('Sala + TV','Salas + TV')}</div>
+          <div class="pmm-track pip3-bayona-segments">
+            <span class="pmm-bar" style="width:${f.y/max*100}%;background:#B84555"></span><span class="pmm-bar" style="width:${tv/max*100}%;background:#E5A0A7"></span>
+          </div>
+          <span class="pmm-value">${fmtM(f.y+tv)}</span>
+          <div class="pip3-bayona-tipus">${pip3T('IAA estimat','IAA estimado')}</div>
+          <div class="pmm-track"><span class="pmm-bar" style="width:${iaa/max*100}%;background:#1E3D6B"></span></div>
+          <span class="pmm-value">${fmtM(iaa)}</span>
+        </div>
       </div>`;
-    }).join('')}<p class="pip3-bayona-fonts">${pip3T('Fonts: audiències de les estrenes televisives, Mediaset; espectadors de sala, base de dades de Públic i Prestigi. IAA, estimació pròpia.','Fuentes: audiencias de los estrenos televisivos, Mediaset; espectadores en salas, base de datos de Público y Prestigio. IAA, estimación propia.')}</p>`;
+    }).join('')}
+    <p class="pip3-bayona-fonts">${pip3T('Fonts: audiències de les estrenes televisives, Mediaset; espectadors de sala, base de dades de Públic i Prestigi. IAA, estimació pròpia.','Fuentes: audiencias de los estrenos televisivos, Mediaset; espectadores en salas, base de datos de Público y Prestigio. IAA, estimación propia.')}</p>`;
 }
 
 function construirDuesGeneracions() {
