@@ -1753,11 +1753,11 @@ body.part-ii {
 .pip3-bayona-llegenda i { display:block;width:9px;height:9px; }
 .pip3-bayona-grup { display:grid;grid-template-columns:132px minmax(0,1fr);gap:8px;align-items:center;margin:10px 0; }
 .pip3-bayona-filmnom { font-size:11px;font-weight:600;color:#666;line-height:1.3; }
-.pip3-bayona-parella { display:grid;grid-template-columns:62px minmax(0,1fr) 63px;gap:6px 8px;align-items:center; }
+.pip3-bayona-parella { display:grid;grid-template-columns:minmax(0,1fr) 63px;gap:6px 8px;align-items:center; }
 .pip3-bayona-tipus { font-size:10px;color:#666;white-space:nowrap; }
 .pip3-bayona-coda .pmm-track { height:18px;position:relative;background:#f3f3f3; }
 .pip3-bayona-coda .pmm-bar { height:100%;display:block; }
 .pip3-bayona-segments { display:flex; }
 .pip3-bayona-coda .pmm-value { font-size:12px;font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums; }
 .pip3-bayona-fonts { font-size:11px;line-height:1.45;color:#888;text-align:center;margin:17px auto 0;max-width:520px; }
-@media(max-width:520px) { .pip3-bayona-coda{width:100%}.pip3-bayona-grup{grid-template-columns:105px minmax(0,1fr);gap:5px}.pip3-bayona-parella{grid-template-columns:54px minmax(0,1fr) 50px;gap:4px}.pip3-bayona-coda .pmm-value{font-size:11px} }
+@media(max-width:520px) { .pip3-bayona-coda{width:100%}.pip3-bayona-grup{grid-template-columns:105px minmax(0,1fr);gap:5px}.pip3-bayona-parella{grid-template-columns:minmax(0,1fr) 50px;gap:4px}.pip3-bayona-coda .pmm-value{font-size:11px} }
