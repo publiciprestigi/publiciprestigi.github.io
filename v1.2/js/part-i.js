@@ -235,17 +235,20 @@ function construirRànquingDirectors() {
   const filaR1 = (d, i) => {
     const id = `dir1-${++ctrDir}`;
     const filmsHtml = d.filmsTop100.join(' · ');
-    return `<tr${i>=10?' style="display:none" class="fila-extra-d1"':''}>
+    return `<tr id="${id}-main"${i>=10?' style="display:none" class="fila-extra-d1"':''}>
       <td class="col-pos">${i+1}</td>
-      <td>
-        <strong>${d.nom}</strong>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
-      </td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.top100}</td>
       <td class="col-num">${fmt(d.espTop)}</td>
       <td class="col-num col-gris">${(d.espTop/totalEsp*100).toFixed(1)}%</td>
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="${pipT('Veure films','Ver films')}">+</button>
+      </td>
+    </tr>
+    <tr id="${id}" data-main-row="${id}-main" style="display:none;background:#f7f7f7">
+      <td colspan="2" style="padding:0;border:0"></td>
+      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsHtml}</div>
       </td>
     </tr>`;
   };
@@ -268,18 +271,21 @@ function construirRànquingDirectors() {
     let filmsHtml = '';
     if (d.filmsTop100.length) filmsHtml += `<span class="dir-films-grup">Top 100</span>${d.filmsTop100.join(' · ')}`;
     if (d.filmsContext.length) filmsHtml += `<span class="dir-films-grup" style="margin-top:6px">${pipT('Addicionals','Adicionales')}</span>${d.filmsContext.join(' · ')}`;
-    return `<tr${i>=10?' style="display:none" class="fila-extra-d2"':''}>
+    return `<tr id="${id}-main"${i>=10?' style="display:none" class="fila-extra-d2"':''}>
       <td class="col-pos">${posActual}</td>
       <td class="col-var">${vHtml}</td>
-      <td>
-        <strong>${d.nom}</strong>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
-      </td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.top100}</td>
       <td class="col-center">${add > 0 ? '+'+add : '—'}</td>
       <td class="col-num">${fmt(d.espTotal)}</td>
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="${pipT('Veure films','Ver films')}">+</button>
+      </td>
+    </tr>
+    <tr id="${id}" data-main-row="${id}-main" style="display:none;background:#f7f7f7">
+      <td colspan="3" style="padding:0;border:0"></td>
+      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsHtml}</div>
       </td>
     </tr>`;
   };
@@ -327,10 +333,12 @@ function construirRànquingDirectors() {
 }
 
 window.toggleDirFilms = function(id, btn) {
-  const div = document.getElementById(id);
-  if (!div) return;
-  const vis = div.style.display !== 'none';
-  div.style.display = vis ? 'none' : 'block';
+  const row = document.getElementById(id);
+  if (!row) return;
+  const vis = row.style.display !== 'none';
+  row.style.display = vis ? 'none' : 'table-row';
+  const mainRow = document.getElementById(row.dataset.mainRow || '');
+  if (mainRow) mainRow.style.borderBottom = vis ? '' : '0';
   btn.textContent = vis ? '+' : '−';
 };
 
