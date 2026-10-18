@@ -247,7 +247,7 @@ function construirRànquingDirectors() {
     </tr>
     <tr id="${id}" data-main-row="${id}-main" style="display:none;background:#f7f7f7">
       <td colspan="2" style="padding:0;border:0"></td>
-      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
+      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top;max-width:none">
         <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsHtml}</div>
       </td>
     </tr>`;
@@ -284,7 +284,7 @@ function construirRànquingDirectors() {
     </tr>
     <tr id="${id}" data-main-row="${id}-main" style="display:none;background:#f7f7f7">
       <td colspan="3" style="padding:0;border:0"></td>
-      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top">
+      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top;max-width:none">
         <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsHtml}</div>
       </td>
     </tr>`;
