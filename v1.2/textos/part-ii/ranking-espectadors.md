@@ -7,7 +7,7 @@ Els rànquings següents presenten els deu títols més vistos de cada festival 
 <!-- /intro -->
 
 <!-- comentari-grafic -->
-- El gràfic dibuixa una escala descendent força regular, amb menys pel·lícules a mesura que augmenta el nombre d’espectadors. A la base, la concentració és especialment significativa, amb 107 films (31,5% del total) que no arriben als 100K espectadors. Gairebé un terç de les pel·lícules reconegudes internacionalment han tingut, per tant, una presència molt limitada a les sales. D’aquest grup, 82 films provenen exclusivament dels festivals, 22 només de les acadèmies i tres comparteixen tots dos circuits.
+- El gràfic dibuixa una escala descendent força regular, amb menys pel·lícules a mesura que augmenta el nombre d’espectadors. A la base, la concentració és especialment significativa, amb 107 films (31,5% del total) que no arriben als 100K espectadors, amb una presència molt limitada a les sales. D’aquest grup, 82 films provenen exclusivament dels festivals, 22 només de les acadèmies i tres comparteixen tots dos circuits.
 <!-- /comentari-grafic -->
 
 <!-- comentari -->
