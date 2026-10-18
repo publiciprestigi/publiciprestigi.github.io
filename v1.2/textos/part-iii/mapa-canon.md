@@ -1,7 +1,7 @@
 <!-- intro -->
 Tres intents en les últimes tres dècades han volgut fixar per consens quines són les millors pel·lícules del cinema espanyol: la llista del Centenari (1995), impulsada per l'ICAA amb motiu dels cent anys del naixement del cinema; l'enquesta de *Caimán Cuadernos de Cine* (2016), d'arrel cinèfila; i la del suplement *Babelia* de *El País* (2025), de perfil periodístic. Tres prescriptors de naturalesa diferent, tres moments, tres fotografies del cànon. <sup>[21]</sup>
 
-Aquest capítol les creua per dibuixar-ne un possible consens compartit i el situa davant del públic real del període estudiat. Després dels festivals i els seus premis, el cànon és una forma de prestigi i legitimitat que l'estudi encara no havia tractat, i la pregunta és directa: quants espectadors té al darrere?
+Aquest capítol les creua per dibuixar-ne un possible consens compartit i el situa davant del públic real del període estudiat. Després dels festivals i les acadèmies, el cànon és una altra forma de prestigi i legitimitat que l'estudi encara no havia tractat, i la pregunta és directa: quants espectadors té al darrere?
 
 El resultat és un mapa amb un nucli central de consens i quatre zones al voltant: un extrem radical gairebé sense taquilla, un extrem popular sense cap presència a les llistes, i dos espais intermedis, la generació actual i el model d’autor industrial. Cinc zones que reuneixen, en un sol gràfic, tots els territoris que l'estudi ha anat recorrent.
 <!-- /intro -->
@@ -16,11 +16,11 @@ El resultat és un mapa amb un nucli central de consens i quatre zones al voltan
 <!-- /fonts -->
 
 <!-- criteri -->
-El criteri general d’entrada al nucli central és la presència a totes les llistes que cronològicament poden incloure cada film: les tres per al període 1975–1995, i les dues disponibles per als trams anterior (la llista de *Babelia* comença el 1975) i posterior (la del Centenari acaba el 1995). Per als films posteriors a 1995 s’hi afegeix una condició coherent amb el mapa mateix: un lloc rellevant en aquest estudi, per gran taquilla i/o reconeixement a festivals. El mapa només admet una excepció a aquest criteri.
+El criteri general d’entrada al nucli central és la presència a totes les llistes que cronològicament poden incloure cada film: les tres per al període 1975–1995, i les dues disponibles per als trams anterior (la llista de *Babelia* comença el 1975) i posterior (la del Centenari acaba el 1995). Per als films posteriors a 1995 s’hi afegeix una condició coherent amb el mapa mateix: un lloc rellevant en aquest estudi, per gran taquilla i/o reconeixement internacional. El mapa només admet una excepció a aquest criteri.
 
 Cal tenir present l'abast d'aquest mapa: cobreix el període de l'estudi (1965–2025) i no és, per tant, el cànon complet del cinema espanyol. En queden fora títols clau d'abans del període com *Viridiana* de Buñuel, *Plácido*, *El verdugo* i *¡Bienvenido, Mister Marshall!* de Berlanga, o *Muerte de un ciclista* i *Calle Mayor* de Bardem, habituals a les primeres posicions de qualsevol cànon històric. Aquesta absència explica que Berlanga hi entri excepcionalment per *La escopeta nacional*, absent de la llista del Centenari però avalada per *Caimán* i *Babelia* i convertida en la seva obra més reconeguda dins del període, mentre que Bardem no hi té cap film.
 
-L'ordre dels cinc blocs no és arbitrari: el mapa es llegeix com una escala d'espectadors, de l'extrem radical, on el públic gairebé desapareix, fins a l'extrem popular, on ho és tot. Les mitjanes de cada bloc dibuixen la corba: 24K espectadors a l'extrem radical, 354K a la generació actual, 1,4M al nucli central, 3,2M al popular de gènere i 5,1M a l'extrem popular. El nucli ocupa exactament el lloc que li correspon: el mig.
+L'ordre dels cinc blocs no és arbitrari: el mapa es llegeix com una escala d'espectadors, de l'extrem radical, on el públic gairebé desapareix, fins a l'extrem popular, on ho és tot. Les mitjanes de cada bloc dibuixen la corba: 24K espectadors a l'extrem radical, 354K a la generació actual, 1,4M al nucli central, 3,2M al model d’autor industrial i 5,1M a l'extrem popular. El nucli ocupa exactament el lloc que li correspon: el mig.
 <!-- /criteri -->
 
 <!-- nucli -->
