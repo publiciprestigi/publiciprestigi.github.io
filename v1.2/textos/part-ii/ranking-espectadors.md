@@ -3,12 +3,11 @@ La distribució per volum d’espectadors ofereix una primera fotografia del pú
 <!-- /intro-grafic -->
 
 <!-- intro -->
-A continuació, els rànquings per festivals i acadèmies permeten comparar l'abast de públic dels films reconeguts en cadascun dels sis àmbits. La incorporació dels premis de les acadèmies cinematogràfiques amplia el marc d'anàlisi i mostra diferències entre els dos circuits. Entre els festivals, Berlín és l'únic dels quatre sense cap film al Top 100, Cannes n'aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els Oscar n'aporten quatre, i els EFA n'aporten onze, el màxim.
+Si la distribució general mostra el predomini dels films amb pocs espectadors, els rànquings següents presenten els deu títols més vistos de cada festival i premi acadèmic, amb l’opció de desplegar-ne el llistat complet, i permeten observar les diferències i el perfil propi de cada institució. Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric, Cannes n’aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els Oscar n’aporten quatre i els EFA onze, el màxim del conjunt.
 <!-- /intro -->
 
 <!-- comentari-grafic -->
-- El reconeixement internacional no garanteix una gran afluència a les sales: la distribució permet apreciar el pes de les pel·lícules amb un públic reduït respecte dels èxits comercials.
-- Els 17 films del Top 100 constitueixen el grup de major abast de públic dins del corpus de 340 títols.
+- La progressió per franges és evident. El gràfic dibuixa una escala descendent gairebé perfecta, amb menys pel·lícules a mesura que augmenta el nombre d’espectadors. A la base, la concentració és especialment significativa, amb 107 films (31,5% del total) que no arriben als 100K espectadors. Gairebé un terç de les pel·lícules reconegudes internacionalment han tingut, per tant, una presència molt limitada a les sales. D’aquest grup, 82 films provenen exclusivament dels festivals, 22 només de les acadèmies i tres comparteixen tots dos circuits.
 <!-- /comentari-grafic -->
 
 <!-- comentari -->
