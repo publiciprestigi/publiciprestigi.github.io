@@ -29,7 +29,7 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 <!-- /bloc-bayona -->
 
 <!-- transicio-grafic-ai -->
-El gràfic següent compara l’evolució dels espectadors a sala de les pel·lícules de De la Iglesia, Amenábar i Bayona recollides a les parts I i II de l’estudi.
+El gràfic següent mostra l’evolució dels espectadors a sala de les pel·lícules recollides a les tres taules anteriors.
 <!-- /transicio-grafic-ai -->
 
 <!-- comentari-grafic-ai -->
@@ -37,9 +37,7 @@ El tram final del gràfic mostra una caiguda compartida dels espectadors a sala 
 <!-- /comentari-grafic-ai -->
 
 <!-- conclusio -->
-Bayona i Amenábar podrien haver construït trajectòries dins el circuit de festivals (*Mar adentro* ho demostra), però han triat un altre joc i l’han guanyat en els seus propis termes. La seva projecció internacional s'acosta més a l'estratègia de la indústria nord-americana, en què festivals com Venècia i Toronto formen part de la promoció comercial i de la carrera cap als Oscar. No és imprescindible competir-hi: una clausura o una projecció especial també poden oferir una gran visibilitat internacional.
-
-Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional, i mai a una escala semblant. I això no és poca cosa.
+Bayona i Amenábar podrien haver construït trajectòries dins el circuit de festivals (*Mar adentro* ho demostra), però han triat un altre joc i l’han guanyat en els seus propis termes. La seva projecció internacional s'acosta més a l'estratègia de la indústria nord-americana, en què festivals com Venècia i Toronto formen part de la promoció comercial i de la carrera cap als Oscar. No és imprescindible competir-hi: una clausura o una projecció especial també poden oferir una gran visibilitat internacional. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional, i mai a una escala semblant. I això no és poca cosa.
 <!-- /conclusio -->
 
 <!-- paradoxa -->
