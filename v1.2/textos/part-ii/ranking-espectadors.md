@@ -1,5 +1,5 @@
 <!-- intro-grafic -->
-La distribució per volum d'espectadors ofereix una primera fotografia del públic dels 340 films amb reconeixement internacional. Permet observar quants títols arriben a les franges de més assistència i quants es concentren en els nivells inferiors, abans de comparar els resultats dels diferents festivals i acadèmies.
+La distribució per volum d’espectadors ofereix una primera fotografia del públic dels 340 films reconeguts als quatre festivals i les dues acadèmies analitzades. Més de la meitat, 176 films (51,8%), no arriben als 250K espectadors. Gairebé un terç, 108 films (31,8%), se situen entre els 250K i 1M. I només el 15%, 51 films, superen el milió d’espectadors, dels quals 17 formen part també del Top 100 històric, les «dobles corones» que retrobarem a la Part III.
 <!-- /intro-grafic -->
 
 <!-- intro -->
