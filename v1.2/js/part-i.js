@@ -292,7 +292,8 @@ function construirRànquingDirectors() {
 
   cont1.innerHTML = `
     <h3 class="subtitol-ranking-gran">${pipT('Només films del Top 100','Solo films del Top 100')}</h3>
-    <table class="taula-ranking">
+    <table class="taula-ranking" style="table-layout:fixed">
+      <colgroup><col style="width:4%"><col style="width:33%"><col style="width:17%"><col style="width:28%"><col style="width:11%"><col style="width:7%"></colgroup>
       <thead><tr>
         <th class="col-pos">#</th>
         <th>Direcció</th>
@@ -312,7 +313,8 @@ function construirRànquingDirectors() {
 
   cont2.innerHTML = `
     <h3 class="subtitol-ranking-gran">${pipT('De tots els films citats (Top 100 + context)','De todos los films citados (Top 100 + contexto)')}</h3>
-    <table class="taula-ranking">
+    <table class="taula-ranking" style="table-layout:fixed">
+      <colgroup><col style="width:4%"><col style="width:7%"><col style="width:27%"><col style="width:17%"><col style="width:8%"><col style="width:30%"><col style="width:7%"></colgroup>
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
