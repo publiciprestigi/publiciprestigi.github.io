@@ -3,7 +3,7 @@ Tres intents en les últimes tres dècades han volgut fixar per consens quines s
 
 Aquest capítol les creua per dibuixar-ne un possible consens compartit i el situa davant del públic real del període estudiat. Després dels festivals i els seus premis, el cànon és una forma de prestigi i legitimitat que l'estudi encara no havia tractat, i la pregunta és directa: quants espectadors té al darrere?
 
-El resultat és un mapa amb un nucli central de consens i quatre zones al voltant: un extrem radical gairebé sense taquilla, un extrem popular sense cap presència a les llistes, i dos espais intermedis, la generació actual i el cinema popular de gènere. Cinc zones que reuneixen, en un sol gràfic, tots els territoris que l'estudi ha anat recorrent.
+El resultat és un mapa amb un nucli central de consens i quatre zones al voltant: un extrem radical gairebé sense taquilla, un extrem popular sense cap presència a les llistes, i dos espais intermedis, la generació actual i el model d’autor industrial. Cinc zones que reuneixen, en un sol gràfic, tots els territoris que l'estudi ha anat recorrent.
 <!-- /intro -->
 
 <!-- fonts -->
@@ -38,7 +38,7 @@ La resta del nucli el completen títols de trajectòries molt diverses: hi convi
 <!-- intermedis -->
 ## Els espais intermedis
 
-A banda i banda del nucli, dos grups comparteixen una posició intermèdia: el cànon en construcció de la generació actual i el cinema popular de gènere, territori del cinema d’autor industrial ja tractat a l’estudi, ara mirat des del cànon.
+A banda i banda del nucli, dos grups comparteixen una posició intermèdia: el cànon en construcció de la generació actual i el model d’autor industrial, sorgit del nou cinema popular de gènere dels anys noranta i ara mirat des del cànon.
 
 Per una banda, la generació actual: quatre films del 2022 i un precedent del 2014. La fotografia és nítida: tres directores i dos directors, la primera zona del mapa amb majoria femenina, en coherència amb el canvi estructural documentat. La seva escala de públic va dels 43K espectadors de *La maternal* al 1,1M d'*As bestas*. *Magical Girl*, Conxa d'Or el 2014, és el precedent i alhora l'avís: present a la llista de *Caimán* el 2016, absent de la de *Babelia* el 2025, potser condicionada també per les acusacions contra el seu director publicades l’any anterior pel mateix diari. <sup>[22]</sup> El cànon en construcció també es pot refredar. I fora del mapa per pura cronologia queda *Los domingos*, estrenada quatre mesos després de l'enquesta de *Babelia*: la primera candidata de la propera llista, i probablement la que substituirà *Cinco lobitos*, de la mateixa directora.
 
@@ -58,7 +58,7 @@ A l'extrem popular, més de 25 milions d'espectadors acumulats entre els cinc fi
 <!-- /extrems -->
 
 <!-- tancament -->
-El mapa demostra que el nucli central del cànon s’ha construït amb audiències àmplies, però no desmesurades. Als extrems, en canvi, conviuen dues formes oposades de posteritat: pel·lícules de públic reduït que el cànon ha mantingut vives i grans èxits populars que no han estat incorporats al seu relat. La pregunta oberta és què passarà amb els espais intermedis: si el cinema popular de gènere acabarà entrant pel pes del temps o per futurs redescobriments, i si la generació actual consolidarà o ampliarà les seves posicions quan apareguin noves llistes i nous títols. Perquè el cànon no està mai tancat i varia segons qui el mira: la pel·lícula que encapçala la llista més recent de *Babelia* ni tan sols apareixia entre els millors títols de la primera llista del Centenari.
+El mapa demostra que el nucli central del cànon s’ha construït amb audiències àmplies, però no desmesurades. Als extrems, en canvi, conviuen dues formes oposades de posteritat: pel·lícules de públic reduït que el cànon ha mantingut vives i grans èxits populars que no han estat incorporats al seu relat. La pregunta oberta és què passarà amb els espais intermedis: si el cinema popular de gènere, representat aquí pel model d’autor industrial, acabarà entrant pel pes del temps o per futurs redescobriments, i si la generació actual consolidarà o ampliarà les seves posicions quan apareguin noves llistes i nous títols. Perquè el cànon no està mai tancat i varia segons qui el mira: la pel·lícula que encapçala la llista més recent de *Babelia* ni tan sols apareixia entre els millors títols de la primera llista del Centenari.
 
 Les formes canviants de veure cinema condicionaran el futur cànon? Els espectadors de sala mantindran el mateix pes? S'eixamplarà la distància entre la visió cinèfila, periodística i institucional?
 <!-- /tancament -->
