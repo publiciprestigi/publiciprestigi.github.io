@@ -3,7 +3,7 @@ La distribució per volum d’espectadors ofereix una primera fotografia del pú
 <!-- /intro-grafic -->
 
 <!-- intro -->
-Els rànquings següents presenten els deu títols més vistos de cada festival i premi acadèmic, amb l’opció de desplegar-ne el llistat complet. La comparació permet observar les diferències i el perfil de cada institució. Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric, Cannes n’aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els Oscar n’aporten quatre i els EFA onze, el màxim del conjunt.
+Els rànquings següents presenten els deu títols més vistos de cada institució, amb l’opció de desplegar-ne el llistat complet. La comparació permet observar les diferències i els perfils respectius. Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric, Cannes n’aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els Oscar n’aporten quatre i els EFA onze, el màxim del conjunt.
 <!-- /intro -->
 
 <!-- comentari-grafic -->
