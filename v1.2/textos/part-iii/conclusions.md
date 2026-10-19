@@ -63,13 +63,13 @@ La «doble corona» pot haver canviat d'escala. Avui, una pel·lícula pot reuni
 
 <p class="subtitol-punt">L’audiència s’amplia i arriba més lluny, però es fragmenta entre pantalles, territoris i moments diferents.</p>
 
-A partir dels 90s, les televisions van assumir una funció decisiva: finançaven el cinema i, alhora, n’amplificaven l’audiència. Aquell model va sostenir un cinema mitjà i gran capaç de circular entre les sales, la televisió i el consum domèstic. Als 2010s, la concentració de finançament, promoció i estrena va culminar en el film-esdeveniment, capaç de convertir una pel·lícula en un fenomen col·lectiu.
+A partir dels 90s, les televisions van assumir una funció decisiva en el finançament del cinema i l’ampliació de la seva audiència. Aquell model va sostenir una producció capaç de circular entre les sales, la televisió i el consum domèstic. Als 2010s, la concentració de finançament, promoció i estrena va culminar en el film-esdeveniment, capaç de convertir una pel·lícula en un fenomen col·lectiu.
 
-Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut centralitat i una part creixent del finançament i la distribució ha passat a les plataformes, que operen amb una lògica diferent: ampliar i retenir subscriptors, més que concentrar milions d’espectadors en un mateix moment.
+Aquell centre de gravetat s’ha desplaçat. Les televisions han perdut protagonisme davant les plataformes, que prioritzen ampliar i retenir subscriptors més que concentrar milions d’espectadors en un mateix moment.
 
-Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. L’audiència pot ser massiva, però dispersa; l’accés, global, però individualitzat. Ara bé, una audiència acumulada no equival necessàriament a un impacte social comparable: milions d’entrades concentrades a les sales no generen la mateixa intensitat de conversa simultània, presència pública i experiència compartida que una audiència similar, però atomitzada entre finestres, pantalles i moments de consum.
+Una pel·lícula pot arribar avui a públics de molts països, durant mesos o anys i a través de dispositius diferents. Però una audiència massiva i dispersa no equival necessàriament a un impacte social comparable. Milions d’entrades concentrades a les sales generen una experiència compartida i una presència pública diferents de les d’una audiència similar, però fragmentada entre pantalles i moments de consum.
 
-El públic hi és, potencialment més ampli que mai, però dins d’una oferta audiovisual gairebé il·limitada i fragmentada, el repte ja no és arribar-hi, sinó fer-lo coincidir de nou en una sala.
+El públic hi és, potencialment més ampli que mai. Però davant d’una oferta audiovisual gairebé il·limitada, el repte ja no és només arribar-hi, sinó tornar a reunir-lo en una sala.
 <!-- /punt-5 -->
 
 <!-- punt-6 -->
