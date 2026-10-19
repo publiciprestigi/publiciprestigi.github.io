@@ -1,5 +1,5 @@
 <!-- intro-grafic -->
-La distribució per volum d’espectadors ofereix una primera fotografia del públic dels 340 films reconeguts als quatre festivals i les dues acadèmies analitzades. Més de la meitat, 176 films (51,8%), no arriben als 250K espectadors. Gairebé un terç, 108 films (31,8%), se situen entre els 250K i 1M. I només el 15%, 51 films, superen el milió d’espectadors, dels quals 17 formen part també del Top 100 històric, les «dobles corones» que retrobarem a la Part III.
+La distribució per volum d’espectadors ofereix una primera fotografia del públic dels 340 films presents en aquesta part. Més de la meitat, 176 films (51,8%), no arriben als 250K espectadors, mentre que només 51 superen el milió, dels quals 17 formen part també del Top 100 històric, les «dobles corones» que retrobarem a la Part III.
 <!-- /intro-grafic -->
 
 <!-- intro -->
@@ -7,7 +7,7 @@ Els rànquings següents presenten els deu títols més vistos de cada instituci
 <!-- /intro -->
 
 <!-- comentari-grafic -->
-- El gràfic dibuixa una escala descendent força regular, amb menys pel·lícules a mesura que augmenta el nombre d’espectadors. A la base, la concentració és especialment significativa, amb 107 films (31,5% del total) que no arriben als 100K espectadors, amb una presència molt limitada a les sales. D’aquest grup, 82 films provenen exclusivament dels festivals, 22 només de les acadèmies i tres comparteixen tots dos circuits.
+- El gràfic dibuixa una escala descendent força regular, amb menys pel·lícules a mesura que augmenta el nombre d’espectadors. A la base, la concentració és especialment significativa, amb 107 films (31,5% del total) que no arriben als 100K espectadors, amb una presència molt limitada a les sales. D’aquests, 82 provenen exclusivament dels festivals, 22 de les acadèmies i tres comparteixen tots dos àmbits.
 <!-- /comentari-grafic -->
 
 <!-- comentari -->
