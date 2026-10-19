@@ -9,7 +9,7 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 <!-- /punt-1-cap -->
 
 <!-- punt-1-cos -->
-El balanç quantitatiu és inequívoc. Dels 340 films reconeguts als quatre festivals i les dues acadèmies estudiades, només 17 formen part també del Top 100 històric d’espectadors, un 5% del conjunt. Si hi incorporem els 34 títols del segon cercle, la zona de contacte arriba a 51 pel·lícules, el 15% del total.
+El balanç quantitatiu és inequívoc. Dels 340 films reconeguts als quatre festivals i les dues acadèmies estudiades, només 17 formen part també del Top 100 històric d’espectadors, un 5% del conjunt. Si hi incorporem els 34 títols del «segon cercle», la zona de contacte arriba a 51 pel·lícules, el 15% del total.
 
 El cinema que omple les sales i el que obté reconeixement internacional responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Aquesta separació és especialment visible als grans festivals, que han consolidat un espai de prestigi vinculat sobretot al cinema d’autor, sovint allunyat del mercat massiu de sala. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica es va produir durant la Transició, quan el cinema crític també va trobar un públic ampli i la frontera entre autoria i mercat es va fer més porosa.
 
