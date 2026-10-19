@@ -9,11 +9,11 @@ Les dades del públic i del prestigi no ofereixen una única història del cinem
 <!-- /punt-1-cap -->
 
 <!-- punt-1-cos -->
-El balanç quantitatiu és inequívoc: dels 285 films espanyols documentats a les seccions oficials competitives dels quatre festivals, només 11 formen part també del Top 100 històric d'espectadors. Fins i tot incorporant-hi els 24 títols del 'segon cercle', la zona de contacte queda limitada a 35 pel·lícules: poc més d'un 12% del conjunt.
+El balanç quantitatiu és inequívoc. Dels 340 films reconeguts als quatre festivals i les dues acadèmies estudiades, només 17 formen part també del Top 100 històric d’espectadors, un 5% del conjunt. Si hi incorporem els 34 títols del segon cercle, la zona de contacte arriba a 51 pel·lícules, el 15% del total.
 
-El cinema que omple les sales i el cinema que obté legitimació als festivals responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica es va produir durant els anys de la Transició, quan el cinema crític va trobar també un públic ampli a les sales i la frontera entre autoria i mercat es va fer més porosa.
+El cinema que omple les sales i el que obté reconeixement internacional responen generalment a públics, llenguatges, sistemes de producció i formes de distribució diferents. Aquesta separació és especialment visible als grans festivals, que han consolidat un espai de prestigi vinculat sobretot al cinema d’autor, sovint allunyat del mercat massiu de sala. Les grans audiències s’han concentrat sobretot en la comèdia popular, el *thriller* i altres formes de cinema de gènere, o les produccions vinculades a la televisió. La principal excepció històrica es va produir durant la Transició, quan el cinema crític també va trobar un públic ampli i la frontera entre autoria i mercat es va fer més porosa.
 
-Entre els dos sistemes hi ha una zona intermèdia: el cinema d’autor més industrial, que parteix dels gèneres populars i de la vocació comercial, però hi incorpora autoria i ambició formal. Aquest cinema mostra, des de l’altre vessant, que la frontera no és absoluta.
+Les acadèmies introdueixen una lògica diferent. Mentre que els festivals seleccionen les pel·lícules habitualment abans de la seva circulació comercial, les acadèmies reconeixen obres que ja han iniciat el seu recorregut públic, mitjançant el vot dels mateixos professionals de la indústria. Els Oscar i, especialment, els EFA poden així reforçar el prestigi de films amb una trajectòria comercial consolidada al mercat d'origen. La distància entre públic i prestigi continua sent considerable, però varia segons les institucions que atorguen el reconeixement.
 <!-- /punt-1-cos -->
 
 <!-- punt-2-cap -->
