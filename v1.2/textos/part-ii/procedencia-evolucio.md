@@ -1,5 +1,5 @@
 <!-- intro -->
-La Part II reuneix un total de 340 films amb reconeixement internacional als quatre festivals i les dues acadèmies analitzades. Els dos gràfics següents mostren primer quants films corresponen a cada institució i després com es distribueixen entre els dos grans grups, incloent-hi les coincidències.
+La Part II reuneix un total de 340 films amb reconeixement internacional als quatre festivals i les dues acadèmies analitzades. Els dos gràfics següents mostren primer quants films corresponen a cada institució i després com es distribueixen entre els dos grups, incloent-hi les coincidències.
 <!-- /intro -->
 
 <!-- lectura -->
