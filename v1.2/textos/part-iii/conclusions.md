@@ -35,13 +35,13 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 
 <p class="subtitol-punt">La generació actual ha obtingut guardons comparables als de les generacions anteriors, però dins d’un mercat de sala molt més petit.</p>
 
-El mercat espanyol ha passat dels prop de 400 milions d’entrades anuals dels anys 60 a 65 milions el 2025. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial: el cinema de gran consum sembla conservar capacitat de convocatòria, mentre que el cinema mitjà i d’autor opera encara amb xifres bastant inferiors.
+El mercat espanyol ha passat de 390 milions d’entrades anuals el 1965 a 65 milions el 2025. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial, amb un cinema de gran consum que conserva capacitat de convocatòria i un cinema mitjà i d’autor que continua operant a una escala molt inferior.
 
-En aquest context, Ruiz de Azúa, Simón, Laxe o Sorogoyen han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Ho fan, però, en un mercat quatre o cinc vegades més petit. Comparar directament les seves xifres d’espectadors pot ocultar més coses de les que revela.
+En aquest context, Ruiz de Azúa, Simón, Laxe o Sorogoyen han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Però ho fan en un mercat molt més petit, i comparar directament les audiències d’uns i altres pot resultar enganyós.
 
-Entre els autors contemporanis conviuen relacions molt diferents amb el mercat. Si Sorogoyen amb *As bestas* (2022, 1,1M) confirma que el reconeixement encara pot anar acompanyat d’una audiència important, Albert Serra amb *Pacifiction* (2022, Cannes, 14.921 espectadors) i Isaki Lacuesta amb *Entre dos aguas* (2018, Sant Sebastià, 27.466 espectadors) mostren que el prestigi també pot existir gairebé sense mercat de sala.
+Entre els autors contemporanis conviuen relacions molt diferents amb el mercat. Sorogoyen, amb *As bestas* (2022, 1,1M), demostra que el reconeixement encara pot acompanyar-se d’una audiència important. En canvi, Albert Serra, amb *Pacifiction* (2022, Cannes, 15K espectadors), i Isaki Lacuesta, amb *Entre dos aguas* (2018, Sant Sebastià, 27K espectadors), mostren que el prestigi també pot assolir-se amb una presència mínima a les sales.
 
-Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altre director del període ha mantingut durant tant de temps una combinació comparable de públic, prestigi internacional i centralitat cultural. Però els seus films recents també operen dins l’escala actual del cinema d’autor. La principal excepció històrica a la bretxa permet així mesurar-ne la profunditat: fins i tot Almodóvar treballa avui dins un mercat que ja no és el que va construir la seva excepcionalitat.
+Almodóvar continua sent el pont més sostingut entre els dos sistemes. Cap altre director del període ha mantingut durant tant de temps una combinació comparable de públic, prestigi internacional i centralitat cultural. Però fins i tot els seus films recents operen dins l’escala actual del cinema d’autor, en un mercat molt diferent del que va construir la seva excepcionalitat.
 <!-- /punt-3 -->
 
 <!-- punt-4 -->
