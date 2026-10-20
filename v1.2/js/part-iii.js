@@ -2367,7 +2367,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'De nens', any: 2003, dir: 'Jordà', c: '—', ca: '57', b: '34', esp: 5446 },
       { t: 'Honor de cavalleria', any: 2006, dir: 'Serra', c: '—', ca: '53', b: '—', esp: 22503 },
     ]},
-    { nom: pip3T('INTERMEDI GENERACIÓ ACTUAL','INTERMEDIO GENERACIÓN ACTUAL'), color: C_GEN, mitjana: '354K', films: [
+    { nom: pip3T('INTERMEDI «GENERACIÓ ACTUAL»','INTERMEDIO «GENERACIÓN ACTUAL»'), color: C_GEN, mitjana: '354K', films: [
       { t: 'Magical Girl', any: 2014, dir: 'Vermut', c: '·', ca: '68', b: '—', esp: 54804 },
       { t: 'Alcarràs', any: 2022, dir: 'Simón', c: '·', ca: '·', b: '8', esp: 403195 },
       { t: 'Cinco lobitos', any: 2022, dir: 'Ruiz de Azúa', c: '·', ca: '·', b: '45', esp: 154708 },
@@ -2392,7 +2392,7 @@ window.PiP_graficMapaCanon = function() {
       { t: 'Te doy mis ojos', any: 2003, dir: 'Bollaín', c: '·', ca: '61', b: '23', esp: 1063945 },
       { t: 'La isla mínima', any: 2014, dir: 'A. Rodríguez', c: '·', ca: '76', b: '24', esp: 1291487 },
     ]},
-    { nom: pip3T('INTERMEDI AUTOR INDUSTRIAL','INTERMEDIO AUTOR INDUSTRIAL'), color: C_GEN2, mitjana: '3,2M', films: [
+    { nom: pip3T('INTERMEDI «AUTOR INDUSTRIAL»','INTERMEDIO «AUTOR INDUSTRIAL»'), color: C_GEN2, mitjana: '3,2M', films: [
       { t: 'El día de la bestia', any: 1995, dir: 'De la Iglesia', c: '·', ca: '42', b: '31', esp: 1419191 },
       { t: 'Tesis', any: 1996, dir: 'Amenábar', c: '·', ca: '78', b: '18', esp: 855713 },
       { t: 'Los otros', any: 2001, dir: 'Amenábar', c: '·', ca: '—', b: '—', esp: 6410785 },
@@ -2411,7 +2411,7 @@ window.PiP_graficMapaCanon = function() {
   // Títol i llegenda fora del contenidor amb scroll (no es difuminen ni es mouen)
   const bloc = document.getElementById('grafic-mapa-bloc');
   if (bloc && !document.getElementById('mapa-capçalera')) {
-    const nomsCurts = PIP_III_ES ? ['Radical', 'Generación actual', 'Núcleo central', 'Autor industrial', 'Popular'] : ['Radical', 'Generació actual', 'Nucli central', 'Autor industrial', 'Popular'];
+    const nomsCurts = PIP_III_ES ? ['Radical', '«Generación actual»', 'Núcleo central', '«Autor industrial»', 'Popular'] : ['Radical', '«Generació actual»', 'Nucli central', '«Autor industrial»', 'Popular'];
     let cap = `<div id="mapa-capçalera">
       <p style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:&quot;Inter&quot;,-apple-system,&quot;SF Pro Text&quot;,sans-serif">${pip3T('El mapa del cànon — 36 films, cinc zones, tres llistes i espectadors (1965–2025)','El mapa del canon — 36 films, cinco zonas, tres listas y espectadores (1965–2025)')}</p>
       <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:#555;margin-bottom:18px;justify-content:center;font-family:&quot;Inter&quot;,-apple-system,&quot;SF Pro Text&quot;,sans-serif">`;
