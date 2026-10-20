@@ -96,5 +96,5 @@ Aquestes dues memòries es construeixen de manera diferent, però no viuen sempr
 
 La memòria popular opera per vies socials, afectives i quotidianes: perdura en el llenguatge, els personatges, les escenes i els referents compartits. Les reposicions televisives i altres circuits secundaris de difusió la reactiven periòdicament, mentre que el cànon construeix la seva continuïtat a través de la crítica, la historiografia i les institucions culturals. Són formes diferents de preservar i transmetre el cinema, que poden coincidir, però no sempre reconeixen les mateixes pel·lícules.
 
-L’èxit popular no determina el valor artístic d’una pel·lícula, de la mateixa manera que el reconeixement crític no explica per si sol la seva importància social. Les pel·lícules que ocupen el centre de la memòria cultural no sempre van ocupar el centre de l’experiència popular. Entre la memòria del públic i la del prestigi crític es dibuixa una història del cinema més completa, que cap de les dues mirades pot explicar per si sola.
+L’èxit popular no determina el valor artístic d’una pel·lícula, de la mateixa manera que el reconeixement crític no explica per si sol la seva importància social. Entre la memòria del públic i la del prestigi crític es dibuixa una història del cinema més completa, que cap de les dues mirades pot explicar per si sola.
 <!-- /punt-7 -->
