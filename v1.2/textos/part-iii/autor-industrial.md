@@ -29,6 +29,8 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 <!-- /bloc-bayona -->
 
 <!-- transicio-grafic-ai -->
+En el cas de *La sociedad de la nieve*, l’IAA no és aplicable quan l’exhibició en sales és secundària dins l’estratègia de distribució.
+
 El gràfic següent mostra l’evolució dels espectadors a sala de les pel·lícules recollides a les tres taules anteriors.
 <!-- /transicio-grafic-ai -->
 
@@ -43,5 +45,5 @@ Bayona i Amenábar podrien haver construït trajectòries dins el circuit de fes
 <!-- paradoxa -->
 Però hi ha una paradoxa final. El model que va fer possible aquest cinema (televisions privades finançadores, distribució massiva en sala i cinema com a esdeveniment cultural compartit) és precisament el que les plataformes estan substituint. Bayona ho il·lustra millor que ningú. *La sociedad de la nieve* (2023), produïda per Netflix, va guanyar el Goya a millor pel·lícula, va representar Espanya als Oscar, on va obtenir dues nominacions, i va aconseguir dos premis als EFA. A les sales espanyoles va reunir 557K espectadors, mentre que a Netflix va registrar 98,5 milions de visualitzacions equivalents a escala mundial durant els primers 91 dies, sense que disposem de la xifra específica d’Espanya.
 
-Una pel·lícula concebuda per arribar a una audiència global i que, en un altre context de distribució, hauria pogut aspirar a les primeres posicions del Top 100, avui apareix amb una xifra de sala relativament modesta. Les dades de consum existeixen, però continuen en bona part en mans privades i encara no hi ha una unitat comuna que permeti comparar una entrada de cinema amb una visualització en una plataforma. Per això l’IAA de *La sociedad de la nieve* figura com a «n/c» a la taula. En l’era de la mesura total, i precisament això no ho sabem. <sup>[20]</sup>
+Una pel·lícula concebuda per arribar a una audiència global i que, en un altre context de distribució, hauria pogut aspirar a les primeres posicions del Top 100, avui apareix amb una xifra de sala relativament modesta. Les dades de consum existeixen, però continuen en bona part en mans privades i encara no hi ha una unitat comuna que permeti comparar una entrada de cinema amb una visualització en una plataforma. En l’era de la mesura total, i precisament això no ho sabem. <sup>[20]</sup>
 <!-- /paradoxa -->
