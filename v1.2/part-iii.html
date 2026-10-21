@@ -1469,7 +1469,7 @@ body.pip-en-portada .nav-seccions { display: none; }
     for (const node of targets) {
       const key = node.dataset.bunuelBloc;
       if (!Object.prototype.hasOwnProperty.call(blocks, key)) throw new Error('Falta el bloc ' + key);
-      rendered.push([node, marked.parse(blocks[key])]);
+      rendered.push([node, marked.parse(blocks[key]).replace(/<sup>\[(\d+)\]<\/sup>/g, '<sup><a href="notes.html#n$1">[$1]</a></sup>')]);
     }
     for (const [node,html] of rendered) node.innerHTML = html;
     for (const key of ['comentari-trajectories','comentari-balanc','comentaris-top30']) {
