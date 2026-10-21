@@ -306,7 +306,7 @@ function construirFestival(festival, seccioId) {
         <th style="width:22%">${pipT('Premi / Nota','Premio / Nota')}</th>
         <th class="col-center" style="width:60px">Top 100</th>
         <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
-        <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')}</th>
+        <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')}${festival === 'Cannes' && !PIP_ES ? ' <sup><a href="notes.html#n7">[7]</a></sup>' : ''}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -876,7 +876,7 @@ async function construirRànquingDirectors() {
         (aliasClau ? f.director.includes(aliasClau) : f.director === d.nom))
       .map(f => `<strong><em>${f.titol}</em></strong> <span class="film-any">(${f.any})</span>`)
       .join(' · ');
-    const nota = d.nom === 'Aitor Arregi' ? '&nbsp;<sup><a href="notes.html#n7">[7]</a></sup>' : '';
+    const nota = d.nom === 'Aitor Arregi' ? '&nbsp;<sup><a href="notes.html#n9">[9]</a></sup>' : '';
     return `<td>${d.nom}${nota}${pr}
       <div id="${id}" class="top3-dir-films" style="display:none">${films}</div>
     </td>`;
