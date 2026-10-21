@@ -1,6 +1,6 @@
 <!-- intro -->
 
-La dada clau per comparar pel·lícules de dècades diferents és la mida del mercat: no és el mateix vendre dos milions d’entrades en un país on se’n venien gairebé 400 milions l’any (un 0,5% d'un mercat gegant) que fer-ho en un mercat de 65 milions (l'equivalent al 3,1% d'un mercat molt més petit). Entre 1965 i 2025, l’assistència a les sales cau d’uns 390M a 65M d’entrades, un −83%, mentre la població creix de 32,1M a 48,6M, un +51%. <sup>[4]</sup> 
+La dada clau per comparar pel·lícules de dècades diferents és la mida del mercat: no és el mateix vendre dos milions d’entrades en un país on se’n venien gairebé 400 milions l’any (un 0,5% d'un mercat gegant) que fer-ho en un mercat de 65 milions (l'equivalent al 3,1% d'un mercat molt més petit). Entre 1965 i 2025, l’assistència a les sales cau d’uns 390M a 65M d’entrades, un −83%, mentre la població creix de 32,1M a 49,13M, un +53%. <sup>[4]</sup> 
 
 La lectura per habitant permet veure aquesta mateixa transformació en termes individuals i separar millor l’efecte de la població de la caiguda de l’assistència a les sales.
 <!-- /intro -->
