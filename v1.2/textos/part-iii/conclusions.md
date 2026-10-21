@@ -53,7 +53,7 @@ La taquilla continua sent l’única dada pública plenament comparable al llarg
 
 L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta compensar aquesta limitació. L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA estima l’audiència acumulada a través de les diferents finestres. No són models oficials ni científicament validats, però ajuden a contextualitzar les xifres i a fer visibles diferències que la taquilla per si sola oculta.
 
-Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d'audiència públiques i comparables. <sup>[20]</sup> Films com *Sirât* o *Los domingos* poden continuar acumulant públic més enllà de les sales, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla resulta clarament insuficient. Aquesta opacitat pot fer que la distància entre el cinema popular i el de festivals sembli més gran del que realment és.
+Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d'audiència públiques i comparables. <sup>[28]</sup> Films com *Sirât* o *Los domingos* poden continuar acumulant públic més enllà de les sales, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla resulta clarament insuficient. Aquesta opacitat pot fer que la distància entre el cinema popular i el de festivals sembli més gran del que realment és.
 
 La «doble corona» pot haver canviat d'escala. Avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull.
 <!-- /punt-4 -->
@@ -81,7 +81,7 @@ El mercat cinematogràfic és també una construcció política i tecnològica. 
 
 En aquest context, la generació actual és la primera amb una presència femenina central als grans festivals. El cinema d’autor espanyol va néixer masculí i es renova femení, en paral·lel a les polítiques actives d’igualtat. Aquesta renovació té lloc dins d’una indústria audiovisual en expansió (amb gran activitat en sèries i cinema de plataformes), però just quan el mercat de sala es contrau i el cinema mitjà i d’autor hi perd espai. Les dones accedeixen així al centre simbòlic d’un territori històricament masculí, curiosament quan deixa de ser el centre industrial.
 
-L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. <sup>[16]</sup>
+L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, però els films dirigits per dones continuen disposant, de mitjana, de pressupostos molt inferiors, una diferència que també condiciona l’escala i el tipus de cinema que poden fer. <sup>[19]</sup>
 
 <!-- /punt-6 -->
 
@@ -96,5 +96,5 @@ Aquestes dues memòries es construeixen de manera diferent, però no viuen sempr
 
 La memòria popular opera per vies socials, afectives i quotidianes: perdura en el llenguatge, els personatges, les escenes i els referents compartits. Les reposicions televisives i altres circuits secundaris de difusió la reactiven periòdicament, mentre que el cànon construeix la seva continuïtat a través de la crítica, la historiografia i les institucions culturals.
 
-L’èxit popular no determina el valor artístic d’una pel·lícula, de la mateixa manera que el reconeixement crític no explica per si sol la seva importància social. Entre la memòria del públic i la del prestigi crític es dibuixa una història del cinema més complexa i completa, que cap de les dues mirades pot explicar per si sola. [N]
+L’èxit popular no determina el valor artístic d’una pel·lícula, de la mateixa manera que el reconeixement crític no explica per si sol la seva importància social. Entre la memòria del públic i la del prestigi crític es dibuixa una història del cinema més complexa i completa, que cap de les dues mirades pot explicar per si sola. <sup>[32]</sup>
 <!-- /punt-7 -->
