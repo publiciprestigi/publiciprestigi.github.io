@@ -222,7 +222,7 @@ function construirDobleCorona() {
         <th style="width:16%">Festival</th>
         <th style="width:16%">${pip3T('Acadèmies','Academias')}</th>
         <th class="col-center" style="width:70px">Top 100</th>
-        <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}</th>
+        <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}${PIP_III_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -651,7 +651,7 @@ function construirSegonCercle() {
         <th class="col-subtil" style="width:16%">${pip3T('Direcció','Dirección')}</th>
         <th style="width:18%">Festival</th>
         <th style="width:18%">${pip3T('Acadèmies','Academias')}</th>
-        <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}</th>
+        <th class="col-num" style="width:110px">${pip3T('Espectadors','Espectadores')}${PIP_III_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -1142,7 +1142,7 @@ function capcaleraTaulaIII(tipus) {
   const noms = [
     pip3T('Títol','Título'),pip3T('Director','Dirección'),
     pip3T('Reconeixement','Reconocimiento'),'Top 100',
-    pip3T('Espect.','Espect.'),pip3T('Mercat','Mercado'),
+    pip3T('Espect.','Espect.') + (PIP_III_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'),pip3T('Mercat','Mercado'),
     pip3T('Penetr.','Penetr.'),pip3T('Quota','Cuota')
   ];
   if (tipus === 'caza') noms.push('IIC');
@@ -2429,7 +2429,7 @@ window.PiP_graficMapaCanon = function() {
         <td style="text-align:center;width:44px;padding:2px 6px 8px">Cent.</td>
         <td style="text-align:center;width:52px;padding:2px 6px 8px">Caimán</td>
         <td style="text-align:center;width:52px;padding:2px 6px 8px">Babelia</td>
-        <td style="text-align:right;width:84px;white-space:nowrap;padding:2px 6px 8px">${pip3T('Espectadors','Espectadores')}</td>
+        <td style="text-align:right;width:84px;white-space:nowrap;padding:2px 6px 8px">${pip3T('Espectadors','Espectadores')}${PIP_III_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</td>
         <td style="width:140px"></td>
       </tr>`;
 
