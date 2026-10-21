@@ -29,8 +29,6 @@ Bayona no ha construït la seva carrera a través de les seccions competitives d
 <!-- /bloc-bayona -->
 
 <!-- transicio-grafic-ai -->
-En el cas de *La sociedad de la nieve*, l’IAA no és aplicable quan l’exhibició en sales és secundària dins l’estratègia de distribució.
-
 El gràfic següent mostra l’evolució dels espectadors a sala de les pel·lícules recollides a les tres taules anteriors.
 <!-- /transicio-grafic-ai -->
 
