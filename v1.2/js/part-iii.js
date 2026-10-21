@@ -1187,7 +1187,7 @@ function construirTaulesAutorIndustrial() {
       const top = pos ? '#'+pos : filmPartI?.pos_decade ? filmPartI.pos_decade+'a als '+filmPartI.decada : '—';
       const factor = f.x<1984?1:f.x<1990?3:f.x<1995?2.5:f.x<=2005?2.15:f.x<=2019?2.5:3.25;
       const iaaValor = esp*factor;
-      const iaa = f.titol === 'La sociedad de la nieve' ? '—' :
+      const iaa = f.titol === 'La sociedad de la nieve' ? '— <sup>[N]</sup>' :
         iaaValor >= 1e6 ? '~'+(iaaValor/1e6).toFixed(2).replace('.',',')+'M' :
         '~'+fmt(Math.round(iaaValor));
       const bg = COLORS_DEC_GLOBAL[getDecada(f.x)] || '#fff';
