@@ -1261,7 +1261,7 @@ function construirDuesGeneracions() {
     { any:2022, titol:'Alcarràs', director:'Carla Simón', festival:'Berlín', premiat:true, esp:403195, top100:null, mercat:'71M', penetr:'0,84%', quota:'0,57%', iic:'0,47', iaa_xifra:'~1,31M', iaa_mult:'', iaa_est:true },
     { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:284821, top100:null, mercat:'65M≈', penetr:'0,59%≈', quota:'0,44%≈', iic:'0,35≈', iaa_xifra:'~0,93M', iaa_mult:'', iaa_est:true },
     { any:2022, titol:'Cinco lobitos', director:'Alauda Ruiz de Azúa', festival:null, premiat:false, esp:154708, top100:null, mercat:'71M≈', penetr:'0,32%≈', quota:'0,22%≈', iic:'0,18≈', iaa_xifra:'~504.000', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:785231, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,62%', quota:'1,21%', iic:'0,95', iaa_xifra:'~2,55M', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:785231, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,60%', quota:'1,21%', iic:'0,95', iaa_xifra:'~2,55M', iaa_mult:'', iaa_est:true },
   ];
 
   FILMS_SAURA.push(...['Goya en Burdeos','Fados','Io, Don Giovanni'].map(novaFilaEFA));
