@@ -11,7 +11,7 @@ Per posar aquestes xifres en perspectiva, comparem Buñuel amb Berlanga i Bardem
 <!-- /PIP_BLOC:comentari-trajectories -->
 
 <!-- PIP_BLOC:transicio-franca -->
-La comparació també posa en evidència la singularitat de l’última etapa de Buñuel: una trajectòria desenvolupada principalment dins la indústria francesa, però amb retorns puntuals al cinema espanyol, com *Viridiana* i *Tristana*. Berlanga i Bardem també van tenir projecció a França, tant comercial com a través de coproduccions, però amb una presència a les sales menys continuada i d’un abast aparentment menor, i sense desvincular-se mai de la indústria espanyola. [N] En aquest sentit, l’excepcional doble dimensió industrial i cultural de Buñuel convida a examinar també la recepció comercial fora d’Espanya.
+La comparació també posa en evidència la singularitat de l’última etapa de Buñuel: una trajectòria desenvolupada principalment dins la indústria francesa, però amb retorns puntuals al cinema espanyol, com *Viridiana* i *Tristana*. Berlanga i Bardem també van tenir projecció a França, tant comercial com a través de coproduccions, però amb una presència a les sales menys continuada i d’un abast aparentment menor, i sense desvincular-se mai de la indústria espanyola. <sup>[24]</sup> En aquest sentit, l’excepcional doble dimensió industrial i cultural de Buñuel convida a examinar també la recepció comercial fora d’Espanya.
 
 <!-- /PIP_BLOC:transicio-franca -->
 
@@ -20,7 +20,7 @@ La comparació també posa en evidència la singularitat de l’última etapa de
 
 Què passa quan mirem els espectadors de les vuit pel·lícules de Buñuel a França i els comparem amb els d’Espanya? Per entendre aquestes xifres, cal tenir present que la censura franquista va condicionar profundament l’exhibició de la seva obra, amb prohibicions, retalls i estrenes sovint molt tardanes. El cas més emblemàtic és *Viridiana*, prohibida després de guanyar Cannes i estrenada comercialment el 1977, setze anys després de la seva producció.
 
-L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves possibilitats d’exhibició per a una part de la seva filmografia, encara que sovint amb una distribució limitada i irregular. [N] La comparació permet observar tant el pes de cada mercat com els desfasaments cronològics entre els dos països. El següent gràfic ordena les pel·lícules segons l’any d’estrena a Espanya registrat per l’ICAA i indica per a cada títol els anys corresponents als dos mercats (ES i FR).
+L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves possibilitats d’exhibició per a una part de la seva filmografia, encara que sovint amb una distribució limitada i irregular. <sup>[25]</sup> La comparació permet observar tant el pes de cada mercat com els desfasaments cronològics entre els dos països. El següent gràfic ordena les pel·lícules segons l’any d’estrena a Espanya registrat per l’ICAA i indica per a cada títol els anys corresponents als dos mercats (ES i FR).
 <!-- /PIP_BLOC:intro-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
@@ -28,7 +28,7 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:comentari-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-coproduccions -->
-- *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya, precisament el títol que presenta les xifres d’espectadors més equilibrades entre els dos països. Els altres cinc títols són produccions franceses o francoitalianes. Aquesta diversitat reflecteix la importància de les coproduccions en el cinema europeu de l’època: entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. [N]
+- *Viridiana* és una coproducció hispanomexicana; *Tristana*, entre Espanya, Itàlia i França; i *Ese oscuro objeto del deseo*, entre França i Espanya, precisament el títol que presenta les xifres d’espectadors més equilibrades entre els dos països. Els altres cinc títols són produccions franceses o francoitalianes. Aquesta diversitat reflecteix la importància de les coproduccions en el cinema europeu de l’època: entre 1962 i 1969 van representar el 50,2% dels llargmetratges produïts a Espanya, amb Itàlia com un dels socis principals. <sup>[26]</sup>
 <!-- /PIP_BLOC:comentari-coproduccions -->
 
 <!-- PIP_BLOC:comentari-balanc -->
@@ -71,5 +71,5 @@ Per tancar el capítol, tornem a la perspectiva amb què començava l’estudi. 
 <!-- /PIP_BLOC:comentari-perhab -->
 
 <!-- PIP_BLOC:comentari-quota -->
-- La fotografia del 2025 mostra una diferència considerable: la quota del cinema nacional és del 18,6% dels espectadors (12,4M d'entrades) a Espanya, davant del 37,9% (59,2M d'entrades) a França. En canvi, el cinema nord-americà té una quota molt més elevada a Espanya (48,2%) que a França (34,9%). La resta de cinematografies, entre les quals hi ha l'espanyola a França i la francesa a Espanya, tenen un pes proporcionalment menor al mercat francès (27,2%) que a l'espanyol (33,2%), però en termes absoluts representen gairebé el doble d'espectadors: 42,5M a França davant dels 22,2M a Espanya. [N]
+- La fotografia del 2025 mostra una diferència considerable: la quota del cinema nacional és del 18,6% dels espectadors (12,4M d'entrades) a Espanya, davant del 37,9% (59,2M d'entrades) a França. En canvi, el cinema nord-americà té una quota molt més elevada a Espanya (48,2%) que a França (34,9%). La resta de cinematografies, entre les quals hi ha l'espanyola a França i la francesa a Espanya, tenen un pes proporcionalment menor al mercat francès (27,2%) que a l'espanyol (33,2%), però en termes absoluts representen gairebé el doble d'espectadors: 42,5M a França davant dels 22,2M a Espanya. <sup>[27]</sup>
 <!-- /PIP_BLOC:comentari-quota -->
