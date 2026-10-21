@@ -12,7 +12,7 @@ Les coproduccions s'inclouen com a espanyoles quan compleixen els requisits ofic
 
 ## El problema dels espectadors absoluts
 
-Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys seixanta, els espanyols anaven al cinema una mitjana de 10 o 12 vegades l'any, en un país de 32 milions d'habitants. El 2025, hi van menys d'una vegada i mitja, en un país de 48 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup>[2]</sup>
+Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Als anys seixanta, els espanyols anaven al cinema una mitjana de 10 o 12 vegades l'any, en un país de 32 milions d'habitants. El 2025, hi van menys d'una vegada i mitja, en un país de 49 milions, amb Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup>[2]</sup>
 
 *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espectadors en un mercat de 370 milions d'entrades (una quota de l'1,16%). *Mujeres al borde de un ataque de nervios* (1988) va fer 3,3 milions en un mercat de 85 milions (una quota del 3,94%). En espectadors absoluts guanya Pedro Lazaga. En quota de mercat, Almodóvar gairebé quadruplica la seva marca. Una mateixa comparació ofereix, doncs, lectures molt diferents segons la mètrica que utilitzem.
 
