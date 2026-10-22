@@ -988,6 +988,7 @@ window.PiP_graficCazaIAA = function() {
   const pluginTotals = {
     id: 'cazaTotals',
     afterDraw(chart) {
+      if (window.matchMedia('(max-width: 760px)').matches) return; // Els totals es mostren sota el gràfic en mòbil.
       const ctx2 = chart.ctx;
       ctx2.save();
       ctx2.font = '600 11px "Inter", -apple-system, Arial, sans-serif';
@@ -1060,8 +1061,8 @@ window.PiP_graficCazaIAA = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      datasets: { bar: { barThickness: 30, maxBarThickness: 30 } },
-      layout: { padding: { right: 160 } },
+      datasets: { bar: { barThickness: window.innerWidth <= 760 ? 26 : 30, maxBarThickness: 30 } },
+      layout: { padding: { right: window.innerWidth <= 760 ? 12 : 160 } },
       plugins: {
         legend: {
           display: false,
