@@ -428,18 +428,36 @@ body.pip-en-portada .nav-seccions { display: none; }
 
 <style id="pip-bunuel-mobil-responsive">
 @media (max-width:760px) {
-  #bbb-scroll-wrap > div {min-width:780px!important;height:390px!important;}
-  #grafic-bunuel-franca-bloc .bf-mobile-scroll {max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch;}
-  #grafic-bunuel-franca-bloc .bf-mobile-scroll:not(.pip-final-scroll) {
-    -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent 100%);
-    mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent 100%);
+  /* Primer gràfic: trajectòries intactes, amb l'amplada original de 2.500 px. */
+  /* Segon gràfic: cada pel·lícula seguida dels dos mercats en columnes. */
+  #grafic-bunuel-franca-bloc .bf-mobile-scroll {width:100%;max-width:100%;overflow:visible!important;-webkit-mask-image:none!important;mask-image:none!important;}
+  #grafic-bunuel-franca-bloc #bf-mirror {min-width:0!important;width:100%;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-row {
+    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+    gap:7px 12px;padding:12px 12px 16px;min-height:0;
   }
-  #grafic-bunuel-franca-bloc #bf-mirror {min-width:560px!important;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-head,
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-scale,
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-row {grid-template-columns:minmax(160px,1fr) 200px minmax(160px,1fr);}
-  #franca-top30 .f30-chart {max-width:100%;}
-  #franca-top30 .f30-inner {min-width:650px!important;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-film {grid-column:1/-1;grid-row:1;padding:0 6px 5px;text-align:center;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-side.left {grid-column:1;grid-row:2;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-side.right {grid-column:2;grid-row:2;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-head {display:grid;grid-template-columns:1fr 1fr!important;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-head .bf-total-head {display:none;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.es {text-align:center;padding:0;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.fr {text-align:center;padding:0;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-scale {display:none;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-value {font-size:10px;}
+  /* Tercer gràfic: títol a sobre; Espanya i França sota, sense scroll lateral. */
+  #franca-top30 .f30-chart {overflow:visible!important;max-width:100%;}
+  #franca-top30 .f30-inner {width:100%;min-width:0!important;}
+  #franca-top30 .f30-head {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;}
+  #franca-top30 .f30-head-title {display:none;}
+  #franca-top30 .f30-head .f30-scale-side {display:none;}
+  #franca-top30 .f30-country {text-align:center!important;padding:0!important;}
+  #franca-top30 .f30-row {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:8px 12px;padding:14px 5px;}
+  #franca-top30 .f30-row .f30-film {grid-column:1/-1;grid-row:1;padding:0 18px 2px 52px;min-width:0;}
+  #franca-top30 .f30-row .f30-side.es {grid-column:1;grid-row:2;}
+  #franca-top30 .f30-row .f30-side.fr {grid-column:2;grid-row:2;}
+  #franca-top30 .f30-name {font-size:12px;}
+  #franca-top30 .f30-value {font-size:10px;}
   #grafic-caza-iaa-bloc .grafic-wrap {height:320px!important;max-width:100%;}
 }
 </style>
