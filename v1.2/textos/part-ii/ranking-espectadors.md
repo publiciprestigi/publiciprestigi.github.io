@@ -15,7 +15,7 @@ Els rànquings següents presenten els deu títols més vistos de cada instituci
 <!-- /comentari-academies -->
 
 <!-- intro-grafic -->
-Per acabar, observem com es distribueixen els 340 films reconeguts segons el volum d’espectadors acumulats a les sales.
+Per acabar, observem com es distribueix el conjunt dels 340 films reconeguts segons el volum d’espectadors acumulats a les sales.
 <!-- /intro-grafic -->
 
 <!-- comentari-grafic -->
