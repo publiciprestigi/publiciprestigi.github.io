@@ -77,7 +77,7 @@
       cap(tr('Els 340 films amb reconeixement internacional (1965–2025)','Las 340 películas con reconocimiento internacional (1965–2025)'))+
       '<div class="pip-panorama-switch" role="group" aria-label="'+tr('Vista de la procedència','Vista de la procedencia')+'">'+
       '<button class="pip-panorama-toggle is-active" type="button" data-pip-vista="organismes" aria-pressed="true">'+tr('Per festivals i acadèmies','Por festivales y academias')+'</button>'+
-      '<button class="pip-panorama-toggle" type="button" data-pip-vista="circuits" aria-pressed="false">'+tr('Per circuits','Por circuitos')+'</button></div>'+
+      '<button class="pip-panorama-toggle" type="button" data-pip-vista="circuits" aria-pressed="false">'+tr('Per grups','Por grupos')+'</button></div>'+
       '<div class="pip-panorama-view" data-pip-panel="circuits" hidden>'+
       '<div class="pip-circuit-key">'+legend.map(([k,l])=>'<div class="pip-circuit-key-item"><span class="pip-circuit-key-label"><i style="background:'+palette[k]+'"></i>'+l+'</span><span class="pip-circuit-key-stats"><strong>'+int(counts[k])+'</strong> '+tr('films','películas')+' <span>· '+pct(counts[k],data.length)+'</span></span></div>').join('')+'</div>'+
       '<div class="pip-panorama-mainbar" aria-label="'+tr('Distribució dels 340 films en tres grups','Distribución de las 340 películas en tres grupos')+'">'+legend.map(([k])=>'<div style="flex:'+counts[k]+';background:'+palette[k]+'" title="'+int(counts[k])+' '+tr('films','películas')+' · '+pct(counts[k],data.length)+'"></div>').join('')+'</div>'+
