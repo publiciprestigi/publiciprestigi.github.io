@@ -1779,21 +1779,17 @@ body.part-ii {
 .pip3-bayona-fonts { font-size:11px;line-height:1.45;color:#888;text-align:center;margin:17px auto 0;max-width:520px; }
 @media(max-width:520px) { .pip3-bayona-coda{width:100%;left:0}.pip3-bayona-llegenda{padding-left:0}.pip3-bayona-grup{grid-template-columns:92px minmax(0,1fr);gap:5px}.pip3-bayona-parella{grid-template-columns:minmax(0,1fr) 50px;gap:4px}.pip3-bayona-coda .pmm-value{font-size:11px} }
 
-/* Difuminat lateral només quan queden columnes per descobrir en pantalles estretes. */
-@media (max-width: 900px) {
-  .pip-scroll-taula.pip-scroll-pendent {
-    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
-    mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
+/* Un únic difuminat per al contenidor que realment es desplaça. */
+@media (max-width:900px) {
+  .pip-taula-scroll {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .pip-taula-scroll > table {display:table;overflow:visible;max-width:none;}
+  .pip-taula-scroll > table.pip3-taula-ampla {width:max-content;}
+  :is(.pip-taula-scroll,.taula-scroll-wrap,.ll-wrap,.taula-films,.taula-ranking,.taula-festivals,.taula-decades-resum).pip-scroll-pendent {
+    -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 27px),transparent 100%);
+    mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 27px),transparent 100%);
   }
-}
-
-/* Contenidor únic per a les taules de dades de les tres parts. */
-@media (max-width: 900px) {
-  .pip-taula-scroll { max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
-  .pip-taula-scroll > table { max-width:none; }
-  .pip-taula-scroll.pip-scroll-pendent,
-  .taula-scroll-wrap.pip-scroll-pendent {
-    -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 26px),transparent 100%);
-    mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 26px),transparent 100%);
+  :is(.pip-taula-scroll,.taula-scroll-wrap,.ll-wrap,.taula-films,.taula-ranking,.taula-festivals,.taula-decades-resum):not(.pip-scroll-pendent) {
+    -webkit-mask-image:none;
+    mask-image:none;
   }
 }
