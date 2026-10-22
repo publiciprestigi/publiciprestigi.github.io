@@ -101,3 +101,31 @@
 
   window.PiP_textos = { renderitza, inicialitza };
 })();
+
+/* Indicador de taules desplaçables, actualitzat després dels renderitzats dinàmics. */
+(function () {
+  const selectors = '.taula-films, .taula-ranking, .taula-festivals, .taula-decades-resum, .taula-scroll-wrap, .table-scroll, .taula-scroll, .table-responsive';
+  let pending = false;
+  function actualitza() {
+    pending = false;
+    document.querySelectorAll(selectors).forEach(el => {
+      const overflow = el.scrollWidth > el.clientWidth + 8;
+      el.classList.toggle('pip-scroll-pendent', overflow && el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
+      el.classList.toggle('pip-scroll-taula', overflow);
+      if (!el.dataset.pipScrollObservat) {
+        el.addEventListener('scroll', () => {
+          el.classList.toggle('pip-scroll-pendent', el.scrollWidth > el.clientWidth + 8 && el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
+        }, { passive: true });
+        el.dataset.pipScrollObservat = '1';
+      }
+    });
+  }
+  function programa() { if (!pending) { pending = true; requestAnimationFrame(actualitza); } }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inicia); else inicia();
+  function inicia() {
+    programa();
+    window.addEventListener('resize', programa, { passive: true });
+    const observer = new MutationObserver(programa);
+    observer.observe(document.querySelector('main') || document.body, { subtree: true, childList: true });
+  }
+})();
