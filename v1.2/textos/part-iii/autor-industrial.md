@@ -25,7 +25,7 @@ Amenábar ocupa una funció comparable a la d’Almodóvar als anys 80–90, la 
 
 És qui ha portat la lògica del model fins a les últimes conseqüències. *El orfanato* (2007, debut, 4,4M), *Lo imposible* (2012, 6,1M, #3 del Top 100), *Un monstruo viene a verme* (2016, 4,6M, #8). Tres films de gènere de gran format que han connectat amb el públic espanyol d’una manera que cap director de la seva generació ha igualat. I després, el salt a Hollywood amb la franquícia *Jurassic*, de la mà, precisament, de Spielberg.
 
-Bayona no ha construït la seva carrera a través de les seccions competitives dels grans festivals. El seu circuit és un altre, on la presència en els premis acadèmics ha estat constant. És el director espanyol que més s’ha apropat al model industrial internacional, però ho ha fet des d’una base d’autor, amb una exigència tècnica i de producció i una voluntat de connexió amb el públic incomparables. <sup>[23]</sup>
+Bayona no ha construït la seva carrera a través de les seccions competitives dels grans festivals. El seu circuit és un altre, on la presència en els premis de les acadèmies ha estat constant. És el director espanyol que més s’ha apropat al model industrial internacional, però ho ha fet des d’una base d’autor, amb una exigència tècnica i de producció i una voluntat de connexió amb el públic incomparables. <sup>[23]</sup>
 <!-- /bloc-bayona -->
 
 <!-- transicio-grafic-ai -->
