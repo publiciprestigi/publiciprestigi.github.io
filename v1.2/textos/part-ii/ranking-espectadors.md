@@ -1,5 +1,7 @@
 <!-- intro-grafic -->
-Per acabar, ampliem la mirada al conjunt dels 340 films reconeguts pels festivals i les acadèmies. El gràfic següent mostra com es distribueixen segons el volum d’espectadors acumulats a les sales, des dels títols amb més públic fins als que han tingut una presència més limitada.
+### Una mirada al conjunt
+
+Per acabar, observem com es distribueixen els 340 films reconeguts segons el volum d’espectadors acumulats a les sales.
 <!-- /intro-grafic -->
 
 <!-- intro -->
