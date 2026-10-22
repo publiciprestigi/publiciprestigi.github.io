@@ -7,7 +7,9 @@ Els rànquings següents presenten els deu títols més vistos de cada instituci
 <!-- /intro -->
 
 <!-- comentari-grafic -->
-- Més de la meitat, 176 films (51,8%), no arriben als 250K espectadors, i 107 (31,5%) es queden per sota dels 100K. A l’altre extrem, només 51 superen el milió, entre els quals hi ha les 17 «dobles corones» que retrobarem a la Part III. La distància entre els extrems mostra fins a quin punt el reconeixement internacional conviu amb recorreguts comercials molt diferents.
+- Més de la meitat dels 340 films, 176 (51,8%), no arriben als 250K espectadors, i 107 (31,5%) es queden per sota dels 100K. D’aquests últims, 82 provenen exclusivament dels festivals, 22 de les acadèmies i tres comparteixen tots dos àmbits.
+
+- A l’altre extrem, només 51 films superen el milió d’espectadors, entre els quals hi ha les 17 «dobles corones» que retrobarem a la Part III. La distribució mostra fins a quin punt el reconeixement internacional abasta pel·lícules amb recorreguts comercials molt diferents.
 <!-- /comentari-grafic -->
 
 <!-- comentari -->
