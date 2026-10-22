@@ -37,7 +37,7 @@ El gràfic següent mostra l’evolució dels espectadors a sala de les pel·lí
 <!-- /comentari-grafic-ai -->
 
 <!-- conclusio -->
-Bayona i Amenábar podrien haver prioritzat el reconeixement competitiu dels grans festivals (*Mar adentro* ho demostra), però han apostat per un altre model i l’han consolidat en els seus propis termes. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva aportació ha estat consolidar una ambició industrial sostinguda en un mercat on, fins aleshores, aquest tipus de cinema només havia aparegut de manera excepcional i mai a una escala semblant. I això no és poca cosa.
+Bayona i Amenábar podrien haver prioritzat el reconeixement competitiu dels grans festivals (*Mar adentro* ho demostra), però han apostat per un altre model i l’han consolidat en els seus propis termes. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional, i mai a una escala semblant. I això no és poca cosa.
 <!-- /conclusio -->
 
 <!-- paradoxa -->
