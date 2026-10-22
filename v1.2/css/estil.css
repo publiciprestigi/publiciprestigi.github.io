@@ -1778,3 +1778,11 @@ body.part-ii {
 .pip3-bayona-coda .pmm-value { font-size:12px;font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums; }
 .pip3-bayona-fonts { font-size:11px;line-height:1.45;color:#888;text-align:center;margin:17px auto 0;max-width:520px; }
 @media(max-width:520px) { .pip3-bayona-coda{width:100%;left:0}.pip3-bayona-llegenda{padding-left:0}.pip3-bayona-grup{grid-template-columns:92px minmax(0,1fr);gap:5px}.pip3-bayona-parella{grid-template-columns:minmax(0,1fr) 50px;gap:4px}.pip3-bayona-coda .pmm-value{font-size:11px} }
+
+/* Difuminat lateral només quan queden columnes per descobrir en pantalles estretes. */
+@media (max-width: 900px) {
+  .pip-scroll-taula.pip-scroll-pendent {
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
+    mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
+  }
+}
