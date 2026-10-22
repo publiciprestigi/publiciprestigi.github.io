@@ -21,5 +21,5 @@ Per acabar, observem com es distribueix el conjunt dels 340 films reconeguts per
 <!-- comentari-grafic -->
 - Més de la meitat dels 340 films, 176 (51,8%), no arriben als 250K espectadors, i 107 (31,5%) es queden per sota dels 100K. D’aquests últims, 82 provenen exclusivament dels festivals (61 de Sant Sebastià), 22 de les acadèmies (21 dels EFA) i tres comparteixen tots dos àmbits.
 
-- A l’altre extrem, només 51 films superen el milió d’espectadors, entre els quals hi ha les 17 «dobles corones» amb més de 2,02M que retrobarem a la Part III. La distribució mostra fins a quin punt el reconeixement internacional abasta pel·lícules amb recorreguts comercials molt diferents.
+- A l’altre extrem, només 51 films superen el milió d’espectadors, entre els quals hi ha les 17 «dobles corones» amb més de 2,02M que retrobarem a la Part III. La distribució mostra fins a quin punt el reconeixement internacional abasta pel·lícules amb recorreguts comercials molt diferents, però amb una clara concentració en les franges de menys públic.
 <!-- /comentari-grafic -->
