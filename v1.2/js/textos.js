@@ -102,30 +102,30 @@
   window.PiP_textos = { renderitza, inicialitza };
 })();
 
-/* Indicador de taules desplaçables, actualitzat després dels renderitzats dinàmics. */
+/* Taules responsives: el contenidor, no la taula, gestiona el scroll. */
 (function () {
-  const selectors = '.taula-films, .taula-ranking, .taula-festivals, .taula-decades-resum, .taula-scroll-wrap, .table-scroll, .taula-scroll, .table-responsive';
-  let pending = false;
+  const selector = 'table.taula-films, table.taula-ranking, table.taula-festivals, table.taula-decades-resum, .text-md table, .text-md-intermedi table, .pip3-taula-ampla';
+  let programat = false;
   function actualitza() {
-    pending = false;
-    document.querySelectorAll(selectors).forEach(el => {
-      const overflow = el.scrollWidth > el.clientWidth + 8;
-      el.classList.toggle('pip-scroll-pendent', overflow && el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
-      el.classList.toggle('pip-scroll-taula', overflow);
+    programat = false;
+    document.querySelectorAll(selector).forEach(table => {
+      if (!table.closest('.pip-taula-scroll') && !table.closest('.taula-scroll-wrap')) {
+        const contenidor = document.createElement('div');
+        contenidor.className = 'pip-taula-scroll';
+        table.parentNode.insertBefore(contenidor, table);
+        contenidor.appendChild(table);
+      }
+    });
+    document.querySelectorAll('.pip-taula-scroll, .taula-scroll-wrap').forEach(el => {
+      const pendent = el.scrollWidth > el.clientWidth + 6 && el.scrollLeft + el.clientWidth < el.scrollWidth - 6;
+      el.classList.toggle('pip-scroll-pendent', pendent);
       if (!el.dataset.pipScrollObservat) {
-        el.addEventListener('scroll', () => {
-          el.classList.toggle('pip-scroll-pendent', el.scrollWidth > el.clientWidth + 8 && el.scrollLeft + el.clientWidth < el.scrollWidth - 8);
-        }, { passive: true });
+        el.addEventListener('scroll', () => el.classList.toggle('pip-scroll-pendent', el.scrollWidth > el.clientWidth + 6 && el.scrollLeft + el.clientWidth < el.scrollWidth - 6), {passive:true});
         el.dataset.pipScrollObservat = '1';
       }
     });
   }
-  function programa() { if (!pending) { pending = true; requestAnimationFrame(actualitza); } }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inicia); else inicia();
-  function inicia() {
-    programa();
-    window.addEventListener('resize', programa, { passive: true });
-    const observer = new MutationObserver(programa);
-    observer.observe(document.querySelector('main') || document.body, { subtree: true, childList: true });
-  }
+  function programa(){if(!programat){programat=true;requestAnimationFrame(actualitza)}}
+  function inicia(){programa();window.addEventListener('resize',programa,{passive:true});new MutationObserver(programa).observe(document.body,{childList:true,subtree:true});}
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',inicia);else inicia();
 })();
