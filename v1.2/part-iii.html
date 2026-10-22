@@ -2060,6 +2060,18 @@ body.pip-en-portada .nav-seccions { display: none; }
   window.addEventListener('resize', actualitza, { passive: true });
   actualitza();
 })();
+(function () {
+  const el = document.querySelector('#grafic-caza-iaa-bloc .pip-caza-viewport');
+  if (!el) return;
+  function actualitza() {
+    el.classList.toggle('pip-caza-pendent',
+      el.scrollWidth > el.clientWidth + 6 &&
+      el.scrollLeft + el.clientWidth < el.scrollWidth - 6);
+  }
+  el.addEventListener('scroll', actualitza, {passive:true});
+  window.addEventListener('resize', actualitza, {passive:true});
+  requestAnimationFrame(actualitza);
+})();
 </script>
 </body>
 </html>
