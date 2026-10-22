@@ -3,7 +3,7 @@ La Part II reuneix un total de 340 films reconeguts als quatre festivals i les d
 <!-- /intro -->
 
 <!-- lectura -->
-El pes extraordinari de Sant Sebastià és la principal particularitat del conjunt, una sobrerepresentació ja explicada a «Dades i criteri». Cannes, Venècia i Berlín, en canvi, aporten volums similars, amb una presència de pel·lícules condicionada pels criteris de selecció i l’exclusivitat de les estrenes.
+El pes extraordinari de Sant Sebastià és la principal particularitat del conjunt, una *sobrerepresentació* ja explicada a «Dades i criteri». Cannes, Venècia i Berlín, en canvi, aporten volums similars, amb una presència de pel·lícules condicionada pels criteris de selecció i l’exclusivitat de les estrenes.
 
 Pel que fa a les acadèmies, els Oscar i els EFA reuneixen respectivament 29 i 71 films, amb alguns títols presents en totes dues institucions. D'aquest conjunt, 56 pel·lícules no apareixen en cap dels quatre festivals estudiats i constitueixen noves incorporacions a l'estudi, ampliant la diversitat de trajectòries i perfils cinematogràfics. Entre aquestes hi trobem quatre pel·lícules de Garci (amb l'Oscar per *Volver a empezar*), els tres primers films de Bayona, tres més de Saura i dos de Buñuel.
 <!-- /lectura -->
