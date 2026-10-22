@@ -15,7 +15,7 @@ Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric.
 <!-- /comentari-academies -->
 
 <!-- intro-grafic -->
-Per acabar, observem com es distribueix el conjunt dels 340 films reconeguts segons el volum d’espectadors acumulats a les sales.
+Per acabar, observem com es distribueix el conjunt dels 340 films reconeguts per franges de volum d’espectadors acumulats.
 <!-- /intro-grafic -->
 
 <!-- comentari-grafic -->
