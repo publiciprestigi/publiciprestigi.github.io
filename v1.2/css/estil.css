@@ -1786,3 +1786,14 @@ body.part-ii {
     mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 28px), transparent 100%);
   }
 }
+
+/* Contenidor únic per a les taules de dades de les tres parts. */
+@media (max-width: 900px) {
+  .pip-taula-scroll { max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  .pip-taula-scroll > table { max-width:none; }
+  .pip-taula-scroll.pip-scroll-pendent,
+  .taula-scroll-wrap.pip-scroll-pendent {
+    -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 26px),transparent 100%);
+    mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 26px),transparent 100%);
+  }
+}
