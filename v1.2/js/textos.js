@@ -102,30 +102,38 @@
   window.PiP_textos = { renderitza, inicialitza };
 })();
 
-/* Taules responsives: el contenidor, no la taula, gestiona el scroll. */
+/* Indicador universal de scroll per a les taules, sense alterar els contenidors existents. */
 (function () {
-  const selector = 'table.taula-films, table.taula-ranking, table.taula-festivals, table.taula-decades-resum, .text-md table, .text-md-intermedi table, .pip3-taula-ampla';
-  let programat = false;
+  const taules = 'table.taula-films, table.taula-ranking, table.taula-festivals, table.taula-decades-resum, .text-md table, .pip3-taula-ampla';
+  const scrollables = '.pip-taula-scroll, .taula-scroll-wrap, .ll-wrap, .taula-films, .taula-ranking, .taula-festivals, .taula-decades-resum';
+  let pendent = false;
   function actualitza() {
-    programat = false;
-    document.querySelectorAll(selector).forEach(table => {
-      if (!table.closest('.pip-taula-scroll') && !table.closest('.taula-scroll-wrap')) {
-        const contenidor = document.createElement('div');
-        contenidor.className = 'pip-taula-scroll';
-        table.parentNode.insertBefore(contenidor, table);
-        contenidor.appendChild(table);
-      }
+    pendent = false;
+    if (window.innerWidth > 900) return;
+    document.querySelectorAll(taules).forEach(table => {
+      if (table.closest('.pip-taula-scroll, .taula-scroll-wrap, .ll-wrap')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'pip-taula-scroll';
+      table.parentNode.insertBefore(wrap,table);
+      wrap.appendChild(table);
     });
-    document.querySelectorAll('.pip-taula-scroll, .taula-scroll-wrap').forEach(el => {
-      const pendent = el.scrollWidth > el.clientWidth + 6 && el.scrollLeft + el.clientWidth < el.scrollWidth - 6;
-      el.classList.toggle('pip-scroll-pendent', pendent);
+    document.querySelectorAll(scrollables).forEach(el => {
+      const ample = el.scrollWidth > el.clientWidth + 5;
+      el.classList.toggle('pip-scroll-pendent', ample && el.scrollLeft + el.clientWidth < el.scrollWidth - 5);
       if (!el.dataset.pipScrollObservat) {
-        el.addEventListener('scroll', () => el.classList.toggle('pip-scroll-pendent', el.scrollWidth > el.clientWidth + 6 && el.scrollLeft + el.clientWidth < el.scrollWidth - 6), {passive:true});
-        el.dataset.pipScrollObservat = '1';
+        el.addEventListener('scroll', () => {
+          el.classList.toggle('pip-scroll-pendent', el.scrollWidth > el.clientWidth + 5 && el.scrollLeft + el.clientWidth < el.scrollWidth - 5);
+        }, {passive:true});
+        el.dataset.pipScrollObservat='1';
       }
     });
   }
-  function programa(){if(!programat){programat=true;requestAnimationFrame(actualitza)}}
-  function inicia(){programa();window.addEventListener('resize',programa,{passive:true});new MutationObserver(programa).observe(document.body,{childList:true,subtree:true});}
+  function programa(){if(!pendent){pendent=true;requestAnimationFrame(actualitza)}}
+  function inicia(){
+    programa();
+    window.addEventListener('resize',programa,{passive:true});
+    new MutationObserver(programa).observe(document.body,{childList:true,subtree:true});
+    window.addEventListener('load',programa);
+  }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',inicia);else inicia();
 })();
