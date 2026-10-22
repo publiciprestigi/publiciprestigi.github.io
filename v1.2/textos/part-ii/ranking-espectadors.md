@@ -1,5 +1,5 @@
 <!-- intro -->
-Els rànquings següents presenten els deu títols més vistos de cada institució, amb l’opció de desplegar-ne el llistat complet. La comparació permet observar les diferències i els perfils respectius. Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric, Cannes n’aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els Oscar n’aporten quatre i els EFA onze, el màxim del conjunt.
+Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric. Cannes n’aporta dos, Venècia tres i Sant Sebastià sis. Entre les acadèmies, els Oscar n’aporten quatre i els EFA onze, el màxim del conjunt. Aquesta distribució reflecteix la diferent relació de cada institució amb el públic.
 <!-- /intro -->
 
 <!-- comentari -->
