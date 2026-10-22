@@ -1,6 +1,4 @@
 <!-- intro-grafic -->
-### Una mirada al conjunt
-
 Per acabar, observem com es distribueixen els 340 films reconeguts segons el volum d’espectadors acumulats a les sales.
 <!-- /intro-grafic -->
 
