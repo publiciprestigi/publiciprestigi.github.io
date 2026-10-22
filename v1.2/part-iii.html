@@ -425,10 +425,23 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="text-md text-md-intro" data-bunuel-bloc="intro">
 <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
+
+<style id="pip-bunuel-mobil-responsive">
+@media (max-width: 760px) {
+  /* Les barres mantenen escala comuna, però sense els 2.500 px forçats d'escriptori. */
+  #bbb-scroll-wrap > div { min-width: 1120px !important; height: 440px !important; }
+  #grafic-bunuel-franca-bloc .bf-mobile-scroll { max-width: 100%; overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+  #grafic-bunuel-franca-bloc .bf-mobile-scroll:not(.pip-final-scroll) {
+    -webkit-mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 25px), transparent 100%);
+    mask-image: linear-gradient(to right, #000 0%, #000 calc(100% - 25px), transparent 100%);
+  }
+  #grafic-bunuel-franca-bloc #bf-mirror { min-width: 700px; }
+}
+</style>
 <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
 <p id="bbb-tit" style="font-size:.82em;font-weight:700;color:#363737;text-align:center;margin:0 0 14px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif">Buñuel, Berlanga i Bardem — Trajectòria d’espectadors a sala per film (1965–1999)</p>
 <div style="position:relative">
-<div id="bbb-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+<div id="bbb-scroll-wrap" style="overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%">
 <div style="min-width:2500px;height:520px;position:relative">
 <canvas id="grafic-bunuel-berlanga-bardem"></canvas>
 </div>
@@ -539,6 +552,7 @@ body.pip-en-portada .nav-seccions { display: none; }
           @media(max-width:520px){#grafic-mercats-coda-bloc .mq-heading span{width:100%}#grafic-mercats-coda-bloc .mq-stack{height:27px}#grafic-mercats-coda-bloc .mq-values{font-size:10px}}
           </style>
 <div class="bf-mobile-scroll" style="overflow:visible">
+
 <div id="bf-mirror">
 <div class="bf-head">
 <div class="bf-country es">← ES</div>
@@ -2009,6 +2023,16 @@ body.pip-en-portada .nav-seccions { display: none; }
   } catch (error) {
     console.error('No s’ha pogut carregar el Markdown de les introduccions. Es conserva el text de reserva.', error);
   }
+})();
+</script>
+<script>
+(function () {
+  const el = document.querySelector('#grafic-bunuel-franca-bloc .bf-mobile-scroll');
+  if (!el) return;
+  function actualitza() { el.classList.toggle('pip-final-scroll', el.scrollLeft + el.clientWidth >= el.scrollWidth - 8); }
+  el.addEventListener('scroll', actualitza, { passive: true });
+  window.addEventListener('resize', actualitza, { passive: true });
+  actualitza();
 })();
 </script>
 </body>
