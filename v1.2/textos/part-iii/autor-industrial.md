@@ -1,7 +1,7 @@
 <!-- intro -->
 Hi ha una tercera categoria que l’estudi ha documentat en dades, però no ha nomenat explícitament. Un cinema que no coincideix del tot ni amb el circuit de festivals de la Part II ni amb el cinema popular de consum de la Part I. Podríem parlar d’un *model d’autor industrial*, una aparent contradicció que remet a la *politique des auteurs* dels *Cahiers du cinéma*, que als anys cinquanta va reivindicar com a autors cineastes plenament inserits en la indústria de Hollywood, com Hitchcock o Hawks. Dècades després, Spielberg exemplifica de manera especialment clara aquesta continuïtat entre autoria personal i gran cinema industrial.
 
-Bayona, Amenábar i De la Iglesia no encaixen ni amb Saura ni amb Segura. Dominen els llenguatges de gènere i les formes populars (terror, *thriller*, ciència-ficció, comèdia negra, drama i aventures), i operen en una zona intermèdia on l’objectiu no és Cannes, sinó la sala de cinema i el gran públic, però amb un domini formal i una ambició artística que els distingeix del cinema popular pur.
+Bayona, Amenábar i De la Iglesia no encaixen ni amb Saura ni amb Segura. Dominen els llenguatges de gènere i les formes populars (terror, *thriller*, ciència-ficció, comèdia negra, drama i aventures) i operen en una zona intermèdia on l’objectiu no és guanyar la Palma d’Or a Cannes, sinó la sala de cinema i el gran públic, però amb un domini formal i una ambició artística que els distingeix del cinema popular pur. Amenábar i Bayona han compartit, a més, una estratègia de projecció internacional més pròxima a la indústria nord-americana, que utilitza els festivals europeus (amb Toronto com a pont) com a plataformes de promoció i de projecció cap als Oscar.
 <!-- /intro -->
 
 <!-- bloc-iglesia -->
@@ -37,7 +37,7 @@ El gràfic següent mostra l’evolució dels espectadors a sala de les pel·lí
 <!-- /comentari-grafic-ai -->
 
 <!-- conclusio -->
-Bayona i Amenábar podrien haver construït trajectòries dins el circuit de festivals (*Mar adentro* ho demostra), però han triat un altre joc i l’han guanyat en els seus propis termes. La seva projecció internacional s’acosta més al model de la indústria nord-americana, que utilitza festivals com Venècia i Toronto com a plataformes de promoció i de projecció cap als Oscar. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional, i mai a una escala semblant. I això no és poca cosa.
+Bayona i Amenábar podrien haver construït trajectòries dins el circuit de festivals (*Mar adentro* ho demostra), però han triat un altre joc i l’han guanyat en els seus propis termes. Els seus films ocupen algunes de les posicions més altes del Top 100 de les últimes dècades. És un cinema fet per a molts, però amb la mirada i el control d’un autor. La seva victòria consisteix a fer que el mercat espanyol accepti com a normal una ambició industrial sostinguda que fins aleshores només havia aparegut de forma excepcional, i mai a una escala semblant. I això no és poca cosa.
 <!-- /conclusio -->
 
 <!-- paradoxa -->
