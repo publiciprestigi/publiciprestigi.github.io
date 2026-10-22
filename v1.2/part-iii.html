@@ -1279,7 +1279,8 @@ body.pip-en-portada .nav-seccions { display: none; }
 
 
       document.querySelector('.contingut-sidebar').scrollTop = 0;
-      document.documentElement.scrollTop = 0;
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }));
       if (!window.__pipInicialitzantEntrada) {
         history.pushState({ idx }, '', s.id === 'portada' ? window.location.pathname + window.location.search : '#' + s.id);
       }
