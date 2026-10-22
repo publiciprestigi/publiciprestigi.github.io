@@ -322,10 +322,9 @@ body.pip-en-portada .nav-seccions { display: none; }
 <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
 <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>
 </div>
-<div class="grafic-wrap" style="height:270px;position:relative;margin:0;border-top:none;border-bottom:none">
+<div class="pip-caza-viewport"><div class="grafic-wrap" style="height:270px;position:relative;margin:0;border-top:none;border-bottom:none">
 <canvas id="grafic-caza-iaa"></canvas>
-</div>
-<div id="caza-iaa-totals-mobil" style="display:none"><span><em>Alcarràs</em> — <strong>~1,31M</strong> (×3,25)</span><span><em>La caza</em> — <strong>341.377</strong> (×1,0)</span></div>
+</div></div>
 <p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px">
             Fonts: ICAA (espectadors a sala); estimacions pròpies (televisió pública, televisió de pagament i plataformes digitals).
           </p>
@@ -459,9 +458,10 @@ body.pip-en-portada .nav-seccions { display: none; }
   #franca-top30 .f30-row .f30-side.fr {grid-column:2;grid-row:2;}
   #franca-top30 .f30-name {font-size:12px;}
   #franca-top30 .f30-value {font-size:10px;}
-  #grafic-caza-iaa-bloc .grafic-wrap {height:210px!important;max-width:100%;}
-  #caza-iaa-totals-mobil {display:flex!important;flex-direction:column;align-items:flex-start;gap:5px;font-size:11px;color:#555;margin:0 0 12px 6px;}
-  #caza-iaa-totals-mobil strong {color:#363737;font-weight:600;}
+  #grafic-caza-iaa-bloc .pip-caza-viewport {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  #grafic-caza-iaa-bloc .pip-caza-viewport.pip-caza-pendent { -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent); }
+  #grafic-caza-iaa-bloc .grafic-wrap {height:270px!important;min-width:760px;max-width:none!important;}
+
 }
 </style>
 <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
