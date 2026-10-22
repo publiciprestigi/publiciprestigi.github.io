@@ -33,7 +33,7 @@ El gràfic següent mostra l’evolució dels espectadors a sala de les pel·lí
 <!-- /transicio-grafic-ai -->
 
 <!-- comentari-grafic-ai -->
-El tram final del gràfic mostra una caiguda compartida dels espectadors a sala en els últims llargmetratges dels tres directors, *El cuarto pasajero* (2022), *La sociedad de la nieve* (2023) i *El cautivo* (2025). El model industrial que aquests directors van consolidar durant els 2000 i 2010 ja no troba les mateixes condicions per reproduir aquells èxits. Però una taquilla més baixa ja no significa necessàriament un públic més petit.
+- El tram final del gràfic mostra una caiguda compartida dels espectadors a sala en els últims llargmetratges dels tres directors, *El cuarto pasajero* (2022), *La sociedad de la nieve* (2023) i *El cautivo* (2025). El model industrial que aquests directors van consolidar durant els 2000 i 2010 ja no troba les mateixes condicions per reproduir aquells èxits. Però una taquilla més baixa ja no significa necessàriament un públic més petit.
 <!-- /comentari-grafic-ai -->
 
 <!-- conclusio -->
