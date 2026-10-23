@@ -55,7 +55,7 @@ L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi inten
 
 Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d'audiència públiques i comparables. <sup>[24]</sup> Aquesta limitació afecta tant el cinema d'autor més minoritari com les grans produccions de vocació internacional. Films com *Sirât* o *Los domingos* poden continuar acumulant públic més enllà de les sales, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla resulta clarament insuficient. Aquesta opacitat pot fer que la distància entre el cinema popular i el de festivals sembli més gran del que realment és.
 
-La «doble corona» pot haver canviat d'escala. Avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull. No és que la coincidència entre públic i prestigi hagi desaparegut necessàriament; és que els nostres instruments per detectar-la han quedat parcialment desfasats.
+La «doble corona» pot haver canviat d'escala. Avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull. No és que la coincidència entre públic i prestigi hagi desaparegut necessàriament, és que els instruments tradicionals per detectar-la han quedat parcialment desfasats.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
