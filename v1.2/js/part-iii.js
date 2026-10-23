@@ -720,8 +720,8 @@ function construirBretxa() {
         <div style="background:#f0f0f0;height:15px"><div style="background:${color};height:100%;width:${(valor / max * 100).toFixed(3)}%"></div></div>
         <span style="text-align:right;font-variant-numeric:tabular-nums">${abreujar(valor)}</span></div>`;
       return `<div style="margin:0 0 20px"><div style="display:flex;justify-content:space-between;gap:12px;font:600 13px 'Inter',sans-serif;margin-bottom:10px">
-        <span>${d.decada === '80s' ? 'Anys vuitanta' : 'Anys 2010'}</span><span style="color:#777">Ràtio ${d.ratio.toFixed(2).replace('.',',')}</span></div>
-        ${fila('Top comercial',d.mit20,'#7F8792')}
+        <span>${d.decada === '80s' ? '80s' : '2010s'}</span><span style="color:#777">Ràtio ${d.ratio.toFixed(2).replace('.',',')}</span></div>
+        ${fila('Top 100',d.mit20,'#7F8792')}
         ${fila('Festivals',d.mitF,'#A8495C')}</div>`;
     }).join('');
   }
