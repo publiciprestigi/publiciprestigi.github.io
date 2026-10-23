@@ -53,9 +53,9 @@ La taquilla continua sent l’única dada pública plenament comparable al llarg
 
 L’IIC i l’IAA són les dues eines d’aproximació amb què l’estudi intenta compensar aquesta limitació. L’IIC situa les entrades dins del mercat i la població de cada moment; l’IAA estima l’audiència acumulada a través de les diferents finestres. No són models oficials ni científicament validats, però ajuden a contextualitzar les xifres i a fer visibles diferències que la taquilla per si sola oculta.
 
-Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d'audiència públiques i comparables. <sup>[24]</sup> Films com *Sirât* o *Los domingos* poden continuar acumulant públic més enllà de les sales, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla resulta clarament insuficient. Aquesta opacitat pot fer que la distància entre el cinema popular i el de festivals sembli més gran del que realment és.
+Malgrat les obligacions de finançament, les plataformes continuen sense oferir dades d'audiència públiques i comparables. <sup>[24]</sup> Aquesta limitació afecta tant el cinema d'autor més minoritari com les grans produccions de vocació internacional. Films com *Sirât* o *Los domingos* poden continuar acumulant públic més enllà de les sales, mentre que en produccions concebudes per a plataformes, com *La sociedad de la nieve*, la taquilla resulta clarament insuficient. Aquesta opacitat pot fer que la distància entre el cinema popular i el de festivals sembli més gran del que realment és.
 
-La «doble corona» pot haver canviat d'escala. Avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull.
+La «doble corona» pot haver canviat d'escala. Avui, una pel·lícula pot reunir públic i prestigi amb menys entrades de sala i una audiència posterior més àmplia que la taquilla no recull. No és que la coincidència entre públic i prestigi hagi desaparegut necessàriament; és que els nostres instruments per detectar-la han quedat parcialment desfasats.
 <!-- /punt-4 -->
 
 <!-- punt-5 -->
