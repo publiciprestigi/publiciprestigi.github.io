@@ -8,7 +8,7 @@ La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com mé
 <!-- /llegenda-taula -->
 
 <!-- comentari -->
-- Als 60s, els films de festival superen el mig milió d'espectadors de mitjana (556k), una de les xifres més altes de tota la sèrie. Però el Top 100 juga en una altra lliga (3,25M), en ple mercat de masses. D’aquí una ràtio modesta del 0,17: el cinema de festival tenia públic, però el cinema popular es movia en una escala molt superior.
+- Als 60s, els films de festivals superen el mig milió d'espectadors de mitjana (556K), una de les xifres més altes de tota la sèrie. Però el Top 100 juga en una altra lliga (3,25M), en ple mercat de masses. D’aquí una ràtio modesta del 0,17: el cinema de festival tenia públic, però el cinema popular es movia en una escala molt superior.
 
 - Els 70s són un dels moments de més proximitat entre els dos circuits. Amb una ràtio de 0,27 i tres casos de «doble corona», pel·lícules com *Furtivos* (1975), *Cría cuervos* (1976) o *La guerra de papá* (1977) mostren que el cinema reconegut als festivals també podia arribar a un públic ampli. El context polític i cultural de la Transició va afavorir una demanda específica d'aquest cinema, que es faria menys habitual en les dècades posteriors. <sup>[11]</sup>
 
