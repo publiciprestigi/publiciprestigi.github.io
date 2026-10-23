@@ -708,25 +708,6 @@ function construirBretxa() {
   if (!taula) return;
 
   bretxaDades = calcularBretxa();
-  // Mini comparativa de dos extrems de la ràtio, amb escala comuna.
-  const mini = document.getElementById('bretxa-mini-files');
-  if (mini) {
-    const dades = ['80s', '2010s'].map(d => bretxaDades.find(x => x.decada === d)).filter(Boolean);
-    const max = Math.max(...dades.map(d => d.mit20), 1);
-    const abreujar = n => n >= 1000000 ? (n / 1000000).toLocaleString('ca-ES', {maximumFractionDigits:2}) + 'M' : Math.round(n / 1000) + 'K';
-    mini.innerHTML = dades.map(d => {
-      const fila = (nom, valor, color) => `<div style="display:grid;grid-template-columns:110px minmax(0,1fr) 64px;gap:10px;align-items:center;margin:8px 0;font:12px 'Inter',sans-serif">
-        <span style="color:#555">${nom}</span>
-        <div style="background:#f0f0f0;height:15px"><div style="background:${color};height:100%;width:${(valor / max * 100).toFixed(3)}%"></div></div>
-        <span style="text-align:right;font-variant-numeric:tabular-nums">${abreujar(valor)}</span></div>`;
-      return `<div style="margin:0 0 20px"><div style="display:flex;justify-content:space-between;gap:12px;font:600 13px 'Inter',sans-serif;margin-bottom:10px">
-        <span>${d.decada === '80s' ? '80s' : '2010s'}</span><span style="color:#777">Ràtio ${d.ratio.toFixed(2).replace('.',',')}</span></div>
-        ${fila('Top 100',d.mit20,'#7F8792')}
-        ${fila('Festivals',d.mitF,'#A8495C')}</div>`;
-    }).join('');
-  }
-
-
   // Etiquetes curtes (com Part I "Resum per dècada")
   const ETIQ_CURTA = {
     '60s':'60s','70s':'70s','80s':'80s','90s':'90s',
@@ -741,32 +722,8 @@ function construirBretxa() {
   }
 
 
-  const files = bretxaDades.map(r => {
-    const c = colorRatio(r.ratio);
-    return `<tr style="background:${c.fons};border-bottom:2px solid #fff">
-      <td class="col-center"><strong>${ETIQ_CURTA[r.decada]}</strong></td>
-      <td class="col-center" style="color:#6b6b6b">${r.dc}</td>
-      <td class="col-num col-center">${fmt(r.mitF)}</td>
-      <td class="col-num col-center">${fmt(r.mit20)}</td>
-      <td class="col-center"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
-    </tr>`;
-  }).join('');
-
-  taula.innerHTML = `
-    <table class="taula-festivals">
-      <thead><tr>
-        <th class="col-center" style="width:80px">${pip3T('Dècada','Década')}</th>
-        <th class="col-center" style="width:110px">Doble corona</th>
-        <th class="col-num col-center" style="width:140px">${pip3T('Mitjana festivals','Media festivales')}</th>
-        <th class="col-num col-center" style="width:140px">${pip3T('Mitjana Top 100','Media Top 100')}</th>
-        <th class="col-center" style="width:110px">${pip3T('Ràtio bretxa','Ratio de brecha')}</th>
-      </tr></thead>
-      <tbody>${files}</tbody>
-    </table>`;
-
-
-  // Prova B: taula convencional amb xifres abreujades i barres proporcionals.
-  const visual = document.getElementById('bretxa-taula-visual');
+  // Taula de bretxa amb xifres abreujades i barres proporcionals.
+  const visual = taula;
   if (visual) {
     const maxEscala = Math.max(...bretxaDades.flatMap(r => [r.mitF, r.mit20]), 1);
     const abreujarBretxa = n => n >= 1000000
@@ -787,7 +744,7 @@ function construirBretxa() {
         <td class="bretxa-b-ratio"><strong style="color:${c.text}">${r.ratio.toFixed(2).replace('.', ',')}</strong></td>
       </tr>`;
     }).join('');
-    visual.innerHTML = `<table class="taula-festivals bretxa-b-taula" aria-label="${pip3T('Proposta de taula de la bretxa amb barres proporcionals','Propuesta de tabla de brecha con barras proporcionales')}">
+    visual.innerHTML = `<table class="taula-festivals bretxa-b-taula" aria-label="${pip3T('Taula de la bretxa amb barres proporcionals','Tabla de brecha con barras proporcionales')}">
       <thead><tr>
         <th>${pip3T('Dècada','Década')}</th>
         <th>DC</th>
