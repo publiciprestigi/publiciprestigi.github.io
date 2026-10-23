@@ -1,7 +1,7 @@
 <!-- intro -->
-La taula següent compara, per dècada, la mitjana d’espectadors en sales de les pel·lícules seleccionades a competició oficial als festivals de la Part II amb la mitjana de referència del cinema més popular de cada dècada, construïda a partir dels rànquings de la Part I.
+Una de les grans qüestions d'aquest estudi és fins a quin punt el cinema reconegut als festivals ha aconseguit arribar al gran públic. Per observar com ha evolucionat aquesta relació, comparem, dècada a dècada, els espectadors de les pel·lícules seleccionades a competició oficial als quatre festivals de la Part II amb els dels grans èxits comercials recollits a la Part I.
 
-La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festivals ÷ mitjana Top 100. Un valor proper a 1,00 indicaria que el cinema de festivals i el cinema més popular captaven públics similars. Un valor proper a 0,00, en canvi, indica una separació molt forta entre els dos circuits. La columna «doble corona» indica el nombre de films que apareixen alhora en tots dos circuits. <sup>[10]</sup>
+La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» recull les pel·lícules que coincideixen en tots dos. <sup>[10]</sup>
 <!-- /intro -->
 
 <!-- llegenda-taula -->
@@ -10,13 +10,13 @@ La ràtio de bretxa és el quocient entre aquestes dues mitjanes: mitjana festiv
 <!-- comentari -->
 - Als 60s, els films de festival superen el mig milió d'espectadors de mitjana (556k), una de les xifres més altes de tota la sèrie. Però el Top 100 juga en una altra lliga (3,25M), en ple mercat de masses. D’aquí una ràtio modesta del 0,17: el cinema de festival tenia públic, però el cinema popular es movia en una escala molt superior.
 
-- Els 70s són el moment de més porositat relativa entre públic i prestigi. Amb una ràtio de 0,27 i tres casos de «doble corona», films com *Furtivos* (1975), *Cría cuervos* (1976) o *La guerra de papá* (1977) mostren que el context polític de la Transició creava un públic més ampli i motivat per a aquest tipus de cinema. No era cinema massiu en el sentit dels grans èxits populars, però tampoc estava tan separat del públic com ho estaria dècades després. <sup>[11]</sup>
+- Els 70s són un dels moments de més proximitat entre els dos circuits. Amb una ràtio de 0,27 i tres casos de «doble corona», pel·lícules com *Furtivos* (1975), *Cría cuervos* (1976) o *La guerra de papá* (1977) mostren que el cinema reconegut als festivals també podia arribar a un públic ampli. El context polític i cultural de la Transició va afavorir una demanda específica d'aquest cinema, que es faria menys habitual en les dècades posteriors. <sup>[11]</sup>
 
-- Els 80s donen la ràtio més alta de tota la taula (0,32), però és un pic enganyós. No puja perquè el cinema de festival es faci molt més popular, sinó perquè el Top 100 també cau fort, fins a una mitjana d’1,52M d’espectadors. Els 90s mantenen una lògica similar, tot i que una mica més oberta: el Top 100 puja fins a 1,74M i la ràtio baixa al 0,22. En tots dos casos, la bretxa sembla més estreta perquè el mercat també s’ha comprimit.
+- Els 80s presenten la ràtio més alta de tota la sèrie (0,32), però la dada pot enganyar. No és tant que el cinema de festivals guanyi públic com que els grans èxits comercials també en perden. La mitjana del Top 100 cau fins als 1,52M d'espectadors. Als 90s, la distància torna a créixer lleugerament (0,22), amb una mitjana comercial d'1,74M. En totes dues dècades, la crisi del mercat contribueix a acostar els resultats dels dos circuits.
 
-- Els 2000s representen un breu parèntesi: amb quatre «dobles corones» (la xifra més alta de tota la sèrie i les últimes que s'han produït fins ara) i una ràtio de 0,22, es recupera lleugerament la porositat dels 70s. La mitjana dels festivals puja fins als 673k, la segona més alta. És la darrera dècada on la coincidència entre reconeixement de festival i impacte massiu es produeix de manera recurrent.
+- Els 2000s representen un breu parèntesi. Amb quatre «dobles corones» (la xifra més alta de tota la sèrie i les últimes que s'han produït fins ara) i una ràtio de 0,22, els dos circuits tornen a acostar-se lleugerament. La mitjana dels festivals puja fins als 673K, la segona més alta. És la darrera dècada en què la coincidència entre reconeixement als festivals i impacte massiu es produeix de manera recurrent.
 
-- El trencament més clar arriba als 2010s: amb un mercat relativament estabilitzat, la mitjana del Top 100 es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre els festivals baixen a 266k. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d’autor: <sup>[12]</sup> més reconegut i més internacionalitzat, però també més allunyat del gran públic en sales. Els 2020s apunten una petita recuperació de la ràtio (0,14), però amb una dècada incompleta i un mercat encara en recomposició.
+- El trencament més clar arriba als 2010s. Amb un mercat relativament estabilitzat, la mitjana dels grans èxits comercials es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre la dels festivals cau a 266K. La ràtio baixa a 0,08, el mínim de tota la sèrie. Aquesta separació coincideix amb la consolidació d'un circuit internacional de festivals cada vegada més professionalitzat, en què el cinema d'autor guanya reconeixement i circulació exterior, però s'allunya del gran públic a les sales espanyoles. <sup>[12]</sup> Els 2020s apunten una petita recuperació (0,14), encara amb una dècada incompleta i un mercat en recomposició.
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
@@ -25,6 +25,6 @@ El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) e
 
 <!-- post-grafic1 -->
 
-Vist així, la bretxa no indica només una menor presència del cinema de festival en el mercat de sales. També es pot llegir com un canvi d’escala: una part de la seva visibilitat i del seu valor ja no passa només per la taquilla espanyola, sinó per formes de circulació més internacionals, digitals i disperses, accelerades per internet, la globalització del sector i l’expansió de les plataformes.
+Vist així, la bretxa no indica només una menor presència del cinema de festivals a les sales. També es pot llegir com un canvi d'escala. Una part de la seva visibilitat i del seu valor ja no passa només per la taquilla espanyola, sinó per formes de circulació més internacionals, digitals i disperses, impulsades per internet, la globalització del sector i l'expansió de les plataformes.
 
 <!-- /post-grafic1 -->
