@@ -32,7 +32,7 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:comentari-coproduccions -->
 
 <!-- PIP_BLOC:comentari-balanc -->
-- En conjunt, les vuit pel·lícules acumulen 6,4 milions d’espectadors a Espanya i 8,6 milions a França. El balanç mostra la importància del mercat francès en la trajectòria final de Buñuel, però també confirma que la seva obra va arribar a un públic considerable a Espanya, malgrat els obstacles polítics i les irregularitats de distribució:
+- En conjunt, les vuit pel·lícules acumulen 6,4 milions d’espectadors a Espanya i 8,6 milions a França. El balanç mostra la importància del mercat francès en la trajectòria final de Buñuel, però també confirma que la seva obra va arribar a un públic important a Espanya, malgrat els obstacles polítics i les irregularitats de distribució:
 <!-- /PIP_BLOC:comentari-balanc -->
 
 <!-- PIP_BLOC:context-industrial -->
