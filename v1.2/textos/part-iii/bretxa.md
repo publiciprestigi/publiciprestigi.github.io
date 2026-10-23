@@ -16,7 +16,9 @@ La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com mé
 
 - Els 2000s representen un breu parèntesi. Amb quatre «dobles corones» (la xifra més alta de tota la sèrie i les últimes que s'han produït fins ara) i una ràtio de 0,22, els dos circuits tornen a acostar-se lleugerament. La mitjana dels festivals puja fins als 673K, la segona més alta. És la darrera dècada en què la coincidència entre reconeixement als festivals i impacte massiu es produeix de manera recurrent.
 
-- El trencament més clar arriba als 2010s. Amb un mercat relativament estabilitzat, la mitjana dels grans èxits comercials es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre la dels festivals cau a 266K. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d'autor i consolidació del circuit internacional de festivals. <sup>[12]</sup> Un cinema cada vegada més reconegut i internacionalitzat, però també més allunyat del gran públic a les sales. Els 2020s apunten una petita recuperació (0,14), encara amb una dècada incompleta i un mercat en recomposició.
+- El trencament més clar arriba als 2010s. Amb un mercat relativament estabilitzat, la mitjana dels grans èxits comercials es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre la dels festivals cau a 266K. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d'autor i consolidació del circuit internacional de festivals. <sup>[12]</sup> Un cinema cada vegada més reconegut i internacionalitzat, però també més allunyat del gran públic a les sales.
+
+- Als 2020s, la ràtio remunta fins al 0,14, però no perquè el cinema de festivals recuperi públic. La seva mitjana continua caient i són els grans èxits comercials els que retrocedeixen encara més, en una dècada marcada per la pandèmia i la recuperació incompleta de les sales.
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
