@@ -871,7 +871,7 @@ body.pip-en-portada .nav-seccions { display: none; }
             const isAlmodovar = f => f.director === 'Pedro Almodóvar';
             const marketSign = f => {
               const rel = Math.abs(f.fr - f.es) / Math.max(f.fr, f.es);
-              if (rel < 0.10) return '<span class="f30-rank-sign equal" aria-label="mercats gairebé equivalents">=</span>';
+              if (rel < 0.05) return '<span class="f30-rank-sign equal" aria-label="mercats gairebé equivalents">=</span>';
               return f.fr > f.es
                 ? '<span class="f30-rank-sign right" aria-label="França supera Espanya">→</span>'
                 : '<span class="f30-rank-sign left" aria-label="Espanya supera França">←</span>';
