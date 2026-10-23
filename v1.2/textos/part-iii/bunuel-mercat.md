@@ -1,5 +1,5 @@
 <!-- PIP_BLOC:intro -->
-Mirant les quatre pel·lícules de Buñuel que apareixen citades a l’estudi, sorprèn comprovar que totes superen el milió d’espectadors: *Viridiana* (1961, Palma d’Or a Cannes, 1M), *Tristana* (1970, nominació a l’Oscar, 1,8M), *Ese oscuro objeto del deseo* (1977, dues nominacions als Oscar, 1,1M) i *Belle de jour* (1967, Lleó d’Or a Venècia, 1,2M). El fet crida especialment l’atenció en un cineasta associat com pocs a l’avantguarda i a una idea radical de l’autoria cinematogràfica.
+Mirant les quatre pel·lícules de Buñuel que apareixen citades a l’estudi, sorprèn comprovar que totes superen el milió d’espectadors: *Viridiana* (1961, Palma d’Or a Cannes, 1M), *Tristana* (1970, nominació a l’Oscar, 1,8M), *Ese oscuro objeto del deseo* (1977, dues nominacions als Oscar, 1,1M) i *Belle de jour* (1967, Lleó d’Or a Venècia, 1,2M). El fet crida especialment l’atenció en un cineasta tan associat a l’avantguarda i al cinema d’autor més radical.
 
 Potser aquesta imatge és parcialment una construcció cinèfila posterior. Buñuel va ser també un director capaç de treballar dins d’indústries i gèneres populars, especialment durant la seva llarga etapa mexicana, introduint-hi sempre una marca pròpia, estranya i pertorbadora. La pregunta, per tant, no és només per què Buñuel tenia més públic del que podríem imaginar, sinó també si l’hem llegit massa des del cànon i massa poc des del mercat.
 
@@ -24,7 +24,7 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:intro-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-dos-paisos -->
-- *Tristana* i *Viridiana* tenen clarament més espectadors a Espanya, mentre que *Ese oscuro objeto del deseo* registra xifres relativament properes als dos països. En els altres cinc títols predomina el públic francès, especialment en *Belle de jour*, que supera els dos milions d’espectadors. Més enllà d’aquestes diferències, les xifres revelen una capacitat de convocatòria considerable: a França, cap de les vuit pel·lícules baixa del mig milió d’espectadors, i fins i tot els resultats més modestos a Espanya indiquen una presència comercial apreciable.
+- *Tristana* i *Viridiana* tenen clarament més espectadors a Espanya, mentre que *Ese oscuro objeto del deseo* registra xifres relativament properes als dos països. En els altres cinc títols predomina el públic francès, especialment en *Belle de jour*, que supera els dos milions d’espectadors. A França, cap de les vuit pel·lícules baixa del mig milió d’espectadors, i fins i tot els resultats més modestos a Espanya indiquen una presència comercial considerable.
 <!-- /PIP_BLOC:comentari-dos-paisos -->
 
 <!-- PIP_BLOC:comentari-coproduccions -->
@@ -36,7 +36,7 @@ L’aparició de les sales d’art i assaig a partir de 1967 va obrir noves poss
 <!-- /PIP_BLOC:comentari-balanc -->
 
 <!-- PIP_BLOC:context-industrial -->
-Buñuel apareix així com un precedent d’un cinema vinculat simultàniament a diferents sistemes industrials, culturals i comercials. En el seu cas, aquesta dimensió estava profundament marcada per l’exili i les condicions polítiques de l’Espanya franquista. Amb les generacions posteriors, es convertirà també en una possibilitat artística i industrial deliberada. Però coproduir amb un altre país i aconseguir-hi un segon mercat són dues coses diferents: la col·laboració industrial no garanteix, per si sola, l’existència d’aquest públic complementari.
+Buñuel anticipa una manera de fer cinema que travessa fronteres i treballa amb diferents indústries i públics. En el seu cas, aquesta trajectòria estava marcada per l’exili i les condicions polítiques del franquisme. Per a les generacions posteriors, treballar entre països es convertirà també en una opció artística i comercial. Però coproduir amb un altre país i aconseguir-hi un segon mercat són dues coses diferents. La col·laboració industrial no garanteix, per si sola, l’existència d’aquest públic complementari.
 <!-- /PIP_BLOC:context-industrial -->
 
 <!-- PIP_BLOC:intro-top30 -->
@@ -47,7 +47,7 @@ Quines altres pel·lícules espanyoles han aconseguit construir un públic a Fra
 
 <!-- PIP_BLOC:comentaris-top30 -->
 - **Almodóvar: quan el segon mercat es converteix en el primer.** Catorze dels trenta films del rànquing són seus. El mercat francès esdevé una part estable de la seva trajectòria comercial, fins al punt que tres dels quatre títols estrenats des de 2016 tenen més espectadors a França que a Espanya. Aquesta implantació també es reflecteix en els premis César, amb nou pel·lícules nominades i tres premiades. En conjunt, els catorze títols acumulen a França gairebé tants espectadors com a Espanya:
-- **Isasi-Isasmendi: la internacionalització del cinema de gènere.** *Estambul 65* (#4) i *Las Vegas 500 millones* (#25), dues de les seves grans produccions d’acció i aventura, mostren la seva aposta per un cinema concebut des de l’inici per circular internacionalment. En tots dos casos, el públic espanyol és superior, però França representa un segon mercat rellevant. Aquesta estratègia d'internacionalització anticipa alguns trets del *model d'autor industrial* que desenvoluparan dècades després cineastes com Amenábar i Bayona.
+- **Isasi-Isasmendi: la internacionalització del cinema de gènere.** *Estambul 65* (#4) i *Las Vegas 500 millones* (#25), dues de les seves grans produccions d’acció i aventura, mostren la seva aposta per un cinema concebut des de l’inici per circular internacionalment. En tots dos casos, el públic espanyol és superior, però França representa un segon mercat rellevant. Aquesta aposta anticipa alguns trets del *model d'autor industrial* que desenvoluparan dècades després cineastes com Amenábar i Bayona.
 - **Saura: dues grans connexions amb el públic francès.** *Cría cuervos* (#7), guardonada amb el Gran Premi Especial del Jurat a Cannes el 1976, va coincidir amb l'èxit extraordinari de «Porque te vas», de Jeanette, a França. *Carmen* (#12), per la seva banda, reinterpretava a través del flamenc i Antonio Gades la cèlebre òpera de Bizet. Totes dues van aconseguir més espectadors a França que a Espanya i van ser nominades al César a millor pel·lícula estrangera. Però aquests èxits no van donar lloc a una continuïtat comercial comparable a la d'Almodóvar.
 - **Dos èxits inesperats dels anys seixanta.** *Loca juventud* (#9), de Manuel Mur Oti, va superar el milió d’espectadors a França amb el *nen prodigi* Joselito, promocionat com *l’enfant à la voix d’or*. *Cartas boca arriba* (#19), de l'inclassificable Jesús Franco, comptava amb el popular Eddie Constantine com a protagonista i una coproducció francesa vinculada a Serge Silberman i Jean-Claude Carrière, col·laboradors de Buñuel. Dos casos molt diferents que revelen altres vies d’accés al mercat francès.
 - **El terror espanyol també troba públic a França.** *[REC]* (#26), de Jaume Balagueró i Paco Plaza, exemplifica la capacitat del cinema de terror espanyol per arribar al mercat francès. La continuïtat d’aquest èxit es confirma amb *[REC] 2*, que queda just fora del Top 30 (#31), amb prop de 500K espectadors.
@@ -59,7 +59,7 @@ Quines altres pel·lícules espanyoles han aconseguit construir un públic a Fra
 <!-- PIP_BLOC:intro-mercats -->
 ## Comparativa de mercat, població i quota
 
-Per tancar el capítol, tornem a la perspectiva amb què començava l’estudi. Si a la Part I observàvem l’evolució del mercat i la població a Espanya, aquí ampliem la comparació a França i hi afegim les entrades per habitant, que permeten analitzar l’assistència al cinema més enllà de les diferències demogràfiques, i les quotes de mercat del 2025. Els tres botons permeten alternar entre els gràfics i els comentaris corresponents, que apareixen a sota.
+Per tancar el capítol, recuperem la perspectiva de la Part I i ampliem la comparació a França. Observem l’evolució del mercat, la població i les entrades per habitant, i acabem amb les quotes de mercat del 2025. Els tres botons permeten alternar entre les comparatives i els comentaris.
 <!-- /PIP_BLOC:intro-mercats -->
 
 <!-- PIP_BLOC:comentari-mercats -->
@@ -67,7 +67,7 @@ Per tancar el capítol, tornem a la perspectiva amb què començava l’estudi. 
 <!-- /PIP_BLOC:comentari-mercats -->
 
 <!-- PIP_BLOC:comentari-perhab -->
-- El 1965, Espanya superava les dotze entrades anuals per habitant, més del doble que França, una superioritat que es va mantenir fins a començaments dels vuitanta. Després d’una caiguda pronunciada, els dos països van tornar a presentar nivells semblants durant els noranta i els primers 2000, amb diversos anys favorables a Espanya. La divergència posterior demostra que l’actual superioritat francesa no és una constant històrica. Les dues cinematografies han travessat transformacions semblants, però França ha aconseguit sostenir millor l’assistència a les sales, especialment durant les dues darreres dècades.
+- El 1965, Espanya superava les dotze entrades anuals per habitant, més del doble que França, una superioritat que es va mantenir fins a començaments dels vuitanta. Després d’una caiguda pronunciada, els dos països van tornar a presentar nivells semblants durant els noranta i els primers 2000, amb diversos anys favorables a Espanya. La divergència posterior demostra que l’actual superioritat francesa no és una constant històrica. La diferència actual, per tant, és el resultat d’una evolució històrica, no d’una superioritat permanent del mercat francès.
 <!-- /PIP_BLOC:comentari-perhab -->
 
 <!-- PIP_BLOC:comentari-quota -->
