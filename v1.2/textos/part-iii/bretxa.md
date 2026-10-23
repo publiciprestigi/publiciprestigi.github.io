@@ -19,6 +19,14 @@ La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com mé
 - El trencament més clar arriba als 2010s. Amb un mercat relativament estabilitzat, la mitjana dels grans èxits comercials es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre la dels festivals cau a 266K. La ràtio baixa a 0,08, el mínim de tota la sèrie. Aquesta separació coincideix amb la consolidació d'un circuit internacional de festivals cada vegada més professionalitzat, en què el cinema d'autor guanya reconeixement i circulació exterior, però s'allunya del gran públic a les sales espanyoles. <sup>[12]</sup> Els 2020s apunten una petita recuperació (0,14), encara amb una dècada incompleta i un mercat en recomposició.
 <!-- /comentari -->
 
+<!-- intro-mini -->
+Per entendre per què la ràtio canvia tant, comparem els dos extrems de la sèrie: els 80s, quan la bretxa és més petita, i els 2010s, quan és més gran. Les barres mostren la mitjana d’espectadors de cada circuit amb la mateixa escala.
+<!-- /intro-mini -->
+
+<!-- post-mini -->
+Als 80s, la distància es redueix sobretot perquè els grans èxits comercials també perden espectadors. Als 2010s passa el contrari. Els grans èxits creixen molt mentre la mitjana dels festivals cau. Així, una ràtio més alta no significa necessàriament que el cinema de festivals hagi guanyat públic.
+<!-- /post-mini -->
+
 <!-- intro-grafic1 -->
 El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mitjana anual d’entrades del mercat (línia grisa).
 <!-- /intro-grafic1 -->
