@@ -790,7 +790,7 @@ function construirBretxa() {
     visual.innerHTML = `<table class="taula-festivals bretxa-b-taula" aria-label="${pip3T('Proposta de taula de la bretxa amb barres proporcionals','Propuesta de tabla de brecha con barras proporcionales')}">
       <thead><tr>
         <th>${pip3T('Dècada','Década')}</th>
-        <th>${pip3T('Doble corona','Doble corona')}</th>
+        <th>DC</th>
         <th>${pip3T('Mitjana festivals','Media festivales')}</th>
         <th>${pip3T('Mitjana Top 100','Media Top 100')}</th>
         <th>${pip3T('Ràtio bretxa','Ratio de brecha')}</th>
