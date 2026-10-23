@@ -1,7 +1,7 @@
 <!-- intro -->
 Una de les grans qüestions d'aquest estudi és fins a quin punt el cinema reconegut als festivals ha aconseguit arribar al gran públic. Per observar com ha evolucionat aquesta relació, comparem, dècada a dècada, els espectadors de les pel·lícules seleccionades a competició oficial als quatre festivals de la Part II amb els dels grans èxits comercials recollits a la Part I.
 
-La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» (DC a la taula abreujada) recull les pel·lícules que coincideixen en tots dos. <sup>[10]</sup>
+La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» (DC) recull les pel·lícules que coincideixen en tots dos. Les barres, amb una mateixa escala per a totes les dècades, permeten veure si la distància canvia perquè el cinema de festivals guanya o perd espectadors, perquè ho fan els grans èxits comercials o per totes dues coses. <sup>[10]</sup>
 <!-- /intro -->
 
 <!-- llegenda-taula -->
@@ -18,14 +18,6 @@ La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com mé
 
 - El trencament més clar arriba als 2010s. Amb un mercat relativament estabilitzat, la mitjana dels grans èxits comercials es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre la dels festivals cau a 266K. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d'autor i consolidació del circuit internacional de festivals. <sup>[12]</sup> Un cinema cada vegada més reconegut i internacionalitzat, però també més allunyat del gran públic a les sales. Els 2020s apunten una petita recuperació (0,14), encara amb una dècada incompleta i un mercat en recomposició.
 <!-- /comentari -->
-
-<!-- intro-mini -->
-Per entendre per què la ràtio canvia tant, comparem els dos extrems de la sèrie: els 80s, quan la bretxa és més petita, i els 2010s, quan és més gran. Les barres mostren la mitjana d’espectadors de cada circuit amb la mateixa escala.
-<!-- /intro-mini -->
-
-<!-- post-mini -->
-Als 80s, la distància es redueix sobretot perquè els grans èxits comercials també perden espectadors. Als 2010s passa el contrari. Els grans èxits creixen molt mentre la mitjana dels festivals cau. Així, una ràtio més alta no significa necessàriament que el cinema de festivals hagi guanyat públic.
-<!-- /post-mini -->
 
 <!-- intro-grafic1 -->
 El gràfic següent mostra l’evolució de la ràtio de bretxa (línia negra) en relació amb la mitjana anual d’entrades del mercat (línia grisa).
