@@ -1870,6 +1870,7 @@ const FILMS_AMENABAR = [
     { x:2001, y:6410785, titol:'Los otros',                    top100:true,  prestigi:'EFA' },
     { x:2004, y:4099475, titol:'Mar adentro',                  top100:true,  prestigi:'Venècia ★ · Oscar ★ · EFA ★' },
     { x:2009, y:3492709, titol:'Ágora',                        top100:true,  prestigi:null },
+    { x:2015, y:1444082, titol:'Regresión',                    top100:false, prestigi:'Sant Sebastià (inauguració, fora de concurs)' },
     { x:2019, y:1888896, titol:'Mientras dure la guerra',      top100:false, prestigi:null },
     { x:2025, y: 797366, titol:'El cautivo',                   top100:false, prestigi:null },
   ];
