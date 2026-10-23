@@ -740,28 +740,37 @@ function construirBretxa() {
     return { fons: '#f7e3e3', text: '#a93226' };                // vermell
   }
 
+  const maxEscala = Math.max(...bretxaDades.map(r => r.mit20), ...bretxaDades.map(r => r.mitF), 1);
+  const abreujarBretxa = n => n >= 1000000
+    ? (n / 1000000).toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES', { maximumFractionDigits: 2 }) + 'M'
+    : Math.round(n / 1000) + 'K';
+  const barresBretxa = (nom, valor, color) => `<div class="bretxa-vis-linia">
+    <span class="bretxa-vis-nom">${nom}</span>
+    <span class="bretxa-vis-pista"><span class="bretxa-vis-barra" style="width:${(100 * valor / maxEscala).toFixed(3)}%;background:${color}"></span></span>
+    <span class="bretxa-vis-num">${abreujarBretxa(valor)}</span>
+  </div>`;
   const files = bretxaDades.map(r => {
     const c = colorRatio(r.ratio);
-    return `<tr style="background:${c.fons};border-bottom:2px solid #fff">
-      <td class="col-center"><strong>${ETIQ_CURTA[r.decada]}</strong></td>
-      <td class="col-center" style="color:#6b6b6b">${r.dc}</td>
-      <td class="col-num col-center">${fmt(r.mitF)}</td>
-      <td class="col-num col-center">${fmt(r.mit20)}</td>
-      <td class="col-center"><strong style="color:${c.text}">${r.ratio.toFixed(2)}</strong></td>
-    </tr>`;
+    return `<div class="bretxa-vis-fila">
+      <strong class="bretxa-vis-decada">${ETIQ_CURTA[r.decada]}</strong>
+      <span class="bretxa-vis-dc" aria-label="${pip3T('Doble corona','Doble corona')}: ${r.dc}">${r.dc}</span>
+      <div class="bretxa-vis-barres">
+        ${barresBretxa('Top 100', r.mit20, '#7F8792')}
+        ${barresBretxa('Festivals', r.mitF, '#A8495C')}
+      </div>
+      <strong class="bretxa-vis-ratio" style="background:${c.fons};color:${c.text}">${r.ratio.toFixed(2).replace('.', ',')}</strong>
+    </div>`;
   }).join('');
 
-  taula.innerHTML = `
-    <table class="taula-festivals">
-      <thead><tr>
-        <th class="col-center" style="width:80px">${pip3T('Dècada','Década')}</th>
-        <th class="col-center" style="width:110px">Doble corona</th>
-        <th class="col-num col-center" style="width:140px">${pip3T('Mitjana festivals','Media festivales')}</th>
-        <th class="col-num col-center" style="width:140px">${pip3T('Mitjana Top 100','Media Top 100')}</th>
-        <th class="col-center" style="width:110px">${pip3T('Ràtio bretxa','Ratio de brecha')}</th>
-      </tr></thead>
-      <tbody>${files}</tbody>
-    </table>`;
+  taula.innerHTML = `<div class="bretxa-vis-taula" role="group" aria-label="${pip3T('Mitjanes de públic i ràtio de bretxa per dècada','Medias de público y ratio de brecha por década')}">
+    <div class="bretxa-vis-cap">
+      <span>${pip3T('Dècada','Década')}</span>
+      <span>${pip3T('Doble corona','Doble corona')}</span>
+      <span>${pip3T('Mitjana d’espectadors','Media de espectadores')}</span>
+      <span>${pip3T('Ràtio bretxa','Ratio de brecha')}</span>
+    </div>
+    ${files}
+  </div>`;
 }
 
 // Es crida LAZY des de mostraSeccio() quan es visita 'bretxa' per primera vegada
