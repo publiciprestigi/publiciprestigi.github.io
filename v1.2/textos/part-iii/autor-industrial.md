@@ -15,7 +15,7 @@ I el cas més complex dels tres. *El día de la bestia* (1995), *Muertos de risa
 <!-- bloc-amenabar -->
 ## Alejandro Amenábar: el cas més pur del perfil
 
-*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004), *Ágora* (2009), *Mientras dure la guerra* (2019). Gèneres i escales diferents executats amb precisió industrial i una marca d’autor reconeixible. *Mar adentro* continua sent la intersecció màxima, amb el Lleó de Plata a Venècia, l’Oscar a millor pel·lícula de parla no anglesa, dos EFA, 4,1 milions d’espectadors i el #12 del Top 100. És la culminació més visible i completa d’un recorregut capaç de combinar públic massiu, ambició industrial i prestigi internacional.
+*Tesis* (1996), *Abre los ojos* (1997), *Los otros* (2001), *Mar adentro* (2004), *Ágora* (2009), *Regresión* (2015), *Mientras dure la guerra* (2019). Gèneres i escales diferents executats amb precisió industrial i una marca d’autor reconeixible. *Mar adentro* continua sent la intersecció màxima, amb el Lleó de Plata a Venècia, l’Oscar a millor pel·lícula de parla no anglesa, dos EFA, 4,1 milions d’espectadors i el #12 del Top 100. És la culminació més visible i completa d’un recorregut capaç de combinar públic massiu, ambició industrial i prestigi internacional.
 
 Com Almodóvar als anys 80 i 90, Amenábar ha demostrat que el cinema d'autor podia construir un públic massiu sense renunciar a una identitat pròpia. Però el seu camí és diferent, construït des del cinema de gènere i una vocació internacional que *Los otros* exemplifica especialment bé. El seu cas confirma que el cinema d'autor també podia ser industrial, popular i exportable.
 <!-- /bloc-amenabar -->
