@@ -708,6 +708,24 @@ function construirBretxa() {
   if (!taula) return;
 
   bretxaDades = calcularBretxa();
+  // Mini comparativa de dos extrems de la ràtio, amb escala comuna.
+  const mini = document.getElementById('bretxa-mini-files');
+  if (mini) {
+    const dades = ['80s', '2010s'].map(d => bretxaDades.find(x => x.decada === d)).filter(Boolean);
+    const max = Math.max(...dades.map(d => d.mit20), 1);
+    const abreujar = n => n >= 1000000 ? (n / 1000000).toLocaleString('ca-ES', {maximumFractionDigits:2}) + 'M' : Math.round(n / 1000) + 'K';
+    mini.innerHTML = dades.map(d => {
+      const fila = (nom, valor, color) => `<div style="display:grid;grid-template-columns:110px minmax(0,1fr) 64px;gap:10px;align-items:center;margin:8px 0;font:12px 'Inter',sans-serif">
+        <span style="color:#555">${nom}</span>
+        <div style="background:#f0f0f0;height:15px"><div style="background:${color};height:100%;width:${(valor / max * 100).toFixed(3)}%"></div></div>
+        <span style="text-align:right;font-variant-numeric:tabular-nums">${abreujar(valor)}</span></div>`;
+      return `<div style="margin:0 0 20px"><div style="display:flex;justify-content:space-between;gap:12px;font:600 13px 'Inter',sans-serif;margin-bottom:10px">
+        <span>${d.decada === '80s' ? 'Anys vuitanta' : 'Anys 2010'}</span><span style="color:#777">Ràtio ${d.ratio.toFixed(2).replace('.',',')}</span></div>
+        ${fila('Top comercial',d.mit20,'#7F8792')}
+        ${fila('Festivals',d.mitF,'#A8495C')}</div>`;
+    }).join('');
+  }
+
 
   // Etiquetes curtes (com Part I "Resum per dècada")
   const ETIQ_CURTA = {
