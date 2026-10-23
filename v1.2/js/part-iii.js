@@ -735,7 +735,7 @@ function construirBretxa() {
 
   // Colors semàfor segons ràtio
   function colorRatio(r) {
-    if (r > 0.25)  return { fons: '#e6f0e8', text: '#B84555' }; // verd
+    if (r > 0.25)  return { fons: '#e6f0e8', text: '#287e5b' }; // verd
     if (r >= 0.10) return { fons: '#faefdb', text: '#b87509' }; // taronja
     return { fons: '#f7e3e3', text: '#a93226' };                // vermell
   }
@@ -764,39 +764,39 @@ function construirBretxa() {
       <tbody>${files}</tbody>
     </table>`;
 
+
+  // Prova B: taula convencional amb xifres abreujades i barres proporcionals.
   const visual = document.getElementById('bretxa-taula-visual');
   if (visual) {
-  const maxEscala = Math.max(...bretxaDades.map(r => r.mit20), ...bretxaDades.map(r => r.mitF), 1);
-  const abreujarBretxa = n => n >= 1000000
-    ? (n / 1000000).toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES', { maximumFractionDigits: 2 }) + 'M'
-    : Math.round(n / 1000) + 'K';
-  const barresBretxa = (nom, valor, color) => `<div class="bretxa-vis-linia">
-    <span class="bretxa-vis-nom">${nom}</span>
-    <span class="bretxa-vis-pista"><span class="bretxa-vis-barra" style="width:${(100 * valor / maxEscala).toFixed(3)}%;background:${color}"></span></span>
-    <span class="bretxa-vis-num">${abreujarBretxa(valor)}</span>
-  </div>`;
-  const filesVisual = bretxaDades.map(r => {
-    const c = colorRatio(r.ratio);
-    return `<div class="bretxa-vis-fila">
-      <strong class="bretxa-vis-decada">${ETIQ_CURTA[r.decada]}</strong>
-      <span class="bretxa-vis-dc" aria-label="${pip3T('Doble corona','Doble corona')}: ${r.dc}">${r.dc}</span>
-      <div class="bretxa-vis-barres">
-        ${barresBretxa('Top 100', r.mit20, '#7F8792')}
-        ${barresBretxa('Festivals', r.mitF, '#A8495C')}
-      </div>
-      <strong class="bretxa-vis-ratio" style="background:${c.fons};color:${c.text}">${r.ratio.toFixed(2).replace('.', ',')}</strong>
+    const maxEscala = Math.max(...bretxaDades.flatMap(r => [r.mitF, r.mit20]), 1);
+    const abreujarBretxa = n => n >= 1000000
+      ? (n / 1000000).toLocaleString(PIP_III_ES ? 'es-ES' : 'ca-ES', { maximumFractionDigits: 2 }) + 'M'
+      : Math.round(n / 1000) + 'K';
+    const celBarra = (valor, color) => `<div class="bretxa-b-cell">
+      <span class="bretxa-b-num">${abreujarBretxa(valor)}</span>
+      <span class="bretxa-b-track"><span class="bretxa-b-bar" style="width:${(100 * valor / maxEscala).toFixed(3)}%;background:${color}"></span></span>
     </div>`;
-  }).join('');
-
-  visual.innerHTML = `<div class="bretxa-vis-taula" role="group" aria-label="${pip3T('Mitjanes de públic i ràtio de bretxa per dècada','Medias de público y ratio de brecha por década')}">
-    <div class="bretxa-vis-cap">
-      <span>${pip3T('Dècada','Década')}</span>
-      <span>${pip3T('Doble corona','Doble corona')}</span>
-      <span>${pip3T('Mitjana d’espectadors','Media de espectadores')}</span>
-      <span>${pip3T('Ràtio bretxa','Ratio de brecha')}</span>
-    </div>
-    ${filesVisual}
-  </div>`;
+    const filesVisual = bretxaDades.map(r => {
+      const c = colorRatio(r.ratio);
+      const colFestival = r.ratio > 0.25 ? '#287e5b' : r.ratio >= 0.10 ? '#b87509' : '#a93226';
+      return `<tr style="background:${c.fons}">
+        <td class="bretxa-b-dec"><strong>${ETIQ_CURTA[r.decada]}</strong></td>
+        <td class="bretxa-b-dc">${r.dc}</td>
+        <td>${celBarra(r.mitF, colFestival)}</td>
+        <td>${celBarra(r.mit20, '#7F8792')}</td>
+        <td class="bretxa-b-ratio"><strong style="color:${c.text}">${r.ratio.toFixed(2).replace('.', ',')}</strong></td>
+      </tr>`;
+    }).join('');
+    visual.innerHTML = `<table class="taula-festivals bretxa-b-taula" aria-label="${pip3T('Proposta de taula de la bretxa amb barres proporcionals','Propuesta de tabla de brecha con barras proporcionales')}">
+      <thead><tr>
+        <th>${pip3T('Dècada','Década')}</th>
+        <th>${pip3T('Doble corona','Doble corona')}</th>
+        <th>${pip3T('Mitjana festivals','Media festivales')}</th>
+        <th>${pip3T('Mitjana Top 100','Media Top 100')}</th>
+        <th>${pip3T('Ràtio bretxa','Ratio de brecha')}</th>
+      </tr></thead>
+      <tbody>${filesVisual}</tbody>
+    </table>`;
   }
 }
 
@@ -808,7 +808,7 @@ window.PiP_graficBretxa = function() {
 
   // Color de cada punt de la ràtio segons llindar (semàfor)
   function colorPunt(r) {
-    if (r > 0.25)  return '#B84555'; // verd
+    if (r > 0.25)  return '#287e5b'; // verd
     if (r >= 0.10) return '#b87509'; // taronja
     return '#a93226';                // vermell
   }
