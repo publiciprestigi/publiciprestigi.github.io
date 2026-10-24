@@ -852,6 +852,24 @@ body.pip-en-portada .nav-seccions { display: none; }
             #franca-top30 .f30-inner{min-width:900px}
           }
         </style>
+<style id="pip-es-fr-final-fix">
+/* S'aplica després dels estils base del Top 30 per evitar sobreescriptures. */
+@media (max-width:1600px){
+  #franca-top30 .f30-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding:0 5px;margin:12px 0 8px}
+  #franca-top30 .f30-head > div:first-child{grid-column:1;grid-row:1}
+  #franca-top30 .f30-head > div:nth-child(2){display:none}
+  #franca-top30 .f30-head > div:nth-child(3){grid-column:2;grid-row:1}
+  #franca-top30 .f30-country.es{text-align:right;padding-right:8px}
+  #franca-top30 .f30-country.fr{text-align:left;padding-left:8px}
+  #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3px 12px;padding:15px 5px 11px}
+  #franca-top30 .f30-row .f30-film{grid-column:1/-1;grid-row:1;padding:0 18px 0 52px}
+  #franca-top30 .f30-row .f30-side.es{grid-column:1;grid-row:2}
+  #franca-top30 .f30-row .f30-side.fr{grid-column:2;grid-row:2}
+  #franca-top30 .f30-year,
+  #grafic-bunuel-franca-bloc .bf-film-year{font-size:12px}
+  #franca-top30 .f30-over{background:repeating-linear-gradient(135deg,rgba(255,255,255,.95) 0 3px,rgba(125,20,30,.55) 3px 5px);width:14px}
+}
+</style>
 <div id="franca-top30">
 <div class="text-md text-md-intermedi f30-intro" data-bunuel-bloc="intro-top30">
 <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
