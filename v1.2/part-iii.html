@@ -836,7 +836,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <button aria-pressed="false" class="f30-toggle" data-mode="without" type="button">Sense Almodóvar</button>
 <button aria-pressed="false" class="f30-toggle" data-mode="only" type="button">Només Almodóvar</button>
 </div>
-<p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
+<p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars. El tram ratllat assenyala les barres abreujades a partir de 6M.</p>
 <div class="f30-head">
 <div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
 <div class="f30-head-title" aria-hidden="true"></div>
@@ -882,8 +882,9 @@ body.pip-en-portada .nav-seccions { display: none; }
               const title = '<div><div class="f30-name"><em>'+f.title+'<span class="f30-year">'+yearLabel+'</span></em></div><div class="f30-director">'+f.director+'</div></div>';
               const middle = '<div class="f30-film">'+(extra ? '<div class="f30-rank"></div>' : '<div class="f30-rank"><span class="f30-rank-num">'+f.rank+'</span>'+marketSign(f)+'</div>')+title+'</div>';
               const frW=Math.max(.3,Math.min(100,f.fr/MAX*100));
-              const esW=Math.max(.3,Math.min(100,f.es/MAX*100));
-              const overflow=f.es>MAX ? '<span class="f30-over" title="supera l’escala"></span>' : '';
+              const isCut=f.es>6000000;
+              const esW=Math.max(.3,Math.min(100,(isCut?6000000:f.es)/MAX*100));
+              const overflow=isCut ? '<span class="f30-over" title="Barra abreujada a partir de 6M; la xifra exterior és la real"></span>' : '';
               return '<div class="f30-row"'+(!extra && isAlmodovar(f)?' data-almodovar="true"':'')+'>'+ 
                 '<div class="f30-side es"><div class="f30-bar es" style="width:'+esW+'%" data-tip="'+tipText('Espanya',f.es,esMarket[f.esYear||f.year]||null)+'"><span class="f30-value">'+compact(f.es)+'</span>'+overflow+'</div></div>'+ 
                 middle+
