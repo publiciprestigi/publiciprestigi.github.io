@@ -819,10 +819,17 @@ body.pip-en-portada .nav-seccions { display: none; }
 #grafic-bunuel-franca-bloc #bf-mirror .bf-side.right,#franca-top30 .f30-row .f30-side.fr{grid-column:2;grid-row:2}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-title,#franca-top30 .f30-name{font-size:13px;line-height:1.35;text-align:center}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{position:relative;display:inline-block;font-size:13px;font-weight:700;font-style:italic}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{display:inline-grid;grid-template-columns:max-content max-content;column-gap:4px;align-items:baseline;vertical-align:baseline;position:relative;left:auto;transform:none}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,#franca-top30 .f30-name em .f30-year{position:static;grid-column:2;transform:none;margin:0;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:1.2;vertical-align:baseline}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{display:inline-block;position:relative;vertical-align:baseline;white-space:nowrap}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,#franca-top30 .f30-name em .f30-year{position:absolute;left:100%;top:0;transform:none;margin-left:4px;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:1.35;vertical-align:baseline}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-value,#franca-top30 .f30-value{font-size:10px}
-#franca-top30 .f30-over{left:0;right:auto;top:0;width:15px;height:100%;border-left:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.92) 0 3px,rgba(255,255,255,0) 3px 6px)}
+#franca-top30 .f30-over{display:none}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-side,#franca-top30 .f30-side{background-image:none}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-mid{display:none}
+#franca-top30 .f30-head .f30-scale-side{display:block!important}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-row,#franca-top30 .f30-row{border-top:1px solid #f2f2f2}
+#franca-top30 .f30-rank{left:5px}
+#franca-top30 .f30-row .f30-film{padding-left:64px;padding-right:64px}
 }
 </style>
 <div id="franca-top30">
@@ -837,7 +844,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <button aria-pressed="false" class="f30-toggle" data-mode="without" type="button">Sense Almodóvar</button>
 <button aria-pressed="false" class="f30-toggle" data-mode="only" type="button">Només Almodóvar</button>
 </div>
-<p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars. El tram ratllat assenyala les barres abreujades a partir de 6M.</p>
+<p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
 <div class="f30-head">
 <div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
 <div class="f30-head-title" aria-hidden="true"></div>
@@ -883,9 +890,8 @@ body.pip-en-portada .nav-seccions { display: none; }
               const title = '<div><div class="f30-name"><em>'+f.title+'<span class="f30-year">'+yearLabel+'</span></em></div><div class="f30-director">'+f.director+'</div></div>';
               const middle = '<div class="f30-film">'+(extra ? '<div class="f30-rank"></div>' : '<div class="f30-rank"><span class="f30-rank-num">'+f.rank+'</span>'+marketSign(f)+'</div>')+title+'</div>';
               const frW=Math.max(.3,Math.min(100,f.fr/MAX*100));
-              const isCut=f.es>6000000;
-              const esW=Math.max(.3,Math.min(100,(isCut?6000000:f.es)/MAX*100));
-              const overflow=isCut ? '<span class="f30-over" title="Barra abreujada a partir de 6M; la xifra exterior és la real"></span>' : '';
+              const esW=Math.max(.3,Math.min(100,f.es/MAX*100));
+              const overflow='';
               return '<div class="f30-row"'+(!extra && isAlmodovar(f)?' data-almodovar="true"':'')+'>'+ 
                 '<div class="f30-side es"><div class="f30-bar es" style="width:'+esW+'%" data-tip="'+tipText('Espanya',f.es,esMarket[f.esYear||f.year]||null)+'"><span class="f30-value">'+compact(f.es)+'</span>'+overflow+'</div></div>'+ 
                 middle+
