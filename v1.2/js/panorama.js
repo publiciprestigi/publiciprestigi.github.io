@@ -49,7 +49,7 @@
     for(const f of data) counts[classificacio(f)]++;
     const legend=[
       ['fest',tr('Només de festivals','Solo de festivales')],
-      ['both',tr('Coincidents en festivals i acadèmies','Coincidentes en festivales y academias')],
+      ['both',tr('Coincidents','Coincidentes')],
       ['acad',tr('Només d’acadèmies','Solo de academias')]
     ];
     const legendHTML = legend.map(([k,l])=>'<span class="pip-panorama-key"><i style="background:'+palette[k]+'"></i>'+l+'</span>').join('');
