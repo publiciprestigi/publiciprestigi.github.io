@@ -520,18 +520,18 @@ body.pip-en-portada .nav-seccions { display: none; }
             #bf-mirror .bf-scale-side.right span:nth-child(5) { right:0; left:auto; transform:none; }
              #bf-mirror .bf-scale-mid { text-align:center; font-size:9px; color:#aaa; padding-top:5px; }
              @media(max-width:760px){#grafic-bunuel-franca-bloc .bf-mobile-scroll{overflow-x:auto!important;-webkit-overflow-scrolling:touch} #bf-mirror{min-width:760px} }
-            #bf-mirror .bf-row { min-height:84px; align-items:center; border-top:1px solid #f0f0f0; }
-            #bf-mirror .bf-side { height:42px; position:relative; display:flex; align-items:center; background-image:linear-gradient(to right, transparent 19.8%, #efefef 20%, transparent 20.2%, transparent 39.8%, #efefef 40%, transparent 40.2%, transparent 59.8%, #efefef 60%, transparent 60.2%, transparent 79.8%, #efefef 80%, transparent 80.2%); }
+            #bf-mirror .bf-row { min-height:72px; align-items:center; border-top:1px solid #f0f0f0; }
+            #bf-mirror .bf-side { height:24px; position:relative; display:flex; align-items:center; background-image:linear-gradient(to right, transparent 19.8%, #efefef 20%, transparent 20.2%, transparent 39.8%, #efefef 40%, transparent 40.2%, transparent 59.8%, #efefef 60%, transparent 60.2%, transparent 79.8%, #efefef 80%, transparent 80.2%); }
             #bf-mirror .bf-side.left { justify-content:flex-end; }
             #bf-mirror .bf-side.right { justify-content:flex-start; }
             #bf-mirror .bf-side.left::after,
             #bf-mirror .bf-side.right::before { content:''; position:absolute; top:2px; bottom:2px; width:1px; background:#cfcfcf; }
             #bf-mirror .bf-side.left::after { right:0; }
             #bf-mirror .bf-side.right::before { left:0; }
-            #bf-mirror .bf-bar { height:18px; position:relative; cursor:default; transition:filter .15s ease, opacity .15s ease; }
+            #bf-mirror .bf-bar { height:11px; position:relative; cursor:default; transition:filter .15s ease, opacity .15s ease; }
             #bf-mirror .bf-bar:hover { filter:brightness(.9); }
-            #bf-mirror .bf-bar.es { background:#b8463a; }
-            #bf-mirror .bf-bar.fr { background:#1e3d6b; }
+            #bf-mirror .bf-bar.es { background:#b8463a; border-radius:3px 0 0 3px; }
+            #bf-mirror .bf-bar.fr { background:#1e3d6b; border-radius:0 3px 3px 0; }
             #bf-mirror .bf-value { position:absolute; top:50%; transform:translateY(-50%); font-size:11px; font-weight:600; white-space:nowrap; }
             #bf-mirror .bf-bar.es .bf-value { left:-7px; transform:translate(-100%,-50%); color:#b8463a; }
             #bf-mirror .bf-bar.fr .bf-value { right:-7px; transform:translate(100%,-50%); color:#1e3d6b; }
@@ -766,16 +766,16 @@ body.pip-en-portada .nav-seccions { display: none; }
           #franca-top30 .f30-rank-sign.equal{color:#888}
           #franca-top30 .f30-year{font-size:inherit;color:#888;margin-left:0;white-space:nowrap;font-style:normal;font-weight:400}
           #franca-top30 .f30-director{font-size:11.3px;line-height:1.2;color:#707070;margin-top:3px;font-weight:400}
-          #franca-top30 .f30-side{height:32px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%);overflow:visible}
+          #franca-top30 .f30-side{height:24px;position:relative;display:flex;align-items:center;background-image:linear-gradient(to right,transparent 24.9%,#f0f0f0 25%,transparent 25.1%,transparent 49.9%,#f0f0f0 50%,transparent 50.1%,transparent 74.9%,#f0f0f0 75%,transparent 75.1%);overflow:visible}
           #franca-top30 .f30-side.es{justify-content:flex-end}
           #franca-top30 .f30-side.fr{justify-content:flex-start}
           #franca-top30 .f30-side.es::after,#franca-top30 .f30-side.fr::before{content:'';position:absolute;top:5px;bottom:5px;width:1px;background:#cfcfcf}
           #franca-top30 .f30-side.es::after{right:0}
           #franca-top30 .f30-side.fr::before{left:0}
-          #franca-top30 .f30-bar{height:15px;min-width:2px;position:relative;cursor:default;transition:filter .15s ease}
+          #franca-top30 .f30-bar{height:11px;min-width:2px;position:relative;cursor:default;transition:filter .15s ease}
           #franca-top30 .f30-bar:hover{filter:brightness(.88)}
-          #franca-top30 .f30-bar.fr{background:#1e3d6b}
-          #franca-top30 .f30-bar.es{background:#b8463a}
+          #franca-top30 .f30-bar.fr{background:#1e3d6b;border-radius:0 3px 3px 0}
+          #franca-top30 .f30-bar.es{background:#b8463a;border-radius:3px 0 0 3px}
           #franca-top30 .f30-value{position:absolute;top:50%;font-size:10px;font-weight:600;white-space:nowrap}
           #franca-top30 .f30-bar.es .f30-value{left:-5px;transform:translate(-100%,-50%);color:#b8463a}
           #franca-top30 .f30-bar.fr .f30-value{right:-5px;transform:translate(100%,-50%);color:#1e3d6b}
@@ -824,8 +824,8 @@ body.pip-en-portada .nav-seccions { display: none; }
 #franca-top30 .f30-name>em{grid-column:2;grid-row:1;position:static;display:block;font-size:13px;font-weight:700;font-style:italic;line-height:18px;white-space:nowrap}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-title>.bf-film-year,
 #franca-top30 .f30-name>.f30-year{grid-column:3;grid-row:1;position:static!important;justify-self:start;align-self:baseline;margin-left:4px;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:18px}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-side{height:32px}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-bar{height:15px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-side{height:24px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-bar{height:11px}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-value,#franca-top30 .f30-value{font-size:10px}
 #franca-top30 .f30-over{display:none}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-side,#franca-top30 .f30-side{background-image:none}
