@@ -448,7 +448,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 
 <style id="pip-bunuel-mobil-responsive">
-@media (max-width:760px) {
+@media (max-width:1600px) {
   /* Primer gràfic: trajectòries intactes, amb l'amplada original de 2.500 px. */
   /* Segon gràfic: cada pel·lícula seguida dels dos mercats en columnes. */
   #grafic-bunuel-franca-bloc .bf-mobile-scroll {width:100%;max-width:100%;overflow:visible!important;-webkit-mask-image:none!important;mask-image:none!important;}
@@ -479,6 +479,16 @@ body.pip-en-portada .nav-seccions { display: none; }
   #franca-top30 .f30-row .f30-side.fr {grid-column:2;grid-row:2;}
   #franca-top30 .f30-name {font-size:12px;}
   #franca-top30 .f30-value {font-size:10px;}
+  /* Unificar les dues comparatives a escala de lectura i tipografia. */
+  #grafic-bunuel-franca-bloc #bf-mirror,
+  #franca-top30 .f30-inner{max-width:680px;margin-left:auto;margin-right:auto;}
+  #grafic-bunuel-franca-bloc > p,
+  #franca-top30 .f30-title{font-size:16px!important;line-height:1.4;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-film,
+  #franca-top30 .f30-film{font-size:13px;line-height:1.35;}
+  #franca-top30 .f30-name{font-size:13px;}
+}
+@media (max-width:760px) {
   #grafic-caza-iaa-bloc .pip-caza-viewport {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
   #grafic-caza-iaa-bloc .pip-caza-viewport.pip-caza-pendent { -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent); }
   #grafic-caza-iaa-bloc .grafic-wrap {height:190px!important;min-width:760px;max-width:none!important;}
