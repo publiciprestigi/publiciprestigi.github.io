@@ -578,9 +578,9 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="bf-country fr">FR →</div>
 </div>
 <div class="bf-scale">
-<div class="bf-scale-side left"><span>2,5M</span><span>2M</span><span>1,5M</span><span>1M</span><span>500K</span></div>
-<div class="bf-scale-mid">0</div>
-<div class="bf-scale-side right"><span>500K</span><span>1M</span><span>1,5M</span><span>2M</span><span>2,5M</span></div>
+<div class="bf-scale-side left"><span>2,5M</span><span>2M</span><span>1,5M</span><span>1M</span><span>500K</span><span>0K</span></div>
+<div class="bf-scale-mid"></div>
+<div class="bf-scale-side right"><span>0K</span><span>500K</span><span>1M</span><span>1,5M</span><span>2M</span><span>2,5M</span></div>
 </div>
 <div class="bf-row">
 <div class="bf-side left">
@@ -828,32 +828,52 @@ body.pip-en-portada .nav-seccions { display: none; }
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-mid{display:none}
 #franca-top30 .f30-head .f30-scale-side{display:block!important}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-row,#franca-top30 .f30-row{border-top:1px solid #f2f2f2}
-#franca-top30 .f30-rank{left:5px}
 
-/* Les graduacions segueixen el domini efectiu de les barres (90% del carril). */
-#franca-top30 .f30-scale-side.left span:nth-child(1){left:10%;right:auto;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.left span:nth-child(2){left:32.5%}
-#franca-top30 .f30-scale-side.left span:nth-child(3){left:55%}
-#franca-top30 .f30-scale-side.left span:nth-child(4){left:77.5%}
-#franca-top30 .f30-scale-side.right span:nth-child(2){left:22.5%}
-#franca-top30 .f30-scale-side.right span:nth-child(3){left:45%}
-#franca-top30 .f30-scale-side.right span:nth-child(4){left:67.5%}
-#franca-top30 .f30-scale-side.right span:nth-child(5){left:90%;right:auto;transform:translateX(-50%)}
-#franca-top30 .f30-head{padding-left:60px!important;padding-right:5px!important;box-sizing:border-box}
-#franca-top30 .f30-row{position:relative;padding-left:60px!important;padding-right:5px!important;box-sizing:border-box}
-#franca-top30 .f30-rank{position:absolute;left:-56px!important;top:50%!important;transform:translateY(-50%)!important;width:43px!important;justify-content:center!important;border-right:1px solid #e5e5e5;padding-right:6px}
-#franca-top30 .f30-row .f30-film{position:static;grid-column:1/-1;padding-left:4px!important;padding-right:4px!important}
-#franca-top30 .f30-head .f30-scale-side{border-bottom:0}
-#franca-top30 .f30-head{border-bottom:1px solid #e5e5e5}
-#franca-top30 #f30-main .f30-row:first-child{border-top:0}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side::after,#franca-top30 .f30-scale-side::after{content:'0';position:absolute;bottom:0;color:#999;font-size:9px}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left::after,#franca-top30 .f30-scale-side.left::after{right:0;transform:translateX(50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right::after,#franca-top30 .f30-scale-side.right::after{left:0;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.left span:last-child,#franca-top30 .f30-scale-side.right span:first-child{display:none}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale{border-bottom:1px solid #e5e5e5;margin-bottom:4px}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-row:first-of-type{border-top:0}
-
-#franca-top30 .f30-row .f30-film{padding-left:64px;padding-right:64px}
+/* Top 30: tres columnes REALS, sempre dins dels 680px. */
+#franca-top30 .f30-head{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;padding:0 5px 0 55px!important;margin:19px 0 0;border-bottom:1px solid #e5e5e5;box-sizing:border-box}
+#franca-top30 .f30-head>div:first-child{grid-column:1;grid-row:1}
+#franca-top30 .f30-head>div:nth-child(2){display:none}
+#franca-top30 .f30-head>div:nth-child(3){grid-column:2;grid-row:1}
+#franca-top30 .f30-row{display:grid!important;grid-template-columns:43px minmax(0,1fr) minmax(0,1fr)!important;column-gap:12px;row-gap:3px;padding:14px 5px 11px!important;position:relative;align-items:center}
+#franca-top30 .f30-row>.f30-rank{grid-column:1;grid-row:1/3;position:static!important;transform:none!important;left:auto!important;top:auto!important;width:43px!important;min-height:39px;border-right:1px solid #e5e5e5;justify-content:center;padding:0 5px 0 0;display:flex;align-items:center}
+#franca-top30 .f30-row>.f30-film{grid-column:2/4;grid-row:1;position:relative;text-align:center;padding:0 6px!important;min-width:0}
+#franca-top30 .f30-row>.f30-side.es{grid-column:2;grid-row:2}
+#franca-top30 .f30-row>.f30-side.fr{grid-column:3;grid-row:2}
+#franca-top30 #f30-main>.f30-row:first-child{border-top:0}
+#franca-top30 .f30-side{background-image:none}
+#franca-top30 .f30-over{display:none!important}
+/* Mateixa representació d'escales; el punt zero és un text real. */
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;border-bottom:1px solid #e5e5e5;margin-bottom:0}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-mid{display:none}
+#grafic-bunuel-franca-bloc #bf-mirror>.bf-row:first-of-type{border-top:0}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side{border:0}
+#franca-top30 .f30-head .f30-scale-side{display:block!important;border:0!important;height:21px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side span,
+#franca-top30 .f30-scale-side span{position:absolute;bottom:3px;font-size:9px;color:#999;white-space:nowrap}
+/* Buñuel: de 2,5M a 0K per l'esquerra, de 0K a 2,5M per la dreta. */
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(1){left:0;transform:none}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(2){left:20%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(3){left:40%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(4){left:60%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(5){left:80%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(6){left:100%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(1){left:0;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(2){left:20%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(3){left:40%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(4){left:60%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(5){left:80%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(6){left:100%;transform:translateX(-100%)}
+/* Top30: l'escala 6,5M queda indicada amb referències de 6,4M (ticks descriptius). */
+#franca-top30 .f30-scale-side.left span:nth-child(1){left:10%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(2){left:32.5%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(3){left:55%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(4){left:77.5%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(5){left:100%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(1){left:0;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(2){left:22.5%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(3){left:45%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(4){left:67.5%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(5){left:90%;transform:translateX(-50%)}
 }
 </style>
 <div id="franca-top30">
@@ -870,9 +890,9 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 <p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
 <div class="f30-head">
-<div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
+<div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0K</span></div></div>
 <div class="f30-head-title" aria-hidden="true"></div>
-<div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
+<div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>0K</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
 </div>
 <div id="f30-main"></div>
 <div aria-hidden="true" class="f30-separator"></div>
