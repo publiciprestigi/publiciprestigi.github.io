@@ -9,9 +9,7 @@ Berlín és l’únic dels quatre festivals sense cap film al Top 100 històric.
 <!-- /comentari -->
 
 <!-- comentari-academies -->
-- Els films reconeguts pels Oscar arriben a una mitjana d'uns 1.300K espectadors, davant dels 932K dels EFA, bastant per sobre de les mitjanes dels quatre festivals. Els EFA treballen amb un univers molt més ampli, mentre que els Oscar concentren menys títols i una projecció comercial més elevada en conjunt.
-
-- Festivals i acadèmies no són mecanismes de reconeixement equivalents: els festivals seleccionen cinema abans o durant la seva circulació internacional; les acadèmies reconeixen films que ja han iniciat el seu recorregut públic, i els premis poden reforçar-ne encara més la vida comercial. <sup>[8]</sup> En els EFA, aquesta relació entre reconeixement acadèmic i visibilitat comercial prèvia es fa especialment clara: el seu Top 5 està format per tres films de Bayona i dos d'Amenábar, exemples del que aquí anomenem [model d'autor industrial](part-iii.html#autor-industrial) i del film-esdeveniment de les últimes dècades.
+- Els films reconeguts pels Oscar arriben a una mitjana d'uns 1.300K espectadors, davant dels 932K dels EFA, bastant per sobre de les mitjanes dels quatre festivals. Festivals i acadèmies no són mecanismes de reconeixement equivalents. Els festivals seleccionen cinema abans o durant la seva circulació internacional; les acadèmies reconeixen films que ja han iniciat el seu recorregut públic, i els premis poden reforçar-ne encara més la vida comercial. <sup>[8]</sup> En els EFA, aquesta relació entre reconeixement acadèmic i visibilitat comercial prèvia es fa especialment clara. El seu Top 5 està format per tres films de Bayona i dos d'Amenábar, exemples del que aquí anomenem [model d'autor industrial](part-iii.html#autor-industrial) i del film-esdeveniment de les últimes dècades.
 <!-- /comentari-academies -->
 
 <!-- intro-grafic -->
