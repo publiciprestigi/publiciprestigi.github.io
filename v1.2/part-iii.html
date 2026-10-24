@@ -455,15 +455,15 @@ body.pip-en-portada .nav-seccions { display: none; }
   #grafic-bunuel-franca-bloc #bf-mirror {min-width:0!important;width:100%;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-row {
     display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
-    gap:7px 12px;padding:12px 12px 16px;min-height:0;
+    gap:3px 12px;padding:16px 12px 12px;min-height:0;
   }
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film {grid-column:1/-1;grid-row:1;padding:0 6px 5px;text-align:center;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-film {grid-column:1/-1;grid-row:1;padding:0 6px 1px;text-align:center;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-side.left {grid-column:1;grid-row:2;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-side.right {grid-column:2;grid-row:2;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-head {display:grid;grid-template-columns:1fr 1fr!important;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-head .bf-total-head {display:none;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.es {text-align:center;padding:0;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.fr {text-align:center;padding:0;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.es {text-align:right;padding:0 8px 0 0;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.fr {text-align:left;padding:0 0 0 8px;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-scale {display:none;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-value {font-size:10px;}
   /* Tercer gràfic: títol a sobre; Espanya i França sota, sense scroll lateral. */
@@ -472,9 +472,10 @@ body.pip-en-portada .nav-seccions { display: none; }
   #franca-top30 .f30-head {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;}
   #franca-top30 .f30-head-title {display:none;}
   #franca-top30 .f30-head .f30-scale-side {display:none;}
-  #franca-top30 .f30-country {text-align:center!important;padding:0!important;}
-  #franca-top30 .f30-row {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:8px 12px;padding:14px 5px;}
-  #franca-top30 .f30-row .f30-film {grid-column:1/-1;grid-row:1;padding:0 18px 2px 52px;min-width:0;}
+  #franca-top30 .f30-country.es {text-align:right!important;padding:0 8px 0 0!important;}
+  #franca-top30 .f30-country.fr {text-align:left!important;padding:0 0 0 8px!important;}
+  #franca-top30 .f30-row {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:3px 12px;padding:15px 5px 11px;}
+  #franca-top30 .f30-row .f30-film {grid-column:1/-1;grid-row:1;padding:0 18px 0 52px;min-width:0;}
   #franca-top30 .f30-row .f30-side.es {grid-column:1;grid-row:2;}
   #franca-top30 .f30-row .f30-side.fr {grid-column:2;grid-row:2;}
   #franca-top30 .f30-name {font-size:12px;}
@@ -487,6 +488,10 @@ body.pip-en-portada .nav-seccions { display: none; }
   #grafic-bunuel-franca-bloc #bf-mirror .bf-film,
   #franca-top30 .f30-film{font-size:13px;line-height:1.35;}
   #franca-top30 .f30-name{font-size:13px;}
+  #grafic-bunuel-franca-bloc #bf-mirror .bf-film-year,
+  #franca-top30 .f30-year{font-size:12px;}
+  #franca-top30 .f30-bar.es:has(.f30-over) .f30-value{left:6px;transform:translateY(-50%);color:#fff;}
+  #franca-top30 .f30-bar.es:has(.f30-over){border-left:2px solid #fff;}
 }
 @media (max-width:760px) {
   #grafic-caza-iaa-bloc .pip-caza-viewport {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
@@ -848,7 +853,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
 <div class="f30-head">
 <div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0</span></div></div>
-<div class="f30-head-title"><span class="f30-head-main">Pel·lícula</span></div>
+<div class="f30-head-title" aria-hidden="true"></div>
 <div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>0</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
 </div>
 <div id="f30-main"></div>
