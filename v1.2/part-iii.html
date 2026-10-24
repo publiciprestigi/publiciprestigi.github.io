@@ -447,73 +447,13 @@ body.pip-en-portada .nav-seccions { display: none; }
 <!-- Text únic al fitxer textos/part-iii/bunuel-mercat.md -->
 </div>
 
-<style id="pip-bunuel-mobil-responsive">
-@media (max-width:1600px) {
-  /* Primer gràfic: trajectòries intactes, amb l'amplada original de 2.500 px. */
-  /* Segon gràfic: cada pel·lícula seguida dels dos mercats en columnes. */
-  #grafic-bunuel-franca-bloc .bf-mobile-scroll {width:100%;max-width:100%;overflow:visible!important;-webkit-mask-image:none!important;mask-image:none!important;}
-  #grafic-bunuel-franca-bloc #bf-mirror {min-width:0!important;width:100%;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-row {
-    display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
-    gap:3px 12px;padding:16px 12px 12px;min-height:0;
-  }
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film {grid-column:1/-1;grid-row:1;padding:0 6px 1px;text-align:center;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-side.left {grid-column:1;grid-row:2;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-side.right {grid-column:2;grid-row:2;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-head {display:grid;grid-template-columns:1fr 1fr!important;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-head .bf-total-head {display:none;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.es {text-align:right;padding:0 8px 0 0;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-country.fr {text-align:left;padding:0 0 0 8px;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-scale {display:none;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-value {font-size:10px;}
-  /* Tercer gràfic: títol a sobre; Espanya i França sota, sense scroll lateral. */
-  #franca-top30 .f30-chart {overflow:visible!important;max-width:100%;}
-  #franca-top30 .f30-inner {width:100%;min-width:0!important;}
-  #franca-top30 .f30-head {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;padding:0 5px;margin-top:12px;}
-  #franca-top30 .f30-head-title {display:none;}
-  /* En el model apilat, les dues capçaleres han de compartir una sola fila. */
-  #franca-top30 .f30-head > div:nth-child(2){display:none;}
-  #franca-top30 .f30-head > div:nth-child(3){grid-column:2;grid-row:1;}
-  #franca-top30 .f30-head > div:first-child{grid-column:1;grid-row:1;}
-  #franca-top30 .f30-head .f30-scale-side {display:none;}
-  #franca-top30 .f30-country.es {text-align:right!important;padding:0 8px 0 0!important;}
-  #franca-top30 .f30-country.fr {text-align:left!important;padding:0 0 0 8px!important;}
-  #franca-top30 .f30-row {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:3px 12px;padding:15px 5px 11px;}
-  #franca-top30 .f30-row .f30-film {grid-column:1/-1;grid-row:1;padding:0 18px 0 52px;min-width:0;}
-  #franca-top30 .f30-row .f30-side.es {grid-column:1;grid-row:2;}
-  #franca-top30 .f30-row .f30-side.fr {grid-column:2;grid-row:2;}
-  #franca-top30 .f30-name {font-size:12px;}
-  #franca-top30 .f30-value {font-size:10px;}
-  /* Unificar les dues comparatives a escala de lectura i tipografia. */
-  #grafic-bunuel-franca-bloc #bf-mirror,
-  #franca-top30 .f30-inner{max-width:680px;margin-left:auto;margin-right:auto;}
-  #grafic-bunuel-franca-bloc > p,
-  #franca-top30 .f30-title{font-size:.82em!important;line-height:1.4;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film,
-  #franca-top30 .f30-film{font-size:13px;line-height:1.35;}
-  #franca-top30 .f30-name{font-size:13px;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,
-  #franca-top30 .f30-name em .f30-year{position:absolute;left:100%;top:50%;transform:translateY(-50%);margin-left:4px;white-space:nowrap;line-height:1.2;}
-
-  /* El títol queda centrat i la datació es disposa a continuació, sense descentrar-lo. */
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film-title,
-  #franca-top30 .f30-name{position:relative;text-align:center;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,
-  #franca-top30 .f30-name em{position:relative;display:inline-block;}
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film-year,
-  #franca-top30 .f30-year{font-size:12px!important;color:#888;font-weight:400;font-style:normal;}
-
-  #grafic-bunuel-franca-bloc #bf-mirror .bf-film-year,
-  #franca-top30 .f30-year{font-size:12px;}
-  /* Les xifres dels dos casos que superen l'escala es mantenen fora de la barra. */
-}
-@media (max-width:760px) {
-  #grafic-caza-iaa-bloc .pip-caza-viewport {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
-  #grafic-caza-iaa-bloc .pip-caza-viewport.pip-caza-pendent { -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent); }
-  #grafic-caza-iaa-bloc .grafic-wrap {height:190px!important;min-width:760px;max-width:none!important;}
-  #grafic-caza-iaa-bloc #caza-iaa-leg {gap:7px 12px!important;margin-bottom:4px!important;line-height:1.35;}
-  #grafic-caza-iaa-bloc #caza-iaa-tit {margin-bottom:10px!important;}
-
+<style id="pip-caza-mobil-responsive">
+@media(max-width:760px){
+#grafic-caza-iaa-bloc .pip-caza-viewport{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+#grafic-caza-iaa-bloc .pip-caza-viewport.pip-caza-pendent{-webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent)}
+#grafic-caza-iaa-bloc .grafic-wrap{height:190px!important;min-width:760px;max-width:none!important}
+#grafic-caza-iaa-bloc #caza-iaa-leg{gap:7px 12px!important;margin-bottom:4px!important;line-height:1.35}
+#grafic-caza-iaa-bloc #caza-iaa-tit{margin-bottom:10px!important}
 }
 </style>
 <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
@@ -852,22 +792,36 @@ body.pip-en-portada .nav-seccions { display: none; }
             #franca-top30 .f30-inner{min-width:900px}
           }
         </style>
-<style id="pip-es-fr-final-fix">
-/* S'aplica després dels estils base del Top 30 per evitar sobreescriptures. */
-@media (max-width:1600px){
-  #franca-top30 .f30-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;padding:0 5px;margin:12px 0 8px}
-  #franca-top30 .f30-head > div:first-child{grid-column:1;grid-row:1}
-  #franca-top30 .f30-head > div:nth-child(2){display:none}
-  #franca-top30 .f30-head > div:nth-child(3){grid-column:2;grid-row:1}
-  #franca-top30 .f30-country.es{text-align:right;padding-right:8px}
-  #franca-top30 .f30-country.fr{text-align:left;padding-left:8px}
-  #franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3px 12px;padding:15px 5px 11px}
-  #franca-top30 .f30-row .f30-film{grid-column:1/-1;grid-row:1;padding:0 18px 0 52px}
-  #franca-top30 .f30-row .f30-side.es{grid-column:1;grid-row:2}
-  #franca-top30 .f30-row .f30-side.fr{grid-column:2;grid-row:2}
-  #franca-top30 .f30-year,
-  #grafic-bunuel-franca-bloc .bf-film-year{font-size:12px}
-  #franca-top30 .f30-over{background:repeating-linear-gradient(135deg,rgba(255,255,255,.95) 0 3px,rgba(125,20,30,.55) 3px 5px);width:14px}
+<style id="pip-bunuel-es-fr-layout">
+/* Única capa de disposició per a les dues comparatives ES/FR. Els estils
+   cromàtics i de dades originals es conserven en els blocs base. */
+@media(max-width:1600px){
+#grafic-bunuel-franca-bloc .bf-mobile-scroll{width:100%;max-width:100%;overflow:visible!important;-webkit-mask-image:none!important;mask-image:none!important}
+#grafic-bunuel-franca-bloc #bf-mirror{min-width:0!important;width:100%;max-width:680px;margin:auto}
+#franca-top30 .f30-chart{overflow:visible!important;max-width:100%}
+#franca-top30 .f30-inner{width:100%;min-width:0!important;max-width:680px;margin:auto}
+#grafic-bunuel-franca-bloc > p,#franca-top30 .f30-title{font-size:.82em!important;line-height:1.4}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-head,
+#franca-top30 .f30-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:12px;align-items:end}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-head .bf-total-head,#grafic-bunuel-franca-bloc #bf-mirror .bf-scale,
+#franca-top30 .f30-head-title,#franca-top30 .f30-head .f30-scale-side{display:none!important}
+#franca-top30 .f30-head{padding:0 5px;margin:20px 0 8px}
+#franca-top30 .f30-head > div:first-child{grid-column:1;grid-row:1}
+#franca-top30 .f30-head > div:nth-child(3){grid-column:2;grid-row:1}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-country.es,#franca-top30 .f30-country.es{text-align:right!important;padding:0 8px 0 0!important}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-country.fr,#franca-top30 .f30-country.fr{text-align:left!important;padding:0 0 0 8px!important}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-row,
+#franca-top30 .f30-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;column-gap:12px;row-gap:3px;min-height:0}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-row{padding:15px 12px 11px}
+#franca-top30 .f30-row{padding:15px 5px 11px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film,#franca-top30 .f30-row .f30-film{grid-column:1/-1;grid-row:1;min-width:0;text-align:center;padding:0 8px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-side.left,#franca-top30 .f30-row .f30-side.es{grid-column:1;grid-row:2}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-side.right,#franca-top30 .f30-row .f30-side.fr{grid-column:2;grid-row:2}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-title,#franca-top30 .f30-name{font-size:13px;line-height:1.35;text-align:center}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{position:relative;display:inline-block;font-size:13px;font-weight:700;font-style:italic}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,#franca-top30 .f30-name em .f30-year{position:absolute;left:100%;top:50%;transform:translateY(-50%);margin-left:4px;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:1.2}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-value,#franca-top30 .f30-value{font-size:10px}
+#franca-top30 .f30-over{left:auto;right:0;top:0;width:15px;height:100%;border-left:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.92) 0 3px,rgba(255,255,255,0) 3px 6px)}
 }
 </style>
 <div id="franca-top30">
