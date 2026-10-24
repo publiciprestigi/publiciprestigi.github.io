@@ -35,29 +35,16 @@
       margin: 0 auto;
       padding: 2px 0 0 34px;
     }
-    .versions-cronologia::before {
+    /* Cada tram connecta dos punts consecutius. Sense prolongacions
+       abans de la v2 ni després del cercle de la v0. */
+    .versio-item:not(:last-child)::before {
       content: '';
       position: absolute;
-      left: 7px;
-      top: 9px;
-      bottom: 0;
+      left: -27px;
+      top: 14px;
+      bottom: -34px;
       width: 1px;
       background: #d9d9d9;
-    }
-    .versions-cronologia::after {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: -34px;
-      width: 1px;
-      height: 34px;
-      background: repeating-linear-gradient(
-        to bottom,
-        #c8c8c8 0,
-        #c8c8c8 3px,
-        transparent 3px,
-        transparent 7px
-      );
     }
 
     .versio-item {
@@ -185,7 +172,7 @@
         line-height: 1.68;
       }
       .versions-cronologia { padding-left: 28px; }
-      .versions-cronologia::before { left: 6px; }
+      .versio-item:not(:last-child)::before { left: -22px; bottom: -30px; }
       .versio-punt {
         left: -28px;
         width: 13px;
