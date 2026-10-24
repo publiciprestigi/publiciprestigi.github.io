@@ -236,7 +236,7 @@ function construirRànquingDirectors() {
     const id = `dir1-${++ctrDir}`;
     const filmsHtml = d.filmsTop100.join(' · ');
     return `<tr id="${id}-main"${i>=10?' style="display:none" class="fila-extra-d1"':''}>
-      <td class="col-pos">${i+1}</td>
+      <td class="col-pos" style="padding-right:12px;white-space:nowrap">${i+1}</td>
       <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.top100}</td>
       <td class="col-num">${fmt(d.espTop)}</td>
@@ -272,7 +272,7 @@ function construirRànquingDirectors() {
     if (d.filmsTop100.length) filmsHtml += `<span class="dir-films-grup">Top 100</span>${d.filmsTop100.join(' · ')}`;
     if (d.filmsContext.length) filmsHtml += `<span class="dir-films-grup" style="margin-top:6px">${pipT('Addicionals','Adicionales')}</span>${d.filmsContext.join(' · ')}`;
     return `<tr id="${id}-main"${i>=10?' style="display:none" class="fila-extra-d2"':''}>
-      <td class="col-pos">${posActual}</td>
+      <td class="col-pos" style="padding-right:12px;white-space:nowrap">${posActual}</td>
       <td class="col-var">${vHtml}</td>
       <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.top100}</td>
