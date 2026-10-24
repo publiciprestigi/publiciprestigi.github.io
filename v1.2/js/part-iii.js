@@ -2451,7 +2451,7 @@ window.PiP_graficMapaCanon = function() {
     b.films.forEach(f => {
       const w = Math.max((f.esp / MAX) * 100, 0.35);
       html += `<tr>
-        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:310px;font-size:.94em;color:#363737"><strong><em>${f.t}</em></strong> (${f.any}) · ${f.dir}</td>
+        <td style="padding:4px 6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:310px;font-size:.94em"><strong style="color:#303131"><em>${f.t}</em></strong> <span style="color:#888;font-weight:400">(${f.any}) · ${f.dir}</span></td>
         <td style="text-align:center;color:#999">${f.c}</td>
         <td style="text-align:center;color:#999">${f.ca}</td>
         <td style="text-align:center;color:#999">${f.b}</td>
