@@ -86,7 +86,7 @@ L’accés a la direcció, al finançament i al reconeixement s’ha ampliat, pe
 <!-- /punt-6 -->
 
 <!-- punt-7 -->
-## 7. El cinema més vist no és sempre el cinema més recordat
+## 7. El cinema més vist no és sempre el més recordat
 
 <p class="subtitol-punt">El públic i el cànon construeixen memòries diferents de la mateixa història.</p>
 
