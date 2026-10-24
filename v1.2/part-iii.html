@@ -469,7 +469,7 @@ body.pip-en-portada .nav-seccions { display: none; }
   /* Tercer gràfic: títol a sobre; Espanya i França sota, sense scroll lateral. */
   #franca-top30 .f30-chart {overflow:visible!important;max-width:100%;}
   #franca-top30 .f30-inner {width:100%;min-width:0!important;}
-  #franca-top30 .f30-head {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;}
+  #franca-top30 .f30-head {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;padding:0 5px;margin-top:12px;}
   #franca-top30 .f30-head-title {display:none;}
   /* En el model apilat, les dues capçaleres han de compartir una sola fila. */
   #franca-top30 .f30-head > div:nth-child(2){display:none;}
@@ -493,7 +493,7 @@ body.pip-en-portada .nav-seccions { display: none; }
   #franca-top30 .f30-film{font-size:13px;line-height:1.35;}
   #franca-top30 .f30-name{font-size:13px;}
   #grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,
-  #franca-top30 .f30-name em .f30-year{position:absolute;left:100%;top:0;margin-left:4px;white-space:nowrap;}
+  #franca-top30 .f30-name em .f30-year{position:absolute;left:100%;top:50%;transform:translateY(-50%);margin-left:4px;white-space:nowrap;line-height:1.2;}
 
   /* El títol queda centrat i la datació es disposa a continuació, sense descentrar-lo. */
   #grafic-bunuel-franca-bloc #bf-mirror .bf-film-title,
@@ -505,8 +505,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 
   #grafic-bunuel-franca-bloc #bf-mirror .bf-film-year,
   #franca-top30 .f30-year{font-size:12px;}
-  #franca-top30 .f30-bar.es:has(.f30-over) .f30-value{left:6px;transform:translateY(-50%);color:#fff;}
-  #franca-top30 .f30-bar.es:has(.f30-over){border-left:2px solid #fff;}
+  /* Les xifres dels dos casos que superen l'escala es mantenen fora de la barra. */
 }
 @media (max-width:760px) {
   #grafic-caza-iaa-bloc .pip-caza-viewport {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
@@ -840,7 +839,7 @@ body.pip-en-portada .nav-seccions { display: none; }
           #franca-top30 .f30-value{position:absolute;top:50%;font-size:10px;font-weight:600;white-space:nowrap}
           #franca-top30 .f30-bar.es .f30-value{left:-5px;transform:translate(-100%,-50%);color:#b8463a}
           #franca-top30 .f30-bar.fr .f30-value{right:-5px;transform:translate(100%,-50%);color:#1e3d6b}
-          #franca-top30 .f30-over{position:absolute;left:0;top:0;height:15px;border-left:2px solid #b8463a;pointer-events:none}
+          #franca-top30 .f30-over{position:absolute;left:0;top:0;width:13px;height:100%;background:repeating-linear-gradient(135deg,rgba(255,255,255,.9) 0 2px,rgba(255,255,255,0) 2px 5px);border-left:1px solid #b8463a;pointer-events:none}
           #franca-top30 .f30-separator{display:block;margin:26px 0 8px;padding-top:0;border-top:1px solid #d8d8d8}
           #franca-top30 .f30-separator:before,#franca-top30 .f30-separator:after{content:none}
           #franca-top30 .f30-extra .f30-row{min-height:0}
