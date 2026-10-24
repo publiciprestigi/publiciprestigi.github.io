@@ -824,6 +824,11 @@ body.pip-en-portada .nav-seccions { display: none; }
 #franca-top30 .f30-name>em{grid-column:2;grid-row:1;position:static;display:block;font-size:13px;font-weight:700;font-style:italic;line-height:18px;white-space:nowrap}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-title>.bf-film-year,
 #franca-top30 .f30-name>.f30-year{grid-column:3;grid-row:1;position:static!important;justify-self:start;align-self:baseline;margin-left:4px;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:18px}
+/* Els casos de títol llarg preserven l'eix central sense envair el marge dret. */
+#franca-top30 .f30-name.f30-name-wrap>.f30-year{grid-column:2;grid-row:2;justify-self:center;margin-left:0}
+@media(max-width:560px){
+  #franca-top30 .f30-name>.f30-year{grid-column:2;grid-row:2;justify-self:center;margin-left:0;white-space:normal}
+}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-side{height:32px}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-bar{height:15px}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-value,#franca-top30 .f30-value{font-size:10px}
@@ -937,8 +942,10 @@ body.pip-en-portada .nav-seccions { display: none; }
                 : '<span class="f30-rank-sign left" aria-label="Espanya supera França">←</span>';
             };
             const row = (f,extra) => {
-              const yearLabel = '('+f.year+')';
-              const title = '<div><div class="f30-name"><em>'+f.title+'</em><span class="f30-year">'+yearLabel+'</span></div><div class="f30-director">'+f.director+'</div></div>';
+              const details = '('+f.director+', '+f.year+')';
+              // Els títols llargs mantenen el centrat i situen les dades sota, només quan cal.
+              const wrap = f.title.length > 30 ? ' f30-name-wrap' : '';
+              const title = '<div class="f30-name'+wrap+'"><em>'+f.title+'</em><span class="f30-year">'+details+'</span></div>';
               const rank = extra ? '<div class="f30-rank" aria-hidden="true"></div>' : '<div class="f30-rank"><span class="f30-rank-num">'+f.rank+'</span>'+marketSign(f)+'</div>';
               const middle = '<div class="f30-film">'+title+'</div>';
               const frW=Math.max(.3,Math.min(90,f.fr/MAX*90));
