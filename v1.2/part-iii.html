@@ -578,9 +578,9 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="bf-country fr">FR →</div>
 </div>
 <div class="bf-scale">
-<div class="bf-scale-side left"><span>2,5M</span><span>2M</span><span>1,5M</span><span>1M</span><span>500K</span><span>0K</span></div>
-<div class="bf-scale-mid"></div>
-<div class="bf-scale-side right"><span>0K</span><span>500K</span><span>1M</span><span>1,5M</span><span>2M</span><span>2,5M</span></div>
+<div class="bf-scale-side left"><span>2,5M</span><span>2M</span><span>1,5M</span><span>1M</span><span>500K</span></div>
+<span class="bf-zero">0K</span>
+<div class="bf-scale-side right"><span>500K</span><span>1M</span><span>1,5M</span><span>2M</span><span>2,5M</span></div>
 </div>
 <div class="bf-row">
 <div class="bf-side left">
@@ -820,7 +820,11 @@ body.pip-en-portada .nav-seccions { display: none; }
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-title,#franca-top30 .f30-name{font-size:13px;line-height:1.35;text-align:center}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{position:relative;display:inline-block;font-size:13px;font-weight:700;font-style:italic}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{display:inline-block;position:relative;vertical-align:baseline;white-space:nowrap}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,#franca-top30 .f30-name em .f30-year{position:absolute;left:100%;top:0;transform:none;margin-left:4px;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:1.35;vertical-align:baseline}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name .bf-film-year,#franca-top30 .f30-name em .f30-year{position:absolute;left:100%;bottom:0;top:auto;transform:none;margin-left:4px;white-space:nowrap;font-size:12px!important;font-weight:400;font-style:normal;color:#888;line-height:18px;vertical-align:baseline}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-name,#franca-top30 .f30-name em{line-height:18px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-film-title,#franca-top30 .f30-name{line-height:18px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-side{height:32px}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-bar{height:15px}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-value,#franca-top30 .f30-value{font-size:10px}
 #franca-top30 .f30-over{display:none}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-side,#franca-top30 .f30-side{background-image:none}
@@ -830,12 +834,12 @@ body.pip-en-portada .nav-seccions { display: none; }
 #grafic-bunuel-franca-bloc #bf-mirror .bf-row,#franca-top30 .f30-row{border-top:1px solid #f2f2f2}
 
 /* Top 30: tres columnes REALS, sempre dins dels 680px. */
-#franca-top30 .f30-head{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;padding:0 5px 0 55px!important;margin:19px 0 0;border-bottom:1px solid #e5e5e5;box-sizing:border-box}
+#franca-top30 .f30-head{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:12px;padding:0 5px 0 60px!important;margin:19px 0 0;border-bottom:1px solid #e5e5e5;box-sizing:border-box;position:relative}
 #franca-top30 .f30-head>div:first-child{grid-column:1;grid-row:1}
 #franca-top30 .f30-head>div:nth-child(2){display:none}
 #franca-top30 .f30-head>div:nth-child(3){grid-column:2;grid-row:1}
 #franca-top30 .f30-row{display:grid!important;grid-template-columns:43px minmax(0,1fr) minmax(0,1fr)!important;column-gap:12px;row-gap:3px;padding:14px 5px 11px!important;position:relative;align-items:center}
-#franca-top30 .f30-row>.f30-rank{grid-column:1;grid-row:1/3;position:static!important;transform:none!important;left:auto!important;top:auto!important;width:43px!important;min-height:39px;border-right:1px solid #e5e5e5;justify-content:center;padding:0 5px 0 0;display:flex;align-items:center}
+#franca-top30 .f30-row>.f30-rank{grid-column:1;grid-row:1;position:static!important;transform:none!important;left:auto!important;top:auto!important;align-self:start;width:43px!important;min-height:0;border:0;justify-content:center;padding:0 5px 0 0;display:flex;align-items:center;line-height:18px}
 #franca-top30 .f30-row>.f30-film{grid-column:2/4;grid-row:1;position:relative;text-align:center;padding:0 6px!important;min-width:0}
 #franca-top30 .f30-row>.f30-side.es{grid-column:2;grid-row:2}
 #franca-top30 .f30-row>.f30-side.fr{grid-column:3;grid-row:2}
@@ -850,30 +854,31 @@ body.pip-en-portada .nav-seccions { display: none; }
 #franca-top30 .f30-head .f30-scale-side{display:block!important;border:0!important;height:21px}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side span,
 #franca-top30 .f30-scale-side span{position:absolute;bottom:3px;font-size:9px;color:#999;white-space:nowrap}
-/* Buñuel: de 2,5M a 0K per l'esquerra, de 0K a 2,5M per la dreta. */
+/* Escales secundàries però exactes: un únic 0K sobre l'eix central. */
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale{position:relative}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-zero,
+#franca-top30 .f30-zero{position:absolute;bottom:3px;transform:translateX(-50%);font-size:9px;font-weight:400;color:#999;line-height:1}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-zero{left:50%}
+#franca-top30 .f30-zero{left:calc(50% + 27.5px)}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(1){left:0;transform:none}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(2){left:20%;transform:translateX(-50%)}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(3){left:40%;transform:translateX(-50%)}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(4){left:60%;transform:translateX(-50%)}
 #grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(5){left:80%;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.left span:nth-child(6){left:100%;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(1){left:0;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(2){left:20%;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(3){left:40%;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(4){left:60%;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(5){left:80%;transform:translateX(-50%)}
-#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(6){left:100%;transform:translateX(-100%)}
-/* Top30: l'escala 6,5M queda indicada amb referències de 6,4M (ticks descriptius). */
-#franca-top30 .f30-scale-side.left span:nth-child(1){left:10%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.left span:nth-child(2){left:32.5%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.left span:nth-child(3){left:55%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.left span:nth-child(4){left:77.5%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.left span:nth-child(5){left:100%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.right span:nth-child(1){left:0;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.right span:nth-child(2){left:22.5%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.right span:nth-child(3){left:45%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.right span:nth-child(4){left:67.5%;transform:translateX(-50%)}
-#franca-top30 .f30-scale-side.right span:nth-child(5){left:90%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(1){left:20%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(2){left:40%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(3){left:60%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(4){left:80%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror .bf-scale-side.right span:nth-child(5){left:100%;transform:translateX(-100%)}
+#franca-top30 .f30-scale-side.left span:nth-child(1){left:11.3846%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(2){left:33.5385%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(3){left:55.6923%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.left span:nth-child(4){left:77.8462%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(1){left:22.1538%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(2){left:44.3077%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(3){left:66.4615%;transform:translateX(-50%)}
+#franca-top30 .f30-scale-side.right span:nth-child(4){left:88.6154%;transform:translateX(-50%)}
+#grafic-bunuel-franca-bloc #bf-mirror>.bf-scale+.bf-row{border-top:0}
 }
 </style>
 <div id="franca-top30">
@@ -890,9 +895,10 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 <p class="f30-direction-note">La fletxa assenyala el mercat amb més espectadors; = indica xifres similars.</p>
 <div class="f30-head">
-<div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span><span>0K</span></div></div>
+<div><div class="f30-country es">← ES</div><div class="f30-scale-side left"><span>6,4M</span><span>4,8M</span><span>3,2M</span><span>1,6M</span></div></div>
 <div class="f30-head-title" aria-hidden="true"></div>
-<div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>0K</span><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
+<div><div class="f30-country fr">FR →</div><div class="f30-scale-side right"><span>1,6M</span><span>3,2M</span><span>4,8M</span><span>6,4M</span></div></div>
+<span class="f30-zero">0K</span>
 </div>
 <div id="f30-main"></div>
 <div aria-hidden="true" class="f30-separator"></div>
