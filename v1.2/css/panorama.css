@@ -75,3 +75,7 @@
 #pip-panorama-content .pip-circuit-key-stats strong{font-size:20px;color:#363737;font-weight:650}
 #pip-panorama-content .pip-circuit-key-stats span{color:#777}
 @media(max-width:540px){#pip-panorama-content .pip-circuit-key{gap:5px}#pip-panorama-content .pip-circuit-key-label{font-size:10px;min-height:48px}#pip-panorama-content .pip-circuit-key-stats strong{font-size:17px}#pip-panorama-content .pip-circuit-key-stats{font-size:10px}}
+
+/* Gràfic per grups: mateix marge lateral del 5% que la doble corona. */
+#seccio-panorama #pip-panorama-content .pip-panorama-view[data-pip-panel="circuits"] .pip-circuit-key,
+#seccio-panorama #pip-panorama-content .pip-panorama-view[data-pip-panel="circuits"] .pip-panorama-mainbar{width:90%;margin-left:auto;margin-right:auto}
