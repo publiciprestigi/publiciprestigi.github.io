@@ -377,7 +377,7 @@ function construirComparativaRankings() {
     '<p class="pip-rankcomp-intro">' + pipT(
       'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* i *Padre no hay más que uno 3* mostren tres maneres diferents de relacionar l’èxit de públic amb el context de cada època. L’IIC combina la penetració demogràfica i la quota de mercat per oferir una lectura conjunta d’aquestes diferències.',
       'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* y *Padre no hay más que uno 3* muestran tres maneras distintas de relacionar el éxito de público con el contexto de cada época. El IIC combina la penetración demográfica y la cuota de mercado para ofrecer una lectura conjunta de estas diferencias.'
-    ).replace(/\\*([^*]+)\\*/g, '<em>$1</em>') + '</p>' +
+    ).replace(/\*([^*]+)\*/g, '<em>$1</em>') + '</p>' +
     '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques', 'Variación de posiciones según las cuatro métricas') + '</h4>' +
     '<div class="pip-rankcomp-exemples" id="pip-rankcomp-exemples"></div>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
@@ -450,7 +450,7 @@ function construirComparativaRankings() {
       const etiquetaX = x + costat * 12;
       const ancoratge = costat === 1 ? 'start' : 'end';
       const alDamunt = i === 3 ? y > posterior : (i === 0 ? y > posterior : (anterior + posterior) / 2 < y);
-      const etiquetaY = y + (alDamunt ? 22 : -24);
+      const etiquetaY = y < 102 ? y + 29 : y > 260 ? y - 30 : y + (alDamunt ? 27 : -27);
       svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
         '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="'+ancoratge+'" font-size="13" font-weight="'+(i===3?'700':'500')+
         '" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
