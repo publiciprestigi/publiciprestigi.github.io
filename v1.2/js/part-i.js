@@ -325,8 +325,9 @@ function construirRànquingDirectors() {
     concentracio.innerHTML = `
       <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic per directors al Top 100 (1965–2025)','La concentración del público por directores en el Top 100 (1965–2025)')}</h4>
       <div class="pip-dir-concentracio-totals">
-        <div class="pip-dir-concentracio-total"><strong>${totalDirs}</strong><span>${pipT('directors','directores')}</span></div>
-        <div class="pip-dir-concentracio-total"><strong>${(totalEsp / 1e6).toFixed(1).replace('.', ',')}M</strong><span>${pipT('espectadors','espectadores')}</span></div>
+        <span class="pip-dir-concentracio-total"><strong>${totalDirs}</strong> ${pipT('directors','directores')}</span>
+        <span class="pip-dir-concentracio-total-sep" aria-hidden="true">·</span>
+        <span class="pip-dir-concentracio-total"><strong>${(totalEsp / 1e6).toFixed(1).replace('.', ',')}M</strong> ${pipT('espectadors','espectadores')}</span>
       </div>
       <div class="pip-dir-concentracio-grups">
         <div class="pip-dir-concentracio-grup">
