@@ -443,10 +443,14 @@ function construirComparativaRankings() {
         svg += '<text x="'+x+'" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">'+esc(labels[i])+'</text>';
       }
     });
-    svg += '<text x="364" y="67" text-anchor="middle" font-size="16" fill="#35678b" font-family="Inter, sans-serif">'+
+    // Mateix fons de dècada que a la taula «Resum per dècada».
+    const fonsDecada = (typeof COLORS_DECADES !== 'undefined' && COLORS_DECADES[f.decada])
+      ? COLORS_DECADES[f.decada].fons : '#f4f7fa';
+    svg += '<rect x="184" y="44" width="360" height="55" fill="'+fonsDecada+'"/>'+
+      '<text x="364" y="67" text-anchor="middle" font-size="15" fill="#363737" font-family="Inter, sans-serif">'+
       '<tspan font-style="italic" font-weight="700">'+esc(f.titol)+'</tspan>'+
-      '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+')</tspan></text>'+
-      '<text x="364" y="88" text-anchor="middle" font-size="12" font-weight="400" fill="#777" font-family="Inter, sans-serif">'+esc(f.director)+'</text>';
+      '<tspan font-style="normal" font-weight="400" fill="#555"> ('+f.any+')</tspan></text>'+
+      '<text x="364" y="85" text-anchor="middle" font-size="12" font-weight="400" fill="#555" font-family="Inter, sans-serif">'+esc(f.director)+'</text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
