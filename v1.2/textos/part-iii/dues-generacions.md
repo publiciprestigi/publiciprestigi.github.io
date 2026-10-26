@@ -19,13 +19,13 @@ Saura és el director més present als grans festivals internacionals amb molta 
 <!-- bloc-almodovar -->
 ## Pedro Almodóvar (1982–2024): l'excepció que confirma la regla
 
-Almodóvar és l’únic director del corpus que sosté durant dècades les dues dimensions alhora: presència als festivals internacionals i públic massiu al mercat espanyol. La seva carrera no anul·la la bretxa entre públic i prestigi, n’és l’excepció més visible.
+Almodóvar és l’únic director de l’estudi que manté durant dècades les dues dimensions alhora, amb presència als festivals internacionals i un públic massiu a les sales espanyoles. La seva carrera no anul·la la bretxa entre públic i prestigi, n’és l’excepció més visible.
 
 La taula mostra una trajectòria molt diferent de la de Saura: menys irregularitat i més evolució. Primer, ascens progressiu fins al gran esclat de *Mujeres al borde…*. Després, consolidació internacional i fort rendiment comercial als 90s i primers 2000s. Finalment, a partir dels 2010s, un desplaçament cap a xifres de sala més pròpies del nou cinema d’autor internacional.
 <!-- /bloc-almodovar -->
 
 <!-- comentari-almodovar -->
-- La «doble corona» sostinguda (i el «segon cercle») és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Tacones lejanos*, *Todo sobre mi madre* i *Volver* combinen festivals i públic en una proporció que cap altre director del corpus manté amb aquesta continuïtat. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
+- La «doble corona» sostinguda (i el «segon cercle») és el seu tret diferencial. *Mujeres al borde…*, *Átame*, *Tacones lejanos*, *Todo sobre mi madre* i *Volver* combinen festivals i públic amb una continuïtat que cap altre director estudiat aconsegueix mantenir. En Almodóvar, la coincidència entre autor, marca internacional i mercat popular no és puntual: dura gairebé dues dècades.
 
 - *Mujeres al borde…* és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE encara amb una capacitat de convocatòria enorme, abans que la fragmentació del *share* es consolidés amb les privades, i una obertura cultural accelerada amb la consolidació democràtica. L’estrena televisiva arriba el gener de 1991, dos anys després de l’estrena en sales. El resultat és un IAA estimat de 10,04M, una combinació excepcional de sala massiva, televisió forta i projecció internacional.
 
