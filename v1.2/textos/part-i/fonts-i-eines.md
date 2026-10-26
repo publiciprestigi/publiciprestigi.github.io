@@ -23,8 +23,8 @@ A les taules de l'estudi trobarem quatre mesures que ofereixen perspectives dife
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
 | **Espectadors absoluts** | *Entrades venudes* | Quantes entrades es van vendre per veure la pel·lícula? És la mesura directa del públic, però afavoreix les èpoques amb mercats més grans. |
-| **Quota de mercat** | *Espectadors ÷ Mercat total de l'any* | De cada 100 entrades venudes a Espanya aquell any, quantes corresponen a la pel·lícula? Mesura el seu pes dins del mercat de l'època. |
-| **Penetració demogràfica** | *Espectadors ÷ Població espanyola* | De cada 100 habitants d'Espanya, quantes entrades es van vendre per veure aquesta pel·lícula? Mesura el seu pes en relació amb la població, no amb el mercat cinematogràfic. |
+| **Quota de mercat** | *Espectadors ÷ Mercat total de l'any* | De cada 100 entrades venudes aquell any, quantes corresponen a la pel·lícula? Mesura el seu pes dins del mercat de l'època. |
+| **Penetració demogràfica** | *Espectadors ÷ Població espanyola* | De cada 100 habitants quantes entrades es van vendre per veure aquesta pel·lícula? Mesura el seu pes en relació amb la població, no amb el mercat cinematogràfic. |
 | **IIC — Índex d'Impacte Cultural** | *0,683 × √(Quota × Penetració), escala 0–10* | Combina quota de mercat i penetració demogràfica en un índex de 0 a 10. Permet comparar el pes relatiu de pel·lícules de diferents èpoques. |
 
 L'IIC és un indicador propi de l'estudi que situa els espectadors en relació amb el mercat cinematogràfic i la població de cada època. És una eina d'aproximació per facilitar les comparacions històriques, no un model oficial ni científicament validat.
