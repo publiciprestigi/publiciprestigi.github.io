@@ -37,20 +37,26 @@ body.pip-en-portada .nav-seccions { display: none; }
 /* Preguntes inicials en gris, mateix cos i tipografia que el text habitual. */
 .pip-entrada .pip-entrada-article .pip-entrada-preguntes { color:#555; font-style:normal; font-weight:400; }
 </style><style id="pip-rankcomp-estils">
-.pip-rankcomp{margin:46px 0 12px;border-top:1px solid #d9dde1;padding-top:26px;color:inherit}
-.pip-rankcomp-titol{font-size:1.25rem;font-weight:650;line-height:1.3;margin:0 0 13px}
-.pip-rankcomp-intro{font-size:1rem;line-height:1.6;margin:0 0 18px;max-width:780px}
-.pip-rankcomp-grafic{max-width:940px;margin:18px auto 14px;overflow-x:auto}
-.pip-rankcomp-grafic svg{display:block;width:100%;height:auto}
-.pip-rankcomp-explora{max-width:800px;margin:17px auto 20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}
+.pip-rankcomp{margin:42px 0 12px;border-top:1px solid #d9dde1;padding-top:25px;color:inherit}
+.pip-rankcomp-titol{font-size:1.2rem;font-weight:600;line-height:1.35;margin:0 0 13px}
+.pip-rankcomp-intro{font-size:1rem;line-height:1.6;margin:0 0 19px;max-width:800px}
+.pip-rankcomp-grafic{max-width:860px;margin:18px auto 17px}
+.pip-rankcomp-head,.pip-rankcomp-fila{display:grid;grid-template-columns:minmax(170px,2.2fr) repeat(4,minmax(72px,1fr));align-items:center;gap:9px}
+.pip-rankcomp-head{padding:10px 9px;border-bottom:1px solid #aeb6bf;font-size:.8rem;color:#707880;text-align:center}
+.pip-rankcomp-head span:first-child{text-align:left}
+.pip-rankcomp-fila{padding:17px 9px;border-bottom:1px solid #e2e5e8}
+.pip-rankcomp-film{font-size:.9rem;line-height:1.3}
+.pip-rankcomp-film span{display:block;color:#808080;font-size:.79rem;margin-top:3px}
+.pip-rankcomp-pos{text-align:center}
+.pip-rankcomp-num{font-size:1.05rem;font-weight:550;font-variant-numeric:tabular-nums}
+.pip-rankcomp-pos-iic .pip-rankcomp-num{font-weight:700;color:#35678b}
+.pip-rankcomp-explora{max-width:860px;margin:20px auto 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
 .pip-rankcomp-label{font-size:.9rem}
-.pip-rankcomp-select{min-width:225px;max-width:100%;flex:1;border:1px solid #b7bfc7;border-radius:5px;padding:8px 10px;background:transparent;color:inherit;font:inherit;font-size:.9rem}
-.pip-rankcomp-restablir{border:1px solid #b7bfc7;border-radius:5px;padding:8px 12px;background:transparent;color:inherit;font:inherit;font-size:.85rem;cursor:pointer}
-.pip-rankcomp-restablir:hover{background:rgba(120,130,140,.09)}
-.pip-rankcomp-lectures{max-width:780px;margin:25px auto 12px;padding-left:22px;font-size:.95rem;line-height:1.6}
-.pip-rankcomp-lectures li{margin:0 0 13px;padding-left:4px}
-.pip-rankcomp-tancament{max-width:780px;margin:16px auto 0;font-size:.95rem;line-height:1.6}
-@media(max-width:640px){.pip-rankcomp{margin-top:32px}.pip-rankcomp-grafic svg{min-width:790px}.pip-rankcomp-select{width:100%;flex-basis:100%}}
+.pip-rankcomp-select{min-width:230px;max-width:100%;flex:1;border:1px solid #b7bfc7;border-radius:4px;padding:8px 10px;background:transparent;color:inherit;font:inherit;font-size:.9rem}
+.pip-rankcomp-lectures{max-width:800px;margin:25px auto 12px;padding-left:22px;font-size:.95rem;line-height:1.65}
+.pip-rankcomp-lectures li{margin:0 0 14px;padding-left:4px}
+.pip-rankcomp-tancament{max-width:800px;margin:17px auto 0;font-size:.95rem;line-height:1.6}
+@media(max-width:640px){.pip-rankcomp{margin-top:31px}.pip-rankcomp-grafic{overflow-x:auto}.pip-rankcomp-head,.pip-rankcomp-fila{min-width:620px}.pip-rankcomp-select{flex-basis:100%}}
 </style>
 </head>
 <body class="amb-sidebar part-i">
@@ -441,7 +447,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <script src="js/textos.js"></script>
 <script src="js/mercat.js?v=20261015hoverfinal"></script>
 <script src="js/decades-resum.js?v=20261015hoverfinal"></script>
-<script src="js/part-i.js?v=20261026comparativarankings4"></script>
+<script src="js/part-i.js?v=20261026comparativarankings5"></script>
 <script src="js/notes-tooltip.js"></script>
 <!-- ── Drawer mòbil ── -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
