@@ -1,13 +1,17 @@
 <!-- intro -->
-L’IIC combina quota de mercat i penetració demogràfica en un índex de 0 a 10. Permet comparar el pes relatiu de pel·lícules de diferents èpoques, tenint en compte tant el mercat cinematogràfic com la població. Veiem primer el Top 10.
+L’**Índex d’Impacte Cultural (IIC)** combina dues maneres de mesurar l’èxit de públic, la penetració demogràfica i la quota de mercat. Té en compte tant l’abast d’una pel·lícula en relació amb la població com el seu protagonisme dins del mercat cinematogràfic de l’època.
 
+El resultat és un índex de 0 a 10 que permet comparar pel·lícules de diferents períodes amb una perspectiva més equilibrada que la xifra d’espectadors per si sola. Veiem primer el Top 10.
 <!-- /intro -->
 
 <!-- comentari -->
-- *8 apellidos vascos* (IIC 10,00) marca el màxim de l’escala, calibrada perquè la pel·lícula amb l’índex més alt obtingui un 10. Cap altre film combina una penetració i una quota de mercat comparables, com mostra la distància amb el segon classificat.
+- *La ciudad no es para mí* (1966). **Un públic massiu en un mercat immens.** Arriba al lloc 4 per penetració demogràfica, però baixa fins al 45 per quota de mercat. Els seus 4,3 milions d’entrades tenien un pes considerable sobre la població, però representaven una part petita d’un mercat de 370 milions d’entrades. L’IIC la situa al lloc 24.
 
-- *Mujeres al borde…* (#22 per espectadors, #9 per IIC) és la gran excepció abans dels 2000s: puja tretze posicions i entra al Top 10. L’IIC revela que el film va tenir un impacte relatiu superior al que suggeria la seva xifra absoluta d’espectadors, fins al punt de situar-se per davant de molts èxits més recents.
+- *Mujeres al borde de un ataque de nervios* (1988). **Un èxit que destaca dins del seu mercat.** Amb menys espectadors que molts títols dels anys seixanta, aconsegueix una quota extraordinària en un mercat molt més reduït. Passa del lloc 22 per espectadors al 6 per quota i al 9 per IIC.
 
-- Si despleguem el Top 100 complet, es veu l’altra cara de l’IIC: els grans èxits dels 60s i 70s baixen. *La muerte tenía un precio* cau fins al lloc 11, *No desearás al vecino del quinto* fins al 20 i *La ciudad no es para mí* fins al 24. Tenien una penetració social enorme, però en mercats de 300-400M d’entrades la seva quota anual era massa baixa per competir amb els grans fenòmens sorgits en mercats més petits.
+- *Los santos inocentes* (1984). **Un èxit que les xifres absolutes dissimulen.** Tot i ocupar el lloc 99 del Top 100 per espectadors, puja fins al 36 per quota i al 47 per IIC. La comparació recupera una dimensió del seu èxit comercial que el volum d’entrades, aïllat del context, deixa en segon terme.
 
+- *Padre no hay más que uno 3* (2022). **Un èxit concentrat en un mercat reduït.** Se situa al lloc 8 per quota, però al 89 per penetració demogràfica. En el mercat especialment petit de la postpandèmia, concentrar moltes entrades no equivalia a arribar a una proporció igualment alta de la població. L’IIC la situa al lloc 18.
+
+L’IIC reuneix aquestes dues dimensions, l’abast entre la població i el protagonisme dins del mercat, sense esborrar les diferències entre èpoques. No substitueix les altres classificacions, sinó que ofereix una lectura complementària de l’èxit de públic.
 <!-- /comentari -->
