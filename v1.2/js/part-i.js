@@ -370,21 +370,27 @@ function construirComparativaRankings() {
       .map((f, i) => [f.titol, i + 1]));
   });
   const exemples = ['8 apellidos vascos', 'La muerte tenía un precio',
-    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3',
-    'Los otros'].filter(t => films.some(f => f.titol === t));
-  const color = ['#577a9d', '#b98248', '#608f75', '#a76a88', '#777d88'];
+    'Padre no hay más que uno 3'].filter(t => films.some(f => f.titol === t));
+  const color = ['#577a9d', '#b98248', '#608f75'];
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   cont.innerHTML = 
     '<h3 class="pip-rankcomp-titol">' + pipT('Quatre mirades sobre l’èxit', 'Cuatro miradas sobre el éxito') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'Com canvia la posició d’una pel·lícula segons la manera de mesurar-ne el públic? Les línies mostren cinc casos representatius. Tria qualsevol film del Top 100 per destacar-ne el recorregut.',
-      '¿Cómo cambia la posición de una película según cómo se mida su público? Las líneas muestran cinco casos representativos. Elige cualquier película del Top 100 para destacar su recorrido.'
+      'Com canvia la posició d’una pel·lícula segons la manera de mesurar-ne el públic? Tres casos revelen què passa quan la penetració i la quota de mercat coincideixen o ofereixen lectures molt diferents.',
+      '¿Cómo cambia la posición de una película según cómo se mida su público? Tres casos revelan qué sucede cuando la penetración y la cuota de mercado coinciden o ofrecen lecturas muy distintas.'
     ) + '</p>' +
-    '<label class="pip-rankcomp-label" for="pip-rankcomp-tria">' + pipT('Pel·lícula', 'Película') + '</label> ' +
+    '<label class="pip-rankcomp-label" for="pip-rankcomp-tria">' + pipT('Destacar una pel·lícula', 'Destacar una película') + '</label> ' +
     '<select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
     '<div class="pip-rankcomp-detall" id="pip-rankcomp-detall" aria-live="polite"></div>' +
+    '<div class="pip-rankcomp-lectures">' +
+      '<p><strong>' + pipT('Tres lectures de les mateixes dades', 'Tres lecturas de los mismos datos') + '</strong></p>' +
+      '<p><em>8 apellidos vascos</em> ' + pipT('és #1 en les quatre classificacions. Quan totes les mètriques coincideixen, l’IIC no altera la lectura de l’èxit.', 'ocupa el #1 en las cuatro clasificaciones. Cuando todas las métricas coinciden, el IIC no altera la lectura del éxito.') + '</p>' +
+      '<p><em>La muerte tenía un precio</em> ' + pipT('és #2 per penetració i #40 per quota. L’IIC la situa a l’#11 i reconeix el seu abast demogràfic sense ignorar que competia en un mercat enorme.', 'es #2 por penetración y #40 por cuota. El IIC la sitúa en el #11 y reconoce su alcance demográfico sin ignorar que competía en un mercado enorme.') + '</p>' +
+      '<p><em>Padre no hay más que uno 3</em> ' + pipT('és #8 per quota però #89 per penetració. L’IIC la situa al #18 i modera el pes d’una quota molt alta en un mercat reduït.', 'es #8 por cuota pero #89 por penetración. El IIC la sitúa en el #18 y modera el peso de una cuota muy alta en un mercado reducido.') + '</p>' +
+      '<p class="pip-rankcomp-lectures-final">' + pipT('L’IIC combina la quota i la penetració, no les posicions dels rànquings. Ofereix una lectura conjunta quan aquestes dues perspectives divergeixen.', 'El IIC combina cuota y penetración, no las posiciones de los rankings. Ofrece una lectura conjunta cuando estas dos perspectivas divergen.') + '</p>' +
+    '</div>' +
     '<p class="pip-rankcomp-nota">' + pipT(
       'Les posicions es calculen sobre les mateixes 100 pel·lícules dels rànquings anteriors. Un número més baix indica una posició més alta. L’IIC combina quota i penetració, no és una mitjana de posicions.',
       'Las posiciones se calculan sobre las mismas 100 películas de los rankings anteriores. Un número menor indica una posición superior. El IIC combina cuota y penetración, no es una media de posiciones.'
