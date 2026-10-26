@@ -411,7 +411,7 @@ function construirComparativaRankings() {
   });
   // Una columna independent per mètrica i una franja superior reservada als encapçalaments.
   const xs = [106, 278, 450, 622];
-  const yy = n => 118 + (n - 1) * 2.05;
+  const yy = n => 73 + (n - 1) * 2.05;
   function dibuixar() {
     grup.querySelectorAll('button').forEach(b => {
       const actiu = b.dataset.film === seleccionat;
@@ -431,20 +431,20 @@ function construirComparativaRankings() {
         '<text x="73" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
     });
     xs.forEach((x,i) => {
-      svg += '<line x1="'+x+'" y1="102" x2="'+x+'" y2="326" stroke="currentColor" stroke-opacity=".2"/>';
+      svg += '<line x1="'+x+'" y1="64" x2="'+x+'" y2="283" stroke="currentColor" stroke-opacity=".2"/>';
       if (i < 3) {
         const parts = i === 0 ? (PIP_ES ? ['Espectadores', 'absolutos'] : ['Espectadors', 'absoluts'])
           : i === 1 ? (PIP_ES ? ['Penetración', 'demográfica'] : ['Penetració', 'demogràfica'])
           : (PIP_ES ? ['Cuota de', 'mercado'] : ['Quota de', 'mercat']);
-        svg += '<text x="'+x+'" y="20" text-anchor="middle" font-size="13" fill="currentColor">'+
+        svg += '<text x="'+x+'" y="307" text-anchor="middle" font-size="11" fill="#666">'+
           '<tspan x="'+x+'">'+esc(parts[0])+'</tspan>'+
-          '<tspan x="'+x+'" dy="14">'+esc(parts[1])+'</tspan></text>';
+          '<tspan x="'+x+'" dy="13">'+esc(parts[1])+'</tspan></text>';
       } else {
-        svg += '<text x="'+x+'" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">'+esc(labels[i])+'</text>';
+        svg += '<text x="'+x+'" y="313" text-anchor="middle" font-size="11" font-weight="700" fill="#363737">'+esc(labels[i])+'</text>';
       }
     });
     // Identificació compacta, sense banda cromàtica ni nova codificació.
-    svg += '<text x="364" y="77" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
+    svg += '<text x="364" y="32" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
       '<tspan font-style="italic" font-weight="700" fill="#363737">'+esc(f.titol)+'</tspan>'+
       '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+') · '+esc(f.director)+'</tspan></text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
@@ -459,7 +459,7 @@ function construirComparativaRankings() {
       const colorVar = diff > 0 ? '#27ae60' : diff < 0 ? '#c0392b' : '#777';
       // Labels sit above/below their points, with a narrow white outline rather than opaque boxes.
       const etiquetaX=x+12;
-      const etiquetaY=y<175?y+26:y-24;
+      const etiquetaY=y<130?y+26:y-24;
       svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
         '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="start" font-size="13" font-weight="'+(i===3?'700':'500')+
         '" fill="'+(i===3?'#35678b':'currentColor')+'" paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">#'+v+'</text>' +
