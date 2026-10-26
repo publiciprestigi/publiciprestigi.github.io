@@ -368,15 +368,15 @@ function construirComparativaRankings() {
     posicions[k] = new Map(films.filter(f => f[k] != null)
       .sort((a, b) => b[k] - a[k]).map((f, i) => [f.titol, i + 1]));
   });
-  const exemples = ['La muerte tenía un precio', 'Mujeres al borde de un ataque de nervios',
+  const exemples = ['Los santos inocentes', 'Mujeres al borde de un ataque de nervios',
     'Padre no hay más que uno 3'];
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   cont.innerHTML =
     '<h3 class="pip-rankcomp-titol">' + pipT('Com varien els rànquings i què aporta l’IIC?', '¿Cómo varían los rankings y qué aporta el IIC?') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* i *Padre no hay más que uno 3* mostren tres maneres diferents de relacionar l’èxit de públic amb el context de cada època. L’IIC combina la penetració demogràfica i la quota de mercat per oferir una lectura conjunta d’aquestes diferències.',
-      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* y *Padre no hay más que uno 3* muestran tres maneras distintas de relacionar el éxito de público con el contexto de cada época. El IIC combina la penetración demográfica y la cuota de mercado para ofrecer una lectura conjunta de estas diferencias.'
+      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. *Los santos inocentes*, *Mujeres al borde de un ataque de nervios* i *Padre no hay más que uno 3* mostren tres maneres diferents de relacionar l’èxit de públic amb el context de cada època. L’IIC combina la penetració demogràfica i la quota de mercat per oferir una lectura conjunta d’aquestes diferències.',
+      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. *Los santos inocentes*, *Mujeres al borde de un ataque de nervios* y *Padre no hay más que uno 3* muestran tres maneras distintas de relacionar el éxito de público con el contexto de cada época. El IIC combina la penetración demográfica y la cuota de mercado para ofrecer una lectura conjunta de estas diferencias.'
     ).replace(/\*([^*]+)\*/g, '<em>$1</em>') + '</p>' +
     '<div class="pip-rankcomp-figura">' +
     '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques del Top 100 (1965–2025)', 'Variación de posiciones según las cuatro métricas del Top 100 (1965–2025)') + '</h4>' +
@@ -404,7 +404,7 @@ function construirComparativaRankings() {
     const boto = document.createElement('button');
     boto.type = 'button';
     boto.className = 'pip-rankcomp-cas-btn';
-    boto.textContent = t;
+    boto.textContent = t === 'Mujeres al borde de un ataque de nervios' ? 'Mujeres al borde...' : t;
     boto.dataset.film = t;
     boto.addEventListener('click', () => { seleccionat = t; tria.value = ''; dibuixar(); });
     grup.appendChild(boto);
@@ -432,18 +432,20 @@ function construirComparativaRankings() {
     });
     xs.forEach((x,i) => {
       svg += '<line x1="'+x+'" y1="102" x2="'+x+'" y2="326" stroke="currentColor" stroke-opacity=".2"/>';
-      if (i===2) {
+      if (i < 3) {
+        const parts = i === 0 ? (PIP_ES ? ['Espectadores', 'absolutos'] : ['Espectadors', 'absoluts'])
+          : i === 1 ? (PIP_ES ? ['Penetración', 'demográfica'] : ['Penetració', 'demogràfica'])
+          : (PIP_ES ? ['Cuota de', 'mercado'] : ['Quota de', 'mercat']);
         svg += '<text x="'+x+'" y="20" text-anchor="middle" font-size="13" fill="currentColor">'+
-          '<tspan x="'+x+'">'+esc(PIP_ES ? 'Cuota de' : 'Quota de')+'</tspan>'+
-          '<tspan x="'+x+'" dy="14">'+esc(PIP_ES ? 'mercado' : 'mercat')+'</tspan></text>';
+          '<tspan x="'+x+'">'+esc(parts[0])+'</tspan>'+
+          '<tspan x="'+x+'" dy="14">'+esc(parts[1])+'</tspan></text>';
       } else {
-        svg += '<text x="'+x+'" y="27" text-anchor="middle" font-size="13" fill="currentColor"'+
-          (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
+        svg += '<text x="'+x+'" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">'+esc(labels[i])+'</text>';
       }
     });
     svg += '<text x="364" y="76" text-anchor="middle" font-size="16" fill="#35678b" font-family="Inter, sans-serif">'+
-      '<tspan font-style="italic" font-weight="400">'+esc(f.titol)+'</tspan>'+
-      '<tspan font-style="normal" font-weight="400"> ('+f.any+')</tspan></text>';
+      '<tspan font-style="italic" font-weight="700">'+esc(f.titol)+'</tspan>'+
+      '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+')</tspan></text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
