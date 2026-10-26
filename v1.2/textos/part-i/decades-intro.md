@@ -3,7 +3,7 @@ Resum cronològic de les pel·lícules líder de cada dècada. Les mètriques de
 <!-- /intro -->
 
 <!-- intermedi -->
-Veiem ara com es distribueixen per dècades les 100 pel·lícules espanyoles amb més espectadors al llarg de tot el període estudiat:
+Les 100 pel·lícules espanyoles més vistes entre 1965 i 2025 acumulen 294,4M d'espectadors. Veiem com es distribueixen per dècades:
 <!-- /intermedi -->
 
 <!-- comentari -->
