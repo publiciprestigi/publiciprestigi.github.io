@@ -1,5 +1,5 @@
 <!-- intro -->
-Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena els directors per espectadors acumulats, independentment del nombre de films. Els 10 primers d’un total de 57 directors concentren el 45,4% dels espectadors del Top 100, amb només 36 de les 100 pel·lícules. El segon amplia el focus incorporant també els films de context de cada director, títols citats per contextualitzar les dècades, però que no van superar el llindar d’entrada al Top 100.
+Directors amb més pel·lícules dins del Top 100. El primer rànquing ordena els directors per espectadors acumulats, independentment del nombre de films. Els 10 primers directors (d’un total de 57) concentren el 45,4% dels espectadors del Top 100 amb només 36 films. El segon amplia el focus incorporant també els films de context de cada director, títols citats per contextualitzar les dècades, però que no van superar el llindar d’entrada al Top 100.
 <!-- /intro -->
 
 <!-- comentari-r1 -->
