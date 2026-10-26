@@ -323,7 +323,7 @@ function construirRànquingDirectors() {
     const totalDirs = llista1.length;
     const txtPct = n => n.toFixed(1).replace('.', ',') + '%';
     concentracio.innerHTML = `
-      <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic en deu directors (1965–2025)','La concentración del público en diez directores (1965–2025)')}</h4>
+      <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic per directors al Top 100 (1965–2025)','La concentración del público por directores en el Top 100 (1965–2025)')}</h4>
       <div class="pip-dir-concentracio-totals">
         <div class="pip-dir-concentracio-total"><strong>${totalDirs}</strong><span>${pipT('directors','directores')}</span></div>
         <div class="pip-dir-concentracio-total"><strong>${(totalEsp / 1e6).toFixed(1).replace('.', ',')}M</strong><span>${pipT('espectadors','espectadores')}</span></div>
