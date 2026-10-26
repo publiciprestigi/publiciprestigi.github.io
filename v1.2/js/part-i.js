@@ -450,9 +450,17 @@ function construirComparativaRankings() {
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
       const x=xs[i],y=yy(v),c=i===3?'#35678b':'#8697a4';
+      const valor = i === 0 ? (f.espectadors / 1e6).toFixed(1).replace('.', ',') + 'M'
+        : i === 3 ? fmtIIC(f.iic)
+        : fmtPct(f[camps[i]], f[camps[i] + '_estimat']);
+      const diff = ranks[0] - v;
+      const variacio = i === 0 ? '' : diff > 0 ? '↑' + diff : diff < 0 ? '↓' + Math.abs(diff) : '=';
+      const colorVar = diff > 0 ? '#27ae60' : diff < 0 ? '#c0392b' : '#777';
       svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
         '<text x="'+(x+11)+'" y="'+(y-9)+'" font-size="13" font-weight="'+(i===3?'700':'500')+
-        '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>';
+        '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
+        '<text x="'+(x+11)+'" y="'+(y+15)+'" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+'">'+esc(valor)+
+        (i === 0 ? '' : '<tspan dx="6" font-weight="600" fill="'+colorVar+'">'+variacio+'</tspan>')+'</text>';
     });
     svg+='</svg>';
     grafic.innerHTML='<div class="pip-rankcomp-film"><strong><em>'+esc(f.titol)+'</em></strong> <span>('+f.any+')</span></div>'+svg;
