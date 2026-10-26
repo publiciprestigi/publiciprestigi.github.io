@@ -375,8 +375,8 @@ function construirComparativaRankings() {
   cont.innerHTML =
     '<h3 class="pip-rankcomp-titol">' + pipT('Com varien els rànquings i què aporta l’IIC?', '¿Cómo varían los rankings y qué aporta el IIC?') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. El gràfic permet comparar les quatre classificacions i observar com l’IIC relaciona la penetració demogràfica i la quota de mercat. Pots explorar els quatre exemples proposats o seleccionar qualsevol altra pel·lícula del Top 100.',
-      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. El gráfico permite comparar las cuatro clasificaciones y observar cómo el IIC relaciona la penetración demográfica y la cuota de mercado. Puedes explorar los cuatro ejemplos propuestos o seleccionar cualquier otra película del Top 100.'
+      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. Aquestes diferències revelen fins a quin punt el context històric condiciona la lectura de l’èxit de públic. El gràfic permet explorar quatre exemples significatius o seleccionar qualsevol altra pel·lícula del Top 100.',
+      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. Estas diferencias revelan hasta qué punto el contexto histórico condiciona la lectura del éxito de público. El gráfico permite explorar cuatro ejemplos significativos o seleccionar cualquier otra película del Top 100.'
     ).replace(/\*([^*]+)\*/g, '<em>$1</em>') + '</p>' +
     '<div class="pip-rankcomp-figura">' +
     '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques del Top 100 (1965–2025)', 'Variación de posiciones según las cuatro métricas del Top 100 (1965–2025)') + '</h4>' +
