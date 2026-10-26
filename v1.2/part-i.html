@@ -55,6 +55,19 @@ body.pip-en-portada .nav-seccions { display: none; }
 .pip-rankcomp-select{min-width:240px;max-width:360px;flex:0 1 360px;border:1px solid #b7bfc7;border-radius:4px;padding:6px 9px;background:transparent;color:inherit;font:inherit;font-size:.82rem;line-height:1.25}
 .pip-rankcomp-nota{max-width:790px;margin:12px auto 0;text-align:center;font-size:14px;line-height:1.45;font-style:italic;color:#666}
 @media(max-width:640px){.pip-rankcomp{margin-top:31px}.pip-rankcomp-grafic{overflow-x:auto;-webkit-overflow-scrolling:touch}.pip-rankcomp-grafic svg{min-width:650px}.pip-rankcomp-select{flex-basis:100%;max-width:100%}}
+
+/* Part I — concentració dels espectadors del Top 100 per directors. */
+.pip-dir-concentracio{margin:30px 0 12px;padding:25px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
+.pip-dir-concentracio-titol{font-size:.82em;font-weight:700;line-height:1.4;text-align:center;color:#363737;margin:0 auto 21px}
+.pip-dir-concentracio-barra{display:flex;width:90%;height:36px;margin:0 auto;overflow:hidden;border-radius:2px}
+.pip-dir-concentracio-segment{display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+.pip-dir-concentracio-primers{background:#35678b;color:#fff}
+.pip-dir-concentracio-resta{background:#e7eaed;color:#363737}
+.pip-dir-concentracio-llegenda{display:flex;justify-content:space-between;gap:16px;width:90%;margin:11px auto 0;font-size:12px;line-height:1.45;color:#555}
+.pip-dir-concentracio-llegenda span{max-width:48%}
+.pip-dir-concentracio-llegenda span:last-child{text-align:right}
+.pip-dir-concentracio-nota{font-size:14px;line-height:1.45;font-style:italic;color:#666;text-align:center;margin:16px auto 0}
+@media(max-width:500px){.pip-dir-concentracio-barra,.pip-dir-concentracio-llegenda{width:90%}.pip-dir-concentracio-segment{font-size:12px}.pip-dir-concentracio-llegenda{font-size:11px}}
 </style>
 </head>
 <body class="amb-sidebar part-i">
@@ -204,6 +217,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="seccio-contingut" id="seccio-directors">
 <div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/ranking-directors"></div>
 <div id="taula-directors-r1"></div>
+<div id="pip-directors-concentracio" class="pip-dir-concentracio" aria-label="Concentració d’espectadors del Top 100"></div>
 <div class="text-md text-md-comentari" data-bloc="comentari-r1" data-text="part-i/ranking-directors"></div>
 <div id="taula-directors-r2"></div>
 <div class="text-md text-md-comentari" data-bloc="comentari-r2" data-text="part-i/ranking-directors"></div>
