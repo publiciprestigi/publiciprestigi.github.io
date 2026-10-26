@@ -446,15 +446,15 @@ function construirComparativaRankings() {
       // Situem les etiquetes fora del segment adjacent: evitem que la trajectòria les travessi.
       const anterior = i ? yy(ranks[i - 1]) : y;
       const posterior = i < ranks.length - 1 ? yy(ranks[i + 1]) : y;
-      const costat = i === 3 ? -1 : 1;
+      const costat = 1;
       const etiquetaX = x + costat * 12;
       const ancoratge = costat === 1 ? 'start' : 'end';
       const alDamunt = i === 3 ? y > posterior : (i === 0 ? y > posterior : (anterior + posterior) / 2 < y);
       const etiquetaY = y + (alDamunt ? 22 : -24);
       svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
         '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="'+ancoratge+'" font-size="13" font-weight="'+(i===3?'700':'500')+
-        '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
-        '<text x="'+etiquetaX+'" y="'+(etiquetaY+15)+'" text-anchor="'+ancoratge+'" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+'">'+esc(valor)+
+        '" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
+        '<text x="'+etiquetaX+'" y="'+(etiquetaY+15)+'" text-anchor="'+ancoratge+'" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+'" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">'+esc(valor)+
         (i === 0 ? '' : '<tspan dx="6" font-weight="600" fill="'+colorVar+'">'+variacio+'</tspan>')+'</text>';
     });
     svg+='</svg>';
