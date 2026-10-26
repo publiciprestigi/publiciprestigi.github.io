@@ -56,22 +56,24 @@ body.pip-en-portada .nav-seccions { display: none; }
 .pip-rankcomp-nota{max-width:790px;margin:12px auto 0;text-align:center;font-size:14px;line-height:1.45;font-style:italic;color:#666}
 @media(max-width:640px){.pip-rankcomp{margin-top:31px}.pip-rankcomp-grafic{overflow-x:auto;-webkit-overflow-scrolling:touch}.pip-rankcomp-grafic svg{min-width:650px}.pip-rankcomp-select{flex-basis:100%;max-width:100%}}
 
-/* Part I — concentració dels espectadors del Top 100 per directors. */
+/* Part I — concentració d'espectadors, pauta gràfica de «Per grups» (Part II). */
 .pip-dir-concentracio{margin:30px 0 12px;padding:25px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
-.pip-dir-concentracio-titol{font-size:.82em;font-weight:700;line-height:1.4;text-align:center;color:#363737;margin:0 auto 22px}
-.pip-dir-concentracio-magnituds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:90%;margin:0 auto 23px;text-align:center}
-.pip-dir-concentracio-dada{display:flex;flex-direction:column;align-items:center;gap:2px}
-.pip-dir-concentracio-valor{font-size:27px;font-weight:700;line-height:1.2;color:#363737;font-variant-numeric:tabular-nums}
-.pip-dir-concentracio-etiqueta{font-size:12px;color:#666;line-height:1.35}
-.pip-dir-concentracio-barra{display:flex;width:90%;height:29px;margin:0 auto;overflow:hidden;border-radius:2px}
-.pip-dir-concentracio-segment{display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
-.pip-dir-concentracio-primers{background:#35678b;color:#fff}
-.pip-dir-concentracio-resta{background:#e7eaed;color:#363737}
-.pip-dir-concentracio-llegenda{display:flex;justify-content:space-between;gap:16px;width:90%;margin:11px auto 0;font-size:12px;line-height:1.45;color:#555}
-.pip-dir-concentracio-llegenda span{max-width:48%}
-.pip-dir-concentracio-llegenda span:last-child{text-align:right}
-.pip-dir-concentracio-nota{font-size:14px;line-height:1.45;font-style:italic;color:#666;text-align:center;margin:16px auto 0}
-@media(max-width:500px){.pip-dir-concentracio-valor{font-size:22px}.pip-dir-concentracio-etiqueta{font-size:11px}.pip-dir-concentracio-barra,.pip-dir-concentracio-llegenda{width:90%}.pip-dir-concentracio-segment{font-size:12px}.pip-dir-concentracio-llegenda{font-size:11px}}
+.pip-dir-concentracio-titol{font-size:.82em;font-weight:700;line-height:1.4;text-align:center;color:#363737;margin:0 auto 24px}
+.pip-dir-concentracio-totals{display:flex;justify-content:center;gap:45px;margin:0 auto 22px;text-align:center}
+.pip-dir-concentracio-total strong{display:block;font-size:24px;font-weight:650;line-height:1.3;color:#363737;font-variant-numeric:tabular-nums}
+.pip-dir-concentracio-total span{font-size:12px;color:#666}
+.pip-dir-concentracio-grups{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;width:90%;margin:0 auto 17px}
+.pip-dir-concentracio-grup{text-align:center;min-width:0}
+.pip-dir-concentracio-grup-etiqueta{display:flex;justify-content:center;align-items:center;gap:6px;font-size:12px;color:#555;line-height:1.4;min-height:22px}
+.pip-dir-concentracio-clau{display:inline-block;flex:0 0 10px;width:10px;height:10px;border-radius:2px}
+.pip-dir-concentracio-grup-dada{display:block;margin-top:7px;color:#777;font-size:12px;line-height:1.35}
+.pip-dir-concentracio-grup-dada strong{font-size:20px;font-weight:650;color:#363737;font-variant-numeric:tabular-nums}
+.pip-dir-concentracio-barra{display:flex;gap:2px;width:90%;height:29px;margin:0 auto;overflow:hidden;border-radius:2px}
+.pip-dir-concentracio-segment{height:100%}
+.pip-dir-concentracio-primers{background:#35678b}
+.pip-dir-concentracio-resta{background:#cbd1d7}
+.pip-dir-concentracio-nota{font-size:14px;line-height:1.45;font-style:italic;color:#666;text-align:center;margin:15px auto 0}
+@media(max-width:500px){.pip-dir-concentracio-totals{gap:26px}.pip-dir-concentracio-grups{gap:8px}.pip-dir-concentracio-grup-etiqueta{font-size:10px}.pip-dir-concentracio-grup-dada strong{font-size:17px}}
 </style>
 </head>
 <body class="amb-sidebar part-i">
