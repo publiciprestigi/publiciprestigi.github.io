@@ -408,8 +408,9 @@ function construirComparativaRankings() {
     boto.addEventListener('click', () => { seleccionat = t; tria.value = ''; dibuixar(); });
     grup.appendChild(boto);
   });
-  const xs = [90, 260, 430, 600];
-  const yy = n => 106 + (n - 1) * 2.05;
+  // Una columna independent per mètrica i una franja superior reservada als encapçalaments.
+  const xs = [106, 278, 450, 622];
+  const yy = n => 125 + (n - 1) * 2.2;
   function dibuixar() {
     grup.querySelectorAll('button').forEach(b => {
       const actiu = b.dataset.film === seleccionat;
@@ -419,18 +420,18 @@ function construirComparativaRankings() {
     const f = films.find(f => f.titol === seleccionat);
     if (!f) return;
     const ranks = camps.map(k => posicions[k].get(seleccionat));
-    let svg = '<svg viewBox="0 0 690 355" role="img" aria-label="' +
+    let svg = '<svg viewBox="0 0 750 401" role="img" aria-label="' +
       esc(pipT('Variacions de posició als quatre rànquings', 'Variaciones de posición en los cuatro rankings')) +
       '" xmlns="http://www.w3.org/2000/svg">';
     [1,25,50,75,100].forEach(v => {
       const y = yy(v);
-      svg += '<line x1="89" y1="'+y+'" x2="601" y2="'+y+
+      svg += '<line x1="105" y1="'+y+'" x2="623" y2="'+y+
         '" stroke="currentColor" stroke-opacity=".10" stroke-dasharray="3 5"/>' +
-        '<text x="58" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
+        '<text x="73" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
     });
     xs.forEach((x,i) => {
-      svg += '<line x1="'+x+'" y1="101" x2="'+x+'" y2="317" stroke="currentColor" stroke-opacity=".2"/>' +
-        '<text x="'+x+'" y="22" text-anchor="middle" font-size="13" fill="currentColor"'+
+      svg += '<line x1="'+x+'" y1="116" x2="'+x+'" y2="352" stroke="currentColor" stroke-opacity=".2"/>' +
+        '<text x="'+x+'" y="32" text-anchor="middle" font-size="14" fill="currentColor"'+
         (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
     });
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
@@ -443,18 +444,17 @@ function construirComparativaRankings() {
       const diff = ranks[0] - v;
       const variacio = i === 0 ? '' : diff > 0 ? '↑' + diff : diff < 0 ? '↓' + Math.abs(diff) : '=';
       const colorVar = diff > 0 ? '#27ae60' : diff < 0 ? '#c0392b' : '#777';
-      // Situem les etiquetes fora del segment adjacent: evitem que la trajectòria les travessi.
-      const anterior = i ? yy(ranks[i - 1]) : y;
-      const posterior = i < ranks.length - 1 ? yy(ranks[i + 1]) : y;
-      const costat = 1;
-      const etiquetaX = x + costat * 12;
-      const ancoratge = costat === 1 ? 'start' : 'end';
-      const alDamunt = i === 3 ? y > posterior : (i === 0 ? y > posterior : (anterior + posterior) / 2 < y);
-      const etiquetaY = y < 150 ? y + 26 : y > 280 ? y - 29 : y + (alDamunt ? 26 : -26);
-      svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
-        '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="'+ancoratge+'" font-size="13" font-weight="'+(i===3?'700':'500')+
-        '" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
-        '<text x="'+etiquetaX+'" y="'+(etiquetaY+15)+'" text-anchor="'+ancoratge+'" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+'" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round">'+esc(valor)+
+      // Les dades ocupen una caixa pròpia a la dreta de cada punt. La posició
+      // vertical deixa els valors fora de l'eix superior i de la base del gràfic.
+      const etiquetaX = x + 13;
+      const avall = y < 184;
+      const etiquetaY = y + (avall ? 25 : -27);
+      // La caixa blanca impedeix que la línia de trajectòria travessi els números.
+      svg += '<rect x="'+(etiquetaX-4)+'" y="'+(etiquetaY-15)+'" width="130" height="37" rx="2" fill="#fff"/>' +
+        '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
+        '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="start" font-size="14" font-weight="'+(i===3?'700':'500')+
+        '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
+        '<text x="'+etiquetaX+'" y="'+(etiquetaY+16)+'" text-anchor="start" font-size="12" fill="'+(i===3?'#35678b':'#707880')+'">'+esc(valor)+
         (i === 0 ? '' : '<tspan dx="6" font-weight="600" fill="'+colorVar+'">'+variacio+'</tspan>')+'</text>';
     });
     svg+='</svg>';
