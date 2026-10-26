@@ -366,127 +366,73 @@ function construirComparativaRankings() {
   const posicions = {};
   camps.forEach(k => {
     posicions[k] = new Map(films.filter(f => f[k] != null)
-      .sort((a, b) => b[k] - a[k])
-      .map((f, i) => [f.titol, i + 1]));
+      .sort((a, b) => b[k] - a[k]).map((f, i) => [f.titol, i + 1]));
   });
-  const exemples = [
-    '8 apellidos vascos', 'La muerte tenía un precio',
-    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3'
-  ].filter(t => films.some(f => f.titol === t));
-  const colors = ['#577a9d', '#b98248', '#a76a88', '#608f75'];
+  const exemples = ['8 apellidos vascos', 'La muerte tenía un precio',
+    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3'];
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  const comentaris = [
-    ['<em>8 apellidos vascos</em> ',
-      'ocupa el primer lloc en les quatre classificacions. Quan totes les mètriques coincideixen, l’IIC no altera la lectura de l’èxit.',
-      'ocupa el primer puesto en las cuatro clasificaciones. Cuando todas las métricas coinciden, el IIC no altera la lectura del éxito.'],
-    ['<em>La muerte tenía un precio</em> ',
-      'és #2 per penetració i #40 per quota. L’IIC la situa a l’#11 i reconeix el seu abast demogràfic sense ignorar que competia en un mercat enorme.',
-      'es #2 por penetración y #40 por cuota. El IIC la sitúa en el #11 y reconoce su alcance demográfico sin ignorar que competía en un mercado enorme.'],
-    ['<em>Mujeres al borde de un ataque de nervios</em> ',
-      'passa del #22 per espectadors al #6 per quota i al #9 per IIC. En el mercat més reduït de 1988, el seu èxit tenia un pes relatiu molt superior al que suggereixen les entrades absolutes.',
-      'pasa del #22 por espectadores al #6 por cuota y al #9 por IIC. En el mercado más reducido de 1988, su éxito tenía un peso relativo muy superior al que sugieren las entradas absolutas.'],
-    ['<em>Padre no hay más que uno 3</em> ',
-      'és #8 per quota però #89 per penetració. L’IIC la situa al #18 i modera el pes d’una quota molt alta en un mercat reduït.',
-      'es #8 por cuota pero #89 por penetración. El IIC la sitúa en el #18 y modera el peso de una cuota muy alta en un mercado reducido.']
-  ];
   cont.innerHTML =
-    '<h3 class="pip-rankcomp-titol">' + pipT('Quatre mirades sobre l’èxit', 'Cuatro miradas sobre el éxito') + '</h3>' +
+    '<h3 class="pip-rankcomp-titol">' + pipT('Què aporta l’IIC als rànquings?', '¿Qué aporta el IIC a los rankings?') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'Com canvia la posició d’una pel·lícula segons la manera de mesurar-ne el públic? Quatre casos mostren què passa quan penetració i quota coincideixen o ofereixen lectures molt diferents.',
-      '¿Cómo cambia la posición de una película según cómo se mida su público? Cuatro casos muestran qué ocurre cuando penetración y cuota coinciden u ofrecen lecturas muy distintas.'
+      'Les quatre mètriques poden donar lectures diferents d’un mateix èxit. Aquests casos mostren com l’IIC relaciona la penetració demogràfica i la quota de mercat.',
+      'Las cuatro métricas pueden ofrecer lecturas distintas de un mismo éxito. Estos casos muestran cómo el IIC relaciona la penetración demográfica y la cuota de mercado.'
     ) + '</p>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
     '<div class="pip-rankcomp-explora"><label class="pip-rankcomp-label" for="pip-rankcomp-tria">' +
-    pipT('Destaca una altra pel·lícula del Top 100', 'Destaca otra película del Top 100') +
-    '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select>' +
-    '<button type="button" class="pip-rankcomp-restablir" id="pip-rankcomp-restablir">' +
-    pipT('Veure els quatre exemples', 'Ver los cuatro ejemplos') + '</button></div>' +
+    pipT('Consulta una pel·lícula del Top 100', 'Consulta una película del Top 100') +
+    '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select></div>' +
     '<ul class="pip-rankcomp-lectures">' +
-      comentaris.map(c => '<li>' + c[0] + pipT(c[1], c[2]) + '</li>').join('') +
+    '<li><em>8 apellidos vascos</em> ' + pipT(
+      'lidera els quatre rànquings. Quan les mesures coincideixen, l’IIC no altera la interpretació del seu èxit.',
+      'lidera los cuatro rankings. Cuando las medidas coinciden, el IIC no altera la interpretación de su éxito.') + '</li>' +
+    '<li><em>La muerte tenía un precio</em> ' + pipT(
+      'és #2 per penetració i #40 per quota. L’IIC la situa a l’#11, recollint el gran abast demogràfic d’un film estrenat en un mercat molt ampli.',
+      'es #2 por penetración y #40 por cuota. El IIC la sitúa en el #11, recogiendo el gran alcance demográfico de un film estrenado en un mercado muy amplio.') + '</li>' +
+    '<li><em>Mujeres al borde de un ataque de nervios</em> ' + pipT(
+      'passa del #22 per espectadors al #6 per quota i al #9 per IIC. El seu pes en el mercat de 1988 supera el que suggereix la xifra absoluta d’entrades.',
+      'pasa del #22 por espectadores al #6 por cuota y al #9 por IIC. Su peso en el mercado de 1988 supera lo que sugiere la cifra absoluta de entradas.') + '</li>' +
+    '<li><em>Padre no hay más que uno 3</em> ' + pipT(
+      'és #8 per quota però #89 per penetració. L’IIC la situa al #18 i equilibra una quota molt alta amb l’abast demogràfic més limitat.',
+      'es #8 por cuota pero #89 por penetración. El IIC la sitúa en el #18 y equilibra una cuota muy alta con un alcance demográfico más limitado.') + '</li>' +
     '</ul>' +
     '<p class="pip-rankcomp-tancament">' + pipT(
-      'L’IIC combina quota i penetració per oferir una lectura conjunta quan aquestes dues perspectives divergeixen.',
-      'El IIC combina cuota y penetración para ofrecer una lectura conjunta cuando estas dos perspectivas divergen.'
-    ) + '</p>';
-
+      'L’IIC no substitueix les altres mesures. Les combina per comparar el pes relatiu dels èxits en èpoques diferents.',
+      'El IIC no sustituye las otras medidas. Las combina para comparar el peso relativo de los éxitos en épocas distintas.') +
+    '</p>';
   const select = cont.querySelector('#pip-rankcomp-tria');
-  const optBase = document.createElement('option');
-  optBase.value = '';
-  optBase.textContent = pipT('— Selecciona una pel·lícula —', '— Selecciona una película —');
-  select.appendChild(optBase);
+  const initial = document.createElement('option');
+  initial.value = '';
+  initial.textContent = pipT('Quatre exemples', 'Cuatro ejemplos');
+  select.appendChild(initial);
   [...films].sort((a, b) => b.espectadors - a.espectadors).forEach((f, i) => {
     const opt = document.createElement('option');
     opt.value = f.titol;
     opt.textContent = '#' + (i + 1) + ' · ' + f.titol + ' (' + f.any + ')';
     select.appendChild(opt);
   });
-
   const graph = cont.querySelector('#pip-rankcomp-grafic');
-  const restablir = cont.querySelector('#pip-rankcomp-restablir');
-  const eixos = [275, 470, 665, 860];
-  const y = pos => 68 + (pos - 1) * 3.0;
-  const pos = (t, k) => posicions[k].get(t);
-  const titolCurt = t => ({
-    '8 apellidos vascos': '8 apellidos vascos',
-    'La muerte tenía un precio': 'La muerte tenía un precio',
-    'Mujeres al borde de un ataque de nervios': 'Mujeres al borde…',
-    'Padre no hay más que uno 3': 'Padre no hay más que uno 3'
-  })[t] || t;
-
+  const ranks = t => camps.map(k => posicions[k].get(t));
   function dibuixar() {
-    const triat = select.value;
-    // Els quatre exemples sempre són visibles; quan se selecciona un film,
-    // es dibuixa una cinquena trajectòria destacada, sense enfosquir les altres.
-    const casos = [...exemples];
-    if (triat && !casos.includes(triat)) casos.push(triat);
-    const desplacaments = [-26, -9, 9, 26, 44]; // separació dels números propers a #1
-    const trajectoria = (t, index) => {
-      const esExtra = !exemples.includes(t);
-      const c = esExtra ? '#2c668e' : colors[exemples.indexOf(t)];
-      const dx = desplacaments[index] || 0;
-      const punts = camps.map((k, i) => ({x:eixos[i] + dx, y:y(pos(t,k)), p:pos(t,k)}));
-      if (punts.some(p=>!Number.isFinite(p.y))) return '';
-      let html = '<path d="' + punts.map((p,i)=>(i?'L':'M')+p.x+' '+p.y).join(' ') +
-        '" stroke="' + c + '" stroke-width="' + (esExtra ? 3.5 : 2.3) +
-        '" fill="none" stroke-linejoin="round"/>';
-      html += punts.map(p => '<circle cx="'+p.x+'" cy="'+p.y+'" r="13.4" fill="'+c+
-        '" stroke="white" stroke-width="1.5"/><text x="'+p.x+'" y="'+(p.y+4)+
-        '" text-anchor="middle" fill="white" font-size="11" font-weight="700">'+p.p+'</text>').join('');
-      return html;
-    };
-    let svg = '<svg viewBox="0 0 1000 395" role="img" aria-label="' +
-      esc(pipT('Posicions de quatre pel·lícules en quatre rànquings',
-        'Posiciones de cuatro películas en cuatro rankings')) +
-      '" xmlns="http://www.w3.org/2000/svg">';
-    [1,25,50,75,100].forEach(n=>{
-      const yy=y(n);
-      svg += '<line x1="245" y1="'+yy+'" x2="900" y2="'+yy+
-        '" stroke="currentColor" stroke-opacity=".10" stroke-dasharray="3 5"/>';
+    const casos = select.value ? [select.value] : exemples;
+    let html = '<div class="pip-rankcomp-head"><span>' +
+      pipT('Pel·lícula', 'Película') + '</span>' +
+      labels.map(l => '<span>' + esc(l) + '</span>').join('') + '</div>';
+    casos.forEach(t => {
+      const f = films.find(f => f.titol === t);
+      if (!f) return;
+      const p = ranks(t);
+      // Una fila per film: les quatre posicions tenen la mateixa escala visual,
+      // sense línies superposades ni codis cromàtics arbitraris.
+      html += '<div class="pip-rankcomp-fila"><div class="pip-rankcomp-film"><em>' +
+        esc(t) + '</em><span>' + f.any + '</span></div>' +
+        p.map((v, i) => '<div class="pip-rankcomp-pos' + (i === 3 ? ' pip-rankcomp-pos-iic' : '') +
+          '"><span class="pip-rankcomp-num">#' + (v || '—') + '</span></div>').join('') +
+        '</div>';
     });
-    camps.forEach((k,i)=>{
-      svg += '<line x1="'+eixos[i]+'" y1="57" x2="'+eixos[i]+
-        '" y2="374" stroke="currentColor" stroke-opacity=".19"/>' +
-        '<text x="'+eixos[i]+'" y="26" text-anchor="middle" fill="currentColor" font-size="15" font-weight="600">'+
-        esc(labels[i])+'</text>';
-    });
-    // Identificadors fixes dels quatre exemples al lateral esquerre, no com a línies de fons.
-    exemples.forEach((t,i)=>{
-      const yy=77+i*29;
-      svg += '<line x1="15" y1="'+(yy-4)+'" x2="29" y2="'+(yy-4)+
-        '" stroke="'+colors[i]+'" stroke-width="4"/>' +
-        '<text x="37" y="'+yy+'" font-size="12" fill="currentColor">'+esc(titolCurt(t))+'</text>';
-    });
-    casos.forEach((t,i)=>{svg+=trajectoria(t,i)});
-    if(triat && exemples.includes(triat)){
-      const idx=exemples.indexOf(triat);
-      svg += '<rect x="9" y="'+(61+idx*29)+'" width="224" height="24" rx="3" fill="none" stroke="'+colors[idx]+'" stroke-width="1.5"/>';
-    }
-    svg+='</svg>';
-    graph.innerHTML=svg;
+    graph.innerHTML = html;
   }
-  select.addEventListener('change',dibuixar);
-  restablir.addEventListener('click',()=>{select.value='';dibuixar();});
+  select.addEventListener('change', dibuixar);
   dibuixar();
 }
 
