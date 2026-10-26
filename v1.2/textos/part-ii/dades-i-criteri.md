@@ -19,13 +19,13 @@ Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocu
 
 En el cas dels Oscar, la categoria de millor pel·lícula internacional parteix d’una única candidatura oficial per país, seleccionada per l’acadèmia o comitè nacional corresponent. Per no limitar el reconeixement acadèmic a aquesta única via, l’estudi incorpora també les nominacions i premis obtinguts en qualsevol altra categoria.
 
-Els corpus dels Oscar i els EFA no són excloents: una mateixa pel·lícula pot ser reconeguda per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional. 
+Les nominacions dels Oscar i els EFA no són excloents. Una mateixa pel·lícula pot estar nominada per totes dues acadèmies. Als festivals, en canvi, les condicions d’estrena i exclusivitat fan que la presència d’un mateix film en més d’una de les competicions principals dels festivals de classe A sigui excepcional. 
 
 En termes de pes institucional i projecció pública, els Oscar ocupen una posició clarament superior. Els EFA tenen un impacte molt menor. La seva inclusió respon menys a una equivalència real amb els Oscar que a la voluntat, encara no gaire reeixida, de construir un espai europeu de reconeixement compartit.
 
 ## Coproduccions internacionals
 
-A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, queden fora del corpus.
+A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, no s’inclouen en l’estudi.
 
 ## Dades d’espectadors
 
