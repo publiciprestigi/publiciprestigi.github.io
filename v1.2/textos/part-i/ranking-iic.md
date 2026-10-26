@@ -11,5 +11,4 @@ Què passa si combinem l’abast d’una pel·lícula entre la població amb el 
 
 - **Líder de la dècada en un mercat sacsejat per la pandèmia.** *Padre no hay más que uno 3* (2022), de la saga familiar de Segura, lidera els anys 2020 amb 2,6M d'espectadors, tot i ser la #50 històrica. En un mercat de només 71M d'entrades, arriba al #8 per quota (3,67%), però al #89 per penetració. L'IIC la situa al #18, reflectint tant la força comercial com els límits del mercat postpandèmic.
 
-L’IIC reuneix aquestes dues dimensions, l’abast entre la població i el protagonisme dins del mercat, sense esborrar les diferències entre èpoques. No substitueix les altres classificacions, sinó que ofereix una lectura complementària de l’èxit de públic.
 <!-- /comentari -->
