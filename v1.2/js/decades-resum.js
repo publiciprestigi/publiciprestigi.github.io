@@ -169,10 +169,13 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
             }
             const i = tooltip.dataPoints[0].dataIndex;
             const d = grups[ordre[i]];
+            const espAcumulats = d.reduce((sum, f) => sum + (f.espectadors || 0), 0);
+            const espText = (espAcumulats / 1e6).toFixed(1).replace('.', ',') + 'M';
             const lider = d.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
             tooltipEl.innerHTML = `
               <div style="font-weight:600;margin-bottom:4px">${etiquetes[ordre[i]]}</div>
               <div>${pcts[i]}% del Top 100 · ${counts[i]} films</div>
+              <div>${espText} ${pipDecT('espectadors acumulats','espectadores acumulados')}</div>
               <div style="margin-top:6px;font-size:11px;color:#ccc">
                 ${pipDecT('Líder','Líder')}: <em><strong>${lider.titol}</strong></em> (${lider.any})
               </div>`;
