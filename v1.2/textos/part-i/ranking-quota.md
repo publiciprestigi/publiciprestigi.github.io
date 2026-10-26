@@ -1,5 +1,5 @@
 <!-- intro -->
-De cada 100 entrades venudes a Espanya aquell any, quantes corresponen a cada pel·lícula? La quota mesura el pes de cada film dins del mercat de la seva època. Els anys 60s i 70s, amb mercats d’entre 200 i 400 milions d’entrades, solen presentar quotes individuals més baixes perquè el públic es repartia entre moltes pel·lícules. Veiem primer el Top 10.
+De cada 100 entrades venudes aquell any quantes corresponen a cada pel·lícula? La quota mesura el pes de cada film dins del mercat de la seva època. Els anys 60s i 70s, amb mercats d’entre 200 i 400 milions d’entrades, solen presentar quotes individuals més baixes perquè el públic es repartia entre moltes pel·lícules. Veiem primer el Top 10.
 
 <!-- /intro -->
 
