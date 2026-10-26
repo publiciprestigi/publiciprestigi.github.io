@@ -368,24 +368,22 @@ function construirComparativaRankings() {
     posicions[k] = new Map(films.filter(f => f[k] != null)
       .sort((a, b) => b[k] - a[k]).map((f, i) => [f.titol, i + 1]));
   });
-  const exemples = ['8 apellidos vascos', 'La muerte tenía un precio',
-    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3'];
+  const exemples = ['La muerte tenía un precio', 'Mujeres al borde de un ataque de nervios',
+    'Padre no hay más que uno 3'];
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   cont.innerHTML =
     '<h3 class="pip-rankcomp-titol">' + pipT('Què aporta l’IIC als rànquings?', '¿Qué aporta el IIC a los rankings?') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'Les quatre mètriques poden donar lectures diferents d’un mateix èxit. Aquests casos mostren com l’IIC relaciona la penetració demogràfica i la quota de mercat.',
-      'Las cuatro métricas pueden ofrecer lecturas distintas de un mismo éxito. Estos casos muestran cómo el IIC relaciona la penetración demográfica y la cuota de mercado.'
+      'La penetració i la quota poden donar lectures molt diferents d’una mateixa pel·lícula. Tres exemples mostren com l’IIC les combina.',
+      'La penetración y la cuota pueden ofrecer lecturas muy distintas de una misma película. Tres ejemplos muestran cómo las combina el IIC.'
     ) + '</p>' +
+    '<div class="pip-rankcomp-exemples" id="pip-rankcomp-exemples"></div>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
     '<div class="pip-rankcomp-explora"><label class="pip-rankcomp-label" for="pip-rankcomp-tria">' +
-    pipT('Consulta una pel·lícula del Top 100', 'Consulta una película del Top 100') +
+    pipT('Consulta una altra pel·lícula del Top 100', 'Consulta otra película del Top 100') +
     '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select></div>' +
     '<ul class="pip-rankcomp-lectures">' +
-    '<li><em>8 apellidos vascos</em> ' + pipT(
-      'lidera els quatre rànquings. Quan les mesures coincideixen, l’IIC no altera la interpretació del seu èxit.',
-      'lidera los cuatro rankings. Cuando las medidas coinciden, el IIC no altera la interpretación de su éxito.') + '</li>' +
     '<li><em>La muerte tenía un precio</em> ' + pipT(
       'és #2 per penetració i #40 per quota. L’IIC la situa a l’#11, recollint el gran abast demogràfic d’un film estrenat en un mercat molt ampli.',
       'es #2 por penetración y #40 por cuota. El IIC la sitúa en el #11, recogiendo el gran alcance demográfico de un film estrenado en un mercado muy amplio.') + '</li>' +
@@ -400,40 +398,70 @@ function construirComparativaRankings() {
       'L’IIC no substitueix les altres mesures. Les combina per comparar el pes relatiu dels èxits en èpoques diferents.',
       'El IIC no sustituye las otras medidas. Las combina para comparar el peso relativo de los éxitos en épocas distintas.') +
     '</p>';
-  const select = cont.querySelector('#pip-rankcomp-tria');
-  const initial = document.createElement('option');
-  initial.value = '';
-  initial.textContent = pipT('Quatre exemples', 'Cuatro ejemplos');
-  select.appendChild(initial);
+  const tria = cont.querySelector('#pip-rankcomp-tria');
+  const grup = cont.querySelector('#pip-rankcomp-exemples');
+  const grafic = cont.querySelector('#pip-rankcomp-grafic');
+  const opcioInicial = document.createElement('option');
+  opcioInicial.value = '';
+  opcioInicial.textContent = pipT('— Escull una pel·lícula —', '— Elige una película —');
+  tria.appendChild(opcioInicial);
   [...films].sort((a, b) => b.espectadors - a.espectadors).forEach((f, i) => {
     const opt = document.createElement('option');
     opt.value = f.titol;
     opt.textContent = '#' + (i + 1) + ' · ' + f.titol + ' (' + f.any + ')';
-    select.appendChild(opt);
+    tria.appendChild(opt);
   });
-  const graph = cont.querySelector('#pip-rankcomp-grafic');
-  const ranks = t => camps.map(k => posicions[k].get(t));
+  let seleccionat = exemples[0];
+  exemples.forEach(t => {
+    const boto = document.createElement('button');
+    boto.type = 'button';
+    boto.className = 'pip-rankcomp-cas-btn';
+    boto.textContent = t;
+    boto.dataset.film = t;
+    boto.addEventListener('click', () => { seleccionat = t; tria.value = ''; dibuixar(); });
+    grup.appendChild(boto);
+  });
+  const xs = [90, 260, 430, 600];
+  const yy = n => 53 + (n - 1) * 2.45;
   function dibuixar() {
-    const casos = select.value ? [select.value] : exemples;
-    let html = '';
-    casos.forEach(t => {
-      const f = films.find(f => f.titol === t);
-      if (!f) return;
-      const p = ranks(t);
-      html += '<div class="pip-rankcomp-cas"><div class="pip-rankcomp-film"><em>' +
-        esc(t) + '</em> <span>(' + f.any + ')</span></div>' +
-        '<div class="pip-rankcomp-barres">' +
-        p.map((v, i) => {
-          const ample = Number.isFinite(v) ? Math.max(1, 101 - v) : 0;
-          return '<div class="pip-rankcomp-barra-fila' + (i === 3 ? ' pip-rankcomp-barra-iic' : '') + '">' +
-            '<span class="pip-rankcomp-metrica">' + esc(labels[i]) + '</span>' +
-            '<div class="pip-rankcomp-pista"><span class="pip-rankcomp-valor" style="width:' + ample +
-            '%"></span></div><span class="pip-rankcomp-num">#' + (v || '—') + '</span></div>';
-        }).join('') + '</div></div>';
+    grup.querySelectorAll('button').forEach(b => {
+      const actiu = b.dataset.film === seleccionat;
+      b.classList.toggle('actiu', actiu);
+      b.setAttribute('aria-pressed', String(actiu));
     });
-    graph.innerHTML = html;
+    const f = films.find(f => f.titol === seleccionat);
+    if (!f) return;
+    const ranks = camps.map(k => posicions[k].get(seleccionat));
+    let svg = '<svg viewBox="0 0 690 330" role="img" aria-label="' +
+      esc(pipT('Variacions de posició als quatre rànquings', 'Variaciones de posición en los cuatro rankings')) +
+      '" xmlns="http://www.w3.org/2000/svg">';
+    [1,25,50,75,100].forEach(v => {
+      const y = yy(v);
+      svg += '<line x1="89" y1="'+y+'" x2="601" y2="'+y+
+        '" stroke="currentColor" stroke-opacity=".10" stroke-dasharray="3 5"/>' +
+        '<text x="58" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
+    });
+    xs.forEach((x,i) => {
+      svg += '<line x1="'+x+'" y1="48" x2="'+x+'" y2="304" stroke="currentColor" stroke-opacity=".2"/>' +
+        '<text x="'+x+'" y="22" text-anchor="middle" font-size="13" fill="currentColor"'+
+        (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
+    });
+    svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
+      '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
+    ranks.forEach((v,i) => {
+      const x=xs[i],y=yy(v),c=i===3?'#35678b':'#8697a4';
+      svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
+        '<text x="'+(x+11)+'" y="'+(y-9)+'" font-size="13" font-weight="'+(i===3?'700':'500')+
+        '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>';
+    });
+    svg+='</svg>';
+    grafic.innerHTML='<div class="pip-rankcomp-film"><em>'+esc(f.titol)+'</em> <span>('+f.any+')</span></div>'+svg;
   }
-  select.addEventListener('change', dibuixar);
+  tria.addEventListener('change', () => {
+    if (tria.value) seleccionat=tria.value;
+    else seleccionat=exemples[0];
+    dibuixar();
+  });
   dibuixar();
 }
 
