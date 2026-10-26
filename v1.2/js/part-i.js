@@ -323,7 +323,12 @@ function construirRànquingDirectors() {
     const totalDirs = llista1.length;
     const txtPct = n => n.toFixed(1).replace('.', ',') + '%';
     concentracio.innerHTML = `
-      <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic en deu directors','La concentración del público en diez directores')}</h4>
+      <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic en deu directors (1965–2025)','La concentración del público en diez directores (1965–2025)')}</h4>
+      <div class="pip-dir-concentracio-magnituds">
+        <div class="pip-dir-concentracio-dada"><span class="pip-dir-concentracio-valor">${totalDirs}</span><span class="pip-dir-concentracio-etiqueta">${pipT('directors','directores')}</span></div>
+        <div class="pip-dir-concentracio-dada"><span class="pip-dir-concentracio-valor">${totalFilms}</span><span class="pip-dir-concentracio-etiqueta">${pipT('pel·lícules','películas')}</span></div>
+        <div class="pip-dir-concentracio-dada"><span class="pip-dir-concentracio-valor">${(totalEsp / 1e6).toFixed(1).replace('.', ',')}M</span><span class="pip-dir-concentracio-etiqueta">${pipT('espectadors','espectadores')}</span></div>
+      </div>
       <div class="pip-dir-concentracio-barra" role="img" aria-label="${pipT('Deu primers directors','Diez primeros directores')}: ${txtPct(pctPrimers)}; ${pipT('resta','resto')}: ${txtPct(pctResta)}">
         <div class="pip-dir-concentracio-segment pip-dir-concentracio-primers" style="width:${pctPrimers}%">${txtPct(pctPrimers)}</div>
         <div class="pip-dir-concentracio-segment pip-dir-concentracio-resta" style="width:${pctResta}%">${txtPct(pctResta)}</div>
