@@ -353,6 +353,98 @@ window.expandirD2 = function(btn) {
   btn.textContent = btn.textContent.startsWith('+') ? pipHide() : pipViewFullList();
 };
 
+
+/* Comparació transversal dels quatre rànquings. Mateix corpus Top 100 i
+   mateix ordenament que les taules, incloent-hi empats estables. */
+function construirComparativaRankings() {
+  const cont = document.getElementById('pip-comparativa-rankings');
+  if (!cont) return;
+  const films = filmsData.filter(f => f.in_top100);
+  const camps = ['espectadors', 'penetracio', 'quota', 'iic'];
+  const labels = PIP_ES ? ['Espectadores', 'Penetración', 'Cuota', 'IIC'] :
+    ['Espectadors', 'Penetració', 'Quota', 'IIC'];
+  const posicions = {};
+  camps.forEach(k => {
+    posicions[k] = new Map(films.filter(f => f[k] != null)
+      .sort((a, b) => b[k] - a[k])
+      .map((f, i) => [f.titol, i + 1]));
+  });
+  const exemples = ['8 apellidos vascos', 'La muerte tenía un precio',
+    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3',
+    'Los otros'].filter(t => films.some(f => f.titol === t));
+  const color = ['#577a9d', '#b98248', '#608f75', '#a76a88', '#777d88'];
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  cont.innerHTML = 
+    '<h3 class="pip-rankcomp-titol">' + pipT('Quatre mirades sobre l’èxit', 'Cuatro miradas sobre el éxito') + '</h3>' +
+    '<p class="pip-rankcomp-intro">' + pipT(
+      'Com canvia la posició d’una pel·lícula segons la manera de mesurar-ne el públic? Les línies mostren cinc casos representatius. Tria qualsevol film del Top 100 per destacar-ne el recorregut.',
+      '¿Cómo cambia la posición de una película según cómo se mida su público? Las líneas muestran cinco casos representativos. Elige cualquier película del Top 100 para destacar su recorrido.'
+    ) + '</p>' +
+    '<label class="pip-rankcomp-label" for="pip-rankcomp-tria">' + pipT('Pel·lícula', 'Película') + '</label> ' +
+    '<select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select>' +
+    '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
+    '<div class="pip-rankcomp-detall" id="pip-rankcomp-detall" aria-live="polite"></div>' +
+    '<p class="pip-rankcomp-nota">' + pipT(
+      'Les posicions es calculen sobre les mateixes 100 pel·lícules dels rànquings anteriors. Un número més baix indica una posició més alta. L’IIC combina quota i penetració, no és una mitjana de posicions.',
+      'Las posiciones se calculan sobre las mismas 100 películas de los rankings anteriores. Un número menor indica una posición superior. El IIC combina cuota y penetración, no es una media de posiciones.'
+    ) + '</p>';
+  const select = cont.querySelector('#pip-rankcomp-tria');
+  [...films].sort((a, b) => a.titol.localeCompare(b.titol, PIP_ES ? 'es' : 'ca')).forEach(f => {
+    const opt = document.createElement('option');
+    opt.value = f.titol;
+    opt.textContent = f.titol + ' (' + f.any + ')';
+    select.appendChild(opt);
+  });
+  select.value = exemples.includes('La muerte tenía un precio') ?
+    'La muerte tenía un precio' : films[0].titol;
+  const graph = cont.querySelector('#pip-rankcomp-grafic');
+  const detall = cont.querySelector('#pip-rankcomp-detall');
+  const x = [110, 310, 510, 710];
+  const y = pos => 57 + (pos - 1) * 2.5;
+  const punt = (t, k) => posicions[k].get(t);
+  function draw() {
+    const seleccionat = select.value;
+    const inclosos = [...new Set([...exemples, seleccionat])];
+    const linia = (t, c, sel) => {
+      const points = camps.map((k, i) => ({ x: x[i], y: y(punt(t, k)), p: punt(t, k) }))
+        .filter(d => Number.isFinite(d.y));
+      if (points.length !== 4) return '';
+      const d = points.map((v, i) => (i ? 'L' : 'M') + v.x + ' ' + v.y.toFixed(2)).join(' ');
+      return '<path d="' + d + '" fill="none" stroke="' + c + '" stroke-width="' + (sel ? 4 : 2) +
+        '" opacity="' + (sel ? 1 : .40) + '" stroke-linejoin="round" />' +
+        points.map(v => '<circle cx="' + v.x + '" cy="' + v.y.toFixed(2) +
+          '" r="' + (sel ? 6 : 3) + '" fill="' + c + '" stroke="white" stroke-width="' + (sel ? 1.5 : .5) + '"/>').join('');
+    };
+    let svg = '<svg viewBox="0 0 820 332" role="img" aria-label="' +
+      esc(pipT('Comparació de les posicions als quatre rànquings',
+        'Comparación de posiciones en los cuatro rankings')) +
+      '" xmlns="http://www.w3.org/2000/svg">';
+    [1, 25, 50, 75, 100].forEach(p => {
+      const yy = y(p);
+      svg += '<line x1="110" y1="' + yy + '" x2="710" y2="' + yy +
+        '" stroke="currentColor" stroke-opacity=".10" stroke-dasharray="3 5"/>' +
+        '<text x="89" y="' + (yy + 4) + '" fill="currentColor" opacity=".65" font-size="12" text-anchor="end">#' + p + '</text>';
+    });
+    camps.forEach((k, i) => {
+      svg += '<line x1="' + x[i] + '" y1="51" x2="' + x[i] +
+        '" y2="311" stroke="currentColor" stroke-opacity=".22"/>' +
+        '<text x="' + x[i] + '" y="25" text-anchor="middle" fill="currentColor" font-size="14" font-weight="600">' +
+        esc(labels[i]) + '</text>';
+    });
+    inclosos.filter(t => t !== seleccionat).forEach(t => svg += linia(t, color[exemples.indexOf(t)] || '#92999f', false));
+    svg += linia(seleccionat, '#b85d36', true);
+    svg += '</svg>';
+    graph.innerHTML = svg;
+    const fs = films.find(f => f.titol === seleccionat);
+    detall.innerHTML = '<strong><em>' + esc(seleccionat) + '</em></strong> ' +
+      '<span>(' + (fs ? fs.any : '') + ')</span> · ' +
+      camps.map((k, i) => esc(labels[i]) + ' <strong>#' + (punt(seleccionat, k) || '—') + '</strong>').join(' · ');
+  }
+  select.addEventListener('change', draw);
+  draw();
+}
+
 function construirRànquings() {
   construirRànquing('espectadors', 'taula-espectadors', pipT('Espectadors','Espectadores'));
   construirRànquing('penetracio',  'taula-penetracio',  pipT('Penetració','Penetración'));
