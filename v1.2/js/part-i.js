@@ -450,7 +450,7 @@ function construirComparativaRankings() {
     svg += '<text x="364" y="23" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
       '<tspan font-style="italic" font-weight="700" fill="#363737">'+esc(f.titol)+'</tspan>'+
       '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+') · '+esc(f.director)+'</tspan></text>'+
-      '<text x="364" y="44" text-anchor="middle" font-size="13" font-weight="500" fill="#555" font-family="Inter, sans-serif">'+esc(posDecada)+'</text>';
+      '<text x="364" y="44" text-anchor="middle" font-size="13" font-weight="400" fill="#777" font-family="Inter, sans-serif">'+esc(posDecada)+'</text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
