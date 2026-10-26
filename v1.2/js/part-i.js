@@ -311,41 +311,6 @@ function construirRànquingDirectors() {
       </tbody>
     </table>`;
 
-  // Distribució dels espectadors: deu primers directors vs. resta del Top 100.
-  const concentracio = document.getElementById('pip-directors-concentracio');
-  if (concentracio && totalEsp > 0) {
-    const primers = llista1.slice(0, 10);
-    const espPrimers = primers.reduce((sum, d) => sum + d.espTop, 0);
-    const pctPrimers = espPrimers / totalEsp * 100;
-    const pctResta = 100 - pctPrimers;
-    const filmsPrimers = primers.reduce((sum, d) => sum + d.top100, 0);
-    const totalFilms = filmsData.filter(f => f.in_top100).length;
-    const totalDirs = llista1.length;
-    const txtPct = n => n.toFixed(1).replace('.', ',') + '%';
-    concentracio.innerHTML = `
-      <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic per directors al Top 100 (1965–2025)','La concentración del público por directores en el Top 100 (1965–2025)')}</h4>
-      <div class="pip-dir-concentracio-totals">
-        <span class="pip-dir-concentracio-total"><strong>${totalDirs}</strong> ${pipT('directors','directores')}</span>
-        <span class="pip-dir-concentracio-total-sep" aria-hidden="true">·</span>
-        <span class="pip-dir-concentracio-total"><strong>${(totalEsp / 1e6).toFixed(1).replace('.', ',')}M</strong> ${pipT('espectadors','espectadores')}</span>
-      </div>
-      <div class="pip-dir-concentracio-grups">
-        <div class="pip-dir-concentracio-grup">
-          <div class="pip-dir-concentracio-grup-etiqueta"><i class="pip-dir-concentracio-clau pip-dir-concentracio-primers"></i>${pipT('10 primers directors','10 primeros directores')}</div>
-          <span class="pip-dir-concentracio-grup-dada"><strong>${txtPct(pctPrimers)}</strong> · ${filmsPrimers} ${pipT('films','películas')}</span>
-        </div>
-        <div class="pip-dir-concentracio-grup">
-          <div class="pip-dir-concentracio-grup-etiqueta"><i class="pip-dir-concentracio-clau pip-dir-concentracio-resta"></i>${totalDirs - primers.length} ${pipT('directors restants','directores restantes')}</div>
-          <span class="pip-dir-concentracio-grup-dada"><strong>${txtPct(pctResta)}</strong> · ${totalFilms - filmsPrimers} ${pipT('films','películas')}</span>
-        </div>
-      </div>
-      <div class="pip-dir-concentracio-barra" role="img" aria-label="${pipT('Deu primers directors','Diez primeros directores')}: ${txtPct(pctPrimers)}; ${pipT('resta','resto')}: ${txtPct(pctResta)}">
-        <div class="pip-dir-concentracio-segment pip-dir-concentracio-primers" style="flex:${espPrimers}"></div>
-        <div class="pip-dir-concentracio-segment pip-dir-concentracio-resta" style="flex:${totalEsp - espPrimers}"></div>
-      </div>
-      <p class="pip-dir-concentracio-nota">${pipT('Distribució dels espectadors acumulats de les 100 pel·lícules del Top 100.','Distribución de los espectadores acumulados de las 100 películas del Top 100.')}</p>`;
-  }
-
   cont2.innerHTML = `
     <h3 class="subtitol-ranking-gran">${pipT('De tots els films citats (Top 100 + context)','De todos los films citados (Top 100 + contexto)')}</h3>
     <table class="taula-ranking" style="table-layout:fixed">
