@@ -311,6 +311,30 @@ function construirRànquingDirectors() {
       </tbody>
     </table>`;
 
+  // Distribució dels espectadors: deu primers directors vs. resta del Top 100.
+  const concentracio = document.getElementById('pip-directors-concentracio');
+  if (concentracio && totalEsp > 0) {
+    const primers = llista1.slice(0, 10);
+    const espPrimers = primers.reduce((sum, d) => sum + d.espTop, 0);
+    const pctPrimers = espPrimers / totalEsp * 100;
+    const pctResta = 100 - pctPrimers;
+    const filmsPrimers = primers.reduce((sum, d) => sum + d.top100, 0);
+    const totalFilms = filmsData.filter(f => f.in_top100).length;
+    const totalDirs = llista1.length;
+    const txtPct = n => n.toFixed(1).replace('.', ',') + '%';
+    concentracio.innerHTML = `
+      <h4 class="pip-dir-concentracio-titol">${pipT('La concentració del públic en deu directors','La concentración del público en diez directores')}</h4>
+      <div class="pip-dir-concentracio-barra" role="img" aria-label="${pipT('Deu primers directors','Diez primeros directores')}: ${txtPct(pctPrimers)}; ${pipT('resta','resto')}: ${txtPct(pctResta)}">
+        <div class="pip-dir-concentracio-segment pip-dir-concentracio-primers" style="width:${pctPrimers}%">${txtPct(pctPrimers)}</div>
+        <div class="pip-dir-concentracio-segment pip-dir-concentracio-resta" style="width:${pctResta}%">${txtPct(pctResta)}</div>
+      </div>
+      <div class="pip-dir-concentracio-llegenda">
+        <span>${pipT('10 primers directors','10 primeros directores')} · ${filmsPrimers} ${pipT('films','películas')}</span>
+        <span>${totalDirs - primers.length} ${pipT('directors restants','directores restantes')} · ${totalFilms - filmsPrimers} ${pipT('films','películas')}</span>
+      </div>
+      <p class="pip-dir-concentracio-nota">${pipT('Distribució dels espectadors acumulats de les 100 pel·lícules del Top 100.','Distribución de los espectadores acumulados de las 100 películas del Top 100.')}</p>`;
+  }
+
   cont2.innerHTML = `
     <h3 class="subtitol-ranking-gran">${pipT('De tots els films citats (Top 100 + context)','De todos los films citados (Top 100 + contexto)')}</h3>
     <table class="taula-ranking" style="table-layout:fixed">
