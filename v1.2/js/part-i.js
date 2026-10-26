@@ -368,8 +368,8 @@ function construirComparativaRankings() {
     posicions[k] = new Map(films.filter(f => f[k] != null)
       .sort((a, b) => b[k] - a[k]).map((f, i) => [f.titol, i + 1]));
   });
-  const exemples = ['La ciudad no es para mí', 'Mujeres al borde de un ataque de nervios',
-    'Los santos inocentes', 'Padre no hay más que uno 3'];
+  const exemples = ['La ciudad no es para mí', 'Los santos inocentes',
+    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3'];
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   cont.innerHTML =
