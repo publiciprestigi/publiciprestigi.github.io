@@ -443,10 +443,13 @@ function construirComparativaRankings() {
         svg += '<text x="'+x+'" y="313" text-anchor="middle" font-size="11" font-weight="700" fill="#363737">'+esc(labels[i])+'</text>';
       }
     });
-    // Identificació compacta, sense banda cromàtica ni nova codificació.
-    svg += '<text x="364" y="25" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
-      '<tspan font-style="italic" font-weight="700" fill="#363737">'+esc(f.titol)+'</tspan>'+
-      '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+') · '+esc(f.director)+'</tspan></text>';
+    // Identificació en tres línies, amb posició dins la dècada.
+    const decadaText = PIP_ES
+      ? ({'60s':'años 60','70s':'años 70','80s':'años 80','90s':'años 90','2000s':'años 2000','2010s':'años 2010','2020s':'años 2020'}[f.decada] || f.decada)
+      : ({'60s':'anys 60','70s':'anys 70','80s':'anys 80','90s':'anys 90','2000s':'anys 2000','2010s':'anys 2010','2020s':'anys 2020'}[f.decada] || f.decada);
+    svg += '<text x="364" y="18" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#363737" font-family="Inter, sans-serif">'+esc(f.titol)+'</text>'+
+      '<text x="364" y="35" text-anchor="middle" font-size="12" fill="#777" font-family="Inter, sans-serif">('+f.any+') · '+esc(f.director)+'</text>'+
+      '<text x="364" y="51" text-anchor="middle" font-size="11" fill="#555" font-family="Inter, sans-serif">#'+f.pos_decade+' '+esc(PIP_ES ? 'de los ' : 'dels ')+esc(decadaText)+'</text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
