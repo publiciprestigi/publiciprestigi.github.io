@@ -358,6 +358,7 @@ function construirRànquings() {
   construirRànquing('penetracio',  'taula-penetracio',  pipT('Penetració','Penetración'));
   construirRànquing('quota',       'taula-quota',       pipT('Quota de mercat','Cuota de mercado'));
   construirRànquing('iic',         'taula-iic',         'IIC');
+  construirComparativaRankings();
   construirRànquingDirectors();
 }
 
