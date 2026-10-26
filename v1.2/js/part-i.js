@@ -409,7 +409,7 @@ function construirComparativaRankings() {
     grup.appendChild(boto);
   });
   const xs = [90, 260, 430, 600];
-  const yy = n => 53 + (n - 1) * 2.45;
+  const yy = n => 106 + (n - 1) * 2.05;
   function dibuixar() {
     grup.querySelectorAll('button').forEach(b => {
       const actiu = b.dataset.film === seleccionat;
@@ -419,7 +419,7 @@ function construirComparativaRankings() {
     const f = films.find(f => f.titol === seleccionat);
     if (!f) return;
     const ranks = camps.map(k => posicions[k].get(seleccionat));
-    let svg = '<svg viewBox="0 0 690 330" role="img" aria-label="' +
+    let svg = '<svg viewBox="0 0 690 355" role="img" aria-label="' +
       esc(pipT('Variacions de posició als quatre rànquings', 'Variaciones de posición en los cuatro rankings')) +
       '" xmlns="http://www.w3.org/2000/svg">';
     [1,25,50,75,100].forEach(v => {
@@ -429,7 +429,7 @@ function construirComparativaRankings() {
         '<text x="58" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
     });
     xs.forEach((x,i) => {
-      svg += '<line x1="'+x+'" y1="48" x2="'+x+'" y2="304" stroke="currentColor" stroke-opacity=".2"/>' +
+      svg += '<line x1="'+x+'" y1="101" x2="'+x+'" y2="317" stroke="currentColor" stroke-opacity=".2"/>' +
         '<text x="'+x+'" y="22" text-anchor="middle" font-size="13" fill="currentColor"'+
         (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
     });
@@ -450,7 +450,7 @@ function construirComparativaRankings() {
       const etiquetaX = x + costat * 12;
       const ancoratge = costat === 1 ? 'start' : 'end';
       const alDamunt = i === 3 ? y > posterior : (i === 0 ? y > posterior : (anterior + posterior) / 2 < y);
-      const etiquetaY = y < 102 ? y + 29 : y > 260 ? y - 30 : y + (alDamunt ? 27 : -27);
+      const etiquetaY = y < 150 ? y + 26 : y > 280 ? y - 29 : y + (alDamunt ? 26 : -26);
       svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
         '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="'+ancoratge+'" font-size="13" font-weight="'+(i===3?'700':'500')+
         '" paint-order="stroke" stroke="#fff" stroke-width="4" stroke-linejoin="round" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
