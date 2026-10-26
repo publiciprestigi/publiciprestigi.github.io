@@ -441,9 +441,9 @@ function construirComparativaRankings() {
           (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
       }
     });
-    svg += '<text x="364" y="76" text-anchor="middle" font-size="16" fill="#363737" font-family="Inter, sans-serif">'+
-      '<tspan font-style="italic" font-weight="600">'+esc(f.titol)+'</tspan>'+
-      '<tspan font-style="normal" font-weight="400" font-size="12" fill="#777"> ('+f.any+')</tspan></text>';
+    svg += '<text x="364" y="76" text-anchor="middle" font-size="16" fill="#35678b" font-family="Inter, sans-serif">'+
+      '<tspan font-style="italic" font-weight="400">'+esc(f.titol)+'</tspan>'+
+      '<tspan font-style="normal" font-weight="400"> ('+f.any+')</tspan></text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
