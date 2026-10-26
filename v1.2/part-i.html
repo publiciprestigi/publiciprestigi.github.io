@@ -40,24 +40,20 @@ body.pip-en-portada .nav-seccions { display: none; }
 .pip-rankcomp{margin:42px 0 12px;border-top:1px solid #d9dde1;padding-top:25px;color:inherit}
 .pip-rankcomp-titol{font-size:1.2rem;font-weight:600;line-height:1.35;margin:0 0 13px}
 .pip-rankcomp-intro{font-size:1rem;line-height:1.6;margin:0 0 19px;max-width:800px}
-.pip-rankcomp-grafic{max-width:780px;margin:21px auto 18px}
-.pip-rankcomp-cas{padding:0 0 20px;margin-bottom:21px;border-bottom:1px solid #e1e4e7}
-.pip-rankcomp-film{font-size:.96rem;font-weight:550;margin-bottom:12px;line-height:1.35}
-.pip-rankcomp-film span{font-size:.86rem;color:#777;font-weight:400}
-.pip-rankcomp-barra-fila{display:grid;grid-template-columns:105px minmax(0,1fr) 46px;gap:12px;align-items:center;min-height:28px}
-.pip-rankcomp-metrica{font-size:.81rem;color:#686f75}
-.pip-rankcomp-pista{height:9px;background:#e8ebee;position:relative;border-radius:1px;overflow:hidden}
-.pip-rankcomp-valor{display:block;height:100%;background:#9eabb4;border-radius:1px}
-.pip-rankcomp-barra-iic .pip-rankcomp-valor{background:#35678b}
-.pip-rankcomp-barra-iic .pip-rankcomp-metrica,.pip-rankcomp-barra-iic .pip-rankcomp-num{color:#35678b;font-weight:700}
-.pip-rankcomp-num{text-align:right;white-space:nowrap;font-size:.86rem;font-variant-numeric:tabular-nums}
-.pip-rankcomp-explora{max-width:780px;margin:14px auto 25px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.pip-rankcomp-exemples{display:flex;gap:8px;flex-wrap:wrap;max-width:790px;margin:20px auto 12px}
+.pip-rankcomp-cas-btn{padding:8px 11px;background:transparent;border:1px solid #c6cdd2;border-radius:3px;color:inherit;font:inherit;font-size:.86rem;cursor:pointer}
+.pip-rankcomp-cas-btn.actiu{border-color:#35678b;color:#35678b;font-weight:600}
+.pip-rankcomp-grafic{max-width:790px;margin:14px auto 18px}
+.pip-rankcomp-grafic svg{display:block;width:100%;height:auto}
+.pip-rankcomp-film{font-size:.95rem;font-weight:550;line-height:1.3;margin-bottom:6px}
+.pip-rankcomp-film span{font-size:.85rem;color:#777;font-weight:400}
+.pip-rankcomp-explora{max-width:790px;margin:15px auto 25px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
 .pip-rankcomp-label{font-size:.9rem}
 .pip-rankcomp-select{min-width:230px;max-width:100%;flex:1;border:1px solid #b7bfc7;border-radius:4px;padding:8px 10px;background:transparent;color:inherit;font:inherit;font-size:.9rem}
 .pip-rankcomp-lectures{max-width:800px;margin:25px auto 12px;padding-left:22px;font-size:.95rem;line-height:1.65}
 .pip-rankcomp-lectures li{margin:0 0 14px;padding-left:4px}
 .pip-rankcomp-tancament{max-width:800px;margin:17px auto 0;font-size:.95rem;line-height:1.6}
-@media(max-width:640px){.pip-rankcomp{margin-top:31px}.pip-rankcomp-barra-fila{grid-template-columns:88px minmax(0,1fr) 38px;gap:8px}.pip-rankcomp-metrica{font-size:.74rem}.pip-rankcomp-select{flex-basis:100%}}
+@media(max-width:640px){.pip-rankcomp{margin-top:31px}.pip-rankcomp-grafic{overflow-x:auto}.pip-rankcomp-grafic svg{min-width:610px}.pip-rankcomp-select{flex-basis:100%}}
 </style>
 </head>
 <body class="amb-sidebar part-i">
@@ -448,7 +444,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <script src="js/textos.js"></script>
 <script src="js/mercat.js?v=20261015hoverfinal"></script>
 <script src="js/decades-resum.js?v=20261015hoverfinal"></script>
-<script src="js/part-i.js?v=20261026comparativarankings6"></script>
+<script src="js/part-i.js?v=20261026comparativarankings7"></script>
 <script src="js/notes-tooltip.js"></script>
 <!-- ── Drawer mòbil ── -->
 <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
