@@ -373,31 +373,18 @@ function construirComparativaRankings() {
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   cont.innerHTML =
-    '<h3 class="pip-rankcomp-titol">' + pipT('Què aporta l’IIC als rànquings?', '¿Qué aporta el IIC a los rankings?') + '</h3>' +
+    '<h3 class="pip-rankcomp-titol">' + pipT('Com varien els rànquings i què aporta l’IIC?', '¿Cómo varían los rankings y qué aporta el IIC?') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'La penetració i la quota poden donar lectures molt diferents d’una mateixa pel·lícula. Tres exemples mostren com l’IIC les combina.',
-      'La penetración y la cuota pueden ofrecer lecturas muy distintas de una misma película. Tres ejemplos muestran cómo las combina el IIC.'
-    ) + '</p>' +
+      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* i *Padre no hay más que uno 3* mostren tres maneres diferents de relacionar l’èxit de públic amb el context de cada època. L’IIC combina la penetració demogràfica i la quota de mercat per oferir una lectura conjunta d’aquestes diferències.',
+      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* y *Padre no hay más que uno 3* muestran tres maneras distintas de relacionar el éxito de público con el contexto de cada época. El IIC combina la penetración demográfica y la cuota de mercado para ofrecer una lectura conjunta de estas diferencias.'
+    ).replace(/\\*([^*]+)\\*/g, '<em>$1</em>') + '</p>' +
+    '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques', 'Variación de posiciones según las cuatro métricas') + '</h4>' +
     '<div class="pip-rankcomp-exemples" id="pip-rankcomp-exemples"></div>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
     '<div class="pip-rankcomp-explora"><label class="pip-rankcomp-label" for="pip-rankcomp-tria">' +
     pipT('Consulta una altra pel·lícula del Top 100', 'Consulta otra película del Top 100') +
     '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select></div>' +
-    '<ul class="pip-rankcomp-lectures">' +
-    '<li><em>La muerte tenía un precio</em> ' + pipT(
-      'és #2 per penetració i #40 per quota. L’IIC la situa a l’#11, recollint el gran abast demogràfic d’un film estrenat en un mercat molt ampli.',
-      'es #2 por penetración y #40 por cuota. El IIC la sitúa en el #11, recogiendo el gran alcance demográfico de un film estrenado en un mercado muy amplio.') + '</li>' +
-    '<li><em>Mujeres al borde de un ataque de nervios</em> ' + pipT(
-      'passa del #22 per espectadors al #6 per quota i al #9 per IIC. El seu pes en el mercat de 1988 supera el que suggereix la xifra absoluta d’entrades.',
-      'pasa del #22 por espectadores al #6 por cuota y al #9 por IIC. Su peso en el mercado de 1988 supera lo que sugiere la cifra absoluta de entradas.') + '</li>' +
-    '<li><em>Padre no hay más que uno 3</em> ' + pipT(
-      'és #8 per quota però #89 per penetració. L’IIC la situa al #18 i equilibra una quota molt alta amb l’abast demogràfic més limitat.',
-      'es #8 por cuota pero #89 por penetración. El IIC la sitúa en el #18 y equilibra una cuota muy alta con un alcance demográfico más limitado.') + '</li>' +
-    '</ul>' +
-    '<p class="pip-rankcomp-tancament">' + pipT(
-      'L’IIC no substitueix les altres mesures. Les combina per comparar el pes relatiu dels èxits en èpoques diferents.',
-      'El IIC no sustituye las otras medidas. Las combina para comparar el peso relativo de los éxitos en épocas distintas.') +
-    '</p>';
+    '<p class="pip-rankcomp-nota">' + pipT('Les fletxes indiquen la variació respecte al rànquing per espectadors.', 'Las flechas indican la variación respecto al ranking por espectadores.') + '</p>';
   const tria = cont.querySelector('#pip-rankcomp-tria');
   const grup = cont.querySelector('#pip-rankcomp-exemples');
   const grafic = cont.querySelector('#pip-rankcomp-grafic');
@@ -456,10 +443,18 @@ function construirComparativaRankings() {
       const diff = ranks[0] - v;
       const variacio = i === 0 ? '' : diff > 0 ? '↑' + diff : diff < 0 ? '↓' + Math.abs(diff) : '=';
       const colorVar = diff > 0 ? '#27ae60' : diff < 0 ? '#c0392b' : '#777';
+      // Situem les etiquetes fora del segment adjacent: evitem que la trajectòria les travessi.
+      const anterior = i ? yy(ranks[i - 1]) : y;
+      const posterior = i < ranks.length - 1 ? yy(ranks[i + 1]) : y;
+      const costat = i === 3 ? -1 : 1;
+      const etiquetaX = x + costat * 12;
+      const ancoratge = costat === 1 ? 'start' : 'end';
+      const alDamunt = i === 3 ? y > posterior : (i === 0 ? y > posterior : (anterior + posterior) / 2 < y);
+      const etiquetaY = y + (alDamunt ? 22 : -24);
       svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
-        '<text x="'+(x+11)+'" y="'+(y-9)+'" font-size="13" font-weight="'+(i===3?'700':'500')+
+        '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="'+ancoratge+'" font-size="13" font-weight="'+(i===3?'700':'500')+
         '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
-        '<text x="'+(x+11)+'" y="'+(y+15)+'" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+'">'+esc(valor)+
+        '<text x="'+etiquetaX+'" y="'+(etiquetaY+15)+'" text-anchor="'+ancoratge+'" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+'">'+esc(valor)+
         (i === 0 ? '' : '<tspan dx="6" font-weight="600" fill="'+colorVar+'">'+variacio+'</tspan>')+'</text>';
     });
     svg+='</svg>';
