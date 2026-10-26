@@ -1,5 +1,5 @@
 <!-- intro -->
-De cada 100 habitants d’Espanya, quantes entrades es van vendre per veure cada pel·lícula? La penetració té en compte la població de cada època. Això afavoreix els films dels 60s i 70s, quan Espanya tenia entre 32 i 34 milions d’habitants i les sales concentraven bona part del consum cinematogràfic. Veiem primer el Top 10.
+De cada 100 habitants quantes entrades es van vendre per veure cada pel·lícula? La penetració té en compte la població de cada època. Això afavoreix els films dels 60s i 70s, quan Espanya tenia entre 32 i 34 milions d’habitants i les sales concentraven bona part del consum cinematogràfic. Veiem primer el Top 10.
 <!-- /intro -->
 
 <!-- comentari -->
