@@ -455,7 +455,7 @@ function construirComparativaRankings() {
         '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>';
     });
     svg+='</svg>';
-    grafic.innerHTML='<div class="pip-rankcomp-film"><em>'+esc(f.titol)+'</em> <span>('+f.any+')</span></div>'+svg;
+    grafic.innerHTML='<div class="pip-rankcomp-film"><strong><em>'+esc(f.titol)+'</em></strong> <span>('+f.any+')</span></div>'+svg;
   }
   tria.addEventListener('change', () => {
     if (tria.value) seleccionat=tria.value;
