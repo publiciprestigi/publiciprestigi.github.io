@@ -361,8 +361,8 @@ function construirComparativaRankings() {
   if (!cont) return;
   const films = filmsData.filter(f => f.in_top100);
   const camps = ['espectadors', 'penetracio', 'quota', 'iic'];
-  const labels = PIP_ES ? ['Espectadores', 'Penetración', 'Cuota', 'IIC'] :
-    ['Espectadors', 'Penetració', 'Quota', 'IIC'];
+  const labels = PIP_ES ? ['Espectadores', 'Penetración', 'Cuota de mercado', 'IIC'] :
+    ['Espectadors', 'Penetració', 'Quota de mercat', 'IIC'];
   const posicions = {};
   camps.forEach(k => {
     posicions[k] = new Map(films.filter(f => f[k] != null)
@@ -378,13 +378,14 @@ function construirComparativaRankings() {
       'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* i *Padre no hay más que uno 3* mostren tres maneres diferents de relacionar l’èxit de públic amb el context de cada època. L’IIC combina la penetració demogràfica i la quota de mercat per oferir una lectura conjunta d’aquestes diferències.',
       'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. *La muerte tenía un precio*, *Mujeres al borde de un ataque de nervios* y *Padre no hay más que uno 3* muestran tres maneras distintas de relacionar el éxito de público con el contexto de cada época. El IIC combina la penetración demográfica y la cuota de mercado para ofrecer una lectura conjunta de estas diferencias.'
     ).replace(/\*([^*]+)\*/g, '<em>$1</em>') + '</p>' +
-    '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques', 'Variación de posiciones según las cuatro métricas') + '</h4>' +
+    '<div class="pip-rankcomp-figura">' +
+    '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques del Top 100 (1965–2025)', 'Variación de posiciones según las cuatro métricas del Top 100 (1965–2025)') + '</h4>' +
     '<div class="pip-rankcomp-exemples" id="pip-rankcomp-exemples"></div>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
     '<div class="pip-rankcomp-explora"><label class="pip-rankcomp-label" for="pip-rankcomp-tria">' +
     pipT('Consulta una altra pel·lícula del Top 100', 'Consulta otra película del Top 100') +
     '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select></div>' +
-    '<p class="pip-rankcomp-nota">' + pipT('Les fletxes indiquen la variació respecte al rànquing per espectadors.', 'Las flechas indican la variación respecto al ranking por espectadores.') + '</p>';
+    '<p class="pip-rankcomp-nota">' + pipT('Les fletxes indiquen la variació respecte al rànquing per espectadors.', 'Las flechas indican la variación respecto al ranking por espectadores.') + '</p></div>';
   const tria = cont.querySelector('#pip-rankcomp-tria');
   const grup = cont.querySelector('#pip-rankcomp-exemples');
   const grafic = cont.querySelector('#pip-rankcomp-grafic');
@@ -410,7 +411,7 @@ function construirComparativaRankings() {
   });
   // Una columna independent per mètrica i una franja superior reservada als encapçalaments.
   const xs = [106, 278, 450, 622];
-  const yy = n => 125 + (n - 1) * 2.2;
+  const yy = n => 118 + (n - 1) * 2.05;
   function dibuixar() {
     grup.querySelectorAll('button').forEach(b => {
       const actiu = b.dataset.film === seleccionat;
@@ -420,7 +421,7 @@ function construirComparativaRankings() {
     const f = films.find(f => f.titol === seleccionat);
     if (!f) return;
     const ranks = camps.map(k => posicions[k].get(seleccionat));
-    let svg = '<svg viewBox="0 0 750 401" role="img" aria-label="' +
+    let svg = '<svg viewBox="0 0 750 350" role="img" aria-label="' +
       esc(pipT('Variacions de posició als quatre rànquings', 'Variaciones de posición en los cuatro rankings')) +
       '" xmlns="http://www.w3.org/2000/svg">';
     [1,25,50,75,100].forEach(v => {
@@ -430,10 +431,19 @@ function construirComparativaRankings() {
         '<text x="73" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
     });
     xs.forEach((x,i) => {
-      svg += '<line x1="'+x+'" y1="116" x2="'+x+'" y2="352" stroke="currentColor" stroke-opacity=".2"/>' +
-        '<text x="'+x+'" y="32" text-anchor="middle" font-size="14" fill="currentColor"'+
-        (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
+      svg += '<line x1="'+x+'" y1="102" x2="'+x+'" y2="326" stroke="currentColor" stroke-opacity=".2"/>';
+      if (i===2) {
+        svg += '<text x="'+x+'" y="20" text-anchor="middle" font-size="13" fill="currentColor">'+
+          '<tspan x="'+x+'">'+esc(PIP_ES ? 'Cuota de' : 'Quota de')+'</tspan>'+
+          '<tspan x="'+x+'" dy="14">'+esc(PIP_ES ? 'mercado' : 'mercat')+'</tspan></text>';
+      } else {
+        svg += '<text x="'+x+'" y="27" text-anchor="middle" font-size="13" fill="currentColor"'+
+          (i===3?' font-weight="700"':'')+'>'+esc(labels[i])+'</text>';
+      }
     });
+    svg += '<text x="364" y="65" text-anchor="middle" font-size="12" fill="#363737" font-family="Inter, sans-serif">'+
+      '<tspan font-style="italic" font-weight="500">'+esc(f.titol)+'</tspan>'+
+      '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+')</tspan></text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
       '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
     ranks.forEach((v,i) => {
@@ -444,21 +454,18 @@ function construirComparativaRankings() {
       const diff = ranks[0] - v;
       const variacio = i === 0 ? '' : diff > 0 ? '↑' + diff : diff < 0 ? '↓' + Math.abs(diff) : '=';
       const colorVar = diff > 0 ? '#27ae60' : diff < 0 ? '#c0392b' : '#777';
-      // Les dades ocupen una caixa pròpia a la dreta de cada punt. La posició
-      // vertical deixa els valors fora de l'eix superior i de la base del gràfic.
-      const etiquetaX = x + 13;
-      const avall = y < 184;
-      const etiquetaY = y + (avall ? 25 : -27);
-      // La caixa blanca impedeix que la línia de trajectòria travessi els números.
-      svg += '<rect x="'+(etiquetaX-4)+'" y="'+(etiquetaY-15)+'" width="130" height="37" rx="2" fill="#fff"/>' +
-        '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
-        '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="start" font-size="14" font-weight="'+(i===3?'700':'500')+
-        '" fill="'+(i===3?'#35678b':'currentColor')+'">#'+v+'</text>' +
-        '<text x="'+etiquetaX+'" y="'+(etiquetaY+16)+'" text-anchor="start" font-size="12" fill="'+(i===3?'#35678b':'#707880')+'">'+esc(valor)+
+      // Labels sit above/below their points, with a narrow white outline rather than opaque boxes.
+      const etiquetaX=x+12;
+      const etiquetaY=y<175?y+26:y-24;
+      svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
+        '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="start" font-size="13" font-weight="'+(i===3?'700':'500')+
+        '" fill="'+(i===3?'#35678b':'currentColor')+'" paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">#'+v+'</text>' +
+        '<text x="'+etiquetaX+'" y="'+(etiquetaY+15)+'" text-anchor="start" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+
+        '" paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">'+esc(valor)+
         (i === 0 ? '' : '<tspan dx="6" font-weight="600" fill="'+colorVar+'">'+variacio+'</tspan>')+'</text>';
     });
     svg+='</svg>';
-    grafic.innerHTML='<div class="pip-rankcomp-film"><strong><em>'+esc(f.titol)+'</em></strong> <span>('+f.any+')</span></div>'+svg;
+    grafic.innerHTML=svg;
   }
   tria.addEventListener('change', () => {
     if (tria.value) seleccionat=tria.value;
