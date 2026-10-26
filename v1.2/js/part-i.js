@@ -368,15 +368,15 @@ function construirComparativaRankings() {
     posicions[k] = new Map(films.filter(f => f[k] != null)
       .sort((a, b) => b[k] - a[k]).map((f, i) => [f.titol, i + 1]));
   });
-  const exemples = ['Los santos inocentes', 'Mujeres al borde de un ataque de nervios',
-    'Padre no hay más que uno 3'];
+  const exemples = ['La ciudad no es para mí', 'Mujeres al borde de un ataque de nervios',
+    'Los santos inocentes', 'Padre no hay más que uno 3'];
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
     .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   cont.innerHTML =
     '<h3 class="pip-rankcomp-titol">' + pipT('Com varien els rànquings i què aporta l’IIC?', '¿Cómo varían los rankings y qué aporta el IIC?') + '</h3>' +
     '<p class="pip-rankcomp-intro">' + pipT(
-      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. *Los santos inocentes*, *Mujeres al borde de un ataque de nervios* i *Padre no hay más que uno 3* mostren tres maneres diferents de relacionar l’èxit de públic amb el context de cada època. L’IIC combina la penetració demogràfica i la quota de mercat per oferir una lectura conjunta d’aquestes diferències.',
-      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. *Los santos inocentes*, *Mujeres al borde de un ataque de nervios* y *Padre no hay más que uno 3* muestran tres maneras distintas de relacionar el éxito de público con el contexto de cada época. El IIC combina la penetración demográfica y la cuota de mercado para ofrecer una lectura conjunta de estas diferencias.'
+      'Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. El gràfic permet comparar les quatre classificacions i observar com l’IIC relaciona la penetració demogràfica i la quota de mercat. Pots explorar els quatre exemples proposats o seleccionar qualsevol altra pel·lícula del Top 100.',
+      'Las posiciones de una misma película pueden variar considerablemente según la métrica utilizada. El gráfico permite comparar las cuatro clasificaciones y observar cómo el IIC relaciona la penetración demográfica y la cuota de mercado. Puedes explorar los cuatro ejemplos propuestos o seleccionar cualquier otra película del Top 100.'
     ).replace(/\*([^*]+)\*/g, '<em>$1</em>') + '</p>' +
     '<div class="pip-rankcomp-figura">' +
     '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques del Top 100 (1965–2025)', 'Variación de posiciones según las cuatro métricas del Top 100 (1965–2025)') + '</h4>' +
