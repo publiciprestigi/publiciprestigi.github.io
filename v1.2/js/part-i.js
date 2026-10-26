@@ -444,7 +444,7 @@ function construirComparativaRankings() {
       }
     });
     // Identificació compacta, sense banda cromàtica ni nova codificació.
-    svg += '<text x="364" y="32" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
+    svg += '<text x="364" y="25" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
       '<tspan font-style="italic" font-weight="700" fill="#363737">'+esc(f.titol)+'</tspan>'+
       '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+') · '+esc(f.director)+'</tspan></text>';
     svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
