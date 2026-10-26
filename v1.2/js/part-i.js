@@ -415,20 +415,21 @@ function construirComparativaRankings() {
   const ranks = t => camps.map(k => posicions[k].get(t));
   function dibuixar() {
     const casos = select.value ? [select.value] : exemples;
-    let html = '<div class="pip-rankcomp-head"><span>' +
-      pipT('Pel·lícula', 'Película') + '</span>' +
-      labels.map(l => '<span>' + esc(l) + '</span>').join('') + '</div>';
+    let html = '';
     casos.forEach(t => {
       const f = films.find(f => f.titol === t);
       if (!f) return;
       const p = ranks(t);
-      // Una fila per film: les quatre posicions tenen la mateixa escala visual,
-      // sense línies superposades ni codis cromàtics arbitraris.
-      html += '<div class="pip-rankcomp-fila"><div class="pip-rankcomp-film"><em>' +
-        esc(t) + '</em><span>' + f.any + '</span></div>' +
-        p.map((v, i) => '<div class="pip-rankcomp-pos' + (i === 3 ? ' pip-rankcomp-pos-iic' : '') +
-          '"><span class="pip-rankcomp-num">#' + (v || '—') + '</span></div>').join('') +
-        '</div>';
+      html += '<div class="pip-rankcomp-cas"><div class="pip-rankcomp-film"><em>' +
+        esc(t) + '</em> <span>(' + f.any + ')</span></div>' +
+        '<div class="pip-rankcomp-barres">' +
+        p.map((v, i) => {
+          const ample = Number.isFinite(v) ? Math.max(1, 101 - v) : 0;
+          return '<div class="pip-rankcomp-barra-fila' + (i === 3 ? ' pip-rankcomp-barra-iic' : '') + '">' +
+            '<span class="pip-rankcomp-metrica">' + esc(labels[i]) + '</span>' +
+            '<div class="pip-rankcomp-pista"><span class="pip-rankcomp-valor" style="width:' + ample +
+            '%"></span></div><span class="pip-rankcomp-num">#' + (v || '—') + '</span></div>';
+        }).join('') + '</div></div>';
     });
     graph.innerHTML = html;
   }
