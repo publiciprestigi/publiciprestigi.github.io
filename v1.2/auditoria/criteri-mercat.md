@@ -14,7 +14,7 @@
 ## Cobertura de la proposta
 
 - **1965:** dada anual encara no contrastada, la proposta queda en blanc. El valor viu de 390M continua identificat com a estimació.
-- **1966–2021:** 56 anualitats amb recompte en unitats documentat en butlletins o evolucions oficials. Cal resoldre les petites contradiccions editorials explícites de 1969, 1971 i 2001.
+- **1966–2021:** 56 anualitats amb recompte en unitats documentat en butlletins o evolucions oficials. Les diferències de 1969 i 1971 s'han resolt prioritzant butlletins oficials; la inconsistència interna de 2001 continua anotada.
 - **2022–2025:** quatre anualitats de la sèrie estadística oficial, de moment amb precisió publicada de **0,1 milions**. No extrapolar decimals absents.
 - Els registres del CSV conserven per separat la xifra de la web, la candidata, la precisió i la incidència documental.
 - **40 anualitats** de les 60 documentades difereixen en almenys 1 milió d'entrades de `data/market.json` (comparació abans de cap canvi).
@@ -34,8 +34,8 @@ Fonts addicionals de contrast: [Boletín Informativo 1997](https://www.cultura.g
 ## Incidències expressament obertes
 
 - **1965:** el quadre històric de l'ICAA documenta la recaptació però **no** el total d'espectadors. No atribuir els 403,1M de 1966 al 1965.
-- **1969:** dues transcripcions oficials difereixen en només 20 entrades.
-- **1971:** discrepància menor entre el butlletí original de 1976 i altres reproduccions històriques.
+- **1969, resolt:** 364.640.582 segons el butlletí de 1989; el de 1976 discrepava en 20 entrades.
+- **1971, resolt:** 295.298.786, confirmat als butlletins oficials de 1976, 1987, 1989 i 1991; un recull secundari publica una xifra divergent.
 - **2001:** una taula de detall i la sèrie evolutiva del mateix butlletí mostren 146,210M i 146,810M respectivament. La sèrie evolutiva posterior també reporta 146,810M. Cal confirmar-ne el recompte de referència.
 - **2022–2025:** cal cercar recomptes oficials en unitats, si existeixen, abans de carregar els valors a un sistema que fa arrodoniments a centèsimes de quota.
 - **Definició de «quota»:** actualment compara els espectadors *acumulats* d'un film amb un *mercat anual*. És un indicador relatiu propi, no la quota anual oficial de taquilla de la pel·lícula: documentar-ho sense abandonar ni alterar unilateralment el criteri editorial.
