@@ -37,9 +37,19 @@ El coeficient actual `0,683` s'ha documentat a «Fonts i eines» i aproxima el m
 
 **Això encara no és cap canvi aprovat.** Per conservar rigorosament l'escala 0–10 sense modificar la forma de l'índex, la proposta és determinar el **coeficient de normalització un cop tancades i verificades les sèries anuals de població i de mercat**; si s'aprova la renormalització, s'ha d'especificar el coeficient amb precisió suficient al text i fer servir el mateix valor intern sense arrodonir en tots els càlculs. No «retallar» a 10 les puntuacions a posteriori sense una explicació metodològica.
 
+## Sèrie poblacional identificada i simulació conjunta
+
+S'ha creat [poblacio-1964-2025.csv](poblacio-1964-2025.csv), amb una fila per any entre **1964 i 2025**. Hi ha **53 anualitats documentades directament a l'INE** (1973–2025), dues anualitats (1971–1972) recuperades d'una font secundària que cita l'INE i pendents de comprovació primària, i **7 anualitats 1964–1970 sense base anual de població resident a 1 de gener encara contrastada**. **No** s'han convertit les poblacions inferides dels films en dades oficials.
+
+La sèrie INE consultada és [CP335 — Total nacional, població, ambdós sexes](https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335) fins al 2019; per als anys 2020–2025 es prioritzen els valors revisats de l'[ECP / Cens anual](https://ine.es/htdocs/prensa/ecp_tabla.htm). El tram 1971–1972 té de moment [referència secundària](https://relojpublico.es/poblacion/evolucion/), i cal confirmar-ne el registre primari.
+
+La [simulació conjunta de mercat, població i IIC](impacte-mercat-poblacio-1964-2025.csv) recull **210 films**. Per als **48 films** associats a anys sense xifra primària INE aprovada o pendent (incloses les dues excepcions 1964), el càlcul utilitza provisionalment la població de `market.json` o, en els dos casos de 1964, la penetració guardada. **No és encara un resultat definitiu.**
+
+La normalització teòrica a màxim 10, si es mantenen aquests denominadors provisionals, demanaria un coeficient intern d'aproximadament **0,680735622** en lloc de 0,683. Aquest número és només **el resultat de la simulació actual**, no un nou coeficient editorial aprovat: pot variar en tancar les anualitats pendents i s'ha de documentar íntegrament el procediment.
+
 ## Pendents, sense tocar producció
 
-1. Recuperar i contrastar la **sèrie INE anual completa de població resident** (1971–2025) i diferenciar els anys previs (1964–1970) com a estimacions documentades, preservant les dues excepcions oficials de 1964.
-2. Fixar l'any de referència i la precisió, generant `poblacio-historica.csv` amb font per anualitat. La sèrie ECP actual té revisions respecte d'altres estadístiques antigues: cal seleccionar una sola versió coherent.
-3. Simular penetració i IIC amb **els dos denominadors harmonitzats** i, després, decidir el coeficient normalitzador abans de recalcular rànquings.
-4. Actualitzar conjuntament `market.json`, `films.json`, JS, HTML, textos i notes només quan la simulació final estigui validada.
+1. Confirmar les poblacions 1971–1972 a l'INE i establir una estimació demogràfica justificada per a 1964–1970, incloent l'abast territorial de les fonts històriques.
+2. Comprovar l'alineació de sèries estadístiques (INE CP335 retrospectiva / ECP) i declarar l'any de referència de la població a les notes.
+3. Recalcular penetracions, quotes, IIC i ordenacions a partir dels dos denominadors, amb precisió completa abans de presentar dues decimals. Fixar el coeficient amb l'escala 0–10 i els desempataments reproduïbles.
+4. Validar la simulació amb exemples i les fonts abans de la modificació coordinada de `market.json`, `films.json`, JS, HTML, textos i notes.
