@@ -4,7 +4,10 @@ De cada 100 entrades venudes aquell any quantes corresponen a cada pel·lícula?
 <!-- /intro -->
 
 <!-- comentari -->
-- *Mujeres al borde de un ataque de nervios* (#22 per espectadors, #6 per quota) és una de les grans sorpreses del rànquing, amb una pujada de setze posicions. En un mercat de només 82M d’entrades, Almodóvar va tenir un pes relatiu molt superior al que suggereix la seva xifra absoluta d’espectadors.
+- *8 apellidos vascos* torna a encapçalar el rànquing, ara amb una quota extraordinària del 10,68% de totes les entrades venudes el 2014. *Lo imposible* (6,52%) i *Ocho apellidos catalanes* (5,99%) completen un podi que mostra fins a quin punt una sola pel·lícula pot concentrar una part molt significativa del públic anual.
 
-- *Padre no hay más que uno 3* (#50→#8) fa el salt més espectacular: puja quaranta-dues posicions en ple context postpandèmic, amb un mercat de només 71M d’entrades, molt per sota dels 100M habituals abans de la pandèmia. L’alta quota s’explica en part per aquest mercat petitíssim, però també confirma que Segura va ser dels pocs capaços de convertir una estrena en fenomen popular.
+- El Top 10 ja no inclou cap film dels 60s ni dels 70s. En aquells anys, els centenars de milions d'entrades es repartien entre moltes més pel·lícules. *Mujeres al borde de un ataque de nervios* és l'única representant dels 80s, amb un salt del #22 per espectadors al #6 per quota.
+
+- La saga *Padre no hay más que uno* protagonitza algunes de les pujades més espectaculars del rànquing. La tercera entrega passa del #50 per espectadors al #8 per quota, mentre que la cinquena arriba al #15 des del #98 i la quarta se situa al #17. En un mercat debilitat després de la pandèmia, les tres pel·lícules aconsegueixen una presència comercial destacada.
+
 <!-- /comentari -->
