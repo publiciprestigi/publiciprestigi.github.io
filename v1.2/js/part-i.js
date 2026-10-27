@@ -377,13 +377,13 @@ function construirComparativaRankings() {
     blocMD('comparativa-titol', 'pip-rankcomp-titol') +
     blocMD('comparativa-intro', 'pip-rankcomp-intro') +
     '<div class="pip-rankcomp-figura">' +
-    blocMD('comparativa-grafic-titol', 'pip-rankcomp-grafic-titol') +
+    '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques del Top 100 (1965–2025)', 'Variación de posiciones según las cuatro métricas del Top 100 (1965–2025)') + '</h4>' +
     '<div class="pip-rankcomp-exemples" id="pip-rankcomp-exemples"></div>' +
     '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
     '<div class="pip-rankcomp-explora"><label class="pip-rankcomp-label" for="pip-rankcomp-tria">' +
-    blocMD('comparativa-selector', 'pip-rankcomp-selector-text') +
+    pipT('Consulta una altra pel·lícula del Top 100', 'Consulta otra película del Top 100') +
     '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select></div>' +
-    blocMD('comparativa-nota', 'pip-rankcomp-nota') + '</div>';
+    '<p class="pip-rankcomp-nota">' + pipT('Les fletxes indiquen la variació respecte al rànquing per espectadors.', 'Las flechas indican la variación respecto al ranking por espectadores.') + '</p></div>';
   if (window.PiP_textos) cont.querySelectorAll('.text-md[data-bloc]').forEach(window.PiP_textos.renderitza);
   const tria = cont.querySelector('#pip-rankcomp-tria');
   const grup = cont.querySelector('#pip-rankcomp-exemples');
