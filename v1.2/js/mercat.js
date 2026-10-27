@@ -124,10 +124,11 @@ async function construirGraficMercat() {
         ctx.fillStyle = '#363737';
         ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
         ctx.textAlign = 'left';
-        ctx.fillText(pipMercatT('Màxim: ≈435,2M','Máximo: ≈435,2M'), xMax + 4, yMax - (isMobil ? 10 : 18));
+        const labelMaxY = Math.max(y.top + 14, yMax - (isMobil ? 10 : 18));
+        ctx.fillText(pipMercatT('Màxim: ≈435,2M','Máximo: ≈435,2M'), xMax + 4, labelMaxY);
         if (!isMobil) {
           ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
-          ctx.fillText(pipMercatT('(1965 · estimació)','(1965 · estimación)'), xMax + 6, yMax - 6);
+          ctx.fillText(pipMercatT('(1965 · estimació)','(1965 · estimación)'), xMax + 6, Math.max(y.top + 28, labelMaxY + 14));
         }
 
         const idx2020 = anys.indexOf(2020);
