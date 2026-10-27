@@ -11,7 +11,7 @@ Harmonitzar la sèrie espanyola del mercat, la població, quota, penetració i I
 
 ## Comparació amb main
 
-El GitHub registra **24 fitxers canviats** entre `main` i la branca a l'hora d'aquesta acta.
+El GitHub registra **26 fitxers canviats** entre `main` i la branca (incloent aquest informe, el validador i l'actualització del README).
 
 - `v1.2/auditoria/poblacio-1964-2025.csv` — modified (124 línies)
 - `v1.2/data/films.json` — modified (2020 línies)
