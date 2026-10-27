@@ -82,8 +82,8 @@ async function construirGraficMercat() {
         'Entradas vendidas (barras) y población (línea) en España, 1965–2025.'
       )}</p>
       <p class="grafic-font">${pipMercatT(
-        'Fonts: Ministeri de Cultura i Comscore (entrades); INE (població).',
-        'Fuentes: Ministerio de Cultura y Comscore (entradas); INE (población).'
+        'Fonts: Ministeri/ICAA (entrades), MEDIA Salles (1965), INE i Maluquer de Motes (població).',
+        'Fuentes: Ministerio/ICAA (entradas), MEDIA Salles (1965), INE y Maluquer de Motes (población).'
       )}</p>
     </div>`;
 
@@ -260,7 +260,7 @@ async function construirGraficMercat() {
           ticks: { color: '#666', font: { size: 11 } },
           grid: { color: 'rgba(0,0,0,0.06)' },
           min: 0,
-          max: 420,
+          max: 460,
         },
         y2: {
           position: 'right',
@@ -293,7 +293,7 @@ async function construirGraficMercat() {
         'Entradas anuales vendidas divididas por la población de España.'
       );
       chart.options.scales.y.min = 0;
-      chart.options.scales.y.max = 13;
+      chart.options.scales.y.max = 15;
       chart.options.scales.y2.display = false;
     } else {
       chart.config.type = 'bar';
@@ -307,7 +307,7 @@ async function construirGraficMercat() {
         'Entradas vendidas (barras) y población (línea) en España, 1965–2025.'
       );
       chart.options.scales.y.min = 0;
-      chart.options.scales.y.max = 420;
+      chart.options.scales.y.max = 460;
       chart.options.scales.y2.display = true;
     }
 
