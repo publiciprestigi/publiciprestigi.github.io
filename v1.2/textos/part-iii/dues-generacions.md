@@ -7,13 +7,13 @@ El que segueix és una mirada a dues carreres emblemàtiques de la generació an
 <!-- bloc-saura -->
 ## Carlos Saura (1966–1996): el prestigi com a força de resistència
 
-Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907k) són xifres més que notables. El que no va tenir mai és continuïtat comercial. Els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
+Saura és el director més present als grans festivals internacionals amb molta diferència: 16 films seleccionats, 8 d'ells premiats. I, amb tot, cap film al Top 100 històric d’espectadors. Però no va ser un director invisible per al públic: *La prima Angélica* (1,41M), *Cría cuervos* (1,29M), *Mamá cumple cien años* (1,12M), *Deprisa, deprisa* (1,05M) o *Ay, Carmela* (907K) són xifres més que notables. El que no va tenir mai és continuïtat comercial. Els pics conviuen amb caigudes brusques. El seu prestigi va ser constant; el seu públic, intermitent.
 <!-- /bloc-saura -->
 
 <!-- comentari-saura -->
 - *La prima Angélica* i *Cría cuervos* són els grans pics de Saura als 70s, amb una penetració molt alta dins el seu temps: 4,01% i 3,59%, respectivament. En un mercat encara enorme, aquestes xifres no el situaven al nivell del cinema popular de masses, però sí molt per sobre de la idea que avui tenim del cinema d’autor de festival.
 
-- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. *El Dorado* passa de 572k espectadors en sala a un IAA estimat d’1,71M, i *Ay, Carmela*, de 907k a 2,27M. En audiència acumulada, és probablement el film de Saura amb més impacte de la seva carrera.
+- L’IAA reordena parcialment la lectura final de la seva carrera. Fins a 1983, la sala és tota l’audiència computable; a partir de les noves finestres, alguns resultats canvien d’escala. *El Dorado* passa de 572K espectadors en sala a un IAA estimat d’1,71M, i *Ay, Carmela*, de 907K a 2,27M. En audiència acumulada, és probablement el film de Saura amb més impacte de la seva carrera.
 <!-- /comentari-saura -->
 
 <!-- bloc-almodovar -->
@@ -29,7 +29,7 @@ La taula mostra una trajectòria molt diferent de la de Saura: menys irregularit
 
 - *Mujeres al borde…* és la conjuntura perfecta. Als 3,35M d’espectadors en sala s’hi afegeix el context ideal per a l’IAA: TVE encara amb una capacitat de convocatòria enorme, abans que la fragmentació del *share* es consolidés amb les privades, i una obertura cultural accelerada amb la consolidació democràtica. L’estrena televisiva arriba el gener de 1991, dos anys després de l’estrena en sales. El resultat és un IAA estimat de 10,04M, una combinació excepcional de sala massiva, televisió forta i projecció internacional.
 
-- A partir dels 2010s, el patró canvia. *Los abrazos rotos*, *La piel que habito*, *Julieta*, *Dolor y gloria* i *Madres paralelas* mantenen el reconeixement internacional, però ja no operen en el mateix mercat de sala que els grans Almodóvar dels 80s i 90s. La seva participació més recent, *La habitación de al lado* (402k en sala, Lleó d’Or a Venècia), se situa en el mateix rang que *Alcarràs*, *Sirât* o *Los domingos*: mateix ordre de públic, de prestigi i ecosistema multifinestra. El que ha canviat no és el talent, és el mercat.
+- A partir dels 2010s, el patró canvia. *Los abrazos rotos*, *La piel que habito*, *Julieta*, *Dolor y gloria* i *Madres paralelas* mantenen el reconeixement internacional, però ja no operen en el mateix mercat de sala que els grans Almodóvar dels 80s i 90s. La seva participació més recent, *La habitación de al lado* (402K en sala, Lleó d’Or a Venècia), se situa en el mateix rang que *Alcarràs*, *Sirât* o *Los domingos*: mateix ordre de públic, de prestigi i ecosistema multifinestra. El que ha canviat no és el talent, és el mercat.
 <!-- /comentari-almodovar -->
 
 <!-- text-grafic1 -->
@@ -47,7 +47,7 @@ El conjunt mostra la paradoxa del període actual: aquests directors no generen 
 <!-- comentari-actual -->
 - **Sorogoyen: el mercat com a pont.** És l’únic dels quatre que s’acosta clarament als llindars del cinema popular. *As bestas* (2022, 1,11M) és l’onzè film més vist del període 2020–2025 i el gran èxit de sala d’aquesta generació. La seva progressió, de *Stockholm* (13.945 espectadors) a *As bestas* en menys d’una dècada, és la corba de creixement més clara del grup.
 
-- **Laxe: del prestigi al públic.** La seva carrera parteix de xifres mínimes, però construeix una presència sostinguda a les seccions paral·leles de Cannes, sempre premiades, fins a arribar a la competició oficial amb *Sirât* (2025, Premi del Jurat, 476k). L’IAA estimat és d’1,55M. És el cas més extrem d’una trajectòria on el prestigi arriba abans que el públic, però on l’audiència comença finalment a aparèixer.
+- **Laxe: del prestigi al públic.** La seva carrera parteix de xifres mínimes, però construeix una presència sostinguda a les seccions paral·leles de Cannes, sempre premiades, fins a arribar a la competició oficial amb *Sirât* (2025, Premi del Jurat, 476K). L’IAA estimat és d’1,55M. És el cas més extrem d’una trajectòria on el prestigi arriba abans que el públic, però on l’audiència comença finalment a aparèixer.
 
 - **Simón i Ruiz de Azúa: la nova zona de contacte.** *Alcarràs* (Ós d’Or a Berlín, 2022) i *Los domingos* (Conxa d’Or a Sant Sebastià, 2025) són els casos més recents de films amb reconeixement màxim als festivals i xifres de sala significatives per al període actual. L’IAA estimat de *Los domingos* (2,55M) el situa en un ordre de magnitud comparable al dels grans pics de Saura o als Almodóvar del període actual. La sala ja no dona tota la mesura del seu abast.
 
