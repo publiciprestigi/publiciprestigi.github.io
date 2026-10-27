@@ -1,367 +1,367 @@
 [
   {
     "any": 1965,
-    "entrades_M": 390.0,
-    "poblacio_M": 32.1,
+    "entrades_M": 435.2,
+    "poblacio_M": 32.013271,
     "estimat": true
   },
   {
     "any": 1966,
-    "entrades_M": 370.0,
-    "poblacio_M": 32.3,
-    "estimat": true
+    "entrades_M": 403.080506,
+    "poblacio_M": 32.362812,
+    "estimat": false
   },
   {
     "any": 1967,
-    "entrades_M": 350.0,
-    "poblacio_M": 32.6,
-    "estimat": true
+    "entrades_M": 393.086868,
+    "poblacio_M": 32.741944,
+    "estimat": false
   },
   {
     "any": 1968,
-    "entrades_M": 330.0,
-    "poblacio_M": 32.9,
-    "estimat": true
+    "entrades_M": 376.637943,
+    "poblacio_M": 33.12662,
+    "estimat": false
   },
   {
     "any": 1969,
-    "entrades_M": 310.0,
-    "poblacio_M": 33.2,
-    "estimat": true
+    "entrades_M": 364.640582,
+    "poblacio_M": 33.453732,
+    "estimat": false
   },
   {
     "any": 1970,
-    "entrades_M": 305.0,
-    "poblacio_M": 33.8,
-    "estimat": true
+    "entrades_M": 330.859091,
+    "poblacio_M": 33.709465,
+    "estimat": false
   },
   {
     "any": 1971,
-    "entrades_M": 295.0,
-    "poblacio_M": 34.1,
-    "estimat": true
+    "entrades_M": 295.298786,
+    "poblacio_M": 33.956047,
+    "estimat": false
   },
   {
     "any": 1972,
-    "entrades_M": 285.0,
-    "poblacio_M": 34.4,
-    "estimat": true
+    "entrades_M": 295.162007,
+    "poblacio_M": 34.283489,
+    "estimat": false
   },
   {
     "any": 1973,
-    "entrades_M": 280.0,
-    "poblacio_M": 34.8,
-    "estimat": true
+    "entrades_M": 278.280464,
+    "poblacio_M": 34.8006,
+    "estimat": false
   },
   {
     "any": 1974,
-    "entrades_M": 270.0,
-    "poblacio_M": 35.1,
-    "estimat": true
+    "entrades_M": 262.932256,
+    "poblacio_M": 35.177294,
+    "estimat": false
   },
   {
     "any": 1975,
-    "entrades_M": 255.0,
-    "poblacio_M": 35.5,
-    "estimat": true
+    "entrades_M": 255.785631,
+    "poblacio_M": 35.569375,
+    "estimat": false
   },
   {
     "any": 1976,
-    "entrades_M": 240.0,
-    "poblacio_M": 36.0,
-    "estimat": true
+    "entrades_M": 249.315153,
+    "poblacio_M": 35.946425,
+    "estimat": false
   },
   {
     "any": 1977,
-    "entrades_M": 220.0,
-    "poblacio_M": 36.4,
-    "estimat": true
+    "entrades_M": 211.910616,
+    "poblacio_M": 36.329199,
+    "estimat": false
   },
   {
     "any": 1978,
-    "entrades_M": 205.0,
-    "poblacio_M": 36.9,
-    "estimat": true
+    "entrades_M": 220.110077,
+    "poblacio_M": 36.694077,
+    "estimat": false
   },
   {
     "any": 1979,
-    "entrades_M": 195.0,
-    "poblacio_M": 37.2,
-    "estimat": true
+    "entrades_M": 200.485325,
+    "poblacio_M": 37.035719,
+    "estimat": false
   },
   {
     "any": 1980,
-    "entrades_M": 175.0,
-    "poblacio_M": 37.5,
-    "estimat": true
+    "entrades_M": 175.995962,
+    "poblacio_M": 37.34694,
+    "estimat": false
   },
   {
     "any": 1981,
-    "entrades_M": 165.0,
-    "poblacio_M": 37.8,
-    "estimat": true
+    "entrades_M": 173.659664,
+    "poblacio_M": 37.635389,
+    "estimat": false
   },
   {
     "any": 1982,
-    "entrades_M": 150.0,
-    "poblacio_M": 38.0,
-    "estimat": true
+    "entrades_M": 157.776601,
+    "poblacio_M": 37.881873,
+    "estimat": false
   },
   {
     "any": 1983,
-    "entrades_M": 130.0,
-    "poblacio_M": 38.2,
-    "estimat": true
+    "entrades_M": 142.802676,
+    "poblacio_M": 38.090151,
+    "estimat": false
   },
   {
     "any": 1984,
-    "entrades_M": 115.0,
-    "poblacio_M": 38.3,
-    "estimat": true
+    "entrades_M": 121.57472,
+    "poblacio_M": 38.252899,
+    "estimat": false
   },
   {
     "any": 1985,
-    "entrades_M": 105.0,
-    "poblacio_M": 38.4,
-    "estimat": true
+    "entrades_M": 103.577894,
+    "poblacio_M": 38.407829,
+    "estimat": false
   },
   {
     "any": 1986,
-    "entrades_M": 97.0,
-    "poblacio_M": 38.5,
-    "estimat": true
+    "entrades_M": 92.835568,
+    "poblacio_M": 38.531195,
+    "estimat": false
   },
   {
     "any": 1987,
-    "entrades_M": 90.0,
-    "poblacio_M": 38.6,
-    "estimat": true
+    "entrades_M": 89.93609,
+    "poblacio_M": 38.638052,
+    "estimat": false
   },
   {
     "any": 1988,
-    "entrades_M": 85.0,
-    "poblacio_M": 38.7,
-    "estimat": true
+    "entrades_M": 87.581329,
+    "poblacio_M": 38.731578,
+    "estimat": false
   },
   {
     "any": 1989,
-    "entrades_M": 80.0,
-    "poblacio_M": 38.8,
-    "estimat": true
+    "entrades_M": 85.331134,
+    "poblacio_M": 38.8023,
+    "estimat": false
   },
   {
     "any": 1990,
-    "entrades_M": 80.0,
-    "poblacio_M": 38.9,
-    "estimat": true
+    "entrades_M": 89.627305,
+    "poblacio_M": 38.853227,
+    "estimat": false
   },
   {
     "any": 1991,
-    "entrades_M": 88.0,
-    "poblacio_M": 38.9,
-    "estimat": true
+    "entrades_M": 84.913049,
+    "poblacio_M": 38.881416,
+    "estimat": false
   },
   {
     "any": 1992,
-    "entrades_M": 90.0,
-    "poblacio_M": 39.0,
-    "estimat": true
+    "entrades_M": 87.199101,
+    "poblacio_M": 39.051336,
+    "estimat": false
   },
   {
     "any": 1993,
-    "entrades_M": 90.0,
-    "poblacio_M": 39.1,
-    "estimat": true
+    "entrades_M": 92.502265,
+    "poblacio_M": 39.264034,
+    "estimat": false
   },
   {
     "any": 1994,
-    "entrades_M": 92.0,
-    "poblacio_M": 39.1,
-    "estimat": true
+    "entrades_M": 94.267014,
+    "poblacio_M": 39.458489,
+    "estimat": false
   },
   {
     "any": 1995,
-    "entrades_M": 96.0,
-    "poblacio_M": 39.2,
-    "estimat": true
+    "entrades_M": 96.729321,
+    "poblacio_M": 39.639726,
+    "estimat": false
   },
   {
     "any": 1996,
-    "entrades_M": 98.0,
-    "poblacio_M": 39.4,
-    "estimat": true
+    "entrades_M": 106.713871,
+    "poblacio_M": 39.808374,
+    "estimat": false
   },
   {
     "any": 1997,
-    "entrades_M": 100.0,
-    "poblacio_M": 39.6,
-    "estimat": true
+    "entrades_M": 107.112113,
+    "poblacio_M": 39.971329,
+    "estimat": false
   },
   {
     "any": 1998,
-    "entrades_M": 105.0,
-    "poblacio_M": 39.9,
+    "entrades_M": 119.88977,
+    "poblacio_M": 40.143449,
     "estimat": false
   },
   {
     "any": 1999,
-    "entrades_M": 110.0,
-    "poblacio_M": 40.2,
+    "entrades_M": 131.348075,
+    "poblacio_M": 40.303568,
     "estimat": false
   },
   {
     "any": 2000,
-    "entrades_M": 130.0,
-    "poblacio_M": 40.3,
+    "entrades_M": 135.390513,
+    "poblacio_M": 40.470182,
     "estimat": false
   },
   {
     "any": 2001,
-    "entrades_M": 146.8,
-    "poblacio_M": 41.1,
+    "entrades_M": 146.810494,
+    "poblacio_M": 40.665545,
     "estimat": false
   },
   {
     "any": 2002,
-    "entrades_M": 140.7,
-    "poblacio_M": 42.0,
+    "entrades_M": 140.716354,
+    "poblacio_M": 41.035271,
     "estimat": false
   },
   {
     "any": 2003,
-    "entrades_M": 137.5,
-    "poblacio_M": 42.7,
+    "entrades_M": 137.472001,
+    "poblacio_M": 41.827836,
     "estimat": false
   },
   {
     "any": 2004,
-    "entrades_M": 143.9,
-    "poblacio_M": 43.2,
+    "entrades_M": 143.932142,
+    "poblacio_M": 42.547454,
     "estimat": false
   },
   {
     "any": 2005,
-    "entrades_M": 127.6,
-    "poblacio_M": 44.1,
+    "entrades_M": 127.651225,
+    "poblacio_M": 43.296335,
     "estimat": false
   },
   {
     "any": 2006,
-    "entrades_M": 121.7,
-    "poblacio_M": 44.7,
+    "entrades_M": 121.654481,
+    "poblacio_M": 44.009969,
     "estimat": false
   },
   {
     "any": 2007,
-    "entrades_M": 116.9,
-    "poblacio_M": 45.2,
+    "entrades_M": 116.930692,
+    "poblacio_M": 44.784659,
     "estimat": false
   },
   {
     "any": 2008,
-    "entrades_M": 110.0,
-    "poblacio_M": 46.1,
+    "entrades_M": 107.813259,
+    "poblacio_M": 45.668938,
     "estimat": false
   },
   {
     "any": 2009,
-    "entrades_M": 110.0,
-    "poblacio_M": 46.7,
+    "entrades_M": 109.986858,
+    "poblacio_M": 46.239271,
     "estimat": false
   },
   {
     "any": 2010,
-    "entrades_M": 101.0,
-    "poblacio_M": 47.0,
+    "entrades_M": 101.589517,
+    "poblacio_M": 46.486621,
     "estimat": false
   },
   {
     "any": 2011,
-    "entrades_M": 98.0,
-    "poblacio_M": 47.2,
+    "entrades_M": 98.344862,
+    "poblacio_M": 46.667175,
     "estimat": false
   },
   {
     "any": 2012,
-    "entrades_M": 94.0,
-    "poblacio_M": 47.3,
+    "entrades_M": 94.158195,
+    "poblacio_M": 46.818216,
     "estimat": false
   },
   {
     "any": 2013,
-    "entrades_M": 76.9,
-    "poblacio_M": 47.1,
+    "entrades_M": 78.690507,
+    "poblacio_M": 46.72789,
     "estimat": false
   },
   {
     "any": 2014,
-    "entrades_M": 88.0,
-    "poblacio_M": 46.8,
+    "entrades_M": 87.988991,
+    "poblacio_M": 46.512199,
     "estimat": false
   },
   {
     "any": 2015,
-    "entrades_M": 95.0,
-    "poblacio_M": 46.6,
+    "entrades_M": 96.137282,
+    "poblacio_M": 46.449565,
     "estimat": false
   },
   {
     "any": 2016,
-    "entrades_M": 96.0,
-    "poblacio_M": 46.4,
+    "entrades_M": 101.826163,
+    "poblacio_M": 46.440099,
     "estimat": false
   },
   {
     "any": 2017,
-    "entrades_M": 100.0,
-    "poblacio_M": 46.6,
+    "entrades_M": 99.803801,
+    "poblacio_M": 46.527039,
     "estimat": false
   },
   {
     "any": 2018,
-    "entrades_M": 98.0,
-    "poblacio_M": 46.9,
+    "entrades_M": 98.901738,
+    "poblacio_M": 46.658447,
     "estimat": false
   },
   {
     "any": 2019,
-    "entrades_M": 105.5,
-    "poblacio_M": 47.1,
+    "entrades_M": 104.889299,
+    "poblacio_M": 46.93706,
     "estimat": false
   },
   {
     "any": 2020,
-    "entrades_M": 50.0,
-    "poblacio_M": 47.4,
+    "entrades_M": 27.000821,
+    "poblacio_M": 47.31805,
     "estimat": false
   },
   {
     "any": 2021,
-    "entrades_M": 55.0,
-    "poblacio_M": 47.5,
+    "entrades_M": 41.726192,
+    "poblacio_M": 47.400798,
     "estimat": false
   },
   {
     "any": 2022,
-    "entrades_M": 71.0,
-    "poblacio_M": 47.8,
+    "entrades_M": 59.1,
+    "poblacio_M": 47.486727,
     "estimat": false
   },
   {
     "any": 2023,
-    "entrades_M": 80.0,
-    "poblacio_M": 48.3,
+    "entrades_M": 76.7,
+    "poblacio_M": 48.085361,
     "estimat": false
   },
   {
     "any": 2024,
-    "entrades_M": 71.0,
-    "poblacio_M": 48.5,
+    "entrades_M": 72.9,
+    "poblacio_M": 48.619695,
     "estimat": false
   },
   {
     "any": 2025,
-    "entrades_M": 65.0,
+    "entrades_M": 66.9,
     "poblacio_M": 49.128297,
     "estimat": false
   }
