@@ -37,23 +37,33 @@ El coeficient actual `0,683` s'ha documentat a «Fonts i eines» i aproxima el m
 
 **Això encara no és cap canvi aprovat.** Per conservar rigorosament l'escala 0–10 sense modificar la forma de l'índex, la proposta és determinar el **coeficient de normalització un cop tancades i verificades les sèries anuals de població i de mercat**; si s'aprova la renormalització, s'ha d'especificar el coeficient amb precisió suficient al text i fer servir el mateix valor intern sense arrodonir en tots els càlculs. No «retallar» a 10 les puntuacions a posteriori sense una explicació metodològica.
 
-## Sèrie poblacional identificada i simulació conjunta
+## Sèrie poblacional completa en contrast, 1964–2025
 
-S'ha creat [poblacio-1964-2025.csv](poblacio-1964-2025.csv), amb una fila per any entre **1964 i 2025**. Hi ha **53 anualitats documentades directament a l'INE** (1973–2025), dues anualitats (1971–1972) recuperades d'una font secundària que cita l'INE i pendents de comprovació primària, i **7 anualitats 1964–1970 sense base anual de població resident a 1 de gener encara contrastada**. **No** s'han convertit les poblacions inferides dels films en dades oficials.
+Ja tenim una **proposta documentada per als 62 anys**, però **no totes les xifres tenen la mateixa naturalesa**:
 
-La sèrie INE consultada és [CP335 — Total nacional, població, ambdós sexes](https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335) fins al 2019; per als anys 2020–2025 es prioritzen els valors revisats de l'[ECP / Cens anual](https://ine.es/htdocs/prensa/ecp_tabla.htm). El tram 1971–1972 té de moment [referència secundària](https://relojpublico.es/poblacion/evolucion/), i cal confirmar-ne el registre primari.
+- **1964–1972 (9 anualitats)** — reconstrucció acadèmica de **Jordi Maluquer de Motes**, «El crecimiento moderno de la población de España de 1850 a 2001: una serie homogénea anual», *Investigaciones de Historia Económica*, vol. 4, núm. 10 (2008), p. 129–162, **quadre 5**, amb població a **1 de gener** per any. És una reconstrucció de balances demogràfics amb metodologia publicada, **no** un recompte directament publicat per l'INE. [Article acadèmic i taula 5](https://www.elsevier.es/es-revista-investigaciones-historia-economica-economic-328-pdf-download-S1698698908701395).
+- **1973–2019 (47 anualitats)** — sèrie oficial [INE CP335](https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335), valor del primer semestre / 1 de gener; recompte en persones i estat definitiu en la taula d'origen.
+- **2020–2025 (6 anualitats)** — dades INE de població resident a 1 de gener, [sèries ECP / cens anual](https://www.ine.es/dyngs/Prensa/CensoVariables2025.htm), sempre amb data i criteri documentats. Cal mantenir registrada la versió estadística consultada.
 
-La [simulació conjunta de mercat, població i IIC](impacte-mercat-poblacio-1964-2025.csv) recull **210 films**. Per als **48 films** associats a anys sense xifra primària INE aprovada o pendent (incloses les dues excepcions 1964), el càlcul utilitza provisionalment la població de `market.json` o, en els dos casos de 1964, la penetració guardada. **No és encara un resultat definitiu.**
+Aquest és el contingut de [poblacio-1964-2025.csv](poblacio-1964-2025.csv). **No hi ha cap anualitat buida al fitxer proposat.** Els registres de 1964–1972 estan marcats com a `RECONSTRUCCIO_ACADEMICA_HOMOGENIA`, no com a `DOCUMENTAT_INE`.
 
-La normalització teòrica a màxim 10, si es mantenen aquests denominadors provisionals, demanaria un coeficient intern d'aproximadament **0,680735622** en lloc de 0,683. Aquest número és només **el resultat de la simulació actual**, no un nou coeficient editorial aprovat: pot variar en tancar les anualitats pendents i s'ha de documentar íntegrament el procediment.
+Per decidir les primeres nou anualitats hem preservat un [quadre comparatiu de tres fonts](contrast-poblacio-1964-1972.csv): l'estimació acadèmica del **1 de gener** i el **1 de juliol**, el recompte històric de l'INE a 1 de juliol (amb Ceuta i Melilla) i la sèrie de final de desembre publicada per Datosmacro. La reconstrucció acadèmica és **la candidata preferida per a la simulació**, perquè explica el mètode i dona una sèrie homogènia anual. La sèrie de Datosmacro queda com a testimoni d'una altra reconstrucció, no com a font adoptada.
+
+La [simulació actualitzada de mercat, població i IIC](impacte-mercat-poblacio-1964-2025.csv) calcula els **210 films** amb aquests denominadors, sense recórrer a poblacions deduïdes del mateix indicador. És encara una **simulació editorial**, ja que la selecció definitiva de la font acadèmica inicial i el valor del coeficient de normalització s'han de validar abans de publicar.
+
+Amb la fórmula funcional que combina quota i penetració, el coeficient que porta el màxim a 10 és **0,680735622...** en aquesta simulació (màxim obtingut per *8 apellidos vascos*). El valor és independent dels anys 1964–1972 mentre el màxim continuï essent aquest film; **no s'ha incorporat a la web**.
+
+### Frontera estadística entre 1972 i 1973
+
+Cal explicitar que la reconstrucció acadèmica i l'INE CP335 no són la mateixa operació estadística. La primera dona **34.283.489 habitants a 1 de gener de 1972** i **34.656.209 el 1973**; la sèrie INE CP335 que utilitza el projecte dona **34.800.600 a 1 de gener de 1973**. La divergència de 1973 és d'aproximadament **144.391 habitants (0,4%)**, entre dos procediments diferents. La sèrie composta proposada prioritza l'INE directe des de 1973. Documentar aquest enllaç evita presentar el conjunt com si hagués estat produït per una única institució i amb una metodologia invariable.
 
 ## Document històric localitzat per als anys 60
 
-S'ha localitzat també una **taula primària del mateix INE, a l'Anuario Estadístico de 1982**, que publica població de dret **a 1 de juliol** per als anys 1963–1972, amb files separades per la Península i les illes, Ceuta i Melilla ([INE, taula 1.1.8, pàgina 64](https://www.ine.es/inebaseweb/pdfDispacher.do?td=132783)). Conté, per exemple, un total de **31.953.793** per a 1965 a la fila principal (sense Ceuta i Melilla), al qual caldria sumar les ciutats i resoldre l'ajust de data si volem obtenir un **1 de gener**. **No és equivalent directament al denominador anual adoptat per a la resta de la sèrie**. És una font primària útil per construir una estimació documentada de 1964–1970, però encara no s'ha utilitzat per emplenar els anys pendents del CSV ni per canviar les penetracions.
+S'ha localitzat també una **taula primària del mateix INE, a l'Anuario Estadístico de 1982**, que publica població de dret **a 1 de juliol** per als anys 1963–1972, amb files separades per la Península i les illes, Ceuta i Melilla ([INE, taula 1.1.8, pàgina 64](https://www.ine.es/inebaseweb/pdfDispacher.do?td=132783)). Conté, per exemple, un total de **31.953.793** per a 1965 a la fila principal (sense Ceuta i Melilla), al qual caldria sumar les ciutats i resoldre l'ajust de data si volem obtenir un **1 de gener**. **No és equivalent directament al denominador anual adoptat per a la resta de la sèrie**. És una **comprovació oficial independent** de la reconstrucció acadèmica proposada per a 1964–1972, no el mateix còmput de població a 1 de gener. El [quadre de control amb la suma de Ceuta i Melilla](control-ine-poblacio-juliol-1963-1972.csv) en conserva les dades originals.
 
 ## Pendents, sense tocar producció
 
-1. Confirmar les poblacions 1971–1972 a l'INE i establir una estimació demogràfica justificada per a 1964–1970, incloent l'abast territorial de les fonts històriques.
-2. Comprovar l'alineació de sèries estadístiques (INE CP335 retrospectiva / ECP) i declarar l'any de referència de la població a les notes.
-3. Recalcular penetracions, quotes, IIC i ordenacions a partir dels dos denominadors, amb precisió completa abans de presentar dues decimals. Fixar el coeficient amb l'escala 0–10 i els desempataments reproduïbles.
-4. Validar la simulació amb exemples i les fonts abans de la modificació coordinada de `market.json`, `films.json`, JS, HTML, textos i notes.
+1. Aprovar, si escau, la **reconstrucció històrica acadèmica per a 1964–1972** i la utilització de l'INE CP335 / ECP per al període 1973–2025, amb el tall de sèrie expressament documentat.
+2. Escollir la normalització de l'IIC i la precisió de publicació, evitant el truncament arbitrari de valors majors de 10.
+3. Revisar la [simulació conjunta dels 210 films](impacte-mercat-poblacio-1964-2025.csv) i el rànquing abans / després abans de modificar les dades actives.
+4. Actualitzar conjuntament `market.json`, `films.json`, JS, HTML, textos i notes únicament quan s'aprovi la simulació i s'hagin auditat totes les dependències.
