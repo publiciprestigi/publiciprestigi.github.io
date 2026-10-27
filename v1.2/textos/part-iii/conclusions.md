@@ -35,7 +35,7 @@ Les plataformes, després, han accelerat la separació en oferir un circuit de d
 
 <p class="subtitol-punt">La generació actual ha obtingut guardons comparables als de les generacions anteriors, però dins d’un mercat de sala molt més petit.</p>
 
-El mercat espanyol ha passat de 390 milions d’entrades anuals el 1965 a 65 milions el 2025. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial, amb un cinema de gran consum que conserva capacitat de convocatòria i un cinema mitjà i d’autor que continua operant a una escala molt inferior.
+El mercat espanyol ha passat d’uns 435,2 milions d’entrades anuals el 1965 a 66,9 milions el 2025. És una contracció estructural que la pandèmia no va provocar, però sí que va accelerar. La recuperació ha estat parcial, amb un cinema de gran consum que conserva capacitat de convocatòria i un cinema mitjà i d’autor que continua operant a una escala molt inferior.
 
 En aquest context, Ruiz de Azúa, Simón, Laxe o Sorogoyen han aconseguit reconeixements de primer nivell als grans festivals, comparables als obtinguts per Saura, Borau, Camus o Erice. Però ho fan en un mercat molt més petit, de manera que les diferències d’audiència només es poden interpretar tenint en compte les condicions de cada època.
 
