@@ -47,6 +47,10 @@ La [simulació conjunta de mercat, població i IIC](impacte-mercat-poblacio-1964
 
 La normalització teòrica a màxim 10, si es mantenen aquests denominadors provisionals, demanaria un coeficient intern d'aproximadament **0,680735622** en lloc de 0,683. Aquest número és només **el resultat de la simulació actual**, no un nou coeficient editorial aprovat: pot variar en tancar les anualitats pendents i s'ha de documentar íntegrament el procediment.
 
+## Document històric localitzat per als anys 60
+
+S'ha localitzat també una **taula primària del mateix INE, a l'Anuario Estadístico de 1982**, que publica població de dret **a 1 de juliol** per als anys 1963–1972, amb files separades per la Península i les illes, Ceuta i Melilla ([INE, taula 1.1.8, pàgina 64](https://www.ine.es/inebaseweb/pdfDispacher.do?td=132783)). Conté, per exemple, un total de **31.953.793** per a 1965 a la fila principal (sense Ceuta i Melilla), al qual caldria sumar les ciutats i resoldre l'ajust de data si volem obtenir un **1 de gener**. **No és equivalent directament al denominador anual adoptat per a la resta de la sèrie**. És una font primària útil per construir una estimació documentada de 1964–1970, però encara no s'ha utilitzat per emplenar els anys pendents del CSV ni per canviar les penetracions.
+
 ## Pendents, sense tocar producció
 
 1. Confirmar les poblacions 1971–1972 a l'INE i establir una estimació demogràfica justificada per a 1964–1970, incloent l'abast territorial de les fonts històriques.
