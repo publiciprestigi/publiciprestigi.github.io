@@ -36,6 +36,14 @@
 - *Padre no hay más que uno 3* (2022): quota 3.67% → **4.41%**, IIC guardat 3.07 → **3.37** amb la fórmula publicada (provisional).
 - *Padre no hay más que uno 5* (2025): quota 3.14% → **3.05%**, IIC guardat 2.47 → **2.43** amb la fórmula publicada (provisional).
 
+## Quantificació de l'efecte demogràfic sobre les notes i les conclusions
+
+Amb la sèrie candidata documentada, el **1965** tindria ≈435,2M d'entrades i **32.013.271** habitants (reconstrucció acadèmica): **≈13,59 entrades per habitant**. El 1969, 364.640.582 entrades / 33.453.732 habitants: **≈10,90**. El **2025**, 66,9M / 49.128.297 habitants: **≈1,36**. Són quocients d'entrades/persones residents, **no persones diferents que hagin anat al cinema**. Per a 2020: 27.000.821 / 47.318.050 = **≈0,57**.
+
+Caldrà revisar en conseqüència els percentatges i rangs actuals a `notes.html` (especialment nota **[2]**, on encara figura 1965–1969 de 310–390M i 2025 de 65M / 1,32), l'exemple de `textos/part-i/fonts-i-eines.md` i la conclusió del mercat 1965–2025. Les xifres **són una simulació**, no textos nous ja aplicats.
+
+La sèrie de [població documentada](poblacio-1964-2025.csv) inclou **9 anys inicials reconstruïts acadèmicament** (1964–1972) i 53 anys de publicació INE (1973–2025); el [quadre de comparació de fonts](contrast-poblacio-1964-1972.csv) conserva les alternatives i el contrast [INE de juliol](control-ine-poblacio-juliol-1963-1972.csv). La [simulació conjunta](impacte-mercat-poblacio-1964-2025.csv) és l'escenari de referència actual per revisar els impactes.
+
 ## Ordre d'implantació, quan s'aprovi
 
 1. Aprovar la reconstrucció acadèmica 1964–1972 (amb contrast INE a 1 de juliol), la sèrie INE 1973–2025 i acordar la fórmula operativa exacta de l'IIC (incloent arrodoniments i normalització) i la justificació documental del denominador estimat de 400M del 1964, sense alterar el corpus ICAA.
