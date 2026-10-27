@@ -35,7 +35,7 @@ any;actual_web_M;actual_estimat;proposta_M;espectadors_font;precisio;estat;docum
 1998;105;NO;119,88977;119889770;unitats;DOCUMENTAT_FONT_OFICIAL;B01;
 1999;110;NO;131,348075;131348075;unitats;DOCUMENTAT_FONT_OFICIAL;B01;
 2000;130;NO;135,390513;135390513;unitats;DOCUMENTAT_FONT_OFICIAL;B01;
-2001;146,8;NO;146,810494;146810494;unitats;REVISAR_DISCREPANCIA_DOCUMENTAL;EV05;Una taula del butlletí 2001 dona 146.210.494, però els quadres d'evolució i la sèrie posterior donen 146.810.494, hi ha una inconsistència editorial a resoldre.
+2001;146,8;NO;146,810494;146810494;unitats;DOCUMENTAT_FONT_OFICIAL;EV05;2001 confirmat en 146.810.494 entrades pel desglossament provincial del butlleti 2001 (26.265.964 espanyoles + 120.604.530 estrangeres) i les taules d'evolucio oficials de 2005 2010 2011. La xifra 146.210.494 queda descartada.
 2002;140,7;NO;140,716354;140716354;unitats;DOCUMENTAT_FONT_OFICIAL;EV05;
 2003;137,5;NO;137,472001;137472001;unitats;DOCUMENTAT_FONT_OFICIAL;EV05;
 2004;143,9;NO;143,932142;143932142;unitats;DOCUMENTAT_FONT_OFICIAL;EV05;
