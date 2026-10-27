@@ -31,7 +31,7 @@
 ## Cobertura de la proposta
 
 - **1965:** **≈435,2M aprovat editorialment com a estimació documentada** (MEDIA Salles, font secundària especialitzada; NO dada directa ICAA); encara pendent de confirmació primària. El valor viu de 390M no es modifica fins a l'aplicació controlada de la sèrie completa, per evitar resultats divergents entre JSON, rànquings, gràfics i HTML.
-- **1966–2021:** 56 anualitats amb recompte en unitats documentat en butlletins o evolucions oficials. Les diferències de 1969 i 1971 s'han resolt prioritzant butlletins oficials; la inconsistència interna de 2001 continua anotada.
+- **1966–2021:** 56 anualitats amb recompte en unitats documentat en butlletins o evolucions oficials. Les diferències de 1969 i 1971 s'han resolt prioritzant butlletins oficials; la del 2001 s'ha resolt amb el desglossament provincial del butlletí de 2001 i les sèries retrospectivament publicades.
 - **2022–2025:** quatre anualitats de la sèrie estadística oficial, de moment amb precisió publicada de **0,1 milions**. No extrapolar decimals absents.
 - Els registres del CSV conserven per separat la xifra de la web, la candidata, la precisió i la incidència documental.
 - **40 anualitats** de les 60 documentades difereixen en almenys 1 milió d'entrades de `data/market.json` (comparació abans de cap canvi).
@@ -54,8 +54,8 @@ Fonts addicionals de contrast: [Boletín Informativo 1997](https://www.cultura.g
 - **1965:** hi ha el candidat sectorial **≈435,2M** (MEDIA Salles); falta identificar-lo en la documentació pública original del control de taquilla de 1965. El quadre històric ICAA documenta la recaptació però **no** el total d'espectadors. No atribuir els 403,1M de 1966 al 1965.
 - **1969, resolt:** 364.640.582 segons el butlletí de 1989; el de 1976 discrepava en 20 entrades.
 - **1971, resolt:** 295.298.786, confirmat als butlletins oficials de 1976, 1987, 1989 i 1991; un recull secundari publica una xifra divergent.
-- **2001:** una taula de detall i la sèrie evolutiva del mateix butlletí mostren 146,210M i 146,810M respectivament. La sèrie evolutiva posterior també reporta 146,810M. Cal confirmar-ne el recompte de referència.
-- **2022–2025:** cal cercar recomptes oficials en unitats, si existeixen, abans de carregar els valors a un sistema que fa arrodoniments a centèsimes de quota.
+- **2001, resolt:** **146.810.494 entrades**. El total de la taula provincial del butlletí de 2001 suma **26.265.964 espanyoles + 120.604.530 estrangeres**, i coincideix amb les sèries evolutives oficials de 2005, 2010 i 2011. La xifra alternativa 146.210.494 queda descartada. [Butlletí 2001, quadre provincial](https://www.cultura.gob.es/dam/jcr%3Ad5b427a5-2303-4e0c-a979-2a3350866545/bolet-n-2001.pdf), [evolució 1995–2005](https://www.cultura.gob.es/dam/jcr%3Aa35d5fae-b963-44d5-afe8-264c9fb10393/4-02-cuadrosevolucion.pdf), [evolució 2001–2011](https://www.cultura.gob.es/dam/jcr%3A06fcb8db-0e59-45e3-8ea6-d0400b120def/21-evolucion-exhibicion.pdf).
+- **2022–2025:** la [taula oficial 2025 de CULTURABase](https://www.cultura.gob.es/dam/jcr%3A4060b6e9-4fa9-4f18-923f-f15066dcc03c/nota-resumen-cine-y-contenidos-audiovisuales-2021.pdf) publica 59,1M, 76,7M, 72,9M i 66,9M. Conservar la precisió declarada (0,1M), sense generar decimals ficticis; cercar els recomptes en unitats només si una altra publicació oficial accessible els facilita.
 - **Definició de «quota»:** actualment compara els espectadors *acumulats* d'un film amb un *mercat anual*. És un indicador relatiu propi, no la quota anual oficial de taquilla de la pel·lícula: documentar-ho sense abandonar ni alterar unilateralment el criteri editorial.
 
 ## Límit d'aquesta auditoria
