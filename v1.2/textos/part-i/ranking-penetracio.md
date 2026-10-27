@@ -3,6 +3,10 @@ De cada 100 habitants quantes entrades es van vendre per veure cada pel·lícula
 <!-- /intro -->
 
 <!-- comentari -->
-- *La muerte tenía un precio* (#5 per espectadors, #2 per penetració) confirma la força dels grans èxits dels 60s. Amb 5,5 milions d’entrades venudes en una Espanya d’uns 32 milions d’habitants, equivalia a 17 entrades per cada 100 habitants.
-- La penetració és la mètrica que millor revela la força social del cinema popular dels 60s: fins a quatre films d’aquella dècada que no eren al Top 10 per espectadors hi entren ara. Títols com *La ciudad no es para mí* (#11→#4) o *Mi canción es para ti* (#14→#8) pugen perquè, en una Espanya amb menys habitants i les sales molt més plenes, cada gran èxit tenia un pes social molt més gran.
+- *8 apellidos vascos* conserva el lideratge, amb 20 entrades per cada 100 habitants, però *La muerte tenía un precio* s'acosta fins al segon lloc. Els seus 5,5M d'espectadors el 1966 equivalien a més de 17 entrades per cada 100 habitants, una proporció superior a la de gairebé tots els grans èxits contemporanis.
+
+- El Top 10 canvia notablement de composició. Cinc pel·lícules dels 60s hi tenen cabuda, davant d'una sola al rànquing absolut. *La ciudad no es para mí* (#11 → #4), *Mi canción es para ti* (#14 → #8), *Pero... ¿en qué país vivimos?* (#13 → #9) i *Un beso en el puerto* (#15 → #10) entren entre les deu primeres en tenir en compte la població de l'època.
+
+- En ampliar la classificació, aquesta recuperació del cinema popular dels 60s continua. *Juicio de faldas* (#20 → #13) i *Por un puñado de dólares* (#25 → #14) també escalen posicions. La penetració permet apreciar millor l'abast demogràfic d'aquests èxits, que la comparació directa d'espectadors amb dècades posteriors tendeix a reduir.
+
 <!-- /comentari -->
