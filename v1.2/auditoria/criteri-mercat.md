@@ -16,7 +16,7 @@
 
 - **Espanya, 2020 (comprovat):** 27.000.821 entrades; el valor 50M de la web NO coincideix amb l'ICAA. Font institucional en text públic: [Ministeri de Cultura, nota de 15-11-2022](https://www.cultura.gob.es/actualidad/2022/11/221115-ayudas-salas-cine.html). Font complementària: [estadística oficial CULTURABase, taula 2020–2024](https://www.cultura.gob.es/dam/jcr%3A4060b6e9-4fa9-4f18-923f-f15066dcc03c/estadistica-de-cinematografia-produccion-exhibicion-distribucion-y-fomento.pdf). **Unitat: entrades, no persones úniques.**
 - **França, 2020 (comprovat):** la dada consolidada de freqüentació és **65,26M**, representada com a **65,3M** a `part-iii.html` (gràfic de Buñuel). El CNC havia publicat **65,1M** en un balanç provisional de 30-12-2020. Fonts: [CNC, avanç 2020](https://www.cnc.fr/professionnels/frequentation-cinematographique--annee-2020_1382389); [CNC, Géographie du cinéma 2023 (total 65,26M)](https://medias.amf.asso.fr/upload/files/3761_CNC_Geo-2023-globale-02.pdf). El **63,5M** plantejat en la conversa NO és el valor que hi ha al gràfic; cal evitar la transposició dels dígits. Comprovar sempre l'abast geogràfic de les taules del CNC.
-- **1965 (obert):** el quadre oficial històric de l'ICAA dona recaptació però deixa sense xifra el total d'espectadors de 1965; sí que publica **403.080.506 entrades el 1966**. [Boletín informativo 1981, quadre retrospectiu](https://www.cultura.gob.es/dam/jcr%3Aae1fc817-fcf3-4c76-8d58-4dab4f58d977/boletin-1981.pdf). S'ha localitzat una **font acadèmica secundària que atribueix 385,3M a 1965**, sense verificació encara de la seva font primària: [Universitat de Saragossa, treball acadèmic, taula 6.1.1](https://zaguan.unizar.es/record/90094/files/TAZ-TFG-2020-286.pdf). Els **390M** actuals són una estimació declarada, no una dada ICAA certificada. **Ni 385,3M ni 403,1M s'han aprovat com a dada anual de 1965.** La manca d'una dada anual confirmada no invalida els espectadors acumulats dels títols de 1965.
+- **1965 (CANDIDAT DOCUMENTAT, ENCARA NO APROVAT):** [MEDIA Salles, «100 years of cinema in Spain», taula 1950–1969](https://www.mediasalles.it/ybkcent/ybk95_e.htm), publica **435,2 milions d'entrades per a 1965**. La taula identifica com a fonts *Statistics of Film Industry in Europe* (Gyory i Glas, Brussel·les, 1992) i *European Cinema Yearbook 1994* (MEDIA Salles). És una **font sectorial secundària especialitzada**, no una xifra certificada directament de l'ICAA. El [butlletí oficial ICAA de 1985](https://www.cultura.gob.es/dam/jcr%3A36b41dc7-e1ee-402a-b2fe-0759becb825f/bolet-n-1985.pdf) dona **403.080.506 entrades el 1966** però deixa buida la casella d'espectadors de **1965**. El valor actual **390M** és una estimació editorial, i una altra referència acadèmica secundària havia suggerit **385,3M** sense font primària comprovada ([Universitat de Saragossa, TFG 2020](https://zaguan.unizar.es/record/90094)). També hi ha textos periodístics que atribueixen **403M a 1965**, aparentment confonent-lo amb el registre oficial de 1966 ([El País, 1991](https://elpais.com/diario/1991/05/05/cultura/673394405_850215.html)). **Decisió: mantenir de moment intacta la web i considerar ≈435,2M la millor proposta secundària documentada; no etiquetar-la com a ICAA oficial fins a veure l'informe original «El mercado cinematográfico español en 1965» (1966) o l'«Estudio del mercado cinematográfico español 1964–1967» (1968).**
 - **Abast de l'excepció 1965:** a `data/films.json` hi ha **cinc films del Top 100** datats el 1965 i amb mercat 390M estimat (*Mi canción es para ti*, *Por un puñado de dólares*, *Estambul 65*, *Currito de la Cruz*, *Cabriola*). La decisió pendent afecta les seves quotes i els indicadors derivats, no els espectadors acumulats ni la seva presència al rànquing absolut.
 
 ## Criteri únic
@@ -30,7 +30,7 @@
 
 ## Cobertura de la proposta
 
-- **1965:** dada anual encara no contrastada, la proposta queda en blanc. El valor viu de 390M continua identificat com a estimació.
+- **1965:** proposta **435,2M** de MEDIA Salles (font secundària especialitzada; NO dada directa ICAA). L'any continua **pendent de validació primària**; el valor viu de 390M continua identificat com a estimació fins que s'aprovi el canvi.
 - **1966–2021:** 56 anualitats amb recompte en unitats documentat en butlletins o evolucions oficials. Les diferències de 1969 i 1971 s'han resolt prioritzant butlletins oficials; la inconsistència interna de 2001 continua anotada.
 - **2022–2025:** quatre anualitats de la sèrie estadística oficial, de moment amb precisió publicada de **0,1 milions**. No extrapolar decimals absents.
 - Els registres del CSV conserven per separat la xifra de la web, la candidata, la precisió i la incidència documental.
@@ -38,6 +38,7 @@
 
 ## Fonts primàries, amb identificador del CSV
 
+- **MEDIA_SALLES_1995 (candidat 1965):** https://www.mediasalles.it/ybkcent/ybk95_e.htm
 - **B76:** https://www.cultura.gob.es/dam/jcr%3A0ef4a9ed-7c95-43d0-aa57-c39f4f423142/boletin-1976.pdf
 - **B89:** https://www.cultura.gob.es/dam/jcr%3A03708774-f098-4a5e-99a6-59998af9dc34/bolet-n-1989.pdf
 - **B01:** https://www.cultura.gob.es/dam/jcr%3Ad5b427a5-2303-4e0c-a979-2a3350866545/bolet-n-2001.pdf
@@ -50,7 +51,7 @@ Fonts addicionals de contrast: [Boletín Informativo 1997](https://www.cultura.g
 
 ## Incidències expressament obertes
 
-- **1965:** el quadre històric de l'ICAA documenta la recaptació però **no** el total d'espectadors. No atribuir els 403,1M de 1966 al 1965.
+- **1965:** hi ha el candidat sectorial **≈435,2M** (MEDIA Salles); falta identificar-lo en la documentació pública original del control de taquilla de 1965. El quadre històric ICAA documenta la recaptació però **no** el total d'espectadors. No atribuir els 403,1M de 1966 al 1965.
 - **1969, resolt:** 364.640.582 segons el butlletí de 1989; el de 1976 discrepava en 20 entrades.
 - **1971, resolt:** 295.298.786, confirmat als butlletins oficials de 1976, 1987, 1989 i 1991; un recull secundari publica una xifra divergent.
 - **2001:** una taula de detall i la sèrie evolutiva del mateix butlletí mostren 146,210M i 146,810M respectivament. La sèrie evolutiva posterior també reporta 146,810M. Cal confirmar-ne el recompte de referència.
