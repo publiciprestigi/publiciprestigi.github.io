@@ -1,0 +1,47 @@
+# Mapa d'impacte de la nova sèrie de mercat — v1.2
+
+**Estat: simulació, pendent de revisió editorial i metodològica. No aplicar automàticament.** Revisió del 27-10-2026. S'utilitza la sèrie de [mercat-1965-2025.csv](mercat-1965-2025.csv), i s'han inspeccionat les dependències actuals del repositori. L'objectiu és evitar canvis fragmentaris o xifres incoherents. Les dades actives i la web no han estat modificades.
+
+## Què calcula la simulació
+
+- **210 registres** a `data/films.json`, dels quals **100 Top 100** i **110 films de context**. Es preserven els seus espectadors acumulats i la penetració existent.
+- Nova **quota de referència** = 100 × espectadors acumulats del film / total d'entrades venudes a Espanya durant l'any associat al film. **No equival a la quota anual oficial de distribució** de la pel·lícula.
+- **48 films Top 100** (i **48 registres totals**) tenen un IIC guardat que divergeix en ≥0,05 punts del càlcul `0,683 × √(quota guardada × penetració guardada)`. Això és **anterior** a qualsevol canvi de mercat i **no es pot resoldre exclusivament amb el nou denominador**. Cal comprovar si hi ha un criteri metodològic històric diferent, un ajust manual o dades obsoletes.
+- Per desambiguar, el CSV mostra **dues simulacions separades**: `IIC_només_canvi_mercat` (IIC guardat multiplicat per √[mercat anterior/mercat nou]) i `IIC_formula_mercat_nou` (recalculat des de la fórmula publicada). **Cap d'elles no és encara un IIC aprovat.**
+- Amb quota calculada a partir dels nous totals, **75/100** posicions del rànquing de quota canviarien (inclou desplaçaments indirectes). Amb IIC recalculat segons la fórmula publicada, **84/100** posicions canviarien; amb la variant que únicament escala l'IIC guardat, **80/100**. Les posicions són **orientatives**, amb els valors interns sense arrodonir i l'ordre estable de les dades; cal verificar el criteri final d'arrodoniment i desempat del codi de la web.
+- Hi ha **2 pel·lícules Top 100 datades el 1964**, `Búsqueme a esa chica` i `Tulipán negro`, amb denominador **400M estimat**. Són excepcions del corpus conegudes i **no s'exclouen ni es redaten** en aquesta simulació. El seu mercat es conserva sense canvis fins que es documenti expressament la política per a l'any 1964.
+- Hi ha **4 pel·lícules de 2019** (`Padre no hay más que uno`, `Si yo fuera rico`, `Mientras dure la guerra`, `Lo dejo cuando quiera`) que actualment tenen un mercat **105M** a `films.json`, mentre `market.json` dona **105,5M**. La nova sèrie resol aquesta duplicitat quan s'apliqui.
+
+## Cadena de dependències abans de publicar
+
+| Bloc | Fitxers / ubicacions | Canvis previstos |
+| --- | --- | --- |
+| Font anual | `data/market.json` | Adoptar els 61 valors, marcar 1965 com a estimació documentada, preservar unitats i precisió |
+| Base de títols | `data/films.json` | Revisar mercat associat, quota, IIC, i verificar les dues excepcions 1964; no tocar espectadors acumulats |
+| Part I — gràfics | `js/mercat.js`, `js/decades-resum.js`, `js/part-i.js` | Dades per habitant, resum, rànquings i gràfic de comparació de les quatre mètriques |
+| Part I — introduccions i context | `textos/introduccions-parts.md`, `textos/part-i/fonts-i-eines.md`, `mercat-poblacio.md`, `decades-intro.md`, `decada-60s.md` … `decada-2020s.md` | Canviar només les quantificacions i afirmacions que quedin invalidades, incloses les dades de 2020 i 2025 |
+| Part I — rànquings narrats | `textos/part-i/ranking-quota.md`, `ranking-iic.md` | Percentatges, exemples, ordenacions i «Com varien els rànquings i què aporta l'IIC» |
+| Part II | `textos/part-ii/dades-i-criteri.md`, `js/part-ii.js` | Verificar criteris; el corpus de festivals, Oscar i EFA no depèn directament del mercat |
+| Part III — comparatives | `js/part-iii.js`, `part-iii.html` | Actualitzar llistes codificades d'any/mercat, quota i IIC; centralitzar quan sigui factible sense canviar la visualització |
+| Part III — textos | `textos/part-iii/caza-alcarras.md`, `bretxa.md`, `bunuel-mercat.md`, `conclusions.md` | Validar totes les xifres i comentaris de mercat; no modificar la ràtio de bretxa si només depèn d'espectadors absoluts |
+| Notes | `notes.html` — especialment [2], [3], [4] i [31] | Reescriure les fonts i les magnituds verificades; [1] conserva la distinció entre dades per títol i totals anuals |
+| Control de publicació | `index.html`, `part-i.html`, `part-ii.html`, `part-iii.html` i equivalents `es/` | Detectar valors escrits directament als HTML, comprovar scripts, gràfics, notes, codi compartit i futures traduccions |
+
+## Mostra orientativa de conseqüències (subjecta a criteri definitiu de l'IIC)
+
+- *Mi canción es para ti* (1965): quota 1.03% → **0.93%**, IIC guardat 2.58 → **2.34** amb la fórmula publicada (provisional).
+- *La ciudad no es para mí* (1966): quota 1.16% → **1.07%**, IIC guardat 2.69 → **2.58** amb la fórmula publicada (provisional).
+- *Mujeres al borde de un ataque de nervios* (1988): quota 3.94% → **3.82%**, IIC guardat 3.98 → **3.92** amb la fórmula publicada (provisional).
+- *Todo sobre mi madre* (1999): quota 2.36% → **1.97%**, IIC guardat 2.67 → **2.44** amb la fórmula publicada (provisional).
+- *Padre no hay más que uno 3* (2022): quota 3.67% → **4.41%**, IIC guardat 3.07 → **3.37** amb la fórmula publicada (provisional).
+- *Padre no hay más que uno 5* (2025): quota 3.14% → **3.05%**, IIC guardat 2.47 → **2.43** amb la fórmula publicada (provisional).
+
+## Ordre d'implantació, quan s'aprovi
+
+1. Congelar aquesta simulació i acordar la fórmula operativa exacta de l'IIC (incloent arrodoniments i normalització) i el tractament del denominador dels dos films 1964.
+2. Aplicar conjuntament les dues bases `market.json` i `films.json`, amb comprovació de consistència en els 210 registres. Conservar els valors anteriors als commits de GitHub.
+3. Actualitzar les dades repetides a `js/part-iii.js`, `part-iii.html` i la resta de JS/HTML, procurant una sola font de mercat.
+4. Revisar **llavors** els fragments editorials i les notes, sense reobrir decisions estilístiques no afectades.
+5. Verificar de forma programàtica que totes les magnituds i posicions concorden, i visualment que gràfics i tooltips no han canviat de forma inesperada. Només després abordar el castellà.
+
+**No es modifica cap pàgina ni cap indicador de producció en aquesta fase.**
