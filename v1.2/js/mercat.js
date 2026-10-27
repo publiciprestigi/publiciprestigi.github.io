@@ -24,6 +24,7 @@ async function construirGraficMercat() {
   const entrades  = dades.map(d => d.entrades_M);
   const poblacio  = dades.map(d => d.poblacio_M);
   const estimats  = dades.map(d => d.estimat);
+  const poblacioReconstruida = dades.map(d => d.any <= 1972);
   const perHab    = dades.map(d => Number((d.entrades_M / d.poblacio_M).toFixed(2)));
 
   const COLORS_SAT_MERCAT = {
@@ -123,10 +124,10 @@ async function construirGraficMercat() {
         ctx.fillStyle = '#363737';
         ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
         ctx.textAlign = 'left';
-        ctx.fillText(pipMercatT('Màxim: ~390M','Máximo: ~390M'), xMax + 4, yMax - (isMobil ? 10 : 18));
+        ctx.fillText(pipMercatT('Màxim: ≈435,2M','Máximo: ≈435,2M'), xMax + 4, yMax - (isMobil ? 10 : 18));
         if (!isMobil) {
           ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
-          ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
+          ctx.fillText(pipMercatT('(1965 · estimació)','(1965 · estimación)'), xMax + 6, yMax - 6);
         }
 
         const idx2020 = anys.indexOf(2020);
@@ -135,7 +136,7 @@ async function construirGraficMercat() {
         ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
         ctx.textAlign = 'right';
         ctx.fillText(isMobil ? '2020' : pipMercatT('Col·lapse pandèmic','Colapso pandémico'), x2020 + 4, y.top + (isMobil ? 20 : 30));
-        if (!isMobil) ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
+        if (!isMobil) ctx.fillText('27,0M (2020)', x2020 + 4, y.top + 42);
       }
 
       ctx.restore();
@@ -234,11 +235,11 @@ async function construirGraficMercat() {
             title: c => `${pipMercatT('Any','Año')} ${c[0].label}`,
             label: c => {
               if (chart.$view === 'perhab') {
-                const est = estimats[c.dataIndex] ? ` ${pipMercatT('(est.)','(est.)')}` : '';
+                const est = (estimats[c.dataIndex] || poblacioReconstruida[c.dataIndex]) ? ` ${pipMercatT('(est.)','(est.)')}` : '';
                 return ` ${pipMercatT('Entrades per habitant','Entradas por habitante')}: ${Number(c.parsed.y).toLocaleString(PIP_MERCAT_ES ? 'es-ES' : 'ca-ES',{minimumFractionDigits:2,maximumFractionDigits:2})}${est}`;
               }
               const u = c.datasetIndex === 0 ? pipMercatT('M entrades','M entradas') : pipMercatT('M habitants','M habitantes');
-              const est = c.datasetIndex === 0 && estimats[c.dataIndex] ? ' (est.)' : '';
+              const est = ((c.datasetIndex === 0 && estimats[c.dataIndex]) || (c.datasetIndex === 1 && poblacioReconstruida[c.dataIndex])) ? ' (est.)' : '';
               return ` ${c.dataset.label.split('(')[0].trim()}: ${c.parsed.y.toFixed(1)}${u}${est}`;
             }
           }
