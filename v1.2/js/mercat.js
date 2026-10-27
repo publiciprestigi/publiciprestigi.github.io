@@ -123,10 +123,10 @@ async function construirGraficMercat() {
         ctx.fillStyle = '#363737';
         ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
         ctx.textAlign = 'left';
-        ctx.fillText(pipMercatT('Màxim: ~390M','Máximo: ~390M'), xMax + 4, yMax - (isMobil ? 10 : 18));
+        ctx.fillText(pipMercatT('Màxim: ~','Máximo: ~') + Math.round(entrades[idxMax]) + 'M', xMax + 4, yMax - (isMobil ? 10 : 18));
         if (!isMobil) {
           ctx.font = `${mida}px "Inter", -apple-system, sans-serif`;
-          ctx.fillText('(~1964–1966)', xMax + 6, yMax - 6);
+          ctx.fillText('(1965)', xMax + 6, yMax - 6);
         }
 
         const idx2020 = anys.indexOf(2020);
@@ -135,7 +135,7 @@ async function construirGraficMercat() {
         ctx.font = `bold ${mida}px "Inter", -apple-system, sans-serif`;
         ctx.textAlign = 'right';
         ctx.fillText(isMobil ? '2020' : pipMercatT('Col·lapse pandèmic','Colapso pandémico'), x2020 + 4, y.top + (isMobil ? 20 : 30));
-        if (!isMobil) ctx.fillText('50M (2020)', x2020 + 4, y.top + 42);
+        if (!isMobil) ctx.fillText(Math.round(entrades[idx2020]) + 'M (2020)', x2020 + 4, y.top + 42);
       }
 
       ctx.restore();
