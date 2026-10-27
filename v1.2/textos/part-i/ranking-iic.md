@@ -10,9 +10,6 @@ Què passa si combinem l’abast d’una pel·lícula entre la població amb el 
 Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. Aquestes diferències revelen fins a quin punt el context històric condiciona la lectura de l’èxit de públic i com l’IIC pot ajudar a interpretar-les. El gràfic permet explorar quatre exemples significatius o seleccionar qualsevol altra pel·lícula del Top 100.
 <!-- /comparativa-intro -->
 
-
-
-
 <!-- comentari -->
 - **Un públic massiu en un mercat immens.** *La ciudad no es para mí* (1966), amb Paco Martínez Soria, arriba al #4 per penetració, però cau al #45 per quota. Els seus 4,3M d'espectadors representaven una proporció considerable de la població, però només l'1,16% d'un mercat de 370M d'entrades. L'IIC la situa al #24, entre l'abast popular i el pes relativament petit dins d'aquell mercat.
 
