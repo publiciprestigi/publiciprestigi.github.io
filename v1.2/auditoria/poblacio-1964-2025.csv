@@ -1,0 +1,63 @@
+any;poblacio_actual_json_M;poblacio_candidata_persones;poblacio_candidata_M;estat;data_referencia;organisme;enllac;observacio
+1964;;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;"Excepcio corpus oficial ICAA; no extrapolar automaticament des de 1965"
+1965;32,1;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;Cal reconstruccio o estimacio historica de poblacio
+1966;32,3;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;Cal reconstruccio o estimacio historica de poblacio
+1967;32,6;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;Cal reconstruccio o estimacio historica de poblacio
+1968;32,9;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;Cal reconstruccio o estimacio historica de poblacio
+1969;33,2;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;Cal reconstruccio o estimacio historica de poblacio
+1970;33,8;;;PENDENT_ESTIMACIO_HISTORICA;1 de gener;;;Cal reconstruccio o estimacio historica de poblacio
+1971;34,1;34040642;34,040642;VERIFICAR_INE_PRIMARI;1 de gener;INE citat per font secundària;https://relojpublico.es/poblacion/evolucion/;"Sèrie secundària que cita INE; manca taula original per a aquesta dada"
+1972;34,4;34408338;34,408338;VERIFICAR_INE_PRIMARI;1 de gener;INE citat per font secundària;https://relojpublico.es/poblacion/evolucion/;"Sèrie secundària que cita INE; manca taula original per a aquesta dada"
+1973;34,8;34800600;34,8006;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1974;35,1;35177294;35,177294;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1975;35,5;35569375;35,569375;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1976;36;35946425;35,946425;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1977;36,4;36329199;36,329199;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1978;36,9;36694077;36,694077;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1979;37,2;37035719;37,035719;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1980;37,5;37346940;37,34694;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1981;37,8;37635389;37,635389;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1982;38;37881873;37,881873;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1983;38,2;38090151;38,090151;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1984;38,3;38252899;38,252899;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1985;38,4;38407829;38,407829;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1986;38,5;38531195;38,531195;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1987;38,6;38638052;38,638052;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1988;38,7;38731578;38,731578;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1989;38,8;38802300;38,8023;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1990;38,9;38853227;38,853227;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1991;38,9;38881416;38,881416;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1992;39;39051336;39,051336;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1993;39,1;39264034;39,264034;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1994;39,1;39458489;39,458489;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1995;39,2;39639726;39,639726;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1996;39,4;39808374;39,808374;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1997;39,6;39971329;39,971329;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1998;39,9;40143449;40,143449;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+1999;40,2;40303568;40,303568;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2000;40,3;40470182;40,470182;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2001;41,1;40665545;40,665545;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2002;42;41035271;41,035271;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2003;42,7;41827836;41,827836;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2004;43,2;42547454;42,547454;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2005;44,1;43296335;43,296335;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2006;44,7;44009969;44,009969;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2007;45,2;44784659;44,784659;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2008;46,1;45668938;45,668938;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2009;46,7;46239271;46,239271;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2010;47;46486621;46,486621;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2011;47,2;46667175;46,667175;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2012;47,3;46818216;46,818216;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2013;47,1;46727890;46,72789;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2014;46,8;46512199;46,512199;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2015;46,6;46449565;46,449565;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2016;46,4;46440099;46,440099;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2017;46,6;46527039;46,527039;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2018;46,9;46658447;46,658447;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2019;47,1;46937060;46,93706;DOCUMENTAT_INE;1 de gener;INE;https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335;"Serie INE de poblacio resident 1 gener; originalment CP335"
+2020;47,4;47318050;47,31805;DOCUMENTAT_INE;1 de gener;INE;https://ine.es/htdocs/prensa/ecp_tabla.htm;Poblacio resident 1 gener segons serie ECP o cens revisat
+2021;47,5;47400798;47,400798;DOCUMENTAT_INE;1 de gener;INE;https://ine.es/htdocs/prensa/ecp_tabla.htm;Poblacio resident 1 gener segons serie ECP o cens revisat
+2022;47,8;47486727;47,486727;DOCUMENTAT_INE;1 de gener;INE;https://ine.es/htdocs/prensa/ecp_tabla.htm;Poblacio resident 1 gener segons serie ECP o cens revisat
+2023;48,3;48085361;48,085361;DOCUMENTAT_INE;1 de gener;INE;https://ine.es/htdocs/prensa/ecp_tabla.htm;Poblacio resident 1 gener segons serie ECP o cens revisat
+2024;48,5;48619695;48,619695;DOCUMENTAT_INE;1 de gener;INE;https://ine.es/htdocs/prensa/ecp_tabla.htm;Poblacio resident 1 gener segons serie ECP o cens revisat
+2025;49,128297;49128297;49,128297;DOCUMENTAT_INE;1 de gener;INE;https://ine.es/htdocs/prensa/ecp_tabla.htm;Poblacio resident 1 gener segons serie ECP o cens revisat
