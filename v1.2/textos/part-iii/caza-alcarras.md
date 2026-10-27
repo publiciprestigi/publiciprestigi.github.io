@@ -23,11 +23,11 @@ El factor multiplicador varia segons el període. Els valors són estimacions or
 
 | Període | Nº finestres | Tipus de finestres | Factor IAA |
 | --- | --- | --- | --- |
-| <span style="white-space:nowrap">1965–1984</span> | 1 | *Sala de cinema* | ×1,0 |
+| <span style="white-space:nowrap">1965–1983</span> | 1 | *Sala de cinema* | ×1,0 |
 | <span style="white-space:nowrap">1984–1989</span> | 3 | *Sala + TVE + VHS* | ×3,0 |
 | <span style="white-space:nowrap">1990–1994</span> | 4 | *Sala + TVE + VHS + TV autonòmiques* | ×2,5 |
-| <span style="white-space:nowrap">1994–2005</span> | 5 | *Sala + TVE + TV privades/pagament + TV auton. + DVD* | ×2,15 |
-| <span style="white-space:nowrap">2005–2019</span> | 6 | *Sala + TVE + TV priv./pag. + TV auton. + DVD + plataformes digitals* | ×2,5 |
+| <span style="white-space:nowrap">1995–2005</span> | 5 | *Sala + TVE + TV privades/pagament + TV auton. + DVD* | ×2,15 |
+| <span style="white-space:nowrap">2006–2019</span> | 6 | *Sala + TVE + TV priv./pag. + TV auton. + DVD + plataformes digitals* | ×2,5 |
 | <span style="white-space:nowrap">2020–2025</span> | 6+ | *Sala + TVE + TV priv./pag. + TV auton. + plataformes digitals en expansió* | ×3,25 |
 <!-- /bloc-iaa -->
 
