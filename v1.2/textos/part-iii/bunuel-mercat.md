@@ -67,7 +67,7 @@ Per tancar el capítol, recuperem la perspectiva de la Part I i ampliem la compa
 <!-- /PIP_BLOC:comentari-mercats -->
 
 <!-- PIP_BLOC:comentari-perhab -->
-- El 1965, Espanya superava les dotze entrades anuals per habitant, més del doble que França, un avantatge que es va mantenir fins a començaments dels vuitanta. Després d’una caiguda pronunciada, els dos països van tornar a presentar nivells semblants durant els noranta i els primers 2000, amb diversos anys favorables a Espanya. La situació actual, amb França clarament per davant, és el resultat d’un canvi de tendència, no d’una diferència que hagi existit sempre.
+- El 1965, Espanya registrava aproximadament 13,6 entrades anuals per habitant, més del doble que França, un avantatge que es va mantenir fins a començaments dels vuitanta. Després d’una caiguda pronunciada, els dos països van tornar a presentar nivells semblants durant els noranta i els primers 2000, amb diversos anys favorables a Espanya. La situació actual, amb França clarament per davant, és el resultat d’un canvi de tendència, no d’una diferència que hagi existit sempre.
 <!-- /PIP_BLOC:comentari-perhab -->
 
 <!-- PIP_BLOC:comentari-quota -->
