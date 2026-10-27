@@ -2140,9 +2140,9 @@ function construirLleis() {
 
 <div class="ll-ef">${pip3T('Períodes','Periodos')}</div>
 <div class="ll-g6 ll-per">
-  <div class="c c1">1965–1984</div><div class="c c2">1984–1989</div>
-  <div class="c c3">1990–1994</div><div class="c c4">1994–2005</div>
-  <div class="c c5">2005–2019</div><div class="c c6">2020–2025</div>
+  <div class="c c1">1965–1983</div><div class="c c2">1984–1989</div>
+  <div class="c c3">1990–1994</div><div class="c c4">1995–2005</div>
+  <div class="c c5">2006–2019</div><div class="c c6">2020–2025</div>
 </div>
 
 <div class="ll-ef">${pip3T('Moments clau','Momentos clave')}</div>
