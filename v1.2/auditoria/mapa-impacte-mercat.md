@@ -9,7 +9,7 @@
 - **48 films Top 100** (i **48 registres totals**) tenen un IIC guardat que divergeix en ≥0,05 punts del càlcul `0,683 × √(quota guardada × penetració guardada)`. Això és **anterior** a qualsevol canvi de mercat i **no es pot resoldre exclusivament amb el nou denominador**. Cal comprovar si hi ha un criteri metodològic històric diferent, un ajust manual o dades obsoletes.
 - Per desambiguar, el CSV mostra **dues simulacions separades**: `IIC_només_canvi_mercat` (IIC guardat multiplicat per √[mercat anterior/mercat nou]) i `IIC_formula_mercat_nou` (recalculat des de la fórmula publicada). **Cap d'elles no és encara un IIC aprovat.**
 - Amb quota calculada a partir dels nous totals, **75/100** posicions del rànquing de quota canviarien (inclou desplaçaments indirectes). Amb IIC recalculat segons la fórmula publicada, **84/100** posicions canviarien; amb la variant que únicament escala l'IIC guardat, **80/100**. Les posicions són **orientatives**, amb els valors interns sense arrodonir i l'ordre estable de les dades; cal verificar el criteri final d'arrodoniment i desempat del codi de la web.
-- Hi ha **2 pel·lícules Top 100 datades el 1964**, `Búsqueme a esa chica` i `Tulipán negro`, amb denominador **400M estimat**. Són excepcions del corpus conegudes i **no s'exclouen ni es redaten** en aquesta simulació. El seu mercat es conserva sense canvis fins que es documenti expressament la política per a l'any 1964.
+- **Decisió editorial fixa — dues inclusions de 1964:** `Búsqueme a esa chica` i `Tulipán negro` consten al **Top 100 de l'Anuari oficial ICAA 2023**, corpus adoptat per l'estudi. **No se n'altera la inclusió, el 1964, la classificació ni els espectadors acumulats**, ni es pressuposa un error de l'ICAA. Són una excepció documentada al període principal 1965–2025. El denominador de **400M estimat del 1964** és una qüestió separada: es manté sense canvis mentre no se'n validi l'origen; no se li aplica automàticament la xifra acordada per al 1965. Vegeu també `criteri-mercat.md`.
 - Hi ha **4 pel·lícules de 2019** (`Padre no hay más que uno`, `Si yo fuera rico`, `Mientras dure la guerra`, `Lo dejo cuando quiera`) que actualment tenen un mercat **105M** a `films.json`, mentre `market.json` dona **105,5M**. La nova sèrie resol aquesta duplicitat quan s'apliqui.
 
 ## Cadena de dependències abans de publicar
@@ -17,7 +17,7 @@
 | Bloc | Fitxers / ubicacions | Canvis previstos |
 | --- | --- | --- |
 | Font anual | `data/market.json` | Adoptar els 61 valors, marcar 1965 com a estimació documentada, preservar unitats i precisió |
-| Base de títols | `data/films.json` | Revisar mercat associat, quota, IIC, i verificar les dues excepcions 1964; no tocar espectadors acumulats |
+| Base de títols | `data/films.json` | Revisar mercat associat, quota i IIC; conservar els dos films de 1964 amb any i inclusió ICAA inalterats; no tocar espectadors acumulats |
 | Part I — gràfics | `js/mercat.js`, `js/decades-resum.js`, `js/part-i.js` | Dades per habitant, resum, rànquings i gràfic de comparació de les quatre mètriques |
 | Part I — introduccions i context | `textos/introduccions-parts.md`, `textos/part-i/fonts-i-eines.md`, `mercat-poblacio.md`, `decades-intro.md`, `decada-60s.md` … `decada-2020s.md` | Canviar només les quantificacions i afirmacions que quedin invalidades, incloses les dades de 2020 i 2025 |
 | Part I — rànquings narrats | `textos/part-i/ranking-quota.md`, `ranking-iic.md` | Percentatges, exemples, ordenacions i «Com varien els rànquings i què aporta l'IIC» |
@@ -38,7 +38,7 @@
 
 ## Ordre d'implantació, quan s'aprovi
 
-1. Congelar aquesta simulació i acordar la fórmula operativa exacta de l'IIC (incloent arrodoniments i normalització) i el tractament del denominador dels dos films 1964.
+1. Congelar aquesta simulació i acordar la fórmula operativa exacta de l'IIC (incloent arrodoniments i normalització) i la justificació documental del denominador estimat de 400M del 1964, sense alterar el corpus ICAA.
 2. Aplicar conjuntament les dues bases `market.json` i `films.json`, amb comprovació de consistència en els 210 registres. Conservar els valors anteriors als commits de GitHub.
 3. Actualitzar les dades repetides a `js/part-iii.js`, `part-iii.html` i la resta de JS/HTML, procurant una sola font de mercat.
 4. Revisar **llavors** els fragments editorials i les notes, sense reobrir decisions estilístiques no afectades.
