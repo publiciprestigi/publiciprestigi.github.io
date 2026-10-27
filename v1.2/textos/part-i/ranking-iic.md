@@ -3,7 +3,7 @@ Què passa si combinem l’abast d’una pel·lícula entre la població amb el 
 <!-- /intro -->
 
 <!-- comparativa-titol -->
-### Com varien els rànquings i què aporta l’IIC?
+## Com varien els rànquings i què aporta l’IIC?
 <!-- /comparativa-titol -->
 
 <!-- comparativa-intro -->
