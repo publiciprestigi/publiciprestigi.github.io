@@ -7,7 +7,7 @@ Què passa si combinem l’abast d’una pel·lícula entre la població amb el 
 <!-- /comparativa-titol -->
 
 <!-- comparativa-intro -->
-Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. Aquestes diferències revelen fins a quin punt el context històric condiciona la lectura de l’èxit de públic i com l’IIC ajuda a interpretar-les. El gràfic permet explorar quatre exemples significatius o seleccionar qualsevol altra pel·lícula del Top 100.
+Les posicions d’una mateixa pel·lícula poden variar considerablement segons la mètrica utilitzada. Aquestes diferències revelen fins a quin punt el context històric condiciona la lectura de l’èxit de públic i com l’IIC pot ajudar a interpretar-les. El gràfic permet explorar quatre exemples significatius o seleccionar qualsevol altra pel·lícula del Top 100.
 <!-- /comparativa-intro -->
 
 <!-- comparativa-grafic-titol -->
