@@ -1,41 +1,44 @@
-# Validació d'implantació — auditoria de mercat, població i IIC
+# Validació de la implantació a la branca de proves — 27-10-2026
 
-**Branca:** `auditoria-mercat-iic-2026` · **Base original:** `c1ee48fdc803431636ffca62342eadc5584ee070` · **Data:** 27-10-2026
+**Branca:** auditoria-mercat-iic-2026  
+**Base de main:** c1ee48fdc803431636ffca62342eadc5584ee070  
+**Estat:** IMPLEMENTACIÓ CATALANA I CODI PRINCIPAL ACTUALITZATS A LA BRANCA; PENDENT DE PROVES VISUALS I REVISIÓ FINAL. **NO FUSIONAR AMB MAIN.**
 
-## Estat
+## Implantat a la branca
 
-**FASE 1 — DADES PREPARADES; APLICACIÓ PARCIAL, NO PUBLICABLE.** Els fitxers `data/market.json`, `data/films.json` i `data/population.json` s'han generat a la branca de proves des dels CSV de l'auditoria. Encara no s'han sincronitzat els valors del JS/HTML, les notes ni els textos; no fusionar amb `main` fins acabar-ho.
+- Mercat 1965–2025 (61 anys) a `data/market.json`, població 1964–2025 (62 anys) a `data/population.json` i la població compatible dins de `market.json`.
+- Recalculats els 210 registres de `films.json` segons quota, penetració i IIC normalitzat. Dues excepcions de 1964 preservades (400M de mercat estimat); 1965 = ≈435,2M de MEDIA Salles. Públics acumulats i composició del corpus intactes.
+- Eliminats els valors manuals dels 49 registres identificats de `js/part-iii.js`; `novaFilaEFA()` calcula l'IIC amb la mateixa metodologia, i les taules d'autor industrial consulten també els denominadors comuns.
+- Les dades espanyoles `esMarket`, `espEntrades` i `espPoblacio` dels dos gràfics de `part-iii.html` procedeixen de `market.json` a temps d'execució. Els tres conjunts francesos `frMarket`, `fraEntrades` i `fraPoblacio` s'han comparat literalment amb `main`, i són idèntics.
+- Ajustats els límits dels gràfics per representar 1965 (mercat fins a 460M i entrades per habitant fins a 15), les anotacions de 1965 i 2020 i la marca de població reconstruïda a 1965–1972.
+- `js/decades-resum.js` calcula ara la mitjana de **totes les anualitats** d'una dècada, no la mitjana ponderada pels anys dels films del Top 100.
+- Actualitzades les referències dependents del mercat a la Part I, la introducció general, les notes [1]–[4] i [31] i els capítols afectats de la Part III. Cap actualització del corpus de prestigi, de les sèries franceses, dels espectadors de pel·lícules ni de les IAA.
 
-## Procediment reproduïble
+## Verificació programàtica executada amb els fitxers de la branca
 
-- Mercat: `mercat-1965-2025.csv`, 61 anys; els recomptes en unitats prevalen sobre la columna expressada en milions. Les xifres publicades únicament amb precisió de 0,1M es conserven amb aquesta precisió. 1965 = 435,2M, estimació documentada MEDIA Salles.
-- Població: `poblacio-1964-2025.csv`, 62 anys, sempre en persones; reconstrucció acadèmica 1964–1972 i INE des de 1973. `population.json` conserva la sèrie completa, inclòs 1964, i `market.json` ofereix els camps de compatibilitat del període 1965–2025.
-- Excepcions: dos films oficials de 1964, mercat separat de 400M estimats; no es canvien títols, anys, públics acumulats, Top 100 o ordre dels registres.
-- Quota = `100 × espectadors / mercat_any_en_unitats`. Penetració = `100 × espectadors / poblacio_any_en_persones`.
-- IIC = `k × sqrt(quota_sense_arrodonir × penetracio_sense_arrodonir)`; `k = 10 / sqrt(quota_8_apellidos_vascos × penetracio_8_apellidos_vascos)` = **0.6807356220097183**.
-- Guardar els tres indicadors amb `Number(valor.toFixed(2))`; ordenar amb valors publicats a dos decimals i empat estable segons ordre original del corpus.
-- `mercat_estimat` i `quota_estimat` només per a 1964–1965; `penetracio_estimat` per a 1964–1972. El camp `estimat` de `market.json` s'aplica només a 1965.
-
-## Proves executades abans del commit
-
-| Control | Resultat |
+| Comprovació | Resultat |
 | --- | ---: |
-| Files de mercat | 61/61 |
-| Files de població | 62/62 |
-| Films totals | 210/210 |
-| Top 100 | 100/100 |
-| Context | 110/110 |
-| Coincidència de quota, penetració i IIC amb el CSV de simulació | 630/630 |
-| Coincidència de posicions antigues i noves amb el CSV de simulació | 600/600 |
-| Desplaçaments del rànquing de quota | 73 |
-| Desplaçaments del rànquing de penetració | 60 |
-| Desplaçaments del rànquing d'IIC | 84 |
-| Films de 1964 amb 400M | 2/2 |
-| Anys, espectadors acumulats, pertinència al Top 100 i ordre del corpus inalterats | 210/210 |
-| Ancoratge d'IIC (8 apellidos vascos) | 10,00 |
+| Anualitats de mercat | 61/61 |
+| Anualitats de població | 62/62 |
+| Films (Top 100 + context) | 100 + 110 |
+| Mètriques quota, penetració i IIC comparades amb la simulació | 630/630 |
+| Posicions noves de rànquing contrastades | 300/300 |
+| Entrades manuals de la Part III, comparades amb la simulació | 49/49 |
+| Invocacions de mètrica sense valors numèrics manuals | 49/49 |
+| Scripts HTML incrustats analitzats sintàcticament | 11/11 |
+| Coeficient de normalització | 0,6807356220097183 |
+| Errors detectats en aquestes comprovacions | **0** |
 
-## Pendent de validació integral
+Mitjanes de mercat per dècada (milions d'entrades anuals, amb el conjunt d'anys disponible): 60s 394,5; 70s 260,0; 80s 123,1; 90s 101,0; 2000s 128,8; 2010s 96,2; 2020–2025 57,4.
 
-- Sincronitzar els 49 registres manuals de `js/part-iii.js`, la fórmula de `novaFilaEFA()`, les sèries duplicades de `part-iii.html` i les dades de la resta de JS.
-- Actualitzar les referències quantitatives de textos catalans, fonts, notes metodològiques i després les traduccions.
-- Verificar gràfics, tooltips, rànquings i càrrega de pàgines; contrastar `main` vs branca. No canviar les dades franceses, espectadors absoluts, IAA ni prestigi.
+A més d'aquesta comprovació a través del connector GitHub, s'ha incorporat `auditoria/valida-dades.mjs` per poder repetir-la en una còpia local del repositori amb `node v1.2/auditoria/valida-dades.mjs`. **El nou script Node no s'ha executat encara en un checkout local; cal fer-ho abans de la fusió.**
+
+## Punts pendents abans de la publicació
+
+1. **Prova real en navegador de la branca**, amb els gràfics i les taules de Parts I i III, toggles, hovers, tooltips, càrrega asíncrona i consola. La branca GitHub no és automàticament una URL pública de previsualització de GitHub Pages.
+2. Comprovació editorial amb la web visible: alineació dels textos dinàmics, notes, precisió numèrica i exemples del gràfic dels rànquings. Cal confirmar el manteniment de l'estil gràfic.
+3. Una vegada validada la versió catalana, sincronitzar els textos i HTML de `v1.2/es/` que encara conservin valors anteriors, i repetir les proves.
+4. Executar localment `valida-dades.mjs`, fer una inspecció final del diff i preparar una revisió abans de fusionar amb `main`.
+5. La confirmació primària de la dada de 1965 a la Filmoteca continua separada i ajornada fins després de la publicació, segons la decisió editorial.
+
+**No s'han fusionat, publicat ni desplegat els canvis d'aquesta branca.**
