@@ -1,6 +1,6 @@
 # Mapa d'impacte de la nova sèrie de mercat — v1.2
 
-**Estat: simulació, pendent de revisió editorial i metodològica. No aplicar automàticament.** Revisió del 27-10-2026. S'utilitza la sèrie de [mercat-1965-2025.csv](mercat-1965-2025.csv), i s'han inspeccionat les dependències actuals del repositori. L'objectiu és evitar canvis fragmentaris o xifres incoherents. Les dades actives i la web no han estat modificades.
+**Estat: simulació, pendent de revisió editorial i metodològica. No aplicar automàticament.** Revisió del 27-10-2026. S'utilitza la sèrie de [mercat-1965-2025.csv](mercat-1965-2025.csv), i ara també [poblacio-1964-2025.csv](poblacio-1964-2025.csv) per a la [simulació demogràfica conjunta](impacte-mercat-poblacio-1964-2025.csv); i s'han inspeccionat les dependències actuals del repositori. L'objectiu és evitar canvis fragmentaris o xifres incoherents. Les dades actives i la web no han estat modificades.
 
 ## Què calcula la simulació
 
@@ -38,7 +38,7 @@
 
 ## Ordre d'implantació, quan s'aprovi
 
-1. Congelar aquesta simulació i acordar la fórmula operativa exacta de l'IIC (incloent arrodoniments i normalització) i la justificació documental del denominador estimat de 400M del 1964, sense alterar el corpus ICAA.
+1. Congelar aquesta simulació, resoldre els anys inicials de població i acordar la fórmula operativa exacta de l'IIC (incloent arrodoniments i normalització) i la justificació documental del denominador estimat de 400M del 1964, sense alterar el corpus ICAA.
 2. Aplicar conjuntament les dues bases `market.json` i `films.json`, amb comprovació de consistència en els 210 registres. Conservar els valors anteriors als commits de GitHub.
 3. Actualitzar les dades repetides a `js/part-iii.js`, `part-iii.html` i la resta de JS/HTML, procurant una sola font de mercat.
 4. Revisar **llavors** els fragments editorials i les notes, sense reobrir decisions estilístiques no afectades.
