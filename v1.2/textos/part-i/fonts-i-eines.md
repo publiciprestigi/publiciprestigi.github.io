@@ -13,11 +13,9 @@ El 1965 marca el punt de partida de l'estudi perquè és a partir d'aquest any q
 
 Per situar les xifres d'espectadors en el seu context, utilitzem també els totals anuals d'entrades venudes a Espanya i les dades de població. Les fonts principals són el Ministeri de Cultura i l'INE, complementades amb estimacions i reconstruccions històriques per als primers anys. <sup>[2]</sup>
 
-## Coproduccions i directors no espanyols
+## Coproduccions i directors estrangers
 
-Les coproduccions es comptabilitzen com a espanyoles quan compleixen els requisits oficials de participació establerts per l'ICAA, independentment de la nacionalitat del director. Per això al Top 100 hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen. No és una excepció introduïda per l'estudi, sinó l'aplicació de la classificació oficial utilitzada en les dades de taquilla.
-
-A la Part II, en canvi, la selecció de coproduccions segueix un criteri més restrictiu, que prioritza la vinculació amb el cinema espanyol per autoria, producció o reconeixement institucional, tal com s'explica a [«Dades i criteri»](part-ii.html#intro).
+Les coproduccions es comptabilitzen com a espanyoles quan compleixen els requisits oficials de participació establerts per l'ICAA, independentment de la nacionalitat del director. Per això al Top 100 hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen. No és una excepció introduïda per l'estudi, sinó l'aplicació de la classificació oficial utilitzada en les dades de taquilla. A la Part II, en canvi, s'aplica un criteri de selecció més restrictiu, tal com s'explica a [«Dades i criteri»](part-ii.html#intro).
 
 ## El problema dels espectadors absoluts
 
