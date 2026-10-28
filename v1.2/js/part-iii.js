@@ -1618,8 +1618,8 @@ window.PiP_graficSauraAlmodovar = function() {
     font.id = 'sa-font';
     font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
     font.innerHTML = pip3T(
-      'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA).',
-      'Fuente: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA).'
+      'Font: base de Públic i Prestigi (dades d’espectadors, ICAA).',
+      'Fuente: base de Públic i Prestigi (datos de espectadores, ICAA).'
     );
     bloc.appendChild(font);
   }
@@ -1862,8 +1862,8 @@ window.PiP_graficGeneracioActual = function() {
     font.id = 'ga-font';
     font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
     font.innerHTML = pip3T(
-      'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA); IAA, estimació pròpia segons els factors definits a l’estudi.',
-      'Fuente: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA); IAA, estimación propia según los factores definidos en el estudio.'
+      'Font: base de Públic i Prestigi (dades d’espectadors, ICAA); IAA, estimació pròpia segons els factors definits a l’estudi.',
+      'Fuente: base de Públic i Prestigi (datos de espectadores, ICAA); IAA, estimación propia según los factores definidos en el estudio.'
     );
     bloc.appendChild(font);
   }
@@ -2088,8 +2088,8 @@ window.PiP_graficAutorIndustrial = function() {
     font.id = 'ai-font';
     font.style.cssText = 'font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px';
     font.innerHTML = pip3T(
-      'Font: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA).',
-      'Fuente: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA).'
+      'Font: base de Públic i Prestigi (dades d’espectadors, ICAA).',
+      'Fuente: base de Públic i Prestigi (datos de espectadores, ICAA).'
     );
     bloc.appendChild(font);
   }
@@ -2199,7 +2199,7 @@ function construirLleis() {
 </div></div>
 </div>
 <p class="ll-leg">${pip3T('Franja superior: context polític. Franges centrals: períodes, moments clau i finestres disponibles. Franja inferior: factor multiplicador IAA.','Franja superior: contexto político. Franjas centrales: periodos, momentos clave y ventanas disponibles. Franja inferior: factor multiplicador IAA.')}</p>
-<p class="ll-font">${pip3T('Fonts: BOE i Ministeri de Cultura; cronologia i factors IAA, elaboració de <em>Públic i Prestigi</em>.','Fuentes: BOE y Ministerio de Cultura; cronología y factores IAA, elaboración de <em>Públic i Prestigi</em>.')}</p>`;
+<p class="ll-font">${pip3T('Fonts: BOE i Ministeri de Cultura; cronologia i factors IAA, elaboració de Públic i Prestigi.','Fuentes: BOE y Ministerio de Cultura; cronología y factores IAA, elaboración de Públic i Prestigi.')}</p>`;
 
   // Degradat scroll: desapareix quan s'arriba al final
   const hint = document.getElementById('ll-scroll-hint');
@@ -2472,7 +2472,7 @@ window.PiP_graficMapaCanon = function() {
 
   html += `</table>
     <p style="font-size:.72em;color:#999;margin-top:10px;line-height:1.5">${pip3T('✓ present a la llista del Centenari (ordre cronològic, sense rànquing) | — absent | <b>·</b> fora de l\'abast temporal de la llista | Barres proporcionals als espectadors (màx. 9,56M) | Ordre cronològic dins de cada zona','✓ presente en la lista del Centenario (orden cronológico, sin ranking) | — ausente | <b>·</b> fuera del alcance temporal de la lista | Barras proporcionales a los espectadores (máx. 9,56M) | Orden cronológico dentro de cada zona')}</p>
-    <p style="font-size:12px;color:#888;margin:7px 0 0;line-height:1.45;text-align:center">${pip3T('Fonts: base de <em>Públic i Prestigi</em> (dades d’espectadors, ICAA) i les tres llistes indicades al text.','Fuentes: base de <em>Públic i Prestigi</em> (datos de espectadores, ICAA) y las tres listas indicadas en el texto.')}</p>`;
+    <p style="font-size:12px;color:#888;margin:7px 0 0;line-height:1.45;text-align:center">${pip3T('Fonts: base de Públic i Prestigi (dades d’espectadors, ICAA) i les tres llistes indicades al text.','Fuentes: base de Públic i Prestigi (datos de espectadores, ICAA) y las tres listas indicadas en el texto.')}</p>`;
 
   el.innerHTML = html;
 
