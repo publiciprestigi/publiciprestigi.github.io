@@ -27,7 +27,7 @@ A les taules de l'estudi trobarem quatre mesures que ofereixen perspectives dife
 | **Penetració demogràfica** | *100 × entrades acumulades ÷ població espanyola* | Entrades acumulades per cada 100 residents de l'any de referència; no mesura persones diferents ni el percentatge de població que ha vist el film. |
 | **IIC — Índex d'Impacte Cultural** | *√(Quota × Penetració), normalitzat* | Combina els dos indicadors per comparar el pes relatiu de pel·lícules de diferents èpoques. |
 
-La quota i l'IIC són indicadors propis de l'estudi. La quota relaciona els espectadors acumulats de cada pel·lícula amb el mercat anual del seu any de referència, i no equival a la seva quota oficial de taquilla. Són eines d'aproximació per facilitar les comparacions històriques, no models oficials ni científicament validats.
+L'IIC és un indicador propi de l'estudi que situa els espectadors en relació amb el mercat cinematogràfic i la població de cada època. És una eina d'aproximació per facilitar les comparacions històriques, no un model oficial ni científicament validat.
 
 Les fonts estadístiques, les estimacions i les reconstruccions històriques emprades en aquests càlculs es detallen a la nota <sup>[3]</sup>.
 
