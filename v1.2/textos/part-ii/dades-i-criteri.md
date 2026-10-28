@@ -25,7 +25,7 @@ En termes de pes institucional i projecció pública, els Oscar ocupen una posic
 
 ## Coproduccions internacionals
 
-A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, no s’inclouen en l’estudi.
+A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA explicat a [«Fonts i eines»](part-i.html#intro), aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, no s'inclouen en l'estudi.
 
 ## Dades d’espectadors
 
