@@ -63,7 +63,7 @@ Per tancar el capítol, recuperem la perspectiva de la Part I i ampliem la compa
 <!-- /PIP_BLOC:intro-mercats -->
 
 <!-- PIP_BLOC:comentari-mercats -->
-- Als anys seixanta, Espanya venia més entrades de cinema que França malgrat tenir una població considerablement inferior. La davallada posterior del mercat espanyol va invertir aquesta relació, però durant els anys noranta i la primera meitat dels 2000 els dos mercats van tornar a acostar-se. Des d’aleshores, i especialment després de la crisi de 2008, la distància s’ha ampliat a favor de França. Mentrestant, la població dels dos països ha crescut en proporcions força semblants: la divergència cinematogràfica no es pot explicar simplement per la demografia, sinó per l’evolució desigual de l’assistència a les sales.
+- Als anys seixanta, Espanya venia més entrades de cinema que França malgrat tenir una població considerablement inferior. La davallada posterior del mercat espanyol va invertir aquesta relació, però durant els anys noranta i la primera meitat dels 2000 els dos mercats van tornar a acostar-se. Des d’aleshores, i especialment després de la crisi de 2008, la distància s’ha ampliat a favor de França. Mentrestant, la població ha crescut en tots dos països, encara que a ritmes diferents. La divergència cinematogràfica no s'explica només per la demografia, sinó sobretot per l'evolució desigual de l'assistència a les sales.
 <!-- /PIP_BLOC:comentari-mercats -->
 
 <!-- PIP_BLOC:comentari-perhab -->

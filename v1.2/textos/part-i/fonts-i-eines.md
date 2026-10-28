@@ -1,4 +1,4 @@
-L'estudi treballa exclusivament amb el nombre d'entrades venudes, no amb xifres de recaptació en euros. La raó és de fons: el que ens interessa és quantes persones van entrar en una sala de cinema i van formar part d'un moment cultural compartit. La recaptació mesura un retorn econòmic; les entrades, un impacte social.
+Per analitzar el públic a les sales, l'estudi parteix de les entrades venudes, no de la recaptació en euros. La raó és de fons: la recaptació mesura un retorn econòmic; les entrades, l'assistència a les sales i la dimensió col·lectiva del fenomen. Una entrada no equival necessàriament a una persona diferent.
 
 ## L'ICAA com a font principal
 

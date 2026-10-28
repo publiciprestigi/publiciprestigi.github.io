@@ -1,25 +1,19 @@
-# Discrepància francesa del 2025 — identificació de les dues versions del CNC
+# França 2025 — harmonització de l'avanç provisional amb el balanç definitiu del CNC
 
-**Revisió:** 28-10-2026. **Abast:** comprovació documental, *sense modificar* el mercat, les dades de films ni les sèries franceses de `v1.2/`.
+**Resolució del 28-10-2026:** es pren com a dada de referència **156,2 milions d'entrades**, del balanç definitiu de maig de 2026. Aquesta correcció afecta només el punt francès de 2025 als dos conjunts històrics de `v1.2/part-iii.html`, i no altera cap altre any ni cap dada d'espectadors per film, població o quota oficial per nacionalitat.
 
-## Origen de la diferència
+## Procedència de les dues xifres
 
-El total **156,79 milions d'entrades** i el **37,7% de quota francesa** provenen de l'avanç de freqüentació del CNC de **30-12-2025**, que qualifica expressament les dades d'**estimacions**:
+- **156,79M**, quota de films francesos **37,7%**. Avanç estimat del CNC de **30-12-2025**. https://www.cnc.fr/professionnels/communiques-de-presse/malgre-une-annee-en-demiteinte-avec-pres-de-157-millions-dentrees-dans-ses-salles-de-cinema-la-france-demeure-largement-le-premier-marche-europeen_2519012
+- **156,2M**, quota de films francesos **37,9%**. **Balanç definitiu del CNC de 12-05-2026**, posterior i prioritari segons la jerarquia de fonts de l'estudi. https://www.cnc.fr/professionnels/etudes-et-rapports/bilans/bilan-2025-du-cnc_2589800
 
-- CNC, «Malgré une année en demi-teinte…», 30 de desembre de 2025: https://www.cnc.fr/professionnels/communiques-de-presse/malgre-une-annee-en-demiteinte-avec-pres-de-157-millions-dentrees-dans-ses-salles-de-cinema-la-france-demeure-largement-le-premier-marche-europeen_2519012
+La diferència de 0,59M és una substitució d'estimació provisional per xifra definitiva, no una correcció retrospectiva de la sèrie històrica francesa completa.
 
-El total **156,2 milions d'entrades** i el **37,9% de quota francesa** figuren al **Bilan 2025 du CNC**, publicat el **12-05-2026**, posterior i consolidat:
+## Efectes a la comparativa de Buñuel
 
-- CNC, «Bilan 2025 du CNC», 12 de maig de 2026: https://www.cnc.fr/professionnels/etudes-et-rapports/bilans/bilan-2025-du-cnc_2589800
+1. `frMarket[2025]` (quota de referència dels films del Top 30 francès) passa de 156,79 a **156,2**.
+2. `fraEntrades[2025]` (mercat històric) passa de 156,79 a **156,2**. Les entrades per habitant es recalculen automàticament en temps d'execució: **156,2 ÷ 68,720337 ≈ 2,27**, amb la població anual del Banc Mundial utilitzada ja al gràfic.
+3. La fotografia de quotes per nacionalitat ja utilitzava **156,2M i 37,9%** i no necessita modificació.
+4. La nota metodològica **[31]** identifica correctament la població francesa com a sèrie del **Banc Mundial (SP.POP.TOTL)**, en lloc de l'atribució anterior a l'INSEE. La població no s'ha recalculat.
 
-La diferència de 0,59M és, per tant, una divergència **provisional → definitiu**, no una errada de transcripció. Les dues quotes (37,7% i 37,9%) també corresponen a aquestes dues versions.
-
-## Estat a la branca catalana
-
-- El gràfic històric de la Part III incorpora **156,79M** a la sèrie francesa de 2025; és la dada provisional del desembre de 2025.
-- El bloc de quotes per nacionalitat del 2025 mostra **156,2M** i **37,9%**, valors del balanç definitiu del maig de 2026.
-- **No s'han modificat cap dels dos valors**, ni les sèries històriques de França, ni el públic dels films, ni les dades de població INSEE.
-
-## Criteri de tancament recomanat
-
-Quan s'autoritzi una revisió específica de la sèrie francesa, adoptar el **156,2M definitiu** per al punt del 2025 al gràfic històric (i comprovar el quocient per habitant amb la població INSEE ja adoptada), per coherència amb el bloc de quotes. No canviar la resta de la sèrie francesa sense una auditoria independent. Aquest pas queda **fora de la revisió espanyola actual** i no s'executa a la branca sense una decisió específica.
+**Fora de l'abast:** recàlcul de la sèrie francesa 1965–2024, canvis de la sèrie espanyola, dels rànquings, del corpus o de `v1.2/es/`. La traducció castellana completa de la v1.2 continua reservada al final de la revisió catalana.

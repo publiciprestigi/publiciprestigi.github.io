@@ -83,10 +83,21 @@ try {
     assert.equal(await page.locator('#f30-main .f30-row').count(), 30, 'Top 30 francès');
     const initial = await checkChart(page, '#grafic-mercats-coda', 435.2, 66.9);
     assert.equal(initial.ymax, 460);
+    const france2025 = await page.evaluate(() => {
+      const c = Chart.getChart(document.getElementById('grafic-mercats-coda'));
+      return c.data.datasets[1].data.at(-1);
+    });
+    assert.equal(france2025, 156.2, 'mercat francès definitiu 2025');
+    assert.ok((await page.locator('#mercats-quota-wrap').innerText()).includes('156,2M'), 'quota de 2025 amb denominador definitiu');
     await page.locator('#grafic-mercats-coda-bloc').screenshot({ path: 'qa-captures/06-espanya-franca-mercat.png' });
     await page.locator('#grafic-mercats-coda-bloc [data-view="perhab"]').click();
     await page.waitForFunction(() =>
       Chart.getChart(document.getElementById('grafic-mercats-coda'))?.options.scales.y.max === 15);
+    const francePerHab2025 = await page.evaluate(() => {
+      const c = Chart.getChart(document.getElementById('grafic-mercats-coda'));
+      return c.data.datasets[1].data.at(-1);
+    });
+    assert.equal(francePerHab2025, 2.27, 'entrades per habitant França 2025');
     await page.locator('#grafic-mercats-coda-bloc').screenshot({ path: 'qa-captures/07-espanya-franca-perhabitant.png' });
     await page.locator('#grafic-mercats-coda-bloc [data-view="quota"]').click();
     assert.equal(await page.locator('#mercats-quota-wrap').getAttribute('hidden'), null);

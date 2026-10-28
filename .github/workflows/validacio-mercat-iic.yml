@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - auditoria-mercat-iic-2026
+      - revisio-fonts-franca-2025
     paths:
       - 'v1.2/**'
       - '.github/workflows/validacio-mercat-iic.yml'
