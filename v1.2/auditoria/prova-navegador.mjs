@@ -123,6 +123,7 @@ try {
       'mitjanes anuals de mercat harmonitzades a la bretxa');
     assert.deepEqual(chart.ratio,[0.17,0.27,0.32,0.22,0.22,0.08,0.14],
       'ràtios de bretxa intactes');
+    assert.equal(chart.ymax,450,'marge superior per a la mitjana 394,5M');
     await page.locator('#grafic-bretxa').screenshot({path:'qa-captures/11-bretxa-mercat.png'});
     console.log('OK Part III: bretxa i 7 mitjanes de mercat');
     await page.close();

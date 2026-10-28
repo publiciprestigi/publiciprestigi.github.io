@@ -852,7 +852,7 @@ window.PiP_graficBretxa = function() {
           type: 'linear',
           position: 'right',
           min: 0,
-          max: 400,
+          max: 450,
           ticks: { callback: v => v + ' M', color: '#888', font: { size: 11 } },
           grid: { display: false },
           title: { display: true, text: pip3T('Mercat anual (M entrades)','Mercado anual (M entradas)'), font: { size: 12 }, color: '#888' },
