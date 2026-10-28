@@ -2,7 +2,7 @@
 
 **Branca:** auditoria-mercat-iic-2026  
 **Base de main:** c1ee48fdc803431636ffca62342eadc5584ee070  
-**Estat:** IMPLEMENTACIÓ CATALANA I CODI PRINCIPAL ACTUALITZATS A LA BRANCA; PENDENT DE PROVES VISUALS I REVISIÓ FINAL. **NO FUSIONAR AMB MAIN.**
+**Estat:** IMPLEMENTACIÓ CATALANA ACTUALITZADA; VALIDACIÓ DE DADES EN NODE I PROVES FUNCIONALS DESKTOP EN CHROME SUPERADES. Queden la revisió visual/editorial completa, l'eventual correcció de punts detectats i la validació de publicació. **NO FUSIONAR AMB MAIN.**
 
 ## Implantat a la branca
 
@@ -31,13 +31,13 @@
 
 Mitjanes de mercat per dècada (milions d'entrades anuals, amb el conjunt d'anys disponible): 60s 394,5; 70s 260,0; 80s 123,1; 90s 101,0; 2000s 128,8; 2010s 96,2; 2020–2025 57,4.
 
-A més d'aquesta comprovació a través del connector GitHub, s'ha incorporat `auditoria/valida-dades.mjs` per poder repetir-la en una còpia local del repositori amb `node v1.2/auditoria/valida-dades.mjs`. **El nou script Node no s'ha executat encara en un checkout local; cal fer-ho abans de la fusió.**
+El validador `auditoria/valida-dades.mjs` s'ha executat correctament amb **Node 22 en GitHub Actions** el 28-10-2026. A més, les proves de navegador automàtiques amb **Chrome i Playwright**, servint la branca localment, han completat correctament els controls previstos. Vegeu [l'execució completa de GitHub Actions](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40651218829). La disponibilitat d'aquestes proves no substitueix una revisió editorial completa ni l'aprovació visual manual.
 
 ## Punts pendents abans de la publicació
 
-1. **Prova real en navegador de la branca**, amb els gràfics i les taules de Parts I i III, toggles, hovers, tooltips, càrrega asíncrona i consola. La branca GitHub no és automàticament una URL pública de previsualització de GitHub Pages.
+1. **Revisió visual manual completa** sobre una previsualització o entorn de navegador de la branca, incloent-hi versions mòbils, tooltips, coherència tipogràfica, totes les taules i interaccions. Les proves automàtiques de Chrome en les seccions quantitatives principals ja han passat. GitHub Pages no publica automàticament aquesta branca.
 2. Comprovació editorial amb la web visible: alineació dels textos dinàmics, notes, precisió numèrica i exemples del gràfic dels rànquings. Cal confirmar el manteniment de l'estil gràfic.
-3. Una vegada validada la versió catalana, sincronitzar els textos i HTML de `v1.2/es/` que encara conservin valors anteriors, i repetir les proves.
+3. **Al final de tot**, quan la v1.2 catalana estigui tancada íntegrament, fer una **traducció integral nova al castellà**; no una correcció fragmentària de la versió antiga de `v1.2/es/`. La traducció no forma part de l'auditoria actual.
 4. Executar localment `valida-dades.mjs`, fer una inspecció final del diff i preparar una revisió abans de fusionar amb `main`.
 5. La confirmació primària de la dada de 1965 a la Filmoteca continua separada i ajornada fins després de la publicació, segons la decisió editorial.
 
@@ -50,3 +50,13 @@ A més d'aquesta comprovació a través del connector GitHub, s'ha incorporat `a
 - **Diferència francesa prèvia, no modificada:** el gràfic històric de 2025 conserva 156,79M entrades franceses, mentre el bloc de quota per nacionalitat dona un mercat de 156,2M. Les sèries franceses no s'han recalculat ni alterat; la comprovació de si són publicacions diferents o una discrepància prèvia queda fora d'aquesta auditoria quantitativa espanyola.
 - Els estats històrics «pendent» de [l'inventari](inventari-canvis-per-fitxer.md) i [el mapa d'impacte](mapa-impacte-mercat.md) es conserven com a documentació inicial, amb avís de no confondre'ls amb el progrés de la branca.
 - S'afegeix un flux de GitHub Actions limitat a aquesta branca per executar `node v1.2/auditoria/valida-dades.mjs` i comprovar la sintaxi dels principals mòduls JS. **No s'ha observat encara el resultat d'aquest flux en crear aquesta acta.**
+
+## Prova automàtica de navegador i revisió de captures — 28-10-2026
+
+- Flux limitat a la branca `auditoria-mercat-iic-2026`: [execució verificada](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40651218829), conclusió **success**, amb els dos jobs `validador` i `navegador` completats satisfactòriament.
+- El servidor HTTP local del runner serveix els fitxers reals de `v1.2/`; Chrome obre les Parts I i III, verifica els mercats 1965/2025 i els límits d'eix, canvia a la vista per habitant, contrasta les 7 files del resum per dècades, prova el selector de rànquings i el #7 de quota de `Mujeres al borde…`, les dues files `La caza`/`Alcarràs`, el Top 30 francès i les tres vistes de la comparativa Espanya–França.
+- **9 captures de pantalla disponibles com a artefacte** `captures-auditoria-v12` a la pàgina de l'execució anterior. Es van revisar les vistes gràfiques de mercat, per habitant, comparativa IIC, quadre de dècades, Buñuel i `La caza vs. Alcarràs`.
+- Corregit un problema d'inicialització del plugin de `js/mercat.js` que ocultava les anotacions `Màxim: ≈435,2M` i `Col·lapse pandèmic: 27,0M` fins a redibuixar el Chart. La nova captura les mostra correctament a la primera vista.
+- La captura del contenidor de `La caza vs. Alcarràs` retallava aparentment columnes per la seva caixa de 720px; una **captura de pàgina completa** a 1440px confirma que la taula s'estén a la dreta i que es veuen `Quota`, `IIC` i `IAA` amb l'estil preexistent. No s'han canviat el CSS ni les mides de les taules.
+- **Límit de la prova:** cobertura funcional dirigida, no inspecció exhaustiva de cada dispositiu, hover i contingut; per això mantenim la revisió editorial/visual manual i la fusió amb `main` com a pendents.
+
