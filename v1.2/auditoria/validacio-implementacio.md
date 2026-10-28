@@ -31,7 +31,7 @@
 
 Mitjanes de mercat per dècada (milions d'entrades anuals, amb el conjunt d'anys disponible): 60s 394,5; 70s 260,0; 80s 123,1; 90s 101,0; 2000s 128,8; 2010s 96,2; 2020–2025 57,4.
 
-El validador `auditoria/valida-dades.mjs` s'ha executat correctament amb **Node 22 en GitHub Actions** el 28-10-2026. A més, les proves de navegador automàtiques amb **Chrome i Playwright**, servint la branca localment, han completat correctament els controls previstos. Vegeu [l'execució completa de GitHub Actions](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40651218829). La disponibilitat d'aquestes proves no substitueix una revisió editorial completa ni l'aprovació visual manual.
+El validador `auditoria/valida-dades.mjs` s'ha executat correctament amb **Node 22 en GitHub Actions** el 28-10-2026. A més, les proves de navegador automàtiques amb **Chrome i Playwright**, servint la branca localment, han completat correctament els controls previstos. Vegeu [l'execució completa de GitHub Actions](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40651516431). La disponibilitat d'aquestes proves no substitueix una revisió editorial completa ni l'aprovació visual manual.
 
 ## Punts pendents abans de la publicació
 
@@ -53,10 +53,16 @@ El validador `auditoria/valida-dades.mjs` s'ha executat correctament amb **Node 
 
 ## Prova automàtica de navegador i revisió de captures — 28-10-2026
 
-- Flux limitat a la branca `auditoria-mercat-iic-2026`: [execució verificada](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40651218829), conclusió **success**, amb els dos jobs `validador` i `navegador` completats satisfactòriament.
+- Flux limitat a la branca `auditoria-mercat-iic-2026`: [execució verificada](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40651516431), conclusió **success**, amb els dos jobs `validador` i `navegador` completats satisfactòriament.
 - El servidor HTTP local del runner serveix els fitxers reals de `v1.2/`; Chrome obre les Parts I i III, verifica els mercats 1965/2025 i els límits d'eix, canvia a la vista per habitant, contrasta les 7 files del resum per dècades, prova el selector de rànquings i el #7 de quota de `Mujeres al borde…`, les dues files `La caza`/`Alcarràs`, el Top 30 francès i les tres vistes de la comparativa Espanya–França.
-- **9 captures de pantalla disponibles com a artefacte** `captures-auditoria-v12` a la pàgina de l'execució anterior. Es van revisar les vistes gràfiques de mercat, per habitant, comparativa IIC, quadre de dècades, Buñuel i `La caza vs. Alcarràs`.
+- **11 captures de pantalla disponibles com a artefacte** `captures-auditoria-v12` a la pàgina de l'execució anterior. Es van revisar les vistes gràfiques de mercat, per habitant, comparativa IIC, quadre de dècades, Buñuel i `La caza vs. Alcarràs`.
 - Corregit un problema d'inicialització del plugin de `js/mercat.js` que ocultava les anotacions `Màxim: ≈435,2M` i `Col·lapse pandèmic: 27,0M` fins a redibuixar el Chart. La nova captura les mostra correctament a la primera vista.
 - La captura del contenidor de `La caza vs. Alcarràs` retallava aparentment columnes per la seva caixa de 720px; una **captura de pàgina completa** a 1440px confirma que la taula s'estén a la dreta i que es veuen `Quota`, `IIC` i `IAA` amb l'estil preexistent. No s'han canviat el CSS ni les mides de les taules.
-- **Límit de la prova:** cobertura funcional dirigida, no inspecció exhaustiva de cada dispositiu, hover i contingut; per això mantenim la revisió editorial/visual manual i la fusió amb `main` com a pendents.
+- **Límit de la prova:** cobertura funcional dirigida, amb comprovació d'escriptori i dues captures mòbils, però no inspecció exhaustiva de cada dispositiu, hover i contingut; per això mantenim la revisió editorial/visual manual i la fusió amb `main` com a pendents.
 
+
+### Verificació de pantalles estretes
+
+- La prova automatitzada del 28-10-2026 inclou amplada de **390px** per als gràfics de mercat de la Part I i de comparació Espanya–França a la Part III. Ambdós s'han carregat correctament amb els valors 1965 = 435,2M i 2025 = 66,9M.
+- Les captures `09-mercat-mobil.png` i `10-comparativa-mercat-mobil.png` s'han revisat: els eixos no retallen l'extrem de 1965 i els controls i llegendes es conserven llegibles. Sense errors de consola/JavaScript capturats pel test.
+- Les captures són una **mostra de les seccions quantitatives actualitzades**, no una certificació completa d'accessibilitat ni d'adaptació mòbil de tots els capítols i taules de la web. No s'ha alterat el CSS.
