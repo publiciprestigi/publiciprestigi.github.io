@@ -991,7 +991,7 @@ window.PiP_graficCazaIAA = function() {
     const segments = f.pieces.map(([label,value,cls]) =>
       '<span class="cia-segment '+cls+'" style="width:'+(100*value/f.total)+'%" tabindex="0" role="img" aria-label="'+f.name+' · '+label+': '+fmt(value)+' '+pip3T('espectadors','espectadores')+'" data-film="'+f.name+'" data-label="'+label+'" data-value="'+fmt(value)+'"></span>'
     ).join('');
-    return '<div class="cia-row"><div class="cia-heading"><strong><em>'+f.name+'</em> ('+f.year+')</strong><span class="cia-value">'+f.display+' <small>('+f.multiplier+')</small></span></div><div class="cia-track"><div class="cia-stack" style="width:'+barWidth+'%">'+segments+'</div></div></div>';
+    return '<div class="cia-row"><div class="cia-heading"><strong><em>'+f.name+'</em></strong><span class="cia-value">'+f.display+' <small>('+f.multiplier+')</small></span></div><div class="cia-track"><div class="cia-stack" style="width:'+barWidth+'%">'+segments+'</div></div></div>';
   }).join('');
 
   // Globus per ratolí, teclat i tacte; no hi ha cap amplada fixa ni scroll horitzontal.
