@@ -130,8 +130,8 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       'Número de films del Top 100 por década y porcentaje que representan.'
     )}</p>
     <p class="grafic-font">${pipDecT(
-      'Font: ICAA. Distribució per dècades: elaboració de <em>Públic i Prestigi</em>.',
-      'Fuente: ICAA. Distribución por décadas: elaboración de <em>Públic i Prestigi</em>.'
+      'Font: ICAA. Distribució per dècades: elaboració de Públic i Prestigi.',
+      'Fuente: ICAA. Distribución por décadas: elaboración de Públic i Prestigi.'
     )}</p>`;
   const ctx = document.getElementById('grafic-decades-canvas').getContext('2d');
 
