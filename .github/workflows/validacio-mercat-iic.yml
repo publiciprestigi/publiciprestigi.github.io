@@ -4,6 +4,7 @@ on:
     branches:
       - auditoria-mercat-iic-2026
       - revisio-fonts-franca-2025
+      - recuperar-metodologia-v11-part-i-v12
     paths:
       - 'v1.2/**'
       - '.github/workflows/validacio-mercat-iic.yml'
