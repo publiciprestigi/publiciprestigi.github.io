@@ -1084,7 +1084,7 @@ window.PiP_graficCazaIAA = function() {
       responsive: true,
       maintainAspectRatio: false,
       animation: false,
-      datasets: { bar: { barThickness: 30, maxBarThickness: 30 } },
+      datasets: { bar: { barThickness: 25, maxBarThickness: 25 } },
       layout: { padding: { right: 160 } },
       plugins: {
         legend: {
