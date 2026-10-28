@@ -80,3 +80,19 @@ El validador `auditoria/valida-dades.mjs` s'ha executat correctament amb **Node 
 ## Identificada la discrepància francesa de 2025
 
 El valor **156,79M** del gràfic històric de França correspon a l'**avanç provisional del CNC del 30-12-2025**; el valor **156,2M** del bloc de quotes correspon al **balanç definitiu del CNC del 12-05-2026**. La diferència està documentada a [nota-serie-franca-2025.md](nota-serie-franca-2025.md). Els valors francesos es mantenen intactes, i qualsevol harmonització posterior serà una revisió independent i explícita.
+
+## Revalidació dels comentaris quantitatius i la bretxa — 28-10-2026
+
+- Comparats directament amb el Top 100 definitiu els exemples citats als rànquings de quota, penetració i IIC: `8 apellidos vascos`, `La ciudad no es para mí`, `Los santos inocentes`, `Mujeres al borde…`, tres films de `Padre no hay más que uno`, i altres títols representatius. **Les posicions i els valors són coherents** amb `films.json`.
+- Afegit `auditoria/valida-relat-quantitatiu.mjs`: comprovació reproduïble dels llocs dels rànquings, 100 films, 294.408.270 entrades acumulades, dues excepcions de 1964 i les set mitjanes anuals del mercat. El test s'executa al flux de GitHub Actions amb Node. Un primer intent va fallar per un arrodoniment erroni *del test* (3 decimals contra 1); corregit sense modificar dades. **La segona execució ha passat.**
+- Contrastats `data/films.json` de la branca i de `main`: 210 registres en el mateix ordre i **cap alteració fora dels indicadors de mercat/penetració/quota/IIC/flags i cinc descripcions contextuals catalanes**. Els camps d'espectadors, corpus, anys i textos `context_text_es` no han canviat.
+- Verificades les set files de la bretxa de la Part III: ràtios `0,17 · 0,27 · 0,32 · 0,22 · 0,22 · 0,08 · 0,14`, amb les noves mitjanes anuals de mercat `394,5 · 260,0 · 123,1 · 101,0 · 128,8 · 96,2 · 57,4M`. **Les ràtios originals es conserven.**
+- Ajustada una única frase del comentari de `ranking-quota.md`, per evitar suggerir que les entrades acumulades d'un film són vendes d'aquell mateix any.
+- La primera captura de `grafic-bretxa` mostrava el punt gris de 60s (394,5M) massa enganxat al sostre de l'eix de mercat (400M). S'ha ampliat **únicament aquest eix secundari a 450M**. S'ha revisat la nova captura: el marcador i la sèrie són llegibles sense solapament amb el límit superior. Colors, ràtios, dades de films i eix esquerre no s'han modificat.
+- **Validació completa superada** després del canvi d'escala, amb Node i proves de navegador, a [GitHub Actions #40653659363](https://github.com/publiciprestigi/publiciprestigi.github.io/actions/runs/40653659363). L'artefacte de captures inclou `11-bretxa-mercat.png` i els altres controls visuals.
+
+### Criteri de tancament
+
+Les comprovacions quantitatives i de navegació automatitzades de la branca catalana són satisfactòries. Encara cal una **lectura editorial/visual de conjunt amb aprovació abans de fusionar**, inclosa l'acceptació explícita del tractament de la dada francesa provisional del 2025 (que continua intacta i documentada separadament). La traducció integral al castellà es farà al final, després del tancament de la versió catalana.
+
+**No publicar ni fusionar amb `main` mentre estiguin pendents aquests controls editorials.**
