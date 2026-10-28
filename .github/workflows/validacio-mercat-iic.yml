@@ -4,7 +4,6 @@ on:
     branches:
       - auditoria-mercat-iic-2026
       - revisio-fonts-franca-2025
-      - revisio-final-notes-fonts-part-i-2026
     paths:
       - 'v1.2/**'
       - '.github/workflows/validacio-mercat-iic.yml'
