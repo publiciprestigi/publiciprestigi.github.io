@@ -1,5 +1,7 @@
 # Auditoria del mercat espanyol, 1965–2025 · versió de treball (27-10-2026)
 
+> **NOTA D'ESTAT — 28-10-2026.** Aquest document conserva el redactat i els contrastos **anteriors a la implementació** com a registre històric de decisions. Les expressions «provisional», «pendent d'aplicació» o «no aplicada a la web» indiquen l'estat del 27-10-2026 i **no l'estat actual de la branca `auditoria-mercat-iic-2026`**. Els nous JSON i els càlculs ja estan aplicats i validats **només a la branca de proves**; `main` i el web públic no han estat modificats. Per a l'estat vigent, els controls i els pendents reals, consulteu [validacio-implementacio.md](validacio-implementacio.md).
+
 **Estat: PROVISIONAL / NO APLICADA A LA WEB.** Aquest fitxer i `mercat-1965-2025.csv` són una proposta de conciliació documental; no constitueixen una nova sèrie publicada. No han modificat `../data/market.json`, `../data/films.json`, els JS, els HTML ni els textos de la web.
 
 ## Protocol de decisió estable (obligatori per a revisions futures)
