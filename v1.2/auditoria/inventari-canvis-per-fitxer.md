@@ -1,5 +1,7 @@
 # Inventari editorial i tècnic de canvis abans d'implantar l'històric — Públic i Prestigi v1.2
 
+> **Estat de la implementació (28-10-2026).** Aquest és un document històric de planificació, anterior als commits de la branca `auditoria-mercat-iic-2026`. Les indicacions «pendent» o «no executat» descriuen l'estat en què es va redactar, no l'estat actual de la branca. Per a resultats i pendents efectius, consulteu [validacio-implementacio.md](validacio-implementacio.md). `main` continua intacta.
+
 **ESTAT: PLA DE CANVIS, NO EXECUTAT A LA WEB.** Revisió del 27-10-2026. Basat en els fitxers **actuals** de `main/v1.2/`, no en la v1.1 publicada. Respectar totes les decisions editorials establertes que no depenguin de les dades auditades.
 
 **Font de comparació per film:** [rankings-abans-despres-1964-2025.csv](rankings-abans-despres-1964-2025.csv), **210 films i 100 Top 100**; [49 ocurrències de valors fixos a la Part III](impacte-taules-fixes-part-iii.csv). La [normalització i els empats](proposta-calcul-normalitzacio-iic.md) són una **proposta que cal aprovar abans de publicar**.

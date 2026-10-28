@@ -852,7 +852,7 @@ window.PiP_graficBretxa = function() {
           type: 'linear',
           position: 'right',
           min: 0,
-          max: 400,
+          max: 450,
           ticks: { callback: v => v + ' M', color: '#888', font: { size: 11 } },
           grid: { display: false },
           title: { display: true, text: pip3T('Mercat anual (M entrades)','Mercado anual (M entradas)'), font: { size: 12 }, color: '#888' },
@@ -885,26 +885,39 @@ function reconeixementsTrajectoria(f) {
   return [celFestival(registre),celAcademies(registre)].filter(x=>x!=='—').join(' · ') || '—';
 }
 
+// Un sol criteri per a les taules de trajectòries (mateixos denominadors que films.json).
+function indicadorsMercatIII(any, espectadors) {
+  const m = marketData.find(x => x.any === any);
+  const ref = filmsData.find(x => x.titol === '8 apellidos vascos' && x.any === 2014);
+  const mRef = marketData.find(x => x.any === 2014);
+  if (!m || !mRef || !ref) throw new Error('Falten denominadors de mercat/IIC: '+any);
+  const quota = 100 * espectadors / (m.entrades_M * 1e6);
+  const penetracio = 100 * espectadors / (m.poblacio_M * 1e6);
+  const qRef = 100 * ref.espectadors / (mRef.entrades_M * 1e6);
+  const pRef = 100 * ref.espectadors / (mRef.poblacio_M * 1e6);
+  const k = 10 / Math.sqrt(qRef * pRef);
+  const decimal = n => n.toFixed(2).replace('.', ',');
+  return {
+    mercat: m.entrades_M.toLocaleString('ca-ES', {minimumFractionDigits:1,maximumFractionDigits:1}) + 'M' + (m.estimat ? '≈' : ''),
+    penetr: decimal(penetracio) + '%' + (any <= 1972 ? '≈' : ''),
+    quota: decimal(quota) + '%' + (m.estimat ? '≈' : ''),
+    iic: decimal(k * Math.sqrt(quota * penetracio))
+  };
+}
+
 // Files dels EFA incorporades a la Part II i absents de la selecció de trajectòries.
 // Es calculen a partir dels mateixos espectadors i mercats que la resta del projecte.
 function novaFilaEFA(titol) {
   const f = efaData.find(x=>x.titol===titol);
   if (!f || f.espectadors == null) throw new Error('EFA sense espectadors: '+titol);
-  const m = marketData.find(x=>x.any===f.any);
-  if (!m) throw new Error('Mercat no trobat: '+f.any);
-  const penetracio = 100*f.espectadors/(m.poblacio_M*1e6);
-  const quota = 100*f.espectadors/(m.entrades_M*1e6);
   const factor = f.any<1984?1:f.any<1990?3:f.any<1995?2.5:f.any<=2005?2.15:f.any<=2019?2.5:3.25;
   const iaa = f.espectadors*factor;
-  const fmtPct = n=>n.toFixed(2).replace('.',',')+'%'+(m.estimat?'≈':'');
   const iaaTxt = iaa>=1e6?'~'+(iaa/1e6).toFixed(2).replace('.',',')+'M':'~'+Math.round(iaa/1000)*1000;
   const iaaForm = iaa>=1e6?iaaTxt:'~'+Math.round(iaa).toLocaleString('de-DE');
   return {
     any:f.any,titol:f.titol,festival:null,premiat:String(f.reconeixement).includes('★'),
     esp:f.espectadors,top100:null,
-    mercat:String(m.entrades_M).replace('.',',')+'M'+(m.estimat?'≈':''),
-    penetr:fmtPct(penetracio),quota:fmtPct(quota),
-    iic:Math.sqrt(penetracio*quota/2.15).toFixed(2).replace('.',','),
+    ...indicadorsMercatIII(f.any, f.espectadors),
     iaa_xifra:iaaForm,iaa_mult:'',iaa_est:true
   };
 }
@@ -918,15 +931,15 @@ function construirCazaAlcarras() {
       titol: 'La caza', any: 1966, director: 'Carlos Saura',
       festival: 'Berlín', premiat: true,
       espectadors: 341377,
-      mercat: '370M≈', penetr: '1,06%≈', quota: '0,09%≈',
-      iic: '0,21', iaa_xifra: '341.377', iaa_mult: '', iaa_est: false,
+      ...indicadorsMercatIII(1966, 341377),
+      iaa_xifra: '341.377', iaa_mult: '', iaa_est: false,
     },
     {
       titol: 'Alcarràs', any: 2022, director: 'Carla Simón',
       festival: 'Berlín', premiat: true,
       espectadors: 403195,
-      mercat: '71M', penetr: '0,84%', quota: '0,57%',
-      iic: '0,47', iaa_xifra: '~1,31M', iaa_mult: '', iaa_est: true,
+      ...indicadorsMercatIII(2022, 403195),
+      iaa_xifra: '~1,31M', iaa_mult: '', iaa_est: true,
     },
   ];
 
@@ -1185,12 +1198,8 @@ function construirTaulesAutorIndustrial() {
     const cont = document.getElementById(grup.id);
     if (!cont) continue;
     const rows = grup.films.map(f => {
-      const m = marketData.find(x=>x.any===f.x);
-      if (!m) throw new Error('Mercat no trobat: '+f.x);
       const esp = f.y;
-      const penetr = (100*esp/(m.poblacio_M*1e6)).toFixed(2).replace('.',',')+'%'+(m.estimat?'≈':'');
-      const quota = (100*esp/(m.entrades_M*1e6)).toFixed(2).replace('.',',')+'%'+(m.estimat?'≈':'');
-      const mercat = String(m.entrades_M).replace('.',',')+'M'+(m.estimat?'≈':'');
+      const {mercat, penetr, quota} = indicadorsMercatIII(f.x, esp);
       const recon = reconeixementsTrajectoria({titol:f.titol,any:f.x});
       const reg = corpusPrestigiData.find(x=>x.any===f.x&&x.titol===f.titol);
       const filmPartI = filmsData.find(x=>x.any===f.x&&x.titol===f.titol);
@@ -1220,59 +1229,59 @@ function construirTaulesAutorIndustrial() {
 
 function construirDuesGeneracions() {
   FILMS_SAURA = [
-    { any:1966, titol:'La caza', festival:'Berlín', premiat:true, esp:341377, top100:null, mercat:'370M≈', penetr:'1,06%≈', quota:'0,09%≈', iic:'0,21', iaa_xifra:'341.377', iaa_mult:'', iaa_est:false },
-    { any:1968, titol:'Peppermint Frappé', festival:'Berlín', premiat:true, esp:669165, top100:null, mercat:'330M≈', penetr:'2,03%≈', quota:'0,20%≈', iic:'0,44', iaa_xifra:'669.165', iaa_mult:'', iaa_est:false },
-    { any:1968, titol:'Stress es tres, tres', festival:'Venècia', premiat:false, esp:151363, top100:null, mercat:'330M≈', penetr:'0,46%≈', quota:'0,05%≈', iic:'0,10', iaa_xifra:'151.363', iaa_mult:'', iaa_est:false },
-    { any:1973, titol:'Ana y los lobos', festival:'Cannes', premiat:false, esp:478667, top100:null, mercat:'280M≈', penetr:'1,38%≈', quota:'0,17%≈', iic:'0,33', iaa_xifra:'478.667', iaa_mult:'', iaa_est:false },
-    { any:1974, titol:'La prima Angélica', festival:'Cannes', premiat:true, esp:1410478, top100:null, mercat:'270M≈', penetr:'4,02%≈', quota:'0,52%≈', iic:'0,99', iaa_xifra:'1.410.478', iaa_mult:'', iaa_est:false },
-    { any:1976, titol:'Cría cuervos', festival:'Cannes', premiat:true, esp:1293113, top100:null, mercat:'240M≈', penetr:'3,59%≈', quota:'0,54%≈', iic:'0,95', iaa_xifra:'1.293.113', iaa_mult:'', iaa_est:false },
-    { any:1977, titol:'Elisa, vida mía', festival:'Cannes', premiat:true, esp:365475, top100:null, mercat:'220M≈', penetr:'1,00%≈', quota:'0,17%≈', iic:'0,28', iaa_xifra:'365.475', iaa_mult:'', iaa_est:false },
-    { any:1978, titol:'Los ojos vendados', festival:'Cannes', premiat:false, esp:104249, top100:null, mercat:'205M≈', penetr:'0,28%≈', quota:'0,05%≈', iic:'0,08', iaa_xifra:'104.249', iaa_mult:'', iaa_est:false },
-    { any:1979, titol:'Mamá cumple cien años', festival:'Sant Sebastià', premiat:true, esp:1120399, top100:null, mercat:'195M≈', penetr:'3,01%≈', quota:'0,57%≈', iic:'0,90', iaa_xifra:'1.120.399', iaa_mult:'', iaa_est:false },
-    { any:1981, titol:'Deprisa, deprisa', festival:'Berlín', premiat:true, esp:1049600, top100:{pos:25,dec:'80s'}, mercat:'165M≈', penetr:'2,78%≈', quota:'0,64%≈', iic:'0,91', iaa_xifra:'1.049.600', iaa_mult:'', iaa_est:false },
-    { any:1983, titol:'Carmen', festival:'Cannes', premiat:true, esp:427324, top100:null, mercat:'130M≈', penetr:'1,12%≈', quota:'0,33%≈', iic:'0,41', iaa_xifra:'427.324', iaa_mult:'', iaa_est:false },
-    { any:1984, titol:'Los zancos', festival:'Venècia', premiat:false, esp:56789, top100:null, mercat:'115M≈', penetr:'0,15%≈', quota:'0,05%≈', iic:'0,06', iaa_xifra:'~170.000', iaa_mult:'', iaa_est:true },
-    { any:1988, titol:'El Dorado', festival:'Cannes', premiat:false, esp:571690, top100:null, mercat:'85M≈', penetr:'1,48%≈', quota:'0,67%≈', iic:'0,68', iaa_xifra:'~1,71M', iaa_mult:'', iaa_est:true },
-    { any:1989, titol:'La noche oscura', festival:'Berlín', premiat:false, esp:36008, top100:null, mercat:'80M≈', penetr:'0,09%≈', quota:'0,05%≈', iic:'0,04', iaa_xifra:'~108.000', iaa_mult:'', iaa_est:true },
-    { any:1990, titol:'Ay, Carmela', festival:null, premiat:false, esp:907295, top100:{pos:28,dec:'90s'}, mercat:'80M≈', penetr:'2,33%≈', quota:'1,13%≈', iic:'1,11', iaa_xifra:'~2,27M', iaa_mult:'', iaa_est:true },
-    { any:1993, titol:'¡Dispara!', festival:'Venècia', premiat:false, esp:169814, top100:null, mercat:'90M≈', penetr:'0,43%≈', quota:'0,19%≈', iic:'0,20', iaa_xifra:'~425.000', iaa_mult:'', iaa_est:true },
-    { any:1996, titol:'Taxi', festival:'Sant Sebastià', premiat:false, esp:139825, top100:null, mercat:'98M≈', penetr:'0,35%≈', quota:'0,14%≈', iic:'0,15', iaa_xifra:'~301.000', iaa_mult:'', iaa_est:true },
+    { any:1966, titol:'La caza', festival:'Berlín', premiat:true, esp:341377, top100:null, ...indicadorsMercatIII(1966, 341377), iaa_xifra:'341.377', iaa_mult:'', iaa_est:false },
+    { any:1968, titol:'Peppermint Frappé', festival:'Berlín', premiat:true, esp:669165, top100:null, ...indicadorsMercatIII(1968, 669165), iaa_xifra:'669.165', iaa_mult:'', iaa_est:false },
+    { any:1968, titol:'Stress es tres, tres', festival:'Venècia', premiat:false, esp:151363, top100:null, ...indicadorsMercatIII(1968, 151363), iaa_xifra:'151.363', iaa_mult:'', iaa_est:false },
+    { any:1973, titol:'Ana y los lobos', festival:'Cannes', premiat:false, esp:478667, top100:null, ...indicadorsMercatIII(1973, 478667), iaa_xifra:'478.667', iaa_mult:'', iaa_est:false },
+    { any:1974, titol:'La prima Angélica', festival:'Cannes', premiat:true, esp:1410478, top100:null, ...indicadorsMercatIII(1974, 1410478), iaa_xifra:'1.410.478', iaa_mult:'', iaa_est:false },
+    { any:1976, titol:'Cría cuervos', festival:'Cannes', premiat:true, esp:1293113, top100:null, ...indicadorsMercatIII(1976, 1293113), iaa_xifra:'1.293.113', iaa_mult:'', iaa_est:false },
+    { any:1977, titol:'Elisa, vida mía', festival:'Cannes', premiat:true, esp:365475, top100:null, ...indicadorsMercatIII(1977, 365475), iaa_xifra:'365.475', iaa_mult:'', iaa_est:false },
+    { any:1978, titol:'Los ojos vendados', festival:'Cannes', premiat:false, esp:104249, top100:null, ...indicadorsMercatIII(1978, 104249), iaa_xifra:'104.249', iaa_mult:'', iaa_est:false },
+    { any:1979, titol:'Mamá cumple cien años', festival:'Sant Sebastià', premiat:true, esp:1120399, top100:null, ...indicadorsMercatIII(1979, 1120399), iaa_xifra:'1.120.399', iaa_mult:'', iaa_est:false },
+    { any:1981, titol:'Deprisa, deprisa', festival:'Berlín', premiat:true, esp:1049600, top100:{pos:25,dec:'80s'}, ...indicadorsMercatIII(1981, 1049600), iaa_xifra:'1.049.600', iaa_mult:'', iaa_est:false },
+    { any:1983, titol:'Carmen', festival:'Cannes', premiat:true, esp:427324, top100:null, ...indicadorsMercatIII(1983, 427324), iaa_xifra:'427.324', iaa_mult:'', iaa_est:false },
+    { any:1984, titol:'Los zancos', festival:'Venècia', premiat:false, esp:56789, top100:null, ...indicadorsMercatIII(1984, 56789), iaa_xifra:'~170.000', iaa_mult:'', iaa_est:true },
+    { any:1988, titol:'El Dorado', festival:'Cannes', premiat:false, esp:571690, top100:null, ...indicadorsMercatIII(1988, 571690), iaa_xifra:'~1,71M', iaa_mult:'', iaa_est:true },
+    { any:1989, titol:'La noche oscura', festival:'Berlín', premiat:false, esp:36008, top100:null, ...indicadorsMercatIII(1989, 36008), iaa_xifra:'~108.000', iaa_mult:'', iaa_est:true },
+    { any:1990, titol:'Ay, Carmela', festival:null, premiat:false, esp:907295, top100:{pos:28,dec:'90s'}, ...indicadorsMercatIII(1990, 907295), iaa_xifra:'~2,27M', iaa_mult:'', iaa_est:true },
+    { any:1993, titol:'¡Dispara!', festival:'Venècia', premiat:false, esp:169814, top100:null, ...indicadorsMercatIII(1993, 169814), iaa_xifra:'~425.000', iaa_mult:'', iaa_est:true },
+    { any:1996, titol:'Taxi', festival:'Sant Sebastià', premiat:false, esp:139825, top100:null, ...indicadorsMercatIII(1996, 139825), iaa_xifra:'~301.000', iaa_mult:'', iaa_est:true },
   ];
 
   FILMS_ALMODOVAR = [
-    { any:1982, titol:'Laberinto de pasiones', festival:'Sant Sebastià', premiat:false, esp:358252, top100:null, mercat:'150M≈', penetr:'0,94%≈', quota:'0,24%≈', iic:'0,32', iaa_xifra:'358.252', iaa_mult:'', iaa_est:false },
-    { any:1988, titol:'Mujeres al borde…', festival:'Venècia', premiat:true, esp:3348457, top100:{globalPos:22}, mercat:'85M≈', penetr:'8,61%≈', quota:'3,94%≈', iic:'3,98', iaa_xifra:'~10,04M', iaa_mult:'', iaa_est:true },
-    { any:1989, titol:'Átame', festival:'Berlín', premiat:false, esp:1351825, top100:{pos:8,dec:'80s'}, mercat:'80M≈', penetr:'3,48%≈', quota:'1,69%≈', iic:'1,66', iaa_xifra:'~4,06M', iaa_mult:'', iaa_est:true },
-    { any:1991, titol:'Tacones lejanos', festival:null, premiat:false, esp:2073064, top100:{pos:6,dec:'90s'}, mercat:'88M≈', penetr:'5,32%≈', quota:'2,36%≈', iic:'2,42', iaa_xifra:'~5,19M', iaa_mult:'', iaa_est:true },
-    { any:1993, titol:'Kika', festival:null, premiat:false, esp:1038568, top100:{pos:24,dec:'90s'}, mercat:'90M≈', penetr:'2,65%≈', quota:'1,15%≈', iic:'1,19', iaa_xifra:'~2,60M', iaa_mult:'', iaa_est:true },
-    { any:1995, titol:'La flor de mi secreto', festival:null, premiat:false, esp:981846, top100:{pos:25,dec:'90s'}, mercat:'96M≈', penetr:'2,50%≈', quota:'1,02%≈', iic:'1,09', iaa_xifra:'~2,12M', iaa_mult:'', iaa_est:true },
-    { any:1997, titol:'Carne trémula', festival:null, premiat:false, esp:1433465, top100:{pos:12,dec:'90s'}, mercat:'100M≈', penetr:'3,64%≈', quota:'1,43%≈', iic:'1,56', iaa_xifra:'~3,08M', iaa_mult:'', iaa_est:true },
-    { any:1999, titol:'Todo sobre mi madre', festival:'Cannes', premiat:true, esp:2590699, top100:{globalPos:52}, mercat:'110M', penetr:'6,48%', quota:'2,36%', iic:'2,67', iaa_xifra:'~5,57M', iaa_mult:'', iaa_est:true },
-    { any:2002, titol:'Hable con ella', festival:null, premiat:false, esp:1367655, top100:{pos:26,dec:'2000s'}, mercat:'140M≈', penetr:'3,30%≈', quota:'0,97%≈', iic:'1,22', iaa_xifra:'~2,94M', iaa_mult:'', iaa_est:true },
-    { any:2006, titol:'Volver', festival:'Cannes', premiat:true, esp:1932119, top100:{pos:16,dec:'2000s'}, mercat:'121M', penetr:'4,37%', quota:'1,59%', iic:'1,80', iaa_xifra:'~4,83M', iaa_mult:'', iaa_est:true },
-    { any:2009, titol:'Los abrazos rotos', festival:'Cannes', premiat:false, esp:696722, top100:null, mercat:'110M≈', penetr:'1,49%≈', quota:'0,63%≈', iic:'0,66', iaa_xifra:'~1,74M', iaa_mult:'', iaa_est:true },
-    { any:2011, titol:'La piel que habito', festival:'Cannes', premiat:false, esp:735403, top100:null, mercat:'98M≈', penetr:'1,56%≈', quota:'0,75%≈', iic:'0,74', iaa_xifra:'~1,84M', iaa_mult:'', iaa_est:true },
-    { any:2016, titol:'Julieta', festival:'Cannes', premiat:false, esp:355378, top100:null, mercat:'96M≈', penetr:'0,77%≈', quota:'0,37%≈', iic:'0,36', iaa_xifra:'~0,89M', iaa_mult:'', iaa_est:true },
-    { any:2019, titol:'Dolor y gloria', festival:'Cannes', premiat:true, esp:964859, top100:null, mercat:'105,5M≈', penetr:'2,05%≈', quota:'0,91%≈', iic:'0,93', iaa_xifra:'~2,40M', iaa_mult:'', iaa_est:true },
-    { any:2021, titol:'Madres paralelas', festival:'Venècia', premiat:true, esp:425643, top100:null, mercat:'55M≈', penetr:'0,90%≈', quota:'0,77%≈', iic:'0,57', iaa_xifra:'~1,40M', iaa_mult:'', iaa_est:true },
-    { any:2024, titol:'La habitación de al lado', festival:'Venècia', premiat:true, esp:402313, top100:null, mercat:'71M≈', penetr:'0,83%≈', quota:'0,57%≈', iic:'0,47', iaa_xifra:'~1,30M', iaa_mult:'', iaa_est:true },
+    { any:1982, titol:'Laberinto de pasiones', festival:'Sant Sebastià', premiat:false, esp:358252, top100:null, ...indicadorsMercatIII(1982, 358252), iaa_xifra:'358.252', iaa_mult:'', iaa_est:false },
+    { any:1988, titol:'Mujeres al borde…', festival:'Venècia', premiat:true, esp:3348457, top100:{globalPos:22}, ...indicadorsMercatIII(1988, 3348457), iaa_xifra:'~10,04M', iaa_mult:'', iaa_est:true },
+    { any:1989, titol:'Átame', festival:'Berlín', premiat:false, esp:1351825, top100:{pos:8,dec:'80s'}, ...indicadorsMercatIII(1989, 1351825), iaa_xifra:'~4,06M', iaa_mult:'', iaa_est:true },
+    { any:1991, titol:'Tacones lejanos', festival:null, premiat:false, esp:2073064, top100:{pos:6,dec:'90s'}, ...indicadorsMercatIII(1991, 2073064), iaa_xifra:'~5,19M', iaa_mult:'', iaa_est:true },
+    { any:1993, titol:'Kika', festival:null, premiat:false, esp:1038568, top100:{pos:24,dec:'90s'}, ...indicadorsMercatIII(1993, 1038568), iaa_xifra:'~2,60M', iaa_mult:'', iaa_est:true },
+    { any:1995, titol:'La flor de mi secreto', festival:null, premiat:false, esp:981846, top100:{pos:25,dec:'90s'}, ...indicadorsMercatIII(1995, 981846), iaa_xifra:'~2,12M', iaa_mult:'', iaa_est:true },
+    { any:1997, titol:'Carne trémula', festival:null, premiat:false, esp:1433465, top100:{pos:12,dec:'90s'}, ...indicadorsMercatIII(1997, 1433465), iaa_xifra:'~3,08M', iaa_mult:'', iaa_est:true },
+    { any:1999, titol:'Todo sobre mi madre', festival:'Cannes', premiat:true, esp:2590699, top100:{globalPos:52}, ...indicadorsMercatIII(1999, 2590699), iaa_xifra:'~5,57M', iaa_mult:'', iaa_est:true },
+    { any:2002, titol:'Hable con ella', festival:null, premiat:false, esp:1367655, top100:{pos:26,dec:'2000s'}, ...indicadorsMercatIII(2002, 1367655), iaa_xifra:'~2,94M', iaa_mult:'', iaa_est:true },
+    { any:2006, titol:'Volver', festival:'Cannes', premiat:true, esp:1932119, top100:{pos:16,dec:'2000s'}, ...indicadorsMercatIII(2006, 1932119), iaa_xifra:'~4,83M', iaa_mult:'', iaa_est:true },
+    { any:2009, titol:'Los abrazos rotos', festival:'Cannes', premiat:false, esp:696722, top100:null, ...indicadorsMercatIII(2009, 696722), iaa_xifra:'~1,74M', iaa_mult:'', iaa_est:true },
+    { any:2011, titol:'La piel que habito', festival:'Cannes', premiat:false, esp:735403, top100:null, ...indicadorsMercatIII(2011, 735403), iaa_xifra:'~1,84M', iaa_mult:'', iaa_est:true },
+    { any:2016, titol:'Julieta', festival:'Cannes', premiat:false, esp:355378, top100:null, ...indicadorsMercatIII(2016, 355378), iaa_xifra:'~0,89M', iaa_mult:'', iaa_est:true },
+    { any:2019, titol:'Dolor y gloria', festival:'Cannes', premiat:true, esp:964859, top100:null, ...indicadorsMercatIII(2019, 964859), iaa_xifra:'~2,40M', iaa_mult:'', iaa_est:true },
+    { any:2021, titol:'Madres paralelas', festival:'Venècia', premiat:true, esp:425643, top100:null, ...indicadorsMercatIII(2021, 425643), iaa_xifra:'~1,40M', iaa_mult:'', iaa_est:true },
+    { any:2024, titol:'La habitación de al lado', festival:'Venècia', premiat:true, esp:402313, top100:null, ...indicadorsMercatIII(2024, 402313), iaa_xifra:'~1,30M', iaa_mult:'', iaa_est:true },
   ];
 
   FILMS_ACTUAL = [
-    { any:2013, titol:'Stockholm', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:13945, top100:null, mercat:'76,9M≈', penetr:'0,03%≈', quota:'0,02%≈', iic:'0,02≈', iaa_xifra:'~35.000', iaa_mult:'', iaa_est:true },
-    { any:2016, titol:'Que Dios nos perdone', director:'Rodrigo Sorogoyen', festival:'Sant Sebastià', premiat:true, esp:223302, top100:null, mercat:'96M≈', penetr:'0,48%≈', quota:'0,23%≈', iic:'0,23≈', iaa_xifra:'~558.000', iaa_mult:'', iaa_est:true },
-    { any:2018, titol:'El reino', director:'Rodrigo Sorogoyen', festival:'Sant Sebastià', premiat:false, esp:365264, top100:null, mercat:'98M≈', penetr:'0,78%≈', quota:'0,37%≈', iic:'0,37≈', iaa_xifra:'~0,91M', iaa_mult:'', iaa_est:true },
-    { any:2019, titol:'Madre', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:29585, top100:null, mercat:'105,5M≈', penetr:'0,06%≈', quota:'0,03%≈', iic:'0,03≈', iaa_xifra:'~75.000', iaa_mult:'', iaa_est:true },
-    { any:2022, titol:'As bestas', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:1112098, top100:{pos:11,dec:'2020s'}, mercat:'71M', penetr:'2,35%', quota:'1,57%', iic:'1,31', iaa_xifra:'~3,62M', iaa_mult:'', iaa_est:true },
-    { any:2010, titol:'Todos vós sodes capitáns', director:'Oliver Laxe', festival:null, premiat:false, esp:905, top100:null, mercat:'101M≈', penetr:'0,00%≈', quota:'0,00%≈', iic:'0,00', iaa_xifra:'~2.250', iaa_mult:'', iaa_est:true },
-    { any:2016, titol:'Mimosas', director:'Oliver Laxe', festival:null, premiat:false, esp:12097, top100:null, mercat:'96M≈', penetr:'0,03%≈', quota:'0,01%≈', iic:'0,01≈', iaa_xifra:'~30.000', iaa_mult:'', iaa_est:true },
-    { any:2019, titol:'O que arde', director:'Oliver Laxe', festival:null, premiat:false, esp:104633, top100:null, mercat:'105,5M≈', penetr:'0,22%≈', quota:'0,10%≈', iic:'0,10≈', iaa_xifra:'~262.000', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Sirât', director:'Oliver Laxe', festival:'Cannes', premiat:true, esp:476143, top100:null, mercat:'65M≈', penetr:'0,98%≈', quota:'0,73%≈', iic:'0,58≈', iaa_xifra:'~1,55M', iaa_mult:'', iaa_est:true },
-    { any:2017, titol:'Estiu 1993', director:'Carla Simón', festival:null, premiat:false, esp:198214, top100:null, mercat:'100M≈', penetr:'0,43%≈', quota:'0,20%≈', iic:'0,20≈', iaa_xifra:'~495.000', iaa_mult:'', iaa_est:true },
-    { any:2022, titol:'Alcarràs', director:'Carla Simón', festival:'Berlín', premiat:true, esp:403195, top100:null, mercat:'71M', penetr:'0,84%', quota:'0,57%', iic:'0,47', iaa_xifra:'~1,31M', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:284821, top100:null, mercat:'65M≈', penetr:'0,59%≈', quota:'0,44%≈', iic:'0,35≈', iaa_xifra:'~0,93M', iaa_mult:'', iaa_est:true },
-    { any:2022, titol:'Cinco lobitos', director:'Alauda Ruiz de Azúa', festival:null, premiat:false, esp:154708, top100:null, mercat:'71M≈', penetr:'0,32%≈', quota:'0,22%≈', iic:'0,18≈', iaa_xifra:'~504.000', iaa_mult:'', iaa_est:true },
-    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:785231, top100:{pos:20,dec:'2020s'}, mercat:'65M', penetr:'1,60%', quota:'1,21%', iic:'0,95', iaa_xifra:'~2,55M', iaa_mult:'', iaa_est:true },
+    { any:2013, titol:'Stockholm', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:13945, top100:null, ...indicadorsMercatIII(2013, 13945), iaa_xifra:'~35.000', iaa_mult:'', iaa_est:true },
+    { any:2016, titol:'Que Dios nos perdone', director:'Rodrigo Sorogoyen', festival:'Sant Sebastià', premiat:true, esp:223302, top100:null, ...indicadorsMercatIII(2016, 223302), iaa_xifra:'~558.000', iaa_mult:'', iaa_est:true },
+    { any:2018, titol:'El reino', director:'Rodrigo Sorogoyen', festival:'Sant Sebastià', premiat:false, esp:365264, top100:null, ...indicadorsMercatIII(2018, 365264), iaa_xifra:'~0,91M', iaa_mult:'', iaa_est:true },
+    { any:2019, titol:'Madre', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:29585, top100:null, ...indicadorsMercatIII(2019, 29585), iaa_xifra:'~75.000', iaa_mult:'', iaa_est:true },
+    { any:2022, titol:'As bestas', director:'Rodrigo Sorogoyen', festival:null, premiat:false, esp:1112098, top100:{pos:11,dec:'2020s'}, ...indicadorsMercatIII(2022, 1112098), iaa_xifra:'~3,62M', iaa_mult:'', iaa_est:true },
+    { any:2010, titol:'Todos vós sodes capitáns', director:'Oliver Laxe', festival:null, premiat:false, esp:905, top100:null, ...indicadorsMercatIII(2010, 905), iaa_xifra:'~2.250', iaa_mult:'', iaa_est:true },
+    { any:2016, titol:'Mimosas', director:'Oliver Laxe', festival:null, premiat:false, esp:12097, top100:null, ...indicadorsMercatIII(2016, 12097), iaa_xifra:'~30.000', iaa_mult:'', iaa_est:true },
+    { any:2019, titol:'O que arde', director:'Oliver Laxe', festival:null, premiat:false, esp:104633, top100:null, ...indicadorsMercatIII(2019, 104633), iaa_xifra:'~262.000', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Sirât', director:'Oliver Laxe', festival:'Cannes', premiat:true, esp:476143, top100:null, ...indicadorsMercatIII(2025, 476143), iaa_xifra:'~1,55M', iaa_mult:'', iaa_est:true },
+    { any:2017, titol:'Estiu 1993', director:'Carla Simón', festival:null, premiat:false, esp:198214, top100:null, ...indicadorsMercatIII(2017, 198214), iaa_xifra:'~495.000', iaa_mult:'', iaa_est:true },
+    { any:2022, titol:'Alcarràs', director:'Carla Simón', festival:'Berlín', premiat:true, esp:403195, top100:null, ...indicadorsMercatIII(2022, 403195), iaa_xifra:'~1,31M', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Romería', director:'Carla Simón', festival:'Cannes', premiat:false, esp:284821, top100:null, ...indicadorsMercatIII(2025, 284821), iaa_xifra:'~0,93M', iaa_mult:'', iaa_est:true },
+    { any:2022, titol:'Cinco lobitos', director:'Alauda Ruiz de Azúa', festival:null, premiat:false, esp:154708, top100:null, ...indicadorsMercatIII(2022, 154708), iaa_xifra:'~504.000', iaa_mult:'', iaa_est:true },
+    { any:2025, titol:'Los domingos', director:'Alauda Ruiz de Azúa', festival:'Sant Sebastià', premiat:true, esp:785231, top100:{pos:20,dec:'2020s'}, ...indicadorsMercatIII(2025, 785231), iaa_xifra:'~2,55M', iaa_mult:'', iaa_est:true },
   ];
 
   FILMS_SAURA.push(...['Goya en Burdeos','Fados','Io, Don Giovanni'].map(novaFilaEFA));

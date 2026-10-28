@@ -19,10 +19,14 @@ async function construirResumDecades() {
   const cont = document.getElementById('taula-decades-resum');
   if (!cont) return;
 
-  let films;
+  let films, mercat;
   try {
-    const r = await fetch(pipPath('data/films.json'));
-    films = await r.json();
+    const [rf, rm] = await Promise.all([
+      fetch(pipPath('data/films.json')),
+      fetch(pipPath('data/market.json'))
+    ]);
+    if (!rf.ok || !rm.ok) throw new Error('No es poden carregar les sèries');
+    [films, mercat] = await Promise.all([rf.json(), rm.json()]);
   } catch(e) {
     cont.innerHTML = `<p class="text-md-error">${pipDecT('Error carregant les dades.','Error al cargar los datos.')}</p>`;
     return;
@@ -47,12 +51,16 @@ async function construirResumDecades() {
   const fmtM = (n, e) => n == null ? '—' : Math.round(n) + 'M' + (e ? '≈' : '');
   const fmtI = n => n == null ? '—' : n.toFixed(2);
 
+  const decadaMercat = any => any <= 1969 ? '60s' : any <= 1979 ? '70s' : any <= 1989 ? '80s' : any <= 1999 ? '90s' : any <= 2009 ? '2000s' : any <= 2019 ? '2010s' : '2020s';
   const files = ordre.map(decada => {
     const fs = grups[decada];
     if (!fs.length) return '';
     const lider = fs.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
-    const mercatMitja = fs.reduce((s, f) => s + (f.mercat_M || 0), 0) / fs.length;
-    const mercatEst   = fs.some(f => f.mercat_estimat);
+    // Mitjana anual real: una observació per any, no una per títol del Top 100.
+    const anualitats = mercat.filter(m => decadaMercat(m.any) === decada);
+    if (!anualitats.length) throw new Error('Falten anualitats de '+decada);
+    const mercatMitja = anualitats.reduce((s, m) => s + m.entrades_M, 0) / anualitats.length;
+    const mercatEst = anualitats.some(m => m.estimat);
     const col = COLORS_DECADES[decada] || { fons: '#f5f5f5', text: '#333' };
 
     return `<tr style="background:${col.fons};border-bottom:2px solid #fff">

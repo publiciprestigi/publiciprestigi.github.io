@@ -1,5 +1,7 @@
 # Mapa d'impacte de la nova sèrie de mercat — v1.2
 
+> **Estat de la implementació (28-10-2026).** Aquest és un document històric de planificació, anterior als commits de la branca `auditoria-mercat-iic-2026`. Les indicacions «pendent» o «no executat» descriuen l'estat en què es va redactar, no l'estat actual de la branca. Per a resultats i pendents efectius, consulteu [validacio-implementacio.md](validacio-implementacio.md). `main` continua intacta.
+
 **Estat: simulació, pendent de revisió editorial i metodològica. No aplicar automàticament.** Revisió del 27-10-2026. S'utilitza la sèrie de [mercat-1965-2025.csv](mercat-1965-2025.csv), i ara també [poblacio-1964-2025.csv](poblacio-1964-2025.csv) (reconstrucció acadèmica 1964–1972 i INE 1973–2025) per a la [simulació demogràfica conjunta](impacte-mercat-poblacio-1964-2025.csv); i s'han inspeccionat les dependències actuals del repositori. L'objectiu és evitar canvis fragmentaris o xifres incoherents. Les dades actives i la web no han estat modificades.
 
 **Llista de control per a l'aplicació:** [inventari complet de canvis per fitxer](inventari-canvis-per-fitxer.md), amb els valors actuals i proposats. **No executar sense revisar aquest inventari.**
