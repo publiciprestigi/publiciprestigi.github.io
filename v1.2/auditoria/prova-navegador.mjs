@@ -73,6 +73,7 @@ try {
     assert.ok(txt.includes('403,1M') && txt.includes('59,1M'), 'mercats 1966 i 2022');
     assert.ok(txt.includes('0,08%') && txt.includes('0,68%'), 'quotes de referència');
     await page.locator('#taula-caza-comparativa').screenshot({ path: 'qa-captures/05-la-caza-alcarras.png' });
+    await page.screenshot({ path: 'qa-captures/05b-la-caza-pagina.png' });
     console.log('OK Part III: La caza / Alcarràs');
     await page.close();
   }
@@ -94,7 +95,7 @@ try {
     await page.close();
   }
   assert.deepEqual(errors, [], 'cap error JavaScript no capturat');
-  console.log('VALIDACIÓ DE NAVEGADOR CORRECTA: 5 pàgines/estats, 8 captures, cap excepció.');
+  console.log('VALIDACIÓ DE NAVEGADOR CORRECTA: 5 pàgines/estats, 9 captures, cap excepció.');
 } finally {
   await browser.close();
 }

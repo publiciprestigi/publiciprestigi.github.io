@@ -278,6 +278,9 @@ async function construirGraficMercat() {
     plugins: [pluginDecades]
   });
   chart.$view = 'mercat';
+  // El primer dibuix es produeix dins de new Chart, abans d'assignar $view.
+  // Forçar un redraw sense animació per mostrar les anotacions del plugin.
+  chart.update('none');
 
   const buttons = [...cont.querySelectorAll('.mercat-view-toggle')];
   const setView = (view) => {
