@@ -76,3 +76,7 @@ El validador `auditoria/valida-dades.mjs` s'ha executat correctament amb **Node 
 - La comparativa francesa de 2025 (`156,79M` a la sèrie històrica i `156,2M` al bloc de quotes) segueix marcada com a discrepància prèvia fora de l'àmbit de correcció d'aquesta auditoria, sense alterar les dades CNC/INSEE.
 
 **Pendents abans de fusionar:** lectura editorial manual de la v1.2 catalana completa i inspecció de detalls gràfics en totes les resolucions, revisió conscient de l'excepció francesa i confirmació final de la branca. La traducció integral al castellà queda expressament ajornada fins al final de tot el procés català.
+
+## Identificada la discrepància francesa de 2025
+
+El valor **156,79M** del gràfic històric de França correspon a l'**avanç provisional del CNC del 30-12-2025**; el valor **156,2M** del bloc de quotes correspon al **balanç definitiu del CNC del 12-05-2026**. La diferència està documentada a [nota-serie-franca-2025.md](nota-serie-franca-2025.md). Els valors francesos es mantenen intactes, i qualsevol harmonització posterior serà una revisió independent i explícita.
