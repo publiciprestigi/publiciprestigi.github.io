@@ -34,7 +34,7 @@ for(const item of pages) {
   await page.waitForTimeout(200);
   const state=await target.evaluate(el=>{
    const md=[...el.querySelectorAll('.text-md[data-text]')];
-   const tables=[...el.querySelectorAll('[id^="taula-"]')].filter(n=>!n.closest('[id^="taula-"]')||n.parentElement?.id===null);
+   const tables=[...el.querySelectorAll('[id^="taula-"]')].filter(n=>!n.parentElement?.closest('[id^="taula-"]'));
    const readyTables=tables.filter(t=>t.querySelector('tr')).map(t=>({id:t.id,rows:t.querySelectorAll('tr').length}));
    return {textCount:md.length,rendered:md.filter(x=>x.textContent.trim().length>20).length,
     tableCount:tables.length,readyTables,visible:getComputedStyle(el).display!=='none',width:el.scrollWidth};
