@@ -108,8 +108,27 @@ try {
     console.log('OK vista mòbil: comparativa Espanya-França');
     await page.close();
   }
+  {
+    const page = await newPage('part-iii.html#bretxa');
+    await page.waitForFunction(() => !!(window.Chart && Chart.getChart(document.getElementById('grafic-bretxa'))), {timeout:45000});
+    const chart = await page.evaluate(() => {
+      const c=Chart.getChart(document.getElementById('grafic-bretxa'));
+      return {
+        m:c.data.datasets.find(d=>d.yAxisID==='yMercat')?.data,
+        ratio:c.data.datasets.find(d=>d.yAxisID==='yRatio')?.data,
+        ymax:c.options.scales.yMercat.max
+      };
+    });
+    assert.deepEqual(chart.m,[394.5,260,123.1,101,128.8,96.2,57.4],
+      'mitjanes anuals de mercat harmonitzades a la bretxa');
+    assert.deepEqual(chart.ratio,[0.17,0.27,0.32,0.22,0.22,0.08,0.14],
+      'ràtios de bretxa intactes');
+    await page.locator('#grafic-bretxa').screenshot({path:'qa-captures/11-bretxa-mercat.png'});
+    console.log('OK Part III: bretxa i 7 mitjanes de mercat');
+    await page.close();
+  }
   assert.deepEqual(errors, [], 'cap error JavaScript no capturat');
-  console.log('VALIDACIÓ DE NAVEGADOR CORRECTA: 7 pàgines/estats, 11 captures, cap excepció.');
+  console.log('VALIDACIÓ DE NAVEGADOR CORRECTA: 8 pàgines/estats, 12 captures, cap excepció.');
 } finally {
   await browser.close();
 }
