@@ -55,7 +55,7 @@ for(const [label,start,end,average] of decades) {
  const rows=market.filter(r=>r.any>=start&&r.any<=end);
  assert.equal(rows.length,end-start+1,label+' nombre anualitats');
  const mean=rows.reduce((s,r)=>s+r.entrades_M,0)/rows.length;
- assert.equal(two(mean*10)/10,average,label+' mitjana de mercat');
+ assert.equal(Number(mean.toFixed(1)),average,label+' mitjana de mercat');
 }
 const texts={
  quota: read('textos/part-i/ranking-quota.md'),
