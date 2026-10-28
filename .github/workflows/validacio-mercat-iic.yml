@@ -21,6 +21,8 @@ jobs:
           node-version: '22'
       - name: Executar validador d'auditoria
         run: node v1.2/auditoria/valida-dades.mjs
+      - name: Validar numeració de notes i blocs Markdown
+        run: node v1.2/auditoria/valida-referencies.mjs
       - name: Comprovar sintaxi JavaScript
         run: |
           node --check v1.2/js/part-i.js
