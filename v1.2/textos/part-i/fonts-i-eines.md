@@ -38,4 +38,5 @@ A les taules de l'estudi trobarem quatre mesures que ofereixen perspectives dife
 
 L'IIC és un indicador propi de l'estudi que situa els espectadors en relació amb el mercat cinematogràfic i la població de cada època. És una eina d'aproximació per facilitar les comparacions històriques, no un model oficial ni científicament validat.
 
-Els textos de «Context» que acompanyen els llistats de pel·lícules de cada dècada parteixen d'una síntesi de la historiografia i la crítica cinematogràfica. Per a les primeres dècades, les principals referències són *Historia del cine español*, de Romà Gubern et al. (Cátedra, 1995), i *Del azul al verde: el cine español bajo el franquismo*, de Domènec Font (Avance, 1976). Per a les dècades més recents, la síntesi prové de la crítica i el periodisme cinematogràfic contemporanis. En tots els casos, es tracta de valoracions contextuals i interpretatives de l'autor.
+Els textos de «Context» que acompanyen els llistats de pel·lícules de cada dècada són síntesis interpretatives de l'autor, elaborades a partir de la historiografia del cinema espanyol, amb obres de referència com *Historia del cine español*, de Romà Gubern et al. (Cátedra, 1995), i *Del azul al verde: el cine español bajo el franquismo*, de Domènec Font (Avance, 1976), així com de la crítica i el periodisme cinematogràfic contemporani.
+
