@@ -972,162 +972,59 @@ function construirCazaAlcarras() {
 }
 
 window.PiP_graficCazaIAA = function() {
-  const el = document.getElementById('grafic-caza-iaa');
-  if (!el || typeof Chart === 'undefined') return;
-  if (window._chartCazaIAA) window._chartCazaIAA.destroy();
+  const root = document.getElementById('grafic-caza-iaa');
+  if (!root || root.dataset.rendered === 'true') return;
+  root.dataset.rendered = 'true';
 
-  // Títol del gràfic
-  if (!document.getElementById('caza-iaa-tit')) {
-    const tit = document.createElement('p');
-    tit.id = 'caza-iaa-tit';
-    tit.style.cssText = 'font-size:16px;font-weight:600;color:#363737;text-align:center;margin-bottom:10px';
-    tit.innerHTML = pip3T('IAA estimat','IAA estimado') + ': <em>La caza</em> (1966) vs. <em>Alcarràs</em> (2022)';
-    el.parentNode.insertBefore(tit, el);
-  }
-
-  const ctx = el.getContext('2d');
-
-  function hatch(color) {
-    const c = document.createElement('canvas');
-    c.width = 8; c.height = 8;
-    const cx = c.getContext('2d');
-    cx.fillStyle = color;
-    cx.fillRect(0, 0, 8, 8);
-    cx.strokeStyle = 'rgba(255,255,255,0.65)';
-    cx.lineWidth = 1.5;
-    cx.beginPath();
-    cx.moveTo(0, 8); cx.lineTo(8, 0);
-    cx.moveTo(-2, 2); cx.lineTo(2, -2);
-    cx.moveTo(6, 10); cx.lineTo(10, 6);
-    cx.stroke();
-    return ctx.createPattern(c, 'repeat');
-  }
-
-  // Etiquetes totals al final de cada barra
-  const etiquetesTotals = [
-    { xifra: '~1,31M', mult: '(×3,25)', total: 1310195 },
-    { xifra: '341.377', mult: '(×1,0)', total: 341377 },
+  // Mateixes xifres i colors de la versió anterior; totes dues barres comparteixen escala.
+  const totalAlcarras = 403195 + 530000 + 150000 + 227000;
+  const totalCaza = 341377;
+  const films = [
+    { name:'Alcarràs', year:2022, display:'~1,31M', multiplier:'×3,25',
+      total:totalAlcarras, pieces:[['Sala',403195,'cia-sala'],['TV pública (TV3 + La 2 TVE)',530000,'cia-publica'],[pip3T('TV pagament (estimació)','TV de pago (estimación)'),150000,'cia-pagament'],[pip3T('Plataformes (estimació)','Plataformas (estimación)'),227000,'cia-plataformes']] },
+    { name:'La caza', year:1966, display:'341.377', multiplier:'×1,0',
+      total:totalCaza, pieces:[['Sala',341377,'cia-sala']] }
   ];
+  const fmt = n => n.toLocaleString(document.documentElement.lang === 'es' ? 'es-ES' : 'ca-ES');
+  root.innerHTML = films.map(f => {
+    const barWidth = 100 * f.total / totalAlcarras;
+    const segments = f.pieces.map(([label,value,cls]) =>
+      '<span class="cia-segment '+cls+'" style="width:'+(100*value/f.total)+'%" tabindex="0" role="img" aria-label="'+f.name+' · '+label+': '+fmt(value)+' '+pip3T('espectadors','espectadores')+'" data-film="'+f.name+'" data-label="'+label+'" data-value="'+fmt(value)+'"></span>'
+    ).join('');
+    return '<div class="cia-row"><div class="cia-heading"><strong><em>'+f.name+'</em> ('+f.year+')</strong><span class="cia-value">'+f.display+' <small>('+f.multiplier+')</small></span></div><div class="cia-track"><div class="cia-stack" style="width:'+barWidth+'%">'+segments+'</div></div></div>';
+  }).join('');
 
-  const pluginTotals = {
-    id: 'cazaTotals',
-    afterDraw(chart) {
-      const ctx2 = chart.ctx;
-      ctx2.save();
-      ctx2.font = '600 11px "Inter", -apple-system, Arial, sans-serif';
-      ctx2.fillStyle = '#363737';
-      ctx2.textBaseline = 'middle';
-      etiquetesTotals.forEach((et, i) => {
-        const x = chart.scales.x.getPixelForValue(et.total) + 6;
-        const meta = chart.getDatasetMeta(0);
-        const bar = meta.data[i];
-        if (!bar) return;
-        const y = bar.y;
-        ctx2.font = 'bold 13px "Inter", -apple-system, Arial, sans-serif';
-        ctx2.fillStyle = '#363737';
-        ctx2.fillText(et.xifra, x, y);
-        const xifraWidth = ctx2.measureText(et.xifra + ' ').width;
-        ctx2.font = '12px "Inter", -apple-system, Arial, sans-serif';
-        ctx2.fillStyle = '#888';
-        ctx2.fillText(et.mult, x + xifraWidth, y);
-      });
-      ctx2.restore();
-    },
-  };
-
-  // Llegenda HTML centrada (en lloc de la de Chart.js)
-  if (!document.getElementById('caza-iaa-leg')) {
-    const leg = document.createElement('div');
-    leg.id = 'caza-iaa-leg';
-    leg.style.cssText = 'text-align:center;font-size:11px;margin-top:10px;margin-bottom:24px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;color:#555;font-family:-apple-system,Arial,sans-serif';
-    leg.innerHTML = `
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#1E4080;display:inline-block;border-radius:2px"></span>Sala</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#9B2335;display:inline-block;border-radius:2px"></span>TV pública (TV3 + La 2 TVE)</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>${pip3T('TV pagament (estimació)','TV de pago (estimación)')}</span>
-      <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>${pip3T('Plataformes (estimació)','Plataformas (estimación)')}</span>`;
-    el.parentNode.insertAdjacentElement('afterend', leg);
+  // Globus per ratolí, teclat i tacte; no hi ha cap amplada fixa ni scroll horitzontal.
+  let tooltip = document.getElementById('caza-iaa-tooltip');
+  if (!tooltip) {
+    tooltip = document.createElement('div');
+    tooltip.id = 'caza-iaa-tooltip';
+    tooltip.hidden = true;
+    document.body.appendChild(tooltip);
   }
-
-  window._chartCazaIAA = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Alcarràs', 'La caza'],
-      datasets: [
-        {
-          label: 'Sala',
-          data: [403195, 341377],
-          backgroundColor: '#1E4080', hoverBackgroundColor: '#1E4080',
-          borderWidth: 0,
-        },
-        {
-          label: 'TV pública (TV3 + La 2 TVE)',
-          data: [530000, 0],
-          backgroundColor: '#9B2335', hoverBackgroundColor: '#9B2335',
-          borderWidth: 0,
-        },
-        {
-          label: pip3T('TV pagament (estimació)','TV de pago (estimación)'),
-          data: [150000, 0],
-          backgroundColor: hatch('#d4a017'),
-          borderWidth: 0,
-        },
-        {
-          label: pip3T('Plataformes (estimació)','Plataformas (estimación)'),
-          data: [227000, 0],
-          backgroundColor: hatch('#6B3FA0'),
-          borderWidth: 0,
-        },
-      ],
-    },
-    options: {
-      indexAxis: 'y',
-      responsive: true,
-      maintainAspectRatio: false,
-      animation: false,
-      datasets: { bar: { barThickness: 25, maxBarThickness: 25 } },
-      layout: { padding: { right: 160 } },
-      plugins: {
-        legend: {
-          display: false,
-        },
-        tooltip: {
-          backgroundColor: 'rgba(45,45,45,0.95)',
-          cornerRadius: 6,
-          padding: 8,
-          titleFont: { size: 12, weight: '600', family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
-          bodyFont: { size: 12, family: '"Inter", -apple-system, "SF Pro Text", sans-serif' },
-          callbacks: {
-            label: ctx => {
-              const v = ctx.parsed.x;
-              if (v === 0) return null;
-              return `${ctx.dataset.label}: ~${(v/1000).toFixed(0)}k esp.`;
-            },
-          },
-        },
-      },
-      scales: {
-        x: {
-          stacked: true,
-          ticks: {
-            callback: v => v >= 1000000 ? (v/1000000).toFixed(1)+'M' : (v/1000).toFixed(0)+'k',
-            color: '#363737', font: { size: 11 },
-          },
-          grid: { color: '#eee' },
-          title: { display: true, text: pip3T('Espectadors','Espectadores'), font: { size: 12 } },
-        },
-        y: {
-          stacked: true,
-          ticks: {
-            color: '#363737',
-            font: { size: 11, style: 'italic' },
-          },
-          grid: { display: false },
-        },
-      },
-    },
-    plugins: [pluginTotals],
+  const position = (rect) => {
+    const w = Math.min(260, window.innerWidth - 16);
+    const x = Math.max(8, Math.min(rect.left + rect.width / 2 - w / 2, window.innerWidth - w - 8));
+    const y = Math.max(8, rect.top - tooltip.offsetHeight - 10);
+    tooltip.style.left = x + 'px';
+    tooltip.style.top = y + 'px';
+  };
+  const show = el => {
+    tooltip.textContent = el.dataset.film + ' · ' + el.dataset.label + ': ~' + el.dataset.value + ' ' + pip3T('espectadors','espectadores');
+    tooltip.hidden = false;
+    position(el.getBoundingClientRect());
+  };
+  const hide = () => { tooltip.hidden = true; };
+  root.querySelectorAll('.cia-segment').forEach(el => {
+    el.addEventListener('mouseenter', () => show(el));
+    el.addEventListener('mouseleave', hide);
+    el.addEventListener('focus', () => show(el));
+    el.addEventListener('blur', hide);
+    el.addEventListener('click', () => { if (tooltip.hidden) show(el); else hide(); });
   });
-
+  document.addEventListener('pointerdown', e => {
+    if (!root.contains(e.target)) hide();
+  });
 };
 
 /* ============================================================
