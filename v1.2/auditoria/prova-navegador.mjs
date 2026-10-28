@@ -94,8 +94,22 @@ try {
     console.log('OK Part III: mercat i població Espanya-França, tres vistes');
     await page.close();
   }
+  {
+    const page = await newPage('part-i.html#mercat', 390, 844);
+    await checkChart(page, '#seccio-mercat-grafic canvas', 435.2, 66.9);
+    await page.locator('#seccio-mercat-grafic').screenshot({ path: 'qa-captures/09-mercat-mobil.png' });
+    console.log('OK vista mòbil: gràfic de mercat Part I');
+    await page.close();
+  }
+  {
+    const page = await newPage('part-iii.html#bunuel-mercat', 390, 844);
+    await checkChart(page, '#grafic-mercats-coda', 435.2, 66.9);
+    await page.locator('#grafic-mercats-coda-bloc').screenshot({ path: 'qa-captures/10-comparativa-mercat-mobil.png' });
+    console.log('OK vista mòbil: comparativa Espanya-França');
+    await page.close();
+  }
   assert.deepEqual(errors, [], 'cap error JavaScript no capturat');
-  console.log('VALIDACIÓ DE NAVEGADOR CORRECTA: 5 pàgines/estats, 9 captures, cap excepció.');
+  console.log('VALIDACIÓ DE NAVEGADOR CORRECTA: 7 pàgines/estats, 11 captures, cap excepció.');
 } finally {
   await browser.close();
 }
