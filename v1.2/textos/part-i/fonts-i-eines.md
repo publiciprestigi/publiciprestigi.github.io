@@ -8,11 +8,11 @@ També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cin
 
 Les coproduccions s'inclouen com a espanyoles quan compleixen els requisits oficials de participació establerts per l'ICAA, independentment de la nacionalitat del director. Per això hi apareixen títols de Sergio Leone, Roman Polanski o Woody Allen, malgrat que la seva vinculació amb la cinematografia espanyola pugui ser limitada.
 
-Per calcular els indicadors, s'utilitzen també les sèries anuals del mercat cinematogràfic del Ministeri de Cultura i de població de l'INE, complementades amb estimacions i reconstruccions històriques per als primers anys.
+Per calcular els indicadors, l'estudi utilitza les sèries anuals de mercat del Ministeri de Cultura i de població de l'INE, complementades amb estimacions i reconstruccions històriques per als primers anys. <sup>[2]</sup>
 
 ## El problema dels espectadors absoluts
 
-Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Entre 1965 i 1969, es venien entre 10,9 i 13,6 entrades anuals per habitant, en un país d'uns 32–33 milions de residents. El 2025, la xifra és d'1,36, amb prop de 49,1 milions d'habitants i Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup>[2]</sup>
+Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el rànquing pot ser enganyós. Entre 1965 i 1969, es venien entre 10,9 i 13,6 entrades anuals per habitant, en un país d'uns 32–33 milions de residents. El 2025, la xifra és d'1,36, amb prop de 49,1 milions d'habitants i Netflix, YouTube i el mòbil competint per cada minut d'atenció. <sup>[3]</sup>
 
 *La ciudad no es para mí* (1966) va aconseguir 4,3 milions d'espectadors en un mercat de 403,1 milions d'entrades (una quota de referència de l'1,07%). *Mujeres al borde de un ataque de nervios* (1988) va fer 3,3 milions en un mercat de 87,6 milions (una quota de referència del 3,82%). En espectadors absoluts guanya Pedro Lazaga. En quota de mercat, Almodóvar més que triplica la seva marca. Una mateixa comparació ofereix, doncs, lectures molt diferents segons la mètrica que utilitzem.
 
@@ -29,6 +29,4 @@ A les taules de l'estudi trobarem quatre mesures que ofereixen perspectives dife
 
 L'IIC és un indicador propi de l'estudi que situa els espectadors en relació amb el mercat cinematogràfic i la població de cada època. És una eina d'aproximació per facilitar les comparacions històriques, no un model oficial ni científicament validat.
 
-Les fonts estadístiques, les estimacions i les reconstruccions històriques emprades en aquests càlculs es detallen a la nota <sup>[3]</sup>.
-
-Els textos de «Context» són síntesis interpretatives de l'autor, elaborades a partir de la historiografia i la crítica cinematogràfiques, i no formen part de les dades estadístiques de l'estudi.
+Els textos de «Context» són síntesis interpretatives de l'autor, elaborades a partir de la historiografia del cinema espanyol (com *Historia del cine español*, de Romà Gubern et al., i *Del azul al verde*, de Domènec Font) i de la crítica cinematogràfica.
