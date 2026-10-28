@@ -1010,7 +1010,10 @@ window.PiP_graficCazaIAA = function() {
     tooltip.style.top = y + 'px';
   };
   const show = el => {
-    tooltip.textContent = el.dataset.film + ' · ' + el.dataset.label + ': ~' + el.dataset.value + ' ' + pip3T('espectadors','espectadores');
+    tooltip.replaceChildren();
+    const film = document.createElement('em');
+    film.textContent = el.dataset.film;
+    tooltip.append(film, document.createTextNode(' · ' + el.dataset.label + ': ~' + el.dataset.value + ' ' + pip3T('espectadors','espectadores')));
     tooltip.hidden = false;
     position(el.getBoundingClientRect());
   };
