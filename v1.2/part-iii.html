@@ -348,9 +348,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)"></span>TV pagament (estimació)</span>
 <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;display:inline-block;border-radius:2px;background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)"></span>Plataformes (estimació)</span>
 </div>
-<div class="pip-caza-viewport"><div class="grafic-wrap" style="height:270px;position:relative;margin:0;border-top:none;border-bottom:none">
-<canvas id="grafic-caza-iaa"></canvas>
-</div></div>
+<div id="grafic-caza-iaa" class="caza-iaa-comparativa" aria-label="Comparativa de l’IAA estimat de La caza i Alcarràs"></div>
 <p style="font-size:12px;line-height:1.45;color:#888;text-align:center;margin:7px auto 0;max-width:900px;padding:0 12px">
             Fonts: ICAA (espectadors a sala); estimacions pròpies (televisió pública, televisió de pagament i plataformes digitals).
           </p>
@@ -454,12 +452,25 @@ body.pip-en-portada .nav-seccions { display: none; }
 
 <style id="pip-caza-mobil-responsive">
 @media(max-width:760px){
-#grafic-caza-iaa-bloc .pip-caza-viewport{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
-#grafic-caza-iaa-bloc .pip-caza-viewport.pip-caza-pendent{-webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent);mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 24px),transparent)}
-#grafic-caza-iaa-bloc .grafic-wrap{height:190px!important;min-width:760px;max-width:none!important}
-#grafic-caza-iaa-bloc .pip-caza-viewport{margin-top:-18px}
 #grafic-caza-iaa-bloc #caza-iaa-leg{gap:7px 12px!important;margin-bottom:4px!important;line-height:1.35}
 #grafic-caza-iaa-bloc #caza-iaa-tit{margin-bottom:10px!important}
+#grafic-caza-iaa-bloc .caza-iaa-comparativa{width:90%;margin:18px auto 28px;font-family:'Inter',-apple-system,'SF Pro Text',sans-serif;color:#363737}
+#grafic-caza-iaa-bloc .cia-row+.cia-row{margin-top:24px}
+#grafic-caza-iaa-bloc .cia-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px;font-size:13px;line-height:1.45}
+#grafic-caza-iaa-bloc .cia-heading strong{font-weight:600}
+#grafic-caza-iaa-bloc .cia-value{font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+#grafic-caza-iaa-bloc .cia-value small{font-size:11px;font-weight:400;color:#888}
+#grafic-caza-iaa-bloc .cia-track{height:25px;width:100%;background:#f3f3f3;position:relative}
+#grafic-caza-iaa-bloc .cia-stack{height:25px;display:flex;overflow:hidden}
+#grafic-caza-iaa-bloc .cia-segment{height:25px;display:block;min-width:0;cursor:default;outline-offset:2px}
+#grafic-caza-iaa-bloc .cia-segment:focus-visible{outline:2px solid #363737;position:relative;z-index:1}
+#grafic-caza-iaa-bloc .cia-sala{background:#1E4080}
+#grafic-caza-iaa-bloc .cia-publica{background:#9B2335}
+#grafic-caza-iaa-bloc .cia-pagament{background:repeating-linear-gradient(-45deg,#d4a017,#d4a017 2px,#f5e8c0 2px,#f5e8c0 5px)}
+#grafic-caza-iaa-bloc .cia-plataformes{background:repeating-linear-gradient(-45deg,#6B3FA0,#6B3FA0 2px,#e8dff5 2px,#e8dff5 5px)}
+#caza-iaa-tooltip{position:fixed;z-index:9999;pointer-events:none;max-width:260px;background:rgba(45,45,45,.96);color:#fff;padding:8px 11px;border-radius:3px;font:12px/1.5 'Inter',-apple-system,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+#caza-iaa-tooltip[hidden]{display:none}
+@media(max-width:540px){#grafic-caza-iaa-bloc .caza-iaa-comparativa{margin-top:15px;margin-bottom:23px}#grafic-caza-iaa-bloc .cia-heading{font-size:12px}#grafic-caza-iaa-bloc .cia-value small{font-size:10px}#grafic-caza-iaa-bloc .cia-row+.cia-row{margin-top:22px}}
 }
 </style>
 <div id="grafic-bunuel-bloc" style="border-top:1px solid #e0e0e0;border-bottom:1px solid #e0e0e0;padding:20px 0;margin:20px 0;overflow:hidden">
