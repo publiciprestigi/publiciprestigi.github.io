@@ -4,7 +4,7 @@ Per analitzar el públic a les sales, l'estudi parteix de les entrades venudes, 
 
 El Top 100 parteix del rànquing oficial de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, el darrer anuari disponible en el moment de preparar aquesta edició. El rànquing s'ha actualitzat amb les pel·lícules estrenades el 2024 i el 2025 que han aconseguit entrar-hi. Concretament, *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025), de Santiago Segura, han substituït *Una señora estupenda* (1967), d'Eugenio Martín, i *Digan lo que digan* (1968), de Mario Camus.
 
-També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> de l'ICAA per incorporar altres films que apareixen en gris a les taules de cada dècada i ajuden a contextualitzar-ho millor.
+També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> de l'ICAA per incorporar altres films que apareixen en gris a les taules de cada dècada amb l'objetiu d'ajudar a contextualitzar millor cada època.
 
 
 ## Abast cronològic
