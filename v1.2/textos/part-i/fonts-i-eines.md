@@ -4,11 +4,12 @@ Per analitzar el públic a les sales, l'estudi parteix de les entrades venudes, 
 
 El Top 100 parteix del rànquing oficial de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, el darrer anuari disponible en el moment de preparar aquesta edició. El rànquing s'ha actualitzat amb les pel·lícules estrenades el 2024 i el 2025 que han aconseguit entrar-hi. Concretament, *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025), de Santiago Segura, han substituït *Una señora estupenda* (1967), d'Eugenio Martín, i *Digan lo que digan* (1968), de Mario Camus.
 
-També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> de l'ICAA per incorporar altres films que apareixen en gris a les taules de cada dècada i ajuden a contextualitzar les èpoques amb poca representació al Top 100.
+També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> de l'ICAA per incorporar altres films que apareixen en gris a les taules de cada dècada i ajuden a contextualitzar-ho millor.
+
 
 ## Abast cronològic
 
-El 1965 marca el punt de partida de l'estudi perquè és a partir d'aquest any que disposem de registres d'espectadors per pel·lícula prou complets per establir comparacions històriques sòlides. Les dades anteriors existeixen, però són més fragmentàries i no ofereixen la mateixa continuïtat. Aquest és el marc cronològic general tant de la Part I, dedicada al públic a les sales, com de la Part II, dedicada als festivals i premis. <sup>[1]</sup>
+El 1965 marca el punt de partida de l'estudi perquè és a partir d'aquest any que disposem de registres d'espectadors per pel·lícula prou complets per establir comparacions històriques sòlides. Les dades anteriors existeixen, però són més fragmentàries i no ofereixen la mateixa continuïtat. <sup>[1]</sup>
 
 Per situar les xifres d'espectadors en el seu context, utilitzem també els totals anuals d'entrades venudes a Espanya i les dades de població. Les fonts principals són el Ministeri de Cultura i l'INE, complementades amb estimacions i reconstruccions històriques per als primers anys. <sup>[2]</sup>
 
