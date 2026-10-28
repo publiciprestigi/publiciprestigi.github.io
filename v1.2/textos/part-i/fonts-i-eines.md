@@ -11,7 +11,7 @@ També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cin
 
 El 1965 marca el punt de partida de l'estudi perquè és a partir d'aquest any que disposem de registres d'espectadors per pel·lícula prou complets per establir comparacions històriques sòlides. Les dades anteriors existeixen, però són més fragmentàries i no ofereixen la mateixa continuïtat. <sup>[1]</sup>
 
-Per situar les xifres d'espectadors en el seu context, utilitzem també els totals anuals d'entrades venudes a Espanya i les dades de població. Les fonts principals són el Ministeri de Cultura i l'INE, complementades amb estimacions i reconstruccions històriques per als primers anys. <sup>[2]</sup>
+Per situar les xifres d'espectadors en el seu context, utilitzem també els totals anuals d'entrades venudes i les dades de població. Les fonts principals són el Ministeri de Cultura i l'INE (Instituto Nacional de Estadística), complementades amb estimacions i reconstruccions històriques per als primers anys. <sup>[2]</sup>
 
 ## Coproduccions i directors estrangers
 
