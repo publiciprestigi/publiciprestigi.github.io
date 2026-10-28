@@ -42,3 +42,11 @@ A més d'aquesta comprovació a través del connector GitHub, s'ha incorporat `a
 5. La confirmació primària de la dada de 1965 a la Filmoteca continua separada i ajornada fins després de la publicació, segons la decisió editorial.
 
 **No s'han fusionat, publicat ni desplegat els canvis d'aquesta branca.**
+## Comprovació complementària del 28-10-2026
+
+- Verificada la branca `auditoria-mercat-iic-2026` respecte de `main`: 8 commits i 29 fitxers diferents abans d'aquesta anotació; cap desfasament amb `main`.
+- Reexecutat el codi del validador sobre els **fitxers íntegres recuperats de GitHub**, mitjançant lectura virtual de fitxers i funcions d'asserts equivalents: **3.254 assercions, 0 errors**. Aquesta prova no substitueix l'execució nativa de Node ni la prova de navegador.
+- Revisió de literals antics de mercat i IIC als HTML de la branca i als JS principals, i als textos catalans de Parts I i III: cap referència desfasada als casos buscats.
+- **Diferència francesa prèvia, no modificada:** el gràfic històric de 2025 conserva 156,79M entrades franceses, mentre el bloc de quota per nacionalitat dona un mercat de 156,2M. Les sèries franceses no s'han recalculat ni alterat; la comprovació de si són publicacions diferents o una discrepància prèvia queda fora d'aquesta auditoria quantitativa espanyola.
+- Els estats històrics «pendent» de [l'inventari](inventari-canvis-per-fitxer.md) i [el mapa d'impacte](mapa-impacte-mercat.md) es conserven com a documentació inicial, amb avís de no confondre'ls amb el progrés de la branca.
+- S'afegeix un flux de GitHub Actions limitat a aquesta branca per executar `node v1.2/auditoria/valida-dades.mjs` i comprovar la sintaxi dels principals mòduls JS. **No s'ha observat encara el resultat d'aquest flux en crear aquesta acta.**

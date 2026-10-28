@@ -1,0 +1,30 @@
+name: Validació mercat i IIC (branca de proves)
+on:
+  push:
+    branches:
+      - auditoria-mercat-iic-2026
+    paths:
+      - 'v1.2/**'
+      - '.github/workflows/validacio-mercat-iic.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validador:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Recuperar branca
+        uses: actions/checkout@v4
+      - name: Instal·lar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Executar validador d'auditoria
+        run: node v1.2/auditoria/valida-dades.mjs
+      - name: Comprovar sintaxi JavaScript
+        run: |
+          node --check v1.2/js/part-i.js
+          node --check v1.2/js/part-ii.js
+          node --check v1.2/js/part-iii.js
+          node --check v1.2/js/mercat.js
+          node --check v1.2/js/decades-resum.js
