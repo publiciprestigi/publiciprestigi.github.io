@@ -41,7 +41,13 @@ for(const item of pages) {
     tableCount:tables.length,readyTables,visible:getComputedStyle(el).display!=='none',width:el.scrollWidth};
   });
   if(state.textCount>0 && state.rendered===0)errors.push(item.file+'#'+id+': text Markdown sense renderitzar');
-  if(state.tableCount>0 && state.readyTables.length===0 && !['panorama','mapa-canon'].includes(id))errors.push(item.file+'#'+id+': taula sense files');
+  if(state.tableCount>0 && state.readyTables.length===0 && !['panorama','mapa-canon'].includes(id)) {
+   const ready=await page.waitForFunction(id=>{
+    const el=document.getElementById('seccio-'+id);
+    return !!el && [...el.querySelectorAll('[id^="taula-"]')].some(t=>t.querySelector('tbody tr'));
+   },id,{timeout:8000}).then(()=>true).catch(()=>false);
+   if(!ready) errors.push(item.file+'#'+id+': taula sense files després de 8s');
+  }
   records.push({page:item.file,section:id,...state});
  }
  if(item.file==='part-ii.html'){
