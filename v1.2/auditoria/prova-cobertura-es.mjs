@@ -47,7 +47,7 @@ for(const item of pages) {
  if(item.file==='part-ii.html'){
   await page.locator('.sidebar-link[data-seccio="panorama"]').first().evaluate(el=>el.click());
   await page.waitForTimeout(700);
-  assert.ok((await page.locator('#pip-panorama-content').textContent()).includes('2,01M'),'llindar del panorama ES');
+  assert.ok((await page.locator('#pip-panorama-espectadors').textContent()).includes('2,01M'),'llindar del panorama ES');
  }
  if(item.file==='part-iii.html'){
   await page.locator('.sidebar-link[data-seccio="generacions"]').first().evaluate(el=>el.click());
