@@ -1019,7 +1019,7 @@ function oscarMarcaPremi(text) {
 }
 
 function oscarReconeixement(f) {
-  return oscarMarcaPremi(f.reconeixement || '—');
+  return oscarMarcaPremi(PIP_ES ? (f.reconeixement_es || f.reconeixement) : f.reconeixement);
 }
 
 async function construirOscar() {
@@ -1038,7 +1038,7 @@ async function construirOscar() {
 
     const files = films.map((f, i) => {
       const top100 = f.top100_pos ? `#${f.top100_pos}` : '—';
-      const decada = f.decada || '—';
+      const decada = (PIP_ES ? (f.decada_es || f.decada) : f.decada) || '—';
       return `<tr>
         <td class="col-subtil col-pos">${i + 1}</td>
         <td>${titolFilm(f)}</td>
@@ -1072,7 +1072,7 @@ async function construirOscar() {
       <td class="col-subtil col-pos">${i + 1}</td>
       <td>${f.professional}</td>
       <td><strong><em>${f.pellicula}</em></strong> <span class="film-any">(${f.any})</span></td>
-      <td>${oscarMarcaPremi(f.reconeixement)}</td>
+      <td>${oscarMarcaPremi(PIP_ES ? (f.reconeixement_es || f.reconeixement) : f.reconeixement)}</td>
     </tr>`).join('');
 
     contProf.innerHTML = `
@@ -1125,12 +1125,12 @@ function efaMarcaPremi(text) {
 
 function efaFilaFilm(f, i) {
   const top100 = f.top100_pos ? `#${f.top100_pos}` : '—';
-  const decada = f.decada || '—';
+  const decada = (PIP_ES ? (f.decada_es || f.decada) : f.decada) || '—';
   return `<tr>
     <td class="col-subtil col-pos">${i + 1}</td>
     <td>${titolFilm(f)}</td>
     <td class="col-subtil">${f.director}</td>
-    <td class="col-premi">${efaMarcaPremi(f.reconeixement)}</td>
+    <td class="col-premi">${efaMarcaPremi(PIP_ES ? (f.reconeixement_es || f.reconeixement) : f.reconeixement)}</td>
     <td class="col-center col-subtil">${top100}</td>
     <td class="col-subtil col-decada">${decada}</td>
     <td class="col-num col-subtil">${fmt(f.espectadors)}</td>
@@ -1142,7 +1142,7 @@ function efaFilaContextFilm(f, i) {
     <td class="col-subtil col-pos">${i + 1}</td>
     <td>${titolFilm(f)}</td>
     <td class="col-subtil">${f.director}</td>
-    <td class="col-premi">${efaMarcaPremi(f.reconeixement)}</td>
+    <td class="col-premi">${efaMarcaPremi(PIP_ES ? (f.reconeixement_es || f.reconeixement) : f.reconeixement)}</td>
   </tr>`;
 }
 
@@ -1151,7 +1151,7 @@ function efaFilaProfessional(f, i) {
     <td class="col-subtil col-pos">${i + 1}</td>
     <td>${f.professional}</td>
     <td><strong><em>${f.pellicula}</em></strong> <span class="film-any">(${f.any})</span></td>
-    <td>${efaMarcaPremi(f.reconeixement)}</td>
+    <td>${efaMarcaPremi(PIP_ES ? (f.reconeixement_es || f.reconeixement) : f.reconeixement)}</td>
   </tr>`;
 }
 
@@ -1232,7 +1232,7 @@ async function construirEfa() {
     const trajRows = trajectory.map((f, i) => `<tr>
       <td class="col-subtil col-pos">${i + 1}</td>
       <td>${f.professional}</td>
-      <td>${efaMarcaPremi(f.reconeixement)}</td>
+      <td>${efaMarcaPremi(PIP_ES ? (f.reconeixement_es || f.reconeixement) : f.reconeixement)}</td>
     </tr>`).join('');
 
     contTraj.innerHTML = efaBlocDesplegable(
