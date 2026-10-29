@@ -1,257 +1,395 @@
 <!DOCTYPE html>
-<html lang="es" data-base="../">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="description" content="I — Público. Top 100 de películas españolas con más espectadores (1965–2025).">
-  <link rel="canonical" href="https://publiciprestigi.com/es/part-i.html">
-  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/part-i.html">
-  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/part-i.html">
-  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/part-i.html">
-  <title>I — Público · Públic i Prestigi</title>
-  <link rel="stylesheet" href="../css/estil.css">
-  <link rel="stylesheet" href="../css/textos-extra.css">
-  <link rel="stylesheet" href="../css/capcalera-subscripcio.css?v=20261014b">
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <script>
+<html data-base="../" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="I — Público. Top 100 películas españolas con más espectadores (1965–2025)." name="description"/>
+<link href="https://publiciprestigi.com/es/part-i.html" rel="canonical"/>
+<link href="https://publiciprestigi.com/part-i.html" hreflang="ca" rel="alternate"/>
+<link href="https://publiciprestigi.com/es/part-i.html" hreflang="es" rel="alternate"/>
+<link href="https://publiciprestigi.com/part-i.html" hreflang="x-default" rel="alternate"/>
+<title>I — Público · Públic i Prestigi</title>
+<link href="../css/estil.css" rel="stylesheet"/>
+<link href="../css/textos-extra.css" rel="stylesheet"/>
+<link href="../css/capcalera-subscripcio.css?v=20261014b" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
     window.pipPath = function (path) {
       var base = document.documentElement.getAttribute('data-base') || '';
       return base + path;
     };
   </script>
-  <!-- Borrador completo en castellano para revisión. -->
+<style id="pip-entrades-prova">
+/* Entrada editorial: reutilitza la tipografia ordinària dels textos Markdown. */
+.pip-entrada .pip-entrada-article { max-width: 760px; margin: 9px 0 0; }
+.pip-entrada .pip-entrada-article p { margin: 0 0 1.4em; }
+.pip-entrada .pip-entrada-article p:last-child { margin-bottom: 0; }
+body.pip-en-portada .nav-seccions { display: none; }
+@media(max-width:700px) { .pip-entrada .pip-entrada-article { margin: 9px 0 0; } }
+/* Accés de continuació amb el mateix botó de navegació interna. */
+.pip-entrada-cta { max-width:760px; margin:26px 0 12px; display:flex; justify-content:flex-start; }
+.pip-entrada-cta .nav-seccio-btn { cursor:pointer; }
+</style>
+<style id="pip-entrada-preguntes-style">
+/* Preguntes inicials en gris, mateix cos i tipografia que el text habitual. */
+.pip-entrada .pip-entrada-article .pip-entrada-preguntes { color:#555; font-style:normal; font-weight:400; }
+</style><style id="pip-rankcomp-estils">
+/* Comparativa IIC — peça única, sense marcs ni separadors propis. */
+.pip-rankcomp{margin:42px 0 12px;padding:0;border:0;color:inherit}
+.pip-rankcomp-titol{font-size:1.2rem;font-weight:600;line-height:1.35;margin:0 0 13px}
+.pip-rankcomp-intro{font-size:1rem;line-height:1.6;margin:0 0 24px;max-width:800px;font-style:normal}
+.pip-rankcomp-titol h3{font-size:inherit;font-weight:inherit;line-height:inherit;margin:0}
+.pip-rankcomp-intro p,.pip-rankcomp-grafic-titol p,.pip-rankcomp-nota p,.pip-rankcomp-selector-text p{margin:0;font-size:inherit;line-height:inherit;font-style:inherit;font-weight:inherit;color:inherit}
+.pip-rankcomp-selector-text{display:inline}
+.pip-rankcomp-figura{max-width:790px;margin:0 0 22px;padding:28px 0;border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5}
+.pip-rankcomp-grafic-titol{font-size:.82em;font-weight:700;line-height:1.4;text-align:center;color:#363737;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif;margin:0 auto 24px;max-width:790px;padding:0;border:0}
+.pip-rankcomp-exemples{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;max-width:790px;margin:0 auto 22px}
+.pip-rankcomp-cas-btn{appearance:none;border:1px solid #d5d5d5;background:#fff;color:#666;border-radius:999px;padding:7px 13px;font:500 11px/1 "Inter",-apple-system,"SF Pro Text",sans-serif;cursor:pointer}
+.pip-rankcomp-cas-btn.actiu,.pip-rankcomp-cas-btn[aria-pressed="true"]{background:#363737;color:#fff;border-color:#363737}
+.pip-rankcomp-grafic{max-width:790px;margin:0 auto 14px}
+.pip-rankcomp-grafic svg{display:block;width:100%;height:auto}
+.pip-rankcomp-film{text-align:center;font-size:.82rem;font-family:"Inter",-apple-system,"SF Pro Text",sans-serif;font-weight:400;line-height:1.4;margin:0 0 7px}
+.pip-rankcomp-film strong{font-weight:600}.pip-rankcomp-film span{font-size:.85em;color:#777;font-weight:400}
+.pip-rankcomp-explora{max-width:790px;margin:6px auto 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px}
+.pip-rankcomp-label{font-size:.82rem;color:#555}
+.pip-rankcomp-select{min-width:240px;max-width:360px;flex:0 1 360px;border:1px solid #b7bfc7;border-radius:4px;padding:6px 9px;background:transparent;color:inherit;font:inherit;font-size:.82rem;line-height:1.25}
+.pip-rankcomp-nota{max-width:790px;margin:12px auto 0;text-align:center;font-size:14px;line-height:1.45;font-style:italic;color:#666}
+@media(max-width:640px){.pip-rankcomp{margin-top:31px}.pip-rankcomp-grafic{overflow-x:auto;-webkit-overflow-scrolling:touch}.pip-rankcomp-grafic svg{min-width:650px}.pip-rankcomp-select{flex-basis:100%;max-width:100%}}
+
+</style>
 </head>
 <body class="amb-sidebar part-i">
+<!-- ── Capçalera CA ── -->
+<header class="capcalera capcalera-v2">
+<div class="capcalera-interior">
+<div class="capcalera-esquerra">
+<button aria-label="Menú" class="btn-hamburguesa" onclick="toggleDrawer()">
+<span></span><span></span><span></span>
+</button>
+<a class="capcalera-versio" href="versions.html" id="versio-label">Versión 1.2 (en preparación)</a>
+</div>
+<a class="capcalera-logo" href="/v1.2/es/">Públic i Prestigi</a>
+<div class="capcalera-controls">
+<span aria-label="Buscar" class="capcalera-lupa" onclick="toggleBuscador()" role="button" tabindex="0" title="Buscar">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20">
+<circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line>
+</svg>
+</span>
+<button class="capcalera-subscripcio" onclick="obreSubscripcio()" type="button">Suscribirse</button>
+<div class="capcalera-idioma">
+<a aria-current="page" class="actiu" href="#" lang="ca">CA</a>
+<a class="lang-es" href="part-i.html" hreflang="es" lang="es">ES</a>
+</div>
+</div>
+</div>
+</header>
+<nav class="navegacio">
+<div class="navegacio-interior">
+<a class="nav-link" href="/v1.2/es/">Inicio</a>
+<a class="nav-link actiu" href="part-i.html">I — Público</a>
+<a class="nav-link" href="part-ii.html">II — Prestigi</a>
+<a class="nav-link" href="part-iii.html">III — Análisis</a>
+<a class="nav-link" href="sobre.html">Sobre el proyecto</a>
+</div>
+</nav>
+<div class="layout-sidebar">
+<aside class="sidebar">
+<div class="sidebar-spacer"></div>
+<div class="sidebar-grup">
+<div class="sidebar-grup-titol">Context</div>
+<a class="sidebar-link" data-seccio="intro" href="#">Fuentes y herramientas</a>
+<a class="sidebar-link" data-seccio="mercat" href="#">Mercado y población</a>
+</div>
+<div class="sidebar-grup">
+<div class="sidebar-grup-titol">Top 100</div>
+<a class="sidebar-link" data-seccio="decades" href="#">Resumen por década</a>
+<a class="sidebar-link" data-seccio="60s" href="#">60s</a>
+<a class="sidebar-link" data-seccio="70s" href="#">70s</a>
+<a class="sidebar-link" data-seccio="80s" href="#">80s</a>
+<a class="sidebar-link" data-seccio="90s" href="#">90s</a>
+<a class="sidebar-link" data-seccio="2000s" href="#">2000s</a>
+<a class="sidebar-link" data-seccio="2010s" href="#">2010s</a>
+<a class="sidebar-link" data-seccio="2020s" href="#">2020s</a>
+</div>
+<div class="sidebar-grup">
+<div class="sidebar-grup-titol">Rankings</div>
+<a class="sidebar-link" data-seccio="espectadors" href="#">Por espectadores</a>
+<a class="sidebar-link" data-seccio="penetracio" href="#">Por penetración</a>
+<a class="sidebar-link" data-seccio="quota" href="#">Por cuota de mercado</a>
+<a class="sidebar-link" data-seccio="iic" href="#">Per IIC</a>
+<a class="sidebar-link" data-seccio="directors" href="#">Por directores</a>
+</div>
+</aside>
+<main class="contingut-sidebar">
+<div class="titol-sticky">
+<p class="titol-sticky-sup" id="titol-sup"></p>
+<h1 id="titol-principal"></h1>
+</div>
+<!-- MODEL A: només text editorial -->
+<!-- Nova pàgina d’entrada editorial (prova) -->
+<section class="seccio-contingut pip-entrada" id="seccio-portada">
+<div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">¿Cómo han cambiado el mercado y los públicos? ¿Qué revelan las distintas maneras de medir el éxito comercial de una película? ¿Qué ocurre cuando las salas ya no explican todo el impacto de una película?</p><p class="pip-entrada-final">Las cifras de espectadores no son solo una magnitud económica, también ofrecen una manera de leer la historia cultural y social de un país.</p></div>
+<div class="pip-entrada-cta">
+<button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button"><span class="pip-nav-part">PART I</span><span class="pip-nav-titol">Empezar →</span></button>
+</div>
+</section>
+<div class="seccio-contingut" id="seccio-intro">
+<div class="contingut-text">
+<div class="text-md" data-text="part-i/fonts-i-eines"></div>
+</div>
+</div>
+<div class="seccio-contingut" id="seccio-mercat">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/mercat-poblacio"></div>
+<div id="seccio-mercat-grafic"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-i/mercat-poblacio"></div>
+</div>
+<div class="seccio-contingut" id="seccio-decades">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decades-intro"></div>
+<div id="taula-decades-resum"></div>
+<div class="text-md text-md-intermedi" data-bloc="intermedi" data-text="part-i/decades-intro"></div>
+<div id="grafic-decades" style="margin:16px 0 24px 0"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-i/decades-intro"></div>
+</div>
+<!-- Dècades: div exterior = navegació, div interior "taula-XXs" = on el JS escriu la taula -->
+<div class="seccio-contingut" id="seccio-60s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-60s"></div>
+<div id="taula-60s"></div>
+</div>
+<!-- MODEL B: intro Markdown + taula del JS -->
+<div class="seccio-contingut" id="seccio-70s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-70s"></div>
+<div id="taula-70s"></div>
+</div>
+<div class="seccio-contingut" id="seccio-80s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-80s"></div>
+<div id="taula-80s"></div>
+</div>
+<div class="seccio-contingut" id="seccio-90s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-90s"></div>
+<div id="taula-90s"></div>
+</div>
+<div class="seccio-contingut" id="seccio-2000s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-2000s"></div>
+<div id="taula-2000s"></div>
+</div>
+<div class="seccio-contingut" id="seccio-2010s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-2010s"></div>
+<div id="taula-2010s"></div>
+</div>
+<div class="seccio-contingut" id="seccio-2020s">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/decada-2020s"></div>
+<div id="taula-2020s"></div>
+</div>
+<!-- MODEL C: intro Markdown + taula del JS + comentari Markdown -->
+<div class="seccio-contingut" id="seccio-espectadors">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/ranking-espectadors"></div>
+<div id="taula-espectadors"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-i/ranking-espectadors"></div>
+</div>
+<div class="seccio-contingut" id="seccio-penetracio">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/ranking-penetracio"></div>
+<div id="taula-penetracio"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-i/ranking-penetracio"></div>
+</div>
+<div class="seccio-contingut" id="seccio-quota">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/ranking-quota"></div>
+<div id="taula-quota"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-i/ranking-quota"></div>
+</div>
+<div class="seccio-contingut" id="seccio-iic">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/ranking-iic"></div>
+<div id="taula-iic"></div>
+<section id="pip-comparativa-rankings" class="pip-rankcomp" aria-label="Comparació dels quatre rànquings"></section>
+<div class="text-md text-md-comentari" data-bloc="comentari" data-text="part-i/ranking-iic"></div>
+</div>
+<div class="seccio-contingut" id="seccio-directors">
+<div class="text-md text-md-intro" data-bloc="intro" data-text="part-i/ranking-directors"></div>
+<div id="taula-directors-r1"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-r1" data-text="part-i/ranking-directors"></div>
+<div id="taula-directors-r2"></div>
+<div class="text-md text-md-comentari" data-bloc="comentari-r2" data-text="part-i/ranking-directors"></div>
+</div>
+<div class="nav-seccions">
+<button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
+<button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
+<button class="pip-nav-pujar" type="button" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑ Volver arriba</button>
+</div>
+</main>
+</div>
+<footer class="peu">
+<div class="peu-interior">
+<span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
+<span><a href="https://publiciprestigi.substack.com" rel="noopener" target="_blank">publiciprestigi.substack.com</a></span>
+</div>
+</footer>
+<div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+<div class="buscador-interior">
+<input autocomplete="off" id="buscador-input" placeholder="Busca en el estudio..." type="text"/>
+<button class="buscador-tancar" onclick="toggleBuscador()">✕</button>
+<div id="buscador-resultats"></div>
+</div>
+</div>
+<!-- ── Modal de subscripció ── -->
+<div class="subscripcio-overlay" hidden="" id="subscripcio-modal">
+<div aria-labelledby="subscripcio-titol" aria-modal="true" class="subscripcio-modal" role="dialog">
+<button aria-label="Cerrar" class="subscripcio-tancar" onclick="tancaSubscripcio()" type="button">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24">
+<path d="M6 6l12 12M18 6L6 18"></path>
+</svg>
+</button>
+<h2 id="subscripcio-titol">Suscríbete</h2>
+<div aria-hidden="true" class="subscripcio-icona">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 64 64">
+<path d="M10 20L6 17"></path>
+<path d="M32 13V8"></path>
+<path d="M54 20L58 17"></path>
+<rect height="28" rx="4" width="36" x="14" y="21"></rect>
+<path d="M16 24l16 12 16-12"></path>
+</svg>
+</div>
+<div class="subscripcio-text">
+<p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" rel="noopener" target="_blank">Substack</a>, el canal de comunicación del proyecto.</p>
+<p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+</div>
+<div class="subscripcio-accions">
+<a class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F" id="subscripcio-continuar">Continuar</a>
+<button class="subscripcio-cancellar" onclick="tancaSubscripcio()" type="button">Cancelar</button>
+</div>
+</div>
+</div>
+<script>
+    const seccions = [
+      { id: 'portada', titol: 'Part I — Públic', sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'intro',       titol: 'Fonts i eines',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'mercat',      titol: 'Mercat i població',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'decades',     titol: 'Resum per dècada',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: '60s',         titol: 'Anys 1965–1969',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '1 de 7' },
+      { id: '70s',         titol: 'Anys 70',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '2 de 7' },
+      { id: '80s',         titol: 'Anys 80',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '3 de 7' },
+      { id: '90s',         titol: 'Anys 90',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '4 de 7' },
+      { id: '2000s',       titol: 'Anys 2000–2009',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '5 de 7' },
+      { id: '2010s',       titol: 'Anys 2010–2019',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '6 de 7' },
+      { id: '2020s',       titol: 'Anys 2020–2025',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '7 de 7' },
+      { id: 'espectadors', titol: 'Rànquing per espectadors absoluts',      sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'penetracio',  titol: 'Rànquing per penetració demogràfica',    sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'quota',       titol: 'Rànquing per quota de mercat',           sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'iic',         titol: 'Rànquing per Índex d\'Impacte Cultural', sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'directors',   titol: 'Rànquing per directors',                 sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+    ];
 
-  <!-- ── Cabecera ES ── -->
-  <header class="capcalera capcalera-v2">
-    <div class="capcalera-interior">
-      <div class="capcalera-esquerra">
-        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
-          <span></span><span></span><span></span>
-        </button>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
-      </div>
+    let actual = 0;
 
-      <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+    let graficMercatInit = false;
 
-      <div class="capcalera-controls">
-        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
-          </svg>
-        </span>
+    function mostraSeccio(idx) {
+      actual = idx;
+      const s = seccions[idx];
+      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+      document.getElementById('seccio-' + s.id).style.display = 'block';
+      document.getElementById('titol-sup').textContent = s.sup;
+      document.body.classList.toggle('pip-en-portada', s.id === 'portada');
+      document.getElementById('titol-principal').textContent = s.titol;
+      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+      if (lnk) lnk.classList.add('actiu');
+      const prev = seccions[idx - 1];
+      const next = seccions[idx + 1];
+      const btnAnt = document.getElementById('btn-anterior');
+      const btnSeg = document.getElementById('btn-seguent');
+      const destAnt = prev ? { part:'PART I', titol:(prev.nav || prev.titol), url:null } : null;
+      const destSeg = next ? { part:'PART I', titol:(next.nav || next.titol), url:null } : { part:'PART II', titol:'Prestigi', url:'part-ii.html' };
+      const pintaBoto = (btn, dest, direccio) => {
+        btn.style.visibility = dest ? 'visible' : 'hidden';
+        if (!dest) return;
+        btn.innerHTML = '<span class="pip-nav-part">' + dest.part + '</span><span class="pip-nav-titol">' + (direccio === 'ant' ? '← ' : '') + dest.titol + (direccio === 'seg' ? ' →' : '') + '</span>';
+        btn.dataset.enllac = dest.url || '';
+      };
+      pintaBoto(btnAnt, destAnt, 'ant');
+      pintaBoto(btnSeg, destSeg, 'seg');
 
-        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
 
-        <div class="capcalera-idioma">
-          <a href="../part-i.html" lang="ca" hreflang="ca">CA</a>
-          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
-        </div>
-      </div>
-    </div>
-  </header>
+      if (!window.__pipInicialitzantEntrada) {
+        history.pushState({ idx }, '', s.id === 'portada' ? window.location.pathname + window.location.search : '#' + s.id);
+      }
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      requestAnimationFrame(() => window.scrollTo({ top: 0, left: 0, behavior: 'instant' }));
+      document.querySelector('.contingut-sidebar').scrollTop = 0;
+      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
 
-  <nav class="navegacio">
-    <div class="navegacio-interior">
-      <a href="./" class="nav-link">Inicio</a>
-      <a href="part-i.html" class="nav-link actiu">I — Público</a>
-      <a href="part-ii.html" class="nav-link">II — Prestigio</a>
-      <a href="part-iii.html" class="nav-link">III — Análisis</a>
-      <a href="sobre.html" class="nav-link">Sobre el proyecto</a>
-    </div>
-  </nav>
+      // Inicialitza el gràfic de mercat la primera vegada que es visita
+      if (s.id === 'mercat' && !graficMercatInit && window.PiP_graficMercat) {
+        graficMercatInit = true;
+        setTimeout(window.PiP_graficMercat, 50);
+      }
+    }
 
-  <div class="layout-sidebar">
+    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); else if (document.getElementById('btn-anterior').dataset.enllac) location.href = document.getElementById('btn-anterior').dataset.enllac; }
+    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); else if (document.getElementById('btn-seguent').dataset.enllac) location.href = document.getElementById('btn-seguent').dataset.enllac; }
 
-    <aside class="sidebar">
-      <div class="sidebar-spacer"></div>
-      <div class="sidebar-grup">
-        <div class="sidebar-grup-titol">Contexto</div>
-        <a href="#" class="sidebar-link" data-seccio="intro">Fuentes y herramientas</a>
-        <a href="#" class="sidebar-link" data-seccio="mercat">Mercado y población</a>
-      </div>
-      <div class="sidebar-grup">
-        <div class="sidebar-grup-titol">Top 100</div>
-        <a href="#" class="sidebar-link" data-seccio="decades">Resumen por década</a>
-        <a href="#" class="sidebar-link" data-seccio="60s">60s</a>
-        <a href="#" class="sidebar-link" data-seccio="70s">70s</a>
-        <a href="#" class="sidebar-link" data-seccio="80s">80s</a>
-        <a href="#" class="sidebar-link" data-seccio="90s">90s</a>
-        <a href="#" class="sidebar-link" data-seccio="2000s">2000s</a>
-        <a href="#" class="sidebar-link" data-seccio="2010s">2010s</a>
-        <a href="#" class="sidebar-link" data-seccio="2020s">2020s</a>
-      </div>
-      <div class="sidebar-grup">
-        <div class="sidebar-grup-titol">Rankings</div>
-        <a href="#" class="sidebar-link" data-seccio="espectadors">Por espectadores</a>
-        <a href="#" class="sidebar-link" data-seccio="penetracio">Por penetración</a>
-        <a href="#" class="sidebar-link" data-seccio="quota">Por cuota de mercado</a>
-        <a href="#" class="sidebar-link" data-seccio="iic">Por IIC</a>
-        <a href="#" class="sidebar-link" data-seccio="directors">Por directores</a>
-      </div>
-    </aside>
+    document.querySelectorAll('.pip-entrada-enllac').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const idx = seccions.findIndex(s => s.id === a.dataset.desti);
+        if (idx >= 0) mostraSeccio(idx);
+      });
+    });
 
-    <main class="contingut-sidebar">
+    document.querySelectorAll('.sidebar-link').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const idx = seccions.findIndex(s => s.id === a.dataset.seccio);
+        if (idx >= 0) mostraSeccio(idx);
+      });
+    });
 
-      <div class="titol-sticky">
-        <p class="titol-sticky-sup" id="titol-sup"></p>
-        <h1 id="titol-principal"></h1>
-      </div>
+    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => {
+      document.getElementById('versio-label').textContent = data.versio_label;
+    }).catch(() => {});
 
-      <!-- MODEL A: només text editorial -->
-      <div class="seccio-contingut" id="seccio-intro">
-        <div class="contingut-text">
-          <div class="text-md" data-text="part-i/fonts-i-eines"></div>
-        </div>
-      </div>
+    // Navegar a la secció del hash si n'hi ha
+    (function() {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
+      window.__pipInicialitzantEntrada = true;
+      mostraSeccio(idx >= 0 ? idx : 0);
+      window.__pipInicialitzantEntrada = false;
+    })();
 
-      <div class="seccio-contingut" id="seccio-mercat">
-        <div class="text-md text-md-intro" data-text="part-i/mercat-poblacio" data-bloc="intro"></div>
-        <div id="seccio-mercat-grafic"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/mercat-poblacio" data-bloc="comentari"></div>
-      </div>
+    // Botó enrere/endavant del navegador
+    window.addEventListener('popstate', function(e) {
+      const hash = window.location.hash.replace('#', '');
+      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
+      if (idx >= 0) {
+        actual = idx;
+        const s = seccions[idx];
+        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
+        document.getElementById('seccio-' + s.id).style.display = 'block';
+        document.getElementById('titol-sup').textContent = s.sup;
+      document.body.classList.toggle('pip-en-portada', s.id === 'portada');
+        document.getElementById('titol-principal').textContent = s.titol;
+        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
+        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
+        if (lnk) lnk.classList.add('actiu');
+        document.documentElement.scrollTop = 0;
+        document.querySelector('.contingut-sidebar').scrollTop = 0;
+      }
+    });
 
-      <div class="seccio-contingut" id="seccio-decades">
-        <div class="text-md text-md-intro" data-text="part-i/decades-intro" data-bloc="intro"></div>
-        <div id="taula-decades-resum"></div>
-        <div class="text-md text-md-intermedi" data-text="part-i/decades-intro" data-bloc="intermedi"></div>
-        <div id="grafic-decades" style="margin:16px 0 24px 0"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/decades-intro" data-bloc="comentari"></div>
-      </div>
-
-      <!-- Dècades: div exterior = navegació, div interior "taula-XXs" = on el JS escriu la taula -->
-      <div class="seccio-contingut" id="seccio-60s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-60s" data-bloc="intro"></div>
-        <div id="taula-60s"></div>
-      </div>
-
-      <!-- MODEL B: intro Markdown + taula del JS -->
-      <div class="seccio-contingut" id="seccio-70s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-70s" data-bloc="intro"></div>
-        <div id="taula-70s"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-80s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-80s" data-bloc="intro"></div>
-        <div id="taula-80s"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-90s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-90s" data-bloc="intro"></div>
-        <div id="taula-90s"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-2000s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-2000s" data-bloc="intro"></div>
-        <div id="taula-2000s"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-2010s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-2010s" data-bloc="intro"></div>
-        <div id="taula-2010s"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-2020s">
-        <div class="text-md text-md-intro" data-text="part-i/decada-2020s" data-bloc="intro"></div>
-        <div id="taula-2020s"></div>
-      </div>
-
-      <!-- MODEL C: intro Markdown + taula del JS + comentari Markdown -->
-      <div class="seccio-contingut" id="seccio-espectadors">
-        <div class="text-md text-md-intro" data-text="part-i/ranking-espectadors" data-bloc="intro"></div>
-        <div id="taula-espectadors"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/ranking-espectadors" data-bloc="comentari"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-penetracio">
-        <div class="text-md text-md-intro" data-text="part-i/ranking-penetracio" data-bloc="intro"></div>
-        <div id="taula-penetracio"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/ranking-penetracio" data-bloc="comentari"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-quota">
-        <div class="text-md text-md-intro" data-text="part-i/ranking-quota" data-bloc="intro"></div>
-        <div id="taula-quota"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/ranking-quota" data-bloc="comentari"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-iic">
-        <div class="text-md text-md-intro" data-text="part-i/ranking-iic" data-bloc="intro"></div>
-        <div id="taula-iic"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/ranking-iic" data-bloc="comentari"></div>
-      </div>
-
-      <div class="seccio-contingut" id="seccio-directors">
-        <div class="text-md text-md-intro" data-text="part-i/ranking-directors" data-bloc="intro"></div>
-        <div id="taula-directors-r1"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/ranking-directors" data-bloc="comentari-r1"></div>
-        <div id="taula-directors-r2"></div>
-        <div class="text-md text-md-comentari" data-text="part-i/ranking-directors" data-bloc="comentari-r2"></div>
-      </div>
-
-      <div class="nav-seccions">
-        <button class="nav-seccio-btn" id="btn-anterior" onclick="navegarAnterior()"></button>
-        <button class="btn-top" onclick="document.documentElement.scrollTo({top:0,behavior:'smooth'})">↑</button>
-        <button class="nav-seccio-btn" id="btn-seguent" onclick="navegarSeguent()"></button>
-      </div>
-
-    </main>
-  </div>
-
-  <footer class="peu">
-    <div class="peu-interior">
-      <span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
-      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
-    </div>
-  </footer>
-
-  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
-    <div class="buscador-interior">
-      <input type="text" id="buscador-input" placeholder="Buscar en el estudio..." autocomplete="off">
-      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
-      <div id="buscador-resultats"></div>
-    </div>
-  </div>
-
-    <!-- ── Modal de suscripción ── -->
-  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
-    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
-      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
-          <path d="M6 6l12 12M18 6L6 18"></path>
-        </svg>
-      </button>
-
-      <h2 id="subscripcio-titol">Suscríbete</h2>
-
-      <div class="subscripcio-icona" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M10 20L6 17"></path>
-          <path d="M32 13V8"></path>
-          <path d="M54 20L58 17"></path>
-          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
-          <path d="M16 24l16 12 16-12"></path>
-        </svg>
-      </div>
-
-      <div class="subscripcio-text">
-        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
-        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
-      </div>
-
-      <div class="subscripcio-accions">
-        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
-        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    // ── MODAL SUSCRIPCIÓN ──
+    function toggleBuscador() {
+      const o = document.getElementById('buscador-overlay');
+      const i = document.getElementById('buscador-input');
+      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
+      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
+    }
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
+    });
+  </script>
+<script>
+    // ── MODAL SUBSCRIPCIÓ ──
     let subscripcioFocusAnterior = null;
 
     function obreSubscripcio() {
@@ -279,7 +417,7 @@
       if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
     });
 
-    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    // Si una pàgina no tenia encara el control de la lupa, l'activem aquí.
     if (typeof window.toggleBuscador !== 'function') {
       window.toggleBuscador = function() {
         const o = document.getElementById('buscador-overlay');
@@ -297,7 +435,7 @@
       };
     }
 
-    // Lupa accesible con teclado.
+    // Lupa accessible amb teclat
     document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -305,205 +443,92 @@
       }
     });
   </script>
-
-<script>
-    const seccions = [
-      { id: 'intro',       titol: 'Fuentes y herramientas',               sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: 'mercat',      titol: 'Mercado y población',                  sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: 'decades',     titol: 'Resumen por década',                   sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: '60s',         titol: 'Años 1965–1969',                        sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '1 de 7' },
-      { id: '70s',         titol: 'Años 70',                               sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '2 de 7' },
-      { id: '80s',         titol: 'Años 80',                               sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '3 de 7' },
-      { id: '90s',         titol: 'Años 90',                               sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '4 de 7' },
-      { id: '2000s',       titol: 'Años 2000–2009',                        sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '5 de 7' },
-      { id: '2010s',       titol: 'Años 2010–2019',                        sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '6 de 7' },
-      { id: '2020s',       titol: 'Años 2020–2025',                        sup: 'Top 100 de películas con más espectadores en salas de cine', pos: '7 de 7' },
-      { id: 'espectadors', titol: 'Ranking por espectadores absolutos',      sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: 'penetracio',  titol: 'Ranking por penetración demográfica',    sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: 'quota',       titol: 'Ranking por cuota de mercado',           sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: 'iic',         titol: 'Ranking por Índice de Impacto Cultural', sup: 'Top 100 de películas con más espectadores en salas de cine' },
-      { id: 'directors',   titol: 'Ranking por directores',                 sup: 'Top 100 de películas con más espectadores en salas de cine' },
-    ];
-
-    let actual = 0;
-
-    let graficMercatInit = false;
-
-    function mostraSeccio(idx) {
-      actual = idx;
-      const s = seccions[idx];
-      document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
-      document.getElementById('seccio-' + s.id).style.display = 'block';
-      document.getElementById('titol-sup').textContent = s.sup;
-      document.getElementById('titol-principal').textContent = s.titol;
-      document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
-      const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
-      if (lnk) lnk.classList.add('actiu');
-      const prev = seccions[idx - 1];
-      const next = seccions[idx + 1];
-      const btnAnt = document.getElementById('btn-anterior');
-      const btnSeg = document.getElementById('btn-seguent');
-      btnAnt.textContent = prev ? '← ' + prev.titol : '';
-      btnAnt.style.visibility = prev ? 'visible' : 'hidden';
-      btnSeg.textContent = next ? next.titol + ' →' : '';
-      btnSeg.style.visibility = next ? 'visible' : 'hidden';
-      history.pushState({ idx }, '', '#' + s.id);
-      document.documentElement.scrollTop = 0;
-      document.querySelector('.contingut-sidebar').scrollTop = 0;
-      if (window.PiP_aplicaFade) window.PiP_aplicaFade();
-
-      // Inicialitza el gràfic de mercat la primera vegada que es visita
-      if (s.id === 'mercat' && !graficMercatInit && window.PiP_graficMercat) {
-        graficMercatInit = true;
-        setTimeout(window.PiP_graficMercat, 50);
-      }
-    }
-
-    function navegarAnterior() { if (actual > 0) mostraSeccio(actual - 1); }
-    function navegarSeguent() { if (actual < seccions.length - 1) mostraSeccio(actual + 1); }
-
-    document.querySelectorAll('.sidebar-link').forEach(a => {
-      a.addEventListener('click', e => {
-        e.preventDefault();
-        const idx = seccions.findIndex(s => s.id === a.dataset.seccio);
-        if (idx >= 0) mostraSeccio(idx);
-      });
-    });
-
-    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => {
-      document.getElementById('versio-label').textContent = data.versio_label_es || data.versio_label;
-    }).catch(() => {});
-
-    // Navegar a la secció del hash si n'hi ha
-    (function() {
-      const hash = window.location.hash.replace('#', '');
-      const idx = hash ? seccions.findIndex(s => s.id === hash) : -1;
-      mostraSeccio(idx >= 0 ? idx : 0);
-    })();
-
-    // Botó enrere/endavant del navegador
-    window.addEventListener('popstate', function(e) {
-      const hash = window.location.hash.replace('#', '');
-      const idx = hash ? seccions.findIndex(s => s.id === hash) : 0;
-      if (idx >= 0) {
-        actual = idx;
-        const s = seccions[idx];
-        document.querySelectorAll('.seccio-contingut').forEach(el => el.style.display = 'none');
-        document.getElementById('seccio-' + s.id).style.display = 'block';
-        document.getElementById('titol-sup').textContent = s.sup;
-        document.getElementById('titol-principal').textContent = s.titol;
-        document.querySelectorAll('.sidebar-link').forEach(a => a.classList.remove('actiu'));
-        const lnk = document.querySelector('.sidebar-link[data-seccio="' + s.id + '"]');
-        if (lnk) lnk.classList.add('actiu');
-        document.documentElement.scrollTop = 0;
-        document.querySelector('.contingut-sidebar').scrollTop = 0;
-      }
-    });
-
-    function toggleBuscador() {
-      const o = document.getElementById('buscador-overlay');
-      const i = document.getElementById('buscador-input');
-      if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
-      else { o.style.display = 'none'; i.value = ''; document.getElementById('buscador-resultats').innerHTML = ''; }
-    }
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { const o = document.getElementById('buscador-overlay'); if (o.style.display !== 'none') toggleBuscador(); }
-    });
-  </script>
-
-  <script src="../js/scroll-header.js"></script>
+<script src="../js/scroll-header.js"></script>
 <script src="../js/buscador.js"></script>
-  <script src="../js/scroll-fade.js"></script>
-  <script src="../js/textos.js"></script>
-  <script src="../js/mercat.js"></script>
-  <script src="../js/decades-resum.js"></script>
-  <script src="../js/part-i.js"></script>
-  <script src="../js/notes-tooltip.js"></script>  
+<script src="../js/scroll-fade.js"></script>
+<script src="../js/textos.js"></script>
+<script src="../js/mercat.js?v=20261015hoverfinal"></script>
+<script src="../js/decades-resum.js?v=20261015hoverfinal"></script>
+<script src="../js/part-i.js?v=20261026comparativarankings12"></script>
+<script src="../js/notes-tooltip.js"></script>
+<!-- ── Drawer mòbil ── -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+<nav aria-label="Menú principal" class="drawer" id="drawer">
+<div class="drawer-cap">
+<a class="drawer-logo" href="/v1.2/es/">Públic i Prestigi</a>
+<button aria-label="Cerrar" class="drawer-tancar" onclick="toggleDrawer()">✕</button>
+</div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap es-link" href="/v1.2/es/" onclick="toggleDrawer()">Inicio</a></div>
+<div class="drawer-seccio" id="drawer-part-i">
+<div class="drawer-seccio-fila">
+<a class="drawer-seccio-nom" href="part-i.html" onclick="toggleDrawer()">I — Público</a>
+<button aria-label="Expandir" class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')"><span class="drawer-arrow">▼</span></button>
+</div>
+<div class="drawer-subseccions">
+<div class="drawer-grup-titol">Context</div>
+<a class="drawer-link" onclick="navegaDrawer('intro')">Fuentes y herramientas</a>
+<a class="drawer-link" onclick="navegaDrawer('mercat')">Mercado y población</a>
+<div class="drawer-grup-titol">Top 100</div>
+<a class="drawer-link" onclick="navegaDrawer('decades')">Resumen por década</a>
+<a class="drawer-link" onclick="navegaDrawer('60s')">60s</a>
+<a class="drawer-link" onclick="navegaDrawer('70s')">70s</a>
+<a class="drawer-link" onclick="navegaDrawer('80s')">80s</a>
+<a class="drawer-link" onclick="navegaDrawer('90s')">90s</a>
+<a class="drawer-link" onclick="navegaDrawer('2000s')">2000s</a>
+<a class="drawer-link" onclick="navegaDrawer('2010s')">2010s</a>
+<a class="drawer-link" onclick="navegaDrawer('2020s')">2020s</a>
+<div class="drawer-grup-titol">Rankings</div>
+<a class="drawer-link" onclick="navegaDrawer('espectadors')">Por espectadores</a>
+<a class="drawer-link" onclick="navegaDrawer('penetracio')">Por penetración</a>
+<a class="drawer-link" onclick="navegaDrawer('quota')">Por cuota de mercado</a>
+<a class="drawer-link" onclick="navegaDrawer('iic')">Per IIC</a>
+<a class="drawer-link" onclick="navegaDrawer('directors')">Por directores</a>
+</div>
+</div>
+<div class="drawer-seccio" id="drawer-part-ii">
+<div class="drawer-seccio-fila">
+<a class="drawer-seccio-nom" href="part-ii.html" onclick="toggleDrawer()">II — Prestigi</a>
+<button aria-label="Expandir" class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')"><span class="drawer-arrow">▼</span></button>
+</div>
+<div class="drawer-subseccions">
+<div class="drawer-grup-titol">Context</div>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+<div class="drawer-grup-titol">Festivales</div>
+<a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+<div class="drawer-grup-titol">Rankings</div>
+<a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+<a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
+<div class="drawer-grup-titol">Academias</div>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+<a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
 
-
-
-
-  <!-- ── Drawer mòbil ── -->
-  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
-  <nav class="drawer" id="drawer" aria-label="Menú principal">
-    <div class="drawer-cap">
-      <a href="./" class="drawer-logo">Públic i Prestigi</a>
-      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
-    </div>
-    <div class="drawer-seccio"><a href="./" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
-    <div class="drawer-seccio" id="drawer-part-i">
-      <div class="drawer-seccio-fila">
-        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
-        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
-      </div>
-      <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Contexto</div>
-        <a class="drawer-link" onclick="navegaDrawer('intro')">Fuentes y herramientas</a>
-        <a class="drawer-link" onclick="navegaDrawer('mercat')">Mercado y población</a>
-        <div class="drawer-grup-titol">Top 100</div>
-        <a class="drawer-link" onclick="navegaDrawer('decades')">Resumen por década</a>
-        <a class="drawer-link" onclick="navegaDrawer('60s')">60s</a>
-        <a class="drawer-link" onclick="navegaDrawer('70s')">70s</a>
-        <a class="drawer-link" onclick="navegaDrawer('80s')">80s</a>
-        <a class="drawer-link" onclick="navegaDrawer('90s')">90s</a>
-        <a class="drawer-link" onclick="navegaDrawer('2000s')">2000s</a>
-        <a class="drawer-link" onclick="navegaDrawer('2010s')">2010s</a>
-        <a class="drawer-link" onclick="navegaDrawer('2020s')">2020s</a>
-        <div class="drawer-grup-titol">Rankings</div>
-        <a class="drawer-link" onclick="navegaDrawer('espectadors')">Por espectadores</a>
-        <a class="drawer-link" onclick="navegaDrawer('penetracio')">Por penetración</a>
-        <a class="drawer-link" onclick="navegaDrawer('quota')">Por cuota de mercado</a>
-        <a class="drawer-link" onclick="navegaDrawer('iic')">Por IIC</a>
-        <a class="drawer-link" onclick="navegaDrawer('directors')">Por directores</a>
-      </div>
-    </div>
-    <div class="drawer-seccio" id="drawer-part-ii">
-      <div class="drawer-seccio-fila">
-        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigio</a>
-        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
-      </div>
-      <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Contexto</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <div class="drawer-grup-titol">Festivales</div>
-        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#paralleles" onclick="toggleDrawer()"><span>Secciones paralelas</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <div class="drawer-grup-titol">Rankings</div>
-        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
-        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
-        <div class="drawer-grup-titol">Premios de academias</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA y Donatello</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-      </div>
-
-    </div>
-    <div class="drawer-seccio" id="drawer-part-iii">
-      <div class="drawer-seccio-fila">
-        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Análisis</a>
-        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
-      </div>
-      <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Capítulos</div>
-        <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
-        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolución de la brecha</a>
-        <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
-        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cine, leyes y tecnología</a>
-        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dos generaciones</a>
-        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cine de autor industrial</a>
-        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-      </div>
-    </div>
-    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
-  </nav>
-
-  <script>
+</div>
+</div>
+<div class="drawer-seccio" id="drawer-part-iii">
+<div class="drawer-seccio-fila">
+<a class="drawer-seccio-nom" href="part-iii.html" onclick="toggleDrawer()">III — Análisis</a>
+<button aria-label="Expandir" class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')"><span class="drawer-arrow">▼</span></button>
+</div>
+<div class="drawer-subseccions">
+<div class="drawer-grup-titol">Capítulos</div>
+<a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
+<a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolución de la brecha</a>
+<a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
+<a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cine, leyes y tecnología</a>
+<a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dos generaciones</a>
+<a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cine de autor industrial</a>
+<a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+<a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+</div>
+</div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap es-link" href="sobre.html" onclick="toggleDrawer()">Sobre el proyecto</a></div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap drawer-versio" href="versions.html" onclick="toggleDrawer()">Versión 1.2 (en preparación)</a></div>
+</nav>
+<script>
     function toggleDrawer() {
       const drawer = document.getElementById('drawer');
       const overlay = document.getElementById('drawer-overlay');
@@ -520,9 +545,36 @@
       if (idx >= 0) mostraSeccio(idx);
     }
   </script>
-  <script src="../js/idioma.js"></script>
-  <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
-  <!-- End Cloudflare Web Analytics -->
+<script src="../js/idioma.js"></script>
+<!-- Cloudflare Web Analytics -->
+<script data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module"></script>
+<!-- End Cloudflare Web Analytics -->
+<script id="pip-entrada-md-loader">
+/* Textos de les entrades I, II i III: un únic Markdown compartit. */
+(async function () {
+  const part = document.body.classList.contains('part-iii') ? 'iii' :
+               document.body.classList.contains('part-ii') ? 'ii' : 'i';
+  const entrada = document.getElementById('seccio-portada');
+  if (!entrada) return;
+  try {
+    const resposta = await fetch(pipPath('es/textos/introduccions-parts.md'));
+    if (!resposta.ok) throw new Error('HTTP ' + resposta.status);
+    const md = await resposta.text();
+    function bloc(tipus) {
+      const inici = '<!-- ' + part + ':' + tipus + ' -->';
+      const fi = '<!-- fi:' + part + ':' + tipus + ' -->';
+      const a = md.indexOf(inici), b = md.indexOf(fi, a + inici.length);
+      if (a < 0 || b < 0) throw new Error('Bloc absent: ' + part + '/' + tipus);
+      return md.slice(a + inici.length, b).trim();
+    }
+    for (const tipus of ['preguntes', 'final']) {
+      const desti = entrada.querySelector('.pip-entrada-' + tipus);
+      if (desti) desti.innerHTML = marked.parse(bloc(tipus)).trim().replace(/^<p>/, '').replace(/<\/p>$/, '');
+    }
+  } catch (error) {
+    console.error('No s’ha pogut carregar el Markdown de les introduccions. Es conserva el text de reserva.', error);
+  }
+})();
+</script>
 </body>
 </html>
