@@ -35,7 +35,7 @@ Por debajo del umbral del Top 100 hay 34 películas con reconocimiento internaci
 <!-- /intro-cercle -->
 
 <!-- comentari-cercle -->
-- De las 34 películas del «segundo círculo», 24 han participado en alguno de los cuatro festivales y 10 se incorporan exclusivamente a través de las academias. *Volver* (2006), con casi dos millones de espectadores, es uno de los casos más claros de frontera: queda fuera de la «doble corona» por menos de 90.000 espectadores respecto al umbral del Top 100, no por falta de impacto.
+- De las 34 películas del «segundo círculo», 24 han participado en alguno de los cuatro festivales y 10 se incorporan exclusivamente a través de las academias. *Volver* (2006), con casi dos millones de espectadores, es uno de los casos más claros de frontera: queda fuera de la «doble corona» por 74.365 espectadores respecto al umbral del Top 100, no por falta de impacto.
 
 - La concentración temporal sigue siendo marcada: 2 películas pertenecen a los 60s, 10 a los 70s, 6 a los 80s, 6 a los 90s y 8 a los 2000s. En los 2010s solo aparecen 2: *La isla mínima* (2014) y *Mientras dure la guerra* (2019), y en los 2020s, ninguna. La ampliación con las academias incorpora nuevos casos: 11 películas reconocidas por los Oscar —dos de Buñuel— y 7 por los EFA —otras dos de Almodóvar, también presentes en los Oscar—.
 
