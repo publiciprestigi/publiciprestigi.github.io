@@ -80,8 +80,8 @@ body.pip-en-portada .nav-seccions { display: none; }
 </span>
 <button class="capcalera-subscripcio" onclick="obreSubscripcio()" type="button">Suscribirse</button>
 <div class="capcalera-idioma">
-<a aria-current="page" class="actiu" href="#" lang="ca">CA</a>
-<a class="lang-es" href="part-i.html" hreflang="es" lang="es">ES</a>
+<a class="lang-ca" href="../part-i.html" lang="ca" hreflang="ca">CA</a>
+<a aria-current="page" class="actiu" href="#" lang="es">ES</a>
 </div>
 </div>
 </div>
@@ -90,7 +90,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <div class="navegacio-interior">
 <a class="nav-link" href="/v1.2/es/">Inicio</a>
 <a class="nav-link actiu" href="part-i.html">I — Público</a>
-<a class="nav-link" href="part-ii.html">II — Prestigi</a>
+<a class="nav-link" href="part-ii.html">II — Prestigio</a>
 <a class="nav-link" href="part-iii.html">III — Análisis</a>
 <a class="nav-link" href="sobre.html">Sobre el proyecto</a>
 </div>
@@ -119,7 +119,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <a class="sidebar-link" data-seccio="espectadors" href="#">Por espectadores</a>
 <a class="sidebar-link" data-seccio="penetracio" href="#">Por penetración</a>
 <a class="sidebar-link" data-seccio="quota" href="#">Por cuota de mercado</a>
-<a class="sidebar-link" data-seccio="iic" href="#">Per IIC</a>
+<a class="sidebar-link" data-seccio="iic" href="#">Por IIC</a>
 <a class="sidebar-link" data-seccio="directors" href="#">Por directores</a>
 </div>
 </aside>
@@ -262,22 +262,22 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 <script>
     const seccions = [
-      { id: 'portada', titol: 'Part I — Públic', sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'intro',       titol: 'Fonts i eines',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'mercat',      titol: 'Mercat i població',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'decades',     titol: 'Resum per dècada',                     sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: '60s',         titol: 'Anys 1965–1969',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '1 de 7' },
-      { id: '70s',         titol: 'Anys 70',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '2 de 7' },
-      { id: '80s',         titol: 'Anys 80',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '3 de 7' },
-      { id: '90s',         titol: 'Anys 90',                               sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '4 de 7' },
-      { id: '2000s',       titol: 'Anys 2000–2009',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '5 de 7' },
-      { id: '2010s',       titol: 'Anys 2010–2019',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '6 de 7' },
-      { id: '2020s',       titol: 'Anys 2020–2025',                        sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema', pos: '7 de 7' },
-      { id: 'espectadors', titol: 'Rànquing per espectadors absoluts',      sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'penetracio',  titol: 'Rànquing per penetració demogràfica',    sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'quota',       titol: 'Rànquing per quota de mercat',           sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'iic',         titol: 'Rànquing per Índex d\'Impacte Cultural', sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
-      { id: 'directors',   titol: 'Rànquing per directors',                 sup: 'Top 100 pel·lícules amb més espectadors a sales de cinema' },
+      { id: 'portada', titol: 'Parte I — Público', sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'intro',       titol: 'Fuentes y herramientas',                        sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'mercat',      titol: 'Mercado y población',                     sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'decades',     titol: 'Resumen por década',                     sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: '60s',         titol: 'Años 1965–1969',                        sup: 'Top 100 películas con más espectadores en salas de cine', pos: '1 de 7' },
+      { id: '70s',         titol: 'Años 70',                               sup: 'Top 100 películas con más espectadores en salas de cine', pos: '2 de 7' },
+      { id: '80s',         titol: 'Años 80',                               sup: 'Top 100 películas con más espectadores en salas de cine', pos: '3 de 7' },
+      { id: '90s',         titol: 'Años 90',                               sup: 'Top 100 películas con más espectadores en salas de cine', pos: '4 de 7' },
+      { id: '2000s',       titol: 'Años 2000–2009',                        sup: 'Top 100 películas con más espectadores en salas de cine', pos: '5 de 7' },
+      { id: '2010s',       titol: 'Años 2010–2019',                        sup: 'Top 100 películas con más espectadores en salas de cine', pos: '6 de 7' },
+      { id: '2020s',       titol: 'Años 2020–2025',                        sup: 'Top 100 películas con más espectadores en salas de cine', pos: '7 de 7' },
+      { id: 'espectadors', titol: 'Ranking por espectadores absolutos',      sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'penetracio',  titol: 'Ranking por penetración demográfica',    sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'quota',       titol: 'Ranking por cuota de mercado',           sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'iic',         titol: 'Ranking por Índice de Impacto Cultural', sup: 'Top 100 películas con más espectadores en salas de cine' },
+      { id: 'directors',   titol: 'Ranking por directores',                 sup: 'Top 100 películas con más espectadores en salas de cine' },
     ];
 
     let actual = 0;
