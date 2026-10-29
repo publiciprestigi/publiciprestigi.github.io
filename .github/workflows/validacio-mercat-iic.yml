@@ -4,6 +4,7 @@ on:
     branches:
       - auditoria-mercat-iic-2026
       - revisio-fonts-franca-2025
+      - top100-estrenes-1965-2025-2026
     paths:
       - 'v1.2/**'
       - '.github/workflows/validacio-mercat-iic.yml'
@@ -63,6 +64,8 @@ jobs:
         run: node v1.2/auditoria/prova-navegador.mjs
       - name: Comprovar navegació i continguts de tots els capítols catalans
         run: node v1.2/auditoria/prova-cobertura.mjs
+      - name: Comprovar navegació i continguts dels capítols castellans
+        run: node v1.2/auditoria/prova-cobertura-es.mjs
       - name: Arxivar captures per revisió visual
         if: always()
         uses: actions/upload-artifact@v4

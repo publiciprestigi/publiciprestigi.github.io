@@ -471,7 +471,6 @@ window.expandirRankEsp = function(cid, btn) {
    RÀNQUING PER ESPECTADORS — ACADÈMIES
    ============================================================ */
 async function construirRànquingAcademiesEspectadors() {
-  if (PIP_ES) return; // La versió ES es completarà després.
 
   const cont = document.getElementById('taula-ranking-academies');
   if (!cont) return;
@@ -533,7 +532,7 @@ async function construirRànquingAcademiesEspectadors() {
             <th class="col-subtil">Direcció</th>
             <th class="col-center" style="width:50px">Premi</th>
             <th class="col-center" style="width:65px">Top 100</th>
-            <th class="col-num" style="text-align:right">Espectadors${PIP_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
+            <th class="col-num" style="text-align:right">${pipT('Espectadors','Espectadores')} <sup><a href="${PIP_ES ? '../es/notes.html#n7' : 'notes.html#n7'}">[7]</a></sup></th>
           </tr></thead>
           <tbody>
             ${top10.map((f,i) => fila(f,i)).join('')}
@@ -1024,7 +1023,6 @@ function oscarReconeixement(f) {
 }
 
 async function construirOscar() {
-  if (PIP_ES) return; // La versió ES es completarà després.
   const cont = document.getElementById('taula-oscar');
   const contProf = document.getElementById('taula-oscar-professionals');
   if (!cont || !contProf) return;
@@ -1054,18 +1052,18 @@ async function construirOscar() {
 
     cont.innerHTML = `
       <p class="festival-resum oscar-resum">
-        <strong>${films.length} participacions documentades</strong> ·
-        <strong>${premiades} premiades</strong>
+        <strong>${films.length} ${pipT('participacions documentades','participaciones documentadas')}</strong> ·
+        <strong>${premiades} ${pipT('premiades','premiadas')}</strong>
       </p>
       <table class="taula-festivals taula-oscar-principal">
         <thead><tr>
           <th class="col-pos">#</th>
-          <th style="width:40%">Títol</th>
-          <th class="col-subtil" style="width:12%">Direcció</th>
-          <th style="width:22%">Reconeixement</th>
+          <th style="width:40%">${pipT('Títol','Título')}</th>
+          <th class="col-subtil" style="width:12%">${pipT('Direcció','Dirección')}</th>
+          <th style="width:22%">${pipT('Reconeixement','Reconocimiento')}</th>
           <th class="col-center" style="width:60px">Top 100</th>
-          <th class="col-subtil" style="width:75px">Dècada</th>
-          <th class="col-num" style="width:85px">Espectadors${PIP_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
+          <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
+          <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')} <sup><a href="${PIP_ES ? '../es/notes.html#n7' : 'notes.html#n7'}">[7]</a></sup></th>
         </tr></thead>
         <tbody>${files}</tbody>
       </table>`;
@@ -1083,15 +1081,15 @@ async function construirOscar() {
           aria-expanded="false"
           aria-controls="oscar-professionals-contingut"
           onclick="toggleOscarProfessionals('oscar-professionals-contingut', this)">
-          + Professionals en produccions estrangeres (23 reconeixements)
+          + ${pipT('Professionals en produccions estrangeres (23 reconeixements)','Profesionales en producciones extranjeras (23 reconocimientos)')}
         </button>
         <div id="oscar-professionals-contingut" class="oscar-professionals-contingut" hidden>
           <table class="taula-festivals taula-festivals-context taula-oscar-professionals">
             <thead><tr>
               <th class="col-pos">#</th>
-              <th style="width:28%">Professional</th>
-              <th style="width:32%">Títol</th>
-              <th>Reconeixement</th>
+              <th style="width:28%">${pipT('Professional','Profesional')}</th>
+              <th style="width:32%">${pipT('Títol','Título')}</th>
+              <th>${pipT('Reconeixement','Reconocimiento')}</th>
             </tr></thead>
             <tbody>${filesProf}</tbody>
           </table>
@@ -1111,7 +1109,7 @@ function toggleOscarProfessionals(id, boto) {
   const obre = cont.hidden;
   cont.hidden = !obre;
   boto.setAttribute('aria-expanded', String(obre));
-  boto.textContent = `${obre ? '−' : '+'} Professionals en produccions estrangeres (23 reconeixements)`;
+  boto.textContent = `${obre ? '−' : '+'} ${pipT('Professionals en produccions estrangeres (23 reconeixements)','Profesionales en producciones extranjeras (23 reconocimientos)')}`;
 
   if (obre && window.PiP_aplicaFade) window.PiP_aplicaFade();
 }
@@ -1167,7 +1165,6 @@ function efaBlocDesplegable(id, etiqueta, contingut) {
 }
 
 async function construirEfa() {
-  if (PIP_ES) return; // La versió ES es completarà després.
   const cont = document.getElementById('taula-efa');
   const contPublic = document.getElementById('taula-efa-public');
   const contProf = document.getElementById('taula-efa-professionals');
@@ -1187,18 +1184,18 @@ async function construirEfa() {
 
     cont.innerHTML = `
       <p class="festival-resum efa-resum">
-        <strong>${films.length} participacions documentades</strong> ·
-        <strong>${premiades} premiades</strong>
+        <strong>${films.length} ${pipT('participacions documentades','participaciones documentadas')}</strong> ·
+        <strong>${premiades} ${pipT('premiades','premiadas')}</strong>
       </p>
       <table class="taula-festivals taula-efa-principal">
         <thead><tr>
           <th class="col-pos">#</th>
-          <th style="width:40%">Títol</th>
-          <th class="col-subtil" style="width:12%">Direcció</th>
-          <th style="width:22%">Reconeixement</th>
+          <th style="width:40%">${pipT('Títol','Título')}</th>
+          <th class="col-subtil" style="width:12%">${pipT('Direcció','Dirección')}</th>
+          <th style="width:22%">${pipT('Reconeixement','Reconocimiento')}</th>
           <th class="col-center" style="width:60px">Top 100</th>
-          <th class="col-subtil" style="width:75px">Dècada</th>
-          <th class="col-num" style="width:85px">Espectadors${PIP_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
+          <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
+          <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')} <sup><a href="${PIP_ES ? '../es/notes.html#n7' : 'notes.html#n7'}">[7]</a></sup></th>
         </tr></thead>
         <tbody>${films.map(efaFilaFilm).join('')}</tbody>
       </table>`;
@@ -1206,13 +1203,13 @@ async function construirEfa() {
     const publicPremiades = publicFilms.filter(f => (f.reconeixement || '').includes('★')).length;
     contPublic.innerHTML = efaBlocDesplegable(
       'efa-public-contingut',
-      `Premis del públic i altres votacions (${publicFilms.length} pel·lícules)`,
+      pipT(`Premis del públic i altres votacions (${publicFilms.length} pel·lícules)`,`Premios del público y otras votaciones (${publicFilms.length} películas)`),
       `       <table class="taula-festivals taula-festivals-context taula-efa-public">
          <thead><tr>
            <th class="col-pos">#</th>
-           <th style="width:38%">Títol</th>
-           <th class="col-subtil" style="width:22%">Direcció</th>
-           <th>Reconeixement</th>
+           <th style="width:38%">${pipT('Títol','Título')}</th>
+           <th class="col-subtil" style="width:22%">${pipT('Direcció','Dirección')}</th>
+           <th>${pipT('Reconeixement','Reconocimiento')}</th>
          </tr></thead>
          <tbody>${publicFilms.map(efaFilaContextFilm).join('')}</tbody>
        </table>`
@@ -1220,13 +1217,13 @@ async function construirEfa() {
 
     contProf.innerHTML = efaBlocDesplegable(
       'efa-professionals-contingut',
-      `Professionals en produccions estrangeres (${professionals.length} reconeixements)`,
+      pipT(`Professionals en produccions estrangeres (${professionals.length} reconeixements)`,`Profesionales en producciones extranjeras (${professionals.length} reconocimientos)`),
       `<table class="taula-festivals taula-festivals-context taula-efa-context-professionals">
         <thead><tr>
           <th class="col-pos">#</th>
-          <th style="width:28%">Professional</th>
-          <th style="width:32%">Títol</th>
-          <th>Reconeixement</th>
+          <th style="width:28%">${pipT('Professional','Profesional')}</th>
+          <th style="width:32%">${pipT('Títol','Título')}</th>
+          <th>${pipT('Reconeixement','Reconocimiento')}</th>
         </tr></thead>
         <tbody>${professionals.map(efaFilaProfessional).join('')}</tbody>
       </table>`
@@ -1240,12 +1237,12 @@ async function construirEfa() {
 
     contTraj.innerHTML = efaBlocDesplegable(
       'efa-trajectoria-contingut',
-      `Distincions personals i de trajectòria (${trajectory.length} reconeixements)`,
+      pipT(`Distincions personals i de trajectòria (${trajectory.length} reconeixements)`,`Distinciones personales y de trayectoria (${trajectory.length} reconocimientos)`),
       `<table class="taula-festivals taula-festivals-context taula-efa-trajectoria">
         <thead><tr>
           <th class="col-pos">#</th>
-          <th style="width:34%">Professional</th>
-          <th>Reconeixement</th>
+          <th style="width:34%">${pipT('Professional','Profesional')}</th>
+          <th>${pipT('Reconeixement','Reconocimiento')}</th>
         </tr></thead>
         <tbody>${trajRows}</tbody>
       </table>`

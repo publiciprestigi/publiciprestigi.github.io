@@ -1,8 +1,8 @@
-Para analizar el público en las salas, el estudio parte de las entradas vendidas, no de la recaudación en euros. La razón es de fondo: la recaudación mide un retorno económico; las entradas, la asistencia a las salas y la dimensión colectiva del fenómeno. Una entrada no equivale necesariamente a una persona diferente.
+El estudio trabaja exclusivamente con el número de entradas vendidas, no con cifras de recaudación en euros. La razón es de fondo: lo que nos interesa es cuántas personas entraron en una sala de cine y formaron parte de un momento cultural compartido. La recaudación mide un retorno económico, las entradas un impacto social.
 
 ## El ICAA como fuente principal
 
-El Top 100 parte del <a href="https://www.cultura.gob.es/dam/jcr:ff219edb-2db8-4411-8f67-6d3e636f6869/7-5-largometrajes-esp-ext-historico.pdf" target="_blank" rel="noopener">ranking oficial</a> del Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA) del Ministerio de Cultura, publicado en el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuario 2023</a>, el último anuario disponible en el momento de preparar esta edición. El ranking se ha actualizado con las películas estrenadas en 2024 y 2025 que han conseguido entrar en él. Concretamente, *Padre no hay más que uno 4* (2024) y *Padre no hay más que uno 5* (2025), de Santiago Segura, han sustituido a *Una señora estupenda* (1967), de Eugenio Martín, y *Digan lo que digan* (1968), de Mario Camus.
+El Top 100 parte del <a href="https://www.cultura.gob.es/dam/jcr:ff219edb-2db8-4411-8f67-6d3e636f6869/7-5-largometrajes-esp-ext-historico.pdf" target="_blank" rel="noopener">ranking oficial</a> del Instituto de la Cinematografía y de las Artes Audiovisuales (ICAA) del Ministerio de Cultura, publicado en el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuario 2023</a>, el último anuario disponible en el momento de preparar esta edición. El ranking se ha actualizado con las películas estrenadas en 2024 y 2025 que han conseguido entrar en él. Se han incorporado *Padre no hay más que uno 4* (2024) y *Padre no hay más que uno 5* (2025), de Santiago Segura. El ranking resultante aplica el criterio de estreno a partir del 1 de enero de 1965, lo que permite mantener *Una señora estupenda* (1967), de Eugenio Martín, y *Digan lo que digan* (1968), de Mario Camus.
 
 También se han consultado los <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuarios publicados desde 1968</a> y el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catálogo de películas calificadas</a> del ICAA para incorporar otras películas, identificadas en gris en las tablas de cada década, que ayudan a contextualizar mejor cada época.
 
@@ -25,7 +25,7 @@ Si nos limitamos a ordenar las 100 películas por espectadores absolutos, el ran
 
 ## Las cuatro métricas: cómo leerlas
 
-En las tablas del estudio encontraremos cuatro medidas que ofrecen perspectivas diferentes sobre el público de cada película.
+En muchas de las tablas del estudio encontraremos cuatro columnas de medida. Cada una cuenta una historia diferente:
 
 | Métrica | Fórmula | Qué cuenta |
 | --- | --- | --- |
