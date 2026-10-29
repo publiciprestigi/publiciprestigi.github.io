@@ -1,4 +1,4 @@
-Per analitzar el públic a les sales, l'estudi parteix de les entrades venudes, no de la recaptació en euros. La raó és de fons: la recaptació mesura un retorn econòmic; les entrades, l'assistència a les sales i la dimensió col·lectiva del fenomen. Una entrada no equival necessàriament a una persona diferent.
+L'estudi treballa exclusivament amb nombre d'entrades venudes, no amb xifres de recaptació en euros. La raó és de fons: el que ens interessa és quantes persones van entrar en una sala de cinema i van formar part d'un moment cultural compartit. La recaptació mesura un retorn econòmic, les entrades un impacte social.
 
 ## L'ICAA com a font principal
 
@@ -25,7 +25,7 @@ Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el ràn
 
 ## Les quatre mètriques: com llegir-les
 
-A les taules de l'estudi trobarem quatre mesures que ofereixen perspectives diferents sobre el públic de cada pel·lícula.
+A moltes de les taules de l'estudi trobarem quatre columnes de mesura. Cadascuna explica una història diferent:
 
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
