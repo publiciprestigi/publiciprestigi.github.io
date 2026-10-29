@@ -47,7 +47,9 @@ for(const item of pages) {
  if(item.file==='part-ii.html'){
   await page.locator('.sidebar-link[data-seccio="panorama"]').first().evaluate(el=>el.click());
   await page.waitForTimeout(700);
-  assert.ok((await page.locator('#pip-panorama-espectadors').textContent()).includes('2,01M'),'llindar del panorama ES');
+  await page.waitForFunction(() => !!(window.Chart && Chart.getChart(document.getElementById('pip-panorama-public'))));
+  const etiquetes = await page.evaluate(() => Chart.getChart(document.getElementById('pip-panorama-public')).data.labels);
+  assert.ok(etiquetes.some(s => s.includes('umbral ≈2,01M')), 'llindar del panorama ES');
  }
  if(item.file==='part-iii.html'){
   await page.locator('.sidebar-link[data-seccio="generacions"]').first().evaluate(el=>el.click());
