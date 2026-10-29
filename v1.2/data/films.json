@@ -591,25 +591,6 @@
   {
     "pos_decade": 32,
     "pos_hist": 73,
-    "any": 1964,
-    "titol": "Búsqueme a esa chica",
-    "director": "Fernando Palacios",
-    "decada": "60s",
-    "espectadors": 2262913,
-    "mercat_M": 400,
-    "mercat_estimat": true,
-    "penetracio": 7.15,
-    "penetracio_estimat": true,
-    "quota": 0.57,
-    "quota_estimat": true,
-    "iic": 1.37,
-    "in_top100": true,
-    "context_text": "Comèdia musical amb Marisol. Una jove cantant de Mallorca que busca la seva oportunitat.",
-    "context_text_es": "Comedia musical con Marisol. Una joven cantante de Mallorca que busca su oportunidad."
-  },
-  {
-    "pos_decade": 33,
-    "pos_hist": 74,
     "any": 1968,
     "titol": "El turismo es un gran invento",
     "director": "Pedro Lazaga",
@@ -627,8 +608,8 @@
     "context_text_es": "Comedia sobre el *boom* turístico. Martínez Soria y Lazaga: la mirada irónica sobre la España que se modernizaba."
   },
   {
-    "pos_decade": 34,
-    "pos_hist": 75,
+    "pos_decade": 33,
+    "pos_hist": 74,
     "any": 1967,
     "titol": "Operación cabaretera",
     "director": "Mariano Ozores",
@@ -646,8 +627,8 @@
     "context_text_es": "Comedia paródica de espionaje de Ozores con Gracita Morales y José Luis López Vázquez."
   },
   {
-    "pos_decade": 35,
-    "pos_hist": 76,
+    "pos_decade": 34,
+    "pos_hist": 75,
     "any": 1965,
     "titol": "Cabriola",
     "director": "Mel Ferrer",
@@ -665,27 +646,8 @@
     "context_text_es": "Musical con Marisol dirigido por el estadounidense Mel Ferrer. Coproducción internacional."
   },
   {
-    "pos_decade": 36,
-    "pos_hist": 80,
-    "any": 1964,
-    "titol": "Tulipán negro",
-    "director": "Christian-Jaque",
-    "decada": "60s",
-    "espectadors": 2178978,
-    "mercat_M": 400,
-    "mercat_estimat": true,
-    "penetracio": 6.89,
-    "penetracio_estimat": true,
-    "quota": 0.54,
-    "quota_estimat": true,
-    "iic": 1.32,
-    "in_top100": true,
-    "context_text": "Aventura de capa i espasa hispano-franco-italiana amb Alain Delon, Virna Lisi i Adolfo Marsillach.",
-    "context_text_es": "Aventura de capa y espada hispano-franco-italiana con Alain Delon, Virna Lisi y Adolfo Marsillach."
-  },
-  {
-    "pos_decade": 37,
-    "pos_hist": 85,
+    "pos_decade": 35,
+    "pos_hist": 83,
     "any": 1969,
     "titol": "Soltera y madre en la vida",
     "director": "Javier Aguirre",
@@ -703,8 +665,8 @@
     "context_text_es": "Comedia con Lina Morgan y Alfredo Landa que aborda las relaciones prematrimoniales y el embarazo fuera del matrimonio."
   },
   {
-    "pos_decade": 38,
-    "pos_hist": 88,
+    "pos_decade": 36,
+    "pos_hist": 86,
     "any": 1967,
     "titol": "Los chicos del Preu",
     "director": "Pedro Lazaga",
@@ -722,8 +684,8 @@
     "context_text_es": "Comedia juvenil sobre estudiantes en Madrid, entre los primeros amores, el acceso a la vida adulta y la cultura pop de los 60s."
   },
   {
-    "pos_decade": 39,
-    "pos_hist": 90,
+    "pos_decade": 37,
+    "pos_hist": 88,
     "any": 1968,
     "titol": "Tú perdonas, yo no",
     "director": "Giuseppe Colizzi",
@@ -741,8 +703,8 @@
     "context_text_es": "*Spaghetti western* de coproducción con Terence Hill y Bud Spencer. La fórmula Leone a menor escala."
   },
   {
-    "pos_decade": 40,
-    "pos_hist": 92,
+    "pos_decade": 38,
+    "pos_hist": 90,
     "any": 1967,
     "titol": "Crónica de nueve meses",
     "director": "Mariano Ozores",
@@ -760,8 +722,8 @@
     "context_text_es": "Coproducción hispano-italiana de comedia con Gracita Morales y José Luis López Vázquez, entre otros."
   },
   {
-    "pos_decade": 41,
-    "pos_hist": 94,
+    "pos_decade": 39,
+    "pos_hist": 92,
     "any": 1967,
     "titol": "Sor Ye-Yé",
     "director": "Ramón Fernández",
@@ -779,8 +741,8 @@
     "context_text_es": "Comedia musical de coproducción hispano-mexicana con Hilda Aguirre y canciones de Manuel Alejandro."
   },
   {
-    "pos_decade": 42,
-    "pos_hist": 96,
+    "pos_decade": 40,
+    "pos_hist": 94,
     "any": 1966,
     "titol": "Amor a la española",
     "director": "Fernando Merino",
@@ -798,8 +760,8 @@
     "context_text_es": "Comedia con José Luis López Vázquez, Alfredo Landa y Manolo Gómez Bur persiguiendo a turistas extranjeras en Torremolinos."
   },
   {
-    "pos_decade": 43,
-    "pos_hist": 100,
+    "pos_decade": 41,
+    "pos_hist": 98,
     "any": 1966,
     "titol": "La mujer perdida",
     "director": "Tulio Demicheli",
@@ -817,8 +779,8 @@
     "context_text_es": "Melodrama de coproducción hispano-franco-italiana con Sara Montiel como estrella internacional."
   },
   {
-    "pos_decade": 44,
-    "pos_hist": null,
+    "pos_decade": 42,
+    "pos_hist": 99,
     "any": 1967,
     "titol": "Una señora estupenda",
     "director": "Eugenio Martín",
@@ -831,13 +793,13 @@
     "quota": 0.51,
     "quota_estimat": false,
     "iic": 1.21,
-    "in_top100": false,
+    "in_top100": true,
     "context_text": "Vehicle de Lola Flores. La gran estrella de la cançó espanyola porta el seu carisma indestructible a la pantalla gran.",
     "context_text_es": "Vehículo para Lola Flores. La gran estrella de la canción española lleva su carisma indestructible a la gran pantalla."
   },
   {
-    "pos_decade": 45,
-    "pos_hist": null,
+    "pos_decade": 43,
+    "pos_hist": 100,
     "any": 1968,
     "titol": "Digan lo que digan",
     "director": "Mario Camus",
@@ -850,7 +812,7 @@
     "quota": 0.53,
     "quota_estimat": false,
     "iic": 1.22,
-    "in_top100": false,
+    "in_top100": true,
     "context_text": "Vehicle per a Raphael en el seu moment àlgid. Camus treu profit del fenomen del cantant de Linares.",
     "context_text_es": "Vehículo para Raphael en su momento álgido. Camus saca partido del fenómeno del cantante de Linares."
   },
@@ -1084,7 +1046,7 @@
   },
   {
     "pos_decade": 13,
-    "pos_hist": 77,
+    "pos_hist": 76,
     "any": 1971,
     "titol": "La casa de las palomas",
     "director": "Claudio Guerín Hill",
@@ -1103,7 +1065,7 @@
   },
   {
     "pos_decade": 14,
-    "pos_hist": 81,
+    "pos_hist": 79,
     "any": 1974,
     "titol": "Y si no, nos enfadamos",
     "director": "Marcello Fondato",
@@ -1122,7 +1084,7 @@
   },
   {
     "pos_decade": 15,
-    "pos_hist": 87,
+    "pos_hist": 85,
     "any": 1974,
     "titol": "El amor del capitán Brando",
     "director": "Jaime de Armiñán",
@@ -1141,7 +1103,7 @@
   },
   {
     "pos_decade": 16,
-    "pos_hist": 89,
+    "pos_hist": 87,
     "any": 1971,
     "titol": "Vente a Alemania, Pepe",
     "director": "Pedro Lazaga",
@@ -1160,7 +1122,7 @@
   },
   {
     "pos_decade": 17,
-    "pos_hist": 95,
+    "pos_hist": 93,
     "any": 1978,
     "titol": "La escopeta nacional",
     "director": "Luis García Berlanga",
@@ -1179,7 +1141,7 @@
   },
   {
     "pos_decade": 18,
-    "pos_hist": 97,
+    "pos_hist": 95,
     "any": 1974,
     "titol": "Tormento",
     "director": "Pedro Olea",
@@ -1464,7 +1426,7 @@
   },
   {
     "pos_decade": 3,
-    "pos_hist": 99,
+    "pos_hist": 97,
     "any": 1984,
     "titol": "Los santos inocentes",
     "director": "Mario Camus",
@@ -1958,7 +1920,7 @@
   },
   {
     "pos_decade": 4,
-    "pos_hist": 78,
+    "pos_hist": 77,
     "any": 1997,
     "titol": "Airbag",
     "director": "Juanma Bajo Ulloa",
@@ -1977,7 +1939,7 @@
   },
   {
     "pos_decade": 5,
-    "pos_hist": 83,
+    "pos_hist": 81,
     "any": 1995,
     "titol": "Two Much",
     "director": "Fernando Trueba",
@@ -1996,7 +1958,7 @@
   },
   {
     "pos_decade": 6,
-    "pos_hist": 91,
+    "pos_hist": 89,
     "any": 1991,
     "titol": "Tacones lejanos",
     "director": "Pedro Almodóvar",
@@ -2680,7 +2642,7 @@
   },
   {
     "pos_decade": 12,
-    "pos_hist": 84,
+    "pos_hist": 82,
     "any": 2009,
     "titol": "Celda 211",
     "director": "Daniel Monzón",
@@ -2699,7 +2661,7 @@
   },
   {
     "pos_decade": 13,
-    "pos_hist": 86,
+    "pos_hist": 84,
     "any": 2002,
     "titol": "Los lunes al sol",
     "director": "Fernando León de Aranoa",
@@ -2718,7 +2680,7 @@
   },
   {
     "pos_decade": 14,
-    "pos_hist": 93,
+    "pos_hist": 91,
     "any": 2001,
     "titol": "Juana la loca",
     "director": "Vicente Aranda",
@@ -2812,7 +2774,7 @@
     "context_text_es": "De la Iglesia en su momento álgido. *Thriller* claustrofóbico ambientado en una comunidad de vecinos. Cine de género como vehículo de crítica social."
   },
   {
-    "pos_decade": 19,
+    "pos_decade": 20,
     "pos_hist": null,
     "any": 2005,
     "titol": "Los 2 lados de la cama",
@@ -2831,7 +2793,7 @@
     "context_text_es": "Secuela de *El otro lado de la cama*. Martínez-Lázaro repite la fórmula musical y romántica con buen resultado."
   },
   {
-    "pos_decade": 20,
+    "pos_decade": 19,
     "pos_hist": null,
     "any": 2004,
     "titol": "El lobo",
@@ -3269,7 +3231,7 @@
   },
   {
     "pos_decade": 13,
-    "pos_hist": 82,
+    "pos_hist": 80,
     "any": 2018,
     "titol": "Superlópez",
     "director": "Javier Ruiz Caldera",
@@ -3630,7 +3592,7 @@
   },
   {
     "pos_decade": 2,
-    "pos_hist": 79,
+    "pos_hist": 78,
     "any": 2024,
     "titol": "Padre no hay más que uno 4",
     "director": "Santiago Segura",
@@ -3649,7 +3611,7 @@
   },
   {
     "pos_decade": 3,
-    "pos_hist": 98,
+    "pos_hist": 96,
     "any": 2025,
     "titol": "Padre no hay más que uno 5",
     "director": "Santiago Segura",

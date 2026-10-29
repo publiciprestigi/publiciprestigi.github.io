@@ -1399,11 +1399,11 @@ window.PiP_graficSauraAlmodovar = function() {
     },
   };
 
-  // Plugin línia llindar Top 100 (2.020.217 esp.)
+  // Plugin línia llindar Top 100 (2.006.484 esp.)
   const pluginLlindar = {
     id: 'sa-llindar',
     afterDraw(chart) {
-      const VAL = 2020217;
+      const VAL = 2006484;
       const c = chart.ctx;
       const y = chart.scales.y.getPixelForValue(VAL);
       if (y < chart.scales.y.top || y > chart.scales.y.bottom) return;
@@ -1506,7 +1506,7 @@ window.PiP_graficSauraAlmodovar = function() {
     leg.innerHTML = `
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#1E4080;display:inline-block"></span><span>Carlos Saura</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:#9B2335;display:inline-block"></span><span>Pedro Almodóvar</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,01M esp.)</span></span>`;
     const tit = document.getElementById('sa-tit');
     if (tit) tit.insertAdjacentElement('afterend', leg);
     else bloc.insertBefore(leg, bloc.firstChild);
@@ -1616,11 +1616,11 @@ window.PiP_graficGeneracioActual = function() {
     },
   };
 
-  // Plugin: línia vertical llindar Top 100 (2.020.217 esp.)
+  // Plugin: línia vertical llindar Top 100 (2.006.484 esp.)
   const pluginLlindar = {
     id: 'ga-llindar',
     afterDraw(chart) {
-      const VAL = 2020217;
+      const VAL = 2006484;
       const c = chart.ctx;
       const x = chart.scales.x.getPixelForValue(VAL);
       if (x < chart.scales.x.left || x > chart.scales.x.right) return;
@@ -1750,7 +1750,7 @@ window.PiP_graficGeneracioActual = function() {
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0d4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Oliver Laxe</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0c4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Carla Simón</span>
       <span style="display:flex;align-items:center;gap:4px"><span style="width:12px;height:12px;background:#f0b4ac;display:inline-block;border-radius:2px;border:1px solid rgba(0,0,0,.1)"></span>Alauda Ruiz de Azúa</span>
-      <span style="display:flex;align-items:center;gap:5px;margin-left:8px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px;margin-left:8px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,01M esp.)</span></span>`;
     const tit = document.getElementById('ga-tit');
     if (tit) tit.insertAdjacentElement('afterend', leg);
     else bloc.insertBefore(leg, bloc.firstChild);
@@ -1848,11 +1848,11 @@ window.PiP_graficAutorIndustrial = function() {
     },
   };
 
-  // Plugin línia llindar Top 100 (2.020.217 esp.)
+  // Plugin línia llindar Top 100 (2.006.484 esp.)
   const pluginLlindar = {
     id: 'ai-llindar',
     afterDraw(chart) {
-      const VAL = 2020217;
+      const VAL = 2006484;
       const c = chart.ctx;
       const y = chart.scales.y.getPixelForValue(VAL);
       if (y < chart.scales.y.top || y > chart.scales.y.bottom) return;
@@ -1976,7 +1976,7 @@ window.PiP_graficAutorIndustrial = function() {
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_IGLESIA};display:inline-block"></span><span>Álex de la Iglesia</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_AMENABAR};display:inline-block"></span><span>Alejandro Amenábar</span></span>
       <span style="display:flex;align-items:center;gap:5px"><span style="width:18px;height:2px;background:${COL_BAYONA};display:inline-block"></span><span>J.A. Bayona</span></span>
-      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,02M esp.)</span></span>`;
+      <span style="display:flex;align-items:center;gap:5px"><span style="display:inline-block;width:22px;height:1px;border-top:1px dashed #888"></span><span>${pip3T('Llindar Top 100','Umbral Top 100')} (2,01M esp.)</span></span>`;
     const tit = document.getElementById('ai-tit');
     if (tit) tit.insertAdjacentElement('afterend', leg);
     else bloc.insertBefore(leg, bloc.firstChild);

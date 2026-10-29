@@ -3,11 +3,11 @@ Resumen cronológico de las películas líderes de cada década. Las métricas d
 <!-- /intro -->
 
 <!-- intermedi -->
-Las 100 películas del Top 100, con período principal 1965–2025 y dos excepciones de 1964 conservadas del Anuario ICAA 2023, acumulan 294,4M de espectadores. Veamos cómo se distribuyen por décadas:
+Las 100 películas del Top 100, estrenadas entre 1965 y 2025 acumulan 294,0M de espectadores. Veamos cómo se distribuyen por décadas:
 <!-- /intermedi -->
 
 <!-- comentari -->
-La distribución por décadas es muy desigual y refleja el profundo cambio del mercado cinematográfico español. El grupo de los 60s, incluidas las dos excepciones de 1964, acapara el 43% del Top 100 porque el cine todavía era el gran espectáculo popular de masas. Los años setenta aún mantienen una presencia importante (18%), pero el descenso ya es evidente.
+La distribución por décadas es muy desigual y refleja el profundo cambio del mercado cinematográfico español. El grupo de los 60s acapara el 43% del Top 100 porque el cine todavía era el gran espectáculo popular de masas. Los años setenta aún mantienen una presencia importante (18%), pero el descenso ya es evidente.
 
 La caída abrupta de los ochenta (3%) marca el cambio de época: universalización de la televisión, irrupción del vídeo doméstico y transformación del modelo de producción con el Decreto Miró <sup>[5]</sup>, en un contexto en el que el cine en salas deja de tener la centralidad social y comercial de las décadas anteriores.
 

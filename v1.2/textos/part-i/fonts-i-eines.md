@@ -1,8 +1,8 @@
-Per analitzar el públic a les sales, l'estudi parteix de les entrades venudes, no de la recaptació en euros. La raó és de fons: la recaptació mesura un retorn econòmic; les entrades, l'assistència a les sales i la dimensió col·lectiva del fenomen. Una entrada no equival necessàriament a una persona diferent.
+L'estudi treballa exclusivament amb nombre d'entrades venudes, no amb xifres de recaptació en euros. La raó és de fons: el que ens interessa és quantes persones van entrar en una sala de cinema i van formar part d'un moment cultural compartit. La recaptació mesura un retorn econòmic, les entrades un impacte social.
 
 ## L'ICAA com a font principal
 
-El Top 100 parteix del <a href="https://www.cultura.gob.es/dam/jcr:ff219edb-2db8-4411-8f67-6d3e636f6869/7-5-largometrajes-esp-ext-historico.pdf" target="_blank" rel="noopener">rànquing oficial</a> de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura, publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, el darrer anuari disponible en el moment de preparar aquesta edició. El rànquing s'ha actualitzat amb les pel·lícules estrenades el 2024 i el 2025 que han aconseguit entrar-hi. Concretament, *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025), de Santiago Segura, han substituït *Una señora estupenda* (1967), d'Eugenio Martín, i *Digan lo que digan* (1968), de Mario Camus.
+El Top 100 parteix del <a href="https://www.cultura.gob.es/dam/jcr:ff219edb-2db8-4411-8f67-6d3e636f6869/7-5-largometrajes-esp-ext-historico.pdf" target="_blank" rel="noopener">rànquing oficial</a> de l'Institut de la Cinematografia i de les Arts Audiovisuals (ICAA) del Ministeri de Cultura, publicat a l'<a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/anuarios/ano-2023.html" target="_blank" rel="noopener">Anuari 2023</a>, el darrer anuari disponible en el moment de preparar aquesta edició. El rànquing s'ha actualitzat amb les pel·lícules estrenades el 2024 i el 2025 que han aconseguit entrar-hi. S'hi han incorporat *Padre no hay más que uno 4* (2024) i *Padre no hay más que uno 5* (2025), de Santiago Segura. El rànquing resultant aplica el criteri d'estrena a partir de l'1 de gener de 1965, fet que permet mantenir-hi *Una señora estupenda* (1967), d'Eugenio Martín, i *Digan lo que digan* (1968), de Mario Camus.
 
 També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada.html" target="_blank" rel="noopener">anuaris publicats des de 1968</a> i el <a href="https://www.cultura.gob.es/cultura/areas/cine/mc/catalogodecine/inicio.html" target="_blank" rel="noopener">catàleg de pel·lícules qualificades</a> de l'ICAA per incorporar altres films, identificats en gris a les taules de cada dècada, que ajuden a contextualitzar millor cada època.
 
@@ -25,7 +25,7 @@ Si ens limitem a ordenar les 100 pel·lícules per espectadors absoluts, el ràn
 
 ## Les quatre mètriques: com llegir-les
 
-A les taules de l'estudi trobarem quatre mesures que ofereixen perspectives diferents sobre el públic de cada pel·lícula.
+A moltes de les taules de l'estudi trobarem quatre columnes de mesura. Cadascuna explica una història diferent:
 
 | Mètrica | Fórmula | Què conta |
 | --- | --- | --- |
