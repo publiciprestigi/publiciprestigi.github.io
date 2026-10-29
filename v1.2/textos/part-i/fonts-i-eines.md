@@ -9,7 +9,7 @@ També s'han consultat els <a href="https://www.cultura.gob.es/cultura/areas/cin
 
 ## Abast cronològic
 
-El 1965 marca el punt de partida de l'estudi. L'<a href="https://www.cultura.gob.es/dam/jcr:ac44385f-35d7-4a4a-9800-7eb0bd4518f1/1968.pdf" target="_blank" rel="noopener">Anuari de 1968</a> recull dades d'espectadors i, a les taules de recaptació, incorpora una columna retrospectiva («RECA. DESDE 1965»). Aquesta referència ajuda a explicar l'inici del període analitzat, tot i que el Top 100 oficial inclou dues pel·lícules anteriors a aquesta data. <sup>[1]</sup>
+El 1965 marca el punt de partida de l'estudi perquè coincideix amb l'inici del sistema de control de taquilla a Espanya, que va donar lloc a una sèrie històrica de registres d'exhibició cinematogràfica. Aquesta base documental permet reconstruir i comparar l'evolució del públic al llarg del període 1965–2025. <sup>[1]</sup>
 
 Per situar les xifres d'espectadors en el seu context, utilitzem també els totals anuals d'entrades venudes i les dades de població. Les fonts principals són el Ministeri de Cultura i l'INE (Instituto Nacional de Estadística), complementades amb estimacions i reconstruccions històriques per als primers anys. <sup>[2]</sup>
 
