@@ -19,11 +19,11 @@ function positions(metric){
 const expected = [
  ['8 apellidos vascos',2014,{espectadors:1,quota:1,penetracio:1,iic:1}],
  ['La ciudad no es para mí',1966,{espectadors:11,quota:48,penetracio:4,iic:26}],
- ['Los santos inocentes',1984,{espectadors:99,quota:36,iic:47}],
+ ['Los santos inocentes',1984,{espectadors:97,quota:36,iic:47}],
  ['Mujeres al borde de un ataque de nervios',1988,{espectadors:22,quota:7,iic:9}],
  ['Padre no hay más que uno 3',2022,{espectadors:50,quota:5,penetracio:90,iic:11}],
- ['Padre no hay más que uno 4',2024,{espectadors:79,quota:17}],
- ['Padre no hay más que uno 5',2025,{espectadors:98,quota:16}],
+ ['Padre no hay más que uno 4',2024,{espectadors:78,quota:17}],
+ ['Padre no hay más que uno 5',2025,{espectadors:96,quota:16}],
  ['Juicio de faldas',1969,{espectadors:20,penetracio:13}],
  ['Por un puñado de dólares',1965,{espectadors:25,penetracio:14}],
  ['Mi canción es para ti',1965,{espectadors:14,penetracio:8}],
@@ -44,9 +44,9 @@ assertFilm('Mujeres al borde de un ataque de nervios',1988,{quota:3.82,iic:3.91}
 assertFilm('Padre no hay más que uno 3',2022,{quota:4.41,iic:3.35});
 assertFilm('Los otros',2001,{iic:5.65});
 assert.equal(top.length,100);
-assert.equal(top.reduce((s,f)=>s+f.espectadors,0),294408270);
-assert.deepEqual(top.filter(f=>f.any===1964).map(f=>f.titol).sort(),
- ['Búsqueme a esa chica','Tulipán negro'].sort());
+assert.equal(top.reduce((s,f)=>s+f.espectadors,0),293985141);
+assert.ok(top.every(f=>f.any>=1965 && f.any<=2025));
+assert.equal(top.slice().sort((a,b)=>a.espectadors-b.espectadors)[0].espectadors,2006484);
 assert.deepEqual(['60s','70s','80s','90s','2000s','2010s','2020s'].map(d=>top.filter(f=>f.decada===d).length),
  [43,18,3,6,14,13,3]);
 const decades=[['60s',1965,1969,394.5],['70s',1970,1979,260.0],['80s',1980,1989,123.1],
@@ -67,6 +67,6 @@ const texts={
 assert.ok(texts.quota.includes('públic acumulat')&&texts.quota.includes('mercat anual de referència'));
 assert.ok(texts.quota.includes('10,68%')&&texts.quota.includes('6,51%')&&texts.quota.includes('5,92%'));
 assert.ok(texts.iic.includes('3,82%')&&texts.iic.includes('4,41%')&&texts.iic.includes('403,1M'));
-assert.ok(texts.decades.includes('294,4M')&&texts.decades.includes('1964'));
+assert.ok(texts.decades.includes('294,0M')&&texts.decades.includes('1965'));
 assert.ok(texts.mercat.includes('435,2M')&&texts.mercat.includes('66,9M'));
 console.log('RELAT QUANTITATIU CORRECTE: 15 films contrastats, posicions, 7 dècades i textos clau.');
