@@ -5,6 +5,7 @@ on:
       - auditoria-mercat-iic-2026
       - revisio-fonts-franca-2025
       - top100-estrenes-1965-2025-2026
+      - integracio-v12-bilingue-top100-2026
     paths:
       - 'v1.2/**'
       - '.github/workflows/validacio-mercat-iic.yml'
