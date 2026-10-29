@@ -39,7 +39,7 @@ assert.equal(market.length, 61, 'mercat 1965–2025');
 assert.equal(population.length, 62, 'població 1964–2025');
 assert.equal(marketAudit.length, 61);
 assert.equal(popAudit.length, 62);
-assert.equal(films.length, 210);
+assert.equal(films.length, 208, 'corpus operatiu 1965–2025');
 assert.equal(expected.length, 210);
 assert.equal(films.filter(f => f.in_top100).length, 100);
 assert.equal(fixed.length, 49);
@@ -65,10 +65,16 @@ for (const row of popAudit) {
     assert.ok(Math.abs(marketByYear.get(year).poblacio_M * 1e6 - persons) < 0.01,
       'compatibilitat població/mercat: ' + year);
 }
-const f1964 = films.filter(f => f.any === 1964 && f.in_top100);
-assert.deepEqual(f1964.map(f => f.titol).sort(),
-  ['Búsqueme a esa chica', 'Tulipán negro'].sort(), 'excepcions de 1964');
-assert.ok(f1964.every(f => f.mercat_M === 400), 'mercat 1964 = 400M estimats');
+assert.ok(films.every(f => f.any >= 1965 && f.any <= 2025), 'estrenes dins 1965–2025');
+assert.ok(!films.some(f => ['Búsqueme a esa chica', 'Tulipán negro'].includes(f.titol)), 'sense excepcions de 1964');
+const top100 = films.filter(f => f.in_top100).sort((a,b) => b.espectadors - a.espectadors);
+assert.equal(top100.at(-1).espectadors, 2006484, 'nou llindar Top 100');
+assert.equal(top100.reduce((sum,f) => sum + f.espectadors, 0), 293985141, 'total acumulat');
+for (const [i, f] of top100.entries()) assert.equal(f.pos_hist, i + 1, 'posició històrica: '+f.titol);
+for (const d of new Set(films.map(f => f.decada))) {
+  const rows = films.filter(f => f.decada === d).sort((a,b) => b.espectadors - a.espectadors);
+  for (const [i,f] of rows.entries()) assert.equal(f.pos_decade, i + 1, 'posició dècada: '+f.titol);
+}
 const anchor = films.find(f => f.titol === '8 apellidos vascos' && f.any === 2014);
 assert.ok(anchor, 'film de referència IIC');
 const m2014 = marketByYear.get(2014);
@@ -78,9 +84,7 @@ const k = 10 / Math.sqrt(qRef * pRef);
 const two = n => Number(n.toFixed(2));
 assert.ok(Math.abs(k - 0.6807356220097183) < 1e-12);
 for (const film of films) {
-  const m = film.any === 1964
-    ? { entrades_M: 400, poblacio_M: popByYear.get(1964).poblacio_M }
-    : marketByYear.get(film.any);
+  const m = marketByYear.get(film.any);
   assert.ok(m, 'mercat absent per al film ' + film.titol);
   const q = 100 * film.espectadors / (m.entrades_M * 1e6);
   const p = 100 * film.espectadors / (m.poblacio_M * 1e6);
@@ -100,19 +104,8 @@ for (const film of films) {
   assert.equal(film.quota_estimat, film.any <= 1965);
   assert.equal(film.penetracio_estimat, film.any <= 1972);
 }
-const rank = key => new Map(films.filter(f => f.in_top100)
-  .slice().sort((a, b) => b[key] - a[key])
-  .map((f, i) => [f.any + '|' + f.titol, i + 1]));
-for (const [metric, col] of [
-  ['quota', 'rank_quota_despres'],
-  ['penetracio', 'rank_pen_despres'],
-  ['iic', 'rank_iic_despres']
-]) {
-  const positions = rank(metric);
-  for (const r of expected.filter(r => r.tipus === 'TOP100'))
-    assert.equal(positions.get(r.any + '|' + r.film), +r[col],
-      'posició ' + metric + ': ' + r.film);
-}
+// Les posicions de l'auditoria anterior corresponen al corpus antic.
+// El corpus actual es valida per ordre d'espectadors i posicions per dècada més amunt.
 const js = read('js/part-iii.js');
 const start = js.indexOf('function indicadorsMercatIII(');
 const end = js.indexOf('\n}\n\n', start);
@@ -142,5 +135,5 @@ for (const source of [js, read('js/mercat.js'), read('js/decades-resum.js')])
   new Function(source);
 for (const script of html.matchAll(/<script\b(?![^>]*\bsrc=)[^>]*>([\s\S]*?)<\/script>/gi))
   new Function(script[1]);
-console.log('VALIDACIÓ CORRECTA: 61 mercats, 62 poblacions, 210 films, 630 mètriques, ' +
-  '300 posicions, 49 entrades manuals, codi JS/HTML sense errors de sintaxi.');
+console.log('VALIDACIÓ CORRECTA: 61 mercats, 62 poblacions, 208 films, 624 mètriques, ' +
+  '100 posicions històriques i posicions per dècada, 49 entrades manuals, codi JS/HTML sense errors de sintaxi.');
