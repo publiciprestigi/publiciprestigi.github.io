@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-
-<html data-base="../" lang="es">
+<html lang="es" data-base="../">
 <head>
-<meta name="robots" content="noindex, nofollow"/>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Notas — Públic i Prestigi. Referencias y fuentes documentales del estudio." name="description"/>
-<link rel="canonical" href="https://publiciprestigi.com/es/notes.html"/>
-<link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/notes.html"/>
-<link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/notes.html"/>
-<link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/notes.html"/>
-<title>Notas · Públic i Prestigi</title>
-<link href="../css/estil.css" rel="stylesheet"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Notes — Públic i Prestigi. Referències i fonts documentals de l'estudi.">
+  <link rel="canonical" href="https://publiciprestigi.com/notes.html">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/notes.html">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/notes.html">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/notes.html">
+  <title>Notes · Públic i Prestigi</title>
+  <link rel="stylesheet" href="../css/estil.css">
   <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
-<style>
+  <style>
     .notes-portada {
       max-width: var(--amplada-text);
       margin: 0 auto;
@@ -88,199 +87,316 @@
       margin: 20px 0 10px 40px;
     }
     .notes-seccio:first-of-type { margin-top: 0; }
+    .notes-seccio a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-underline-offset: 2px;
+    }
+    .notes-seccio a:visited,
+    .notes-seccio a:hover,
+    .notes-seccio a:focus-visible {
+      color: inherit;
+    }
+
   </style>
-<script>
+
+  <script>
     window.pipPath = function (path) {
       var base = document.documentElement.getAttribute('data-base') || '';
       return base + path;
     };
   </script>
-<!-- Versión española: borrador completo pendiente de revisión editorial final. -->
 </head>
 <body>
-<!-- ── Cabecera ES ── -->
+
+  <!-- ── Capçalera CA ── -->
   <header class="capcalera capcalera-v2">
     <div class="capcalera-interior">
       <div class="capcalera-esquerra">
         <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.1 (1965–2025)</a>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versió 1.1 (1965–2025)</a>
       </div>
 
-      <a href="./" class="capcalera-logo">Públic i Prestigi</a>
+      <a href="/v1.2/es/" class="capcalera-logo">Públic i Prestigi</a>
 
       <div class="capcalera-controls">
-        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Cercar" role="button" tabindex="0" aria-label="Cercar">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
           </svg>
         </span>
 
-        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Subscriure's</button>
 
         <div class="capcalera-idioma">
           <a href="../notes.html" lang="ca" hreflang="ca">CA</a>
-          <a href="#" class="actiu lang-es" lang="es" aria-current="page">ES</a>
+          <a href="#" class="actiu" lang="es" aria-current="page">ES</a>
         </div>
       </div>
     </div>
   </header>
-<nav class="navegacio">
-<div class="navegacio-interior">
-<a class="nav-link" href="./">Inicio</a>
-<a class="nav-link" href="part-i.html">I — Público</a>
-<a class="nav-link" href="part-ii.html">II — Prestigio</a>
-<a class="nav-link" href="part-iii.html">III — Análisis</a>
-<a class="nav-link" href="sobre.html">Sobre el proyecto</a>
-</div>
-</nav>
-<main class="contingut">
-<div class="notes-portada">
-<div class="part-capcalera">
-<h1>Notas</h1>
-<p class="part-subtitol">Referencias, fuentes y aclaraciones metodológicas. Cada nota también es accesible desde la página en la que aparece citada.</p>
-</div>
-<!-- PART I -->
-<div class="notes-grup notes-grup-primer">
-<p class="notes-grup-titol">Part I</p>
-<p class="notes-seccio">Fuentes y herramientas</p>
-<div class="nota" id="n1">
-<span class="nota-num">[1]</span>
-<p class="nota-text">Los anuarios estadísticos del Ministerio de Cultura español con datos sistemáticos de espectadores por título empiezan en 1968. Para el periodo 1965–1967, los datos proceden de registros administrativos de la Dirección General de Cinematografía, organismo anterior a la creación del ICAA mediante la <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1984-28337" rel="noopener" target="_blank">Ley 50/1984, de 30 de diciembre</a>. La cobertura es suficiente para los films del Top 100 de este periodo, pero incompleta para el conjunto de la producción.</p>
-</div>
-<div class="nota" id="n2">
-<span class="nota-num">[2]</span>
-<p class="nota-text">La frecuencia de asistencia en los años 60 se obtiene dividiendo el total de entradas vendidas (estimado entre 310–390 millones anuales para el periodo 1965–1969, según datos del Ministerio de Cultura) por la población española del momento (32–33 millones, INE, <em>Censo de Población</em> de 1960 y 1970). El resultado oscila entre 9,4 y 12,2 visitas por habitante y año. Para 2025: mercado de 65 millones de entradas (Comscore, diciembre de 2025) sobre una población de 48,6 millones (INE, <em>Padrón Municipal</em> 2024): 1,34 visitas por habitante.</p>
-</div>
-<div class="nota" id="n3">
-<span class="nota-num">[3]</span>
-<p class="nota-text">Comscore es una empresa estadounidense fundada en 1999, líder mundial en medición de audiencias y taquilla cinematográfica. Desde mediados de la década de 2010, mantiene un acuerdo con el ICAA para el suministro de datos de taquilla, hasta el punto de que varias secciones de las estadísticas oficiales del propio Instituto se elaboran directamente con datos de Comscore. En este estudio, las cifras de mercado total a partir de los años 90 combinan los anuarios del ICAA con datos de Comscore cuando era necesario completar o verificar el total anual.</p>
-</div>
-<p class="notes-seccio">Mercado y población</p>
-<div class="nota" id="n4">
-<span class="nota-num">[4]</span>
-<p class="nota-text">Mercado total en España en 2025 (todas las películas, españolas y extranjeras): 65 millones de espectadores y 453 millones de euros de recaudación. Fuente: Comscore, resultados anuales de 2025, publicados el 7 de enero de 2026 en el <a href="https://spainaudiovisualhub.digital.gob.es/es/actualidad/comscore--resultados-anuales-2025" rel="noopener" target="_blank">Spain Audiovisual Hub</a> del Ministerio de Asuntos Económicos (datos provisionales a 29 de diciembre de 2025). La cifra supone un descenso del 8 % respecto a 2024.</p>
-</div>
-<p class="notes-seccio">Resumen por década</p>
-<div class="nota" id="n5">
-<span class="nota-num">[5]</span>
-<p class="nota-text"><a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1984-688" rel="noopener" target="_blank">Real Decreto 3304/1983, de 28 de diciembre</a>, sobre protección de la cinematografía española, impulsado durante la etapa de Pilar Miró como directora general de Cinematografía. Introdujo subvenciones anticipadas sobre proyecto que podían alcanzar hasta el 50 % del coste presupuestado del film. El cambio de modelo coincide, en los datos de este estudio, con una caída drástica de la presencia del cine popular en el Top 100: solo 3 films de los años 80, frente a los 43 de los 60.</p>
-</div>
-</div>
-<!-- PART II -->
-<div class="notes-grup">
-<p class="notes-grup-titol">Part II</p>
-<p class="notes-seccio">Datos y criterio</p>
-<div class="nota" id="n6">
-<span class="nota-num">[6]</span>
-<p class="nota-text">La <a href="https://fiapf.org/" rel="noopener" target="_blank">FIAPF</a> (Federación Internacional de Asociaciones de Productores Cinematográficos) representa a las asociaciones de productores y regula la acreditación internacional de los festivales. El Festival de San Sebastián fue reconocido por primera vez en 1957 como Festival Internacional Competitivo No Especializado, categoría conocida habitualmente como «clase A», pero ocupó esta posición de manera intermitente. Tras perderla en 1980, la recuperó y consolidó en 1985. Sobre este proceso, véase: Minerva Campos Rabadán, <a href="https://ojs.ehu.eus/index.php/Zer/article/view/27248" rel="noopener" target="_blank">«Para ser un "Clase A": las negociaciones del Festival de Cine de San Sebastián y la FIAPF (1953-1985)»</a>, <em>ZER. Revista de Estudios de Comunicación</em>, vol. 30, núm. 58, 2025.</p>
-</div>
-<p class="notes-seccio">Ranking de directores</p>
-<div class="nota" id="n7">
-<span class="nota-num">[7]</span>
-<p class="nota-text">Aitor Arregi figura excepcionalmente como representante del trío de codirectores de <a href="https://moriarti.com/es/nosotros/" rel="noopener" target="_blank">Moriarti</a>, que forma con Jon Garaño y Jose Mari Goenaga, ya que es el único de los tres que firma las tres películas premiadas en San Sebastián. Para evitar fragmentar una trayectoria colectiva tan singular, los otros dos directores no aparecen por separado en los rankings.</p>
-</div>
-</div>
-<!-- PART III -->
-<div class="notes-grup">
-<p class="notes-grup-titol">Part III</p>
-<p class="notes-seccio">Evolución de la brecha</p>
-<div class="nota" id="n8">
-<span class="nota-num">[8]</span>
-<p class="nota-text">La existencia durante la Transición de una demanda específica de cine crítico está documentada en: Trenzado Romero, M., <em>Cultura de masas y cambio político: el cine español de la transición</em>, CIS, Madrid, 1999. Trenzado sostiene que la democratización creó una demanda específica de cine que reflejara la realidad social y política reprimida durante el franquismo, una demanda estructuralmente ligada al contexto histórico y no reproducible.</p>
-</div>
-<div class="nota" id="n9">
-<span class="nota-num">[9]</span>
-<p class="nota-text">La profesionalización del circuito internacional de cine de autor se analiza en: Iordanova, D. &amp; Rhyne, R. (eds.), <em>Film Festival Yearbook 1: The Festival Circuit</em>, St Andrews Film Studies, 2009; y en De Valck, M., <em>Film Festivals: From European Geopolitics to Global Cinephilia</em>, Amsterdam University Press, 2007. Estos estudios documentan cómo, a partir de los años 80–90, los festivales se convierten en un sistema estructurado con agentes, programadores, residencias de guionistas y lógicas de posicionamiento estratégico.</p>
-</div>
-<p class="notes-seccio">La caza vs. Alcarràs</p>
-<div class="nota" id="n10">
-<span class="nota-num">[10]</span>
-<p class="nota-text">En San Sebastián, festival internacional de clase A pero con una relación especialmente directa con la industria cinematográfica española, existían tres precedentes de premio a la dirección para directores españoles: Rafael Gil por <em>La guerra de Dios</em> (1953), Pedro Lazaga por <em>La patrulla</em> (1954) y Miguel Picazo por <em>La tía Tula</em> (1964).</p>
-</div>
-<div class="nota" id="n11">
-<span class="nota-num">[11]</span>
-<p class="nota-text">Los factores multiplicadores de los periodos 1984–1989 y 1990–1994 se han orientado a partir del peso de la televisión en abierto dentro del ecosistema audiovisual de cada momento. La serie de participación de las cadenas recogida por la AIMC en el <a href="https://www.aimc.es/a1mc-c0nt3nt/uploads/2010/11/marco05.pdf" rel="noopener" target="_blank"><em>Marco General de los Medios en España 2005</em></a> empieza en 1988: TVE1 concentraba el 77,7 % de la audiencia aquel año y el 71 % en 1989. Para los primeros años noventa, ya con la entrada de las televisiones privadas, su cuota bajó al 49,3 % en 1991, al 37,4 % en 1992 y al 28,7 % en 1994. Para el tramo 1984–1987, anterior a esta serie, se ha tomado como referencia el predominio de TVE que los datos posteriores todavía documentan en un sistema poco fragmentado. Los factores de los periodos 1994–2005, 2005–2019 y 2020–2025 son estructurales: se derivan del número de ventanas comerciales activas y de su peso relativo —televisión en abierto y de pago, vídeo doméstico, DVD, vídeo bajo demanda y plataformas digitales—. La incertidumbre es especialmente alta desde 2005, porque las plataformas no publican de forma sistemática visualizaciones por título y país. Los factores deben leerse, por tanto, como horquillas conservadoras y órdenes de magnitud, no como audiencias medidas ni como coeficientes estadísticamente validados. El modelo asume que el rendimiento en las ventanas posteriores mantiene una relación aproximada con la audiencia inicial de sala. Por ello no puede reflejar por completo casos singulares, como películas con poca taquilla pero una larga vida televisiva o digital, ni éxitos de cine con un recorrido posterior más limitado. El IAA funciona mejor como corrector comparativo entre ecosistemas de distribución que como una reconstrucción exacta de la audiencia acumulada de cada título.</p>
-</div>
-<div class="nota" id="n12">
-<span class="nota-num">[12]</span>
-<p class="nota-text">Fechas de pases televisivos extraídas del blog <a href="https://emisionescinetve.blogspot.com" rel="noopener" target="_blank"><em>Emisiones históricas de Cine en TVE</em></a>. Pases documentados hasta 1990: <em>La ciudad no es para mí</em>, un único pase (TVE1, inicio del «Nuevo ciclo Paco Martínez Soria», 1983); <em>La caza</em>, tres pases (TVE2, 1979; TVE1 en <em>prime time</em> como homenaje tras el fallecimiento de Alfredo Mayo, 1985; TVE1 Cine Club Ciclo Querejeta, 1988). Ninguno computa en el IAA.</p>
-</div>
-<div class="nota" id="n13">
-<span class="nota-num">[13]</span>
-<p class="nota-text">Las audiencias televisivas de <em>Alcarràs</em> son estimaciones construidas a partir del canal, la franja de emisión y el rendimiento habitual de este tipo de espacios televisivos, no datos oficiales publicados por título. La capa de Movistar+ y plataformas digitales es todavía menos verificable: no existen datos públicos sistemáticos de visualizaciones por título y país. Por ello, el rango final del IAA de <em>Alcarràs</em> debe entenderse como una estimación conservadora del orden de magnitud de su audiencia acumulada, no como una cifra exacta.</p>
-</div>
-<p class="notes-seccio">Cine, leyes y tecnología</p>
-<div class="nota" id="n14">
-<span class="nota-num">[14]</span>
-<p class="nota-text">«Un tercio lo tiene que amortizar la taquilla, el otro tercio lo tienen que amortizar las televisiones y el tercer tercio es la responsabilidad del Estado. (...) Te daban el tercio de lo que había costado la película, por lo tanto podrías hacer películas más caras dentro de unos límites y cuando más cara era la película era mayor la cantidad que ponía el Estado.» Emilio Martínez-Lázaro, <a href="https://e-archivo.uc3m.es/rest/api/core/bitstreams/e1dd273a-2eb0-427c-8c07-1e464762c11a/content" rel="noopener" target="_blank"><em>El pasado es un prólogo</em>, Cuadernos TECMERIN 8</a>, Universidad Carlos III de Madrid, 2015, pp. 131–132.</p>
-</div>
-<div class="nota" id="n15">
-<span class="nota-num">[15]</span>
-<p class="nota-text"><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-9364" rel="noopener" target="_blank">Real Decreto-ley 20/2012, de 13 de julio</a>, de medidas para garantizar la estabilidad presupuestaria. El IVA de las entradas de cine pasó del 8 % al 21 % con efectos desde el 1 de septiembre de 2012, y permaneció en el 21 % hasta el 4 de julio de 2018, cuando recuperó el tipo reducido del 10 %.</p>
-</div>
-<div class="nota" id="n16">
-<span class="nota-num">[16]</span>
-<p class="nota-text">Datos del <a href="https://cimamujerescineastas.es/wp-content/uploads/2024/06/INFORME-CIMA-2023.pdf" rel="noopener" target="_blank"><em>Informe anual CIMA 2023</em></a>, de la Asociación de Mujeres Cineastas y de Medios Audiovisuales. Los largometrajes dirigidos por mujeres pasaron de representar el 23 % de los títulos beneficiarios de las ayudas selectivas en 2018 al 51 % en 2021. En 2023, el coste medio reconocido fue de 2,84 millones de euros para los films dirigidos por hombres y de 1,64 millones para los dirigidos por mujeres, una diferencia del 42 %. Las reservas de crédito para proyectos dirigidos exclusivamente por directoras fueron introducidas por la <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2020-6921" rel="noopener" target="_blank">Orden CUD/582/2020, de 26 de junio</a>.</p>
-</div>
-<div class="nota" id="n17">
-<span class="nota-num">[17]</span>
-<p class="nota-text"><a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" rel="noopener" target="_blank">Ley 13/2022, de 7 de julio</a>, General de Comunicación Audiovisual. Transpone la Directiva (UE) 2018/1808 y extiende a las plataformas de vídeo bajo demanda la obligación de invertir el 5 % de los ingresos obtenidos en España en la producción de obras audiovisuales europeas.</p>
-</div>
-<p class="notes-seccio">Dos generaciones, dos mercados y un prestigio</p>
-<div class="nota" id="n18">
-<span class="nota-num">[18]</span>
-<p class="nota-text">Un ranking experimental que aplicara el factor IAA a todos los films del corpus del estudio (Top 100 de la Parte I + 285 films de festival de la Parte II) daría como resultado 15 nuevas incorporaciones de films de «prestigio» que no aparecían en el Top 100 por espectadores de sala, entre ellas: <em>As bestas</em> (2022) en la posición #48, justo por encima de <em>Furtivos</em> en la #49; <em>La isla mínima</em> (2014), de Alberto Rodríguez, en la posición #57; tres películas más de Almodóvar —tendría seis en total en el Top 100—: <em>Volver</em> (2006) en la #35, <em>Átame</em> (1990) en la #55 y <em>Dolor y gloria</em> (2019) en la #83; <em>Mientras dure la guerra</em> (2019), de Amenábar, en la #36; <em>Belle Époque</em> (1992), de Fernando Trueba, en la #43; <em>La comunidad</em> (2000), de Álex de la Iglesia, en la #52; o <em>Amantes</em> (1991), de Vicente Aranda, en la #54. Fuera del Top 100 quedarían: <em>Los domingos</em> (2025) en la #102 y <em>Sirât</em> (2025) en la #131, los dos films con las ventanas posteriores todavía abiertas en el momento del cálculo, lo que significa que su IAA real será mayor cuando se cierre el ciclo comercial. Se trata, en cualquier caso, de un ejercicio exploratorio, una forma de jugar con los datos para ver hacia dónde apuntan, no de un resultado con pretensiones de rigor.</p>
-</div>
-<p class="notes-seccio">Cine de autor industrial</p>
-<div class="nota" id="n19">
-<span class="nota-num">[19]</span>
-<p class="nota-text">Véase el ranking por directores de la Parte I de este estudio: Santiago Segura encabeza tanto la clasificación por films en el Top 100 como la de todos los films citados, con un margen muy amplio sobre el segundo.</p>
-</div>
-<div class="nota" id="n20">
-<span class="nota-num">[20]</span>
-<p class="nota-text">La normativa <a href="https://eur-lex.europa.eu/eli/dir/2018/1808/oj" rel="noopener" target="_blank">europea</a> y <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" rel="noopener" target="_blank">española</a> regula las plataformas y les impone obligaciones de financiación, promoción de obra europea y transparencia empresarial, pero no las obliga a publicar audiencias exactas por título y país. Estos datos tienen valor comercial y negociador: permiten calcular el rendimiento real de cada obra e influyen en salarios, derechos y primas de éxito. El acuerdo de <a href="https://www.sagaftra.org/sites/default/files/sa_documents/TV-Theatrical_23_Summary_Agreement_Final.pdf" rel="noopener" target="_blank">SAG-AFTRA de 2023</a>, que introduce bonificaciones vinculadas al consumo en <em>streaming</em> pero trata las audiencias como información confidencial, es una muestra. Tampoco existe una unidad universal comparable a la entrada de cine. Netflix, por ejemplo, calcula las «<a href="https://about.netflix.com/en/news/what-we-watched-a-netflix-engagement-report" rel="noopener" target="_blank">visualizaciones</a>» dividiendo las horas consumidas por la duración del título: una estimación que no equivale a espectadores individuales. Publica datos globales amplios, pero no un desglose sistemático de cada obra por país. Los datos siguen sin ser públicos y son difícilmente comparables entre plataformas.</p>
-</div>
-<p class="notes-seccio">El mapa del canon</p>
-<div class="nota" id="n21">
-<span class="nota-num">[21]</span>
-<p class="nota-text">La «lista del Centenario» fue elaborada en 1995 por la Comisión para la conmemoración del centenario de la cinematografía, creada mediante la <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1993-28232" rel="noopener" target="_blank">Orden de 8 de noviembre de 1993</a>, con la participación de la Academia de Cine, la Unión de Actores, la Asociación de Historiadores del Cine, la Asamblea de Directores Realizadores y el Círculo de Escritores Cinematográficos. Reunió 42 títulos que superaron el 50 % de los votos, presentados en orden cronológico y sin jerarquía; su publicación fue recogida por <a href="https://elpais.com/diario/1995/07/02/cultura/804636011_850215.html" rel="noopener" target="_blank"><em>El País</em></a>. La encuesta de <a href="https://www.caimanediciones.es/encuesta-caiman-mejor-cine-espanol/" rel="noopener" target="_blank"><em>Caimán Cuadernos de Cine</em></a> (2016), publicada con motivo del número 100 de la revista, reunió a 350 especialistas (críticos, académicos, programadores e historiadores) y 455 películas votadas, jerarquizadas por puntos. La de <a href="https://elpais.com/babelia/2025-05-10/las-50-mejores-peliculas-espanolas-del-ultimo-medio-siglo.html" rel="noopener" target="_blank"><em>Babelia</em></a> (<em>El País</em>, mayo de 2025) convocó a 53 periodistas culturales, críticos y colaboradores para elegir las 50 mejores películas españolas del periodo 1975–2025; la selección también fue reproducida por <a href="https://www.otroscines.com/post/eligen-las-mejores-50-peliculas-espanolas-de-los-ultimos-50-anos" rel="noopener" target="_blank"><em>Otros Cines</em></a>. Sobre la evolución del canon entre las dos primeras listas, véase Mejón, A. y Romero-Santos, R. (2025), <a href="https://dx.doi.org/10.5209/aris.102404" rel="noopener" target="_blank">«La recepción del canon fílmico español en televisión»</a>, <em>Arte, Individuo y Sociedad</em>, 37(4).</p> </div>
-<div class="nota" id="n22">
-<span class="nota-num">[22]</span>
-<p class="nota-text">En enero de 2024, <a href="https://elpais.com/cultura/2024-01-26/tres-mujeres-acusan-al-director-de-cine-carlos-vermut-de-violencia-sexual.html" rel="noopener" target="_blank"><em>El País</em> publicó el testimonio de tres mujeres</a> que acusaban a Carlos Vermut de violencia sexual. El director negó las acusaciones. En el momento de cerrar esta versión del estudio, los hechos no habían sido resueltos judicialmente.</p>
-</div>
-<div class="nota" id="n23">
-<span class="nota-num">[23]</span>
-<p class="nota-text">El caso más singular de autor cinéfilo queda fuera del mapa: Basilio Martín Patino, con tres películas en el top 100 de <em>Caimán</em> y ninguna presencia en las otras dos listas. El documental <em>Canciones para después de una guerra</em> (1971), prohibido hasta el final del franquismo y estrenado en 1976, reunió 830K espectadores: una muestra de que aquello que a menudo se ha calificado como cine radical también podía alcanzar una audiencia amplia cuando el contexto lo convertía en acontecimiento.</p>
-</div>
-</div>
-</div>
 
-</main>
-<footer class="peu">
-<div class="peu-interior">
-<span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
-<span><a href="https://publiciprestigi.substack.com" rel="noopener" target="_blank">publiciprestigi.substack.com</a></span>
-</div>
-</footer>
-<div class="buscador-overlay" id="buscador-overlay" style="display:none;">
-<div class="buscador-interior">
-<input autocomplete="off" id="buscador-input" placeholder="Buscar en el estudio..." type="text"/>
-<button class="buscador-tancar" onclick="toggleBuscador()">✕</button>
-<div id="buscador-resultats"></div>
-</div>
-</div>
-  <!-- ── Modal de suscripción ── -->
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="/v1.2/es/" class="nav-link">Inici</a>
+      <a href="part-i.html" class="nav-link">I — Públic</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigi</a>
+      <a href="part-iii.html" class="nav-link">III — Anàlisi</a>
+      <a href="sobre.html" class="nav-link">Sobre el projecte</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+    <div class="notes-portada">
+
+      <div class="part-capcalera">
+        <h1>Notas</h1>
+        <p class="part-subtitol">Referencias, fuentes y aclaraciones metodológicas. Cada nota también es accesible desde la página en la que se cita.</p>
+      </div>
+
+      <!-- PART I -->
+      <div class="notes-grup notes-grup-primer">
+        <p class="notes-grup-titol">Part I</p>
+
+        <p class="notes-seccio"><a href="part-i.html#intro">Fuentes y herramientas</a></p>
+        
+        <div class="nota" id="n1">
+          <span class="nota-num">[1]</span>
+          <p class="nota-text">El sistema de control de taquilla en España entró en vigor en 1965, como documenta el Observatori de la Producció Audiovisual (UPF). El Anuario de 1968 ya recoge cifras acumuladas desde ese año. El Top 100 del Anuario 2023, fuente original del ranking de este estudio, incluye también <em>Búsqueme a esa chica</em> y <em>Tulipán negro</em>, fechadas en 1964. Mantenemos esta anomalía de la fuente aunque ambas queden fuera del período general (1965–2025). <span class="notes-fonts">Fuentes: <a href="https://www.upf.edu/web/opa/estudis/-/asset_publisher/IrXIFT9fCBC2/content/id/234533666/maximized" target="_blank" rel="noopener">Observatori de la Producció Audiovisual (UPF)</a>; <a href="https://www.cultura.gob.es/dam/jcr:ac44385f-35d7-4a4a-9800-7eb0bd4518f1/1968.pdf" target="_blank" rel="noopener">Anuari de 1968</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n2">
+          <span class="nota-num">[2]</span>
+          <p class="nota-text">La serie de mercado 1965–2025 da prioridad a las estadísticas consolidadas del Ministerio de Cultura/ICAA, incluidas sus revisiones retrospectivas, frente a los avances provisionales de Comscore. El año 1965 constituye una excepción documentada mediante la estimación de unos 435,2M de entradas de MEDIA Salles, no una cifra certificada directamente por el ICAA. Para la población de 1964–1972 se emplea una reconstrucción histórica elaborada por Jordi Maluquer de Motes y publicada en <em>Investigaciones de Historia Económica</em> (2008), sin carácter de estadística oficial. Para 1973–2019 se utiliza la serie CP335 del INE y para 2020–2025 los datos de población residente del INE a 1 de enero. <span class="notes-fonts">Fuentes: <a href="https://www.cultura.gob.es/servicios-a-la-ciudadania/estadisticas/cultura/mc/culturabase/cine-contenidos-audiovisuales/resultados-cine-contenidos-audiovisuales.html" target="_blank" rel="noopener">Ministeri de Cultura/ICAA</a>; <a href="https://www.mediasalles.it/ybkcent/ybk95_e.htm" target="_blank" rel="noopener">MEDIA Salles</a>; <a href="https://www.elsevier.es/es-revista-investigaciones-historia-economica-economic-328-pdf-download-S1698698908701395" target="_blank" rel="noopener">reconstrucció històrica elaborada per Jordi Maluquer de Motes</a>; <a href="https://www.ine.es/consul/serie.do?L=0&c=2&d=true&nult=100&s=CP335" target="_blank" rel="noopener">sèrie CP335 de l'INE</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n3">
+          <span class="nota-num">[3]</span>
+          <p class="nota-text">Las entradas anuales por habitante se calculan dividiendo el total de entradas vendidas cada año entre la población residente de referencia; no representan un recuento de personas distintas que acuden al cine. Entre 1965 y 1969, la asistencia oscila entre unas 10,90 y 13,59 entradas por habitante. En 2025, 66,9M de entradas y 49,1M de residentes equivalen aproximadamente a 1,36 entradas por habitante.</p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-i.html#mercat">Mercado y población</a></p>
+
+        <div class="nota" id="n4">
+          <span class="nota-num">[4]</span>
+          <p class="nota-text">El mercado cinematográfico español registró 66,9 millones de entradas en 2025, frente a 72,9 millones en 2024, según las estadísticas oficiales del Ministerio de Cultura publicadas en 2026. La variación es del −8,2%. <span class="notes-fonts">Fuentes: <a href="https://www.cultura.gob.es/servicios-a-la-ciudadania/estadisticas/cultura/mc/culturabase/cine-contenidos-audiovisuales/resultados-cine-contenidos-audiovisuales.html" target="_blank" rel="noopener">estadístiques oficials del Ministeri de Cultura</a>.</span></p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-i.html#decades">Resumen por década</a></p>
+
+        <div class="nota" id="n5">
+          <span class="nota-num">[5]</span>
+          <p class="nota-text">Real Decreto 3304/1983, de 28 de diciembre, sobre protección de la cinematografía española, impulsado durante la etapa de Pilar Miró como directora general de Cinematografía. Introdujo subvenciones anticipadas sobre proyecto que podían alcanzar hasta el 50% del coste presupuestado de la película. En los datos de este estudio, el cambio de modelo coincide con una caída drástica de la presencia del cine popular en el Top 100: solo 3 películas de los años 80 frente a las 43 de los 60. <span class="notes-fonts">Fuentes: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1984-688" target="_blank" rel="noopener">Reial Decret 3304/1983, de 28 de desembre</a>.</span></p>
+        </div>
+      </div>
+
+      <!-- PART II -->
+      <div class="notes-grup">
+        <p class="notes-grup-titol">Part II</p>
+
+        <p class="notes-seccio"><a href="part-ii.html#intro">Datos y criterio</a></p>
+
+        <div class="nota" id="n6">
+          <span class="nota-num">[6]</span>
+          <p class="nota-text">La FIAPF (Federación Internacional de Asociaciones de Productores Cinematográficos) representa a las asociaciones de productores y regula la acreditación internacional de los festivales. El Festival de San Sebastián fue reconocido por primera vez en 1957 como Festival Internacional Competitivo No Especializado, categoría conocida habitualmente como «clase A», aunque ocupó esa posición de manera intermitente. Tras perderla en 1980, la recuperó y consolidó en 1985. Sobre este proceso, véase Minerva Campos Rabadán, «Para ser un 'Clase A': las negociaciones del Festival de Cine de San Sebastián y la FIAPF (1953-1985)», <em>ZER. Revista de Estudios de Comunicación</em>, vol. 30, n.º 58, 2025. <span class="notes-fonts">Fuentes: <a href="https://fiapf.org/" target="_blank" rel="noopener">FIAPF</a>; <a href="https://ojs.ehu.eus/index.php/Zer/article/view/27248" target="_blank" rel="noopener">«Para ser un "Clase A": las negociaciones del Festival de Cine de San Sebastián y la FIAPF (1953-1985)»</a>.</span></p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-ii.html#cannes">Festival de Cannes — En Compétition</a></p>
+
+        <div class="nota" id="n7">
+          <span class="nota-num">[7]</span>
+          <p class="nota-text">Cifra acumulada de espectadores en salas de cine según los datos del ICAA utilizados en esta edición del estudio.</p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-ii.html#espectadors">Ranking por espectadores</a></p>
+
+        <div class="nota" id="n8">
+          <span class="nota-num">[8]</span>
+          <p class="nota-text">Los festivales y las academias comparten funciones de legitimación y prestigio, pero operan con lógicas diferentes. Los festivales intervienen en la selección, la circulación internacional y la construcción del canon cinematográfico, como analiza Aida Vallejo en <em>Rethinking the Canon: The Role of Film Festivals in Shaping Film History</em> (2020). Los premios de las academias funcionan también como señales de calidad y capital simbólico, con posibles efectos sobre la demanda y el valor comercial, según James F. English, <em>The Economics of Cultural Awards</em> (2014). En el caso de los Oscar, Nelson et al., <em>What's an Oscar Worth?</em> (2001), documentan beneficios comerciales asociados a las nominaciones y los premios de las principales categorías. <span class="notes-fonts">Fuentes: <a href="https://doi.org/10.1080/17411548.2020.1765631" target="_blank" rel="noopener"><em>Rethinking the Canon: The Role of Film Festivals in Shaping Film History</em></a>; <a href="https://doi.org/10.1016/B978-0-444-53776-8.00006-4" target="_blank" rel="noopener"><em>The Economics of Cultural Awards</em></a>; <a href="https://doi.org/10.1111/j.1465-7295.2001.tb00046.x" target="_blank" rel="noopener"><em>What&#39;s an Oscar Worth?</em></a>.</span></p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-ii.html#directors">Ranking por directores</a></p>
+
+        <div class="nota" id="n9">
+          <span class="nota-num">[9]</span>
+          <p class="nota-text">Aitor Arregi figura excepcionalmente como representante del trío de codirectores de Moriarti que forma junto con Jon Garaño y Jose Mari Goenaga, pues es el único de los tres que firma las tres películas premiadas en San Sebastián. Para evitar fragmentar una trayectoria colectiva tan singular, los otros dos directores no aparecen por separado en los rankings. <span class="notes-fonts">Fuentes: <a href="https://moriarti.com/es/nosotros/" target="_blank" rel="noopener">Moriarti</a>.</span></p>
+        </div>
+      </div>
+
+      <!-- PART III -->
+      <div class="notes-grup">
+        <p class="notes-grup-titol">Part III</p>
+
+        <p class="notes-seccio"><a href="part-iii.html#bretxa">Evolución de la brecha festivales vs. público</a></p>
+
+
+        <div class="nota" id="n10">
+          <span class="nota-num">[10]</span>
+          <p class="nota-text">Para garantizar una comparación homogénea entre décadas, la «Media Top 100» se calcula a partir de las 20 películas con más espectadores de cada una, independientemente de su presencia en el Top 100 histórico. Este criterio evita que el número desigual de películas de cada década incluidas en la clasificación general distorsione la comparación.</p>
+        </div>
+        <div class="nota" id="n11">
+          <span class="nota-num">[11]</span>
+          <p class="nota-text">La existencia durante la Transición de una demanda específica de cine crítico está documentada por Manuel Trenzado Romero en <em>Cultura de masas y cambio político: el cine español de la transición</em> (CIS, 1999). El autor relaciona esa demanda con el contexto de democratización y con el interés por un cine que abordase la realidad social y política silenciada durante el franquismo. <span class="notes-fonts">Fuentes: <a href="https://libreria.cis.es/libros/cultura-de-masas-y-cambio-politico/9788474762860/" target="_blank" rel="noopener"><em>Cultura de masas y cambio político: el cine español de la transición</em></a>.</span></p>
+        </div>
+
+        <div class="nota" id="n12">
+          <span class="nota-num">[12]</span>
+          <p class="nota-text">La profesionalización del circuito internacional del cine de autor y su relación con la industria son analizadas por Thomas Elsaesser en <em>European Cinema: Face to Face with Hollywood</em> (Amsterdam University Press, 2005) y por Marijke de Valck en <em>Film Festivals: From European Geopolitics to Global Cinephilia</em> (Amsterdam University Press, 2007). Estos estudios explican cómo los festivales se han consolidado como una red internacional de selección, legitimación y circulación del cine de autor, con agentes especializados y estrategias de posicionamiento y distribución que trascienden los mercados nacionales. <span class="notes-fonts">Fuentes: <a href="https://www.jstor.org/stable/j.ctt46n11c" target="_blank" rel="noopener"><em>European Cinema: Face to Face with Hollywood</em></a>; <a href="https://www.jstor.org/stable/j.ctt46mv45" target="_blank" rel="noopener"><em>Film Festivals: From European Geopolitics to Global Cinephilia</em></a>.</span></p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-iii.html#caza-alcarras">La caza vs. Alcarràs</a></p>
+
+        <div class="nota" id="n13">
+          <span class="nota-num">[13]</span>
+          <p class="nota-text">En San Sebastián existían tres precedentes de premios a la dirección concedidos a directores españoles: Rafael Gil por <em>La guerra de Dios</em> (1953), Pedro Lazaga por <em>La patrulla</em> (1954) y Miguel Picazo por <em>La tía Tula</em> (1964).</p>
+        </div>
+
+        <div class="nota" id="n14">
+          <span class="nota-num">[14]</span>
+          <p class="nota-text">Los factores IAA son estimaciones de la capacidad de cada ecosistema de distribución para ampliar la audiencia más allá de las salas. Para los primeros períodos con televisión y vídeo doméstico se han tomado como referencia los datos históricos de consumo televisivo de la AIMC. Según el <em>Marco General de los Medios en España 2005</em>, TVE1 concentraba el 77,7% de la audiencia en 1988, pero su cuota cayó hasta el 28,7% en 1994 con la expansión de las televisiones privadas. Para períodos posteriores, los factores responden a la evolución de las ventanas comerciales y a la fragmentación del consumo audiovisual. La incertidumbre aumenta especialmente con las plataformas digitales, que no ofrecen datos públicos y comparables de audiencia por título y país. El modelo presupone una relación aproximada entre la taquilla inicial y la audiencia posterior, pero no puede reflejar todos los recorridos singulares. Por eso, el IAA resulta útil como instrumento de comparación entre épocas, no como reconstrucción exacta de la audiencia acumulada de cada película. <span class="notes-fonts">Fuentes: <a href="https://www.aimc.es/a1mc-c0nt3nt/uploads/2010/11/marco05.pdf" target="_blank" rel="noopener"><em>Marco General de los Medios en España 2005</em></a>.</span></p>
+        </div>
+
+        <div class="nota" id="n15">
+          <span class="nota-num">[15]</span>
+          <p class="nota-text">Fechas de emisiones televisivas extraídas del blog <em>Emisiones históricas de Cine en TVE</em>. Emisiones documentadas hasta 1990: <em>La ciudad no es para mí</em>, una única emisión (TVE1, inicio del «Nuevo ciclo Paco Martínez Soria», 1983); <em>La caza</em>, tres emisiones (TVE2, 1979; TVE1 en horario de máxima audiencia, como homenaje tras el fallecimiento de Alfredo Mayo, 1985; TVE1, <em>Cine Club Ciclo Querejeta</em>, 1988). Ninguna computa en el IAA. <span class="notes-fonts">Fuentes: <a href="https://emisionescinetve.blogspot.com" target="_blank" rel="noopener"><em>Emisiones históricas de Cine en TVE</em></a>.</span></p>
+        </div>
+
+        <div class="nota" id="n16">
+          <span class="nota-num">[16]</span>
+          <p class="nota-text">Las audiencias televisivas de <em>Alcarràs</em> son estimaciones construidas a partir del canal, la franja de emisión y el rendimiento habitual de este tipo de espacios televisivos, no datos oficiales publicados por título. La capa de Movistar+ y las plataformas digitales es todavía menos verificable: no existen datos públicos sistemáticos de visualizaciones por título y país. Por eso, el rango final del IAA de <em>Alcarràs</em> debe entenderse como una estimación conservadora del orden de magnitud de su audiencia acumulada, no como una cifra exacta.</p>
+        </div>
+        
+        <p class="notes-seccio"><a href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p>
+
+        <div class="nota" id="n17">
+          <span class="nota-num">[17]</span>
+          <p class="nota-text">«Un tercio lo tiene que amortizar la taquilla, el otro tercio lo tienen que amortizar las televisiones y el tercer tercio es la responsabilidad del Estado. (...) Te daban el tercio de lo que había costado la película, por lo tanto podrías hacer películas más caras dentro de unos límites y cuando más cara era la película era mayor la cantidad que ponía el Estado.» Emilio Martínez-Lázaro, <em>El pasado es un prólogo</em>, <em>Cuadernos TECMERIN 8</em>, Universidad Carlos III de Madrid, 2015, pp. 131–132.</p>
+        </div>
+
+        <div class="nota" id="n18">
+          <span class="nota-num">[18]</span>
+          <p class="nota-text">Real Decreto-ley 20/2012, de 13 de julio, de medidas para garantizar la estabilidad presupuestaria. El IVA de las entradas de cine pasó del 8% al 21% con efectos desde el 1 de septiembre de 2012, y permaneció en el 21% hasta el 4 de julio de 2018, cuando recuperó el tipo reducido del 10%. <span class="notes-fonts">Fuentes: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-9364" target="_blank" rel="noopener">Reial Decret llei 20/2012, de 13 de juliol</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n19">
+          <span class="nota-num">[19]</span>
+          <p class="nota-text">Datos del <em>Informe anual CIMA 2023</em>, de la Asociación de Mujeres Cineastas y de Medios Audiovisuales. Los largometrajes dirigidos por mujeres pasaron de representar el 23% de los títulos beneficiarios de las ayudas selectivas en 2018 al 51% en 2021. En 2023, el coste medio reconocido fue de 2,84 millones de euros para las películas dirigidas por hombres y de 1,64 millones para las dirigidas por mujeres, una diferencia del 42%. Las reservas de crédito para proyectos dirigidos exclusivamente por directoras fueron introducidas mediante la Orden CUD/582/2020, de 26 de junio. <span class="notes-fonts">Fuentes: <a href="https://cimamujerescineastas.es/wp-content/uploads/2024/06/INFORME-CIMA-2023.pdf" target="_blank" rel="noopener"><em>Informe anual CIMA 2023</em></a>; <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2020-6921" target="_blank" rel="noopener">Ordre CUD/582/2020, de 26 de juny</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n20">
+          <span class="nota-num">[20]</span>
+          <p class="nota-text">La Ley 13/2022, de 7 de julio, General de Comunicación Audiovisual, transpone la Directiva (UE) 2018/1808 y establece obligaciones de financiación de obra audiovisual europea también para los servicios a petición. Para los prestadores sujetos a esta obligación, fija una aportación del 5% de los ingresos computables, con exenciones para los de menor volumen de negocio. <span class="notes-fonts">Fuentes: <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" target="_blank" rel="noopener">Llei 13/2022, de 7 de juliol</a>.</span></p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-iii.html#generacions">Saura, Almodóvar y la generación actual</a></p>
+
+        <div class="nota" id="n21">
+          <span class="nota-num">[21]</span>
+          <p class="nota-text">Un ranking experimental que aplicara el factor IAA a las películas del Top 100 histórico y a las reconocidas en los cuatro festivales y en las academias Oscar y EFA daría como resultado 22 incorporaciones de películas que no aparecían en el Top 100 por espectadores en salas. Entre ellas, <em>As bestas</em> (2022) ocuparía el puesto #52, justo por encima de <em>Furtivos</em>, en el #53; <em>La isla mínima</em> (2014), de Alberto Rodríguez, el #62; seis películas más de Almodóvar —que tendría nueve en total en el Top 100—: <em>Volver</em> (2006), #37; <em>Átame</em> (1990), #48; <em>Carne trémula</em> (1997), #63; <em>Hable con ella</em> (2002), #66; <em>La mala educación</em> (2004), #76, y <em>Dolor y gloria</em> (2019), #92. <em>Mientras dure la guerra</em> (2019), de Amenábar, ocuparía el #38; <em>Belle Époque</em> (1992), de Fernando Trueba, el #45; <em>La comunidad</em> (2000), de Álex de la Iglesia, el #57; <em>Amantes</em> (1991), de Vicente Aranda, el #59, y <em>La lengua de las mariposas</em> (1999), de José Luis Cuerda, el #86. Especialmente significativo sería el caso de <em>Los domingos</em> (2025), que entraría en el Top 100 experimental en el puesto #85, mientras que <em>Sirât</em> (2025) quedaría fuera, en el #150. En ambos casos, las ventanas posteriores de explotación todavía pueden ampliar la audiencia acumulada. Se trata, en cualquier caso, de un ejercicio exploratorio, una manera de jugar con los datos para observar hacia dónde apuntan, no de un ranking con pretensiones de rigor estadístico.</p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-iii.html#autor-industrial">Modelo de autor industrial</a></p>
+
+        <div class="nota" id="n22">
+          <span class="nota-num">[22]</span>
+          <p class="nota-text">Véase el ranking por directores de la Parte I de este estudio. Santiago Segura encabeza tanto la clasificación por espectadores absolutos del Top 100 como la que incorpora también las películas de contexto de cada década.</p>
+        </div>
+
+
+        <div class="nota" id="n23">
+          <span class="nota-num">[23]</span>
+          <p class="nota-text">Los estrenos televisivos en Telecinco de los tres primeros largometrajes de J. A. Bayona reunieron 2,08M de espectadores para <em>El orfanato</em> (2010), 6,12M para <em>Lo imposible</em> (2014) y 2,67M para <em>Un monstruo viene a verme</em> (2018). Sumadas a las entradas de cine, estas audiencias representan aproximadamente entre el 59% y el 80% del IAA estimado de cada película. La diferencia puede corresponder, en parte, a otras ventanas de explotación, como la televisión de pago, el DVD o las plataformas digitales. La comparación es orientativa, puesto que no contabiliza espectadores únicos ni constituye una validación del multiplicador del IAA. <em>La sociedad de la nieve</em> queda fuera de esta comparación porque su explotación principal en Netflix impide aplicar el mismo criterio. <span class="notes-fonts">Fuentes: <a href="https://www.formulatv.com/noticias/13802/audiencias-el-orfanato-131-la-pelicula-de-prime-time-menos-vista-el-dia-de-reyes/" target="_blank" rel="noopener"><em>El orfanato</em></a>; <a href="https://www.mediaset.es/telemania/audiencias/audiencia-pelicula-imposible-telecinco-record-dos-decadas_18_1894200618.html" target="_blank" rel="noopener"><em>Lo imposible</em></a>; <a href="https://files.mediaset.es/file/10002/2018/12/12/111218_Un_monstruo_viene_a_verme_-20-1_28e7.pdf" target="_blank" rel="noopener"><em>Un monstruo viene a verme</em></a>.</span></p>
+        </div>
+
+        
+
+        <div class="nota" id="n24">
+          <span class="nota-num">[24]</span>
+          <p class="nota-text">La normativa europea y española regula las plataformas audiovisuales y les impone obligaciones de financiación y promoción de obra europea, pero no de publicación sistemática de audiencias por título y país. Estos datos tienen valor comercial y negociador, como muestra el acuerdo de SAG-AFTRA de 2023 sobre las bonificaciones vinculadas al consumo en <em>streaming</em>. Tampoco existe una unidad de medida comparable a la entrada de cine. Netflix, por ejemplo, calcula las «visualizaciones» dividiendo las horas consumidas por la duración de cada título, una estimación que no equivale a espectadores individuales. La falta de datos desagregados y de criterios homogéneos impide reconstruir audiencias acumuladas comparables entre plataformas. <span class="notes-fonts">Fuentes: <a href="https://eur-lex.europa.eu/eli/dir/2018/1808/oj" target="_blank" rel="noopener">europea</a>; <a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" target="_blank" rel="noopener">espanyola</a>; <a href="https://www.sagaftra.org/sites/default/files/sa_documents/TV-Theatrical_23_Summary_Agreement_Final.pdf" target="_blank" rel="noopener">acord de SAG-AFTRA del 2023</a>; <a href="https://about.netflix.com/en/news/what-we-watched-a-netflix-engagement-report" target="_blank" rel="noopener">visualitzacions</a>.</span></p>
+        </div>
+        <p class="notes-seccio"><a href="part-iii.html#mapa-canon">El mapa del canon</a></p>
+
+        <div class="nota" id="n25">
+          <span class="nota-num">[25]</span>
+          <p class="nota-text">La «lista del Centenario» fue elaborada en 1995 por la Comisión para la conmemoración del centenario de la cinematografía, creada mediante la Orden de 8 de noviembre de 1993, con la participación de la Academia de Cine, la Unión de Actores, la Asociación de Historiadores del Cine, la Asamblea de Directores Realizadores y el Círculo de Escritores Cinematográficos. Reunió 42 títulos que superaron el 50% de los votos, presentados en orden cronológico y sin jerarquía; su publicación fue recogida por <em>El País</em>. La encuesta de <em>Caimán Cuadernos de Cine</em> (2016), publicada con motivo del número 100 de la revista, reunió a 350 especialistas (críticos, académicos, programadores e historiadores) y 455 películas votadas, jerarquizadas por puntos. La de <em>Babelia</em> (<em>El País</em>, mayo de 2025) convocó a 53 periodistas culturales, críticos y colaboradores para elegir las 50 mejores películas españolas del período 1975–2025; la selección también fue reproducida por <em>Otros Cines</em>. Sobre la evolución del canon entre las dos primeras listas, véase Mejón, A. y Romero-Santos, R. (2025), «La recepción del canon fílmico español en televisión», <em>Arte, Individuo y Sociedad</em>, 37(4). <span class="notes-fonts">Fuentes: <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1993-28232" target="_blank" rel="noopener">Ordre de 8 de novembre de 1993</a>; <a href="https://elpais.com/diario/1995/07/02/cultura/804636011_850215.html" target="_blank" rel="noopener"><em>El País</em></a>; <a href="https://www.caimanediciones.es/encuesta-caiman-mejor-cine-espanol/" target="_blank" rel="noopener"><em>Caimán Cuadernos de Cine</em></a>; <a href="https://elpais.com/babelia/2025-05-10/las-50-mejores-peliculas-espanolas-del-ultimo-medio-siglo.html" target="_blank" rel="noopener"><em>Babelia</em></a>; <a href="https://www.otroscines.com/post/eligen-las-mejores-50-peliculas-espanolas-de-los-ultimos-50-anos" target="_blank" rel="noopener"><em>Otros Cines</em></a>; <a href="https://dx.doi.org/10.5209/aris.102404" target="_blank" rel="noopener">«La recepción del canon fílmico español en televisión»</a>.</span></p>        </div>
+
+        <div class="nota" id="n26">
+          <span class="nota-num">[26]</span>
+          <p class="nota-text">En enero de 2024, <em>El País</em> publicó el testimonio de tres mujeres que acusaban a Carlos Vermut de violencia sexual. El director negó las acusaciones. En el momento de cerrar esta versión del estudio, los hechos no habían sido resueltos judicialmente. <span class="notes-fonts">Fuentes: <a href="https://elpais.com/cultura/2024-01-26/tres-mujeres-acusan-al-director-de-cine-carlos-vermut-de-violencia-sexual.html" target="_blank" rel="noopener"><em>El País</em> va publicar el testimoni de tres dones</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n27">
+          <span class="nota-num">[27]</span>
+          <p class="nota-text">El caso más singular de autor cinéfilo queda fuera del mapa: Basilio Martín Patino, con tres películas en el top 100 de <em>Caimán</em> y ninguna presencia en las otras dos listas. El documental <em>Canciones para después de una guerra</em> (1971), prohibido hasta el final del franquismo y estrenado en 1976, reunió 830K espectadores: una muestra de que lo que a menudo se ha calificado como cine radical también podía alcanzar una audiencia amplia cuando el contexto lo convertía en acontecimiento.</p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-iii.html#bunuel-mercat">Buñuel y el segundo mercado</a></p>
+
+        <div class="nota" id="n28">
+          <span class="nota-num">[28]</span>
+          <p class="nota-text">Berlanga consiguió cierta repercusión comercial en Francia con <em>Bienvenido, Mister Marshall</em> (1953), que, según los datos localizados, superó los 515K espectadores, mientras que <em>El verdugo</em> (1963) registró unos 88K en su exhibición francesa de 1965. Bardem también mantuvo vínculos con la industria francesa. Georges de Beauregard participó en <em>Muerte de un ciclista</em> (1955) y Serge Silberman coprodujo <em>Calle Mayor</em> (1956), antes de convertirse en uno de los productores habituales de Buñuel. Véase «10 curiosidades de Calle Mayor», RTVE (2022). <span class="notes-fonts">Fuentes: <a href="https://www.rtve.es/play/noticias/20220606/calle-mayor-juan-antonio-bardem-curiosidades/2357041.shtml" target="_blank" rel="noopener">«10 curiosidades de Calle Mayor»</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n29">
+          <span class="nota-num">[29]</span>
+          <p class="nota-text">La distribución de la obra de Luis Buñuel en España durante el franquismo estuvo marcada por prohibiciones, modificaciones impuestas por la censura, autorizaciones restringidas y estrenos tardíos. La regulación de las salas de arte y ensayo a partir de 1967 facilitó la exhibición de parte de su filmografía en un circuito diferenciado del comercial convencional, sin eliminar las restricciones de la censura ni las limitaciones de distribución. Por eso, algunas primeras exhibiciones documentadas no coinciden con las fechas de estreno de los registros estadísticos del ICAA, que son las adoptadas en este estudio. Véanse «La censura y el cine de Luis Buñuel», <em>En torno a Luis Buñuel</em> (2014), y las órdenes de 12 de enero de 1967 y 14 de febrero de 1976, publicadas en el BOE. <span class="notes-fonts">Fuentes: <a href="https://lbunuel.blogspot.com/2014/12/la-censura-y-el-cine-de-luis-bunuel.html" target="_blank" rel="noopener">«La censura y el cine de Luis Buñuel»</a>; <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1967-1505" target="_blank" rel="noopener">12 de gener de 1967</a>; <a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1976-4212" target="_blank" rel="noopener">14 de febrer de 1976</a>.</span></p>
+        </div>
+
+        <div class="nota" id="n30">
+          <span class="nota-num">[30]</span>
+          <p class="nota-text">Según los datos recopilados por Esteve Riambau, entre 1962 y 1969 se produjeron en España 1.003 largometrajes, de los cuales 504 eran coproducciones internacionales (50,2%). El porcentaje alcanzó el 64,9% en 1965. Las cifras proceden de fuentes históricas reconstruidas, con estimaciones en algunos registros. Véase Esteve Riambau, <em>Algunas proposiciones metodológicas para el análisis histórico del cine español (a propósito de la producción catalana de los años sesenta)</em>, <em>Actas del VI Congreso de la Asociación Española de Historiadores del Cine</em>, 1998, pp. 275–291. <span class="notes-fonts">Fuentes: <a href="https://www.cervantesvirtual.com/obra/algunas-proposiciones-metodologicas-para-el-analisis-historico-del-cine-espanol-a-proposito-de-la-produccion-catalana-de-los-anos-sesenta--0/" target="_blank" rel="noopener"><em>Algunas proposiciones metodológicas para el análisis histórico del cine español (a propósito de la producción catalana de los años sesenta)</em></a>.</span></p>
+        </div>
+
+        <div class="nota" id="n31">
+          <span class="nota-num">[31]</span>
+          <p class="nota-text">Los datos de espectadores de las películas exhibidas en Francia proceden de las estadísticas del Centre national du cinéma et de l'image animée (CNC) y de JP Box-Office, utilizadas para reconstruir la recepción comercial de las películas de Buñuel y elaborar el ranking de cine español en el mercado francés. Los espectadores españoles por película proceden de la base ICAA del estudio; los mercados anuales españoles, de la serie armonizada del Ministerio/ICAA, con la estimación documentada de MEDIA Salles para 1965. Las poblaciones españolas corresponden a la reconstrucción académica para 1964–1972 y al INE desde 1973. Las comparaciones respetan los distintos años de estreno en ambos países. Para Francia, la serie de asistencia procede del CNC y la de población, del Banco Mundial (SP.POP.TOTL), con valores anuales que no tienen exactamente la misma referencia temporal que la población española a 1 de enero. Las cuotas oficiales de mercado por nacionalidad de 2025 proceden del balance anual definitivo del CNC para Francia y de las estadísticas del ICAA para España; son distintas del indicador propio de cuota por película de este estudio. El total francés de 2025 (156,2M) es la cifra definitiva del CNC publicada en mayo de 2026, que sustituye el avance provisional de diciembre de 2025 (156,79M). <span class="notes-fonts">Fuentes: <a href="https://www.cnc.fr/professionnels/statistiques-par-secteur-open-data_771861" target="_blank" rel="noopener">Centre national du cinéma et de l'image animée (CNC)</a>; <a href="https://www.jpbox-office.com/v9_charts_total.php?view=2" target="_blank" rel="noopener">JP Box-Office</a>; <a href="https://data.worldbank.org/indicator/SP.POP.TOTL?locations=FR" target="_blank" rel="noopener">Banc Mundial (SP.POP.TOTL)</a>; <a href="https://www.cnc.fr/professionnels/etudes-et-rapports/bilans/bilan-2025-du-cnc_2589800" target="_blank" rel="noopener">balanç anual definitiu del CNC</a>.</span></p>
+        </div>
+
+        <p class="notes-seccio"><a href="part-iii.html#conclusions">De las métricas a las paradojas</a></p>
+
+        <div class="nota" id="n32">
+          <span class="nota-num">[32]</span>
+          <p class="nota-text">Los siete gráficos de «De las métricas a las paradojas» sintetizan datos y cálculos desarrollados en las tres partes del estudio. Las medias de espectadores por institución, la distribución del cine de festivales, las comparativas de audiencia, las estimaciones IAA y el mapa del canon proceden de los corpus de Públic i Prestigi y de los datos del ICAA, según los criterios metodológicos expuestos en los capítulos correspondientes. Los indicadores de asistencia al cine, uso de internet y acceso a plataformas audiovisuales proceden de la Asociación para la Investigación de Medios de Comunicación (AIMC), especialmente del <em>Marco General de los Medios en España 2026</em> y sus series históricas. La distribución de las producciones españolas según el género de la dirección (2020–2025) se ha calculado a partir de la <em>Estadística de Cinematografía</em> del ICAA, publicada en CulturaBase; la de las películas premiadas en los cuatro festivales es un recuento propio del estudio. <span class="notes-fonts">Fuentes: <a href="https://www.aimc.es/a1mc-c0nt3nt/uploads/2026/02/Marco_General_Medios_2026.pdf" target="_blank" rel="noopener">Asociación para la Investigación de Medios de Comunicación (AIMC)</a>; <a href="https://estadisticas.cultura.gob.es/CulturaJaxiPx/Tabla.htm?L=0&file=T2004001.px&path=%2Ft20%2Fp20%2Fa2005%2Fl0%2F" target="_blank" rel="noopener">Estadística de Cinematografía de l'ICAA</a>.</span></p>
+        </div>
+
+        </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Llicència CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Cerca a l'estudi..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  
+  <!-- ── Modal de subscripció ── -->
   <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
     <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
-      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Tancar">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <path d="M6 6l12 12M18 6L6 18"></path>
         </svg>
       </button>
 
-      <h2 id="subscripcio-titol">Suscríbete</h2>
+      <h2 id="subscripcio-titol">Subscriu-te</h2>
 
       <div class="subscripcio-icona" aria-hidden="true">
         <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -293,19 +409,32 @@
       </div>
 
       <div class="subscripcio-text">
-        <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
-        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
+        <p>Les novetats i actualitzacions de Públic i Prestigi es publiquen a <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicació del projecte.</p>
+        <p>En continuar, aniràs a la pàgina de subscripció, on podràs introduir el teu correu i completar el procés.</p>
       </div>
 
       <div class="subscripcio-accions">
         <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
-        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
+        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancel·lar</button>
       </div>
     </div>
   </div>
 
+<script>
+    fetch(pipPath('data/metadata.json')).then(r=>r.json()).then(data=>{
+      document.getElementById('versio-label').textContent = data.versio_label;
+    }).catch(()=>{});
+    function toggleBuscador(){
+      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
+      if(o.style.display==='none'){o.style.display='flex';i.focus();}
+      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+  </script>
+
+
   <script>
-    // ── MODAL SUSCRIPCIÓN ──
+    // ── MODAL SUBSCRIPCIÓ ──
     let subscripcioFocusAnterior = null;
 
     function obreSubscripcio() {
@@ -333,7 +462,7 @@
       if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
     });
 
-    // Activa la lupa también en páginas que aún no tenían el control de búsqueda.
+    // Si una pàgina no tenia encara el control de la lupa, l'activem aquí.
     if (typeof window.toggleBuscador !== 'function') {
       window.toggleBuscador = function() {
         const o = document.getElementById('buscador-overlay');
@@ -351,7 +480,7 @@
       };
     }
 
-    // Lupa accesible con teclado.
+    // Lupa accessible amb teclat
     document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -360,34 +489,23 @@
     });
   </script>
 
-<script>
-    fetch(pipPath('data/metadata.json')).then(r=>r.json()).then(data=>{
-      document.getElementById('versio-label').textContent = data.versio_label_es || data.versio_label;
-    }).catch(()=>{});
-    function toggleBuscador(){
-      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
-      if(o.style.display==='none'){o.style.display='flex';i.focus();}
-      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
-    }
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
-  </script>
 <script src="../js/scroll-header.js"></script>
 <script src="../js/buscador.js"></script>
 <script src="../js/scroll-fade.js"></script>   <!-- ── Drawer mòbil ── -->
   <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
   <nav class="drawer" id="drawer" aria-label="Menú principal">
     <div class="drawer-cap">
-      <a href="./" class="drawer-logo">Públic i Prestigi</a>
-      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
+      <a href="/v1.2/es/" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Tancar">✕</button>
     </div>
-    <div class="drawer-seccio"><a href="./" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
+    <div class="drawer-seccio"><a href="/v1.2/es/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inici</a></div>
     <div class="drawer-seccio" id="drawer-part-i">
       <div class="drawer-seccio-fila">
-        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Públic</a>
         <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
       </div>
       <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Contexto</div>
+        <div class="drawer-grup-titol">Context</div>
         <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fuentes y herramientas</a>
         <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercado y población</a>
         <div class="drawer-grup-titol">Top 100</div>
@@ -399,58 +517,57 @@
         <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
         <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
         <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
-        <div class="drawer-grup-titol">Rankings</div>
-        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
-        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Por penetración</a>
-        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Por cuota de mercado</a>
-        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Por IIC</a>
-        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Por directores</a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Per penetració</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Per quota de mercat</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Per IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Per directors</a>
       </div>
     </div>
     <div class="drawer-seccio" id="drawer-part-ii">
       <div class="drawer-seccio-fila">
-        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigio</a>
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigi</a>
         <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
       </div>
       <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Contexto</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <div class="drawer-grup-titol">Festivales</div>
-        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#paralleles" onclick="toggleDrawer()"><span>Secciones paralelas</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <div class="drawer-grup-titol">Rankings</div>
-        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
-        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
-        <div class="drawer-grup-titol">Premios de academias</div>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA y Donatello</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <div class="drawer-grup-titol">Context</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <div class="drawer-grup-titol">Festivals</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiades per dècada</a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venècia</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>Sant Sebastià</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <div class="drawer-grup-titol">Rànquings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Per espectadors</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Per directors</a>
+        <div class="drawer-grup-titol">Acadèmies</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#academies-europa" onclick="toggleDrawer()"><span>César, BAFTA i Donatello</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
       </div>
 
     </div>
     <div class="drawer-seccio" id="drawer-part-iii">
       <div class="drawer-seccio-fila">
-        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Análisis</a>
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Anàlisi</a>
         <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
       </div>
       <div class="drawer-subseccions">
-        <div class="drawer-grup-titol">Capítulos</div>
+        <div class="drawer-grup-titol">Capítols</div>
         <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
-        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolución de la brecha</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolució de la bretxa</a>
         <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
-        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cine, leyes y tecnología</a>
-        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dos generaciones</a>
-        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cine de autor industrial</a>
-        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusiones</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cinema, lleis i tecnologia</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dues generacions</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cinema d'autor industrial</a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
       </div>
     </div>
-    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.1 (1965–2025)</a></div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
   </nav>
 
 
@@ -467,6 +584,7 @@
     }
   </script>
   <script src="../js/idioma.js"></script>
+
   <!-- Cloudflare Web Analytics -->
   <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
   <!-- End Cloudflare Web Analytics -->
