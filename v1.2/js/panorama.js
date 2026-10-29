@@ -58,8 +58,8 @@
     const max=Math.max(...institute.map(x=>x.n));
     const instHTML=institute.map((a,i)=>'<div class="pip-panorama-inst-row"><span class="pip-panorama-inst-name">'+(es?{'Venècia':'Venecia','Sant Sebastià':'San Sebastián'}[a.name]||a.name:a.name)+'</span><div class="pip-panorama-inst-track"><div class="pip-panorama-inst-fill" style="background:'+institutional[a.name]+';width:'+(100*a.n/max)+'%"></div></div><span class="pip-panorama-inst-count"><strong>'+int(a.n)+'</strong></span></div>'+(i===3?'<div class="pip-panorama-inst-divider"></div>':'')).join('');
     const bands=[
-      [tr('Més de 2,02M (Top 100)','Más de 2,02M (Top 100)'), f=>f.top],
-      [tr('1M–2,02M','1M–2,02M'),f=>!f.top&&f.espectadors>=1000000],
+      [tr('Més de 2,01M (Top 100)','Más de 2,01M (Top 100)'), f=>f.top],
+      [tr('1M–2,01M','1M–2,01M'),f=>!f.top&&f.espectadors>=1000000],
       ['500K–1M',f=>!f.top&&f.espectadors>=500000&&f.espectadors<1000000],
       ['250K–500K',f=>f.espectadors>=250000&&f.espectadors<500000],
       ['100K–250K',f=>f.espectadors>=100000&&f.espectadors<250000],
