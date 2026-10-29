@@ -1,9 +1,12 @@
 <!-- intro -->
-De cada 100 españoles, ¿cuántos vieron la película? La penetración corrige el efecto del tamaño de la población. Los films de los 60s y 70s salen favorecidos: España tenía 32-34 millones de habitantes y las salas eran la gran ventana de consumo cinematográfico. Veamos primero el Top 10:
+De cada 100 habitantes, ¿cuántas entradas se vendieron para ver cada película? La penetración tiene en cuenta la población de cada época. Esto favorece a las películas de los 60s y 70s, cuando España tenía entre 32 y 37 millones de habitantes y las salas concentraban buena parte del consumo cinematográfico. Veamos primero el Top 10.
 <!-- /intro -->
 
 <!-- comentari -->
-- *La muerte tenía un precio* (#5 por espectadores, #2 por penetración) confirma la fuerza demográfica de los grandes éxitos de los 60s: con 5,5 millones de espectadores en una España de unos 32 millones de habitantes, el equivalente a 1 de cada 6 españoles vio el film.
+- *8 apellidos vascos* conserva el liderazgo, con 20 entradas por cada 100 habitantes, pero *La muerte tenía un precio* se acerca hasta el segundo puesto. Sus 5,5M de espectadores en 1966 equivalían a más de 17 entradas por cada 100 habitantes, una proporción superior a la de casi todos los grandes éxitos contemporáneos.
 
-- La penetración es la métrica que mejor revela la fuerza social del cine popular de los 60s: hasta cuatro films de aquella década que no estaban en el Top 10 por espectadores entran ahora. Títulos como *La ciudad no es para mí* o *Mi canción es para ti* suben porque, en una España con menos habitantes y las salas mucho más llenas, cada gran éxito tenía un peso social mucho mayor.
+- El Top 10 cambia notablemente de composición. Cinco películas de los 60s tienen cabida, frente a una sola en el ranking absoluto. *La ciudad no es para mí* (#11 → #4), *Mi canción es para ti* (#14 → #8), *Pero... ¿en qué país vivimos?* (#13 → #10) y *Un beso en el puerto* (#15 → #9) entran entre las diez primeras al tener en cuenta la población de la época.
+
+- Al ampliar la clasificación, continúa esta recuperación del cine popular de los 60s. *Juicio de faldas* (#20 → #13) y *Por un puñado de dólares* (#25 → #14) también escalan posiciones. La penetración permite apreciar mejor el alcance demográfico de estos éxitos, que la comparación directa de espectadores con décadas posteriores tiende a reducir.
+
 <!-- /comentari -->
