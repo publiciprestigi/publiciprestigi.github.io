@@ -1,28 +1,32 @@
 <!-- intro -->
-La tabla siguiente compara, por década, la media de espectadores en salas de las películas seleccionadas en competición oficial en los festivales de la Parte II con la media de los films de la misma década presentes en el Top 100 de espectadores de la Parte I.
+Una de las preguntas que se plantea el estudio es cómo ha evolucionado la distancia entre el cine reconocido en los festivales y el gran público. Para observar esta evolución, comparamos, década a década, los espectadores de las películas seleccionadas en competición oficial en los cuatro festivales de la Parte II con los de los grandes éxitos comerciales recogidos en la Parte I.
 
-La ratio de brecha es el cociente entre estas dos medias: media festivales ÷ media Top 100. Un valor próximo a 1,00 indicaría que el cine de festivales y el cine más popular captaban públicos similares. Un valor próximo a 0,00, en cambio, indica una separación muy fuerte entre los dos circuitos. La columna 'doble corona' muestra el número de films que aparecen a la vez en ambos circuitos.
+La relación entre estas dos medias nos da el *ratio de brecha*. Cuanto más se acerca a 1, más similares son sus resultados comerciales. Cuanto más se acerca a 0, mayor es la distancia entre ambos circuitos. La columna «doble corona» (DC) recoge las películas que coinciden en ambos. Las barras permiten ver si la distancia cambia porque el cine de festivales gana o pierde espectadores, porque lo hacen los grandes éxitos comerciales o por ambas cosas. <sup>[10]</sup>
 <!-- /intro -->
 
 <!-- llegenda-taula -->
 <!-- /llegenda-taula -->
 
 <!-- comentari -->
-- En los 60s, los films de festival superan el medio millón de espectadores de media (556K), una de las cifras más altas de toda la serie. Pero el Top 100 juega en otra liga (3,25M), en pleno mercado de masas. De ahí una ratio modesta de 0,17: el cine de festival tenía público, pero el cine popular se movía en una escala muy superior.
+- En los 60s, las películas de festivales superan el medio millón de espectadores de media (556K), una de las cifras más altas de toda la serie. Pero el Top 100 juega en otra liga (3,25M), en pleno mercado de masas. De ahí un ratio modesto de 0,17: el cine de festivales tenía público, pero el cine popular se movía a una escala muy superior.
 
-- Los 70s son el momento de mayor porosidad relativa entre público y prestigio. Con una ratio de 0,27 y tres casos de 'doble corona', films como *Furtivos* (1975), *Cría cuervos* (1976) o *La guerra de papá* (1977) muestran que el contexto político de la Transición generaba un público más amplio y motivado para este tipo de cine. No era cine masivo en el sentido de los grandes éxitos populares, pero tampoco estaba tan separado del público como lo estaría décadas después. <sup>[8]</sup>
+- Los 70s son uno de los momentos de mayor proximidad entre ambos circuitos. Con un ratio de 0,27 y tres casos de «doble corona», películas como *Furtivos* (1975), *Cría cuervos* (1976) o *La guerra de papá* (1977) muestran que el cine reconocido en los festivales también podía llegar a un público amplio. El contexto político y cultural de la Transición favoreció una demanda específica de este cine, que sería menos habitual en las décadas posteriores. <sup>[11]</sup>
 
-- Los 80s ofrecen la ratio más alta de toda la tabla (0,32), pero es un pico engañoso. No sube porque el cine de festival se vuelva mucho más popular, sino porque el Top 100 también cae con fuerza, hasta una media de 1,52M de espectadores. Los 90s mantienen una lógica similar, aunque algo más abierta: el Top 100 sube hasta 1,74M y la ratio baja a 0,22. En ambos casos, la brecha parece más estrecha porque el mercado también se ha comprimido.
+- Los 80s presentan el ratio más alto de toda la serie (0,32), pero el dato puede resultar engañoso. No es tanto que el cine de festivales gane público como que los grandes éxitos comerciales también lo pierden. La media del Top 100 cae hasta los 1,52M de espectadores. En los 90s, la distancia vuelve a crecer ligeramente (0,22), con una media comercial de 1,74M. En ambas décadas, la crisis del mercado contribuye a acercar los resultados de ambos circuitos.
 
-- Los 2000s representan un breve paréntesis: con cuatro 'dobles coronas' (la cifra más alta de toda la serie y las últimas que se han producido hasta ahora) y una ratio de 0,22, se recupera ligeramente la porosidad de los 70s. La media de los festivales sube hasta 673K, la segunda más alta. Es la última década en la que la coincidencia entre reconocimiento de festival e impacto masivo se produce de forma recurrente.
+- Los 2000s representan un breve paréntesis. Con cuatro «dobles coronas» (la cifra más alta de toda la serie y las últimas que se han producido hasta ahora) y un ratio de 0,22, los dos circuitos vuelven a acercarse ligeramente. La media de los festivales sube hasta los 673K, la segunda más alta. Es la última década en la que la coincidencia entre reconocimiento en los festivales e impacto masivo se produce de manera recurrente.
 
-- La ruptura más clara llega en los 2010s: con un mercado relativamente estabilizado, la media del Top 100 se dispara hasta 3,21M, impulsada por los films-acontecimiento, mientras los festivales bajan a 266K. Es el punto de máxima separación entre los dos circuitos (0,08), en un contexto de profesionalización del cine de autor: <sup>[9]</sup> más reconocido y más internacionalizado, pero también más alejado del gran público en salas. Los 2020s apuntan a una pequeña recuperación de la ratio (0,14), aunque se trata de una década incompleta y de un mercado todavía en recomposición.
+- La ruptura más clara llega en los 2010s. Con un mercado de entre aproximadamente 78,7M y 104,9M de entradas anuales, la media de los grandes éxitos comerciales se dispara hasta los 3,21M, impulsada por las películas-acontecimiento, mientras que la de los festivales cae a 266K. Es el punto de máxima separación entre ambos circuitos (0,08), en un contexto de profesionalización del cine de autor y consolidación del circuito internacional de festivales. <sup>[12]</sup> Un cine cada vez más reconocido e internacionalizado, pero también más alejado del gran público en las salas.
+
+- En los 2020s, el ratio repunta hasta el 0,14, pero no porque el cine de festivales recupere público. Su media sigue cayendo y son los grandes éxitos comerciales los que retroceden aún más, en una década marcada por la pandemia y la recuperación incompleta de las salas.
 <!-- /comentari -->
 
 <!-- intro-grafic1 -->
-El gráfico siguiente muestra la evolución de la ratio de brecha (línea negra) en relación con la media anual de entradas del mercado (línea gris).
+El siguiente gráfico muestra la evolución del ratio de brecha (línea negra) en relación con la media anual de entradas del mercado (línea gris).
 <!-- /intro-grafic1 -->
 
 <!-- post-grafic1 -->
-Visto así, la brecha no indica únicamente una menor presencia del cine de festival en el mercado de salas. También puede leerse como un cambio de escala: una parte de su visibilidad y de su valor ya no pasa solo por la taquilla española, sino por formas de circulación más internacionales, digitales y dispersas, aceleradas por internet, la globalización del sector y la expansión de las plataformas.
+
+Visto así, la brecha no indica solo una menor presencia del cine de festivales en las salas. También puede leerse como un cambio de escala. Una parte de su visibilidad y de su valor ya no pasa únicamente por la taquilla española, sino por formas de circulación más internacionales, digitales y dispersas, impulsadas por internet, la globalización del sector y la expansión de las plataformas.
+
 <!-- /post-grafic1 -->
