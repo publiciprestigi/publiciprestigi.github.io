@@ -9,7 +9,7 @@ También se han consultado los <a href="https://www.cultura.gob.es/cultura/areas
 
 ## Alcance cronológico
 
-1965 marca el punto de partida del estudio porque coincide con el inicio del sistema de control de taquilla en España, que dio lugar a una serie histórica de registros de exhibición cinematográfica. Esta base documental permite reconstruir y comparar la evolución del público a lo largo del período 1965–2025. <sup>[1]</sup>
+1965 marca el punto de partida del estudio porque coincide con el inicio del sistema de control de taquilla, que dio lugar a una serie histórica de registros de exhibición cinematográfica. Esta base documental permite reconstruir y comparar la evolución del público a lo largo del período 1965–2025. <sup>[1]</sup>
 
 Para situar las cifras de espectadores en su contexto, utilizamos también los totales anuales de entradas vendidas y los datos de población. Las fuentes principales son el Ministerio de Cultura y el INE (Instituto Nacional de Estadística), complementadas con estimaciones y reconstrucciones históricas para los primeros años. <sup>[2]</sup>
 
