@@ -9,7 +9,7 @@
 | Original català | Traducció castellana |
 | --- | --- |
 | Mètriques i paradoxes del cinema espanyol en dos circuits (1965–2025) | Métricas y paradojas del cine español en dos circuitos (1965–2025) |
-| Públic i Prestigi | Público y Prestigio |
+| Públic i Prestigi | Públic i Prestigi |
 | Quines pel·lícules han arribat a més espectadors? Quines han obtingut més reconeixement? I quan, excepcionalment, coincideixen? Un estudi viu que mesura i analitza dues formes d’èxit, el públic massiu i el prestigi internacional, i tot allò que revela. Benvinguts. | ¿Qué películas han llegado a más espectadores? ¿Cuáles han obtenido más reconocimiento? ¿Y cuándo, excepcionalmente, coinciden? Un estudio vivo que mide y analiza dos formas de éxito, el público masivo y el prestigio internacional, y todo lo que revela. Bienvenidos. |
 | Top 100 pel·lícules amb més espectadors a sales de cinema | Top 100 películas con más espectadores en salas de cine |
 | Reconeixement internacional en festivals i acadèmies | Reconocimiento internacional en festivales y academias |
@@ -50,16 +50,16 @@ En continuar, aniràs a la pàgina de subscripció, on podràs introduir el teu 
 
 **Castellà**
 
-Las novedades y actualizaciones de Público y Prestigio se publican en Substack, el canal de comunicación del proyecto.
+Las novedades y actualizaciones de Públic i Prestigi se publican en Substack, el canal de comunicación del proyecto.
 
 Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.
 
-## Incidències i decisions pendents
+## Decisions editorials fixades
 
-- **Títol del projecte:** mantenir «Públic i Prestigi» com a nom propi de la marca també en castellà, o traduir-lo per «Público y Prestigio»? Aquest esborrany presenta la traducció literal, però **no la dona per aprovada** per als elements de marca.
-- **«Cruïlles»:** «Cruces» és literal, però potser «Intersecciones» conserva millor el valor conceptual. Escollir una forma única per a la Part III i els menús.
-- **«Rànquings»:** aquest esborrany manté «rankings»; validar la convenció ortotipogràfica adoptada per a tota l'edició.
-- **Estructura original:** el menú lateral de `v1.2/index.html` conté encara un enllaç `#cesar-bafta-donatello`; no forma part del corpus vigent. Registrar-ho com a possible residu tècnic a revisar en català, sense afegir aquest apartat a la traducció castellana.
+- **Nom propi:** «Públic i Prestigi» sempre, també en castellà.
+- **«Cruïlles»:** «Cruces» en els contextos equivalents de la Part III.
+- **«Rànquings»:** «rankings» com a convenció de l'edició castellana, d'acord amb l'ús de les versions anteriors.
+- **Estructura original:** s'ha detectat una entrada obsoleta al menú lateral català de la portada i se n'ha fet la correcció separada a la branca `main`. La versió castellana no l'ha de reproduir.
 - **Interfície pendent:** capçalera, menú complet, cerca, modal, `aria-label`, tooltips del gràfic SVG i scripts. No considerar la portada castellana acabada fins completar-los i verificar-los amb la versió catalana.
 
 ## Criteri de validació
