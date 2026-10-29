@@ -1,4 +1,4 @@
-Para analizar el público en las salas, el estudio parte de las entradas vendidas, no de la recaudación en euros. La razón es de fondo: la recaudación mide un retorno económico; las entradas, la asistencia a las salas y la dimensión colectiva del fenómeno. Una entrada no equivale necesariamente a una persona diferente.
+El estudio trabaja exclusivamente con el número de entradas vendidas, no con cifras de recaudación en euros. La razón es de fondo: lo que nos interesa es cuántas personas entraron en una sala de cine y formaron parte de un momento cultural compartido. La recaudación mide un retorno económico, las entradas un impacto social.
 
 ## El ICAA como fuente principal
 
@@ -25,7 +25,7 @@ Si nos limitamos a ordenar las 100 películas por espectadores absolutos, el ran
 
 ## Las cuatro métricas: cómo leerlas
 
-En las tablas del estudio encontraremos cuatro medidas que ofrecen perspectivas diferentes sobre el público de cada película.
+En muchas de las tablas del estudio encontraremos cuatro columnas de medida. Cada una cuenta una historia diferente:
 
 | Métrica | Fórmula | Qué cuenta |
 | --- | --- | --- |
