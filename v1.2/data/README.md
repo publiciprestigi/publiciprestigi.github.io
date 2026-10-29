@@ -4,9 +4,9 @@
 
 ## Fonts de dades vigents a la branca de proves
 
-- `films.json` — corpus de **210 films** (100 del Top 100 i 110 de context), amb els espectadors acumulats originals i quota, penetració i IIC recalculats. En ús a les Parts I i III, els rànquings, el resum per dècades i el cercador. Les dues excepcions de 1964 es conserven datades com a l'Anuari ICAA 2023.
+- `films.json` — corpus de **208 films** (100 del Top 100 i 108 de context), amb els espectadors acumulats originals i quota, penetració i IIC recalculats. En ús a les Parts I i III, els rànquings, el resum per dècades i el cercador. El Top 100 exclou les dues estrenes de 1964 de l'Anuari ICAA 2023 i incorpora *Una señora estupenda* i *Digan lo que digan*, amb llindar de 2.006.484 espectadors.
 - `market.json` — **61 anualitats, 1965–2025**, amb mercat espanyol i població de referència. És la font operativa única dels mercats espanyols als gràfics de la Part I i III, les mitjanes per dècada i els càlculs manuals de la Part III. El 1965 és una estimació documentada (≈435,2M de MEDIA Salles), separada dels totals ministerials posteriors.
-- `population.json` — **62 anualitats, 1964–2025**, en persones, amb font i estat. Sèrie auxiliar **d'auditoria i de reproducció dels càlculs**; la web consulta habitualment la població inclosa a `market.json` per a 1965–2025. Per als dos films de 1964, `films.json` utilitza població reconstruïda de 1964 i un mercat de 400M estimat que **no forma part** de `market.json`.
+- `population.json` — **62 anualitats, 1964–2025**, en persones, amb font i estat. Sèrie auxiliar **d'auditoria i de reproducció dels càlculs**; la web consulta habitualment la població inclosa a `market.json` per a 1965–2025. Els dos films de 1964 ja no formen part de `films.json`; la sèrie de 1964 es conserva en `population.json` per a traçabilitat històrica.
 - `festivals.json`, `fora-competicio.json`, `oscar.json` i `efa.json` — corpus de prestigi i seccions complementàries; es conserven sense alteracions derivades de l'auditoria quantitativa espanyola.
 - `metadata.json` — informació de versió, consultada per diverses pàgines.
 
