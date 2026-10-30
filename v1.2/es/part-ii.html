@@ -164,7 +164,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <section class="seccio-contingut pip-entrada" id="seccio-portada">
 <div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">Què fa que una pel·lícula sigui considerada important? Quins directors i sensibilitats han destacat internacionalment? Què canvia quan el reconeixement arriba dels festivals o de les acadèmies?</p><p class="pip-entrada-final">El prestigi no és només una qüestió de valor artístic, sinó també una construcció històrica, cultural i institucional.</p></div>
 <div class="pip-entrada-cta">
-<button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button"><span class="pip-nav-part">PART II</span><span class="pip-nav-titol">Empezar →</span></button>
+<button class="nav-seccio-btn pip-entrada-enllac" data-desti="intro" type="button"><span class="pip-nav-part">PARTE II</span><span class="pip-nav-titol">Empezar →</span></button>
 </div>
 </section>
 <div class="seccio-contingut" id="seccio-intro">
@@ -321,8 +321,8 @@ body.pip-en-portada .nav-seccions { display: none; }
       const next = seccions[idx + 1];
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
-      const destAnt = prev ? { part:'PART II', titol:(prev.nav || prev.titol), url:null } : { part:'PART I', titol:'Ranking por directores', url:'part-i.html#directors' };
-      const destSeg = next ? { part:'PART II', titol:(next.nav || next.titol), url:null } : { part:'PART III', titol:'Análisis', url:'part-iii.html' };
+      const destAnt = prev ? { part:'PARTE II', titol:(prev.nav || prev.titol), url:null } : { part:'PARTE I', titol:'Ranking por directores', url:'part-i.html#directors' };
+      const destSeg = next ? { part:'PARTE II', titol:(next.nav || next.titol), url:null } : { part:'PARTE III', titol:'Análisis', url:'part-iii.html' };
       const pintaBoto = (btn, dest, direccio) => {
         btn.style.visibility = dest ? 'visible' : 'hidden';
         if (!dest) return;
