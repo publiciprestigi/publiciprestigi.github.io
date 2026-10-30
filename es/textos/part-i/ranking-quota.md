@@ -1,5 +1,5 @@
 <!-- intro -->
-¿Qué peso representa el público acumulado de una película si lo comparamos con el mercado anual de su año de referencia? La cuota es este indicador relativo, no la cuota oficial de taquilla de aquel mismo año. Los años 60s y 70s, con mercados de cientos de millones de entradas, suelen presentar cuotas individuales más bajas porque el público se repartía entre muchas películas. Veamos primero el Top 10.
+¿Qué peso representa el público acumulado de una película si lo comparamos con el mercado anual de su año de referencia? Los años 60s y 70s, con mercados de cientos de millones de entradas, suelen presentar cuotas individuales más bajas porque el público se repartía entre muchas películas. Veamos primero el Top 10.
 
 <!-- /intro -->
 
