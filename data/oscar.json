@@ -1,0 +1,498 @@
+{
+  "films": [
+    {
+      "id": 1,
+      "titol": "El amor brujo",
+      "any": 1967,
+      "director": "Francisco Rovira Beleta",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 437814,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 2,
+      "titol": "Tristana",
+      "any": 1970,
+      "director": "Luis Buñuel",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": "25a als 70s",
+      "espectadors": 1801968,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa",
+      "decada_es": "25a en 70s"
+    },
+    {
+      "id": 3,
+      "titol": "Mi querida señorita",
+      "any": 1972,
+      "director": "Jaime de Armiñán",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": "27a als 70s",
+      "espectadors": 1783154,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa",
+      "decada_es": "27a en 70s"
+    },
+    {
+      "id": 4,
+      "titol": "Ese oscuro objeto del deseo",
+      "any": 1977,
+      "director": "Luis Buñuel",
+      "reconeixement": "2 nominacions a: millor pel·lícula de parla no anglesa i guió adaptat",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 1076567,
+      "reconeixement_es": "2 nominaciones a: mejor película de habla no inglesa y guion adaptado"
+    },
+    {
+      "id": 5,
+      "titol": "Mamá cumple cien años",
+      "any": 1979,
+      "director": "Carlos Saura",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 1120399,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 6,
+      "titol": "El nido",
+      "any": 1980,
+      "director": "Jaime de Armiñán",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 585897,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 7,
+      "titol": "Volver a empezar",
+      "any": 1982,
+      "director": "José Luis Garci",
+      "reconeixement": "★ Oscar a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 862366,
+      "reconeixement_es": "★ Oscar a mejor película de habla no inglesa"
+    },
+    {
+      "id": 8,
+      "titol": "Carmen",
+      "any": 1983,
+      "director": "Carlos Saura",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 427324,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 9,
+      "titol": "Sesión continua",
+      "any": 1984,
+      "director": "José Luis Garci",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 211495,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 10,
+      "titol": "Asignatura aprobada",
+      "any": 1987,
+      "director": "José Luis Garci",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 240527,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 11,
+      "titol": "Mujeres al borde de un ataque de nervios",
+      "any": 1988,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": 22,
+      "decada": "1a als 80s",
+      "espectadors": 3348457,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa",
+      "decada_es": "1a en 80s"
+    },
+    {
+      "id": 12,
+      "titol": "Belle Époque",
+      "any": 1992,
+      "director": "Fernando Trueba",
+      "reconeixement": "★ Oscar a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": "8a als 90s",
+      "espectadors": 1707308,
+      "reconeixement_es": "★ Oscar a mejor película de habla no inglesa",
+      "decada_es": "8a en 90s"
+    },
+    {
+      "id": 13,
+      "titol": "Secretos del corazón",
+      "any": 1997,
+      "director": "Montxo Armendáriz",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": "19a als 90s",
+      "espectadors": 1200193,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa",
+      "decada_es": "19a en 90s"
+    },
+    {
+      "id": 14,
+      "titol": "El abuelo",
+      "any": 1998,
+      "director": "José Luis Garci",
+      "reconeixement": "Nominada a millor pel·lícula de parla no anglesa",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 1097346,
+      "reconeixement_es": "Nominada a mejor película de habla no inglesa"
+    },
+    {
+      "id": 15,
+      "titol": "Todo sobre mi madre",
+      "any": 1999,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "★ Oscar a millor pel·lícula de parla no anglesa",
+      "top100_pos": 52,
+      "decada": "2a als 90s",
+      "espectadors": 2590699,
+      "reconeixement_es": "★ Oscar a mejor película de habla no inglesa",
+      "decada_es": "2a en 90s"
+    },
+    {
+      "id": 16,
+      "titol": "Hable con ella",
+      "any": 2002,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions · ★ Oscar a millor guió original. Nominada a millor direcció",
+      "top100_pos": null,
+      "decada": "26a als 2000s",
+      "espectadors": 1367655,
+      "reconeixement_es": "2 nominaciones · ★ Oscar a mejor guion original. Nominada a mejor dirección",
+      "decada_es": "26a en 2000s"
+    },
+    {
+      "id": 17,
+      "titol": "Balseros",
+      "any": 2002,
+      "director": "Carles Bosch i Josep Maria Domènech",
+      "reconeixement": "Nominada a millor llargmetratge documental",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 16870,
+      "reconeixement_es": "Nominada a mejor largometraje documental"
+    },
+    {
+      "id": 18,
+      "titol": "Mar adentro",
+      "any": 2004,
+      "director": "Alejandro Amenábar",
+      "reconeixement": "2 nominacions · ★ Oscar a millor pel·lícula de parla no anglesa. Nominada a millor maquillatge",
+      "top100_pos": 12,
+      "decada": "5a als 2000s",
+      "espectadors": 4099475,
+      "reconeixement_es": "2 nominaciones · ★ Oscar a mejor película de habla no inglesa. Nominada a mejor maquillaje",
+      "decada_es": "5a en 2000s"
+    },
+    {
+      "id": 19,
+      "titol": "Volver",
+      "any": 2006,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "Nominació a millor actriu principal (Penélope Cruz)",
+      "top100_pos": null,
+      "decada": "16a als 2000s",
+      "espectadors": 1932119,
+      "reconeixement_es": "Nominación a mejor actriz principal (Penélope Cruz)",
+      "decada_es": "16a en 2000s"
+    },
+    {
+      "id": 20,
+      "titol": "El laberinto del fauno",
+      "any": 2006,
+      "director": "Guillermo del Toro",
+      "reconeixement": "6 nominacions · ★ 3 Oscar a: millor direcció artística, fotografia i maquillatge. Nominada a millor pel·lícula de parla no anglesa (en representació de Mèxic [N]), guió original i música original",
+      "top100_pos": null,
+      "decada": "17a als 2000s",
+      "espectadors": 1687641,
+      "reconeixement_es": "6 nominaciones · ★ 3 Oscar a: mejor dirección artística, fotografía y maquillaje. Nominada a mejor película de habla no inglesa (en representación de México [N]), guion original y música original",
+      "decada_es": "17a en 2000s"
+    },
+    {
+      "id": 21,
+      "titol": "Vicky Cristina Barcelona",
+      "any": 2008,
+      "director": "Woody Allen",
+      "reconeixement": "★ Oscar a millor actriu de repartiment (Penélope Cruz)",
+      "top100_pos": null,
+      "decada": "29a als 2000s",
+      "espectadors": 1295492,
+      "reconeixement_es": "★ Oscar a mejor actriz de reparto (Penélope Cruz)",
+      "decada_es": "29a en 2000s"
+    },
+    {
+      "id": 22,
+      "titol": "Biutiful",
+      "any": 2010,
+      "director": "Alejandro González Iñárritu",
+      "reconeixement": "2 nominacions a: millor pel·lícula de parla no anglesa (en representació de Mèxic [N]) i actor principal (Javier Bardem)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 509316,
+      "reconeixement_es": "2 nominaciones a: mejor película de habla no inglesa (en representación de México [N]) y actor principal (Javier Bardem)"
+    },
+    {
+      "id": 23,
+      "titol": "Chico & Rita",
+      "any": 2010,
+      "director": "Fernando Trueba, Javier Mariscal i Tono Errando",
+      "reconeixement": "Nominada a millor pel·lícula d’animació",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 156794,
+      "reconeixement_es": "Nominada a mejor película de animación"
+    },
+    {
+      "id": 24,
+      "titol": "Lo imposible",
+      "any": 2012,
+      "director": "J. A. Bayona",
+      "reconeixement": "Nominació a actriu principal (Naomi Watts)",
+      "top100_pos": 3,
+      "decada": "2a als 2010s",
+      "espectadors": 6129976,
+      "reconeixement_es": "Nominación a actriz principal (Naomi Watts)",
+      "decada_es": "2a en 2010s"
+    },
+    {
+      "id": 25,
+      "titol": "Klaus",
+      "any": 2019,
+      "director": "Sergio Pablos",
+      "reconeixement": "Nominada a millor pel·lícula d’animació",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 1253,
+      "reconeixement_es": "Nominada a mejor película de animación"
+    },
+    {
+      "id": 26,
+      "titol": "Dolor y gloria",
+      "any": 2019,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions a: millor pel·lícula internacional i actor principal (Antonio Banderas)",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 964859,
+      "reconeixement_es": "2 nominaciones a: mejor película internacional y actor principal (Antonio Banderas)"
+    },
+    {
+      "id": 27,
+      "titol": "Madres paralelas",
+      "any": 2021,
+      "director": "Pedro Almodóvar",
+      "reconeixement": "2 nominacions a: millor actriu principal (Penélope Cruz) i música original",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 425643,
+      "reconeixement_es": "2 nominaciones a: mejor actriz principal (Penélope Cruz) y música original"
+    },
+    {
+      "id": 28,
+      "titol": "Robot Dreams",
+      "any": 2023,
+      "director": "Pablo Berger",
+      "reconeixement": "Nominada a millor pel·lícula d’animació",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 83577,
+      "reconeixement_es": "Nominada a mejor película de animación"
+    },
+    {
+      "id": 29,
+      "titol": "La sociedad de la nieve",
+      "any": 2023,
+      "director": "J. A. Bayona",
+      "reconeixement": "2 nominacions a: millor pel·lícula internacional i maquillatge i perruqueria",
+      "top100_pos": null,
+      "decada": null,
+      "espectadors": 556976,
+      "reconeixement_es": "2 nominaciones a: mejor película internacional y maquillaje y peluquería"
+    }
+  ],
+  "professionals": [
+    {
+      "professional": "Jorge Semprún",
+      "pellicula": "Z",
+      "any": 1969,
+      "reconeixement": "Nominació a millor guió adaptat",
+      "reconeixement_es": "Nominación a mejor guion adaptado"
+    },
+    {
+      "professional": "Gil Parrondo",
+      "pellicula": "Patton",
+      "any": 1970,
+      "reconeixement": "★ Oscar a millor direcció artística",
+      "reconeixement_es": "★ Oscar a mejor dirección artística"
+    },
+    {
+      "professional": "Gil Parrondo",
+      "pellicula": "Nicolás y Alejandra",
+      "any": 1971,
+      "reconeixement": "★ Oscar a millor direcció artística",
+      "reconeixement_es": "★ Oscar a mejor dirección artística"
+    },
+    {
+      "professional": "Yvonne Blake i Antonio Castillo",
+      "pellicula": "Nicolás y Alejandra",
+      "any": 1971,
+      "reconeixement": "★ Oscar a millor vestuari",
+      "reconeixement_es": "★ Oscar a mejor vestuario"
+    },
+    {
+      "professional": "Gil Parrondo",
+      "pellicula": "Viajes con mi tía",
+      "any": 1972,
+      "reconeixement": "Nominació a millor direcció artística",
+      "reconeixement_es": "Nominación a mejor dirección artística"
+    },
+    {
+      "professional": "Luis Buñuel i Jean-Claude Carrière",
+      "pellicula": "El discreto encanto de la burguesía",
+      "any": 1972,
+      "reconeixement": "Nominació a millor guió original",
+      "reconeixement_es": "Nominación a mejor guion original"
+    },
+    {
+      "professional": "Néstor Almendros",
+      "pellicula": "Días del cielo",
+      "any": 1978,
+      "reconeixement": "★ Oscar a millor fotografia",
+      "reconeixement_es": "★ Oscar a mejor fotografía"
+    },
+    {
+      "professional": "Néstor Almendros",
+      "pellicula": "Kramer contra Kramer",
+      "any": 1979,
+      "reconeixement": "Nominació a millor fotografia",
+      "reconeixement_es": "Nominación a mejor fotografía"
+    },
+    {
+      "professional": "Néstor Almendros",
+      "pellicula": "El lago azul",
+      "any": 1980,
+      "reconeixement": "Nominació a millor fotografia",
+      "reconeixement_es": "Nominación a mejor fotografía"
+    },
+    {
+      "professional": "Néstor Almendros",
+      "pellicula": "La decisión de Sophie",
+      "any": 1982,
+      "reconeixement": "Nominació a millor fotografia",
+      "reconeixement_es": "Nominación a mejor fotografía"
+    },
+    {
+      "professional": "Javier Bardem",
+      "pellicula": "Antes que anochezca",
+      "any": 2000,
+      "reconeixement": "Nominació a millor actor principal",
+      "reconeixement_es": "Nominación a mejor actor principal"
+    },
+    {
+      "professional": "Alberto Iglesias",
+      "pellicula": "El jardinero fiel",
+      "any": 2005,
+      "reconeixement": "Nominació a millor banda sonora original",
+      "reconeixement_es": "Nominación a mejor banda sonora original"
+    },
+    {
+      "professional": "Javier Bardem",
+      "pellicula": "No es país para viejos",
+      "any": 2007,
+      "reconeixement": "★ Oscar a millor actor de repartiment",
+      "reconeixement_es": "★ Oscar a mejor actor de reparto"
+    },
+    {
+      "professional": "Alberto Iglesias",
+      "pellicula": "Cometas en el cielo",
+      "any": 2007,
+      "reconeixement": "Nominació a millor banda sonora original",
+      "reconeixement_es": "Nominación a mejor banda sonora original"
+    },
+    {
+      "professional": "Penélope Cruz",
+      "pellicula": "Nine",
+      "any": 2009,
+      "reconeixement": "Nominació a millor actriu de repartiment",
+      "reconeixement_es": "Nominación a mejor actriz de reparto"
+    },
+    {
+      "professional": "Alberto Iglesias",
+      "pellicula": "El topo",
+      "any": 2011,
+      "reconeixement": "Nominació a millor banda sonora original",
+      "reconeixement_es": "Nominación a mejor banda sonora original"
+    },
+    {
+      "professional": "Paco Delgado",
+      "pellicula": "Los miserables",
+      "any": 2012,
+      "reconeixement": "Nominació a millor disseny de vestuari",
+      "reconeixement_es": "Nominación a mejor diseño de vestuario"
+    },
+    {
+      "professional": "Paco Delgado",
+      "pellicula": "La chica danesa",
+      "any": 2015,
+      "reconeixement": "Nominació a millor disseny de vestuari",
+      "reconeixement_es": "Nominación a mejor diseño de vestuario"
+    },
+    {
+      "professional": "Sergio López-Rivera",
+      "pellicula": "La madre del blues",
+      "any": 2020,
+      "reconeixement": "★ Oscar a millor maquillatge i perruqueria",
+      "reconeixement_es": "★ Oscar a mejor maquillaje y peluquería"
+    },
+    {
+      "professional": "Santiago Colomo Martínez",
+      "pellicula": "El magnífico Iván",
+      "any": 2020,
+      "reconeixement": "Nominació a millors efectes visuals",
+      "reconeixement_es": "Nominación a mejores efectos visuales"
+    },
+    {
+      "professional": "Javier Bardem",
+      "pellicula": "Ser los Ricardo",
+      "any": 2021,
+      "reconeixement": "Nominació a millor actor principal",
+      "reconeixement_es": "Nominación a mejor actor principal"
+    },
+    {
+      "professional": "Ana de Armas",
+      "pellicula": "Blonde",
+      "any": 2022,
+      "reconeixement": "Nominació a millor actriu principal",
+      "reconeixement_es": "Nominación a mejor actriz principal"
+    },
+    {
+      "professional": "Karla Sofía Gascón",
+      "pellicula": "Emilia Pérez",
+      "any": 2024,
+      "reconeixement": "Nominació a millor actriu principal",
+      "reconeixement_es": "Nominación a mejor actriz principal"
+    }
+  ]
+}

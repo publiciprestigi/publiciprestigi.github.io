@@ -19,10 +19,14 @@ async function construirResumDecades() {
   const cont = document.getElementById('taula-decades-resum');
   if (!cont) return;
 
-  let films;
+  let films, mercat;
   try {
-    const r = await fetch(pipPath('data/films.json'));
-    films = await r.json();
+    const [rf, rm] = await Promise.all([
+      fetch(pipPath('data/films.json')),
+      fetch(pipPath('data/market.json'))
+    ]);
+    if (!rf.ok || !rm.ok) throw new Error('No es poden carregar les sèries');
+    [films, mercat] = await Promise.all([rf.json(), rm.json()]);
   } catch(e) {
     cont.innerHTML = `<p class="text-md-error">${pipDecT('Error carregant les dades.','Error al cargar los datos.')}</p>`;
     return;
@@ -47,12 +51,16 @@ async function construirResumDecades() {
   const fmtM = (n, e) => n == null ? '—' : Math.round(n) + 'M' + (e ? '≈' : '');
   const fmtI = n => n == null ? '—' : n.toFixed(2);
 
+  const decadaMercat = any => any <= 1969 ? '60s' : any <= 1979 ? '70s' : any <= 1989 ? '80s' : any <= 1999 ? '90s' : any <= 2009 ? '2000s' : any <= 2019 ? '2010s' : '2020s';
   const files = ordre.map(decada => {
     const fs = grups[decada];
     if (!fs.length) return '';
     const lider = fs.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
-    const mercatMitja = fs.reduce((s, f) => s + (f.mercat_M || 0), 0) / fs.length;
-    const mercatEst   = fs.some(f => f.mercat_estimat);
+    // Mitjana anual real: una observació per any, no una per títol del Top 100.
+    const anualitats = mercat.filter(m => decadaMercat(m.any) === decada);
+    if (!anualitats.length) throw new Error('Falten anualitats de '+decada);
+    const mercatMitja = anualitats.reduce((s, m) => s + m.entrades_M, 0) / anualitats.length;
+    const mercatEst = anualitats.some(m => m.estimat);
     const col = COLORS_DECADES[decada] || { fons: '#f5f5f5', text: '#333' };
 
     return `<tr style="background:${col.fons};border-bottom:2px solid #fff">
@@ -115,8 +123,16 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
   const textColors  = ordre.map(d => COLORS_DECADES[d]?.text || '#333');
 
   cont.innerHTML = `
+    <p class="grafic-decades-titol" style="text-align:center;font-size:.82em;font-weight:700;color:#363737;margin:0 0 14px;font-family:Inter,-apple-system,\'SF Pro Text\',sans-serif">${pipDecT('Distribució del Top 100 per dècada (1965–2025)','Distribución del Top 100 por década (1965–2025)')}</p>
     <canvas id="grafic-decades-canvas"></canvas>
-    <p class="grafic-peu">${pipDecT('Nombre de pel·lícules del Top 100 per dècada i percentatge que representen sobre el total de 100 films.','Número de films del Top 100 por década y porcentaje que representan sobre el total de 100 films.')}</p>`;
+    <p class="grafic-nota">${pipDecT(
+      'Nombre de pel·lícules del Top 100 per dècada i percentatge que representen.',
+      'Número de films del Top 100 por década y porcentaje que representan.'
+    )}</p>
+    <p class="grafic-font">${pipDecT(
+      'Font: ICAA. Distribució per dècades: elaboració de Públic i Prestigi.',
+      'Fuente: ICAA. Distribución por décadas: elaboración de Públic i Prestigi.'
+    )}</p>`;
   const ctx = document.getElementById('grafic-decades-canvas').getContext('2d');
 
   new Chart(ctx, {
@@ -126,7 +142,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       datasets: [{
         data: counts,
         backgroundColor: colors,
-        hoverBackgroundColor: colorsHover,
+        hoverBackgroundColor: colors,
         borderWidth: 0,
       }]
     },
@@ -137,13 +153,6 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       aspectRatio: 2.8,
       plugins: {
         legend: { display: false },
-        title: {
-          display: true,
-          text: pipDecT('Distribució del Top 100 per dècada (1965–2025)','Distribución del Top 100 por década (1965–2025)'),
-          color: '#363737',
-          font: { size: 13, weight: '600', family: '-apple-system, SF Pro Text, sans-serif' },
-          padding: { bottom: 16 },
-        },
         tooltip: {
           enabled: false,
           external: function(context) {
@@ -152,12 +161,12 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
               tooltipEl = document.createElement('div');
               tooltipEl.id = 'tooltip-decades';
               tooltipEl.style.cssText = `
-                position: absolute; background: rgba(255,255,255,0.97);
-                border: 1px solid #e5e5e5; border-radius: 4px;
-                padding: 10px 14px; font-size: 0.82rem; pointer-events: none;
-                font-family: -apple-system, sans-serif; color: #363737;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 100;
-                line-height: 1.6; min-width: 200px;
+                position: absolute; background: rgba(45,45,45,0.95);
+                border: 0; border-radius: 6px;
+                padding: 8px 10px; font-size: 12px; pointer-events: none;
+                font-family: "Inter", -apple-system, "SF Pro Text", sans-serif; color: #fff;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.16); z-index: 100;
+                line-height: 1.4; min-width: 200px;
               `;
               document.body.appendChild(tooltipEl);
             }
@@ -168,11 +177,14 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
             }
             const i = tooltip.dataPoints[0].dataIndex;
             const d = grups[ordre[i]];
+            const espAcumulats = d.reduce((sum, f) => sum + (f.espectadors || 0), 0);
+            const espText = (espAcumulats / 1e6).toFixed(1).replace('.', ',') + 'M';
             const lider = d.reduce((a, b) => b.espectadors > a.espectadors ? b : a);
             tooltipEl.innerHTML = `
               <div style="font-weight:600;margin-bottom:4px">${etiquetes[ordre[i]]}</div>
               <div>${pcts[i]}% del Top 100 · ${counts[i]} films</div>
-              <div style="margin-top:6px;font-size:0.78rem;color:#555">
+              <div>${espText} ${pipDecT('espectadors acumulats','espectadores acumulados')}</div>
+              <div style="margin-top:6px;font-size:11px;color:#ccc">
                 ${pipDecT('Líder','Líder')}: <em><strong>${lider.titol}</strong></em> (${lider.any})
               </div>`;
             const pos = context.chart.canvas.getBoundingClientRect();
@@ -185,7 +197,7 @@ function construirGraficDecades(grups, ordre, etiquetes, total) {
       scales: {
         x: {
           grid: { display: false },
-          ticks: { color: '#555', font: { size: 12 } }
+          ticks: { color: '#555', font: { size: 11 } }
         },
         y: {
           title: { display: false },

@@ -13,87 +13,181 @@
   <link rel="stylesheet" href="css/estil.css">
   <link rel="stylesheet" href="css/capcalera-subscripcio.css">
   <style>
-    .versio-etiqueta {
-      display: inline-block;
-      font-size: 0.68rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 3px;
-      vertical-align: middle;
-      margin-left: 10px;
-      position: relative;
-      top: -1px;
+    .versions-intro {
+      max-width: 760px;
+      margin: 54px auto 0;
+      color: #555;
+      font-size: 0.98rem;
+      line-height: 1.7;
     }
-    .etiqueta-actual   { background: #e8f5ec; color: #2a7a3b; }
-    .etiqueta-prevista { background: #fef3e8; color: #c46a00; }
-    .etiqueta-anterior { background: #f0f0f0; color: #888; }
+    .versions-intro p { margin: 0 0 14px; }
+    .versions-intro p:last-child { margin-bottom: 0; }
+    .versions-intro a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
 
-    .etiqueta-seleccionada {
-      font-size: 0.78rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      color: #888;
-      margin-left: 8px;
-      vertical-align: middle;
+    .versions-cronologia {
       position: relative;
-      top: -1px;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 2px 0 0 34px;
     }
-    .etiqueta-seleccionada .check { color: #2a7a3b; }
+    /* Cada tram connecta dos punts consecutius. Sense prolongacions
+       abans de la v2 ni després del cercle de la v0. */
+    .versio-item:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: -27px;
+      top: 14px;
+      bottom: -34px;
+      width: 1px;
+      background: #d9d9d9;
+    }
 
     .versio-item {
-      padding: 20px 16px;
-      margin: 0 -16px;
-      border-bottom: 1px solid var(--color-linia);
-      border-left: 3px solid transparent;
-      transition: background .12s;
+      position: relative;
+      padding: 0 0 52px;
+      margin: 0 0 20px;
+      border-bottom: 1px solid #ececec;
     }
-    .versio-item:last-child { border-bottom: none; }
-
-    .versio-cap {
-      display: flex;
-      align-items: center;
-      margin-bottom: 8px;
+    .versio-item:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
     }
 
-    /* No seleccionades: tot gris uniforme */
-    .versio-num {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #999;
+    .versio-punt {
+      position: absolute;
+      left: -34px;
+      top: 7px;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 0 0 1px #b9b9b9;
+      background: #555;
+      box-sizing: border-box;
     }
-    .versio-resum {
-      font-size: 0.95rem;
-      color: #999;
-      line-height: 1.6;
-      margin: 0 0 6px 0;
+    .versio-item.previa .versio-punt {
+      background: #fff;
+      box-shadow: 0 0 0 1px #aaa;
     }
+    .versio-item.publicada .versio-punt {
+      background: #777;
+      box-shadow: 0 0 0 1px #777;
+    }
+    .versio-item.actual .versio-punt {
+      background: #2a7a3b;
+      box-shadow: 0 0 0 1px #2a7a3b;
+    }
+    .versio-item.futura .versio-punt {
+      background: #c8641f;
+      box-shadow: 0 0 0 1px #c8641f;
+    }
+
     .versio-data {
       display: block;
-      font-size: 0.62rem;
-      color: #bbb;
+      padding-top: 4px;
+      margin: 0 0 18px;
+      font-size: 0.68rem;
+      line-height: 1.3;
+      color: #999;
       letter-spacing: 0.07em;
       text-transform: uppercase;
+    }
+    .versio-cap {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 0 0 8px;
+    }
+    .versio-num {
+      font-size: 1.08rem;
+      line-height: 1.35;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+    .versio-edicio {
+      font-size: 0.82rem;
+      font-weight: 400;
+      color: #888;
+    }
+    .versio-etiqueta {
+      display: inline-block;
+      position: relative;
+      top: -1px;
+      padding: 2px 7px;
+      border-radius: 3px;
+      font-size: 0.66rem;
+      font-weight: 600;
+      line-height: 1.45;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .etiqueta-actual { background: #e8f5ec; color: #2a7a3b; }
+    .etiqueta-anterior { background: #f2f2f2; color: #777; }
+    .etiqueta-anual { background: #fff0e5; color: #c8641f; }
+
+    .versio-resum {
+      max-width: 680px;
+      margin: 0;
+      font-size: 0.96rem;
+      line-height: 1.65;
+      color: #555;
+    }
+    .versio-accions {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
       margin-top: 10px;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+    .versio-accions a {
+      color: #666;
+      text-decoration: underline !important;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      border-bottom: none !important;
+      padding-bottom: 1px;
+      font-weight: 400;
+    }
+    .versio-accions a:hover {
+      color: var(--color-text);
+      text-decoration: underline !important;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      border-bottom: none !important;
+      font-weight: 600;
     }
 
-    /* Seleccionada */
-    .versio-item.seleccionada {
-      border-left-color: var(--color-text);
-      background: #fafafa;
-      padding-top: 20px;
+    @media (max-width: 700px) {
+      .versions-intro {
+        margin-top: 42px;
+        font-size: 0.96rem;
+        line-height: 1.68;
+      }
+      .versions-cronologia { padding-left: 28px; }
+      .versio-item:not(:last-child)::before { left: -22px; bottom: -30px; }
+      .versio-punt {
+        left: -28px;
+        width: 13px;
+        height: 13px;
+        top: 8px;
+      }
+      .versio-item {
+        padding-bottom: 44px;
+        margin-bottom: 16px;
+      }
+      .versio-cap { gap: 7px; }
+      .versio-num { font-size: 1.04rem; }
+      .versio-edicio { font-size: 0.8rem; }
+      .versio-resum { font-size: 0.94rem; }
     }
-    .versio-item.seleccionada .versio-num  { color: var(--color-text); }
-    .versio-item.seleccionada .versio-resum { color: #555; }
-    .versio-item.seleccionada .versio-data  { color: #aaa; }
-
-    /* Clicables */
-    .versio-item.clicable { cursor: pointer; }
-    .versio-item.clicable:hover { background: #fafafa; }
-
-    /* Previstes: no clicables */
-    .versio-item.prevista { cursor: default; }
   </style>
 
   <script>
@@ -112,7 +206,7 @@
         <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
-        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.1 (1965–2025)</a>
+        <a href="versions.html" class="capcalera-versio actiu" id="versio-label">Versió 1.2 (1965–2025)</a>
       </div>
 
       <a href="/" class="capcalera-logo">Públic i Prestigi</a>
@@ -148,52 +242,91 @@
 
     <div class="part-capcalera">
       <h1>Versions</h1>
-      <p class="part-subtitol">Historial de les versions publicades i previstes de l’estudi.</p>
+      <p class="part-subtitol">Cronologia de les edicions, actualitzacions i ampliacions de l’estudi.</p>
     </div>
 
-    <div class="contingut-text" id="llista-versions">
+    <div class="contingut-text">
+      <div class="versions-cronologia" aria-label="Cronologia de versions, de les més recents a les més antigues">
+        <article class="versio-item futura" id="v2">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">Primavera de 2027</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 2</span>
+            <span class="versio-edicio">· Edició 1965–2026</span>
+            <span class="versio-etiqueta etiqueta-anual">Prevista</span>
+          </div>
+          <p class="versio-resum">Segona edició de l’estudi, amb la incorporació de les dades de 2026 i l’actualització dels rànquings, gràfics i textos que se’n derivin.</p>
+        </article>
 
-      <div class="versio-item clicable" id="v1-1"
-           data-label="Versió 1.1 (1965–2025)"
-           data-url="/">
-        <div class="versio-cap">
-          <span class="versio-num">Versió 1.1</span>
-          <span class="versio-etiqueta etiqueta-actual">Publicada</span>
-        </div>
-        <p class="versio-resum">Actualització amb nou capítol sobre la construcció del cànon a la Part III i revisió de les conclusions a partir de les seves aportacions. Inclou també ajustos de text, dades i disseny.</p>
-        <span class="versio-data">Publicació: 18 de juliol de 2026</span>
+        <article class="versio-item futura" id="v1-3">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">Hivern 2026–2027</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 1.3</span>
+            <span class="versio-edicio">· Edició 1965–2025</span>
+            <span class="versio-etiqueta etiqueta-anual">Prevista</span>
+          </div>
+          <p class="versio-resum">Nou capítol a la Part III, «El relleu femení», dedicat a l’evolució de la presència de les directores, i incorporació de la descàrrega de l’estudi en format PDF.</p>
+        </article>
+
+        <article class="versio-item actual" id="v1-2">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">Tardor de 2026</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 1.2</span>
+            <span class="versio-edicio">· Edició 1965–2025</span>
+            <span class="versio-etiqueta etiqueta-actual">Actual</span>
+          </div>
+          <p class="versio-resum">Amplia el mapa del prestigi internacional de la Part II amb la incorporació dels premis de les acadèmies. A la Part III, revisa bona part dels capítols i afegeix «Buñuel i el segon mercat».</p>
+          <div class="versio-accions">
+            <a href="/">Obrir versió →</a>
+          </div>
+        </article>
+
+        <article class="versio-item publicada" id="v1-1">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">18 de juliol de 2026</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 1.1</span>
+            <span class="versio-edicio">· Edició 1965–2025</span>
+            <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
+          </div>
+          <p class="versio-resum">Incorpora «El mapa del cànon» a la Part III i introdueix ajustos de dades, textos i disseny. Posteriorment, s’activa la versió en castellà.</p>
+          <div class="versio-accions">
+            <a href="/v1.1/">Obrir versió →</a>
+            <a href="https://publiciprestigi.substack.com/p/v11" target="_blank" rel="noopener">Llegir l’actualització ↗</a>
+            <a href="https://publiciprestigi.substack.com/p/v11-esp" target="_blank" rel="noopener">Llegir el llançament en castellà ↗</a>
+          </div>
+        </article>
+
+        <article class="versio-item publicada" id="v1">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">14 de juny de 2026</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 1</span>
+            <span class="versio-edicio">· Edició 1965–2025</span>
+            <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
+          </div>
+          <p class="versio-resum">Primera edició pública de Públic i Prestigi, amb les tres parts de l’estudi i el primer corpus de dades, mètriques i anàlisis.</p>
+          <div class="versio-accions">
+            <a href="/v1/">Obrir versió →</a>
+            <a href="https://publiciprestigi.substack.com/p/v1" target="_blank" rel="noopener">Llegir el llançament ↗</a>
+          </div>
+        </article>
+
+        <article class="versio-item previa" id="v0">
+          <span class="versio-punt" aria-hidden="true"></span>
+          <span class="versio-data">24 de març de 2026</span>
+          <div class="versio-cap">
+            <span class="versio-num">Versió 0</span>
+          </div>
+          <p class="versio-resum">Primera versió compartida de l’estudi, abans de la seva adaptació al format web.</p>
+        </article>
       </div>
 
-      <div class="versio-item clicable" id="v1"
-           data-label="Versió 1 (1965–2025)"
-           data-url="/v1/">
-        <div class="versio-cap">
-          <span class="versio-num">Versió 1</span>
-          <span class="versio-etiqueta etiqueta-anterior">Anterior</span>
-        </div>
-        <p class="versio-resum">Primera versió pública, inclou Part I (15 articles), Part II (8 articles) i Part III (7 articles), i les pàgines notes, sobre, versions i legal.</p>
-        <span class="versio-data">Publicació: 14 de juny de 2026</span>
+      <div class="versions-intro">
+        <p>Públic i Prestigi és un estudi viu. Cada edició anual incorpora un any més a la sèrie històrica: la v1 cobreix 1965–2025, la v2 ampliarà l’estudi fins a 1965–2026, i així successivament, amb les possibles noves entrades al Top 100 històric d’espectadors i els nous reconeixements internacionals. És l’actualització de base del projecte. Les versions intermèdies (v1.1, v1.2...) introdueixen durant l’any nous capítols d’anàlisi, ampliacions o revisions de l’estudi.</p>
       </div>
-
-      <div class="versio-item prevista" id="v1-2" data-estat="prevista">
-        <div class="versio-cap">
-          <span class="versio-num">Versió 1.2</span>
-          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
-        </div>
-        <p class="versio-resum">Actualització de la Part II amb dades de les seccions paral·leles, altres festivals i premis de les principals acadèmies internacionals.</p>
-        <span class="versio-data">Publicació prevista: tardor de 2027</span>
-      </div>
-      
-      <div class="versio-item prevista" id="v2" data-estat="prevista">
-        <div class="versio-cap">
-          <span class="versio-num">Versió 2</span>
-          <span class="versio-etiqueta etiqueta-prevista">Prevista</span>
-        </div>
-        <p class="versio-resum">Segona edició amb la incorporació de les dades de 2026 i una revisió general dels textos.</p>
-        <span class="versio-data">Publicació prevista: primavera de 2027</span>
-      </div>
-
-
     </div>
 
   </main>
@@ -248,34 +381,6 @@
   </div>
 
 <script>
-    const VERSIO_ACTUAL_ID = 'v1-1';
-
-    function actualitzarUI() {
-      document.querySelectorAll('.versio-item').forEach(el => {
-        el.classList.remove('seleccionada');
-        const etiqueta = el.querySelector('.etiqueta-seleccionada');
-        if (etiqueta) etiqueta.remove();
-      });
-
-      const actual = document.getElementById(VERSIO_ACTUAL_ID);
-      if (actual) {
-        actual.classList.add('seleccionada');
-        const etiqueta = document.createElement('span');
-        etiqueta.className = 'etiqueta-seleccionada';
-        etiqueta.innerHTML = '<span class="check">✓</span> Seleccionada';
-        actual.querySelector('.versio-cap').appendChild(etiqueta);
-      }
-    }
-
-    document.querySelectorAll('.versio-item.clicable').forEach(el => {
-      el.addEventListener('click', () => {
-        if (el.id === VERSIO_ACTUAL_ID) return;
-        window.location.href = el.dataset.url;
-      });
-    });
-
-    actualitzarUI();
-
     function toggleBuscador() {
       const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
       if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
@@ -406,17 +511,18 @@
       <div class="drawer-subseccions">
         <div class="drawer-grup-titol">Capítols</div>
         <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
-        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolució de la bretxa</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolució de la bretxa festivals vs. públic</a>
         <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
-        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Cinema, lleis i tecnologia</a>
-        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Dues generacions</a>
-        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Cinema d'autor industrial</a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Finestres, lleis i tecnologia</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Saura, Almodóvar i la generació actual</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Model d’autor industrial</a>
         <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del cànon</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
-        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>Conclusions</span><span class="chapter-badge chapter-badge-updated">Actualitzat</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#bunuel-franca" onclick="toggleDrawer()"><span>Buñuel i el segon mercat</span><span class="chapter-badge chapter-badge-new">Nou</span></a>
+        <a class="drawer-link" href="part-iii.html#conclusions" onclick="toggleDrawer()">De les mètriques a les paradoxes</a>
       </div>
     </div>
     <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el projecte</a></div>
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versió 1.2 (1965–2025)</a></div>
   </nav>
 
 
@@ -433,9 +539,5 @@
     }
   </script>
   <script src="js/idioma.js"></script>
-
-  <!-- Cloudflare Web Analytics -->
-  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
-  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>

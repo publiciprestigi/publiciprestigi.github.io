@@ -101,3 +101,39 @@
 
   window.PiP_textos = { renderitza, inicialitza };
 })();
+
+/* Indicador universal de scroll per a les taules, sense alterar els contenidors existents. */
+(function () {
+  const taules = 'table.taula-films, table.taula-ranking, table.taula-festivals, table.taula-decades-resum, .text-md table, .pip3-taula-ampla';
+  const scrollables = '.pip-taula-scroll, .taula-scroll-wrap, .ll-wrap, .taula-films, .taula-ranking, .taula-festivals, .taula-decades-resum';
+  let pendent = false;
+  function actualitza() {
+    pendent = false;
+    if (window.innerWidth > 900) return;
+    document.querySelectorAll(taules).forEach(table => {
+      if (table.closest('.pip-taula-scroll, .taula-scroll-wrap, .ll-wrap')) return;
+      const wrap = document.createElement('div');
+      wrap.className = 'pip-taula-scroll';
+      table.parentNode.insertBefore(wrap,table);
+      wrap.appendChild(table);
+    });
+    document.querySelectorAll(scrollables).forEach(el => {
+      const ample = el.scrollWidth > el.clientWidth + 5;
+      el.classList.toggle('pip-scroll-pendent', ample && el.scrollLeft + el.clientWidth < el.scrollWidth - 5);
+      if (!el.dataset.pipScrollObservat) {
+        el.addEventListener('scroll', () => {
+          el.classList.toggle('pip-scroll-pendent', el.scrollWidth > el.clientWidth + 5 && el.scrollLeft + el.clientWidth < el.scrollWidth - 5);
+        }, {passive:true});
+        el.dataset.pipScrollObservat='1';
+      }
+    });
+  }
+  function programa(){if(!pendent){pendent=true;requestAnimationFrame(actualitza)}}
+  function inicia(){
+    programa();
+    window.addEventListener('resize',programa,{passive:true});
+    new MutationObserver(programa).observe(document.body,{childList:true,subtree:true});
+    window.addEventListener('load',programa);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',inicia);else inicia();
+})();

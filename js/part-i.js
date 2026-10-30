@@ -57,7 +57,7 @@ function capcalera() {
     <th>#</th>
     <th class="col-subtil col-center">T100</th>
     <th>${pipT('Títol','Título')}</th>
-    <th class="col-subtil">${pipT('Director','Dirección')}</th>
+    <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
     <th class="col-num">${pipT('Espectadors','Espectadores')}</th>
     <th class="col-num col-gris">${pipT('Mercat','Mercado')}</th>
     <th class="col-num col-gris">${pipT('Penetració','Penetración')}</th>
@@ -164,7 +164,7 @@ function construirRànquing(metrica, contenidorId, label) {
     <th class="col-pos">#</th>
     ${esEsp ? '' : '<th class="col-center col-subtil">T100</th>'}
     <th>${pipT('Títol','Título')}</th>
-    <th class="col-subtil">${pipT('Director','Dirección')}</th>
+    <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
     <th class="col-num col-iic">${label}</th>
     ${esEsp ? '' : `<th class="col-var" title="${pipT('Variació respecte al rànquing per espectadors','Variación respecto al ranking por espectadores')}">Var.</th>`}
   </tr></thead>`;
@@ -235,17 +235,20 @@ function construirRànquingDirectors() {
   const filaR1 = (d, i) => {
     const id = `dir1-${++ctrDir}`;
     const filmsHtml = d.filmsTop100.join(' · ');
-    return `<tr${i>=10?' style="display:none" class="fila-extra-d1"':''}>
-      <td class="col-pos">${i+1}</td>
-      <td>
-        <strong>${d.nom}</strong>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
-      </td>
+    return `<tr id="${id}-main"${i>=10?' style="display:none" class="fila-extra-d1"':''}>
+      <td class="col-pos" style="padding-right:12px;white-space:nowrap">${i+1}</td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.top100}</td>
       <td class="col-num">${fmt(d.espTop)}</td>
       <td class="col-num col-gris">${(d.espTop/totalEsp*100).toFixed(1)}%</td>
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="${pipT('Veure films','Ver films')}">+</button>
+      </td>
+    </tr>
+    <tr id="${id}" data-main-row="${id}-main" style="display:none;background:#f7f7f7">
+      <td colspan="2" style="padding:0;border:0"></td>
+      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top;max-width:none">
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsHtml}</div>
       </td>
     </tr>`;
   };
@@ -268,28 +271,32 @@ function construirRànquingDirectors() {
     let filmsHtml = '';
     if (d.filmsTop100.length) filmsHtml += `<span class="dir-films-grup">Top 100</span>${d.filmsTop100.join(' · ')}`;
     if (d.filmsContext.length) filmsHtml += `<span class="dir-films-grup" style="margin-top:6px">${pipT('Addicionals','Adicionales')}</span>${d.filmsContext.join(' · ')}`;
-    return `<tr${i>=10?' style="display:none" class="fila-extra-d2"':''}>
-      <td class="col-pos">${posActual}</td>
+    return `<tr id="${id}-main"${i>=10?' style="display:none" class="fila-extra-d2"':''}>
+      <td class="col-pos" style="padding-right:12px;white-space:nowrap">${posActual}</td>
       <td class="col-var">${vHtml}</td>
-      <td>
-        <strong>${d.nom}</strong>
-        <div id="${id}" class="dir-films-list" style="display:none">${filmsHtml}</div>
-      </td>
+      <td><strong>${d.nom}</strong></td>
       <td class="col-center">${d.top100}</td>
       <td class="col-center">${add > 0 ? '+'+add : '—'}</td>
       <td class="col-num">${fmt(d.espTotal)}</td>
       <td class="col-center">
         <button class="btn-films-dir" onclick="toggleDirFilms('${id}', this)" title="${pipT('Veure films','Ver films')}">+</button>
       </td>
+    </tr>
+    <tr id="${id}" data-main-row="${id}-main" style="display:none;background:#f7f7f7">
+      <td colspan="3" style="padding:0;border:0"></td>
+      <td colspan="4" style="padding-top:12px;padding-bottom:12px;vertical-align:top;max-width:none">
+        <div class="dir-films-list" style="max-width:none;margin-top:0;line-height:1.5">${filmsHtml}</div>
+      </td>
     </tr>`;
   };
 
   cont1.innerHTML = `
     <h3 class="subtitol-ranking-gran">${pipT('Només films del Top 100','Solo films del Top 100')}</h3>
-    <table class="taula-ranking">
+    <table class="taula-ranking" style="table-layout:fixed">
+      <colgroup><col style="width:6%"><col style="width:31%"><col style="width:17%"><col style="width:28%"><col style="width:11%"><col style="width:7%"></colgroup>
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Director</th>
+        <th>Direcció</th>
         <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-num" style="text-align:right">${pipT('Espectadors acumulats','Espectadores acumulados')}</th>
         <th class="col-num col-gris">${pipT('% total','% total')}</th>
@@ -306,11 +313,12 @@ function construirRànquingDirectors() {
 
   cont2.innerHTML = `
     <h3 class="subtitol-ranking-gran">${pipT('De tots els films citats (Top 100 + context)','De todos los films citados (Top 100 + contexto)')}</h3>
-    <table class="taula-ranking">
+    <table class="taula-ranking" style="table-layout:fixed">
+      <colgroup><col style="width:6%"><col style="width:7%"><col style="width:25%"><col style="width:17%"><col style="width:8%"><col style="width:30%"><col style="width:7%"></colgroup>
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
-        <th>Director</th>
+        <th>Direcció</th>
         <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-center">Add.</th>
         <th class="col-num" style="text-align:right">${pipT('Espectadors totals','Espectadores totales')}</th>
@@ -327,10 +335,12 @@ function construirRànquingDirectors() {
 }
 
 window.toggleDirFilms = function(id, btn) {
-  const div = document.getElementById(id);
-  if (!div) return;
-  const vis = div.style.display !== 'none';
-  div.style.display = vis ? 'none' : 'block';
+  const row = document.getElementById(id);
+  if (!row) return;
+  const vis = row.style.display !== 'none';
+  row.style.display = vis ? 'none' : 'table-row';
+  const mainRow = document.getElementById(row.dataset.mainRow || '');
+  if (mainRow) mainRow.style.borderBottom = vis ? '' : '0';
   btn.textContent = vis ? '+' : '−';
 };
 
@@ -343,11 +353,140 @@ window.expandirD2 = function(btn) {
   btn.textContent = btn.textContent.startsWith('+') ? pipHide() : pipViewFullList();
 };
 
+
+/* Comparació transversal dels quatre rànquings. Mateix corpus Top 100 i
+   mateix ordenament que les taules, incloent-hi empats estables. */
+function construirComparativaRankings() {
+  const cont = document.getElementById('pip-comparativa-rankings');
+  if (!cont) return;
+  const films = filmsData.filter(f => f.in_top100);
+  const camps = ['espectadors', 'penetracio', 'quota', 'iic'];
+  const labels = PIP_ES ? ['Espectadores', 'Penetración', 'Cuota de mercado', 'IIC'] :
+    ['Espectadors', 'Penetració', 'Quota de mercat', 'IIC'];
+  const posicions = {};
+  camps.forEach(k => {
+    posicions[k] = new Map(films.filter(f => f[k] != null)
+      .sort((a, b) => b[k] - a[k]).map((f, i) => [f.titol, i + 1]));
+  });
+  const exemples = ['La ciudad no es para mí', 'Los santos inocentes',
+    'Mujeres al borde de un ataque de nervios', 'Padre no hay más que uno 3'];
+  const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const blocMD = (bloc, classe) => '<div class="text-md '+classe+'" data-bloc="'+bloc+'" data-text="part-i/ranking-iic"></div>';
+  cont.innerHTML =
+    blocMD('comparativa-titol', 'pip-rankcomp-titol') +
+    blocMD('comparativa-intro', 'pip-rankcomp-intro') +
+    '<div class="pip-rankcomp-figura">' +
+    '<h4 class="pip-rankcomp-grafic-titol">' + pipT('Variació de posicions segons les quatre mètriques del Top 100 (1965–2025)', 'Variación de posiciones según las cuatro métricas del Top 100 (1965–2025)') + '</h4>' +
+    '<div class="pip-rankcomp-exemples" id="pip-rankcomp-exemples"></div>' +
+    '<div class="pip-rankcomp-grafic" id="pip-rankcomp-grafic"></div>' +
+    '<div class="pip-rankcomp-explora"><label class="pip-rankcomp-label" for="pip-rankcomp-tria">' +
+    pipT('Consulta una altra pel·lícula del Top 100', 'Consulta otra película del Top 100') +
+    '</label><select id="pip-rankcomp-tria" class="pip-rankcomp-select"></select></div>' +
+    '<p class="pip-rankcomp-nota">' + pipT('Les fletxes indiquen la variació respecte al rànquing per espectadors.', 'Las flechas indican la variación respecto al ranking por espectadores.') + '</p></div>';
+  if (window.PiP_textos) cont.querySelectorAll('.text-md[data-bloc]').forEach(window.PiP_textos.renderitza);
+  const tria = cont.querySelector('#pip-rankcomp-tria');
+  const grup = cont.querySelector('#pip-rankcomp-exemples');
+  const grafic = cont.querySelector('#pip-rankcomp-grafic');
+  const opcioInicial = document.createElement('option');
+  opcioInicial.value = '';
+  opcioInicial.textContent = pipT('— Escull una pel·lícula —', '— Elige una película —');
+  tria.appendChild(opcioInicial);
+  [...films].sort((a, b) => b.espectadors - a.espectadors).forEach((f, i) => {
+    const opt = document.createElement('option');
+    opt.value = f.titol;
+    opt.textContent = '#' + (i + 1) + ' · ' + f.titol + ' (' + f.any + ')';
+    tria.appendChild(opt);
+  });
+  let seleccionat = exemples[0];
+  exemples.forEach(t => {
+    const boto = document.createElement('button');
+    boto.type = 'button';
+    boto.className = 'pip-rankcomp-cas-btn';
+    boto.textContent = t === 'Mujeres al borde de un ataque de nervios' ? 'Mujeres al borde...' : t;
+    boto.dataset.film = t;
+    boto.addEventListener('click', () => { seleccionat = t; tria.value = ''; dibuixar(); });
+    grup.appendChild(boto);
+  });
+  // Una columna independent per mètrica i una franja superior reservada als encapçalaments.
+  const xs = [106, 278, 450, 622];
+  const yy = n => 73 + (n - 1) * 2.05;
+  function dibuixar() {
+    grup.querySelectorAll('button').forEach(b => {
+      const actiu = b.dataset.film === seleccionat;
+      b.classList.toggle('actiu', actiu);
+      b.setAttribute('aria-pressed', String(actiu));
+    });
+    const f = films.find(f => f.titol === seleccionat);
+    if (!f) return;
+    const ranks = camps.map(k => posicions[k].get(seleccionat));
+    let svg = '<svg viewBox="0 0 750 350" role="img" aria-label="' +
+      esc(pipT('Variacions de posició als quatre rànquings', 'Variaciones de posición en los cuatro rankings')) +
+      '" xmlns="http://www.w3.org/2000/svg">';
+    [1,25,50,75,100].forEach(v => {
+      const y = yy(v);
+      svg += '<line x1="105" y1="'+y+'" x2="623" y2="'+y+
+        '" stroke="currentColor" stroke-opacity=".10" stroke-dasharray="3 5"/>' +
+        '<text x="73" y="'+(y+4)+'" fill="currentColor" opacity=".6" text-anchor="end" font-size="11">#'+v+'</text>';
+    });
+    xs.forEach((x,i) => {
+      svg += '<line x1="'+x+'" y1="64" x2="'+x+'" y2="283" stroke="currentColor" stroke-opacity=".2"/>';
+      if (i < 3) {
+        const parts = i === 0 ? (PIP_ES ? ['Espectadores', 'absolutos'] : ['Espectadors', 'absoluts'])
+          : i === 1 ? (PIP_ES ? ['Penetración', 'demográfica'] : ['Penetració', 'demogràfica'])
+          : (PIP_ES ? ['Cuota de', 'mercado'] : ['Quota de', 'mercat']);
+        svg += '<text x="'+x+'" y="307" text-anchor="middle" font-size="11" fill="#666">'+
+          '<tspan x="'+x+'">'+esc(parts[0])+'</tspan>'+
+          '<tspan x="'+x+'" dy="13">'+esc(parts[1])+'</tspan></text>';
+      } else {
+        svg += '<text x="'+x+'" y="313" text-anchor="middle" font-size="11" font-weight="700" fill="#363737">'+esc(labels[i])+'</text>';
+      }
+    });
+    // Títol, any i director en una línia; posició de dècada a sota.
+    const posDecada = PIP_ES
+      ? f.pos_decade + '.ª en los ' + f.decada
+      : f.pos_decade + 'a als ' + f.decada;
+    svg += '<text x="364" y="23" text-anchor="middle" font-size="14" font-family="Inter, sans-serif">'+
+      '<tspan font-style="italic" font-weight="700" fill="#363737">'+esc(f.titol)+'</tspan>'+
+      '<tspan font-style="normal" font-weight="400" fill="#777"> ('+f.any+') · '+esc(f.director)+'</tspan></text>'+
+      '<text x="364" y="44" text-anchor="middle" font-size="13" font-weight="400" fill="#777" font-family="Inter, sans-serif">'+esc(posDecada)+'</text>';
+    svg += '<polyline points="'+ranks.map((v,i)=>xs[i]+','+yy(v)).join(' ') +
+      '" fill="none" stroke="#8497a6" stroke-width="2" stroke-linejoin="round"/>';
+    ranks.forEach((v,i) => {
+      const x=xs[i],y=yy(v),c=i===3?'#35678b':'#8697a4';
+      const valor = i === 0 ? (f.espectadors / 1e6).toFixed(1).replace('.', ',') + 'M'
+        : i === 3 ? fmtIIC(f.iic)
+        : fmtPct(f[camps[i]], f[camps[i] + '_estimat']);
+      const diff = ranks[0] - v;
+      const variacio = i === 0 ? '' : diff > 0 ? '↑' + diff : diff < 0 ? '↓' + Math.abs(diff) : '=';
+      const colorVar = diff > 0 ? '#27ae60' : diff < 0 ? '#c0392b' : '#777';
+      // Labels sit above/below their points, with a narrow white outline rather than opaque boxes.
+      const etiquetaX=x+12;
+      const etiquetaY=y<130?y+26:y-24;
+      svg += '<circle cx="'+x+'" cy="'+y+'" r="5" fill="'+c+'" stroke="white" stroke-width="1"/>' +
+        '<text x="'+etiquetaX+'" y="'+etiquetaY+'" text-anchor="start" font-size="13" font-weight="'+(i===3?'700':'500')+
+        '" fill="'+(i===3?'#35678b':'currentColor')+'" paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">#'+v+'</text>' +
+        '<text x="'+etiquetaX+'" y="'+(etiquetaY+15)+'" text-anchor="start" font-size="11.5" fill="'+(i===3?'#35678b':'#707880')+
+        '" paint-order="stroke" stroke="#fff" stroke-width="3" stroke-linejoin="round">'+esc(valor)+
+        (i === 0 ? '' : '<tspan dx="6" font-weight="600" fill="'+colorVar+'">'+variacio+'</tspan>')+'</text>';
+    });
+    svg+='</svg>';
+    grafic.innerHTML=svg;
+  }
+  tria.addEventListener('change', () => {
+    if (tria.value) seleccionat=tria.value;
+    else seleccionat=exemples[0];
+    dibuixar();
+  });
+  dibuixar();
+}
+
 function construirRànquings() {
   construirRànquing('espectadors', 'taula-espectadors', pipT('Espectadors','Espectadores'));
   construirRànquing('penetracio',  'taula-penetracio',  pipT('Penetració','Penetración'));
   construirRànquing('quota',       'taula-quota',       pipT('Quota de mercat','Cuota de mercado'));
   construirRànquing('iic',         'taula-iic',         'IIC');
+  construirComparativaRankings();
   construirRànquingDirectors();
 }
 

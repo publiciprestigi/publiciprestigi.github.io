@@ -1,0 +1,368 @@
+[
+  {
+    "any": 1965,
+    "entrades_M": 390.0,
+    "poblacio_M": 32.1,
+    "estimat": true
+  },
+  {
+    "any": 1966,
+    "entrades_M": 370.0,
+    "poblacio_M": 32.3,
+    "estimat": true
+  },
+  {
+    "any": 1967,
+    "entrades_M": 350.0,
+    "poblacio_M": 32.6,
+    "estimat": true
+  },
+  {
+    "any": 1968,
+    "entrades_M": 330.0,
+    "poblacio_M": 32.9,
+    "estimat": true
+  },
+  {
+    "any": 1969,
+    "entrades_M": 310.0,
+    "poblacio_M": 33.2,
+    "estimat": true
+  },
+  {
+    "any": 1970,
+    "entrades_M": 305.0,
+    "poblacio_M": 33.8,
+    "estimat": true
+  },
+  {
+    "any": 1971,
+    "entrades_M": 295.0,
+    "poblacio_M": 34.1,
+    "estimat": true
+  },
+  {
+    "any": 1972,
+    "entrades_M": 285.0,
+    "poblacio_M": 34.4,
+    "estimat": true
+  },
+  {
+    "any": 1973,
+    "entrades_M": 280.0,
+    "poblacio_M": 34.8,
+    "estimat": true
+  },
+  {
+    "any": 1974,
+    "entrades_M": 270.0,
+    "poblacio_M": 35.1,
+    "estimat": true
+  },
+  {
+    "any": 1975,
+    "entrades_M": 255.0,
+    "poblacio_M": 35.5,
+    "estimat": true
+  },
+  {
+    "any": 1976,
+    "entrades_M": 240.0,
+    "poblacio_M": 36.0,
+    "estimat": true
+  },
+  {
+    "any": 1977,
+    "entrades_M": 220.0,
+    "poblacio_M": 36.4,
+    "estimat": true
+  },
+  {
+    "any": 1978,
+    "entrades_M": 205.0,
+    "poblacio_M": 36.9,
+    "estimat": true
+  },
+  {
+    "any": 1979,
+    "entrades_M": 195.0,
+    "poblacio_M": 37.2,
+    "estimat": true
+  },
+  {
+    "any": 1980,
+    "entrades_M": 175.0,
+    "poblacio_M": 37.5,
+    "estimat": true
+  },
+  {
+    "any": 1981,
+    "entrades_M": 165.0,
+    "poblacio_M": 37.8,
+    "estimat": true
+  },
+  {
+    "any": 1982,
+    "entrades_M": 150.0,
+    "poblacio_M": 38.0,
+    "estimat": true
+  },
+  {
+    "any": 1983,
+    "entrades_M": 130.0,
+    "poblacio_M": 38.2,
+    "estimat": true
+  },
+  {
+    "any": 1984,
+    "entrades_M": 115.0,
+    "poblacio_M": 38.3,
+    "estimat": true
+  },
+  {
+    "any": 1985,
+    "entrades_M": 105.0,
+    "poblacio_M": 38.4,
+    "estimat": true
+  },
+  {
+    "any": 1986,
+    "entrades_M": 97.0,
+    "poblacio_M": 38.5,
+    "estimat": true
+  },
+  {
+    "any": 1987,
+    "entrades_M": 90.0,
+    "poblacio_M": 38.6,
+    "estimat": true
+  },
+  {
+    "any": 1988,
+    "entrades_M": 85.0,
+    "poblacio_M": 38.7,
+    "estimat": true
+  },
+  {
+    "any": 1989,
+    "entrades_M": 80.0,
+    "poblacio_M": 38.8,
+    "estimat": true
+  },
+  {
+    "any": 1990,
+    "entrades_M": 80.0,
+    "poblacio_M": 38.9,
+    "estimat": true
+  },
+  {
+    "any": 1991,
+    "entrades_M": 88.0,
+    "poblacio_M": 38.9,
+    "estimat": true
+  },
+  {
+    "any": 1992,
+    "entrades_M": 90.0,
+    "poblacio_M": 39.0,
+    "estimat": true
+  },
+  {
+    "any": 1993,
+    "entrades_M": 90.0,
+    "poblacio_M": 39.1,
+    "estimat": true
+  },
+  {
+    "any": 1994,
+    "entrades_M": 92.0,
+    "poblacio_M": 39.1,
+    "estimat": true
+  },
+  {
+    "any": 1995,
+    "entrades_M": 96.0,
+    "poblacio_M": 39.2,
+    "estimat": true
+  },
+  {
+    "any": 1996,
+    "entrades_M": 98.0,
+    "poblacio_M": 39.4,
+    "estimat": true
+  },
+  {
+    "any": 1997,
+    "entrades_M": 100.0,
+    "poblacio_M": 39.6,
+    "estimat": true
+  },
+  {
+    "any": 1998,
+    "entrades_M": 105.0,
+    "poblacio_M": 39.9,
+    "estimat": false
+  },
+  {
+    "any": 1999,
+    "entrades_M": 110.0,
+    "poblacio_M": 40.2,
+    "estimat": false
+  },
+  {
+    "any": 2000,
+    "entrades_M": 130.0,
+    "poblacio_M": 40.3,
+    "estimat": false
+  },
+  {
+    "any": 2001,
+    "entrades_M": 146.8,
+    "poblacio_M": 41.1,
+    "estimat": false
+  },
+  {
+    "any": 2002,
+    "entrades_M": 140.7,
+    "poblacio_M": 42.0,
+    "estimat": false
+  },
+  {
+    "any": 2003,
+    "entrades_M": 137.5,
+    "poblacio_M": 42.7,
+    "estimat": false
+  },
+  {
+    "any": 2004,
+    "entrades_M": 143.9,
+    "poblacio_M": 43.2,
+    "estimat": false
+  },
+  {
+    "any": 2005,
+    "entrades_M": 127.6,
+    "poblacio_M": 44.1,
+    "estimat": false
+  },
+  {
+    "any": 2006,
+    "entrades_M": 121.7,
+    "poblacio_M": 44.7,
+    "estimat": false
+  },
+  {
+    "any": 2007,
+    "entrades_M": 116.9,
+    "poblacio_M": 45.2,
+    "estimat": false
+  },
+  {
+    "any": 2008,
+    "entrades_M": 110.0,
+    "poblacio_M": 46.1,
+    "estimat": false
+  },
+  {
+    "any": 2009,
+    "entrades_M": 110.0,
+    "poblacio_M": 46.7,
+    "estimat": false
+  },
+  {
+    "any": 2010,
+    "entrades_M": 101.0,
+    "poblacio_M": 47.0,
+    "estimat": false
+  },
+  {
+    "any": 2011,
+    "entrades_M": 98.0,
+    "poblacio_M": 47.2,
+    "estimat": false
+  },
+  {
+    "any": 2012,
+    "entrades_M": 94.0,
+    "poblacio_M": 47.3,
+    "estimat": false
+  },
+  {
+    "any": 2013,
+    "entrades_M": 76.9,
+    "poblacio_M": 47.1,
+    "estimat": false
+  },
+  {
+    "any": 2014,
+    "entrades_M": 88.0,
+    "poblacio_M": 46.8,
+    "estimat": false
+  },
+  {
+    "any": 2015,
+    "entrades_M": 95.0,
+    "poblacio_M": 46.6,
+    "estimat": false
+  },
+  {
+    "any": 2016,
+    "entrades_M": 96.0,
+    "poblacio_M": 46.4,
+    "estimat": false
+  },
+  {
+    "any": 2017,
+    "entrades_M": 100.0,
+    "poblacio_M": 46.6,
+    "estimat": false
+  },
+  {
+    "any": 2018,
+    "entrades_M": 98.0,
+    "poblacio_M": 46.9,
+    "estimat": false
+  },
+  {
+    "any": 2019,
+    "entrades_M": 105.5,
+    "poblacio_M": 47.1,
+    "estimat": false
+  },
+  {
+    "any": 2020,
+    "entrades_M": 50.0,
+    "poblacio_M": 47.4,
+    "estimat": false
+  },
+  {
+    "any": 2021,
+    "entrades_M": 55.0,
+    "poblacio_M": 47.5,
+    "estimat": false
+  },
+  {
+    "any": 2022,
+    "entrades_M": 71.0,
+    "poblacio_M": 47.8,
+    "estimat": false
+  },
+  {
+    "any": 2023,
+    "entrades_M": 80.0,
+    "poblacio_M": 48.3,
+    "estimat": false
+  },
+  {
+    "any": 2024,
+    "entrades_M": 71.0,
+    "poblacio_M": 48.5,
+    "estimat": false
+  },
+  {
+    "any": 2025,
+    "entrades_M": 65.0,
+    "poblacio_M": 48.6,
+    "estimat": false
+  }
+]

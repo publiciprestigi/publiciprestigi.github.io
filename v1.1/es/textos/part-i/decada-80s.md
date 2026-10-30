@@ -1,0 +1,3 @@
+<!-- intro -->
+La crisis estructural del mercado y el espejismo cultural. Solo 3 películas de los ochenta entran en el Top 100, en una década marcada por el hundimiento de la asistencia a las salas y un cambio de hábitos ya irreversible. En este contexto emerge Pedro Almodóvar, desde los márgenes. Aun así, el peso relativo de algunos títulos es muy alto: el IIC de *Mujeres al borde de un ataque de nervios* (3,98) supera el de muchos *blockbusters* de los 2000s. Es la paradoja de la década: menos público en términos absolutos, pero mayor centralidad simbólica para un cine de autor que gana peso justo cuando el viejo cine español de masas se desploma.
+<!-- /intro -->

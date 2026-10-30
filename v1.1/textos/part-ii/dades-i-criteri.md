@@ -1,0 +1,23 @@
+Els festivals com a termòmetre del reconeixement crític especialitzat del cinema espanyol. En aquesta segona part, l’estudi recull la presència i els premis obtinguts per pel·lícules espanyoles a les seccions oficials competitives dels quatre festivals internacionals més representatius: <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#2E7D5E">Venècia</strong>, <strong style="color:#1976D2">Berlín</strong> i <strong style="color:#E07B2A">Sant Sebastià</strong>.
+
+## Premis i límits del criteri
+
+L’àmbit de les dades es limita estrictament a la secció oficial a concurs de cada festival: En Compétition, Concorso, Wettbewerb i Sección Oficial a concurso. En queden excloses les seccions oficials no competitives i totes les seccions paral·leles (Un Certain Regard, Orizzonti, Panorama, Quinzaine des Cinéastes, Zabaltegi, etc.). El recompte de premis es limita al guardó màxim de cada festival, als premis especials del jurat, a la millor direcció, a les millors interpretacions i al millor guió (no s’hi inclouen altres premis tècnics o secundaris).
+
+## Presència a les seccions oficials
+
+Que una pel·lícula hagi estat seleccionada a competició oficial en un dels quatre festivals considerats és, en si mateix, un reconeixement de primer nivell: és el festival, com a institució, qui valida el film davant la comunitat cinematogràfica internacional i el col·loca en el debat crític global. Els premis que atorguen els jurats posteriorment afegeixen un reconeixement addicional, però de naturalesa diferent: depenen de la composició canviant del jurat, de les tendències estètiques del moment, dels equilibris geogràfics i polítics... No mesuren qualitat objectiva sinó que reflecteixen el consens d'un grup determinat en un moment concret. Per això, incorporem totes les pel·lícules seleccionades, premiades o no, com a objecte d'anàlisi rellevant.
+
+A les taules de cada festival que veurem a continuació, s’hi indica amb el símbol ★ si ha obtingut algun premi, si també forma part del Top 100 d’espectadors de la Part I (i/o la posició documentada dins la dècada corresponent) i el nombre d’espectadors acumulats en sales de cinema segons les xifres de l’ICAA (recollides fins a l’última setmana de febrer del 2026).
+
+L’ordre de presentació (i d’avaluació en els rànquings posteriors) respon a una jerarquia de prestigi àmpliament reconeguda, però no estrictament oficial: Cannes, Venècia i Berlín constitueixen el nucli dels tres grans festivals internacionals de referència, amb Cannes en una primera posició molt consolidada i Venècia i Berlín en posicions properes, sovint intercanviables segons el pes que es doni a la història, la dimensió institucional o la projecció industrial de cada festival.
+
+Sant Sebastià, tot i compartir amb ells l’acreditació FIAPF de classe A, ocupa una posició diferent dins el circuit internacional. <sup>[6]</sup> La seva projecció global és menor, però manté una relació molt més directa amb la indústria cinematogràfica espanyola. Això explica que hi tingui una presència molt superior: el festival funciona com una finestra natural per a produccions espanyoles de qualitat, cosa que genera una *sobrerepresentació* respecte als altres festivals europeus.
+
+## Coproduccions internacionals
+
+A diferència del Top 100 de la Part I, que segueix el criteri oficial de l'ICAA, aquí no s'incorporen automàticament totes les coproduccions amb participació espanyola. El criteri prioritza les obres amb vinculació clara a la indústria espanyola per autoria, producció majoritària o reconeixement institucional. Les coproduccions hispanoamericanes que han optat al Goya a la millor pel·lícula iberoamericana, per exemple, queden fora del corpus.
+
+## Sobre les fonts
+
+Les dades s’han recollit principalment a partir dels arxius històrics disponibles a les webs oficials de cada festival. En els casos de <a href="https://www.festival-cannes.com/retrospective/" target="_blank" rel="noopener">Cannes</a>, <a href="https://www.berlinale.de/de/archiv/archivuebersicht/willkommen.html" target="_blank" rel="noopener">Berlín</a> i <a href="https://www.sansebastianfestival.com/archivo/2/es" target="_blank" rel="noopener">Sant Sebastià</a>, aquests arxius són especialment exhaustius. Per a <a href="https://www.labiennale.org/it/storia-della-mostra-del-cinema" target="_blank" rel="noopener">Venècia</a>, la web no ofereix el mateix grau de detall, per això s’han completat determinades dades amb fonts complementàries com Wikipedia, amb les possibles incerteses pròpies de fonts no oficials. Tota correcció d’inexactituds serà benvinguda.

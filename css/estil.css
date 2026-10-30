@@ -318,30 +318,85 @@ body.cap-hidden .sidebar {
 /* Seccions */
 .seccio-contingut { display: none; max-width: var(--amplada-text); }
 
-/* Navegació anterior/següent */
+/* Navegació editorial de dues columnes fixes, independent de les taules. */
 .nav-seccions {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 48px;
-  padding-top: 24px;
-  border-top: 1px solid var(--color-linia);
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  max-width:var(--amplada-text);
+  column-gap:12px;
+  row-gap:24px;
+  width:100%;
+  box-sizing:border-box;
+  margin-top:48px;
+  padding-top:24px;
+  border-top:0;
+  position:relative;
+  align-items:stretch;
 }
-
-.nav-seccio-btn {
-  font-family: var(--font-principal);
-  font-size: 0.85rem;
-  color: var(--color-text);
-  background: none;
-  border: 1px solid var(--color-linia);
-  border-radius: 4px;
-  padding: 12px 20px;
-  cursor: pointer;
-  transition: background 0.12s;
-  max-width: 260px;
+.nav-seccions::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:var(--amplada-text);
+  max-width:100%;
+  border-top:1px solid var(--color-linia);
 }
-.nav-seccio-btn:last-child { text-align: right; }
-.nav-seccio-btn:hover { background: #f5f5f5; }
+.nav-seccions .nav-seccio-btn,
+.pip-entrada-cta .nav-seccio-btn {
+  box-sizing:border-box;
+  width:100%;
+  max-width:none;
+  min-width:0;
+  min-height:86px;
+  padding:13px 16px;
+  font-family:var(--font-principal);
+  font-size:.85rem;
+  line-height:1.3;
+  color:var(--color-text);
+  background:none;
+  border:1px solid var(--color-linia);
+  border-radius:4px;
+  cursor:pointer;
+  transition:background .12s;
+  overflow-wrap:break-word;
+}
+.nav-seccions .nav-seccio-btn:hover { background:#f5f5f5; }
+.pip-entrada-cta .nav-seccio-btn {
+  width:calc((var(--amplada-text) - 12px) / 2);
+  max-width:100%;
+  text-align:left;
+}
+.pip-entrada-cta .nav-seccio-btn:hover { background:#f5f5f5; }
+.nav-seccions #btn-anterior { text-align:left; }
+.nav-seccions #btn-seguent { text-align:right; }
+.nav-seccio-btn .pip-nav-part {
+  display:block;
+  margin-bottom:7px;
+  font-size:.65rem;
+  font-weight:600;
+  letter-spacing:.075em;
+  color:var(--color-text-suau);
+}
+.nav-seccio-btn .pip-nav-titol { display:block; font-size:.87rem; color:var(--color-text); }
+.nav-seccions .pip-nav-pujar {
+  grid-column:1 / -1;
+  justify-self:start;
+  width:auto;
+  padding:4px 0;
+  border:0;
+  background:none;
+  color:var(--color-text-suau);
+  font-family:var(--font-principal);
+  font-size:.75rem;
+  cursor:pointer;
+}
+.nav-seccions .pip-nav-pujar:hover { color:var(--color-text); text-decoration:underline; }
+@media (max-width:600px) {
+  .nav-seccions { grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:8px; row-gap:20px; }
+  .nav-seccions .nav-seccio-btn { min-height:92px; padding:11px 10px; }
+  .nav-seccio-btn .pip-nav-titol { font-size:.79rem; }
+}
 .nav-seccio-pos { font-size: 0.75rem; color: var(--color-text-suau); }
 
 /* Responsive */
@@ -791,9 +846,9 @@ body.cap-hidden .sidebar {
 
 /* Border-left per festival */
 #seccio-cannes .taula-festivals       { border-left: 3px solid #9B2335; padding-left: 0; }
-#seccio-berlin .taula-festivals       { border-left: 3px solid #1976D2; }
-#seccio-venezia .taula-festivals      { border-left: 3px solid #2E7D5E; }
-#seccio-sansebastia .taula-festivals  { border-left: 3px solid #E07B2A; }
+#seccio-berlin .taula-festivals       { border-left: 3px solid #CC6977; }
+#seccio-venezia .taula-festivals      { border-left: 3px solid #B84555; }
+#seccio-sansebastia .taula-festivals  { border-left: 3px solid #DA929A; }
 
 /* --- Directors en negre normal a Part I --- */
 .taula-films td.col-subtil,
@@ -1419,4 +1474,322 @@ html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] > span:first-child
 html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
   margin-left: 4px;
   vertical-align: baseline;
+}
+
+
+/* ============================================================
+   v1.2 — Fora de competició
+   Mateix criteri visual que les pel·lícules de context de la Part I:
+   una única caixa desplegable, fons blanc i contingut en gris.
+   ============================================================ */
+.fora-competicio-bloc {
+  margin-top: 24px;
+}
+
+.fora-competicio-toggle {
+  margin: 0;
+}
+
+.fora-competicio-contingut[hidden] {
+  display: none;
+}
+
+.fora-competicio-contingut {
+  padding-top: 12px;
+}
+
+.taula-festivals-context {
+  background: #fff !important;
+}
+
+.taula-festivals-context thead tr,
+.taula-festivals-context tbody tr,
+.taula-festivals-context th,
+.taula-festivals-context td {
+  background: #fff !important;
+}
+
+.taula-festivals-context th,
+.taula-festivals-context td,
+.taula-festivals-context td.col-subtil,
+.taula-festivals-context td.col-premi,
+.taula-festivals-context .film-any,
+.taula-festivals-context strong,
+.taula-festivals-context em,
+.taula-festivals-context .estrella {
+  color: #888 !important;
+}
+
+.taula-festivals-context th {
+  border-bottom-color: #aaa !important;
+}
+
+/* Pàgines encara no editades de la v1.2 */
+.v12-en-preparacio {
+  border-top: 1px solid var(--color-linia);
+  padding-top: 22px;
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+
+#seccio-oscar .oscar-professionals-bloc {
+  margin-top: 24px;
+}
+
+#seccio-oscar .oscar-professionals-toggle {
+  margin: 0;
+}
+
+#seccio-oscar .oscar-professionals-contingut[hidden] {
+  display: none;
+}
+
+#seccio-oscar .oscar-professionals-contingut {
+  padding-top: 12px;
+}
+
+/* ============================================================
+   v1.2 CA — Part II: menú lateral més compacte
+   Manté l’scroll de seguretat, però evita que aparegui en alçades
+   de pantalla normals amb el nou menú de la v1.2.
+   ============================================================ */
+html[lang="ca"] body.part-ii .sidebar-grup {
+  margin-bottom: 18px;
+}
+
+html[lang="ca"] body.part-ii .sidebar-link {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* v1.2 CA — El mapa del cànon i Conclusions ja no són novetats.
+   S'oculten les etiquetes antigues a qualsevol menú CA de la còpia de treball. */
+html[lang="ca"] #drawer-part-iii .chapter-badge,
+html[lang="ca"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge,
+html[lang="ca"] .sidebar-link-badge[data-seccio="conclusions"] .chapter-badge {
+  display: none;
+}
+
+
+/* v1.2 CA — Part II: manté l'scroll lateral però n'amaga la barra visual */
+html[lang="ca"] body.part-ii .sidebar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+html[lang="ca"] body.part-ii .sidebar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+
+/* ============================================================
+   v1.2 — OSCAR
+   ============================================================ */
+#seccio-oscar .oscar-resum {
+  border-left: 3px solid #c8a000;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+#seccio-oscar .taula-oscar-principal tbody tr {
+  background: #FAF3DE;
+  border-bottom: 2px solid #fff;
+}
+
+#seccio-oscar .taula-oscar-principal td {
+  border-bottom-color: #fff;
+}
+
+
+#seccio-oscar .oscar-estrella {
+  color: #c8a000;
+  font-weight: 700;
+}
+
+/* ============================================================
+   v1.2 — PREMIS D'ACADÈMIES: previsualització EFA i Altres
+   ============================================================ */
+#seccio-efa .academia-preview,
+#seccio-academies-europa .academia-preview {
+  --academia-or: #c8a000;
+}
+
+#seccio-efa .academia-preview-kicker {
+  color: var(--academia-or);
+}
+
+#seccio-academies-europa .academia-preview-bloc {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(200, 160, 0, 0.28);
+}
+
+#seccio-academies-europa .academia-preview-bloc:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+#seccio-academies-europa .academia-preview-titol {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--academia-or);
+}
+
+#seccio-academies-europa .academia-preview-bloc p {
+  color: var(--color-text-suau);
+  font-size: 0.9rem;
+}
+
+/* ============================================================
+   v1.2 — EFA / PREMIS DEL CINEMA EUROPEU
+   ============================================================ */
+#seccio-efa .efa-resum {
+  border-left: 3px solid #C5AE63;
+  padding-left: 12px;
+  margin-bottom: 20px;
+}
+
+#seccio-efa .taula-efa-principal tbody tr {
+  background: #FBF7E7;
+  border-bottom: 2px solid #fff;
+}
+
+#seccio-efa .taula-efa-principal td {
+  border-bottom-color: #fff;
+}
+
+#seccio-efa .efa-estrella {
+  color: #c8a000;
+  font-weight: 700;
+}
+
+#seccio-efa .efa-context-bloc {
+  margin-top: 24px;
+}
+
+#seccio-efa .efa-context-toggle {
+  margin: 0;
+}
+
+#seccio-efa .efa-context-contingut[hidden] {
+  display: none;
+}
+
+#seccio-efa .efa-context-contingut {
+  padding-top: 12px;
+}
+
+#seccio-efa .efa-context-resum {
+  margin: 0 0 12px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+#seccio-efa .efa-subtitol-context {
+  margin: 24px 0 0.5rem;
+  padding-top: 18px;
+  border-top: 1px solid var(--color-linia);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #888;
+}
+
+
+/* ============================================================
+   V1.2 — Rànquing per espectadors: separació de circuits
+   ============================================================ */
+.ranking-academies-bloc {
+  border-top: 1px solid var(--color-linia);
+  margin-top: 32px;
+  padding-top: 24px;
+}
+
+/* Evita sumar el marge superior del primer títol (Oscar)
+   al padding del separador entre festivals i acadèmies. */
+.ranking-academies-bloc > .subtitol-festival-ranking:first-child {
+  margin-top: 0 !important;
+}
+
+/* Als rànquings, l'etiqueta ACTUALITZAT acompanya la segona línia
+   en lloc de quedar visualment entre les dues línies del títol. */
+.sidebar-link-badge[data-seccio="espectadors"],
+.sidebar-link-badge[data-seccio="directors"] {
+  align-items: flex-end;
+}
+
+/* v1.2 — Paleta institucional graduada: fons de taules */
+body.part-ii {
+ --pip-cannes:#9B2335; --pip-venecia:#B84555; --pip-berlin:#CC6977; --pip-sansebastia:#DA929A;
+ --pip-oscar:#c8a000; --pip-efa:#C5AE63;
+ --pip-fons-cannes:#F8EAED; --pip-fons-venecia:#FAF0F2; --pip-fons-berlin:#FCF5F6; --pip-fons-sansebastia:#FEFAFB;
+ --pip-fons-oscar:#FAF3DE; --pip-fons-efa:#FBF7E7;
+}
+/* Un sol to institucional per taula, sense alternança de files. */
+#seccio-cannes .taula-festivals tbody tr td { background:var(--pip-fons-cannes); }
+#seccio-venecia .taula-festivals tbody tr td { background:var(--pip-fons-venecia); }
+#seccio-berlin .taula-festivals tbody tr td { background:var(--pip-fons-berlin); }
+#seccio-sansebastia .taula-festivals tbody tr td { background:var(--pip-fons-sansebastia); }
+#seccio-oscar .taula-oscar-principal tbody tr td { background:var(--pip-fons-oscar); }
+#seccio-efa .taula-efa-principal tbody tr td { background:var(--pip-fons-efa); }
+
+/* Part III: taules comparatives amples com a la v1.1, cap a la dreta del text. */
+.pip3-taula-ampla { max-width:none !important; border-collapse:collapse; }
+.pip3-taula-ampla th, .pip3-taula-ampla td { box-sizing:border-box; padding-right:4px; }
+.pip3-taula-ampla th { white-space:nowrap; }
+/* Separació visual dels encapçalaments respecte de la columna anterior. */
+/* Alineació comuna: dues columnes de text a l'esquerra,
+   Reconeixement i Top 100 centrats, mètriques a la dreta. */
+.pip3-taula-ampla thead th:nth-child(-n+2),
+.pip3-taula-ampla tbody td:nth-child(-n+2) { text-align:left !important; }
+.pip3-taula-ampla thead th:nth-child(3),
+.pip3-taula-ampla tbody td:nth-child(3),
+.pip3-taula-ampla thead th:nth-child(4),
+.pip3-taula-ampla tbody td:nth-child(4) { text-align:center !important; }
+.pip3-taula-ampla thead th:nth-child(n+5),
+.pip3-taula-ampla tbody td:nth-child(n+5) { text-align:right !important; }
+.pip3-taula-ampla thead th.pip3-th-esquerra { padding-left:3px !important; }
+
+.pip3-taula-ampla .col-num { white-space:nowrap; font-variant-numeric:tabular-nums; }
+/* Excepció editorial de Part III: mantenir la taula ampla, sense scroll intern. */
+.pip3-taula-ampla { display:table !important; overflow:visible !important; max-width:none !important; }
+#taula-caza-comparativa, #taula-generacions-saura, #taula-generacions-almodovar, #taula-generacions-actual, #taula-ai-iglesia, #taula-ai-amenabar, #taula-ai-bayona { overflow:visible; max-width:none; }
+
+
+/* Bayona: mateixa família, gruix de barres i marges que el minigràfic de Buñuel */
+.pip3-bayona-coda { box-sizing:border-box;width:calc(100% - 24px);max-width:570px;margin:25px auto 30px;position:relative;left:10px;font-family:'Inter',-apple-system,'SF Pro Text',Arial,sans-serif;color:#363737; }
+.pip3-bayona-coda .pmm-context { font-size:12px;font-weight:600;margin:0 0 12px;line-height:1.4; }
+.pip3-bayona-llegenda { display:flex;flex-wrap:wrap;gap:13px;margin:0 0 13px;padding-left:112px;font-size:11px;color:#666; }
+.pip3-bayona-llegenda span { display:inline-flex;align-items:center;gap:5px; }
+.pip3-bayona-llegenda i { display:block;width:9px;height:9px; }
+.pip3-bayona-grup { display:grid;grid-template-columns:104px minmax(0,1fr);gap:8px;align-items:center;margin:15px 0; }
+.pip3-bayona-filmnom { font-size:11px;font-weight:600;color:#666;line-height:1.3;overflow-wrap:normal; }
+.pip3-bayona-parella { display:grid;grid-template-columns:minmax(0,1fr) 63px;gap:4px 8px;align-items:center; }
+.pip3-bayona-tipus { font-size:10px;color:#666;white-space:nowrap; }
+.pip3-bayona-coda .pmm-track { height:18px;position:relative;background:#f3f3f3; }
+.pip3-bayona-coda .pmm-bar { height:100%;display:block; }
+.pip3-bayona-segments { display:flex; }
+.pip3-bayona-coda .pmm-value { font-size:12px;font-weight:600;text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums; }
+.pip3-bayona-fonts { font-size:11px;line-height:1.45;color:#888;text-align:center;margin:17px auto 0;max-width:520px; }
+@media(max-width:520px) { .pip3-bayona-coda{width:100%;left:0}.pip3-bayona-llegenda{padding-left:0}.pip3-bayona-grup{grid-template-columns:92px minmax(0,1fr);gap:5px}.pip3-bayona-parella{grid-template-columns:minmax(0,1fr) 50px;gap:4px}.pip3-bayona-coda .pmm-value{font-size:11px} }
+
+/* Un únic difuminat per al contenidor que realment es desplaça. */
+@media (max-width:900px) {
+  .pip-taula-scroll {max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .pip-taula-scroll > table {display:table;overflow:visible;max-width:none;}
+  .pip-taula-scroll > table.pip3-taula-ampla {width:max-content;}
+  :is(.pip-taula-scroll,.taula-scroll-wrap,.ll-wrap,.taula-films,.taula-ranking,.taula-festivals,.taula-decades-resum).pip-scroll-pendent {
+    -webkit-mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 27px),transparent 100%);
+    mask-image:linear-gradient(to right,#000 0%,#000 calc(100% - 27px),transparent 100%);
+  }
+  :is(.pip-taula-scroll,.taula-scroll-wrap,.ll-wrap,.taula-films,.taula-ranking,.taula-festivals,.taula-decades-resum):not(.pip-scroll-pendent) {
+    -webkit-mask-image:none;
+    mask-image:none;
+  }
 }

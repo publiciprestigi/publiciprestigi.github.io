@@ -75,8 +75,8 @@
 #grafic-decades {
   padding: 28px 0;
   border-top: 1px solid #e5e5e5;
-  border-bottom: none;
-  margin: 0 !important;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 0 28px 0 !important;
 }
 #taula-resum-premis {
   padding: 28px 0;
@@ -233,7 +233,7 @@ th.col-iic-header {
 .seccio-contingut .text-md-intro h2,
 .seccio-contingut .text-md-comentari h2,
 .seccio-contingut .text-md-intermedi h2 {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
@@ -286,4 +286,99 @@ th.col-iic-header {
 .titol-sticky {
   position: relative;
   top: auto;
+}
+
+
+/* ── Part I · Mercat i població — doble lectura ── */
+#seccio-mercat-grafic .grafic-mercat-titol {
+  font-size: .82em;
+  font-weight: 700;
+  color: #363737;
+  text-align: center;
+  margin: 0 0 13px;
+  font-family: "Inter", -apple-system, "SF Pro Text", sans-serif;
+}
+
+#seccio-mercat-grafic .mercat-view-controls {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  margin: 0 0 14px;
+}
+
+#seccio-mercat-grafic .mercat-view-toggle {
+  appearance: none;
+  border: 1px solid #d5d5d5;
+  background: #fff;
+  color: #666;
+  border-radius: 999px;
+  padding: 7px 13px;
+  font: 500 11px/1 "Inter", -apple-system, "SF Pro Text", sans-serif;
+  cursor: pointer;
+}
+
+#seccio-mercat-grafic .mercat-view-toggle.is-active,
+#seccio-mercat-grafic .mercat-view-toggle[aria-pressed="true"] {
+  background: #363737;
+  color: #fff;
+  border-color: #363737;
+}
+
+#seccio-mercat-grafic .grafic-nota {
+  max-width: 700px;
+  margin: 14px auto 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #666;
+  font-style: italic;
+}
+
+#seccio-mercat-grafic .grafic-font {
+  max-width: 700px;
+  margin: 6px auto 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #888;
+  font-style: normal;
+}
+
+#seccio-mercat-grafic .grafic-mercat-canvas-wrap {
+  position: relative;
+  height: 300px;
+}
+
+@media (max-width: 768px) {
+  #seccio-mercat-grafic .grafic-mercat-canvas-wrap {
+    height: 420px;
+  }
+}
+
+/* ── Part I · Distribució del Top 100 per dècada ── */
+
+#grafic-decades .grafic-nota {
+  max-width: 700px;
+  margin: 14px auto 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #666;
+  font-style: italic;
+}
+
+#grafic-decades .grafic-font {
+  max-width: 700px;
+  margin: 6px auto 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #888;
+  font-style: normal;
+}
+
+/* Part II · Rànquing per espectadors: subtítols institucionals a mida editorial h2 */
+#seccio-espectadors .subtitol-festival-ranking {
+  font-size: 1.25rem;
+  font-weight: 700;
 }
