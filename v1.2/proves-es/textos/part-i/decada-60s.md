@@ -1,3 +1,0 @@
-<!-- intro -->
-El gran momento dorado del cine español en las salas, con 43 títulos en el Top 100. Un mercado gigantesco, cerca de 400 millones de entradas anuales, dominado por la comedia popular, el cine musical y las coproducciones hispano-italianas. El cine de autor es invisible; lo más cercano son algunas formas de género como el terror de *La residencia* de Narciso Ibáñez Serrador o los *thrillers* de Antonio Isasi-Isasmendi. El bajo IIC de muchas películas de este período indica que, en un mercado tan vasto, ninguna película podía dominarlo fácilmente: conseguir un 1,5% de cuota del total ya era una auténtica proeza industrial.
-<!-- /intro -->
