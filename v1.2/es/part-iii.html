@@ -160,7 +160,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <section class="seccio-contingut pip-entrada" id="seccio-portada">
 <div class="pip-entrada-article text-md"><p class="pip-entrada-preguntes">¿Qué ocurre cuando cruzamos público y prestigio? ¿Hasta qué punto el cine de autor se ha alejado del gran público? ¿Cómo cambian la memoria y el canon cuando también cambian los mercados y las formas de ver cine?</p><p class="pip-entrada-final">No se trata de buscar datos que confirmen lo que ya pensamos, sino de utilizarlos para poner a prueba nuestras interpretaciones y ampliar la mirada.</p></div>
 <div class="pip-entrada-cta">
-<button class="nav-seccio-btn pip-entrada-enllac" data-desti="doble-corona" type="button"><span class="pip-nav-part">PART III</span><span class="pip-nav-titol">Empezar →</span></button>
+<button class="nav-seccio-btn pip-entrada-enllac" data-desti="doble-corona" type="button"><span class="pip-nav-part">PARTE III</span><span class="pip-nav-titol">Empezar →</span></button>
 </div>
 </section>
 <div class="seccio-contingut" id="seccio-doble-corona">
@@ -1403,8 +1403,8 @@ body.pip-en-portada .nav-seccions { display: none; }
       const next = seccions[idx + 1];
       const btnAnt = document.getElementById('btn-anterior');
       const btnSeg = document.getElementById('btn-seguent');
-      const destAnt = prev ? { part:'PART III', titol:(prev.nav || prev.titol), url:null } : { part:'PART II', titol:'Ranking por directores', url:'part-ii.html#directors' };
-      const destSeg = next ? { part:'PART III', titol:(next.nav || next.titol), url:null } : null;
+      const destAnt = prev ? { part:'PARTE III', titol:(prev.nav || prev.titol), url:null } : { part:'PARTE II', titol:'Ranking por directores', url:'part-ii.html#directors' };
+      const destSeg = next ? { part:'PARTE III', titol:(next.nav || next.titol), url:null } : null;
       const pintaBoto = (btn, dest, direccio) => {
         btn.style.visibility = dest ? 'visible' : 'hidden';
         if (!dest) return;
