@@ -1,0 +1,23 @@
+name: Exportar auditoria v1.2 (ZIP temporal)
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/export-auditoria-v12.yml'
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar ZIP amb els 24 fitxers originals
+        run: |
+          cd v1.2
+          zip -r -9 ../auditoria-publiciprestigi-v1.2-2026-10-30.zip auditoria
+          test "$(unzip -Z1 ../auditoria-publiciprestigi-v1.2-2026-10-30.zip | grep -cv '/$')" -eq 24
+      - uses: actions/upload-artifact@v4
+        with:
+          name: auditoria-publiciprestigi-v1.2-2026-10-30
+          path: auditoria-publiciprestigi-v1.2-2026-10-30.zip
+          retention-days: 30
