@@ -1,5 +1,5 @@
 <!-- intro -->
-Quin pes representa el públic acumulat d'una pel·lícula si el comparem amb el mercat anual del seu any de referència? La quota és aquest indicador relatiu, no la quota oficial de taquilla d'aquell mateix any. Els anys 60s i 70s, amb mercats de centenars de milions d’entrades, solen presentar quotes individuals més baixes perquè el públic es repartia entre moltes pel·lícules. Veiem primer el Top 10.
+Quin pes representa el públic acumulat d'una pel·lícula si el comparem amb el mercat anual del seu any de referència? Els anys 60s i 70s, amb mercats de centenars de milions d’entrades, solen presentar quotes individuals més baixes perquè el públic es repartia entre moltes pel·lícules. Veiem primer el Top 10.
 
 <!-- /intro -->
 
