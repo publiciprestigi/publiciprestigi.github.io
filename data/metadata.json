@@ -1,13 +1,12 @@
 {
-  "versio_activa": "v1.2-dev",
+  "versio_activa": "v1.2",
   "edicio_activa": "1965-2025",
-  "versio_label": "Versió 1.2 (en preparació)",
-  "publicat": "2026-07-18",
+  "versio_label": "Versió 1.2 (1965–2025)",
+  "publicat": "2026-10-30",
   "dades_fins": "2025",
   "idiomes": [
     "ca",
-    "es",
-    "en"
+    "es"
   ],
   "versions": [
     {
@@ -27,7 +26,16 @@
       "resum": "Actualització amb nou capítol sobre la construcció del cànon i revisió de les conclusions.",
       "label_es": "Versión 1.1 (1965–2025)",
       "resum_es": "Actualización con un nuevo capítulo sobre la construcción del canon y una revisión de las conclusiones."
+    },
+    {
+      "versio": "v1.2",
+      "edicio": "1965-2025",
+      "label": "Versió 1.2 (1965–2025)",
+      "publicat": "2026-10-30",
+      "resum": "Ampliació amb Oscar i European Film Awards, nou capítol sobre Buñuel i revisió general de dades i anàlisis.",
+      "label_es": "Versión 1.2 (1965–2025)",
+      "resum_es": "Ampliación con Oscar y European Film Awards, nuevo capítulo sobre Buñuel y revisión general de datos y análisis."
     }
   ],
-  "versio_label_es": "Versión 1.2 (en preparación)"
+  "versio_label_es": "Versión 1.2 (1965–2025)"
 }
