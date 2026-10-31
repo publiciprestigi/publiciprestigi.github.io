@@ -28,6 +28,9 @@
     { ruta: 'textos/part-i/ranking-directors.md',   titol: ES ? 'Ranking de directores' : 'Rànquing de directors',    part: 'I', seccio: 'directors',    url: 'part-i.html#directors' },
     // Part II
     { ruta: 'textos/part-ii/dades-i-criteri.md',    titol: ES ? 'Datos y criterio' : 'Dades i criteri',          part: 'II', seccio: 'intro',       url: 'part-ii.html#intro' },
+    { ruta: 'textos/part-ii/origen-distribucio.md', titol: ES ? 'Origen y distribución' : 'Origen i distribució', part: 'II', seccio: 'panorama', url: 'part-ii.html#panorama' },
+    { ruta: 'textos/part-ii/oscar.md', titol: 'Oscar', part: 'II', seccio: 'oscar', url: 'part-ii.html#oscar' },
+    { ruta: 'textos/part-ii/efa.md', titol: 'European Film Awards', part: 'II', seccio: 'efa', url: 'part-ii.html#efa' },
     { ruta: 'textos/part-ii/premiades-intro.md',    titol: ES ? 'Premiadas por década' : 'Premiades per dècada',     part: 'II', seccio: 'premiades',   url: 'part-ii.html#premiades' },
     { ruta: 'textos/part-ii/festival-cannes.md',    titol: 'Festival de Cannes',       part: 'II', seccio: 'cannes',      url: 'part-ii.html#cannes' },
     { ruta: 'textos/part-ii/festival-venezia.md',   titol: ES ? 'Festival de Venecia' : 'Festival de Venècia',      part: 'II', seccio: 'venecia',     url: 'part-ii.html#venecia' },
@@ -43,16 +46,22 @@
     { ruta: 'textos/part-iii/dues-generacions.md',  titol: ES ? 'Dos generaciones' : 'Dues generacions',         part: 'III', seccio: 'generacions',     url: 'part-iii.html#generacions' },
     { ruta: 'textos/part-iii/autor-industrial.md',  titol: ES ? "Cine de autor industrial" : "Cinema d'autor industrial",part: 'III', seccio: 'autor-industrial',url: 'part-iii.html#autor-industrial' },
     { ruta: 'textos/part-iii/mapa-canon.md',        titol: ES ? 'El mapa del canon' : 'El mapa del cànon',        part: 'III', seccio: 'mapa-canon',      url: 'part-iii.html#mapa-canon' },
+    { ruta: 'textos/part-iii/bunuel-mercat.md', titol: ES ? 'Buñuel y el segundo mercado' : 'Buñuel i el segon mercat', part: 'III', seccio: 'bunuel-mercat', url: 'part-iii.html#bunuel-mercat' },
     { ruta: 'textos/part-iii/conclusions.md',       titol: ES ? 'Conclusiones' : 'Conclusions',              part: 'III', seccio: 'conclusions',     url: 'part-iii.html#conclusions' },
   ];
 
   const PART_COLOR = { 'I': '#2a5582', 'II': '#9B2335', 'III': '#6B3FA0' };
 
+  const normalitza = value => String(value ?? '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  const netejaHTML = value => String(value ?? '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  const escapaHTML = value => String(value ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+  const festivalSeccio = nom => ({Cannes:'cannes','Venècia':'venecia','Venecia':'venecia','Berlín':'berlin','Sant Sebastià':'sansebastia','San Sebastián':'sansebastia'})[nom] || 'panorama';
   let index = [];
-  let indexat = false;
+  let promesaIndex = null;
 
   async function construirIndex() {
-    if (indexat) return;
+    if (promesaIndex) return promesaIndex;
+    promesaIndex = (async () => {
 
     // 1. Films
     try {
@@ -63,7 +72,7 @@
         const url = f.decada ? `part-i.html#${f.decada}` : 'part-i.html#espectadors';
         index.push({
           tipus: 'film',
-          text: [f.titol, f.director, String(f.any), dec, ES ? (f.context_text_es || f.context_text || '') : (f.context_text || '')].join(' ').toLowerCase(),
+          text: normalitza([f.titol, f.director, String(f.any), dec, ES ? (f.context_text_es || f.context_text || '') : (f.context_text || '')].join(' ')),
           titol: f.titol,
           subtitol: `${f.director} · ${f.any}`,
           part: 'I',
@@ -80,7 +89,7 @@
         const premi = ES ? (f.premi_es || f.premi || '') : (f.premi || '');
         index.push({
           tipus: 'festival',
-          text: [f.titol, f.director, String(f.any), ES ? (FESTIVAL_ES[f.festival] || f.festival) : f.festival, premi].join(' ').toLowerCase(),
+          text: normalitza([f.titol, f.director, String(f.any), ES ? (FESTIVAL_ES[f.festival] || f.festival) : f.festival, premi].join(' ')),
           titol: f.titol,
           subtitol: `${f.director} · ${(ES ? (FESTIVAL_ES[f.festival] || f.festival) : f.festival)} ${f.any}${f.premiat ? ' ★' : ''}`,
           part: 'II',
@@ -89,10 +98,38 @@
       });
     } catch(e) {}
 
-    // 3. Textos MD
+    // 3. Bases de dades d'acadèmies i altres seccions
+    await Promise.all([
+      ['data/oscar.json', 'Oscar', 'oscar'],
+      ['data/efa.json', 'European Film Awards', 'efa'],
+      ['data/fora-competicio.json', ES ? 'Otras secciones' : 'Altres seccions', 'panorama']
+    ].map(async ([ruta, institució, seccio]) => {
+      try {
+        const resposta = await fetch(pipPath(ruta));
+        if (!resposta.ok) return;
+        const dades = await resposta.json();
+        const grups = Array.isArray(dades) ? [['films', dades]] : Object.entries(dades).filter(([,v]) => Array.isArray(v));
+        grups.forEach(([grup, items]) => items.forEach(f => {
+          const titol = f.titol || f.nom || f.professional || '';
+          if (!titol) return;
+          const detall = ES ? (f.reconeixement_es || f.nota_es || f.reconeixement || f.nota || '') : (f.reconeixement || f.nota || '');
+          const ubicacio = ruta.includes('fora-competicio') ? festivalSeccio(f.festival) : seccio;
+          index.push({
+            tipus: 'reconeixement',
+            text: normalitza([titol,f.director,f.any,f.festival,detall,institució,grup,f.nom,f.professional].join(' ')),
+            titol,
+            subtitol: [f.director,institució,f.any,netejaHTML(detall).slice(0,90)].filter(Boolean).join(' · '),
+            part:'II',
+            url:'part-ii.html#' + ubicacio
+          });
+        }));
+      } catch(e) { console.warn('Índex incomplet:', ruta, e); }
+    }));
+
+    // 4. Textos MD
     await Promise.all(MD_FONTS.map(async (md) => {
       try {
-        const r = await fetch(md.ruta);
+        const r = await fetch(pipPath(md.ruta));
         if (!r.ok) return;
         const text = await r.text();
         // Netejar markdown: treure #, *, etc.
@@ -103,7 +140,7 @@
           const pNet = p.trim();
           index.push({
             tipus: 'text',
-            text: pNet.toLowerCase(),
+            text: normalitza(pNet),
             titol: md.titol,
             subtitol: pNet.slice(0, 100) + (pNet.length > 100 ? '…' : ''),
             subtitolRaw: pNet,
@@ -114,11 +151,12 @@
       } catch(e) {}
     }));
 
-    indexat = true;
+    })();
+    return promesaIndex;
   }
 
   function cerca(query) {
-    const q = query.toLowerCase().trim();
+    const q = normalitza(query.trim());
     if (q.length < 2) return [];
 
     const termes = q.split(/\s+/);
@@ -139,7 +177,7 @@
 
     // Prioritzar films/festivals per damunt de textos
     resultats.sort((a, b) => {
-      const prio = { film: 0, festival: 1, text: 2 };
+      const prio = { film: 0, festival: 1, reconeixement: 1, text: 2 };
       return prio[a.tipus] - prio[b.tipus];
     });
 
@@ -158,6 +196,7 @@
     } else {
       fragment = text.slice(0, 180) + (text.length > 180 ? '…' : '');
     }
+    fragment = escapaHTML(fragment);
     // Remarcar cada terme de la query
     const termes = query.split(/\s+/).filter(t => t.length > 1);
     termes.forEach(t => {
@@ -172,16 +211,16 @@
     if (!cont) return;
 
     if (!resultats.length) {
-      cont.innerHTML = '<p class="buscador-buit">' + TXT.noResults + ' "' + query + '"</p>';
+      cont.innerHTML = '<p class="buscador-buit">' + TXT.noResults + ' "' + escapaHTML(query) + '"</p>';
       return;
     }
 
     cont.innerHTML = resultats.map(r => {
       const color = PART_COLOR[r.part] || '#555';
-      const badge = `<span class="buscador-badge" style="color:${color}">${TXT.part} ${r.part} · ${r.titol}</span>`;
+      const badge = `<span class="buscador-badge" style="color:${color}">${TXT.part} ${r.part} · ${escapaHTML(r.titol)}</span>`;
       const sub = r.tipus === 'text'
         ? destacaText(r.subtitolRaw || r.subtitol, query)
-        : r.subtitol;
+        : escapaHTML(r.subtitol);
       return `<a href="${r.url}" class="buscador-resultat" onclick="document.getElementById('buscador-overlay').style.display='none'">
         ${badge}
         <span class="buscador-resultat-sub">${sub}</span>
@@ -234,7 +273,7 @@
             if (cont) cont.innerHTML = '';
             return;
           }
-          renderResultats(cerca(q), q);
+          construirIndex().then(() => { if (input.value.trim() === q) renderResultats(cerca(q), q); });
         }, 200);
       });
     }
