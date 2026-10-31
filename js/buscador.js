@@ -133,14 +133,14 @@
         if (!r.ok) return;
         const text = await r.text();
         // Netejar markdown: treure #, *, etc.
-        const net = text.replace(/^#+\s*/gm, '').replace(/[*_`\[\]]/g, '').replace(/<!--.*?-->/gs, '');
+        const net = text.replace(/<!--.*?-->/gs, '').replace(/<[^>]+>/g, ' ').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/^#+\s*/gm, '').replace(/[*_`\[\]]/g, '');
         // Dividir en fragments de ~200 paraules per a millors resultats
         const paragrafs = net.split(/\n{2,}/).filter(p => p.trim().length > 30);
         paragrafs.forEach(p => {
           const pNet = p.trim();
           index.push({
             tipus: 'text',
-            text: normalitza(pNet),
+            text: normalitza(md.titol + ' ' + pNet),
             titol: md.titol,
             subtitol: pNet.slice(0, 100) + (pNet.length > 100 ? '…' : ''),
             subtitolRaw: pNet,
