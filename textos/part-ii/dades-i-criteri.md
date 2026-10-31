@@ -1,6 +1,6 @@
-En aquesta part, l'estudi analitza el reconeixement internacional del cinema espanyol i la seva relació amb el públic, a partir de la presència als festivals de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#B84555">Venècia</strong>, <strong style="color:#CC6977">Berlín</strong> i <strong style="color:#DA929A">Sant Sebastià</strong>, i als premis <strong style="color:#c8a000">Oscar</strong> i <strong style="color:#C5AE63">EFA</strong>, incorporats en aquesta versió 1.2.
+La incorporació dels premis de les acadèmies cinematogràfiques amplia la mirada més enllà dels festivals i permet explorar diferents formes de reconeixement internacional i la seva relació amb el públic.
 
-Els criteris de selecció i premis són els següents:
+L'estudi recull la presència als festivals de <strong style="color:#9B2335">Cannes</strong>, <strong style="color:#B84555">Venècia</strong>, <strong style="color:#CC6977">Berlín</strong> i <strong style="color:#DA929A">Sant Sebastià</strong>, i als premis <strong style="color:#c8a000">Oscar</strong> i <strong style="color:#C5AE63">EFA</strong>, incorporats en aquesta versió 1.2, segons els criteris següents:
 
 | Àmbit | Criteri de selecció | Criteri de premis | Què queda fora o a part |
 |---|---|---|---|
@@ -31,7 +31,7 @@ A les taules de festivals i acadèmies s'indica si cada pel·lícula forma part 
 
 La dada d'espectadors es manté com a referència al llarg de tot l'estudi, tant a la Part II com als capítols d'anàlisi de la Part III. La font principal és la <a href="https://sede.mcu.gob.es/CatalogoICAA" target="_blank" rel="noopener">Base de dades de pel·lícules qualificades de l'ICAA</a>, que ofereix la xifra acumulada disponible per a cada títol.
 
-Les dades d'espectadors s'han recollit en diferents moments al llarg del 2026, coincidint amb les successives versions de l'estudi. Per això, dins d'una mateixa edició poden conviure xifres consultades en dates diferents, que poden variar lleugerament respecte de consultes posteriors. Cada nova edició anual inclourà una revisió general de les dades d'espectadors de tot l'estudi.
+Les xifres s'han recollit en diferents moments al llarg del 2026, coincidint amb les successives versions. Per això, dins d'una mateixa edició poden conviure xifres consultades en dates diferents, que poden variar lleugerament respecte de consultes posteriors. Cada nova edició anual inclourà una revisió general de les dades d'espectadors de tot l'estudi.
 
 ## Sobre les fonts
 
