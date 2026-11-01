@@ -174,6 +174,11 @@ th.col-iic-header {
 .taula-ranking .fila-boto-context {
   background: transparent !important;
 }
+/* Sense separador inferior als botons desplegables dels rànquings. */
+.taula-ranking .fila-boto-context > td,
+#taula-ranking-espectadors .taula-festivals .fila-boto-context > td {
+  border-bottom: 0;
+}
 
 
 
