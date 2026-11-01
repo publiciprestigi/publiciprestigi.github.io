@@ -24,5 +24,5 @@ La columna Var. compara la posición con el Top 25 anterior; «nuevo» indica la
 <!-- /comentari-top10 -->
 
 <!-- comentari-top3 -->
-**Recordatorio**: en los festivales, se consideran películas premiadas las que han recibido el máximo galardón, premios especiales del jurado, mejor dirección, interpretación o guion. En los Oscar, se cuentan todas las categorías de nominación; cada película ganadora cuenta una sola vez, independientemente del número de estatuillas, y en caso de empate prevalece el número de películas nominadas.
+**Recordatorio**: en los festivales, se consideran películas premiadas las que han recibido el máximo galardón, premios especiales del jurado, mejor dirección, interpretación o guion. En los Oscar, se cuentan todas las categorías de nominación; cada película ganadora cuenta una sola vez, independientemente del número de estatuillas.
 <!-- /comentari-top3 -->
