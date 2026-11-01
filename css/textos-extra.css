@@ -124,9 +124,9 @@
   border-bottom: 2px solid var(--color-text);
 }
 
-/* ── Films de context sempre fons blanc ── */
+/* ── Films de context: mateix fons general de lectura ── */
 .taula-films tr[data-context="true"] {
-  background: #ffffff !important;
+  background: var(--color-fons) !important;
 }
 .taula-films .fila-boto-context {
   background: #ffffff !important;
