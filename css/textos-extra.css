@@ -176,7 +176,8 @@ th.col-iic-header {
 }
 /* Sense separador inferior als botons desplegables dels rànquings. */
 .taula-ranking .fila-boto-context > td,
-#taula-ranking-espectadors .taula-festivals .fila-boto-context > td {
+#taula-ranking-espectadors .taula-festivals .fila-boto-context > td,
+#taula-ranking-academies .taula-festivals .fila-boto-context > td {
   border-bottom: 0;
 }
 
