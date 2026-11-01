@@ -451,7 +451,7 @@ function construirRànquingEspectadors() {
                 </button>
               </td>
             </tr>
-            ${resta.map((f,i) => fila(f,i+10).replace('<tr ','<tr style="display:none" class="fila-extra-'+cid+' ')).join('')}
+            ${resta.map((f,i) => fila(f,i+10).replace('<tr style="', '<tr class="fila-extra-'+cid+'" style="display:none;')).join('')}
             ${filmsSenseDades.map(f => filaSenseDades(f)).join('')}
           ` : ''}
         </tbody>
