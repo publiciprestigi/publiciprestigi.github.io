@@ -1504,14 +1504,14 @@ html[lang="es"] .sidebar-link-badge[data-seccio="mapa-canon"] .chapter-badge {
 }
 
 .taula-festivals-context {
-  background: #fff !important;
+  background: var(--color-fons) !important;
 }
 
 .taula-festivals-context thead tr,
 .taula-festivals-context tbody tr,
 .taula-festivals-context th,
 .taula-festivals-context td {
-  background: #fff !important;
+  background: var(--color-fons) !important;
 }
 
 .taula-festivals-context th,
