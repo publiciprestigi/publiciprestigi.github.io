@@ -7,7 +7,7 @@ Para poner estas cifras en perspectiva, comparamos a Buñuel con Berlanga y Bard
 <!-- /PIP_BLOC:intro -->
 
 <!-- PIP_BLOC:comentari-trajectories -->
-- Bardem tiene cinco de sus nueve películas por encima del millón de espectadores, pese a que hoy esta última etapa de su carrera ha caído prácticamente en el olvido. Berlanga, asociado a priori a un cine más popular, presenta cifras similares a las de Buñuel y Bardem, con dos grandes éxitos, *La escopeta nacional* (2,1M) y *La vaquilla* (1,9M), aunque algunos de sus títulos más emblemáticos quedan fuera del período estudiado. Buñuel, con una trayectoria industrial mucho más atípica, mantiene resultados comparables y se acerca a los dos millones con *Tristana*. Las medias por película confirman la proximidad comercial de los tres cineastas:
+- Bardem tiene cinco de sus nueve películas por encima del millón de espectadores, pese a que hoy esta última etapa de su carrera ha caído prácticamente en el olvido. Berlanga, asociado a priori a un cine más popular, presenta cifras similares a las de Buñuel y Bardem, con dos grandes éxitos, *La escopeta nacional* (2,1M) y *La vaquilla* (1,9M). Buñuel, con una trayectoria industrial mucho más atípica, mantiene resultados comparables y se acerca a los dos millones con *Tristana*. Las medias por película confirman la proximidad comercial de los tres cineastas:
 <!-- /PIP_BLOC:comentari-trajectories -->
 
 <!-- PIP_BLOC:transicio-franca -->
