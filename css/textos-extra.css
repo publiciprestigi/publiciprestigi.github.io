@@ -129,7 +129,7 @@
   background: var(--color-fons) !important;
 }
 .taula-films .fila-boto-context {
-  background: #ffffff !important;
+  background: var(--color-fons) !important;
 }
 .taula-films .fila-boto-context td {
   border-bottom: none;
