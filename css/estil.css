@@ -646,6 +646,9 @@ body.cap-hidden .sidebar {
 }
 
 .taula-ranking td { padding: 10px 8px 10px 0; border-bottom: 1px solid var(--color-linia); vertical-align: middle; }
+/* Alternança de files als dos rànquings de directors de la Part I */
+#taula-directors-r1 .fila-director-zebra,
+#taula-directors-r2 .fila-director-zebra { background: #f5f5f5; }
 .taula-ranking .col-subtil { color: var(--color-text-suau); font-size: 0.8rem; white-space: nowrap; }
 .taula-ranking td:nth-child(3) { max-width: 320px; }
 
