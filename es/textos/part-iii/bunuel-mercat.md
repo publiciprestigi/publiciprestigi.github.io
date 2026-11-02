@@ -63,7 +63,7 @@ Para cerrar el capítulo, recuperamos la perspectiva de la Parte I y ampliamos l
 <!-- /PIP_BLOC:intro-mercats -->
 
 <!-- PIP_BLOC:comentari-mercats -->
-- En los años sesenta, España vendía más entradas de cine que Francia pese a tener una población considerablemente inferior. La caída posterior invirtió esta relación, aunque ambos mercados volvieron a acercarse durante los noventa y la primera mitad de los 2000. Desde la crisis de 2008, la distancia ha aumentado a favor de Francia. La diferencia no se explica tanto por el crecimiento de la población, relativamente similar en ambos países, como por la frecuencia de asistencia a las salas.
+- En los años sesenta, España vendía más entradas de cine que Francia pese a tener una población considerablemente inferior. La caída posterior invirtió esta relación, aunque ambos mercados volvieron a acercarse durante los noventa y la primera mitad de los 2000. Desde la crisis de 2008, Francia ha consolidado un mercado cinematográfico mucho mayor que el español. La diferencia no se explica tanto por el crecimiento de la población, relativamente similar en ambos países, como por la frecuencia de asistencia a las salas.
 <!-- /PIP_BLOC:comentari-mercats -->
 
 <!-- PIP_BLOC:comentari-perhab -->
