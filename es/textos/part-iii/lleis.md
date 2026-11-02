@@ -17,7 +17,7 @@ La aparición de Antena 3 y Telecinco, y de Canal+ como primera ventana de pago,
 
 ### 3. La Ley del Cine (2007): el marco moderno
 
-La Ley 55/2007 es el resultado de un largo proceso de reformas: la Reforma Semprún (1988) había intentado corregir los efectos del Decreto Miró sustituyendo las subvenciones anticipadas por ayudas automáticas; la Ley 15/2001 había establecido un primer marco democrático moderno. La 55/2007 consolida todo ese recorrido, codifica las obligaciones de inversión de las televisiones y regula por primera vez la distribución digital. No cambia el modelo de financiación (las televisiones privadas ya llevan 17 años financiando cine), pero le da coherencia legal. Es también la ley que las plataformas harán obsoleta en menos de diez años.
+La Ley 55/2007 es el resultado de un largo proceso de reformas: la Reforma Semprún (1988) había intentado corregir los efectos del Decreto Miró sustituyendo las subvenciones anticipadas por ayudas automáticas; la Ley 15/2001 había establecido un primer marco democrático moderno. La 55/2007 consolida todo ese recorrido, codifica las obligaciones de inversión de las televisiones y regula por primera vez la distribución digital. No cambia el modelo de financiación (las televisiones privadas ya llevan 17 años financiando cine), pero le da coherencia legal. En 2015, una reforma del sistema de ayudas sustituye progresivamente las subvenciones a la amortización, vinculadas a los resultados comerciales, por ayudas anticipadas sobre proyecto, modificando la forma de financiar la producción. Es también la ley que las plataformas harán obsoleta en menos de diez años.
 
 ### 4. El IVA del 21% (2012) y la fragilidad de las salas
 
