@@ -717,7 +717,7 @@
         <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
-        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.2 (en preparación)</a>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.2 (1965–2025)</a>
       </div>
 
       <a href="/es/" class="capcalera-logo capcalera-logo-picto" aria-label="Públic i Prestigi"><img src="../img/picto-pip.png" alt=""></a>
@@ -1142,7 +1142,7 @@
 
     fetch(pipPath('data/metadata.json'))
       .then(r => r.json())
-      .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
+      .then(data => { document.getElementById('versio-label').textContent = data.versions?.find(v => v.versio === data.versio_activa)?.label_es || 'Versión 1.2 (1965–2025)'; })
       .catch(() => {});
 
     function toggleBuscador() {
@@ -1643,7 +1643,7 @@
       </div>
     </div>
 
-    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.2 (en preparación)</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.2 (1965–2025)</a></div>
   </nav>
 
   <script>
