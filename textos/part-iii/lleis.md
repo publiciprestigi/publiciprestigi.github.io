@@ -17,7 +17,7 @@ L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pa
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
-La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Semprún (1988) havia intentat corregir els efectes del Decret Miró substituint les subvencions anticipades per ajudes automàtiques; la Llei 15/2001 havia establert un primer marc democràtic modern. La 55/2007 consolida tot aquest recorregut, codifica les obligacions d'inversió de les televisions i regula per primera vegada la distribució digital. No canvia el model de finançament (les televisions privades ja fa 17 anys que financen cinema) però li dona coherència legal. És també la llei que les plataformes faran obsoleta en menys de deu anys.
+La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Semprún (1988) havia intentat corregir els efectes del Decret Miró substituint les subvencions anticipades per ajudes automàtiques; la Llei 15/2001 havia establert un primer marc democràtic modern. La 55/2007 consolida tot aquest recorregut, codifica les obligacions d'inversió de les televisions i regula per primera vegada la distribució digital. No canvia el model de finançament (les televisions privades ja fa 17 anys que financen cinema) però li dona coherència legal. El 2015, una reforma del sistema d'ajudes substitueix progressivament les subvencions a l'amortització, vinculades als resultats comercials, per ajudes anticipades sobre projecte, modificant la manera de finançar la producció. És també la llei que les plataformes faran obsoleta en menys de deu anys.
 
 ### 4. L'IVA del 21% (2012) i la fragilitat de la sala
 
