@@ -63,7 +63,7 @@ Per tancar el capítol, recuperem la perspectiva de la Part I i ampliem la compa
 <!-- /PIP_BLOC:intro-mercats -->
 
 <!-- PIP_BLOC:comentari-mercats -->
-- Als anys seixanta, Espanya venia més entrades de cinema que França malgrat tenir una població considerablement inferior. La davallada posterior va invertir aquesta relació, tot i que els dos mercats van tornar a acostar-se durant els noranta i la primera meitat dels 2000. Des de la crisi de 2008, la distància ha crescut a favor de França. La diferència no s'explica tant pel creixement de la població, relativament semblant en tots dos països, com per la freqüència d'assistència a les sales.
+- Als anys seixanta, Espanya venia més entrades de cinema que França malgrat tenir una població considerablement inferior. La davallada posterior va invertir aquesta relació, tot i que els dos mercats van tornar a acostar-se durant els noranta i la primera meitat dels 2000. Des de la crisi de 2008, França ha consolidat un mercat cinematogràfic molt més gran que l'espanyol. La diferència no s'explica tant pel creixement de la població, relativament semblant en tots dos països, com per la freqüència d'assistència a les sales.
 <!-- /PIP_BLOC:comentari-mercats -->
 
 <!-- PIP_BLOC:comentari-perhab -->
