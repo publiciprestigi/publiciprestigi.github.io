@@ -438,34 +438,6 @@
   </script>
 
 <script>
-    const VERSIO_ACTUAL_ID = 'v1-1';
-
-    function actualitzarUI() {
-      document.querySelectorAll('.versio-item').forEach(el => {
-        el.classList.remove('seleccionada');
-        const etiqueta = el.querySelector('.etiqueta-seleccionada');
-        if (etiqueta) etiqueta.remove();
-      });
-
-      const actual = document.getElementById(VERSIO_ACTUAL_ID);
-      if (actual) {
-        actual.classList.add('seleccionada');
-        const etiqueta = document.createElement('span');
-        etiqueta.className = 'etiqueta-seleccionada';
-        etiqueta.innerHTML = '<span class="check">✓</span> Seleccionada';
-        actual.querySelector('.versio-cap').appendChild(etiqueta);
-      }
-    }
-
-    document.querySelectorAll('.versio-item.clicable').forEach(el => {
-      el.addEventListener('click', () => {
-        if (el.id === VERSIO_ACTUAL_ID) return;
-        window.location.href = el.dataset.url;
-      });
-    });
-
-    actualitzarUI();
-
     function toggleBuscador() {
       const o = document.getElementById('buscador-overlay'), i = document.getElementById('buscador-input');
       if (o.style.display === 'none') { o.style.display = 'flex'; i.focus(); }
