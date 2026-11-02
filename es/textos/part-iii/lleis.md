@@ -17,7 +17,7 @@ La aparición de Antena 3 y Telecinco, y de Canal+ como primera ventana de pago,
 
 ### 3. La Ley del Cine (2007): el marco moderno
 
-La Ley 55/2007 es el resultado de un largo proceso de reformas: la Reforma Semprún (1988) había intentado corregir los efectos del Decreto Miró sustituyendo las subvenciones anticipadas por ayudas automáticas; la Ley 15/2001 había establecido un primer marco democrático moderno. La 55/2007 consolida todo ese recorrido, codifica las obligaciones de inversión de las televisiones y regula por primera vez la distribución digital. No cambia el modelo de financiación (las televisiones privadas ya llevan 17 años financiando cine), pero le da coherencia legal. En 2015, una reforma del sistema de ayudas sustituye progresivamente las subvenciones a la amortización, vinculadas a los resultados comerciales, por ayudas anticipadas sobre proyecto, modificando la forma de financiar la producción. Es también la ley que las plataformas harán obsoleta en menos de diez años.
+La Ley 55/2007 es el resultado de un largo proceso de reformas: la Reforma Semprún (1988) había intentado corregir los efectos del Decreto Miró sustituyendo las subvenciones anticipadas por ayudas automáticas; la Ley 15/2001 había establecido un primer marco democrático moderno. La 55/2007 consolida todo ese recorrido, codifica las obligaciones de inversión de las televisiones y regula por primera vez la distribución digital. No cambia el modelo de financiación (las televisiones privadas ya llevan 17 años financiando cine), pero le da coherencia legal. Es también la ley que las plataformas harán obsoleta en menos de diez años.
 
 ### 4. El IVA del 21% (2012) y la fragilidad de las salas
 
@@ -25,7 +25,7 @@ El golpe más duro para las salas en democracia: el gobierno Rajoy eleva el IVA 
 
 ### 5. Netflix y la explosión de plataformas (2015–2025)
 
-Netflix llega a España en 2015. No es una explosión inmediata, pero sí el punto de no retorno. La COVID (2020) cierra las salas durante meses y normaliza el consumo doméstico. Disney+, HBO Max y Amazon Prime consolidan el ecosistema. En clave española, Filmin, fundada en 2007, había anticipado este modelo con un catálogo especializado en cine de autor y europeo que la convierte en referencia para el público del circuito cultural. El factor IAA de 2020–2025 se sitúa en ×3,25, una estimación orientativa de la audiencia acumulada durante los primeros años de explotación.
+Netflix llega a España en 2015. No es una explosión inmediata, pero sí el punto de no retorno. La COVID (2020) cierra las salas durante meses y normaliza el consumo doméstico. Disney+, HBO Max y Amazon Prime consolidan el ecosistema. En clave española, Filmin, fundada en 2007, había anticipado este modelo con un catálogo especializado en cine de autor y europeo que la convierte en referencia para el público del circuito cultural. También en 2015, una reforma del sistema de ayudas sustituye progresivamente las subvenciones a la amortización, vinculadas a los resultados comerciales, por ayudas anticipadas sobre proyecto, modificando la forma de financiar la producción. El factor IAA de 2020–2025 se sitúa en ×3,25, el valor más alto de la serie.
 
 ### 6. Las medidas de paridad (2018–2020): un cambio estructural
 
