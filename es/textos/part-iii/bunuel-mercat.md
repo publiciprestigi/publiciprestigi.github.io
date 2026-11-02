@@ -63,7 +63,7 @@ Para cerrar el capítulo, recuperamos la perspectiva de la Parte I y ampliamos l
 <!-- /PIP_BLOC:intro-mercats -->
 
 <!-- PIP_BLOC:comentari-mercats -->
-- En los años sesenta, España vendía más entradas de cine que Francia pese a tener una población considerablemente inferior. La caída posterior del mercado español invirtió esta relación, pero durante los años noventa y la primera mitad de los 2000 ambos mercados volvieron a acercarse. Después de este período, y especialmente a raíz de la crisis de 2008, la distancia se ha ampliado a favor de Francia. Mientras tanto, la población ha crecido en ambos países, aunque a ritmos diferentes. La divergencia cinematográfica no se explica solo por la demografía, sino sobre todo por la evolución desigual de la asistencia a las salas.
+- En los años sesenta, España vendía más entradas de cine que Francia pese a tener una población considerablemente inferior. La caída posterior invirtió esta relación, aunque ambos mercados volvieron a acercarse durante los noventa y la primera mitad de los 2000. Desde la crisis de 2008, la distancia ha aumentado a favor de Francia. La diferencia no se explica tanto por el crecimiento de la población, relativamente similar en ambos países, como por la frecuencia de asistencia a las salas.
 <!-- /PIP_BLOC:comentari-mercats -->
 
 <!-- PIP_BLOC:comentari-perhab -->
