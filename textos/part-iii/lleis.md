@@ -17,7 +17,7 @@ L’aparició d’Antena 3 i Telecinco, i de Canal+ com a primera finestra de pa
 
 ### 3. La Llei del Cinema (2007): el marc modern
 
-La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Semprún (1988) havia intentat corregir els efectes del Decret Miró substituint les subvencions anticipades per ajudes automàtiques; la Llei 15/2001 havia establert un primer marc democràtic modern. La 55/2007 consolida tot aquest recorregut, codifica les obligacions d'inversió de les televisions i regula per primera vegada la distribució digital. No canvia el model de finançament (les televisions privades ja fa 17 anys que financen cinema) però li dona coherència legal. El 2015, una reforma del sistema d'ajudes substitueix progressivament les subvencions a l'amortització, vinculades als resultats comercials, per ajudes anticipades sobre projecte, modificant la manera de finançar la producció. És també la llei que les plataformes faran obsoleta en menys de deu anys.
+La Llei 55/2007 és el resultat d'un procés llarg de reformes: la Reforma Semprún (1988) havia intentat corregir els efectes del Decret Miró substituint les subvencions anticipades per ajudes automàtiques; la Llei 15/2001 havia establert un primer marc democràtic modern. La 55/2007 consolida tot aquest recorregut, codifica les obligacions d'inversió de les televisions i regula per primera vegada la distribució digital. No canvia el model de finançament (les televisions privades ja fa 17 anys que financen cinema) però li dona coherència legal. És també la llei que les plataformes faran obsoleta en menys de deu anys.
 
 ### 4. L'IVA del 21% (2012) i la fragilitat de la sala
 
@@ -25,7 +25,7 @@ El cop més dur per a les sales en democràcia: el govern Rajoy puja l’IVA cul
 
 ### 5. Netflix i l'explosió de plataformes (2015–2025)
 
-Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el punt de no retorn. La COVID (2020) tanca les sales durant mesos i normalitza el consum domèstic. Disney+, HBO Max i Amazon Prime consoliden l'ecosistema. En clau espanyola, Filmin, fundada el 2007, havia anticipat aquest model amb un catàleg especialitzat en cinema d'autor i europeu que la converteix en referència per al públic del circuit cultural. El factor IAA de 2020–2025 se situa en ×3,25, una estimació orientativa de l'audiència acumulada durant els primers anys d'explotació.
+Netflix arriba a Espanya el 2015. No és l'explosió immediata, però és el punt de no retorn. La COVID (2020) tanca les sales durant mesos i normalitza el consum domèstic. Disney+, HBO Max i Amazon Prime consoliden l'ecosistema. En clau espanyola, Filmin, fundada el 2007, havia anticipat aquest model amb un catàleg especialitzat en cinema d'autor i europeu que la converteix en referència per al públic del circuit cultural. També el 2015, una reforma del sistema d'ajudes substitueix progressivament les subvencions a l'amortització, vinculades als resultats comercials, per ajudes anticipades sobre projecte, modificant la manera de finançar la producció. El factor IAA de 2020–2025 se situa en ×3,25, el valor més alt de la sèrie.
 
 ### 6. Les mesures de paritat (2018–2020): un canvi estructural
 
