@@ -296,7 +296,7 @@ function construirRànquingDirectors() {
       <colgroup><col style="width:6%"><col style="width:31%"><col style="width:17%"><col style="width:28%"><col style="width:11%"><col style="width:7%"></colgroup>
       <thead><tr>
         <th class="col-pos">#</th>
-        <th>Direcció</th>
+        <th>${pipT('Direcció','Dirección')}</th>
         <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-num" style="text-align:right">${pipT('Espectadors acumulats','Espectadores acumulados')}</th>
         <th class="col-num col-gris">${pipT('% total','% total')}</th>
@@ -318,7 +318,7 @@ function construirRànquingDirectors() {
       <thead><tr>
         <th class="col-pos">#</th>
         <th class="col-var">Var.</th>
-        <th>Direcció</th>
+        <th>${pipT('Direcció','Dirección')}</th>
         <th class="col-center">${pipT('Núm. films','N.º de films')}</th>
         <th class="col-center">Add.</th>
         <th class="col-num" style="text-align:right">${pipT('Espectadors totals','Espectadores totales')}</th>
