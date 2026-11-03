@@ -665,7 +665,7 @@ async function construirRànquingDirectors() {
 
   const varHtml = (nom, posNova) => {
     const posAntiga = posicioFestivals.get(nom);
-    if (!posAntiga || posAntiga > 25) return `<span class="var-nou">NOU</span>`;
+    if (!posAntiga || posAntiga > 25) return `<span class="var-nou">${pipT("NOU","NUEVO")}</span>`;
     const dif = posAntiga - posNova;
     if (dif > 0) return `<span class="var-up">↑${dif}</span>`;
     if (dif < 0) return `<span class="var-down">↓${Math.abs(dif)}</span>`;
@@ -676,7 +676,7 @@ async function construirRànquingDirectors() {
   // Si el director era fora del Top 25, apareix com a NOU, igual que al Top 25 compost.
   const varHtmlTop10 = (nom, posNova) => {
     const posAntiga = posicioComposta.get(nom);
-    if (!posAntiga || posAntiga > 25) return `<span class="var-nou">NOU</span>`;
+    if (!posAntiga || posAntiga > 25) return `<span class="var-nou">${pipT("NOU","NUEVO")}</span>`;
     const dif = posAntiga - posNova;
     if (dif > 0) return `<span class="var-up">↑${dif}</span>`;
     if (dif < 0) return `<span class="var-down">↓${Math.abs(dif)}</span>`;
