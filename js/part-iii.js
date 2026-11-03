@@ -1309,7 +1309,7 @@ function pipTooltipTrajectoria(context) {
   if (raw.prestigi) {
     const rec = document.createElement('div');
     rec.style.fontWeight = '400';
-    rec.textContent = pip3T('Reconeixement','Reconocimiento') + ': ' + raw.prestigi;
+    rec.textContent = pip3T('Reconeixement','Reconocimiento') + ': ' + (PIP_III_ES ? raw.prestigi.replaceAll('Venècia','Venecia').replaceAll('Sant Sebastià','San Sebastián').replaceAll('inauguració, fora de concurs','inauguración, fuera de concurso') : raw.prestigi);
     el.appendChild(rec);
   }
 
