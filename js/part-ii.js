@@ -528,9 +528,9 @@ async function construirRànquingAcademiesEspectadors() {
         <table class="taula-festivals">
           <thead><tr>
             <th class="col-pos">#</th>
-            <th>Títol</th>
-            <th class="col-subtil">Direcció</th>
-            <th class="col-center" style="width:50px">Premi</th>
+            <th>${pipT('Títol','Título')}</th>
+            <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
+            <th class="col-center" style="width:50px">${pipT('Premi','Premio')}</th>
             <th class="col-center" style="width:65px">Top 100</th>
             <th class="col-num" style="text-align:right">${pipT('Espectadors','Espectadores')} <sup><a href="${PIP_ES ? '../es/notes.html#n7' : 'notes.html#n7'}">[7]</a></sup></th>
           </tr></thead>
@@ -540,7 +540,7 @@ async function construirRànquingAcademiesEspectadors() {
               <tr class="fila-boto-context">
                 <td colspan="6">
                   <button class="btn-context" onclick="expandirRankEsp('${cid}',this)">
-                    + Veure tots els ${totalFilms} films
+                    ${pipT(`+ Veure tots els ${totalFilms} films`, `+ Ver los ${totalFilms} films`)}
                   </button>
                 </td>
               </tr>
