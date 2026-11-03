@@ -108,7 +108,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 <button aria-label="Menú" class="btn-hamburguesa" onclick="toggleDrawer()">
 <span></span><span></span><span></span>
 </button>
-<a class="capcalera-versio" href="versions.html" id="versio-label">Versió 1.1 (1965–2025)</a>
+<a class="capcalera-versio" href="versions.html" id="versio-label">Versión 1.2 (1965–2025)</a>
 </div>
 <a class="capcalera-logo" href="/es/">Públic i Prestigi</a>
 <div class="capcalera-controls">
@@ -1492,7 +1492,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       });
     });
 
-    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
+    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versions?.find(v => v.versio === data.versio_activa)?.label_es || 'Versión 1.2 (1965–2025)'; }).catch(() => {});
 
     // Navegar a la secció del hash si n'hi ha
     (function() {
@@ -2104,7 +2104,7 @@ body.pip-en-portada .nav-seccions { display: none; }
 </div>
 </div>
 <div class="drawer-seccio"><a class="drawer-seccio-cap es-link" href="sobre.html" onclick="toggleDrawer()">Sobre el proyecto</a></div>
-<div class="drawer-seccio"><a class="drawer-seccio-cap drawer-versio" href="versions.html" onclick="toggleDrawer()">Versió 1.1 (1965–2025)</a></div>
+<div class="drawer-seccio"><a class="drawer-seccio-cap drawer-versio" href="versions.html" onclick="toggleDrawer()">Versión 1.2 (1965–2025)</a></div>
 </nav>
 <script>
     function toggleDrawer() {
