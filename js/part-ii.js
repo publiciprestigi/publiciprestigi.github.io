@@ -501,7 +501,7 @@ async function construirRànquingAcademiesEspectadors() {
       const cid = `resp-acad-${nom.toLowerCase()}`;
       const mitjana = calcularMitjana(filmsAmbDades);
       const mitjanaTxt = mitjana
-        ? `Mitjana de tots els films documentats: ${fmt(mitjana)} espectadors`
+        ? `${pipT('Mitjana de tots els films documentats','Media de todos los films documentados')}: ${fmt(mitjana)} ${pipT('espectadors','espectadores')}`
         : '';
 
       const fila = (f, i, extraClass = '') => `<tr${extraClass ? ` class="${extraClass}"` : ''} style="${extraClass ? 'display:none;' : ''}background:${i % 2 === 0 ? '#ffffff' : '#f7f7f7'};border-bottom:2px solid #fff">
