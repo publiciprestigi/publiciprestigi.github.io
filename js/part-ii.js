@@ -306,7 +306,7 @@ function construirFestival(festival, seccioId) {
         <th style="width:22%">${pipT('Premi / Nota','Premio / Nota')}</th>
         <th class="col-center" style="width:60px">Top 100</th>
         <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
-        <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')}${!PIP_ES ? ' <sup><a href="notes.html#n7">[7]</a></sup>' : ''}</th>
+        <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')} <sup><a href="notes.html#n7">[7]</a></sup></th>
       </tr></thead>
       <tbody>${files}</tbody>
     </table>`;
@@ -358,7 +358,7 @@ function construirForaCompeticio(festival, seccioId) {
             <th style="width:22%">${pipT('Premi / nota','Premio / nota')}</th>
             <th class="col-center" style="width:60px">Top 100</th>
             <th class="col-subtil" style="width:75px">${pipT('Dècada','Década')}</th>
-            <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')}${PIP_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
+            <th class="col-num" style="width:85px">${pipT('Espectadors','Espectadores')} <sup><a href="notes.html#n7">[7]</a></sup></th>
           </tr></thead>
           <tbody>${files}</tbody>
         </table>
@@ -439,7 +439,7 @@ function construirRànquingEspectadors() {
           <th class="col-subtil">${pipT('Direcció','Dirección')}</th>
           <th class="col-center" style="width:50px">${pipT('Premi','Premio')}</th>
           <th class="col-center" style="width:65px">Top 100</th>
-          <th class="col-num" style="text-align:right">${pipT('Espectadors','Espectadores')}${PIP_ES ? '' : ' <sup><a href="notes.html#n7">[7]</a></sup>'}</th>
+          <th class="col-num" style="text-align:right">${pipT('Espectadors','Espectadores')} <sup><a href="notes.html#n7">[7]</a></sup></th>
         </tr></thead>
         <tbody>
           ${top10.map((f,i) => fila(f,i)).join('')}
