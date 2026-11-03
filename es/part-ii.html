@@ -356,7 +356,7 @@ body.pip-en-portada .nav-seccions { display: none; }
       a.addEventListener('click', e => { e.preventDefault(); const idx = seccions.findIndex(s => s.id === a.dataset.seccio); if (idx >= 0) mostraSeccio(idx); });
     });
 
-    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versio_label; }).catch(() => {});
+    fetch(pipPath('data/metadata.json')).then(r => r.json()).then(data => { document.getElementById('versio-label').textContent = data.versions?.find(v => v.versio === data.versio_activa)?.label_es || 'Versión 1.2 (1965–2025)'; }).catch(() => {});
     // Navegar a la secció del hash si n'hi ha
     (function() {
       const hash = window.location.hash.replace('#', '');
