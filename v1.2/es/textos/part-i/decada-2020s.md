@@ -1,3 +1,0 @@
-<!-- intro -->
-El colapso pandémico y una recuperación que no acaba de consolidarse. El mercado cae hasta los 27 millones de entradas en 2020 y en 2025 se sitúa en los 66,9 millones, todavía lejos de los niveles anteriores a la pandemia. En este escenario, la saga *Padre no hay más que uno* se convierte en el gran fenómeno sostenido del cine popular, con tres entregas en el Top 100 que superan el umbral aproximado de los 2 millones de espectadores. El IIC de la tercera entrega (3,35), el más alto de la década, confirma la fuerza de este vínculo con el público familiar en un mercado todavía en recomposición.
-<!-- /intro -->
