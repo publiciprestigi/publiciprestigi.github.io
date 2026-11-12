@@ -132,13 +132,10 @@
 
       <div class="subscripcio-text">
         <p>Las novedades y actualizaciones de Públic i Prestigi se publican en <a href="https://publiciprestigi.substack.com/" target="_blank" rel="noopener">Substack</a>, el canal de comunicación del proyecto.</p>
-        <p>Al continuar, irás a la página de suscripción, donde podrás introducir tu correo y completar el proceso.</p>
-      </div>
-
-      <div class="subscripcio-accions">
-        <a id="subscripcio-continuar" class="subscripcio-continuar" href="https://publiciprestigi.substack.com/subscribe?utm_source=menu&amp;simple=true&amp;next=https%3A%2F%2Fpubliciprestigi.substack.com%2F">Continuar</a>
-        <button type="button" class="subscripcio-cancellar" onclick="tancaSubscripcio()">Cancelar</button>
-      </div>
+</div>
+<div class="subscripcio-embed">
+<iframe src="https://publiciprestigi.substack.com/embed" title="Suscripción a Públic i Prestigi" width="480" height="150" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no" loading="lazy"></iframe>
+</div>
     </div>
   </div>
 
@@ -148,11 +145,11 @@
 
     function obreSubscripcio() {
       const modal = document.getElementById('subscripcio-modal');
-      const continuar = document.getElementById('subscripcio-continuar');
+      const tancar = modal.querySelector('.subscripcio-tancar');
       subscripcioFocusAnterior = document.activeElement;
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
-      setTimeout(() => continuar.focus(), 0);
+      setTimeout(() => tancar.focus(), 0);
     }
 
     function tancaSubscripcio() {
