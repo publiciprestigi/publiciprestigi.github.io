@@ -557,3 +557,17 @@
     background: url("../img/picto-pip.jpg") center / contain no-repeat;
   }
 }
+
+/* Formulari oficial de Substack dins del modal existent. */
+.subscripcio-embed {
+  width: 100%;
+  max-width: 390px;
+  margin: 22px auto 0;
+}
+.subscripcio-embed iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+}
