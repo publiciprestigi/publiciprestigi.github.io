@@ -1,7 +1,7 @@
 <!-- intro -->
 Una de les preguntes que es fa l'estudi és com ha evolucionat la distància entre el cinema reconegut als festivals i el gran públic. Per observar aquesta evolució, comparem, dècada a dècada, els espectadors de les pel·lícules seleccionades a competició oficial als quatre festivals de la Part II amb els dels grans èxits comercials recollits a la Part I.
 
-La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» (DC) recull les pel·lícules del Top 100 seleccionades també a competició oficial en algun dels quatre festivals, sense incloure els reconeixements de les acadèmies. Les barres permeten veure si la distància canvia perquè el cinema de festivals guanya o perd espectadors, perquè ho fan els grans èxits comercials o per totes dues coses. <sup>[10]</sup>
+La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» (DC) indica quantes d'aquestes pel·lícules figuren també al Top 100 històric. Les barres permeten veure si la distància canvia perquè el cinema de festivals guanya o perd espectadors, perquè ho fan els grans èxits comercials o per totes dues coses. <sup>[10]</sup>
 <!-- /intro -->
 
 <!-- llegenda-taula -->
