@@ -1,7 +1,7 @@
 <!-- intro -->
 Una de les preguntes que es fa l'estudi és com ha evolucionat la distància entre el cinema reconegut als festivals i el gran públic. Per observar aquesta evolució, comparem, dècada a dècada, els espectadors de les pel·lícules seleccionades a competició oficial als quatre festivals de la Part II amb els dels grans èxits comercials recollits a la Part I.
 
-La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» (DC) recull les pel·lícules que coincideixen en tots dos. Les barres permeten veure si la distància canvia perquè el cinema de festivals guanya o perd espectadors, perquè ho fan els grans èxits comercials o per totes dues coses. <sup>[10]</sup>
+La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com més s'acosta a 1, més semblants són els seus resultats comercials. Com més s'acosta a 0, més gran és la distància entre els dos circuits. La columna «doble corona» (DC) recull les pel·lícules del Top 100 seleccionades també a competició oficial en algun dels quatre festivals, sense incloure els reconeixements de les acadèmies. Les barres permeten veure si la distància canvia perquè el cinema de festivals guanya o perd espectadors, perquè ho fan els grans èxits comercials o per totes dues coses. <sup>[10]</sup>
 <!-- /intro -->
 
 <!-- llegenda-taula -->
@@ -14,7 +14,7 @@ La relació entre aquestes dues mitjanes ens dona la *ràtio de bretxa*. Com mé
 
 - Els 80s presenten la ràtio més alta de tota la sèrie (0,32), però la dada pot enganyar. No és tant que el cinema de festivals guanyi públic com que els grans èxits comercials també en perden. La mitjana del Top 100 cau fins als 1,52M d'espectadors. Als 90s, la distància torna a créixer lleugerament (0,22), amb una mitjana comercial d'1,74M. En totes dues dècades, la crisi del mercat contribueix a acostar els resultats dels dos circuits.
 
-- Els 2000s representen un breu parèntesi. Amb quatre «dobles corones» (la xifra més alta de tota la sèrie i les últimes que s'han produït fins ara) i una ràtio de 0,22, els dos circuits tornen a acostar-se lleugerament. La mitjana dels festivals puja fins als 673K, la segona més alta. És la darrera dècada en què la coincidència entre reconeixement als festivals i impacte massiu es produeix de manera recurrent.
+- Els 2000s representen un breu parèntesi. Amb quatre «dobles corones» (la xifra més alta de tota la sèrie i els últims casos de coincidència entre el Top 100 i els quatre festivals) i una ràtio de 0,22, els dos circuits tornen a acostar-se lleugerament. La mitjana dels festivals puja fins als 673K, la segona més alta. És la darrera dècada en què la coincidència entre reconeixement als festivals i impacte massiu es produeix de manera recurrent.
 
 - El trencament més clar arriba als 2010s. Amb un mercat d'entre aproximadament 78,7M i 104,9M d'entrades anuals, la mitjana dels grans èxits comercials es dispara fins als 3,21M, impulsada pels films-esdeveniment, mentre la dels festivals cau a 266K. És el punt de màxima separació entre els dos circuits (0,08), en un context de professionalització del cinema d'autor i consolidació del circuit internacional de festivals. <sup>[12]</sup> Un cinema cada vegada més reconegut i internacionalitzat, però també més allunyat del gran públic a les sales.
 
