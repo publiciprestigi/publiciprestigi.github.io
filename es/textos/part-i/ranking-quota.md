@@ -8,6 +8,6 @@
 
 - El Top 10 ya no incluye ninguna película de los 60s ni de los 70s. En aquellos años, los cientos de millones de entradas se repartían entre muchas más películas. *Mujeres al borde de un ataque de nervios* es la única representante de los 80s, con un salto del #22 por espectadores al #7 por cuota.
 
-- La saga *Padre no hay más que uno* protagoniza, en un mercado debilitado tras la pandemia, algunas de las subidas más espectaculares del ranking. La tercera entrega pasa del #50 por espectadores al #5 por cuota, la cuarta del #79 al #17 y la quinta del #98 al #16.
+- La saga *Padre no hay más que uno* protagoniza, en un mercado debilitado tras la pandemia, algunas de las subidas más espectaculares del ranking. La tercera entrega pasa del #50 por espectadores al #5 por cuota, la cuarta del #78 al #17 y la quinta del #96 al #16.
 
 <!-- /comentari -->
