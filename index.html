@@ -1162,7 +1162,12 @@
 
     fetch(pipPath('data/metadata.json'))
       .then(r => r.json())
-      .then(data => { document.getElementById('versio-label').textContent = data.versio_label; })
+      .then(data => {
+        const etiqueta = data.versio_label;
+        document.getElementById('versio-label').textContent = etiqueta;
+        const versioMenu = document.querySelector('.drawer-versio');
+        if (versioMenu) versioMenu.textContent = etiqueta;
+      })
       .catch(() => {});
 
     function toggleBuscador() {
