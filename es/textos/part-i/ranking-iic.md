@@ -13,7 +13,7 @@ Las posiciones de una misma película pueden variar considerablemente según la 
 <!-- comentari -->
 - **Un público masivo en un mercado inmenso.** *La ciudad no es para mí* (1966), con Paco Martínez Soria, llega al #4 por penetración, pero cae al #48 por cuota. Sus 4,3M de espectadores representaban una proporción considerable de la población, pero solo el 1,07% de un mercado de 403,1M de entradas. El IIC la sitúa en el #26, entre el alcance popular y el peso relativamente pequeño dentro de aquel mercado.
 
-- **Un éxito que las cifras absolutas disimulan.** *Los santos inocentes* (1984), con el premio de interpretación compartido en Cannes por Paco Rabal y Alfredo Landa, ocupa el #99 histórico, pero es la tercera más vista de los ochenta. Con 2M de espectadores en un mercado de unos 121,6M de entradas, sube al #36 por cuota y al #47 por IIC, recuperando parte de su protagonismo comercial.
+- **Un éxito que las cifras absolutas disimulan.** *Los santos inocentes* (1984), con el premio de interpretación compartido en Cannes por Paco Rabal y Alfredo Landa, ocupa el #97 histórico, pero es la tercera más vista de los ochenta. Con 2M de espectadores en un mercado de unos 121,6M de entradas, sube al #36 por cuota y al #47 por IIC, recuperando parte de su protagonismo comercial.
 
 - **Una cuota extraordinaria en un mercado en retroceso.** *Mujeres al borde de un ataque de nervios* (1988), que dio a Almodóvar la primera nominación a los Oscar, reunió 3,3M de espectadores en un mercado de 87,6M de entradas. Su cuota del 3,82% la sitúa en el #7, frente al #22 por espectadores. El IIC la lleva al #9, combinando una cuota elevada y una penetración considerable.
 
