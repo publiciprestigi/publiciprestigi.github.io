@@ -1,7 +1,7 @@
 <!-- intro -->
 Una de las preguntas que se plantea el estudio es cómo ha evolucionado la distancia entre el cine reconocido en los festivales y el gran público. Para observar esta evolución, comparamos, década a década, los espectadores de las películas seleccionadas en competición oficial en los cuatro festivales de la Parte II con los de los grandes éxitos comerciales recogidos en la Parte I.
 
-La relación entre estas dos medias nos da el *ratio de brecha*. Cuanto más se acerca a 1, más similares son sus resultados comerciales. Cuanto más se acerca a 0, mayor es la distancia entre ambos circuitos. La columna «doble corona» (DC) recoge las películas del Top 100 seleccionadas también en competición oficial en alguno de los cuatro festivales, sin incluir los reconocimientos de las academias. Las barras permiten ver si la distancia cambia porque el cine de festivales gana o pierde espectadores, porque lo hacen los grandes éxitos comerciales o por ambas cosas. <sup>[10]</sup>
+La relación entre estas dos medias nos da el *ratio de brecha*. Cuanto más se acerca a 1, más similares son sus resultados comerciales. Cuanto más se acerca a 0, mayor es la distancia entre ambos circuitos. La columna «doble corona» (DC) indica cuántas de estas películas figuran también en el Top 100 histórico. Las barras permiten ver si la distancia cambia porque el cine de festivales gana o pierde espectadores, porque lo hacen los grandes éxitos comerciales o por ambas cosas. <sup>[10]</sup>
 <!-- /intro -->
 
 <!-- llegenda-taula -->
