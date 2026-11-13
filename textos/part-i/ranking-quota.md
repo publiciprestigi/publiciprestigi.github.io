@@ -8,6 +8,6 @@ Quin pes representa el públic acumulat d'una pel·lícula si el comparem amb el
 
 - El Top 10 ja no inclou cap film dels 60s ni dels 70s. En aquells anys, els centenars de milions d'entrades es repartien entre moltes més pel·lícules. *Mujeres al borde de un ataque de nervios* és l'única representant dels 80s, amb un salt del #22 per espectadors al #7 per quota.
 
-- La saga *Padre no hay más que uno* protagonitza, en un mercat debilitat després de la pandèmia, algunes de les pujades més espectaculars del rànquing. La tercera entrega passa del #50 per espectadors al #5 per quota, la quarta del #79 al #17 i la cinquena del #98 al #16.
+- La saga *Padre no hay más que uno* protagonitza, en un mercat debilitat després de la pandèmia, algunes de les pujades més espectaculars del rànquing. La tercera entrega passa del #50 per espectadors al #5 per quota, la quarta del #78 al #17 i la cinquena del #96 al #16.
 
 <!-- /comentari -->
