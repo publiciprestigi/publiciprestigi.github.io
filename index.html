@@ -947,6 +947,29 @@
       const total = slidesOriginals.length;
       if (total < 2) return;
 
+      // Barreja aleatòria de totes les fotografies abans de crear els clons.
+      for (let i = total - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [slidesOriginals[i], slidesOriginals[j]] = [slidesOriginals[j], slidesOriginals[i]];
+      }
+
+      // Evita repetir la fotografia inicial en recarregar dins la mateixa pestanya.
+      // Comparar el nom del fitxer permet compartir el criteri entre CA i ES.
+      try {
+        const clau = 'pip-portada-ultima-foto';
+        const anterior = sessionStorage.getItem(clau);
+        const nomFoto = function(slide) {
+          return slide.querySelector('img').getAttribute('src').split('/').pop();
+        };
+        if (nomFoto(slidesOriginals[0]) === anterior) {
+          [slidesOriginals[0], slidesOriginals[1]] = [slidesOriginals[1], slidesOriginals[0]];
+        }
+        sessionStorage.setItem(clau, nomFoto(slidesOriginals[0]));
+      } catch (e) {
+        // Sense emmagatzematge, la barreja aleatòria continua funcionant.
+      }
+      slidesOriginals.forEach(function(slide) { pista.appendChild(slide); });
+
       // Clons als dos extrems per permetre arrossegar en qualsevol direcció.
       pista.insertBefore(slidesOriginals[total - 1].cloneNode(true), pista.firstChild);
       pista.appendChild(slidesOriginals[0].cloneNode(true));
