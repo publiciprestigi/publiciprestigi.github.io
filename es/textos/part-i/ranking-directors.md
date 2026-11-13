@@ -1,5 +1,5 @@
 <!-- intro -->
-El primer ranking ordena a los directores por espectadores acumulados, independientemente del número de películas. Los 10 primeros directores (de un total de 57) concentran el 45,4% del público con solo 36 películas. El segundo amplía el foco incorporando también las películas de contexto de cada director, títulos citados para contextualizar las décadas, pero que no superaron el umbral de entrada al Top 100.
+El primer ranking ordena a los directores por espectadores acumulados, independientemente del número de películas. Los 10 primeros directores (de un total de 55) concentran el 45,4% del público con solo 36 películas. El segundo amplía el foco incorporando también las películas de contexto de cada director, títulos citados para contextualizar las décadas, pero que no superaron el umbral de entrada al Top 100.
 <!-- /intro -->
 
 <!-- comentari-r1 -->
