@@ -1162,7 +1162,12 @@
 
     fetch(pipPath('data/metadata.json'))
       .then(r => r.json())
-      .then(data => { document.getElementById('versio-label').textContent = data.versions?.find(v => v.versio === data.versio_activa)?.label_es || 'Versión 1.2 (1965–2025)'; })
+      .then(data => {
+        const etiqueta = data.versio_label_es || data.versions?.find(v => v.versio === data.versio_activa)?.label_es || 'Versión 1.2 (1965–2025)';
+        document.getElementById('versio-label').textContent = etiqueta;
+        const versioMenu = document.querySelector('.drawer-versio');
+        if (versioMenu) versioMenu.textContent = etiqueta;
+      })
       .catch(() => {});
 
     function toggleBuscador() {
