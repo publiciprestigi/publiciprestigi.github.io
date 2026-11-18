@@ -11,7 +11,7 @@ El gràfic següent mostra la seva distribució entre els quatre festivals i les
 <!-- /nota-grafic -->
 
 <!-- criteri-grafic -->
-Per evitar duplicacions, cada film s’adscriu a una única via d’entrada. Els films presents en una de les quatre competicions s’adscriuen al festival corresponent; entre els casos incorporats només a través de les acadèmies, l’Oscar preval sobre els EFA.
+Per evitar duplicacions, cada pel·lícula apareix una sola vegada. Si té reconeixements tant als festivals com a les acadèmies, es prioritzen els festivals; si només figura a les acadèmies, els Oscar prevalen sobre els EFA.
 <!-- /criteri-grafic -->
 
 <!-- bloc-corona -->
