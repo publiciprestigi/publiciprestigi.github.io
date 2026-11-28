@@ -1,0 +1,72 @@
+[
+  {
+    "decada_id": "60s",
+    "decada_label": "Anys 1965–1969",
+    "seleccions": 15,
+    "premiades": 2,
+    "doble_corona": 1,
+    "mitjana_espectadors_festivals": 534669,
+    "mitjana_espectadors_top100": 2685115,
+    "ratio": 0.2
+  },
+  {
+    "decada_id": "70s",
+    "decada_label": "Anys 70",
+    "seleccions": 38,
+    "premiades": 10,
+    "doble_corona": 3,
+    "mitjana_espectadors_festivals": 726935,
+    "mitjana_espectadors_top100": 2321446,
+    "ratio": 0.31
+  },
+  {
+    "decada_id": "80s",
+    "decada_label": "Anys 80",
+    "seleccions": 58,
+    "premiades": 8,
+    "doble_corona": 2,
+    "mitjana_espectadors_festivals": 488360,
+    "mitjana_espectadors_top100": 1440471,
+    "ratio": 0.34
+  },
+  {
+    "decada_id": "90s",
+    "decada_label": "Anys 90",
+    "seleccions": 44,
+    "premiades": 11,
+    "doble_corona": 1,
+    "mitjana_espectadors_festivals": 429633,
+    "mitjana_espectadors_top100": 1486827,
+    "ratio": 0.29
+  },
+  {
+    "decada_id": "2000s",
+    "decada_label": "Anys 2000–2009",
+    "seleccions": 36,
+    "premiades": 8,
+    "doble_corona": 3,
+    "mitjana_espectadors_festivals": 488728,
+    "mitjana_espectadors_top100": 2451512,
+    "ratio": 0.2
+  },
+  {
+    "decada_id": "2010s",
+    "decada_label": "Anys 2010–2019",
+    "seleccions": 44,
+    "premiades": 16,
+    "doble_corona": 0,
+    "mitjana_espectadors_festivals": 265243,
+    "mitjana_espectadors_top100": 2865048,
+    "ratio": 0.09
+  },
+  {
+    "decada_id": "2020s",
+    "decada_label": "Anys 2020–2025",
+    "seleccions": 28,
+    "premiades": 11,
+    "doble_corona": 0,
+    "mitjana_espectadors_festivals": 198074,
+    "mitjana_espectadors_top100": 1260585,
+    "ratio": 0.16
+  }
+]

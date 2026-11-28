@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es" data-base="../">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bibliografía — Públic i Prestigi. Fuentes y referencias documentales del estudio.">
+  <link rel="canonical" href="https://publiciprestigi.com/es/bibliografia.html">
+  <link rel="alternate" hreflang="ca" href="https://publiciprestigi.com/bibliografia.html">
+  <link rel="alternate" hreflang="es" href="https://publiciprestigi.com/es/bibliografia.html">
+  <link rel="alternate" hreflang="x-default" href="https://publiciprestigi.com/bibliografia.html">
+  <title>Bibliografía · Públic i Prestigi</title>
+  <link rel="stylesheet" href="../css/estil.css">
+  <link rel="stylesheet" href="../css/capcalera-subscripcio.css">
+  <style>
+    .notes-portada {
+      max-width: var(--amplada-text);
+      margin: 0 auto;
+    }
+ 
+    .notes-subtitol {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .notes-grup {
+      border-top: 1px solid var(--color-linia);
+      padding-top: 28px;
+      margin-bottom: 0;
+      padding-bottom: 40px;
+    }
+    .notes-grup:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+    .notes-grup-primer {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .notes-grup-titol {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 20px;
+    }
+
+    .nota {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 0 12px;
+      margin-bottom: 14px;
+      align-items: start;
+    }
+
+    .nota-num {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #aaa;
+      padding-top: 2px;
+      text-align: right;
+    }
+
+    .nota-text {
+      font-size: 0.85rem;
+      color: #555;
+      line-height: 1.65;
+    }
+    /* Tots els paràgrafs d'una nota ocupen la columna de text. */
+    .nota > .nota-text {
+      grid-column: 2;
+      min-width: 0;
+    }
+    .nota > .nota-text + .nota-text {
+      margin-top: 6px;
+    }
+
+    .nota-text a {
+      color: var(--color-text);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: rgba(0,0,0,0.3);
+    }
+    .nota-text a:hover { opacity: 0.65; }
+    .nota-text strong { font-weight: 600; color: var(--color-text); }
+
+    .notes-seccio {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #bbb;
+      margin: 20px 0 10px 40px;
+    }
+    .notes-seccio:first-of-type { margin-top: 0; }
+    .notes-seccio a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: currentColor;
+      text-underline-offset: 2px;
+    }
+    .notes-seccio a:visited,
+    .notes-seccio a:hover,
+    .notes-seccio a:focus-visible {
+      color: inherit;
+    }
+
+  </style>
+  <style>
+    /* La presentació de les referències reutilitza els estils de les notes. */
+    .biblio-nota {
+      font-size: 0.75rem;
+      color: #aaa !important;
+      white-space: nowrap;
+      margin-left: 5px;
+      text-decoration: none !important;
+    }
+    .biblio-nota:hover { text-decoration: underline !important; }
+  </style>
+
+  <script>
+    window.pipPath = function (path) {
+      var base = document.documentElement.getAttribute('data-base') || '';
+      return base + path;
+    };
+  </script>
+</head>
+<body>
+
+  <!-- ── Capçalera CA ── -->
+  <header class="capcalera capcalera-v2">
+    <div class="capcalera-interior">
+      <div class="capcalera-esquerra">
+        <button class="btn-hamburguesa" onclick="toggleDrawer()" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="versions.html" class="capcalera-versio" id="versio-label">Versión 1.2 (1965–2025)</a>
+      </div>
+
+      <a href="/es/" class="capcalera-logo">Públic i Prestigi</a>
+
+      <div class="capcalera-controls">
+        <span class="capcalera-lupa" onclick="toggleBuscador()" title="Buscar" role="button" tabindex="0" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </span>
+
+        <button type="button" class="capcalera-subscripcio" onclick="obreSubscripcio()">Suscribirse</button>
+
+        <div class="capcalera-idioma">
+          <a href="../bibliografia.html" lang="ca" hreflang="ca">CA</a>
+          <a href="#" class="actiu" lang="es" aria-current="page">ES</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navegacio">
+    <div class="navegacio-interior">
+      <a href="/es/" class="nav-link">Inicio</a>
+      <a href="part-i.html" class="nav-link">I — Público</a>
+      <a href="part-ii.html" class="nav-link">II — Prestigio</a>
+      <a href="part-iii.html" class="nav-link">III — Análisis</a>
+      <a href="sobre.html" class="nav-link">Sobre el proyecto</a>
+    </div>
+  </nav>
+
+  <main class="contingut">
+    <div class="notes-portada">
+      <div class="part-capcalera">
+        <h1>Bibliografía</h1>
+        <p class="part-subtitol">Publicaciones y fuentes documentales consultadas para la elaboración del estudio.</p>
+      </div>
+      <section class="notes-grup notes-grup-primer" aria-labelledby="biblio-acad">
+        <p class="notes-grup-titol" id="biblio-acad">Libros y estudios académicos</p>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Campos Rabadán, Minerva</span> (2025). «<a href="https://ojs.ehu.eus/index.php/Zer/article/view/27248" target="_blank" rel="noopener">Para ser un «Clase A»: las negociaciones del Festival de Cine de San Sebastián y la FIAPF (1953-1985)</a>». ZER. Revista de Estudios de Comunicación, 30(58), 100–114. <a href="notes.html#n6" class="biblio-nota" title="Véase la nota 6">[6]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Cerdán, Josetxo</span> (2004). «<a href="https://dialnet.unirioja.es/servlet/articulo?codigo=3928204" target="_blank" rel="noopener">España fin de milenio. Sobre El día de la bestia (Álex de la Iglesia, 1995)</a>». En Rafael Ruzafa Ortega (ed.), <em>La historia a través del cine: transición y consolidación democrática en España</em>. Universidad del País Vasco, pp. 235–256. <a class="biblio-nota" href="part-iii.html#autor-industrial">Modelo de autor industrial</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">De Valck, Marijke</span> (2007). <em><a href="https://www.jstor.org/stable/j.ctt46mv45" target="_blank" rel="noopener">Film Festivals: From European Geopolitics to Global Cinephilia</a></em>. Amsterdam University Press. <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Elsaesser, Thomas</span> (2005). <em><a href="https://www.jstor.org/stable/j.ctt46n11c" target="_blank" rel="noopener">European Cinema: Face to Face with Hollywood</a></em>. Amsterdam University Press. <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">English, James F.</span> (2014). «<a href="https://doi.org/10.1016/B978-0-444-53776-8.00006-4" target="_blank" rel="noopener">The Economics of Cultural Awards</a>». Handbook of the Economics of Art and Culture, vol. 2, 119–143. <a href="notes.html#n8" class="biblio-nota" title="Véase la nota 8">[8]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Font, Domènec</span> (1976). <em><a href="https://dialnet.unirioja.es/servlet/libro?codigo=226528" target="_blank" rel="noopener">Del azul al verde: el cine español durante el franquismo</a></em>. Avance. <a class="biblio-nota" href="part-i.html#intro">Fuentes y herramientas</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Gubern, Román; José Enrique Monterde; Julio Pérez Perucha; Esteve Riambau i Casimiro Torreiro</span> (1995). <em><a href="https://books.google.es/books?hl=es&amp;id=r2tZAAAAMAAJ" target="_blank" rel="noopener">Historia del cine español</a></em>. Cátedra. <a class="biblio-nota" href="part-i.html#intro">Fuentes y herramientas</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">José i Solsona, Carles</span> (2020). «<a href="https://www.upf.edu/web/opa/estudis/-/asset_publisher/IrXIFT9fCBC2/content/id/234533666/maximized" target="_blank" rel="noopener">Les sales de cinema als territoris de parla catalana. Catalunya. Segona part: Territori, població, controls de taquilla</a>». Observatori de la Producció Audiovisual, Universitat Pompeu Fabra. <a href="notes.html#n1" class="biblio-nota" title="Véase la nota 1">[1]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Maluquer de Motes, Jordi</span> (2008). «<a href="https://recyt.fecyt.es/index.php/IHE/article/view/70117" target="_blank" rel="noopener">El crecimiento moderno de la población de España de 1850 a 2001: una serie homogénea anual</a>». Investigaciones de Historia Económica, 4(10), 129–162. <a href="notes.html#n2" class="biblio-nota" title="Véase la nota 2">[2]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Mejón, Ana i Rubén Romero-Santos</span> (2025). «<a href="https://doi.org/10.5209/aris.102404" target="_blank" rel="noopener">La recepción del canon fílmico español en televisión. El caso de Historia de nuestro cine (Televisión Española, 2015-2018)</a>». Arte, Individuo y Sociedad, 37(4), 793–809. <a href="notes.html#n25" class="biblio-nota" title="Véase la nota 25">[25]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Nelson, Randy A.; Michael R. Donihue; Donald M. Waldman i Cal Wheaton</span> (2001). «<a href="https://doi.org/10.1111/j.1465-7295.2001.tb00046.x" target="_blank" rel="noopener">What's an Oscar Worth?</a>». Economic Inquiry, 39(1), 1–16. <a href="notes.html#n8" class="biblio-nota" title="Véase la nota 8">[8]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Riambau, Esteve</span> (1998). «<a href="https://www.cervantesvirtual.com/obra/algunas-proposiciones-metodologicas-para-el-analisis-historico-del-cine-espanol-a-proposito-de-la-produccion-catalana-de-los-anos-sesenta--0/" target="_blank" rel="noopener">Algunas proposiciones metodológicas para el análisis histórico del cine español (a propósito de la producción catalana de los años sesenta)</a>». Actas del VI Congreso de la Asociación Española de Historiadores del Cine, 275–291. <a href="notes.html#n30" class="biblio-nota" title="Véase la nota 30">[30]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Trenzado Romero, Manuel</span> (1999). <em><a href="https://libreria.cis.es/libros/cultura-de-masas-y-cambio-politico/9788474762860/" target="_blank" rel="noopener">Cultura de masas y cambio político: el cine español de la transición</a></em>. Centro de Investigaciones Sociológicas (CIS). <a href="notes.html#n11" class="biblio-nota" title="Véase la nota 11">[11]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Vallejo, Aida</span> (2020). «<a href="https://doi.org/10.1080/17411548.2020.1765631" target="_blank" rel="noopener">Rethinking the Canon: The Role of Film Festivals in Shaping Film History</a>». Studies in European Cinema, 17(2), 155–169. <a href="notes.html#n8" class="biblio-nota" title="Véase la nota 8">[8]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Yébenes Cortés, María Pilar i Francisco José Pradana Pérez</span> (2025). «<a href="https://visualreview.net/revVISUAL/article/view/5961" target="_blank" rel="noopener">El espejismo de la sobreproducción en el cine español: análisis crítico de las políticas audiovisuales y su impacto</a>». VISUAL Review, 17(6). <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Zahedi, Farshad</span> (2015). <em><a href="https://e-archivo.uc3m.es/rest/api/core/bitstreams/e1dd273a-2eb0-427c-8c07-1e464762c11a/content" target="_blank" rel="noopener">El pasado es un prólogo: conversaciones con Emilio Martínez-Lázaro</a></em>. Cuadernos TECMERIN, 8. Universidad Carlos III de Madrid. <a href="notes.html#n17" class="biblio-nota" title="Véase la nota 17">[17]</a></p></div>
+      </section>
+      <section class="notes-grup " aria-labelledby="biblio-period">
+        <p class="notes-grup-titol" id="biblio-period">Prensa y publicaciones</p>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Brunet Fuertes, Pau</span> (s. d.). <em><a href="https://paubrunetfuertes.substack.com/" target="_blank" rel="noopener">BoxOffice Alchemy</a></em>. Publicación digital sobre taquilla, distribución e industria cinematográfica.</p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Cahiers du cinéma</span> (s. d.). «<a href="https://artsandculture.google.com/story/la-politique-des-auteurs-et-la-nouvelle-vague-cahiers-du-cinema/_gUBzDyanOjCGQ?hl=es" target="_blank" rel="noopener">La politique des auteurs et la Nouvelle Vague</a>». Google Arts & Culture. Exposición digital sobre la política de los autores y la Nouvelle Vague. <a class="biblio-nota" href="part-iii.html#autor-industrial">Modelo de autor industrial</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Caimán Cuadernos de Cine</span> (2016). «<a href="https://www.caimanediciones.es/encuesta-caiman-mejor-cine-espanol/" target="_blank" rel="noopener">La encuesta Caimán: mejor cine español</a>». Caimán Cuadernos de Cine, núm. 100 (49), maig. <a href="notes.html#n25" class="biblio-nota" title="Véase la nota 25">[25]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">El País</span> (1995). «<a href="https://elpais.com/diario/1995/07/02/cultura/804636011_850215.html" target="_blank" rel="noopener">Las 42 películas del cine español</a>». El País, 2 de juliol. <a href="notes.html#n25" class="biblio-nota" title="Véase la nota 25">[25]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">El País</span> (2024). «<a href="https://elpais.com/cultura/2024-01-26/tres-mujeres-acusan-al-director-de-cine-carlos-vermut-de-violencia-sexual.html" target="_blank" rel="noopener">Tres mujeres acusan al director de cine Carlos Vermut de violencia sexual</a>». El País, 26 de enero. <a href="notes.html#n26" class="biblio-nota" title="Véase la nota 26">[26]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">El País · Babelia</span> (2025). «<a href="https://elpais.com/babelia/2025-05-10/las-50-mejores-peliculas-espanolas-del-ultimo-medio-siglo.html" target="_blank" rel="noopener">Las 50 mejores películas españolas del último medio siglo</a>». Babelia, 10 de maig. <a href="notes.html#n25" class="biblio-nota" title="Véase la nota 25">[25]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Emisiones históricas de Cine en TVE</span> (s. d.). <em><a href="https://emisionescinetve.blogspot.com" target="_blank" rel="noopener">Emisiones históricas de Cine en TVE</a></em>. Arxiu en línia de programació televisiva. <a href="notes.html#n15" class="biblio-nota" title="Véase la nota 15">[15]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">En torno a Luis Buñuel</span> (2014). «<a href="https://lbunuel.blogspot.com/2014/12/la-censura-y-el-cine-de-luis-bunuel.html" target="_blank" rel="noopener">La censura y el cine de Luis Buñuel</a>». En torno a Luis Buñuel, blog. <a href="notes.html#n29" class="biblio-nota" title="Véase la nota 29">[29]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Follows, Stephen</span> (s. d.). <em><a href="https://stephenfollows.com/" target="_blank" rel="noopener">StephenFollows.com</a></em>. Publicación digital de investigación y análisis cuantitativo de la industria cinematográfica.</p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Koch, Tommaso y Gregorio Belinchón</span> (2026). «<a href="https://elpais.com/cultura/cine/2026-10-23/dos-decadas-en-las-que-el-cine-vio-como-cambiaba-todo-salvo-la-ley.html" target="_blank" rel="noopener">Dos décadas en las que todo cambió en el cine... salvo la ley</a>». <em>El País</em>, 23 de octubre. Gráficos de Yolanda Clemente. <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Parra, Miguel</span> (2016). «<a href="https://www.eldiario.es/cultura/cine/caza-aniversario-saura-censura_1_3757325.html" target="_blank" rel="noopener">'La Caza', la película de Carlos Saura que esquivó la censura y emocionó en Berlín</a>». <em>elDiario.es</em>, 8 de noviembre. <a class="biblio-nota" href="part-iii.html#caza-alcarras">La caza vs. Alcarràs</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Ripollés, Carlos</span> (2022). «<a href="https://www.rtve.es/play/noticias/20220606/calle-mayor-juan-antonio-bardem-curiosidades/2357041.shtml" target="_blank" rel="noopener">10 curiosidades de Calle Mayor de Juan Antonio Bardem</a>». RTVE, 6 de juny. <a href="notes.html#n28" class="biblio-nota" title="Véase la nota 28">[28]</a></p></div>
+      </section>
+      <section class="notes-grup " aria-labelledby="biblio-doc">
+        <p class="notes-grup-titol" id="biblio-doc">Informes, estadísticas y archivos</p>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Académie des César</span> (s. d.). <em><a href="https://www.academie-cinema.org/palmares/" target="_blank" rel="noopener">Palmarès</a></em>. Archivo oficial de nominaciones y premios César. <a class="biblio-nota" href="part-iii.html#bunuel-mercat">Buñuel y el segundo mercado</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Academy of Motion Picture Arts and Sciences</span> (s. d.). <em><a href="https://awardsdatabase.oscars.org/" target="_blank" rel="noopener">Academy Awards Database</a></em>. Base de datos oficial de nominaciones y premios de los Oscar. <a class="biblio-nota" href="part-ii.html#oscar">Premios Oscar</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">AIMC</span> (2005). <em><a href="https://www.aimc.es/a1mc-c0nt3nt/uploads/2010/11/marco05.pdf" target="_blank" rel="noopener">Marco General de los Medios en España 2005</a></em>. Asociación para la Investigación de Medios de Comunicación. <a href="notes.html#n14" class="biblio-nota" title="Véase la nota 14">[14]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">AIMC</span> (2026). <em><a href="https://www.aimc.es/a1mc-c0nt3nt/uploads/2026/02/Marco_General_Medios_2026.pdf" target="_blank" rel="noopener">Marco General de los Medios en España 2026</a></em>. Asociación para la Investigación de Medios de Comunicación. <a href="notes.html#n32" class="biblio-nota" title="Véase la nota 32">[32]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">AlloCiné</span> (s. d.). <em><a href="https://www.allocine.fr/" target="_blank" rel="noopener">Box-office France</a></em>. Base de datos de taquilla cinematográfica francesa. <a class="biblio-nota" href="part-iii.html#bunuel-mercat">Buñuel y el segundo mercado</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Banco Mundial</span> (s. d.). <em><a href="https://data.worldbank.org/indicator/SP.POP.TOTL?locations=FR" target="_blank" rel="noopener">Población total (SP.POP.TOTL), Francia</a></em>. World Development Indicators. <a href="notes.html#n31" class="biblio-nota" title="Véase la nota 31">[31]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Berlinale</span> (s. d.). <em><a href="https://www.berlinale.de/de/archiv/archivuebersicht/willkommen.html" target="_blank" rel="noopener">Archiv</a></em>. Archivo histórico del Festival Internacional de Cine de Berlín. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">CBO Box Office</span> (s. d.). <em><a href="https://cbo-boxoffice.com/" target="_blank" rel="noopener">CBO Box Office</a></em>. Base de datos profesional de taquilla cinematográfica francesa. <a href="notes.html#n31" class="biblio-nota" title="Véase la nota 31">[31]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">CIMA</span> (2023). <em><a href="https://cimamujerescineastas.es/wp-content/uploads/2024/06/INFORME-CIMA-2023.pdf" target="_blank" rel="noopener">Informe anual CIMA 2023</a></em>. Asociación de Mujeres Cineastas y de Medios Audiovisuales. <a href="notes.html#n19" class="biblio-nota" title="Véase la nota 19">[19]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">CNC</span> (2026). <em><a href="https://www.cnc.fr/professionnels/etudes-et-rapports/bilans/bilan-2025-du-cnc_2589800" target="_blank" rel="noopener">Bilan 2025 du CNC</a></em>. Centre national du cinéma et de l'image animée. <a href="notes.html#n31" class="biblio-nota" title="Véase la nota 31">[31]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">CNC</span> (s. d.). <em><a href="https://www.cnc.fr/professionnels/statistiques-par-secteur-open-data_771861" target="_blank" rel="noopener">Statistiques par secteur: open data</a></em>. Centre national du cinéma et de l'image animée. <a href="notes.html#n31" class="biblio-nota" title="Véase la nota 31">[31]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Dirección General de Cultura Popular y Espectáculos</span> (1968). <em><a href="https://www.cultura.gob.es/dam/jcr:ac44385f-35d7-4a4a-9800-7eb0bd4518f1/1968.pdf" target="_blank" rel="noopener">Boletín informativo del control de taquilla. Películas. Recaudaciones. Espectadores (1968)</a></em>. Ministerio de Información y Turismo. <a href="notes.html#n1" class="biblio-nota" title="Véase la nota 1">[1]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">European Audiovisual Observatory</span> (s. d.). <em><a href="https://lumiere.obs.coe.int/" target="_blank" rel="noopener">LUMIERE</a></em>. Base de datos europea de espectadores en salas de cine. <a class="biblio-nota" href="part-iii.html#bunuel-mercat">Buñuel y el segundo mercado</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">European Film Academy</span> (s. d.). <em><a href="https://www.europeanfilmawards.eu/the-awards/" target="_blank" rel="noopener">European Film Awards</a></em>. Archivo oficial de nominaciones y premios de los European Film Awards y <a href="https://www.europeanfilmacademy.org/about/story/" target="_blank" rel="noopener">historia institucional de la Academia</a>. <a class="biblio-nota" href="part-ii.html#efa">Premios del Cine Europeo (EFA)</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">FilmAffinity</span> (s. d.). <em><a href="https://www.filmaffinity.com/" target="_blank" rel="noopener">FilmAffinity</a></em>. Base de datos cinematográfica de consulta y contraste de filmografías y fichas de películas.</p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Festival de Cannes</span> (s. d.). <em><a href="https://www.festival-cannes.com/retrospective/" target="_blank" rel="noopener">Rétrospective</a></em>. Archive historique oficial. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Festival de San Sebastián</span> (s. d.). <em><a href="https://www.sansebastianfestival.com/archivo/2/es" target="_blank" rel="noopener">Archivo histórico</a></em>. Archivo oficial del festival. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (2023). <em><a href="https://www.cultura.gob.es/dam/jcr:ff219edb-2db8-4411-8f67-6d3e636f6869/7-5-largometrajes-esp-ext-historico.pdf" target="_blank" rel="noopener">Anuario de cine 2023: apartado 7.5, largometrajes españoles con mayor número de espectadores</a></em>. Ministerio de Cultura. <a class="biblio-nota" href="part-i.html#intro">Fuentes y herramientas</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (2023). <em><a href="https://www.cultura.gob.es/gl/dam/jcr:bc462567-2568-46fe-8c6f-4d3232985a98/boletin-informativo-2023.pdf" target="_blank" rel="noopener">Boletín informativo 2023</a></em>. Ministerio de Cultura. <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (2025). <em><a href="https://www.cultura.gob.es/dam/jcr:4060b6e9-4fa9-4f18-923f-f15066dcc03c/nota-resumen-cine.pdf" target="_blank" rel="noopener">Nota resumen de cine: datos de 2025</a></em>. Ministerio de Cultura. <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (s. d.). <em><a href="https://sede.mcu.gob.es/CatalogoICAA" target="_blank" rel="noopener">Catálogo de películas calificadas</a></em>. Ministerio de Cultura. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (s. d.). <em><a href="https://estadisticas.cultura.gob.es/CulturaJaxiPx/Tabla.htm?L=0&amp;file=T2004001.px&amp;path=%2Ft20%2Fp20%2Fa2005%2Fl0%2F" target="_blank" rel="noopener">Estadística de cinematografía</a></em>. CulturaBase, Ministerio de Cultura. <a href="notes.html#n32" class="biblio-nota" title="Véase la nota 32">[32]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (s. d.). <em><a href="https://www.cultura.gob.es/cultura/areas/cine/mc/cdc/evolucion/npeli.html" target="_blank" rel="noopener">Evolución de la producción cinematográfica española</a></em>. Ministerio de Cultura. <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (s. d.). <em><a href="https://www.cultura.gob.es/dam/jcr:12627c76-6015-4e82-b84e-a14bf939bbaa/participacion-oscar-2026.pdf" target="_blank" rel="noopener">Participación española en los premios Oscar</a></em>. Ministerio de Cultura. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (s. d.). <em><a href="https://www.cultura.gob.es/dam/jcr:55d4e1e4-46a2-41f8-ae1b-eb48bb5d561d/premios-cine-europeo-2025.pdf" target="_blank" rel="noopener">Participación española en los premios del cine europeo</a></em>. Ministerio de Cultura. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">ICAA</span> (s. d.). <em><a href="https://www.cultura.gob.es/cultura/areas/cine/mc/anuario-cine/portada" target="_blank" rel="noopener">Anuarios de cine</a></em>. Serie histórica de anuarios de cine del Ministerio de Cultura. <a class="biblio-nota" href="part-i.html#intro">Fuentes y herramientas</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">INE</span> (s. d.). <em><a href="https://www.ine.es/consul/serie.do?L=0&amp;c=2&amp;d=true&amp;nult=100&amp;s=CP335" target="_blank" rel="noopener">Serie CP335: población residente en España</a></em>. Instituto Nacional de Estadística. <a href="notes.html#n2" class="biblio-nota" title="Véase la nota 2">[2]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">INE</span> (s. d.). <em><a href="https://www.ine.es/inebaseweb/pdfDispacher.do?td=182530" target="_blank" rel="noopener">Serie histórica de largometrajes producidos (1965–1969)</a></em>. Instituto Nacional de Estadística. <a href="notes.html#n12" class="biblio-nota" title="Véase la nota 12">[12]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">JP Box-Office</span> (s. d.). <em><a href="https://www.jpbox-office.com/v9_charts_total.php?view=2" target="_blank" rel="noopener">Classement des films: entrées en France</a></em>. Base de datos estadística cinematográfica. <a href="notes.html#n31" class="biblio-nota" title="Véase la nota 31">[31]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">La Biennale di Venezia</span> (s. d.). <em><a href="https://www.labiennale.org/it/storia-della-mostra-del-cinema" target="_blank" rel="noopener">Storia della Mostra Internazionale d'Arte Cinematografica</a></em>. Archivo histórico. <a class="biblio-nota" href="part-ii.html#intro">Datos y criterio</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">MEDIA Salles</span> (1995). <em><a href="https://www.mediasalles.it/ybkcent/ybk95_e.htm" target="_blank" rel="noopener">100 years of cinema in Spain – a historical profile</a></em>. MEDIA Salles. Serie histórica de asistencia; fuentes: Gyory y Glas (1992) y <em>European Cinema Yearbook 1994</em>. <a href="notes.html#n2" class="biblio-nota" title="Véase la nota 2">[2]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Ministerio de Cultura</span> (s. d.). <em><a href="https://www.cultura.gob.es/servicios-a-la-ciudadania/estadisticas/cultura/mc/culturabase/cine-contenidos-audiovisuales/resultados-cine-contenidos-audiovisuales.html" target="_blank" rel="noopener">CulturaBase: cine y contenidos audiovisuales</a></em>. Estadística oficial del mercado cinematográfico. <a href="notes.html#n2" class="biblio-nota" title="Véase la nota 2">[2]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Netflix</span> (s. d.). <em><a href="https://about.netflix.com/en/news/what-we-watched-a-netflix-engagement-report" target="_blank" rel="noopener">What We Watched: A Netflix Engagement Report</a></em>. Informe corporativo sobre visualizaciones. <a href="notes.html#n24" class="biblio-nota" title="Véase la nota 24">[24]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Netflix Tudum</span> (s. d.). <em><a href="https://www.netflix.com/tudum/top10/most-popular/films-non-english" target="_blank" rel="noopener">Most Popular Non-English Films</a></em>. Clasificación oficial de visualizaciones en Netflix. <a class="biblio-nota" href="part-iii.html#autor-industrial">Modelo de autor industrial</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">SAG-AFTRA</span> (2023). <em><a href="https://www.sagaftra.org/sites/default/files/sa_documents/TV-Theatrical_23_Summary_Agreement_Final.pdf" target="_blank" rel="noopener">2023 TV/Theatrical Contracts: Summary of Agreement</a></em>. Documento sobre contratos y criterios de consumo en streaming. <a href="notes.html#n24" class="biblio-nota" title="Véase la nota 24">[24]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Wikipedia</span> (s. d.). <em><a href="https://www.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a></em>. Enciclopedia colaborativa utilizada como fuente complementaria de consulta y contraste.</p></div>
+      </section>
+      <section class="notes-grup " aria-labelledby="biblio-law">
+        <p class="notes-grup-titol" id="biblio-law">Normativa citada</p>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1964). «<a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-1964-23704" target="_blank" rel="noopener">Orden de 22 de diciembre de 1964 por la que se establece el sistema de control de los rendimientos de las películas que se exhiban en España</a>». Boletín Oficial del Estado. <a href="notes.html#n1" class="biblio-nota" title="Véase la nota 1">[1]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1967). «<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1967-1505" target="_blank" rel="noopener">Orden de 12 de enero de 1967 sobre programación de salas cinematográficas especiales</a>». Boletín Oficial del Estado. <a href="notes.html#n29" class="biblio-nota" title="Véase la nota 29">[29]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1976). «<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1976-4212" target="_blank" rel="noopener">Orden de 14 de febrero de 1976 por la que se regula el régimen de funcionamiento de las Salas Especiales de exhibición cinematográfica</a>». Boletín Oficial del Estado. <a href="notes.html#n29" class="biblio-nota" title="Véase la nota 29">[29]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1983). «<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1984-688" target="_blank" rel="noopener">Real Decreto 3304/1983, de 28 de diciembre, sobre protección a la cinematografía española</a>». Boletín Oficial del Estado. <a href="notes.html#n5" class="biblio-nota" title="Véase la nota 5">[5]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1989). «<a href="https://www.boe.es/eli/es/rd/1989/08/28/1282" target="_blank" rel="noopener">Real Decreto 1282/1989, de 28 de agosto, de Ayudas a la Cinematografía</a>». Boletín Oficial del Estado. <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1993). «<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-1993-28232" target="_blank" rel="noopener">Orden de 8 de noviembre de 1993 por la que se crea la Comisión para la conmemoración del centenario de la cinematografía</a>». Boletín Oficial del Estado. <a href="notes.html#n25" class="biblio-nota" title="Véase la nota 25">[25]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (1999). «<a href="https://www.boe.es/buscar/act.php?id=BOE-A-1999-12694" target="_blank" rel="noopener">Ley 22/1999, de 7 de junio, de Modificación de la Ley 25/1994, de 12 de julio</a>». Boletín Oficial del Estado (obligación del 5 % de financiación audiovisual). <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (2001). «<a href="https://www.boe.es/buscar/doc.php?id=BOE-A-2001-13268" target="_blank" rel="noopener">Ley 15/2001, de 9 de julio, de fomento y promoción de la cinematografía y el sector audiovisual</a>». Boletín Oficial del Estado. <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (2007). «<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2007-22439" target="_blank" rel="noopener">Ley 55/2007, de 28 de diciembre, del Cine</a>». Boletín Oficial del Estado. <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (2012). «<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2012-9364" target="_blank" rel="noopener">Real Decreto-ley 20/2012, de 13 de julio, de medidas para garantizar la estabilidad presupuestaria y de fomento de la competitividad</a>». Boletín Oficial del Estado. <a href="notes.html#n18" class="biblio-nota" title="Véase la nota 18">[18]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (2015). «<a href="https://www.boe.es/eli/es/rdl/2015/05/14/6" target="_blank" rel="noopener">Real Decreto-ley 6/2015, de 14 de mayo, por el que se modifica la Ley 55/2007, de 28 de diciembre, del Cine</a>». Boletín Oficial del Estado (reforma de las ayudas a la producción). <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Unión Europea</span> (2018). «<a href="https://eur-lex.europa.eu/eli/dir/2018/1808/oj" target="_blank" rel="noopener">Directiva (UE) 2018/1808 del Parlamento Europeo y del Consejo</a>». Diario Oficial de la Unión Europea. <a href="notes.html#n24" class="biblio-nota" title="Véase la nota 24">[24]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (2020). «<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2020-6921" target="_blank" rel="noopener">Orden CUD/582/2020, de 26 de junio, por la que se establecen las bases reguladoras de las ayudas estatales para la producción de largometrajes y de cortometrajes y regula la estructura del Registro Administrativo de Empresas Cinematográficas y Audiovisuales</a>». Boletín Oficial del Estado. <a href="notes.html#n19" class="biblio-nota" title="Véase la nota 19">[19]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">BOE</span> (2022). «<a href="https://www.boe.es/buscar/act.php?id=BOE-A-2022-11311" target="_blank" rel="noopener">Ley 13/2022, de 7 de julio, General de Comunicación Audiovisual</a>». Boletín Oficial del Estado. <a href="notes.html#n20" class="biblio-nota" title="Véase la nota 20">[20]</a></p></div>
+        <div class="nota"><p class="nota-text"><span class="biblio-author">Congreso de los Diputados</span> (2024). «<a href="https://www.congreso.es/es/proyectos-de-ley?_iniciativas_id=121%2F000026&amp;_iniciativas_legislatura=XV&amp;_iniciativas_mode=mostrarDetalle&amp;p_p_id=iniciativas&amp;p_p_lifecycle=0&amp;p_p_mode=view&amp;p_p_state=normal" target="_blank" rel="noopener">Proyecto de Ley del Cine y de la Cultura Audiovisual (121/000026)</a>». Expediente de tramitación parlamentaria, XV Legislatura. <a class="biblio-nota" href="part-iii.html#lleis">Ventanas, leyes y tecnología</a></p></div>
+      </section>
+    </div>
+    <div class="notes-biblio-next" style="max-width:var(--amplada-text);margin:0 auto 38px;text-align:left;font-size:.85rem;">
+      <a href="notes.html" style="color:var(--color-text);text-decoration:underline;text-underline-offset:3px;">← Notas</a>
+    </div>
+  </main>
+
+  <footer class="peu">
+    <div class="peu-interior">
+      <span>© 2026 Marc Prades · <a href="legal.html">Aviso legal</a> · <a href="legal.html#privacitat">Privacidad</a> · <a href="legal.html#propietat">Licencia CC BY-NC 4.0</a> · <a href="legal.html#fotografies">Fotografías</a></span>
+      <span><a href="https://publiciprestigi.substack.com" target="_blank" rel="noopener">publiciprestigi.substack.com</a></span>
+    </div>
+  </footer>
+
+  <div class="buscador-overlay" id="buscador-overlay" style="display:none;">
+    <div class="buscador-interior">
+      <input type="text" id="buscador-input" placeholder="Buscar en el estudio..." autocomplete="off">
+      <button onclick="toggleBuscador()" class="buscador-tancar">✕</button>
+      <div id="buscador-resultats"></div>
+    </div>
+  </div>
+
+  
+  <!-- ── Modal de subscripció ── -->
+  <div class="subscripcio-overlay" id="subscripcio-modal" hidden>
+    <div class="subscripcio-modal" role="dialog" aria-modal="true" aria-labelledby="subscripcio-titol">
+      <button type="button" class="subscripcio-tancar" onclick="tancaSubscripcio()" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18"></path>
+        </svg>
+      </button>
+
+      <h2 id="subscripcio-titol">Newsletter</h2>
+
+      <div class="subscripcio-icona" aria-hidden="true">
+        <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 20L6 17"></path>
+          <path d="M32 13V8"></path>
+          <path d="M54 20L58 17"></path>
+          <rect x="14" y="21" width="36" height="28" rx="4"></rect>
+          <path d="M16 24l16 12 16-12"></path>
+        </svg>
+      </div>
+
+      <div class="subscripcio-text">
+        <p>Suscríbete para recibir las novedades y actualizaciones del proyecto y seguir su evolución.</p>
+</div>
+<div class="subscripcio-embed">
+<iframe src="https://publiciprestigi.substack.com/embed" title="Suscripción a Públic i Prestigi" width="480" height="150" style="border: 1px solid #EEE; background: white" frameborder="0" scrolling="no" loading="lazy"></iframe>
+</div>
+    </div>
+  </div>
+
+<script>
+    fetch(pipPath('data/metadata.json')).then(r=>r.json()).then(data=>{
+      document.getElementById('versio-label').textContent = data.versions?.find(v => v.versio === data.versio_activa)?.label_es || 'Versión 1.2 (1965–2025)';
+    }).catch(()=>{});
+    function toggleBuscador(){
+      const o=document.getElementById('buscador-overlay'),i=document.getElementById('buscador-input');
+      if(o.style.display==='none'){o.style.display='flex';i.focus();}
+      else{o.style.display='none';i.value='';document.getElementById('buscador-resultats').innerHTML='';}
+    }
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'){const o=document.getElementById('buscador-overlay');if(o.style.display!=='none')toggleBuscador();}});
+  </script>
+
+
+  <script>
+    // ── MODAL SUBSCRIPCIÓ ──
+    let subscripcioFocusAnterior = null;
+
+    function obreSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      const tancar = modal.querySelector('.subscripcio-tancar');
+      subscripcioFocusAnterior = document.activeElement;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => tancar.focus(), 0);
+    }
+
+    function tancaSubscripcio() {
+      const modal = document.getElementById('subscripcio-modal');
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      if (subscripcioFocusAnterior) subscripcioFocusAnterior.focus();
+    }
+
+    document.getElementById('subscripcio-modal').addEventListener('click', function(e) {
+      if (e.target === this) tancaSubscripcio();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      const modal = document.getElementById('subscripcio-modal');
+      if (e.key === 'Escape' && !modal.hidden) tancaSubscripcio();
+    });
+
+    // Si una pàgina no tenia encara el control de la lupa, l'activem aquí.
+    if (typeof window.toggleBuscador !== 'function') {
+      window.toggleBuscador = function() {
+        const o = document.getElementById('buscador-overlay');
+        const i = document.getElementById('buscador-input');
+        if (!o || !i) return;
+        if (o.style.display === 'none') {
+          o.style.display = 'flex';
+          i.focus();
+        } else {
+          o.style.display = 'none';
+          i.value = '';
+          const r = document.getElementById('buscador-resultats');
+          if (r) r.innerHTML = '';
+        }
+      };
+    }
+
+    // Lupa accessible amb teclat
+    document.querySelector('.capcalera-lupa')?.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleBuscador();
+      }
+    });
+  </script>
+
+<script src="../js/scroll-header.js"></script>
+<script src="../js/buscador.js"></script>
+<script src="../js/scroll-fade.js"></script>   <!-- ── Drawer mòbil ── -->
+  <div class="drawer-overlay" id="drawer-overlay" onclick="toggleDrawer()"></div>
+  <nav class="drawer" id="drawer" aria-label="Menú principal">
+    <div class="drawer-cap">
+      <a href="/es/" class="drawer-logo">Públic i Prestigi</a>
+      <button class="drawer-tancar" onclick="toggleDrawer()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer-seccio"><a href="/es/" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Inicio</a></div>
+    <div class="drawer-seccio" id="drawer-part-i">
+      <div class="drawer-seccio-fila">
+        <a href="part-i.html" class="drawer-seccio-nom" onclick="toggleDrawer()">I — Público</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-i')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link" href="part-i.html#intro" onclick="toggleDrawer()">Fuentes y herramientas</a>
+        <a class="drawer-link" href="part-i.html#mercat" onclick="toggleDrawer()">Mercado y población</a>
+        <div class="drawer-grup-titol">Top 100</div>
+        <a class="drawer-link" href="part-i.html#decades" onclick="toggleDrawer()">Resumen por década</a>
+        <a class="drawer-link" href="part-i.html#60s" onclick="toggleDrawer()">60s</a>
+        <a class="drawer-link" href="part-i.html#70s" onclick="toggleDrawer()">70s</a>
+        <a class="drawer-link" href="part-i.html#80s" onclick="toggleDrawer()">80s</a>
+        <a class="drawer-link" href="part-i.html#90s" onclick="toggleDrawer()">90s</a>
+        <a class="drawer-link" href="part-i.html#2000s" onclick="toggleDrawer()">2000s</a>
+        <a class="drawer-link" href="part-i.html#2010s" onclick="toggleDrawer()">2010s</a>
+        <a class="drawer-link" href="part-i.html#2020s" onclick="toggleDrawer()">2020s</a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-i.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-i.html#penetracio" onclick="toggleDrawer()">Por penetración</a>
+        <a class="drawer-link" href="part-i.html#quota" onclick="toggleDrawer()">Por cuota de mercado</a>
+        <a class="drawer-link" href="part-i.html#iic" onclick="toggleDrawer()">Por IIC</a>
+        <a class="drawer-link" href="part-i.html#directors" onclick="toggleDrawer()">Por directores</a>
+      </div>
+    </div>
+    <div class="drawer-seccio" id="drawer-part-ii">
+      <div class="drawer-seccio-fila">
+        <a href="part-ii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">II — Prestigio</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-ii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Contexto</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#intro" onclick="toggleDrawer()"><span>Datos y criterio</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <div class="drawer-grup-titol">Festivales</div>
+        <a class="drawer-link" href="part-ii.html#premiades" onclick="toggleDrawer()">Premiadas por década</a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#cannes" onclick="toggleDrawer()"><span>Cannes</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#venecia" onclick="toggleDrawer()"><span>Venecia</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#berlin" onclick="toggleDrawer()"><span>Berlín</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#sansebastia" onclick="toggleDrawer()"><span>San Sebastián</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+        <div class="drawer-grup-titol">Rankings</div>
+        <a class="drawer-link" href="part-ii.html#espectadors" onclick="toggleDrawer()">Por espectadores</a>
+        <a class="drawer-link" href="part-ii.html#directors" onclick="toggleDrawer()">Por directores</a>
+        <div class="drawer-grup-titol">Academias</div>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#oscar" onclick="toggleDrawer()"><span>Oscar</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-ii.html#efa" onclick="toggleDrawer()"><span>European Film Awards</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+      </div>
+
+    </div>
+    <div class="drawer-seccio" id="drawer-part-iii">
+      <div class="drawer-seccio-fila">
+        <a href="part-iii.html" class="drawer-seccio-nom" onclick="toggleDrawer()">III — Análisis</a>
+        <button class="drawer-seccio-toggle" onclick="toggleDrawerSeccio('drawer-part-iii')" aria-label="Expandir"><span class="drawer-arrow">▼</span></button>
+      </div>
+      <div class="drawer-subseccions">
+        <div class="drawer-grup-titol">Capítulos</div>
+        <a class="drawer-link" href="part-iii.html#doble-corona" onclick="toggleDrawer()">La doble corona</a>
+        <a class="drawer-link" href="part-iii.html#bretxa" onclick="toggleDrawer()">Evolución de la brecha festivales vs. público</a>
+        <a class="drawer-link" href="part-iii.html#caza-alcarras" onclick="toggleDrawer()">La caza vs. Alcarràs</a>
+        <a class="drawer-link" href="part-iii.html#lleis" onclick="toggleDrawer()">Ventanas, leyes y tecnología</a>
+        <a class="drawer-link" href="part-iii.html#generacions" onclick="toggleDrawer()">Saura, Almodóvar y la generación actual</a>
+        <a class="drawer-link" href="part-iii.html#autor-industrial" onclick="toggleDrawer()">Modelo de autor industrial</a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#mapa-canon" onclick="toggleDrawer()"><span>El mapa del canon</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#bunuel-mercat" onclick="toggleDrawer()"><span>Buñuel y el segundo mercado</span><span class="chapter-badge chapter-badge-new">Nuevo</span></a>
+        <a class="drawer-link drawer-link-badge" href="part-iii.html#conclusions" onclick="toggleDrawer()"><span>De las métricas a las paradojas</span><span class="chapter-badge chapter-badge-updated">Actualizado</span></a>
+      </div>
+    </div>
+    <div class="drawer-seccio"><a href="sobre.html" class="drawer-seccio-cap es-link" onclick="toggleDrawer()">Sobre el proyecto</a></div>
+    <div class="drawer-seccio"><a href="versions.html" class="drawer-seccio-cap drawer-versio" onclick="toggleDrawer()">Versión 1.2 (1965–2025)</a></div>
+  </nav>
+
+
+  <script>
+    function toggleDrawer() {
+      const drawer = document.getElementById('drawer');
+      const overlay = document.getElementById('drawer-overlay');
+      const obert = drawer.classList.toggle('obert');
+      overlay.classList.toggle('obert', obert);
+      document.body.style.overflow = obert ? 'hidden' : '';
+    }
+    function toggleDrawerSeccio(id) {
+      document.getElementById(id).classList.toggle('obert');
+    }
+  </script>
+  <script src="../js/idioma.js"></script>
+
+  <!-- Cloudflare Web Analytics -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0397de98e87d437fab4adad72842a7c8"}'></script>
+  <!-- End Cloudflare Web Analytics -->
+</body>
+</html>

@@ -1,0 +1,79 @@
+[
+  {
+    "decada_id": "60s",
+    "decada_label": "Anys 1965–1969",
+    "seleccions": 17,
+    "premiades": 6,
+    "doble_corona": 1,
+    "mitjana_espectadors_festivals": 556170,
+    "mitjana_espectadors_top100": 3251752,
+    "ratio": 0.17,
+    "decada_label_es": "Años 1965–1969"
+  },
+  {
+    "decada_id": "70s",
+    "decada_label": "Anys 70",
+    "seleccions": 43,
+    "premiades": 14,
+    "doble_corona": 3,
+    "mitjana_espectadors_festivals": 697068,
+    "mitjana_espectadors_top100": 2582023,
+    "ratio": 0.27,
+    "decada_label_es": "Años 70"
+  },
+  {
+    "decada_id": "80s",
+    "decada_label": "Anys 80",
+    "seleccions": 65,
+    "premiades": 15,
+    "doble_corona": 2,
+    "mitjana_espectadors_festivals": 490800,
+    "mitjana_espectadors_top100": 1524092,
+    "ratio": 0.32,
+    "decada_label_es": "Años 80"
+  },
+  {
+    "decada_id": "90s",
+    "decada_label": "Anys 90",
+    "seleccions": 44,
+    "premiades": 17,
+    "doble_corona": 1,
+    "mitjana_espectadors_festivals": 389887,
+    "mitjana_espectadors_top100": 1741524,
+    "ratio": 0.22,
+    "decada_label_es": "Años 90"
+  },
+  {
+    "decada_id": "2000s",
+    "decada_label": "Anys 2000–2009",
+    "seleccions": 40,
+    "premiades": 12,
+    "doble_corona": 4,
+    "mitjana_espectadors_festivals": 673427,
+    "mitjana_espectadors_top100": 2993191,
+    "ratio": 0.22,
+    "decada_label_es": "Años 2000–2009"
+  },
+  {
+    "decada_id": "2010s",
+    "decada_label": "Anys 2010–2019",
+    "seleccions": 46,
+    "premiades": 22,
+    "doble_corona": 0,
+    "mitjana_espectadors_festivals": 266015,
+    "mitjana_espectadors_top100": 3208257,
+    "ratio": 0.08,
+    "decada_label_es": "Años 2010–2019"
+  },
+  {
+    "decada_id": "2020s",
+    "decada_label": "Anys 2020–2025",
+    "seleccions": 30,
+    "premiades": 13,
+    "doble_corona": 0,
+    "mitjana_espectadors_festivals": 192344,
+    "mitjana_espectadors_top100": 1402007,
+    "ratio": 0.14,
+    "decada_label_es": "Años 2020–2025"
+  }
+]

@@ -1,0 +1,3 @@
+<!-- intro -->
+Los premios con mayor proyección e impacto del planeta, otorgados mediante el voto de los miembros de la academia estadounidense. Cuatro películas españolas han ganado hasta ahora el Oscar a la mejor película de habla no inglesa: *Volver a empezar* (1982) de José Luis Garci, *Belle Époque* (1992) de Fernando Trueba, *Todo sobre mi madre* (1999) de Pedro Almodóvar y *Mar adentro* (2004) de Alejandro Amenábar. Más allá de esta categoría, el balance en los Oscar alcanza 41 nominaciones y nueve premios. Se completa con un apartado de profesionales españoles reconocidos en producciones extranjeras.
+<!-- /intro -->
